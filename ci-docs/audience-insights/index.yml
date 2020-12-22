@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Capacitat de conclusions del públic al Dynamics 365 Customer Insights
+summary: Ingeriu, unifiqueu i organitzeu les dades dels clients de diversos orígens. Creeu i administreu els perfils dels clients i la segmentació en temps real. Integreu les dades dels clients amb altres sistemes per fer-les encara més útils.
+metadata:
+  title: Documentació de conclusions del públic
+  description: Centre d'ajuda amb enllaços essencials per a les conclusions del públic.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ca-ES
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405159"
+landingContent:
+- title: Quant a les conclusions del públic
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informació del producte
+      url: overview.md
+    - text: Característiques noves i actualitzades
+      url: whats-new-audience-insights.md
+    - text: Lloc de la comunitat
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Ingerir fonts de dades
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Afegir fonts de dades
+      url: data-sources.md
+    - text: Actualització incremental
+      url: incremental-refresh-data-sources.md
+    - text: Entendre les entitats
+      url: entities.md
+- title: Unificar dades
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Assignació
+      url: map-entities.md
+    - text: Coincidència
+      url: match-entities.md
+    - text: Combinació
+      url: merge-entities.md
+- title: Delimitar els perfils de client
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar relacions
+      url: relationships.md
+    - text: Enumerar les activitats d'un client
+      url: activities.md
+    - text: Incorporar els vostres propis models d'aprenentatge automàtic
+      url: custom-models.md
+- title: Exportar dades del client
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar destinacions d'exportació
+      url: export-destinations.md
+    - text: Targetes de clients a les aplicacions del Dynamics 365
+      url: customer-card-add-in.md
+    - text: Connector del Power BI
+      url: export-power-bi.md
+- title: Administrar l'aplicació
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: system.md
+    - text: Definir els permisos de l'usuari
+      url: permissions.md
+    - text: Administrar diversos entorns
+      url: manage-environments.md
