@@ -1,0 +1,101 @@
+---
+title: Instal·lar i configurar el Complement de targeta del client
+description: Instal·leu i configureu el complement de targeta del client per al Dynamics 365 Customer Insights.
+ms.date: 08/04/2020
+ms.reviewer: philk
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644031"
+---
+# <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Visualitzeu dades demogràfiques, estadístiques i cronologies d'activitats amb el complement de targeta del client.
+
+## <a name="prerequisites"></a>Requisits previs
+
+- Aplicació Dynamics 365 (com ara el Centre de vendes o el Centre del Customer Service), versió 9.0 o posterior amb la Interfície unificada habilitada.
+- Perfils de client [ingerits des de l'aplicació Dynamics 365 mitjançant el Common Data Service](connect-power-query.md).
+- Els usuaris del Complement de targeta del client s'han d'[afegir com a usuaris](permissions.md) a les conclusions del públic.
+- [Capacitats de cerca i filtratge configurades](search-filter-index.md).
+- Control demogràfic: Els camps demogràfics, com l'edat o el sexe, estan disponibles al perfil unificat del client.
+- Control Enriquiment: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
+- Control d'intel·ligència: Necessita dades generades mitjançant l'aprenentatge automàtic de l'Azure ([prediccions](predictions.md) o [models personalitzats](custom-models.md))
+- Control de mesures: Requereix [mesures configurades](measures.md).
+- Control de la cronologia: Requereix [activitats configurades](activities.md).
+
+## <a name="install-the-customer-card-add-in"></a>Instal·lar el complement de targeta del client
+
+El complement de la targeta del client és una solució per a les aplicacions d'interacció amb els clients al Dynamics 365. Per instal·lar la solució, aneu a AppSource i cerqueu **Targeta del client del Dynamics**. Seleccioneu el [Complement de targeta del client a AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i seleccioneu **Obtén ara**.
+
+Potser heu d'iniciar la sessió amb les credencials d'administrador de l'aplicació Dynamics 365 per instal·lar la solució.
+
+Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
+
+## <a name="configure-the-customer-card-add-in"></a>Configurar el complement de targeta del client
+
+1. Com a administrador, aneu a la secció **Configuració** al Dynamics 365 i seleccioneu **Solucions**.
+
+1. Seleccioneu l'enllaç **Nom de visualització** per a la solució del **Complement de targeta de client del Dynamics 365 Customer Insights (visualització prèvia)**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Seleccionar el nom de visualització](media/select-display-name.png "Seleccionar el nom de visualització")
+
+1. Seleccioneu **Inicia la sessió** i introduïu les credencials del compte d'administrador que utilitzeu per configurar el Customer Insights.
+
+   > [!NOTE]
+   > Comproveu que el bloquejador d'elements emergents del navegador no bloquegi la finestra d'autenticació en seleccionar el botó **Inicia la sessió**.
+
+1. Seleccioneu l'entorn des del qual voleu obtenir dades.
+
+1. Definiu l'assignació de camps a registres a l'aplicació Dynamics 365.
+   - Per dur a terme l'assignació a un contacte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del contacte.
+   - Per dur a terme l'assignació a un compte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del compte.
+
+   > [!div class="mx-imgBorder"]
+   > ![Camp Identificador de contacte](media/contact-id-field.png "Camp Identificador de contacte")
+
+1. Seleccioneu **Desa la configuració** per desar la configuració.
+
+1. A continuació, heu d'assignar funcions de seguretat al Dynamics 365 per tal que els usuaris puguin personalitzar i veure la targeta del client. Al Dynamics 365, aneu a **Configuració** > **Seguretat** > **Usuaris**. Seleccioneu els usuaris per editar funcions d'usuari i seleccioneu **Administra les funcions**.
+
+1. Assigneu la funció **Personalitzador de targetes del Customer Insights** a usuaris que personalitzaran el contingut que es mostra a la targeta per a tota l'organització.
+
+## <a name="add-customer-card-controls-to-forms"></a>Afegir controls de la targeta de client a formularis
+  
+1. Per afegir els controls de la targeta del client al formulari de contacte, aneu a **Configuració** > **Personalitzacions** al Dynamics 365.
+
+1. Seleccioneu **Personalitza el sistema**.
+
+1. Navegueu a l'entitat **Contacte**, expandiu-la i seleccioneu **Formularis**.
+
+1. Seleccioneu el formulari de contacte al qual voleu afegir els controls de la targeta del client.
+
+    > [!div class="mx-imgBorder"]
+    > ![Seleccioneu el formulari de contacte](media/contact-active-forms.png "Seleccioneu el formulari de contacte")
+
+1. Per afegir un control, a l'editor de formularis, arrossegueu qualsevol camp de l'**Explorador de camps** a on voleu que aparegui el control.
+
+1. Seleccioneu el camp al formulari que acabeu d'afegir i seleccioneu **Canvia les propietats**.
+
+1. Aneu a la pestanya **Controls** i seleccioneu **Afegeix un control**. Trieu un dels controls personalitzats disponibles i seleccioneu **Afegeix**.
+
+1. Al quadre de diàleg **Propietats del camp**, desactiveu la casella de selecció **Mostra l'etiqueta al formulari**.
+
+1. Seleccioneu l'opció **Web** per al control. Per al control Enriquiment, seleccioneu el tipus d'enriquiment que voleu mostrar configurant el camp **enrichmentType**. Heu d'afegir un control d'enriquiment diferent per a cada tipus d'enriquiment.
+
+1. Seleccioneu **Desa** i **Publica** per publicar el formulari de contacte actualitzat.
+
+1. Aneu al formulari de contacte publicat. Es mostra el control acabat d'afegir. Pot ser que hàgiu d'iniciar la sessió la primera vegada que l'utilitzeu.
+
+1. Per personalitzar el que voleu que es mostri en el control personalitzat, seleccioneu el botó Edita a la cantonada superior dreta.

@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Centre d'ajuda del Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Cerqueu articles rellevants per començar amb el contingut de l'ajuda.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ca-ES
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405176"
+title: Documentació del Dynamics 365 Customer Insights
+summary: Cerqueu recursos útils per començar i obtenir informació sobre les característiques i les capacitats del Customer Insights.
+landingContent:
+- title: Conèixer el Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informació general sobre el Customer Insights
+      url: overview.md
+    - text: Plans de llançament
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Accés a l'entorn
+      url: https://home.ci.ai.dynamics.com/
+- title: Introducció a les conclusions del públic
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Registreu-vos per a una prova gratuïta
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Novetats
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Documentació de conclusions del públic
+      url: audience-insights/index.yml
+- title: Posar-se en contacte
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Uniu-vos a la comunitat del Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Compartiu les vostres idees
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Informa d'un problema
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Tutorials de conclusions del públic
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Crea un entorn nou
+      url: audience-insights/home.md
+    - text: Crear un perfil de client unificat
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Treballar amb l'aplicació
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Exportar dades de conclusions del públic
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar destinacions d'exportació
+      url: audience-insights/export-destinations.md
+    - text: Targetes de clients a les aplicacions del Dynamics 365
+      url: audience-insights/customer-card-add-in.md
+    - text: Connector del Power BI
+      url: audience-insights/export-power-bi.md
+- title: Administrar conclusions del públic
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: audience-insights/system.md
+    - text: Definir els permisos de l'usuari
+      url: audience-insights/permissions.md
+    - text: Administrar diversos entorns
+      url: audience-insights/manage-environments.md
+- title: Quant a les conclusions d'interacció (versió preliminar)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informació general de les capacitats
+      url: engagement-insights/overview.md
+    - text: Termes i conceptes
+      url: engagement-insights/glossary.md
+    - text: Introducció
+      url: engagement-insights/get-started.md
+- title: Informes per a les conclusions d'interacció (versió preliminar)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Visualitza els informes
+      url: engagement-insights/view-reports.md
+    - text: Crear informes personalitzats
+      url: engagement-insights/custom-reports.md
+    - text: Veure l'informe de perfils unificats
+      url: engagement-insights/profile-reports.md
+- title: Incidències per a les conclusions d'interacció (versió preliminar)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear incidències millorades
+      url: engagement-insights/refined-events.md
+    - text: Exportar incidències
+      url: engagement-insights/export-events.md
+    - text: Suprimir i exportar dades personals
+      url: engagement-insights/delete-export-personal-data.md
