@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Característiques noves i actualitzades
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introducció
+    - name: Crea un entorn nou
+      href: audience-insights/home.md
+    - name: Aprendre mòduls
       items:
-        - name: Crea un entorn nou
-          href: audience-insights/home.md
         - name: Ingerir dades
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Crear un perfil de client unificat
@@ -44,7 +44,7 @@
           href: audience-insights/entities.md
     - name: Unificació de dades
       items:
-        - name: Informació general sobre la unificació
+        - name: Informació general sobre la unificació de dades
           href: audience-insights/data-unification.md
         - name: Assignar entitats i atributs
           href: audience-insights/map-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Obtenir informació sobre els segments
           href: audience-insights/segment-insights.md
+        - name: Veure els segments suggerits
+          href: audience-insights/suggested-segments.md
         - name: Cerca clients similars
           href: audience-insights/find-similar-customer-segments.md
         - name: Definir les mesures i els KPI
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Guia d'exemples de predicció de rotació de transaccions
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Predir el valor de vida del client (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Predir recomanacions de productes
+          href: audience-insights/predict-product-recommendation.md
+        - name: Guia d'exemple per a la predicció de recomanacions de productes
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Implementar models d'aprenentatge automàtic personalitzats
           href: audience-insights/custom-models.md
         - name: Experiments amb l'Azure Machine Learning
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Opcions d'exportació
       items:
-        - name: Descobrir destinacions d'exportació
+        - name: Informació general de les destinacions d'exportació
           href: audience-insights/export-destinations.md
-        - name: Emmagatzematge blob de l’Azure
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
+        - name: Azure Blob Storage
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: Dynamics 365 Customer Service (complement)
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Administració
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Extensibilitat
       items:
+        - name: Integrar dades web de conclusions d'interacció
+          href: audience-insights/integrate-engagement-insights.md
         - name: Revisar els esquemes d'entitats al Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Treballar amb API
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Prova gratuïta
       href: 'https://pi.dynamics.com/'
-    - name: Inici ràpid
-      items:
-        - name: Inici ràpid per a la versió preliminar pública
-          href: engagement-insights/quickstart.md
     - name: Introducció
       items:
         - name: Introducció
@@ -223,4 +235,4 @@
     - name: Límits de servei
       href: engagement-insights/quotas.md
 - name: Poseu-vos en contacte amb l'assistència tècnica
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'
