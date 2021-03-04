@@ -1,20 +1,20 @@
 ---
 title: Enriquiment de amb l'enriquiment de tercers de HERE Technologies
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668666"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269502"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
 
@@ -43,7 +43,11 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
 
 1. Confirmeu totes dues entrades seleccionant **Connecta a HERE**.
 
-1. Seleccioneu **Afegeix dades** i trieu si voleu assignar camps a l'adreça principal o secundària. Podeu especificar una assignació de camps per a totes dues adreces (per exemple, una adreça particular i de la feina) i enriquir els perfils per a ambdues adreces de manera separada. Seleccioneu **Següent**.
+1.  Seleccioneu **Afegeix dades** i trieu el **conjunt de dades del client** que voleu enriquir amb les dades d'ubicació de HERE Technologies. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Captura de pantalla quan trieu el conjunt de dades de clients.":::
+
+1. Trieu si voleu assignar camps a l'adreça principal o secundària. Podeu especificar una assignació de camps per a totes dues adreces (per exemple, una adreça particular i de la feina) i enriquir els perfils per a ambdues adreces de manera separada. Seleccioneu **Següent**.
 
 1. Definiu els camps dels perfils unificats que s'hauran d'utilitzar per cercar dades d'ubicació coincidents des de HERE Technologies. Els camps **Carrer 1** i **Codi postal** són obligatoris per a l'adreça principal o secundària seleccionada. Per augmentar la precisió de la coincidència, es poden afegir més camps.
 
@@ -68,3 +72,6 @@ Construïu a partir de les dades de clients enriquits. Creeu [segments](segments
 
 Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a HERE Technologies, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que HERE Technologies compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

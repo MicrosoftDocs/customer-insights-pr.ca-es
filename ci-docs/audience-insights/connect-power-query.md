@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405147"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267756"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a una font de dades del Power Query
 
@@ -28,7 +28,10 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 
 1. Trieu el mètode **Importa dades** i seleccioneu **Següent**.
 
-1. Proporcioneu un **Nom** per a la font de dades i seleccioneu **Següent** per crear la font de dades.
+1. Proporcioneu un **Nom** per a la font de dades i seleccioneu **Següent** per crear la font de dades. Directrius del nom: 
+   - Comenceu per una lletra.
+   - Utilitzeu només lletres i xifres. Els caràcters especials i els espais no estan permesos.
+   - Utilitzeu entre 3 i 64 caràcters.
 
 1. Seleccioneu un dels [connectors disponibles](#available-power-query-data-sources). Per aquest exemple, seleccionem el connector **Text/CSV**.
 
@@ -77,3 +80,6 @@ Els connectors amb una marca de selecció a la columna **Customer Insights (flux
 3. Apliqueu els canvis i transformacions al diàleg **Power Query: edita les consultes** tal com es descriu a la secció [Crear una nova font de dades](#create-a-new-data-source).
 
 4. Seleccioneu **Desa** al Power Query després de completar les vostres edicions per desar els canvis.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

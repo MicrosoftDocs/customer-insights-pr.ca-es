@@ -1,20 +1,20 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644121"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270100"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -46,9 +46,9 @@ Hi ha dues maneres de crear un nou entorn. Podeu especificar una configuració c
 
 Per crear un entorn:
 
-1. Seleccioneu el símbol **Configuració** a la capçalera de l'aplicació.
+1. Seleccioneu el selector **Entorn** a la capçalera de l'aplicació.
 
-1. Seleccioneu **Nou entorn**.
+1. Seleccioneu **Crea**.
 
    > [!div class="mx-imgBorder"]
    > ![Configuració de l'entorn](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Per crear un entorn:
 
    - En el caso de l'opció Gen2 de l'Azure Data Lake Storage, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions per a l'autenticació. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). El nom del **Contenidor** no es pot canviar i serà "customerinsights".
    
-   - Si voleu utilitzar [prediccions](predictions.md), introduïu l'adreça URL de la instància del Common Data Service al camp **Adreça del servidor** a **Utilitza les prediccions**.
+   - Si voleu utilitzar [prediccions](predictions.md) o configurar l'ús compartit de dades amb aplicacions i solucions basades en el Microsoft Dataverse, proporcioneu l'adreça URL de l'entorn del Microsoft Dataverse a **Configurar l'ús compartit de dades amb el Microsoft Dataverse i habilitar característiques addicionals**. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - L'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake actualment no s'admet quan deseu totes les dades al vostre propi Azure Data Lake Storage.
+     > - La [predicció de valors que falten en una entitat](predictions.md) no està actualment admesa quan habiliteu l'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Quan executeu processos, com ara la ingestió de dades o la creació de segments, les carpetes corresponents es crearan al compte d'emmagatzematge que hagueu especificat anteriorment. Els fitxers de dades i els fitxers model.json es crearan i s'afegiran a les respectives subcarpetes en funció del procés que executeu.
 
@@ -86,7 +93,7 @@ Per crear un entorn:
 Es copia la configuració següent:
 
 - Configuracions de característiques
-- Fonts de dades importades o ingerides
+- Fonts de dades ingerides/importades
 - Configuració d'unificació de dades (assignar, coincidir, combinar)
 - Segments
 - Mesures
@@ -120,11 +127,11 @@ Quan la unificació de dades hagi finalitzat, aneu a **Mesures** i **Segments** 
 
 Podeu editar alguns dels detalls dels entorns existents.
 
-1. Aneu a **Administració** > **Sistema** > **Quant a**.
+1.  Seleccioneu el selector **Entorn** a la capçalera de l'aplicació.
 
-2. Seleccioneu **Editar**.
+2.  Seleccioneu la icona **Edita**.
 
-3. Podeu actualitzar el **Nom de visualització** de l'entorn, però no podeu canviar la **Regió** ni el **Tipus**.
+3. Al quadre **Edita l'entorn**, podeu actualitzar el **nom de visualització** de l'entorn, però no podeu canviar la **regió** ni el **tipus**.
 
 4. Si es configura un entorn per emmagatzemar dades a l'Azure Data Lake Storage Gen2, podeu actualitzar la **Clau del compte**. No obstant això, no podeu canviar el **Nom del compte** ni el del **Contenidor**.
 
@@ -132,19 +139,27 @@ Podeu editar alguns dels detalls dels entorns existents.
 
 ## <a name="reset-an-existing-environment"></a>Restablir un entorn existent
 
-Podeu restablir un entorn en estat buit en el cas que vulgueu suprimir totes les configuracions i eliminar la informació ingerida.
+Com a administrador, podeu restablir un entorn en estat buit en el cas que vulgueu suprimir totes les configuracions i eliminar la informació ingerida.
 
-1.  Aneu a **Administració** > **Sistema** > **Quant a**.
+1.  Seleccioneu el selector **Entorn** a la capçalera de l'aplicació. 
 
-2.  Seleccioneu **Restableix**. 
+2.  Seleccioneu l'entorn que voleu restablir i seleccioneu els punts suspensius **...**. 
 
-3.  Per confirmar la supressió, introduïu el nom de l'entorn i seleccioneu **Restableix**.
+3. Trieu l'opció **Reinicialitza**. 
+
+4.  Per confirmar la supressió, introduïu el nom de l'entorn i seleccioneu **Restableix**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Suprimir un entorn existent (només disponible per a administradors)
+
+Com a administrador, podeu suprimir un entorn que administreu.
+
+1.  Seleccioneu el selector **Entorn** a la capçalera de l'aplicació.
+
+2.  Seleccioneu l'entorn que voleu restablir i seleccioneu els punts suspensius **...**. 
+
+3. Trieu l'opció **Suprimeix**. 
+
+4.  Per confirmar la supressió, introduïu el nom de l'entorn i seleccioneu **Suprimeix**.
 
 
-## <a name="delete-an-existing-environment"></a>Suprimir un entorn existent
-
-1. Aneu a **Administració** > **Sistema** > **Quant a**.
-
-1. Seleccioneu **Suprimeix**.
-
-1. Per confirmar la supressió, introduïu el nom de l'entorn i seleccioneu **Suprimeix**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

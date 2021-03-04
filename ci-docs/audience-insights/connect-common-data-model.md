@@ -4,17 +4,17 @@ description: Treballeu amb dades del Common Data Model mitjançant l'Azure Data 
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643446"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267848"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connectar-se a una carpeta del Common Data Model amb un compte de l'Azure Data Lake
 
@@ -38,17 +38,25 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 1. Seleccioneu **Afegeix una font de dades**.
 
-1. Seleccioneu **Connecta't a una carpeta del Common Data Model**, introduïu un **Nom** per a la font de dades i, a continuació, seleccioneu **Següent**.
+1. Seleccioneu **Connecta't a una carpeta del Common Data Model**, introduïu un **Nom** per a la font de dades i, a continuació, seleccioneu **Següent**. Directrius del nom: 
+   - Comenceu per una lletra.
+   - Utilitzeu només lletres i xifres. Els caràcters especials i els espais no estan permesos.
+   - Utilitzeu entre 3 i 64 caràcters.
 
 1. Per a l'autenticació, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Introduïu la informació del **Contenidor** i seleccioneu **Següent**.
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg per introduir els detalls de connexió per a l'Azure Data Lake](media/enter-new-storage-details.png)
-
-1. Al diàleg **Seleccioneu una carpeta del Common Data Model**, seleccioneu el fitxer model.json del que voleu importar les dades i seleccioneu **Següent**.
+   > ![Quadre de diàleg per introduir nous detalls de connexió a l'Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Els fitxers model.json associats amb una altra font de dades de l'entorn no es mostraran a la llista.
+   > Necessiteu una de les funcions següents al contenidor o al compte d'emmagatzematge abans descrit per poder connectar-vos i crear una font de dades:
+   >  - Lector de dades de Blob de l'emmagatzematge
+   >  - Propietari de dades de Blob de l'emmagatzematge
+   >  - Col·laborador de dades de Blob d'emmagatzematge
 
-1. Obtindreu una llista d'entitats disponibles al fitxer model.json seleccionat. Podeu revisar i seleccionar a la llista d'entitats disponibles i seleccioneu **Desa**. Totes les entitats seleccionades s'ingeriran des de la nova font de dades.
+1. Al diàleg **Seleccioneu una carpeta del Common Data Model**, seleccioneu el fitxer model.json o manifest.json del que voleu importar les dades i seleccioneu **Següent**.
+   > [!NOTE]
+   > Els fitxers model.json o manifest.json associats amb una altra font de dades de l'entorn no es mostraran a la llista.
+
+1. Obtindreu una llista d'entitats disponibles al fitxer model.json o manifest.json seleccionat. Podeu revisar i seleccionar a la llista d'entitats disponibles i seleccioneu **Desa**. Totes les entitats seleccionades s'ingeriran des de la nova font de dades.
    > [!div class="mx-imgBorder"]
    > ![Quadre de diàleg que mostra una llista d'entitats des d'un fitxer model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 9. Després de desar les seleccions, s'obre la pàgina **Fonts de dades**. Ara hauríeu de veure la connexió de la carpeta del Common Data Model com a font de dades.
 
 > [!NOTE]
-> Un fitxer model.json només pot associar-se amb una font de dades del mateix entorn. No obstant, un mateix fitxer model.json es pot utilitzar per a fonts de dades de diversos entorns.
+> Un fitxer model.json o manifest.json només pot associar-se amb una font de dades del mateix entorn. No obstant, un mateix fitxer model.json o manifest.json es pot utilitzar per a fonts de dades de diversos entorns.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Editar la font de dades d'una carpeta del Common Data Model
 
-És possible actualitzar la clau d'accés al compte d'emmagatzematge que conté la carpeta del Common Data Model. També podeu canviar el fitxer model.json. Per connectar-vos a un contenidor diferent del vostre compte d'emmagatzematge o canviar el nom de compte, [creeu una connexió de font de dades nova](#connect-to-a-common-data-model-folder).
+És possible actualitzar la clau d'accés al compte d'emmagatzematge que conté la carpeta del Common Data Model. També podeu canviar el fitxer model.json o manifest.json. Per connectar-vos a un contenidor diferent del vostre compte d'emmagatzematge o canviar el nom de compte, [creeu una connexió de font de dades nova](#connect-to-a-common-data-model-folder).
 
 1. A les conclusions del públic, aneu a **Dades** > **Fonts de dades**.
 
@@ -77,13 +85,24 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 5. Com a alternativa, podeu actualitzar-la des d'una connexió de clau de compte a una connexió basada en recursos o en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Quan actualitzeu la connexió, no podreu canviar la informació del **Contenidor**.
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg per introduir els detalls de connexió per a l'Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. De manera opcional, trieu un fitxer model.json diferent amb un conjunt d'entitats diferent del contenidor.
+   > ![Quadre de diàleg per introduir els detalls de connexió a l'Azure Data Lake a un compte d'emmagatzematge existent](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Necessiteu una de les funcions següents al contenidor o al compte d'emmagatzematge abans descrit per poder connectar-vos i crear una font de dades:
+   >  - Lector de dades de Blob de l'emmagatzematge
+   >  - Propietari de dades de Blob de l'emmagatzematge
+   >  - Col·laborador de dades de Blob d'emmagatzematge
+
+
+6. Opcionalment, trieu un fitxer model.json o manifest.json diferent amb un conjunt d'entitats diferent del contenidor.
 
 7. També podeu seleccionar més entitats per ingerir. També podeu suprimir les entitats que ja estan seleccionades si no hi ha cap dependència.
 
    > [!IMPORTANT]
-   > Si hi ha dependències al fitxer model.json existent i el conjunt d'entitats, veureu un missatge d'error i no podeu seleccionar un altre fitxer model.json. Suprimiu aquestes dependències abans de canviar el fitxer model.json o crear una font de dades nova amb el fitxer model.json que voleu utilitzar per evitar l'eliminació de les dependències.
+   > Si hi ha dependències en el fitxer model.json o manifest.json i el conjunt d'entitats, veureu un missatge d'error i no podreu seleccionar un fitxer model.json o manifest.json diferent. Suprimiu aquestes dependències abans de canviar el fitxer model.json o manifest.json o creeu una font de dades nou amb el fitxer model.json o manifest.json que voleu utilitzar per evitar la supressió de les dependències.
 
 8. També podeu seleccionar més atributs o entitats per habilitar-hi la perfilació de dades o inhabilitar els que ja hagueu seleccionat.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

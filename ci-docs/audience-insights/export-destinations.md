@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643851"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477121"
 ---
-# <a name="export-destinations-preview"></a>Destinacions d'exportació (versió preliminar)
+# <a name="export-destinations-preview-overview"></a>Informació general de les destinacions d'exportació (versió preliminar)
 
 A la pàgina **Destinacions d'exportació** es mostren totes les ubicacions per a les quals heu configurat l'exportació de dades. També podeu afegir noves destinacions per a l'exportació. A més, mostra les opcions d'exportació que hi ha disponibles actualment. Obteniu una descripció general i breu, i esbrineu què podeu fer amb cada opció d'extensibilitat. Exporteu els perfils unificats, les mesures i els segments a les aplicacions admeses rellevants per a la vostra empresa.
 
@@ -27,10 +27,13 @@ Aneu a **Administració** > **Destinacions d'exportació** per trobar les següe
 - [Connector del Power Automate](export-power-automate.md)
 - [Connector del Power Apps](export-power-apps.md)
 - [Connector del Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Emmagatzematge blob de l’Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Connector del LiveRamp&reg;](export-liveramp.md)
 - [Bot per al Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Per suprimir una destinació d'exportació, comenceu des de la pàgina principal
 2. Seleccioneu **Suprimeix** al menú desplegable.
 
 3. Confirmeu la supressió seleccionant **Suprimeix** a la pantalla de confirmació.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

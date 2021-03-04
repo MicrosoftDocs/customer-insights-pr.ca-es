@@ -1,20 +1,20 @@
 ---
 title: Connector del Power Apps
 description: Connecteu amb el Power Apps i el Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405125"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268904"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connector del Microsoft Power Apps (visualització prèvia)
 
@@ -31,7 +31,7 @@ Consulteu la documentació del Power Apps per obtenir més informació sobre com
 Després d'afegir el Customer Insights com a connexió de dades, podeu triar les entitats següents al Power Apps:
 
 - Client: per utilitzar les dades del [perfil del client unificat](customer-profiles.md).
-- Activitat unificada de client: per mostrar la [cronologia d'activitat](activities.md) a l'aplicació.
+- UnifiedActivity: per mostrar la [cronologia d'activitat](activities.md) a l'aplicació.
 
 ## <a name="limitations"></a>Limitacions
 
@@ -72,3 +72,6 @@ Per exemple, afegiu perfils de client a un [control de galeria](https://docs.mic
 1. Per mostrar la cronologia unificada d'un client, afegiu-hi un element Galeria i afegiu la propietat Items: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Exemple: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

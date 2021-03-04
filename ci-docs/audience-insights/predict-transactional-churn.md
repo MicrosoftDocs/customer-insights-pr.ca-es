@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644391"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268306"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predicció de rotació de transaccions (versió preliminar)
 
@@ -96,6 +96,8 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
 1. També podeu seleccionar **Afegeix dades** per a les **Activitats del client**. Trieu l'entitat que proporciona la informació de l'activitat del client tal com es descriu als requisits previs.
 
 1. Assigneu els camps semàntics als atributs de l'entitat de l'activitat del client i seleccioneu **Següent**. Per a les descripcions dels camps, consulteu els [requisits previs](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Assignar camps de client per a dades transaccionals.":::
 
 1. Seleccioneu un tipus d'activitat que coincideixi amb el tipus d'activitat del client que configureu. Seleccioneu **Crea'n un de nou** i trieu un tipus d'activitat disponible o bé creeu un nou tipus.
 
@@ -185,3 +187,6 @@ La supressió d'una predicció també comporta la supressió de la seva entitat 
 1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu suprimir.
 
 1. Seleccioneu **Suprimeix**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

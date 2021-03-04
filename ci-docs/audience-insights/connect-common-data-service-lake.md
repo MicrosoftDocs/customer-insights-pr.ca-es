@@ -4,17 +4,17 @@ description: Importeu dades d'un llac de dades administrat del Common Data Servi
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643386"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267788"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Connectar-se a dades d'un llac de dades administrat del Common Data Service
 
@@ -34,7 +34,10 @@ Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Stor
 
 3. Seleccioneu **Connecta't al Common Data Service** i seleccioneu **Següent**.
 
-4. Introduïu un **Nom** per a la font de dades i seleccioneu **Següent**.
+4. Introduïu un **Nom** per a la font de dades i seleccioneu **Següent**. Directrius del nom: 
+   - Comenceu per una lletra.
+   - Utilitzeu només lletres i xifres. Els caràcters especials i els espais no estan permesos.
+   - Utilitzeu entre 3 i 64 caràcters.
 
 5. Proporcioneu l'**adreça del servidor** de l'organització del Common Data Service i, a continuació, seleccioneu **inicia la sessió**.
 
@@ -65,3 +68,6 @@ Per connectar-vos a un Common Data Service diferent, [creeu una nova font de dad
 3. Seleccioneu l'opció **Edita** de la llista.
 
 4. Seleccioneu les entitats addicionals a la llista disponible d'entitats i seleccioneu **Desa**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

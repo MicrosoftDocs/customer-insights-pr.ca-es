@@ -5,16 +5,16 @@ ms.date: 10/26/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: edff494f6edf26a8b641cb1d788a715389ddb346
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2b465b32fa956e3f45a23f471dc3a3183def16ef
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405129"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267161"
 ---
 # <a name="connector-for-mailchimp-preview"></a>Connector per a Mailchimp (versió preliminar)
 
@@ -74,3 +74,6 @@ Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació
 
 Quan habiliteu Dynamics 365 Customer Insights perquè transmeti dades a Mailchimp, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Mailchimp compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

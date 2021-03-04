@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405169"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269856"
 ---
 # <a name="relationships-between-entities"></a>Relacions entre entitats
 
@@ -28,8 +28,8 @@ Durant els processos de coincidència i combinació, les relacions del sistema e
 > ![Creació de relació](media/relationships-entities-merge.png "Creació de relació")
 
 - Es crea una **relació *CustomerToContact*** entre l'entitat Client i l'entitat Contacte. L'entitat Client obté el camp clau **Contact_contactId** relacionar-se amb el camp clau **contactId** de l'entitat Contacte.
-- Es crea una **relació _CustomerToAccount_** entre l'entitat Client i l'entitat Compte. L'entitat Client obté el camp clau **Account_contactId** relacionar-se amb el camp clau **accountId** de l'entitat Compte.
-- Es crea una **relació _CustomerToWebAccount_** entre l'entitat Client i l'entitat WebAccount. L'entitat Client obté el camp clau **WebAccount_webaccountId** relacionar-se amb el camp clau **webaccountId** de l'entitat WebAccount.
+- Es crea una **relació *CustomerToAccount*** entre l'entitat Client i l'entitat Compte. L'entitat Client obté el camp clau **Account_contactId** relacionar-se amb el camp clau **accountId** de l'entitat Compte.
+- Es crea una **relació *CustomerToWebAccount*** entre l'entitat Client i l'entitat WebAccount. L'entitat Client obté el camp clau **WebAccount_webaccountId** relacionar-se amb el camp clau **webaccountId** de l'entitat WebAccount.
 
 ## <a name="create-a-relationship"></a>Crear una relació
 
@@ -69,3 +69,6 @@ Definiu les relacions personalitzades a la pàgina **Relacions**. Cada relació 
 ## <a name="next-step"></a>Pas següent
 
 Les relacions de sistema i personalitzades s'utilitzen per crear segments basats en diverses fonts de dades que ja no estan aïllades. Per obtenir més informació, vegeu [Segments](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

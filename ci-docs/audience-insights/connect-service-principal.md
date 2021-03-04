@@ -1,20 +1,20 @@
 ---
 title: Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei
 description: Utilitzeu una entitat de servei de l'Azure per a les conclusions del públic per connectar-vos al vostre llac de dades propi quan l'adjunteu a les conclusions del públic.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644076"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267710"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure per a les conclusions del públic
 
@@ -22,7 +22,9 @@ Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir
 
 Podeu utilitzar l'entitat de servei per [afegir o editar de manera segura una carpeta de Common Data Model com a font de dades](connect-common-data-model.md) o [crear un entorn nou o actualitzar-ne un d'existent](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Per poder crear l'entitat de servei, heu de tenir permisos d'administrador per a la vostra subscripció a l'Azure.
+> [!IMPORTANT]
+> - El compte d'emmagatzematge de l'Azure Data Lake Storage Gen2 que té com a objectiu utilitzar l'entitat de servei ha de tenir habilitat l'[Espai jeràrquic de noms (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Per poder crear l'entitat de servei, heu de tenir permisos d'administrador per a la vostra subscripció a l'Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Crear l'entitat de servei de l'Azure per a les conclusions del públic
 
@@ -83,7 +85,7 @@ Adjunteu un compte d'emmagatzematge de l'Azure Data Lake a les conclusions del p
 
 Seguiu els passos que es descriuen a continuació per proporcionar la informació necessària sobre el mètode seleccionat.
 
-### <a name="resounce-based-storage-account-connection"></a>Connexió al compte d'emmagatzematge basat en recursos
+### <a name="resource-based-storage-account-connection"></a>Connexió al compte d'emmagatzematge basat en recursos
 
 1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu-hi la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
 
@@ -108,7 +110,8 @@ Seguiu els passos que es descriuen a continuació per proporcionar la informaci�
 1. Reviseu la **Subscripció**, el **Grup de recursos** i el **Nom** del compte d'emmagatzematge per assegurar-vos de seleccionar els valors adequats a les conclusions del públic.
 
 1. A les conclusions del públic, trieu els valors o els camps corresponents quan adjunteu el compte d'emmagatzematge.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Introduïu la informació de l'identificador de recurs del compte d'emmagatzematge.":::
    
 1. Continueu amb els passos restants a les conclusions del públic per adjuntar el compte d'emmagatzematge.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

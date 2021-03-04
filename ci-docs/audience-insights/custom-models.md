@@ -4,16 +4,16 @@ description: Treballeu amb models personalitzats de l'Aprenentatge automàtic de
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668891"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267222"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
@@ -46,15 +46,15 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 1. Trieu el servei web del Machine Learning Studio (clàssic) o el pipeline de l'aprenentatge automàtic de l'Azure en el menú desplegable del **Servei web que conté el vostre model**. A continuació, seleccioneu **Següent**.
    - Més informació sobre la [publicació d'un servei web al Machine Learning Studio (clàssic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > El pipeline s'ha de publicar en un [extrem de pipeline](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Per a cada **Entrada del servei web**, seleccioneu l'**Entitat** coincident de les conclusions del públic i seleccioneu **Següent**.
+   > [!NOTE]
+   > El flux de treball del model personalitzat aplicarà heurística per assignar els camps d'entrada del servei web als atributs de l'entitat segons el nom i el tipus de dades del camp. Veureu un error si un camp del servei web no es pot assignar a una entitat.
 
    > [!div class="mx-imgBorder"]
    > ![Configurar un flux de treball](media/intelligence-screen2-updated.png "Configurar un flux de treball")
-
+   
 1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
    - Machine Learning Studio (clàssic)
       1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del servei web.
@@ -112,3 +112,6 @@ El flux de treball també s'executa automàticament amb cada actualització plan
 1. Seleccioneu **Suprimeix** i confirmeu la supressió.
 
 El flux de treball se suprimirà. L'[entitat](entities.md) que es va crear quan es va crear el flux de treball persisteix i es pot visualitzar des de la pàgina **Entitats**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

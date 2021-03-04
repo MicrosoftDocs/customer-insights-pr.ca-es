@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667217"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267420"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
@@ -44,13 +44,13 @@ Les fonts de dades inclouen entitats amb dades transaccionals i d'activitats pro
 
 1. A la secció **Configura la relació**, configureu els detalls per connectar les dades d'activitat al client corresponent.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definir la relació d'entitat](media/activities-entities-define.png "Definir la relació d'entitat")
-
     - **Camp d'entitat d'activitat**: seleccioneu el camp a la vostra entitat d'activitat que s'utilitzarà per establir una relació amb una altra entitat.
     - **Entitat de client**: seleccioneu l'entitat de client d'origen corresponent amb la qual l'entitat activitat tindrà una relació. Només podeu relacionar-vos amb les entitats de client d'origen que s'utilitzen al procés d'unificació de dades.
     - **Camp d'entitat de client**: aquest camp mostra la clau principal de l'entitat de client d'origen com a seleccionada al procés d'assignació. Aquest camp de clau principal a l'entitat de client d'origen s'utilitza per establir una relació amb l'entitat d'activitat.
     - **Nom**: si ja hi ha una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació serà només de lectura. Si no existeix aquesta relació, es crearà una relació nova amb el nom que es proporciona aquí.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definir la relació d'entitat](media/activities-entities-define.png "Definir la relació d'entitat")
 
 1. Seleccioneu **Desa** per aplicar els canvis.
 
@@ -82,3 +82,6 @@ Les fonts de dades inclouen entitats amb dades transaccionals i d'activitats pro
 3. Seleccioneu a la icona **Suprimeix**.
 
 4. Confirmeu la supressió.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689208"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268398"
 ---
 # <a name="user-permissions"></a>Permisos d'usuari
 
@@ -74,3 +74,6 @@ A les conclusions del públic, aneu a **Administració** > **Permisos** per veur
 - Les funcions s'especifiquen a la columna **Funció**.
 - Seleccioneu qualsevol títol de columna per ordenar els resultats pel valor de la columna.
 - Utilitzeu el camp **Cerca** de la part superior de la pàgina per localitzar usuaris concrets.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

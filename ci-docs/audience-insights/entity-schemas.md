@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643896"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269272"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
@@ -45,3 +45,6 @@ Per obtenir més informació, vegeu la documentació sobre els [Esquemes d'entit
 Podeu visualitzar entitats al [navegador d'entitats del Common Data Model](https://microsoft.github.io/CDM/). Seleccioneu el botó **Carrega des de GitHub!** i aneu a **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, on trobareu la llista d'entitats del Customer Insights i les seves definicions.
 > [!div class="mx-imgBorder"]
 > ![Navegador d'entitats del CDM que mostra l'entitat CustomerActivity](media/CDM-entity-navigator.png "Navegador d'entitats del CDM que mostra l'entitat CustomerActivity")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

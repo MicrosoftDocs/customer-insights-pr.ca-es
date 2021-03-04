@@ -1,7 +1,7 @@
 ---
 title: Cercar i filtrar perfils de client
 description: Trobeu ràpidament informació sobre els perfils de client unificats i filtreu-los per atributs especificats.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405170"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270054"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfils de client: índex de cerca i filtratge
 
@@ -28,14 +28,6 @@ El resultat d'unificar les dades dels clients és una entitat de perfil de clien
 Si és la primera vegada que definiu els atributs que es poden cercar com a administrador, primer heu de definir els camps indexats. Us suggerim que trieu tots els atributs pels quals els usuaris puguin cercar i filtrar els clients a la pàgina **Clients**. Només podeu especificar els atributs que hi ha a l'entitat de perfil de client que heu creat durant el procés d'unificació de dades.
 
 1. Obriu la pàgina **Clients** i seleccioneu **Cerca i filtra l'índex**.
-
-> [!NOTE]
-> Creem una configuració d'índex de cerca per defecte als atributs disponibles de l'entitat Client dels tipus semàntics següents tal com es defineix a la pàgina d'assignació.
-> - Nom, cognom, segon nom, nom complet de la persona
-> - Nom de l'organització
-> - Adreça electrònica
-> - Número de telèfon
-> - Informació de la ubicació
 
 2. Seleccioneu **+ Afegeix** per especificar els camps indexats.
 
@@ -65,3 +57,10 @@ El menú **Filtre** de la pàgina **Clients** pot incloure un nombre variable de
 2. Seleccioneu **Desa** per aplicar els canvis.
 
 3. Seleccioneu **Executa** una vegada que estigueu a punt per aplicar la configuració.
+
+## <a name="next-steps"></a>Passos següents
+
+Aneu a la pàgina **Clients** per cercar perfils de client o utilitzeu els camps indexats per veure un subconjunt de tots els perfils de client.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

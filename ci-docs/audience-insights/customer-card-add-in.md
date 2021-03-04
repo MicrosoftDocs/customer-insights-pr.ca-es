@@ -1,7 +1,7 @@
 ---
 title: Instal·lar i configurar el Complement de targeta del client
 description: Instal·leu i configureu el complement de targeta del client per al Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644031"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268032"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
@@ -28,7 +28,7 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 - Perfils de client [ingerits des de l'aplicació Dynamics 365 mitjançant el Common Data Service](connect-power-query.md).
 - Els usuaris del Complement de targeta del client s'han d'[afegir com a usuaris](permissions.md) a les conclusions del públic.
 - [Capacitats de cerca i filtratge configurades](search-filter-index.md).
-- Control demogràfic: Els camps demogràfics, com l'edat o el sexe, estan disponibles al perfil unificat del client.
+- Control demogràfic: Els camps demogràfics, com l'edat o el gènere, estan disponibles al perfil unificat del client.
 - Control Enriquiment: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
 - Control d'intel·ligència: Necessita dades generades mitjançant l'aprenentatge automàtic de l'Azure ([prediccions](predictions.md) o [models personalitzats](custom-models.md))
 - Control de mesures: Requereix [mesures configurades](measures.md).
@@ -92,10 +92,26 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 
 1. Al quadre de diàleg **Propietats del camp**, desactiveu la casella de selecció **Mostra l'etiqueta al formulari**.
 
-1. Seleccioneu l'opció **Web** per al control. Per al control Enriquiment, seleccioneu el tipus d'enriquiment que voleu mostrar configurant el camp **enrichmentType**. Heu d'afegir un control d'enriquiment diferent per a cada tipus d'enriquiment.
+1. Seleccioneu l'opció **Web** per al control. Per al control Enriquiment, seleccioneu el tipus d'enriquiment que voleu mostrar configurant el camp **enrichmentType**. Afegiu un control d'enriquiment diferent per a cada tipus d'enriquiment.
 
 1. Seleccioneu **Desa** i **Publica** per publicar el formulari de contacte actualitzat.
 
 1. Aneu al formulari de contacte publicat. Es mostra el control acabat d'afegir. Pot ser que hàgiu d'iniciar la sessió la primera vegada que l'utilitzeu.
 
 1. Per personalitzar el que voleu que es mostri en el control personalitzat, seleccioneu el botó Edita a la cantonada superior dreta.
+
+## <a name="upgrade-customer-card-add-in"></a>Actualitzar el complement de targeta del client
+El complement de targeta del client no s'actualitza automàticament. Per actualitzar a l'última versió, seguiu aquest procediment a l'aplicació Dynamics 365 que té el complement instal·lat.
+
+1. A l'aplicació Dynamics 365, aneu a **Configuració** > **Personalització** i seleccioneu **Solucions**.
+
+1. A la taula de complements, cerqueu **CustomerInsightsCustomerCard** i seleccioneu la fila.
+
+1. Seleccioneu **Aplica l'actualització de la solució** a la barra d'accions.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualitzar la solució a l'àrea Personalització de les aplicacions del Dynamics 365":::
+
+1. Després d'iniciar el procés d'actualització, veureu un indicador de càrrega fins que finalitzi l'actualització. Si no hi ha cap versió nova, l'actualització mostrarà un missatge d'error.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

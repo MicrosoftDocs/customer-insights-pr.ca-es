@@ -1,20 +1,20 @@
 ---
 title: Enriquiment de amb l'enriquiment de tercers d'Experian
 description: Informació general sobre l'enriquiment de tercers d'Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668790"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269548"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir perfils de clients amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -41,7 +41,9 @@ Per configurar Experian, cal complir els següents requisits previs:
 
 ## <a name="map-your-fields"></a>Assignació dels camps
 
-1. Seleccioneu **Afegeix dades** i trieu els identificadors clau **Nom i Adreça**, **Correu electrònic** o **Telèfon** que s'enviaran a Experian per a la resolució d'identitat.
+1.  Seleccioneu **Afegeix dades** i trieu el **conjunt de dades del client** que voleu enriquir amb les dades demogràfiques d'Experian. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+
+1. Seleccioneu els identificadors clau de **Nom i adreça**, **Correu electrònic** o **Telèfon** per enviar a Experian per a la resolució d'identitats.
 
    > [!TIP]
    > Si envieu més atributs d'identificador clau a Experian, probablement es produirà un percentatge de coincidència més alt.
@@ -52,8 +54,8 @@ Per configurar Experian, cal complir els següents requisits previs:
 
 1.  Seleccioneu **Desa** per completar l'assignació de camps.
 
-   > [!div class="mx-imgBorder"]
-   > ![Assignació de camps d'Experian](media/experian-field-mapping.png "Assignació de camps d'Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Assignació de camps d'Experian](media/experian-field-mapping.png "Assignació de camps d'Experian")
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 
@@ -71,3 +73,6 @@ Construïu a partir de les dades de clients enriquits. Creeu [segments](segments
 
 Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a Experian, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Experian compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

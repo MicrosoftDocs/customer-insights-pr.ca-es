@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643671"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269962"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Connector per al Facebook Ads Manager (versió preliminar)
 
@@ -62,7 +62,16 @@ Exporteu els segments de perfils unificats de client al Facebook Ads Manager per
 
 Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Limitacions conegudes
+
+- Fins a 10 milions de perfils de client per exportació a l'Administrador d'anuncis de Facebook 
+- L'exportació a l'Administrador d'anuncis de Facebook es limita als segments
+- L'exportació de segments amb un total de 10 milions de perfils pot tardar fins a 90 minuts a completar-se
+
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
 Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a l'Administrador d'anuncis del Facebook, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Facebook Ads compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

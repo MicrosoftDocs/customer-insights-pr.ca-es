@@ -1,30 +1,26 @@
 ---
-title: Capacitat de conclusions del públic
-description: Informació general sobre la capacitat de conclusions del públic del Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
+description: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405157"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476983"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Capacitat de conclusions del públic del Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
-L'experiència del client és al cor de les ambicions de transformació digital de cada organització. Per competir en el mercat actual, les organitzacions han de generar relacions significatives amb els seus clients a nivell personal. La capacitat de personalitzar eficaçment a escala requereix una visualització completa i unificada dels clients.
+Les conclusions del públic us permeten analitzar més profundament els vostres clients. Connecteu dades de diverses fonts transaccionals, conductuals i observacionals per crear una visualització del client de 360 graus. Utilitzeu aquests coneixements per utilitzar processos i experiències centrades en el client. Unifiqueu i analitzeu les dades dels clients i aprofiteu-les per prendre conclusions i mesures intel·ligents.
 
-Les conclusions del públic us permeten analitzar més profundament els vostres clients. Connecteu dades de diverses fonts transaccionals, conductuals i observacionals per crear una visualització del client de 360 graus. Utilitzeu aquests coneixements per utilitzar processos i experiències centrades en el client.
-
-**Unifiqueu i analitzeu les dades dels clients i aprofiteu-les per prendre conclusions i mesures intel·ligents.**
-
-Amb les conclusions del públic, les organitzacions poden:  
+## <a name="main-benefits"></a>Principals avantatges 
 
 - **Suprimir les dades aïllades i unificar les dades dels clients**
 
@@ -33,15 +29,15 @@ Amb les conclusions del públic, les organitzacions poden:
 
 - **Enriquir amb la intel·ligència del públic inclosa al Microsoft Graph**
 
-  - Creeu perfils de client més rics incorporant la intel·ligència del públic inclosa al Microsoft Graph.  
+  - Creeu perfils de client més rics [incorporant la intel·ligència del públic inclosa al Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Alimentar els processos empresarials i experiències dels clients personalitzades**
 
   - Impulseu la interacció personalitzada entre canals: oferiu als professionals de màrqueting, vendes i servei informació del client contextual i de fàbrica i targetes de perfil del client a mida incorporades en les aplicacions empresarials que ja utilitzen cada dia
   - Automatitzeu els processos i experiències centrats en el client a partir de perfils personalitzables, mesures empresarials i segments.
-  - Habiliteu i amplieu les experiències de la línia de negoci creades a la Microsoft Power Platform. Creeu ràpidament aplicacions amb informació incrustada mitjançant un eficaç mètode de codi baix del PowerApps.  
+  - Habiliteu i amplieu les experiències de línia de negoci creades sobre el [Microsoft Power Platform](https://powerplatform.microsoft.com/). Creeu ràpidament aplicacions amb informació incrustada mitjançant un eficaç mètode de codi baix del PowerApps.  
 
-Les conclusions del públic inclouen capacitats per als següents usuaris clau:
+## <a name="key-audiences"></a>Públics clau
 
 - **Analistes/administradors de dades:**
 
@@ -58,5 +54,8 @@ Les conclusions del públic inclouen capacitats per als següents usuaris clau:
 
 - **Analistes empresarials:**
 
-  - Creeu perfils personalitzables, definiu mesures i creeu segments per obtenir una visualització de 360 graus del client, específica de la vostra organització.  
-  - Utilitzeu els connectors preparats per a l'ús per al PowerApps o el Microsoft Power BI o les API per mostrar informació sobre les vostres aplicacions empresarials o solucions de BI.  
+  - Creeu perfils personalitzables, definiu mesures, creeu segments i beneficieu-vos de l'anàlisi predictiva per obtenir una visualització de 360 graus del client, específica de la vostra organització.  
+  - Utilitzeu connectors de fàbrica per a diverses aplicacions o API de Microsoft i de tercers per processar encara més les conclusions.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

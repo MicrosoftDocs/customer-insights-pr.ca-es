@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405128"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477076"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
 
@@ -31,7 +31,7 @@ Creeu visualitzacions per a les dades amb el Power BI Desktop. Genereu informaci
 
 1. Seleccioneu **Mostra'n més** i cerqueu **Dynamics 365 Customer Insights**
 
-1. Seleccioneu el resultat i seleccioneu **Connecta**.
+1. Seleccioneu **Connecta**.
 
 1. **Inicieu la sessió** amb el mateix compte d'organització que utilitzeu per al Customer Insights i seleccioneu **Connecta**.
    > [!NOTE]
@@ -52,3 +52,22 @@ El connector del Customer Insights per al Power BI està dissenyat per funcionar
 ### <a name="work-with-a-subset-of-data"></a>Treballar amb un subconjunt de dades
 
 Considereu la possibilitat de treballar amb un subconjunt de les dades. Per exemple, podeu crear [segments](segments.md) en comptes d'exportar tots els registres de client al Power BI.
+
+## <a name="troubleshooting"></a>Solució de problemes
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>L'entorn del Customer Insights no es mostra al Power BI
+
+Els entorns que tenen més d'una [relació](relationships.md) definida entre dues entitats idèntiques a les conclusions del públic no estaran disponible al connector del Power BI.
+
+Podeu identificar i suprimir les relacions duplicades.
+
+1. A les conclusions del públic, aneu a **Dades** > **Relacions** a l'entorn que falta al Power BI.
+2. Identificar les relacions duplicades:
+   - Comproveu si hi ha més d'una relació definida entre les mateixes dues entitats.
+   - Comproveu si s'ha creat una relació entre dues entitats que estan incloses al procés d'unificació. Hi ha una relació implícita que es defineix entre totes les entitats incloses al procés d'unificació.
+3. Suprimiu les relacions duplicades identificades.
+
+Després de la supressió de les relacions duplicades, proveu de tornar a configurar el connector del Power BI. L'entorn hauria d'estar disponible ara.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

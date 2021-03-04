@@ -4,17 +4,17 @@ description: Feu coincidir entitats per crear perfils de client unificats.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405164"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267466"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -22,7 +22,7 @@ Després d'haver completat la fase d'assignació, ja esteu preparat per a la coi
 
 ## <a name="specify-the-match-order"></a>Especificar l'ordre de coincidència
 
-Aneu a **Unifica** > **Coincidència** i seleccioneu **Defineix l'ordre** per iniciar la fase de coincidència.
+Aneu a **Dades** > **Unificació** > **Coincidència** i seleccioneu **Defineix l'ordre** per iniciar la fase de coincidència.
 
 Cada coincidència unifica dues o més entitats en una entitat única alhora que es conserva cada registre de client únic. A l'exemple següent, seleccionem tres entitats: **ContactCSV: TestData** com a entitat **Principal**, **WebAccountCSV: TestData** com a **Entitat 2**, i **CallRecordSmall: TestData** com a **Entitat 3**. El diagrama que hi ha a sobre de les seleccions il·lustra com s'executarà l'ordre de coincidència.
 
@@ -136,7 +136,7 @@ Un cop identificat un registre desduplicat, aquest registre s'utilitzarà al pro
 
 1. En executar ara el procés de coincidència, els registres s'agruparan segons les condicions definides a la regles de desduplicació. Un cop agrupats els registres, s'aplicarà la norma de combinació per identificar el registre guanyador.
 
-1. Aquest registre guanyador passa seguidament a la coincidència entre entitats.
+1. A continuació, aquest registre guanyador es passa a la coincidència entre entitats i els registres no guanyadors (per exemple, els ID alternatius) per millorar la qualitat de les coincidències.
 
 1. Les regles de coincidència personalitzades definides per fer coincidir sempre o no fer coincidir mai invalidaran les regles de desduplicació. Si una regla de desduplicació identifica registres coincidents i s'ha definit una regla de coincidència personalitzada per no fer coincidir mai aquests registres, aquests dos registres no es faran coincidir.
 
@@ -157,6 +157,17 @@ El primer procés de coincidència resulta en la creació d'una entitat mestra u
 
 > [!TIP]
 > Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+
+## <a name="deduplication-output-as-an-entity"></a>Sortida de la desduplicació com a entitat
+A banda de l'entitat mestra unificada creada com a part de la coincidència entre entitats, el procés de desduplicació també genera una entitat nova per a cada entitat des de l'ordre de coincidència per identificar els registres desduplicats. Aquestes entitats es poden trobar amb **ConflationMatchPairs:CustomerInsights** a la secció **Sistema** de la pàgina **Entitats**, amb el nom **Deduplication_Datasource_Entity**.
+
+Una entitat de sortida de desduplicació conté la informació següent:
+- ID / Claus
+  - Camp de clau principal i el seu camp d'ID alternatius. El camp d'ID alternatius consisteix en tots els ID alternatius identificats per a un registre.
+  - El camp Deduplication_GroupId mostra el grup o clúster identificat dins d'una entitat que agrupa tots els registres semblants en funció dels camps de desduplicació especificats. S'utilitza per al processament del sistema. Si no hi ha regles de desduplicació manuals especificades i s'apliquen regles de desduplicació definides pel sistema, potser no trobareu aquest camp a l'entitat de sortida de desduplicació.
+  - Deduplication_WinnerId: aquest camp conté l'ID guanyador dels grups o clústers identificats. Si Deduplication_WinnerId és el mateix que el valor de la clau principal d'un registre, significa que el registre és el registre guanyador.
+- Camps que s'utilitzen per definir les regles de desduplicació.
+- Els camps Regla i Puntuació per denotar quines de les regles de desduplicació s'apliquen i la puntuació retornada per l'algorisme de coincidència.
 
 ## <a name="review-and-validate-your-matches"></a>Revisar i validar les coincidències
 
@@ -200,6 +211,11 @@ Augmenteu la qualitat tornant a configurar alguns dels paràmetres de coincidèn
   > [!div class="mx-imgBorder"]
   > ![Duplicar una regla](media/configure-data-duplicate-rule.png "Duplicar una regla")
 
+- **Desactiveu una regla** per conservar una regla de coincidència, excloent-la del procés de coincidència.
+
+  > [!div class="mx-imgBorder"]
+  > ![Desactivar una regla](media/configure-data-deactivate-rule.png "Desactivar una regla")
+
 - **Editeu les regles** seleccionant el símbol **Edita**. Podeu aplicar els canvis següents:
 
   - Canviar els atributs d'una condició: seleccioneu atributs nous dins de la fila de condicions específica.
@@ -229,10 +245,12 @@ Podeu especificar condicions amb les que certs registres han de coincidir sempre
     - Entity2Key: 34567
 
    El mateix fitxer de plantilla pot especificar els registres de coincidència personalitzats des de diverses entitats.
+   
+   Si voleu especificar la coincidència personalitzada per a la desduplicació en una entitat, proporcioneu la mateixa entitat com a Entitat1 i Entitat2 i definiu els diferents valors de clau principal.
 
 5. Després d'afegir totes les substitucions que voleu aplicar, deseu el fitxer de la plantilla.
 
-Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves. Un cop ingerits, podeu utilitzar-los per especificar la configuració de la coincidència.
+6. Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves. Un cop ingerits, podeu utilitzar-los per especificar la configuració de la coincidència.
 
 7. Després de carregar els fitxers i que les entitats estiguin disponibles, torneu a seleccionar l'opció **Coincidència personalitzada**. Veureu opcions per especificar les entitats que voleu incloure. Seleccioneu les entitats necessàries al menú desplegable.
 
@@ -250,3 +268,6 @@ Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a e
 ## <a name="next-step"></a>Pas següent
 
 Després de completar el procés de coincidència com a mínim per a un parell de coincidència, podeu resoldre les contradiccions possibles de les dades anant al tema [**Combinació**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

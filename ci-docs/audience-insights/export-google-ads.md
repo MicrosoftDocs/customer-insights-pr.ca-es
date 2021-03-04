@@ -5,16 +5,16 @@ ms.date: 11/18/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 06aa0b6ff3125d8735adc8c8f9f6dad69087d9f8
-ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
+ms.openlocfilehash: ba7c82e643ea0dc1897e0954e78646932cafffa3
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4568406"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268950"
 ---
 # <a name="connector-for-google-ads-preview"></a>Connector per a Google Ads (versió preliminar)
 
@@ -74,3 +74,6 @@ Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació
 
 Quan habiliteu Dynamics 365 Customer Insights perquè transmeti dades a Google Ads, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Google Ads compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

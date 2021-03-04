@@ -6,16 +6,16 @@ metadata:
   description: Centre d'ajuda amb enllaços essencials per a les conclusions del públic.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405159"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745709"
 landingContent:
 - title: Quant a les conclusions del públic
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Lloc de la comunitat
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Ingerir fonts de dades
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Afegir fonts de dades
-      url: data-sources.md
-    - text: Actualització incremental
-      url: incremental-refresh-data-sources.md
-    - text: Entendre les entitats
-      url: entities.md
 - title: Unificar dades
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Assignació
-      url: map-entities.md
-    - text: Coincidència
-      url: match-entities.md
-    - text: Combinació
-      url: merge-entities.md
-- title: Delimitar els perfils de client
+    - text: Informació general de les fonts de dades
+      url: data-sources.md
+    - text: Informació general sobre la unificació
+      url: data-unification.md
+    - text: Entendre les entitats
+      url: entities.md
+- title: Enriquir i refinar dades
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Enriquir perfils de clients
+      url: enrichment-hub.md
     - text: Configurar relacions
       url: relationships.md
     - text: Enumerar les activitats d'un client
       url: activities.md
-    - text: Incorporar els vostres propis models d'aprenentatge automàtic
-      url: custom-models.md
+- title: Obtén informació detallada
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear segments
+      url: segments.md
+    - text: Crear mesures
+      url: measures.md
+    - text: Completar dades amb prediccions
+      url: predictions.md
 - title: Exportar dades del client
   linkLists:
   - linkListType: how-to-guide

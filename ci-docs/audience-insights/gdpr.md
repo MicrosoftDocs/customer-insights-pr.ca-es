@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405154"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268674"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD
 
@@ -75,3 +75,6 @@ Un administrador d'inquilins pot seguir aquests passos per exportar dades:
 1. Envieu un missatge de correu electrònic a D365CI@microsoft.com especificant l'adreça de correu electrònic de l'usuari a la sol·licitud. L'equip del Customer Insights enviarà un missatge de correu electrònic a l'adreça electrònica de l'administrador de l'inquilí registrada demanant la confirmació per exportar les dades.
 2. Reconeixeu la confirmació per exportar les dades de l'usuari sol·licitat.
 3. Rebeu les dades exportades a través de l'adreça electrònica de l'administrador d'inquilins.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

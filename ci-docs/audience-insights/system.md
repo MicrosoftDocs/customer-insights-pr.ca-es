@@ -1,7 +1,7 @@
 ---
 title: Configuració del sistema a les conclusions del públic
 description: Coneixeu la configuració del sistema per a capacitat de conclusions del públic del Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405167"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267328"
 ---
 # <a name="system-configuration"></a>Configuració del sistema
 
-La pàgina **Sistema** inclou quatre pestanyes: **Estat**, **Planificació**, **Quant a** i **General**.
+La pàgina **Sistema** inclou les pestanyes següents:
+- [Estat](#status-tab)
+- [Planifica](#schedule-tab)
+- [Ús de l'API](#api-usage-tab)
+- [Quant a](#about-tab)
+- [General](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Pàgina del sistema](media/system-tabs.png "Pàgina del sistema")
 
 ## <a name="status-tab"></a>Pestanya Estat
 
-La pestanya **Estat** us permet fer un seguiment del progrés de la ingestió de dades, exportacions de dades i diversos processos del producte importants. Reviseu la informació d'aquesta pestanya per garantir la integritat dels processos actius.
+La **pestanya Estat** us permet fer un seguiment del progrés de la ingesta de dades, les exportacions de dades i altres processos de producte importants. Reviseu la informació d'aquesta pestanya per garantir la integritat dels processos actius.
 
-Aquesta pestanya inclou taules d'estat per a **Fonts de dades**, **Processos del sistema** i **Preparació de dades**. Cada taula fa el seguiment del **Nom** de la tasca i l'entitat corresponent, l'**Estat** de l'execució més recent i la data de l'**Última actualització**.
+Aquesta pestanya inclou taules amb estat i informació de processament per a diversos processos. Cada taula fa el seguiment del **Nom** de la tasca i l'entitat corresponent, l'**Estat** de l'execució més recent i la data de l'**Última actualització**.
 
 Per visualitzar els detalls de les darreres execucions de les tasques, seleccioneu-ne el nom.
 
@@ -40,7 +45,7 @@ Hi ha sis tipus d'estat per a les tasques. Els tipus d'estat següents també es
 - **Omesa:** s'ha omès la tasca. Un o diversos processos descendents dels quals depèn aquesta tasca s'han omès o no s'han completat.
 - **Error**: el processament de la tasca ha fallat.
 - **Cancel·lada:** l'usuari ha cancel·lat el processament abans d'haver acabat.
-- **A la cua**: el processament està a la cua i començarà una vegada s'hagin completat totes les tasques posteriors. Per obtenir més informació, vegeu [Normes d'actualització](#refresh-policies).
+- **Cua**: el processament està a la cua i s'iniciarà quan s'hagin completat totes les tasques prèvies. Per obtenir més informació, vegeu [Normes d'actualització](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Normes d'actualització
 
@@ -89,4 +94,17 @@ Seleccioneu **Desa** per confirmar les seleccions.
 
 ## <a name="api-usage-tab"></a>Pestanya Ús de l'API
 
-Cerqueu detalls sobre l'ús de l'API en temps real i consulteu quins esdeveniments s'han produït en un interval de temps determinat. Per obtenir més informació, vegeu [Ingestió de dades en temps real](real-time-data-ingestion.md).
+Cerqueu detalls sobre l'ús de l'API en temps real i vegeu quins esdeveniments s'han produït en un període de temps determinat. Trieu el període de temps al menú desplegable **Seleccioneu un període de temps**. 
+
+L'**ús de l'API** conté tres seccions: 
+- **Trucades de l'API**: un gràfic que mostra el nombre agregat de trucades a l'API en el període de temps seleccionat.
+
+- **Transferència de dades**: un gràfic que mostra la quantitat de dades que s'han transferit a través de l'API en el període de temps seleccionat.
+
+-  **Operacions**: una taula amb files per a cada operació de l'API disponible i detalls sobre l'ús de les operacions. Podeu seleccionar un nom d'operació per anar a la [referència de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Les operacions que utilitzen la [ingesta de dades en temps real](real-time-data-ingestion.md) contenen un botó amb un símbol de binocles per visualitzar l'ús de l'API en temps real. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.   
+   Utilitzeu el quadre **Agrupa per** a la subfinestra **Ús de l'API en temps real** per triar com es presenten millor les interaccions en temps real. Podeu agrupar les dades per mètode de l'API, nom complet de l'entitat (entitat ingerida), creat per (origen de la incidència), resultat (correcte o error) o codis d'error. Les dades estan disponibles com a gràfic d'historial i com a taula.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Utilitzeu els models basats en l'aprenentatge automàtic de l'Azure
 ms.date: 11/30/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: naravill
 ms.author: mhart
 ms.reviewer: m-hartmann
 manager: shellyha
-ms.openlocfilehash: 6f00d3202dc29d810bdd218d06c7d04e551846e8
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668756"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267894"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 
@@ -97,3 +97,6 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
       # datastore.upload(src_dir=<<working directory>>, target_path=directory_name, overwrite=False, show_progress=True)
       output_dataset = Dataset.File.upload_directory(src_dir=<<working directory>>, target = (datastore, directory_name)) # Remove trailing "/" from directory_name
    ```
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

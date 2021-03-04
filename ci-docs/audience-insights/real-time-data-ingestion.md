@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689163"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270268"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestió de dades en temps real (versió preliminar)
 
@@ -83,6 +83,7 @@ Els detalls d'aquesta API, incloent-hi els paràmetres i les respostes, es trobe
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendre l'ús en temps real amb la telemetria
 
-Obtingueu una visió general del volum de sol·licituds realitzades a l'API en temps real i la informació sobre els problemes que pot trobar el sistema. Per [accedir a la telemetria en temps real](system.md#api-usage-tab), aneu a **Administració** > **Sistema** > **Ús de l'API**. A la taula **Operacions**, les files d'operacions de l'API que utilitzen mètodes en temps real inclouen un botó per visualitzar l'ús de l'API en temps real. El botó es mostra amb el símbol d'uns prismàtics. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.
+Obtingueu una visió general del volum de sol·licituds realitzades a l'API en temps real i la informació sobre els problemes que pot trobar el sistema. Podeu [accedir a la telemetria en temps real](system.md#api-usage-tab). 
 
-Utilitzeu el selector **Agrupa per** amb la finalitat de triar com s'han de mostrar millor les interaccions en temps real en una cronologia que abasta des de les últimes 24 hores fins als últims 30 dies. Podeu agrupar les dades per mètode de l'API, nom complet de l'entitat (entitat ingerida), creat per (origen de la incidència), resultat (correcte o error) o codis d'error. Les dades estan disponibles com a gràfic d'historial i com a taula.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

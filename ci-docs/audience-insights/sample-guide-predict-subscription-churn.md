@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653968"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269824"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia d'exemples de predicció de rotació de subscripcions (versió preliminar)
 
@@ -46,10 +46,9 @@ Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més conc
    - **DateOfBirth**: data
    - **CreatedOn**: data/hora/zona
 
-   [!div class="mx-imgBorder"]
-   ![Transformar DoB en Data](media/ecommerce-dob-date.PNG "transformar la data de naixement en data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformeu la data de naixement en data.":::
 
-1. Al camp "Nom" de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **eCommerceContacts**.
+1. Al camp **Nom** de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **eCommerceContacts**.
 
 1. Deseu la font de dades.
 
@@ -67,7 +66,7 @@ Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més conc
    - **RewardsPoints**: nombre enter
    - **CreatedOn**: data/hora
 
-1. Al camp "Nom" de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **loyCustomers**.
+1. Al camp **Nom** de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **loyCustomers**.
 
 1. Deseu la font de dades.
 
@@ -90,7 +89,7 @@ Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més conc
    - **Is_auto_renew**: vertader/fals
    - **RecurringFrequencyInMonths**: nombre enter
 
-1. Al camp "Nom" de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **SubscriptionHistory**.
+1. Al camp **Nom** de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **SubscriptionHistory**.
 
 1. Deseu la font de dades.
 
@@ -230,3 +229,6 @@ Podeu crear un segment nou a partir de l'entitat creada pel model.
 Ja teniu un segment que s'actualitza dinàmicament i que identifica els clients amb un alt risc de rotació per a aquest negoci de subscripció.
 
 Per a més informació, vegeu [Crear i administrar segments](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

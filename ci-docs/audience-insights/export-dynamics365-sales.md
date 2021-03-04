@@ -1,20 +1,20 @@
 ---
 title: Exportar dades del Customer Insights al Dynamics 365 Sales
 description: Més informació sobre com configurar la connexió al Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643806"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268996"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Connector per al Dynamics 365 Sales (visualització prèvia)
 
@@ -24,7 +24,10 @@ Utilitzeu les dades dels vostres clients per crear llistes de màrqueting, fer u
 
 ## <a name="prerequisite"></a>Requisit previ
 
-Registres de contactes [del Dynamics 365 Sales ingerits mitjançant el Common Data Service](connect-power-query.md).
+1. Els registres de contacte han d'estar presents al Dynamics 365 Sales per poder exportar un segment del Customer Insights al Sales. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Sales mitjançant el Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > L'exportació de segments de les conclusions del públic al Sales no crearà registres de contacte nous a les instàncies del Sales. Els registres de contacte del Sales s'han d'ingerir a les conclusions del públic i s'han d'utilitzar com a font de dades. També s'han d'incloure a l'entitat Client unificada per assignar els identificadors de client als identificadors de contacte abans d'exportar els segments.
 
 ## <a name="configure-the-connector-for-sales"></a>Configurar el connector per al Sales
 
@@ -49,3 +52,6 @@ Registres de contactes [del Dynamics 365 Sales ingerits mitjançant el Common Da
 ## <a name="export-the-data"></a>Exportar les dades
 
 Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
