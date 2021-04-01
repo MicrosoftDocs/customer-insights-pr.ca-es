@@ -2,23 +2,23 @@
 title: Ingerir dades a través d'un connector del Power Query
 description: Connectors per a fonts de dades basades en el Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267756"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596901"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a una font de dades del Power Query
 
-El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors estan admesos pel Dynamics 365 Customer Insights. Afegir fonts de dades basades en connectors del Power Query generalment implica els passos indicats a la secció següent. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per a més informació, vegeu la documentació sobre connectors individuals a la [Referència de connectors del Power Query](https://docs.microsoft.com/power-query/connectors/).
+El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors estan admesos pel Dynamics 365 Customer Insights. Afegir fonts de dades basades en connectors del Power Query generalment implica els passos indicats a la secció següent. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per a més informació, vegeu la documentació sobre connectors individuals a la [Referència de connectors del Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Crear una font de dades nova
 
@@ -44,7 +44,7 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
    > [!div class="mx-imgBorder"]
    > ![Quadre de diàleg Edita les consultes](media/data-manager-configure-edit-queries.png "Quadre de diàleg Edita les consultes")
 
-1. També podeu transformar les dades. Seleccioneu una entitat per editar o transformar. Utilitzeu les opcions de la finestra del Power Query per aplicar transformacions. Cada transformació apareix a **Passos aplicats**. El Power Query proporciona nombroses opcions de transformació incorporades. Per a més informació, vegeu [Transformacions del Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. També podeu transformar les dades. Seleccioneu una entitat per editar o transformar. Utilitzeu les opcions de la finestra del Power Query per aplicar transformacions. Cada transformació apareix a **Passos aplicats**. El Power Query proporciona nombroses opcions de transformació incorporades. Per a més informació, vegeu [Transformacions del Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Per afegir entitats addicionals a la font de dades, seleccioneu **Obtén les dades** al quadre de diàleg **Edita les consultes**.
 
@@ -59,7 +59,7 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 
 ## <a name="available-power-query-data-sources"></a>Fonts de dades del Power Query disponibles
 
-Vegeu la [Referència de connectors del Power Query](https://docs.microsoft.com/power-query/connectors/) per veure una llista actualitzada de connectors que podeu seleccionar per importar dades al Customer Insights. 
+Vegeu la [Referència de connectors del Power Query](/power-query/connectors/) per veure una llista actualitzada de connectors que podeu seleccionar per importar dades al Customer Insights. 
 
 Els connectors amb una marca de selecció a la columna **Customer Insights (fluxos de dades)** estan disponibles per crear noves fonts de dades basades en el Power Query. Reviseu la documentació d'un connector específic per obtenir més informació sobre els seus prerequisits, limitacions i altres detalls.
 

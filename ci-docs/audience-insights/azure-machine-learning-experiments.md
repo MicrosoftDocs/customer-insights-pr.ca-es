@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267894"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597407"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 
@@ -29,9 +29,9 @@ Les dades unificades del Dynamics 365 Customer Insights constitueixen un origen 
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurar l’àrea de treball de l'aprenentatge automàtic de l’Azure
 
-1. Vegeu [crear una àrea de treball de l'aprenentatge automàtic de l'Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) per conèixer les diferents opcions de creació de l'àrea de treball. Per obtenir el millor rendiment, creeu l'espai de treball en una regió de l'Azure que sigui geogràficament més propera a l'entorn del Customer Insights.
+1. Vegeu [crear una àrea de treball de l'aprenentatge automàtic de l'Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) per conèixer les diferents opcions de creació de l'àrea de treball. Per obtenir el millor rendiment, creeu l'espai de treball en una regió de l'Azure que sigui geogràficament més propera a l'entorn del Customer Insights.
 
-1. Accediu al vostre espai de treball a través de l'[Azure Machine Learning Studio](https://ml.azure.com/). Hi ha diverses [maneres d'interactuar](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) amb el vostre espai de treball.
+1. Accediu al vostre espai de treball a través de l'[Azure Machine Learning Studio](https://ml.azure.com/). Hi ha diverses [maneres d'interactuar](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) amb el vostre espai de treball.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Treballar amb el dissenyador de l'aprenentatge automàtic de l'Azure
 
@@ -39,13 +39,13 @@ El dissenyador de l'aprenentatge automàtic de l'Azure proporciona un llenç vis
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Treballar amb l'SDK de l'aprenentatge automàtic de l'Azure
 
-Els científics de dades i els desenvolupadors d'IA utilitzen el [SDK de l'aprenentatge automàtic de l'Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) per crear fluxos de treball d'aprenentatge automàtic. Actualment, els models formats amb l'SDK no es poden integrar directament amb el Customer Insights. Per a la integració amb el Customer Insights, caldrà un pipeline d'inferència de lots que consumeixi aquest model.
+Els científics de dades i els desenvolupadors d'IA utilitzen el [SDK de l'aprenentatge automàtic de l'Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) per crear fluxos de treball d'aprenentatge automàtic. Actualment, els models formats amb l'SDK no es poden integrar directament amb el Customer Insights. Per a la integració amb el Customer Insights, caldrà un pipeline d'inferència de lots que consumeixi aquest model.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Requisits del pipeline per lots per a la integració amb Customer Insights
 
 ### <a name="dataset-configuration"></a>Configuració dels conjunts de dades
 
-Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipeline d'inferència per lots, heu de crear conjunts de dades. Aquests conjunts de dades s'han de registrar a l'àrea de treball. Actualment, només s'admeten [conjunts de dades tabulars](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en format .csv. Els conjunts de dades que corresponen a dades d'entitats s'han de configurar com a un paràmetre del pipeline.
+Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipeline d'inferència per lots, heu de crear conjunts de dades. Aquests conjunts de dades s'han de registrar a l'àrea de treball. Actualment, només s'admeten [conjunts de dades tabulars](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en format .csv. Els conjunts de dades que corresponen a dades d'entitats s'han de configurar com a un paràmetre del pipeline.
    
 * Paràmetres de conjunts de dades del dissenyador
    
@@ -76,7 +76,7 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importar les dades del pipeline al Customer Insights
 
-* El dissenyador proporciona el [mòdul de dades ](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data)d'exportació que permet exportar la sortida d'un pipeline a l'Azure Storage. Actualment, el mòdul ha d'utilitzar el tipus de magatzem de dades **Emmagatzematge blob de l’Azure** i parametritzar el **Magatzem de dades** i el **Camí** relatiu. El Customer Insights substitueix aquests dos paràmetres durant l'execució del pipeline per un magatzem de dades i un camí accessible per al producte.
+* El dissenyador proporciona el [mòdul de dades ](/azure/machine-learning/algorithm-module-reference/export-data)d'exportació que permet exportar la sortida d'un pipeline a l'Azure Storage. Actualment, el mòdul ha d'utilitzar el tipus de magatzem de dades **Emmagatzematge blob de l’Azure** i parametritzar el **Magatzem de dades** i el **Camí** relatiu. El Customer Insights substitueix aquests dos paràmetres durant l'execució del pipeline per un magatzem de dades i un camí accessible per al producte.
    > [!div class="mx-imgBorder"]
    > ![Exportar la configuració de mòduls de dades](media/intelligence-designer-importdata.png "Exportar la configuració de mòduls de dades")
    

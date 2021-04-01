@@ -2,19 +2,19 @@
 title: Enriquir perfils de client amb el Microsoft Graph
 description: Utilitzeu les dades propietàries del Microsoft Graph per enriquir les dades dels clients amb afinitats de marca i d'interès.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269318"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596441"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
@@ -33,7 +33,7 @@ Per configurar l'enriquiment d'afinitats d'interessos, aneu a la pestanya **Dete
 
 Utilitzem dades de la cerca en línia del Microsoft Graph per cercar afinitats per a marques i interessos en diversos segments demogràfics (definits per edat, gènere o ubicació). El volum de cerques en línia d'una marca o un interès determina la quantitat d'afinitat d'un segment demogràfic, en comparació amb altres segments, que té a aquesta marca o interès.
 
-[Més informació sobre el Microsoft Graph](https://docs.microsoft.com/graph/overview).
+[Més informació sobre el Microsoft Graph](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Nivell d'afinitat i puntuació
 

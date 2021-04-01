@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270192"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598327"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilitzar models basats en el Machine Learning Studio (clàssic) de l'Azure
 
@@ -37,7 +37,7 @@ En un primer pas, necessitem crear una àrea de treball i obrir el Machine Learn
 
 1. Cerqueu **Àrea de treball del Machine Learning Studio** i seleccioneu **Crea**.
 
-1. Introduïu els detalls necessaris per [crear l'àrea de treball](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Trieu el **nivell de preus del pla del servei web** segons la quantitat de dades que vulgueu importar. Per obtenir un millor rendiment, seleccioneu la **Ubicació** que us sigui geogràficament més propera.
+1. Introduïu els detalls necessaris per [crear l'àrea de treball](/azure/machine-learning/studio/create-workspace). Trieu el **nivell de preus del pla del servei web** segons la quantitat de dades que vulgueu importar. Per obtenir un millor rendiment, seleccioneu la **Ubicació** que us sigui geogràficament més propera.
 
 1. Després de crear el recurs, es mostrarà l'escriptori digital de l'àrea de treball del Machine Learning Studio. Seleccioneu **Inicia el Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Ara podeu crear un experiment nou o importar una plantilla d'experiments existen
 
    ![Configurar un servei web predictiu](media/predictive-webservice-control.png)
 
-1. Quan l'experiment del servei web predictiu tingueu èxit, podreu implementar-lo per a la planificació automàtica. Per fer que el servei web funcioni amb el Customer Insights, seleccioneu **Implementa el servei web** > **Implementa el servei web [Nou] Versió preliminar**. [Més informació sobre implementar un servei web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Quan l'experiment del servei web predictiu tingueu èxit, podreu implementar-lo per a la planificació automàtica. Per fer que el servei web funcioni amb el Customer Insights, seleccioneu **Implementa el servei web** > **Implementa el servei web [Nou] Versió preliminar**. [Més informació sobre implementar un servei web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Implementar un servei web predictiu](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ A la imatge següent es mostra el pipeline d'entrenament i avaluació del model 
 
 ![Model de rotació de l'Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-També apliquem una tècnica anomenada **Importància de característica de permutació**, un aspecte important de l'optimització de models. Els models integrats no tenen pràcticament cap impacte en qualsevol característica específica de la predicció final. La calculadora d'importància de característica utilitza un algoritme personalitzat per calcular la influència de les característiques individuals en el resultat d'un model específic. La importància de característica es normalitza entre +1 i -1. Una influència negativa significa que la característica corresponent té una influència poc intuïtiva en el resultat i s'hauria de suprimir del model. Una influència positiva indica que la característica contribueix en gran mesura a la predicció. Aquests valors no són coeficients de correlació perquè són mètriques diferents. Per obtenir més informació, vegeu [Importància de característica de permutació](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+També apliquem una tècnica anomenada **Importància de característica de permutació**, un aspecte important de l'optimització de models. Els models integrats no tenen pràcticament cap impacte en qualsevol característica específica de la predicció final. La calculadora d'importància de característica utilitza un algoritme personalitzat per calcular la influència de les característiques individuals en el resultat d'un model específic. La importància de característica es normalitza entre +1 i -1. Una influència negativa significa que la característica corresponent té una influència poc intuïtiva en el resultat i s'hauria de suprimir del model. Una influència positiva indica que la característica contribueix en gran mesura a la predicció. Aquests valors no són coeficients de correlació perquè són mètriques diferents. Per obtenir més informació, vegeu [Importància de característica de permutació](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Trobareu [l'experiment de rotació sencer a la Galeria d'IA de l'Azure](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Podeu accedir a [tot l'experiment de recomanació de productes a la Galeria d'IA
 
 ## <a name="integrate-custom-models"></a>Integrar models personalitzats
 
-Per utilitzar aquestes prediccions al Customer Insights, heu d'**exportar** les prediccions juntament amb els ID de client. [Exporteu-los a la mateixa ubicació d'emmagatzematge de blob de l'Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) que la ubicació a la qual exporteu les dades d'origen. El servei web predictiu es pot planificar per executar-se periòdicament i actualitzar les puntuacions.
+Per utilitzar aquestes prediccions al Customer Insights, heu d'**exportar** les prediccions juntament amb els ID de client. [Exporteu-los a la mateixa ubicació d'emmagatzematge de blob de l'Azure](/azure/storage/common/storage-import-export-data-from-blobs) que la ubicació a la qual exporteu les dades d'origen. El servei web predictiu es pot planificar per executar-se periòdicament i actualitzar les puntuacions.
 
 Les dades generades pel model personalitzat es poden utilitzar per continuar enriquint les dades dels clients. Per obtenir més informació, vegeu [Models d'aprenentatge automàtic personalitzats](custom-models.md).
 

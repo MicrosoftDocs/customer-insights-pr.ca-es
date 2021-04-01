@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267710"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596487"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure per a les conclusions del públic
 
@@ -23,7 +23,7 @@ Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir
 Podeu utilitzar l'entitat de servei per [afegir o editar de manera segura una carpeta de Common Data Model com a font de dades](connect-common-data-model.md) o [crear un entorn nou o actualitzar-ne un d'existent](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - El compte d'emmagatzematge de l'Azure Data Lake Storage Gen2 que té com a objectiu utilitzar l'entitat de servei ha de tenir habilitat l'[Espai jeràrquic de noms (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - El compte d'emmagatzematge de l'Azure Data Lake Storage Gen2 que té com a objectiu utilitzar l'entitat de servei ha de tenir habilitat l'[Espai jeràrquic de noms (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Per poder crear l'entitat de servei, heu de tenir permisos d'administrador per a la vostra subscripció a l'Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Crear l'entitat de servei de l'Azure per a les conclusions del públic
@@ -48,7 +48,7 @@ Abans de crear una nova entitat de servei per a les conclusions del públic, com
 
 ### <a name="create-a-new-service-principal"></a>Crear una nova entitat de servei
 
-1. Instal·leu la versió més recent del **PowerShell de l'Azure Active Directory per al Graph**. Per obtenir més informació, vegeu [Instal·lar el PowerShell de l'Azure Active Directory per al Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instal·leu la versió més recent del **PowerShell de l'Azure Active Directory per al Graph**. Per obtenir més informació, vegeu [Instal·lar el PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
    - Al PC, seleccioneu la tecla de Windows al teclat, cerqueu **Windows PowerShell** i seleccioneu **Executa com un administrador**.
    
    - A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.

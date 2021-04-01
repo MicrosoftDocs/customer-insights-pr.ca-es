@@ -2,19 +2,19 @@
 title: Predicció del valor del cicle de vida del client (CLV)
 description: Predieu el potencial d'ingressos per als clients actius en el futur.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268582"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595783"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicció del valor de vida del client (CLV) (versió preliminar)
 
@@ -194,11 +194,11 @@ A la pàgina de resultats hi ha tres seccions principals de dades.
   
   - **Taxa d’èxit en la predicció de clients d’alt valor**
 
-  Vegeu la diferència en la previsió de clients d'alt valor mitjançant el model d'IA en comparació amb el model de base. Per exemple, el 84% de taxa d'èxit significa que, de tots els clients d'alt valor de les dades d'entrenament, el model d'IA ha pogut capturar amb precisió el 84%. A continuació, comparem aquesta taxa d'èxit amb el percentatge d'èxit del model de base per indicar el canvi relatiu. Aquest valor s'utilitza per assignar una qualificació al model.
+    Vegeu la diferència en la previsió de clients d'alt valor mitjançant el model d'IA en comparació amb el model de base. Per exemple, el 84% de taxa d'èxit significa que, de tots els clients d'alt valor de les dades d'entrenament, el model d'IA ha pogut capturar amb precisió el 84%. A continuació, comparem aquesta taxa d'èxit amb el percentatge d'èxit del model de base per indicar el canvi relatiu. Aquest valor s'utilitza per assignar una qualificació al model.
 
   - **Mètriques d’error**
     
-  Una altra mètrica us permet revisar el rendiment global del model quant a error en preveure valors futurs. Per avaluar aquest error, utilitzem la mètrica Arrel de l'error quadràtic mitjà (RMSE). L'RMSE és una manera estàndard de mesurar l'error d'un model a l'hora de preveure dades quantitatives. L'RMSE del model d'IA es compara amb l'RMSE del model de base i s'indica la diferència relativa.
+    Una altra mètrica us permet revisar el rendiment global del model quant a error en preveure valors futurs. Per avaluar aquest error, utilitzem la mètrica Arrel de l'error quadràtic mitjà (RMSE). L'RMSE és una manera estàndard de mesurar l'error d'un model a l'hora de preveure dades quantitatives. L'RMSE del model d'IA es compara amb l'RMSE del model de base i s'indica la diferència relativa.
 
   El model d'IA prioritza la classificació exacta dels clients segons el valor que aporta al vostre negoci. Per tant, només el percentatge d'èxit de la previsió de clients d'alt valor s'utilitza per obtenir la qualificació final del model. La mètrica RMSE és sensible als valors atípics. Als escenaris en què teniu un petit percentatge de clients amb valors de compra excepcionalment alts, pot ser que la mètrica global de l'RMSE no doni la imatge completa del rendiment del model.   
 

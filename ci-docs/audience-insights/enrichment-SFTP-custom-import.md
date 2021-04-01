@@ -2,19 +2,19 @@
 title: Enriquiment amb la importació personalitzada d'SFTP
 description: Informació general sobre l'enriquiment amb la importació personalitzada d'SFTP.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269594"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595843"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquir els perfils de client amb dades personalitzades (versió preliminar)
 
@@ -50,7 +50,7 @@ Per poder configurar la importació personalitzada d'SFTP, s'han de complir els 
 
 ## <a name="defining-field-mappings"></a>Definició de les assignacions de camps 
 
-El directori que conté el fitxer que s'importarà al servidor SFTP també ha d'incloure un fitxer *model.json*. En aquest fitxer es defineix l'esquema que s'utilitzarà per importar les dades. L'esquema ha d'utilitzar [el Common Data Model](https://docs.microsoft.com/common-data-model/) per especificar l'assignació de camps. Tot seguit es mostra un exemple senzill de fitxer model.json:
+El directori que conté el fitxer que s'importarà al servidor SFTP també ha d'incloure un fitxer *model.json*. En aquest fitxer es defineix l'esquema que s'utilitzarà per importar les dades. L'esquema ha d'utilitzar [el Common Data Model](/common-data-model/) per especificar l'assignació de camps. Tot seguit es mostra un exemple senzill de fitxer model.json:
 
 ```
 {

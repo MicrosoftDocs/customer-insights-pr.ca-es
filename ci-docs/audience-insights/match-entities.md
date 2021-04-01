@@ -1,133 +1,137 @@
 ---
 title: Fer coincidir entitats per a la unificació de dades
 description: Feu coincidir entitats per crear perfils de client unificats.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267466"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595552"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
-Després d'haver completat la fase d'assignació, ja esteu preparat per a la coincidència de les entitats. La fase de coincidència especifica com combinar els conjunts de dades en un conjunt de dades de perfil del client unificat. La fase de coincidència requereix com a mínim [dues entitats assignades](map-entities.md).
+La fase de coincidència especifica com combinar els conjunts de dades en un conjunt de dades de perfil del client unificat. Un cop completat el [pas de l'assignació](map-entities.md) al procés d'unificació de dades, ja esteu a punt per aparellar-ho amb les entitats. La fase de coincidència requereix com a mínim dues entitats assignades.
+
+La pàgina de coincidències consta de tres seccions: 
+- Mètriques clau que resumeixen el nombre de registres coincidents
+- Fer coincidir l'ordre i les regles per a la coincidència entre entitats
+- Regles per desduplicació d'entitats coincidents
 
 ## <a name="specify-the-match-order"></a>Especificar l'ordre de coincidència
 
 Aneu a **Dades** > **Unificació** > **Coincidència** i seleccioneu **Defineix l'ordre** per iniciar la fase de coincidència.
 
-Cada coincidència unifica dues o més entitats en una entitat única alhora que es conserva cada registre de client únic. A l'exemple següent, seleccionem tres entitats: **ContactCSV: TestData** com a entitat **Principal**, **WebAccountCSV: TestData** com a **Entitat 2**, i **CallRecordSmall: TestData** com a **Entitat 3**. El diagrama que hi ha a sobre de les seleccions il·lustra com s'executarà l'ordre de coincidència.
+Cada coincidència unifica dues o més entitats en una única entitat consolidada. Al mateix temps, conserva els registres de client únics. Per exemple, hem seleccionat dues entitats: **eCommerce:eCommerceContacts** com a entitat principal i **LoyaltyScheme:loyCustomers** a segona entitat. L'ordre de les entitats especifica en quin ordre el sistema intentarà trobar coincidències en els registres.
 
-> [!div class="mx-imgBorder"]
-> ![Editar l'ordre de coincidència de dades](media/configure-data-match-order-edit-page.png "Editar l'ordre de coincidència de dades")
+:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla de la pàgina Coincidències a l'àrea Unifica del procés d'unificació de dades.":::
   
-L'entitat **Principal** es fa coincidir amb l'**Entitat 2**. El conjunt de dades que es produeix a partir de la primera coincidència es fa coincidir amb l'**Entitat 3**.
-En aquest exemple, només seleccionem dues coincidència, però el sistema pot admetre'n més.
+L'entitat principal *eCommerce:eCommerceContacts* coincideix amb l'entitat següent *LoyaltyScheme:loyCustomers*. El conjunt de dades que resulta del primer pas de coincidència es fa coincidir amb l'entitat següent si teniu més de dues entitats.
 
 > [!IMPORTANT]
-> L'entitat que trieu com a entitat **Principal** servirà com a base per al vostre conjunt de dades mestre unificat. Les entitats addicionals que s'hagin seleccionat durant la fase de coincidència s'afegiran a aquesta entitat. Al mateix temps, això no vol dir que l'entitat unificada inclourà *totes* les dades incloses en aquesta entitat.
+> L'entitat que trieu com a entitat principal servirà com a base per al vostre conjunt de dades de perfils unificat. Les entitats addicionals que s'hagin seleccionat durant la fase de coincidència s'afegiran a aquesta entitat. Això no vol dir que l'entitat unificada inclogui *totes* les dades incloses en aquesta entitat.
 >
 > Hi ha dues consideracions que poden ajudar-vos a triar la jerarquia de les entitats:
 >
-> - Quina entitat considereu que té les dades més completes i fiables sobre els vostres clients?
-> - L'entitat que acabeu d'identificar té atributs que també comparteixen altres entitats (per exemple, el nom, el número de telèfon o l'adreça electrònica)? Si no és així, trieu la segona entitat més fiable.
+> - Trieu l'entitat amb les dades de perfil més completes i fiables sobre els clients com a entitat principal.
+> - Trieu l'entitat que tingui diversos atributs comuns amb altres entitats (per exemple, nom, número de telèfon o adreça electrònica) com a entitat principal.
 
-Seleccioneu **Fet** per desar l'ordre de coincidència.
+Després d'especificar l'ordre de coincidència, veureu les parelles de coincidència definides a la secció **Detalls dels registres coincidents** de **Dades** > **Unifica** > **Coincidència**. Les mètriques clau seran buides fins que es completi el procés de coincidència.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definir regles per al primer parell de coincidència
+## <a name="define-rules-for-match-pairs"></a>Definir regles per a les parelles de coincidència
 
-Després d'especificar l'ordre de coincidència, veureu les coincidències definides a la pàgina **Coincidència**. Les peces de la part superior de la pantalla estaran buides fins que s'executi l'ordre de coincidència.
+Les regles de coincidència especifiquen la lògica mitjançant la qual es farà coincidir un parell d'entitats específic.
 
-> [!div class="mx-imgBorder"]
-> ![Definir regles](media/configure-data-match-need-rules.png "Definir regles")
+L'advertiment **Necessita regles** al costat d'un nom d'entitat suggereix que no hi ha cap regla de coincidència definida per a una parella de coincidència. 
 
-L'avís **Necessita regles** suggereix que no s'ha definit cap regla de coincidència per a un parell de coincidència. Les regles de coincidència especifiquen la lògica mitjançant la qual es farà coincidir un parell d'entitats específic.
+:::image type="content" source="media/match-rule-add.png" alt-text="Captura de pantalla de la secció Detalls del registre coincident amb el control per afegir regles ressaltat.":::
 
-1. Per definir la primera regla, obriu la subfinestra **Definició de regla** seleccionant la fila de coincidència corresponent a la taula de coincidències (1) i, a continuació, seleccionant **Crea una nova regla** (2).
+1. Seleccioneu **Afegeix regles** a sota d'una entitat a la secció **Detalls dels registres coincidents** per definir regles de coincidència.
 
-   > [!div class="mx-imgBorder"]
-   > ![Crear una regla nova](media/configure-data-match-new-rule2.png "Crea un usuari nou")
+1. A la subfinestra **Crea una regla**, configureu les condicions de la regla.
 
-2. A la subfinestra **Edita la regla**, configureu les condicions per a aquesta regla. Cada condició està representada per dues files que inclouen seleccions obligatòries.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Captura de pantalla d'una regla de coincidència oberta amb condicions afegides.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Subfinestra Regla nova](media/configure-data-match-new-rule-condition.png "Subfinestra Regla nova")
+   - **Entitat o camp (primera fila)**: trieu una entitat relacionada i un atribut per especificar una propietat de registre que probablement sigui única per a un client. Per exemple, un número de telèfon o una adreça electrònica. Eviteu la coincidència per atributs de tipus d'activitat. Per exemple, és probable que un ID de compra no trobi cap coincidència en altres tipus de registres.
 
-   Entitat/Camp (primer): atribut que s'utilitzarà per a la coincidència de la primera entitat del parell de coincidència. Per exemple, un número de telèfon o una adreça electrònica. Trieu un atribut que és probable que sigui únic per al client.
+   - **Entitat/camp (segona fila)**: trieu un atribut que es relacioni amb l'atribut de l'entitat especificada a la primera fila.
 
-   > [!TIP]
-   > Eviteu fer coincidències en funció dels atributs de tipus d'activitat. En altres paraules, si un atribut sembla ser una activitat, pot ser que sigui un criteri pobre per a la coincidència.  
+   - **Normalitza**: seleccioneu les opcions de normalització següents per als atributs seleccionats. 
+     - Espai en blanc: suprimeix tots els espais. *Hola   món* es converteix en *Holamón*.
+     - Símbols: suprimeix tots els símbols i caràcters especials. *Cap+espatlla* es converteix en *Capespatlla*.
+     - Text en minúscula: converteix tots els caràcters a minúscules. *TOT MAJÚSCULES i títols* passa a ser *tot majúscules i títols*.
+     - Unicode a ASCII: converteix la notació unicode en caràcters ASCII. */u00B2* es converteix en *2*.
+     - Numèrics: converteix altres sistemes numèrics, com ara els números romans, en números àrabs. *VIII* es converteix en *8*.
+     - Tipus semàntics: estandarditza els noms, els títols, els números de telèfon, les adreces, etc. 
 
-   Entitat/Camp (segon): atribut que s'utilitzarà per a la coincidència de la segona entitat del parell de coincidència.
+   - **Precisió**: definiu el nivell de precisió que voleu aplicar per a aquesta condició. 
+     - **Bàsica**: trieu entre *Baixa*, *Mitjana*, *Alta* i *Exacta*. Seleccioneu **Exacta** per tal de fer coincidir només els registres que coincideixen en un 100 per cent. Seleccioneu un dels altres nivells perquè fer coincidir registres que no són 100 per cent idèntics.
+     - **Personalitzat**: definiu un percentatge que han de complir els registres. El sistema només trobarà coincidències en els registres que compleixin aquest llindar.
 
-   Normalitza - **mètode de normalització**: hi ha diverses opcions de normalització disponibles per als atributs seleccionats. Per exemple, eliminar la puntuació o els espais
+1. Proporcioneu un **Nom** per a la regla.
 
-   Per a la normalització del nom de l'organització (visualització prèvia), també podeu seleccionar **Tipus (telèfon, nom, organització)**
+1. [Afegiu més condicions](#add-conditions-to-a-rule) o seleccioneu **Fet** per finalitzar la regla.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalització-B2B](media/match-normalization-b2b.png "Normalització-B2B")
+1. Opcionalment, [afegiu més regles](#add-rules-to-a-match-pair).
 
-   Nivell de precisió: el nivell de precisió que s'utilitzarà per a aquesta condició. La definició d'un nivell de precisió per a una condició de coincidència pot tenir dos tipus: **Bàsic** i **Personalitzat**.  
-   - Bàsic: us proporciona quatre opcions per seleccionar: Baixa, Mitjana, Alta i Exacta. Seleccioneu **Exacta** per tal de fer coincidir només els registres que coincideixen en un 100 per cent. Seleccioneu un dels altres nivells perquè fer coincidir registres que no són 100 per cent idèntics.
-   - Personalitzat: utilitzeu la barra lliscant per definir el percentatge personalitzat de coincidència dels registres o introduïu un valor al camp **Personalitzat**. El sistema només farà coincidir els registres que superin aquest llindar com a parells de coincidència combinats. Els valors de la barra lliscant estan entre 0 i 1. Per tant, 0,64 representa el 64 per cent.
+1. Seleccioneu **Desa** per aplicar els canvis.
 
-3. Seleccioneu **Fet** per desar la regla.
+### <a name="add-conditions-to-a-rule"></a>Afegir condicions a una regla
 
-### <a name="add-multiple-conditions"></a>Afegir diverses condicions
+Per fer coincidir les entitats només si els atributs compleixen diverses condicions, afegiu més condicions a una regla de coincidència. Les condicions estan connectades amb un operador AND lògic i, per tant, només s'executen si es compleixen totes les condicions.
 
-Per fer coincidir les entitats només si es compleixen diverses condicions, afegiu més condicions enllaçades mitjançant un operador AND.
+1. Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Edició** a la regla a la qual voleu afegir condicions.
 
-1. A la subfinestra **Edita la regla**, seleccioneu **Afegeix una condició**. També podeu suprimir condicions seleccionant el botó Suprimeix que hi ha al costat d'una condició existent.
+1. A la subfinestra **Edita la regla**, seleccioneu **Afegeix una condició**.
 
-2. Seleccioneu **Fet** per desar la regla.
+1. Seleccioneu **Fet** per desar la regla.
 
-## <a name="add-multiple-rules"></a>Afegir diverses regles
+### <a name="add-rules-to-a-match-pair"></a>Afegir regles a una parella de coincidència
 
-Cada condició s'aplica a un únic parell d'atributs, mentre que les regles representen conjunts de condicions. Per tal que les entitats coincideixin amb diferents conjunts d'atributs, podeu afegir més regles.
+Les regles de coincidència representen conjunts de condicions. Per fer coincidir les entitats per condicions en funció de diversos atributs, afegiu més regles.
 
-1. A les conclusions del públic, aneu a **Dades** > **Unifica** > **Coincidència**.
+1.  Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Afegeix regla** a l'entitat a la qual voleu afegir regles.
 
-2. Seleccioneu l'entitat que voleu actualitzar i seleccioneu **Afegeix regles**.
-
-3. Seguiu el procediment que s'indica a [Definir regles per al primer parell de coincidència](#define-rules-for-your-first-match-pair).
+2. Seguiu els passos de [Definir regles per a les parelles de coincidència](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> L'ordre de les regles és important. L'algoritme de coincidència prova de coincidir segons la primera regla i continua a la segona regla només si no s'ha identificat cap coincidència en la primera regla.
+> L'ordre de les regles és important. L'algoritme coincident intenta trobar una coincidència amb la primera regla i continua amb la segona regla només si no s'han identificat coincidències amb la primera regla.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir la desduplicació en una entitat de coincidència
 
-A més d'especificar les regles de coincidència entre entitats que es descriuen a les seccions anteriors, també podeu especificar regles de desduplicació. La *desduplicació* és un procés. Identifica registres duplicats, els combina en un únic registre i enllaça tots els registres d'origen amb aquest registre combinat amb identificadors alternatius al registre combinat.
+A banda de les [regles de coincidència entre entitats](#define-rules-for-match-pairs), també podeu especificar regles de desduplicació. La *desduplicació* és un altre procés per cercar registres coincidents. Identifica els registres duplicats i els combina en un sol registre. Els registres d'origen s'enllacen al registre combinat amb ID alternatius.
 
-Un cop identificat un registre desduplicat, aquest registre s'utilitzarà al procés de coincidència entre entitats. La desduplicació s'implementa en el nivell d'entitat i es pot aplicar a cada entitat utilitzada en el procés de coincidència.
+Els registres desduplicats s'utilitzaran al procés de coincidència entre entitats. La desduplicació es produeix en entitats individuals i es pot configurar cada entitat que s'utilitza en parelles de coincidència.
+
+No és obligatori especificar regles de desduplicació. Si no es configura cap regla d'aquest tipus, s'aplicaran les regles definides pel sistema. Combinen tots els registres en un únic registre abans de passar les dades de l'entitat a la coincidència entre entitats per millorar el rendiment.
 
 ### <a name="add-deduplication-rules"></a>Afegir regles de desduplicació
 
-1. A les conclusions del públic, aneu a **Dades** > **Unifica** > **Coincidència**.
+1. Aneu a **Dades** > **Unifica** > **Coincidència**.
 
-1. A la secció **Duplicats combinats**, seleccioneu **Defineix entitats**.
+1. A la secció **Duplicats combinats**, seleccioneu **Defineix entitats**. En el cas que les regles de desduplicació ja estiguin creades, seleccioneu **Edita**.
 
-1. A la secció **Combinació de les preferències**, seleccioneu les entitats a les quals voleu aplicar la desduplicació.
+1. A la subfinestra **Combina les preferències**, trieu les entitats a les quals voleu executar la desduplicació.
 
-1. Especifiqueu com es combinaran els registres duplicats i trieu una de les tres opcions de combinació:
-   - *Més emplenat*: identifica el registre amb els atributs més emplenats com el registre guanyador. Es tracta de l'opció de combinació per defecte.
-   - *Més recent*: identifica el registre més recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
-   - *Menys recent*: identifica el registre menys recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
+1. Especifiqueu com es combinaran els registres duplicats i trieu una de les tres opcions:
+   - **Més emplenat**: identifica el registre amb els atributs més emplenats com el registre guanyador. És l'opció de combinació per defecte.
+   - **Més recent**: identifica el registre més recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
+   - **Menys recent**: identifica el registre menys recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
  
    > [!div class="mx-imgBorder"]
    > ![Pas 1 de les regles de desduplicació](media/match-selfconflation.png "Pas 1 de les regles de desduplicació")
  
-1. Un cop seleccionades les entitats i definida la seva preferència de combinació, seleccioneu **Crea una regla nova** per definir les regles de desduplicació en el nivell d'entitat.
-   - **Seleccioneu un camp** mostra una llista amb tots els camps disponibles de l'entitat en la qual voleu desduplicar les dades d'origen.
-   - Especifiqueu la configuració de precisió i normalització de manera semblant a la que s'especifica a la coincidència entre entitats.
-   - Per definir altres condicions, seleccioneu **Afegeix una condició**.
+1. Un cop seleccionades les entitats i definida la seva preferència de combinació, seleccioneu **Afegeix una regla** per definir les regles de desduplicació en el nivell d'entitat.
+   - **Seleccioneu un camp** mostra tots els camps disponibles de l'entitat. Trieu el camp on voleu comprovar si hi ha duplicats. Trieu els camps que probablement siguin únics per a cada client. Per exemple, una adreça electrònica o la combinació de nom, ciutat i número de telèfon.
+   - Especifiqueu la configuració de normalització i precisió.
+   - Definiu més condicions seleccionant **Afegeix una condició**.
  
    > [!div class="mx-imgBorder"]
    > ![Pas 2 de les regles de desduplicació](media/match-selfconflation-rules.png "Pas 2 de les regles de desduplicació")
@@ -138,28 +142,13 @@ Un cop identificat un registre desduplicat, aquest registre s'utilitzarà al pro
 
 1. A continuació, aquest registre guanyador es passa a la coincidència entre entitats i els registres no guanyadors (per exemple, els ID alternatius) per millorar la qualitat de les coincidències.
 
-1. Les regles de coincidència personalitzades definides per fer coincidir sempre o no fer coincidir mai invalidaran les regles de desduplicació. Si una regla de desduplicació identifica registres coincidents i s'ha definit una regla de coincidència personalitzada per no fer coincidir mai aquests registres, aquests dos registres no es faran coincidir.
+1. Les regles de coincidència personalitzades definides sobreescriuen les regles de desduplicació. Si una regla de desduplicació identifica registres coincidents i s'ha definit una regla de coincidència personalitzada per no fer coincidir mai aquests registres, aquests dos registres no es faran coincidir.
 
-1. Un cop executat el procés de coincidència, es mostraran les estadístiques de desduplicació.
-   
-> [!NOTE]
-> No és obligatori especificar regles de desduplicació. Si no es configura cap regla d'aquest tipus, s'aplicaran les regles definides pel sistema. Per tal de millorar el rendiment i garantir el funcionament del sistema, es combinaran tots els registres que comparteixen la mateixa combinació de valors (coincidència exacta) des de la clau principal i els camps de les regles de coincidència en un únic registre abans de passar les dades de la entitat a la coincidència entre entitats.
+1. Un cop [executat el procés de coincidència](#run-the-match-process), es mostraran les estadístiques de desduplicació a les peces de mètriques clau.
 
-## <a name="run-your-match-order"></a>Executar l'ordre de coincidència
+### <a name="deduplication-output-as-an-entity"></a>Sortida de la desduplicació com a entitat
 
-Un cop definides les regles de coincidència, incloses les regles de coincidència entre entitats i les de desduplicació, podreu executar l'ordre de coincidència. A la pàgina **Coincidència**, seleccioneu **Executa** per iniciar el procés. L'algoritme de coincidència pot tardar una estona a completar-se. No podeu canviar les propietats de la pàgina **Coincidència** fins que finalitzi el procés de coincidència. Trobareu l'entitat de perfil del client unificat que s'ha creat a la pàgina **Entitats**. L'entitat de client unificat s'anomena **ConflationMatchPairs : CustomerInsights**.
-
-Per fer canvis addicionals i tornar a executar el pas, podeu cancel·lar una assignació en curs. Seleccioneu el text **S'està actualitzant...** i seleccioneu **Cancel·la la feina** a la part inferior de la subfinestra lateral que es mostra.
-
-Quan el procés de concordança s'hagi completat, el text **S'està actualitzant...** canviarà a **Correcte** i podreu tornar a utilitzar tota la funcionalitat de la pàgina.
-
-El primer procés de coincidència resulta en la creació d'una entitat mestra unificada. Totes les execucions posteriors resulten en l'expansió d'aquesta entitat.
-
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
-
-## <a name="deduplication-output-as-an-entity"></a>Sortida de la desduplicació com a entitat
-A banda de l'entitat mestra unificada creada com a part de la coincidència entre entitats, el procés de desduplicació també genera una entitat nova per a cada entitat des de l'ordre de coincidència per identificar els registres desduplicats. Aquestes entitats es poden trobar amb **ConflationMatchPairs:CustomerInsights** a la secció **Sistema** de la pàgina **Entitats**, amb el nom **Deduplication_Datasource_Entity**.
+El procés de desduplicació crea una entitat nova per a cada entitat de les parelles de coincidència per identificar els registres desduplicats. Aquestes entitats es poden trobar amb **ConflationMatchPairs:CustomerInsights** a la secció **Sistema** de la pàgina **Entitats**, amb el nom **Deduplication_DataSource_Entity**.
 
 Una entitat de sortida de desduplicació conté la informació següent:
 - ID / Claus
@@ -168,77 +157,71 @@ Una entitat de sortida de desduplicació conté la informació següent:
   - Deduplication_WinnerId: aquest camp conté l'ID guanyador dels grups o clústers identificats. Si Deduplication_WinnerId és el mateix que el valor de la clau principal d'un registre, significa que el registre és el registre guanyador.
 - Camps que s'utilitzen per definir les regles de desduplicació.
 - Els camps Regla i Puntuació per denotar quines de les regles de desduplicació s'apliquen i la puntuació retornada per l'algorisme de coincidència.
+   
+## <a name="run-the-match-process"></a>Executar el procés de coincidència
+
+Un cop configurades les regles de coincidència, incloses les regles de coincidència entre entitats i les de desduplicació, podreu executar el procés de coincidència. 
+
+Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Executa** per iniciar el procés. L'algoritme coincident triga una estona en completar-se i no podeu canviar la configuració fins que es completi. Per fer-hi canvis, cancel·leu l'execució. Seleccioneu l'estat de la feina i seleccioneu **Cancel·la la feina** a la subfinestra **Detalls del progrés**.
+
+Trobareu el resultat d'una execució correcta, l'entitat del perfil de client unificada, a la pàgina **Entitats**. L'entitat de client unificada s'anomena **Clients** i és a la secció **Perfils**. La primera execució de coincidències correcta crea l'entitat *Client* unificada. Totes les execucions de coincidència posteriors amplien aquesta entitat.
+
+> [!TIP]
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
 
 ## <a name="review-and-validate-your-matches"></a>Revisar i validar les coincidències
 
-Avalueu la qualitat dels parells de coincidència i refineu-la:
+Aneu a **Dades** > **Unifica** > **Coincidència** per avaluar la qualitat de les parelles de coincidència i refinar-les si cal.
 
-- A la pàgina **Coincidència**, trobareu dues peces que mostren informació inicial sobre les vostres dades.
+Les peces de la part superior de la pàgina mostren mètriques clau que resumeixen el nombre de registres i duplicats coincidents.
 
-  - **Clients únics**: mostra el nombre de perfils únics que ha identificat el sistema.
-  - **Registres coincidents**: mostra el nombre de coincidències entre tots els vostres parells de coincidència.
+:::image type="content" source="media/match-KPIs.png" alt-text="Captura de pantalla retallada de les mètriques clau de la pàgina Coincidència amb nombres i detalls.":::
 
-- A la taula **Ordre de coincidència**, podeu avaluar els resultats de cada parell de coincidència comparant el nombre de registres que provenen d'aquesta entitat de parell de coincidència en relació amb el percentatge de registres que han coincidit correctament.
+- A **Registres d'origen únics** es mostra el nombre de registres d'origen individuals que s'han processat a la darrera execució de coincidència.
+- A **Registres coincidents i no coincidents** es ressalta el nombre de registres únics que queden després de processar les regles de coincidència.
+- A **Només registres coincidents** es mostra el nombre de coincidències en totes les parelles de coincidència.
 
-- A la secció **Regles** d'una entitat de la taula **Ordre de coincidència**, trobareu el percentatge de registres que han coincidit correctament al nivell de regla. Si seleccioneu el símbol de taula que hi ha al costat d'una regla, podeu visualitzar tots aquests registres al nivell de regla. Es recomana revisar un subconjunt dels registres per validar que han coincidit correctament.
+Podeu avaluar els resultats de cada parella de coincidència i les seves regles a la taula **Detalls dels registres coincidents**. Compareu el nombre de registres que provenen d'una parella de coincidència amb el percentatge de registres amb coincidències correctes.
 
-- Experimenteu amb diversos llindars de precisió sobre les condicions per identificar el valor òptim.
+Reviseu les regles d'una parella de coincidència per veure el percentatge de registres amb coincidència correcta en el nivell de la regla. Seleccioneu els punts suspensius (...) i, a continuació, seleccioneu **Visualització prèvia de coincidència** per visualitzar tots aquests registres en el nivell de regla. Us recomanem que feu un cop d'ull a alguns registres per validar si s'han aparellat correctament.
 
-  1. Seleccioneu els punts suspensius (...) per a la regla de parell de coincidència amb la qual voleu experimentar i seleccioneu **Edita**.
+Proveu diferents llindars de precisió a les condicions per trobar el valor òptim.
 
-  2. Seleccioneu la condició amb la qual voleu experimentar. Cada criteri es representa per una fila a la subfinestra **Regla de coincidència**.
+  1. Seleccioneu els punts suspensius (...) per a la regla amb la qual voleu experimentar i seleccioneu **Edita**.
 
-  3. El que veureu a la pàgina **Visualització prèvia dels criteris** depèn del nivell de precisió que hàgiu seleccionat per a una condició. Cerqueu el nombre de registres coincidents i no coincidents per a la condició seleccionada.
+  2. Canvieu els valors de precisió a les condicions que voleu revisar.
 
-     Obteniu una rica comprensió dels efectes dels diferents nivells de llindar. Podeu comparar el nombre de registres que coincidiran en cadascun dels nivells de llindar i visualitzar els registres de cada opció. Seleccioneu cadascuna de les peces i reviseu les dades de la secció de taula.
+  3. Seleccioneu **Visualització prèvia** per veure el nombre de registres coincidents i no coincidents per a la condició seleccionada.
 
-## <a name="optimize-your-matches"></a>Optimitzar les coincidències
+## <a name="manage-match-rules"></a>Administra les regles de coincidència
 
-Augmenteu la qualitat tornant a configurar alguns dels paràmetres de coincidència:
+Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència.
 
-- **Canvieu l'ordre de coincidència** seleccionant **Edita** i canvieu els camps d'ordre de coincidència.
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de pantalla del menú desplegable amb les opcions de la regla de coincidència.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Editar l'ordre de coincidència de dades](media/configure-data-match-order-edit.png "Editar l'ordre de coincidència de dades")
+- **Canvieu l'ordre de les regles** si heu definit diverses regles. Per reordenar les regles de coincidència, seleccioneu les opcions **Desplaça amunt** i **Desplaça avall** o arrossegueu-les i deixeu-les anar.
 
-- **Canvieu l'ordre de les regles** si heu definit diverses regles. Per tornar a ordenar les regles de coincidència, seleccioneu les opcions **Mou amunt** i **Mou avall** a la quadrícula de regles de coincidència.
-
-  > [!div class="mx-imgBorder"]
-  > ![Canviar l'ordre de les regles](media/configure-data-change-rule-order.png "Canviar l'ordre de les regles")
-
-- **Dupliqueu les regles** si heu definit una regla de coincidència i voleu crear una regla semblant amb modificacions. Per fer-ho, seleccioneu **Duplica**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplicar una regla](media/configure-data-duplicate-rule.png "Duplicar una regla")
+- **Canvieu les condicions de les regles**, seleccionant **Edita** i triant camps diferents.
 
 - **Desactiveu una regla** per conservar una regla de coincidència, excloent-la del procés de coincidència.
 
-  > [!div class="mx-imgBorder"]
-  > ![Desactivar una regla](media/configure-data-deactivate-rule.png "Desactivar una regla")
+- **Dupliqueu les regles** si heu definit una regla de coincidència i voleu crear una regla semblant amb modificacions, seleccioneu **Duplicat**.
 
-- **Editeu les regles** seleccionant el símbol **Edita**. Podeu aplicar els canvis següents:
+- **Suprimiu una regla** seleccionant el símbol **Suprimeix**.
 
-  - Canviar els atributs d'una condició: seleccioneu atributs nous dins de la fila de condicions específica.
-  - Canviar el llindar d'una condició: ajusteu el control lliscant de precisió.
-  - Canviar el mètode de normalització d'una condició: actualitzeu el mètode de normalització.
+## <a name="specify-custom-match-conditions"></a>Especificar condicions de coincidència personalitzades
 
-## <a name="specify-your-custom-match-records"></a>Especificar registres de coincidència personalitzats
+Podeu especificar condicions amb les que certs registres han de coincidir sempre o mai. Aquestes regles es poden carregar per substituir el procés de coincidència estàndard. Per exemple, si als registres hi ha en Joan Duran I i en Joan Duran II, el sistema podria trobar-los com a coincidències d'una mateixa persona. Les regles de coincidència personalitzades us permeten especificar que els seus perfils fan referència a diferents persones. 
 
-Podeu especificar condicions amb les que certs registres han de coincidir sempre o mai. Aquestes regles es poden carregar de manera massiva al procés de coincidència.
+1. Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Coincidència personalitzada** a la secció **Detalls dels registres coincidents**.
 
-1. Seleccioneu l'opció **Coincidència personalitzada** a la pantalla **Ordre de coincidència**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Captura de pantalla de la secció de regles de coincidència amb el control de Coincidència personalitzada ressaltat.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Crear una coincidència personalitzada](media/custom-match-create.png "Crear una coincidència personalitzada")
+1. Si no teniu definides regles de coincidència personalitzades, veureu una nova subfinestra de **Coincidència personalitzada** amb més detalls.
 
-2. Si no teniu cap entitat carregada, veureu un nou quadre de diàleg **Coincidència personalitzada** que requereix que empleneu alguns detalls. Si heu proporcionat aquestes dades abans, passeu al pas 8.
+1. Seleccioneu **Emplena la plantilla** per obtenir un fitxer de plantilla que pugui especificar els registres de les entitats que han de coincidir sempre o no coincidir mai. Haureu d'emplenar per separat els registres "coincideix sempre" i "no coincideixis mai" en dos fitxers diferents.
 
-   > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg de coincidència personalitzada nova](media/custom-match-new-dialog-box.png "Quadre de diàleg de coincidència personalitzada nova")
-
-3. Seleccioneu **Emplena la plantilla** per obtenir un fitxer de plantilla que pugui especificar els registres de les entitats que han de coincidir sempre o no coincidir mai. Haureu d'emplenar per separat els registres "coincideix sempre" i "no coincideixis mai" en dos fitxers diferents.
-
-4. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Per exemple, si voleu que la clau principal 12345 des de l'entitat Vendes sempre coincideixi amb la clau principal 34567 de l'entitat Contacte, haureu d'especificar-ho de la següent manera:
+1. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Per exemple, si voleu que la clau principal *12345* de l'entitat *Vendes* coincideixi sempre amb la clau principal *34567* de l'entitat *Contacte*, empleneu la plantilla:
     - Entity1: Vendes
     - Entity1Key: 12345
     - Entity2: Contacte
@@ -248,22 +231,22 @@ Podeu especificar condicions amb les que certs registres han de coincidir sempre
    
    Si voleu especificar la coincidència personalitzada per a la desduplicació en una entitat, proporcioneu la mateixa entitat com a Entitat1 i Entitat2 i definiu els diferents valors de clau principal.
 
-5. Després d'afegir totes les substitucions que voleu aplicar, deseu el fitxer de la plantilla.
+1. Després d'afegir totes les substitucions que voleu aplicar, deseu el fitxer de la plantilla.
 
-6. Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves. Un cop ingerits, podeu utilitzar-los per especificar la configuració de la coincidència.
+1. Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves. Un cop ingerits, podeu utilitzar-los per especificar la configuració de la coincidència.
 
-7. Després de carregar els fitxers i que les entitats estiguin disponibles, torneu a seleccionar l'opció **Coincidència personalitzada**. Veureu opcions per especificar les entitats que voleu incloure. Seleccioneu les entitats necessàries al menú desplegable.
+1. Després de carregar els fitxers i que les entitats estiguin disponibles, torneu a seleccionar l'opció **Coincidència personalitzada**. Veureu opcions per especificar les entitats que voleu incloure. Seleccioneu les entitats necessàries al menú desplegable.
 
-   > [!div class="mx-imgBorder"]
-   > ![Substitucions de coincidència personalitzada](media/custom-match-overrides.png "Substitucions de coincidència personalitzada")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de pantalla del diàleg per triar les substitucions per a un escenari de coincidència personalitzada.":::
 
-8. Seleccioneu les entitats que voleu utilitzar per a **Coincideix sempre** i **No coincideixis mai** i seleccioneu **Fet**.
+1. Seleccioneu les entitats que voleu utilitzar per a **Coincideix sempre** i **No coincideixis mai** i seleccioneu **Fet**.
 
-9. Seleccioneu **Desa** a la pàgina **Coincidència** de la configuració de coincidència personalitzada que acabeu de configurar.
+1. Seleccioneu **Desa** a la pàgina **Coincidència** per aplicar la configuració de coincidència personalitzada.
 
-10. Seleccioneu **Executa** a la pàgina **Coincidència** per iniciar el procés de coincidència i la configuració de coincidència personalitzada entrarà en vigor. Totes les regles del sistema coincidents se substitueixen segons el conjunt d'opcions de configuració.
+1. Seleccioneu **Executa** a la pàgina **Coincidència** per iniciar el procés de coincidència. La configuració de coincidència personalitzada substitueix altres regles de coincidència especificades.
 
-11. Una vegada que s'hagi completat la coincidència, podeu verificar l'entitat **ConflationMatchPair** per confirmar que les substitucions s'apliquen a les coincidències de combinació.
+> [!TIP]
+> Aneu a **Dades** > **Entitats** i reviseu l'entitat **ConflationMatchPair** per confirmar que s'apliquen les substitucions.
 
 ## <a name="next-step"></a>Pas següent
 

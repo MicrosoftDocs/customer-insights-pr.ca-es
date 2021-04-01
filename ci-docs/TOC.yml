@@ -19,13 +19,13 @@
     - name: Aprendre mòduls
       items:
         - name: Ingerir dades
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Crear un perfil de client unificat
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: Treballar amb l'aplicació
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+          href: /learn/modules/working-with-customer-insights/
         - name: Enriquir dades i prediccions
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/enrich-data/
     - name: Fonts de dades
       items:
         - name: Informació general de les fonts de dades
@@ -114,6 +114,12 @@
       items:
         - name: Informació general de les destinacions d'exportació
           href: audience-insights/export-destinations.md
+        - name: AdRoll
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilot
           href: audience-insights/export-autopilot.md
         - name: Azure Blob Storage
@@ -128,7 +134,7 @@
           href: audience-insights/export-dynamics365-marketing.md
         - name: "Dynamics\_365 Sales"
           href: audience-insights/export-dynamics365-sales.md
-        - name: Centre del Dynamics 365 Sales (complement)
+        - name: Centre de vendes del Dynamics 365 (complement)
           href: audience-insights/customer-card-add-in.md
         - name: Administrador d'anuncis de Facebook
           href: audience-insights/export-facebook.md

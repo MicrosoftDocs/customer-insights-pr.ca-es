@@ -2,19 +2,19 @@
 title: Connector del Power Apps
 description: Connecteu amb el Power Apps i el Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268904"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598143"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connector del Microsoft Power Apps (visualització prèvia)
 
@@ -22,9 +22,9 @@ Incorporeu perfils de client unificats a les vostres aplicacions personalitzades
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Connectar el Power Apps i el Dynamics 365 Customer Insights
 
-El Customer Insights és una de les diverses [fonts de dades disponibles al Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+El Customer Insights és una de les diverses [fonts de dades disponibles al Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Consulteu la documentació del Power Apps per obtenir més informació sobre com [afegir una connexió de dades a una aplicació](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). També us recomanem que reviseu [com utilitza el Power Apps la delegació per gestionar grans conjunts de dades a les aplicacions de llenç](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Consulteu la documentació del Power Apps per obtenir més informació sobre com [afegir una connexió de dades a una aplicació](/powerapps/maker/canvas-apps/add-data-connection). També us recomanem que reviseu [com utilitza el Power Apps la delegació per gestionar grans conjunts de dades a les aplicacions de llenç](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entitats disponibles
 
@@ -47,11 +47,11 @@ La delegació funciona per a l'entitat Client i UnifiedActivity.
 
 - Delegació per a **UnifiedActivity**: la delegació per a aquesta entitat només funciona per als camps **ActivityId** i **CustomerId**.  
 
-- Per obtenir més informació sobre la delegació, vegeu [Funcions i operacions delegables del Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Per obtenir més informació sobre la delegació, vegeu [Funcions i operacions delegables del Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Exemple de control de galeria
 
-Per exemple, afegiu perfils de client a un [control de galeria](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Per exemple, afegiu perfils de client a un [control de galeria](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Afegiu un control de **Galeria** a una aplicació que estigueu creant.
 

@@ -1,20 +1,20 @@
 ---
 title: Crear i administrar segments
 description: Creeu segments de clients per agrupar-los segons diversos atributs.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270344"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597039"
 ---
 # <a name="create-and-manage-segments"></a>Crear i administrar segments
 
@@ -35,19 +35,19 @@ Els segments s'administren a la pàgina **Segments**.
 
 1. A les conclusions del públic, aneu a la pàgina **Segments**.
 
-2. Seleccioneu **Nou** > **Segment en blanc**.
+1. Seleccioneu **Nou** > **Segment en blanc**.
 
-3. A la subfinestra **Segment nou**, trieu un tipus de segment i proporcioneu un **Nom**.
+1. A la subfinestra **Segment nou**, trieu un tipus de segment i proporcioneu un **Nom**.
 
    Opcionalment, proporcioneu un nom de visualització i una descripció que ajudi a identificar el segment.
 
-4. Seleccioneu **Següent** per accedir a la pàgina **Creador de segments** on definiu un grup. Un grup és un conjunt de clients.
+1. Seleccioneu **Següent** per accedir a la pàgina **Creador de segments** on definiu un grup. Un grup és un conjunt de clients.
 
-5. Trieu l'entitat que inclou l'atribut pel qual voleu segmentar.
+1. Trieu l'entitat que inclou l'atribut pel qual voleu segmentar.
 
-6. Trieu l'atribut pel qual voleu segmentar. Aquest atribut pot tenir un de quatre tipus de valors: numèric, cadena, data o booleà.
+1. Trieu l'atribut pel qual voleu segmentar. Aquest atribut pot tenir un de quatre tipus de valors: numèric, cadena, data o booleà.
 
-7. Trieu un operador i un valor per a l'atribut seleccionat.
+1. Trieu un operador i un valor per a l'atribut seleccionat.
 
    > [!div class="mx-imgBorder"]
    > ![Filtre de grup personalitzat](media/customer-group-numbers.png "Filtre de grup de client")
@@ -64,9 +64,14 @@ Els segments s'administren a la pàgina **Segments**.
    > [!div class="mx-imgBorder"]
    > ![Camí de la relació durant la creació del segment](media/segments-multiple-relationships.png "Camí de la relació durant la creació del segment")
 
-9. Seleccioneu **Desa** per desar el segment. El segment es desa i es processa si es validen tots els requisits. Altrament, es desarà com a esborrany.
+1. Per defecte, els segments generen una entitat de sortida que conté tots els atributs dels perfils de client que coincideixen amb els filtres definits. Si un segment es basa en entitats que no són l'entitat *Client*, podeu afegir més atributs d'aquestes entitats a l'entitat de sortida. Seleccioneu **Atributs del projecte** per triar els atributs que s'annexaran a l'entitat de sortida.  
 
-10. Seleccioneu **Torna als segments** per tornar a la pàgina **Segments**.
+   
+   Exemple: un segment es basa en una entitat que conté dades d'activitat de client relacionades amb l'entitat *Client*. El segment cerca tots els clients que han trucat al servei d'assistència durant els darrers 60 dies. Podeu triar si voleu annexar la durada de la trucada i el nombre de trucades a tots els registres de client coincidents de l'entitat de sortida. Aquesta informació pot ser útil per enviar correus electrònics amb enllaços útils als articles d'ajuda en línia i preguntes freqüents als clients que truquen sovint.
+
+1. Seleccioneu **Desa** per desar el segment. El segment es desa i es processa si es validen tots els requisits. Altrament, es desarà com a esborrany.
+
+1. Seleccioneu **Torna als segments** per tornar a la pàgina **Segments**.
 
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
@@ -85,6 +90,7 @@ L'acció següent està disponible quan seleccioneu un segment:
 
 - **Visualitzar** els detalls del segment, incloent-hi la tendència de recompte de membres per obtenir la visualització prèvia dels membres del segment.
 - **Editar** el segment per canviar-ne les propietats.
+- **Crear un duplicat** d'un segment. Podeu editar-ne les propietats immediatament o simplement desar el duplicat.
 - **Actualitzar** el segment per incloure-hi les dades més recents.
 - **Activar** o **desactivar** el segment. Els segments tenen dos estats possibles: actiu o inactiu. Aquests estats són útils en editar un segment. Per als segments inactius, la definició del segment existeix però encara no conté cap client. Quan s'activa un segment, el seu estat canvia d'"inactiu" a "actiu" i comença a cercar clients que coincideixin amb la definició del segment. Si es configura una [actualització planificada](system.md#schedule-tab), els segments inactius tenen l'**estat** **Omès**, indicant que ni tan sols s'ha intentat una actualització. Quan s'activi un segment inactiu, s'actualitzarà i s'inclourà en les actualitzacions programades.
   Alternativament, podeu utilitzar la funcionalitat **Planifica més tard** al desplegable **Activa o desactiva** per especificar una data i hora futura per a l'activació i la desactivació d'un segment concret.

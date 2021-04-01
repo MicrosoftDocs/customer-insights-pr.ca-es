@@ -1,31 +1,31 @@
 ---
 title: Idiomes admesos per a les conclusions del públic
 description: Coneixeu i configureu el suport tècnic d'idiomes.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268168"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595460"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Idiomes admesos per a la capacitat de conclusions del públic
 
-La capacitat de conclusions del públic del Dynamics 365 Customer Insights admet diversos idiomes. En aquest tema s'enumeren les llengües disponibles i es proporciona suport per canviar entre elles, així com una descripció general del contingut que es tradueix.
+La informació sobre el públic del Dynamics 365 Customer Insights està traduïda a moltes llengües. La llista següent conté les llengües disponibles i informació sobre el contingut traduït. També podeu obtenir més informació sobre com canviar la configuració de llengua. 
 
 ## <a name="languages"></a>Idiomes
 
 | Nom de la llengua (anglès)|  Nom de la llengua (llengua nativa) |
 | ------------- | ------------- |
 | Basc | euskara |
-| Búlgar | Български |
+| Búlgar | български |
 | Català | català |
 | Xinès (simplificat) | 中文 (简体) |
 | Xinès (tradicional) | 中文 (繁體) |
@@ -40,22 +40,22 @@ La capacitat de conclusions del públic del Dynamics 365 Customer Insights admet
 | Gallec | galego |
 | Alemany | Deutsch |
 | Grec | Ελληνικά |
-| Hindú | हिंदी |
+| Hindi | हिंदी |
 | Hongarès | magyar |
-| Indonesi | Bahasa Indonesia |
+| Indonesi | Indonèsia |
 | Italià | italiano |
 | Japonès | 日本語 |
-| Kazakh | Қазақ |
+| Kazakh | қазақ тілі |
 | Coreà | 한국어 |
 | Letó | latviešu |
 | Lituà | lietuvių |
-| Malai | Bahasa Melayu |
-| Noruec (Bokmål) | norsk (bokmål) |
-| Polonès | Polski |
+| Malai | Melayu |
+| Noruec (bokmål) | norsk bokmål |
+| Polonès | polski |
 | Portuguès (Brasil) | português |
 | Portuguès (Portugal) | português |
 | Romanès | română |
-| Rus | Русский |
+| Rus | pусский |
 | Serbi (ciríl·lic) | српски |
 | Serbi (llatí) | srpski |
 | Eslovac | slovenčina |

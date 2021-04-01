@@ -2,19 +2,19 @@
 title: Connector del Power BI
 description: Apreneu com utilitzar el connector del Dynamics 365 Customer Insights al Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477076"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596027"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
 
@@ -23,7 +23,7 @@ Creeu visualitzacions per a les dades amb el Power BI Desktop. Genereu informaci
 ## <a name="prerequisites"></a>Requisits previs
 
 - Teniu perfils de client unificats.
-- La versió més recent del [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) està instal·lada a l'ordinador. [Més informació sobre el Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- L'última versió del [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) està instal·lada a l'ordinador. [Més informació sobre el Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurar el connector per al Power BI
 
@@ -47,7 +47,7 @@ Creeu visualitzacions per a les dades amb el Power BI Desktop. Genereu informaci
 
 ## <a name="large-data-sets"></a>Conjunts de dades grans
 
-El connector del Customer Insights per al Power BI està dissenyat per funcionar amb els conjunts de dades que contenen fins a 1 milió de perfils de clients. La importació de conjunts de dades més grans pot funcionar, però tarda molta estona. A més, el procés podria esgotar el temps d'espera a causa de les limitacions del Power BI. Per obtenir més informació, vegeu [Power BI: recomanacions per a conjunts de dades grans](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+El connector del Customer Insights per al Power BI està dissenyat per funcionar amb els conjunts de dades que contenen fins a 1 milió de perfils de clients. La importació de conjunts de dades més grans pot funcionar, però tarda molta estona. A més, el procés podria esgotar el temps d'espera a causa de les limitacions del Power BI. Per obtenir més informació, vegeu [Power BI: recomanacions per a conjunts de dades grans](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Treballar amb un subconjunt de dades
 
@@ -70,4 +70,3 @@ Podeu identificar i suprimir les relacions duplicades.
 Després de la supressió de les relacions duplicades, proveu de tornar a configurar el connector del Power BI. L'entorn hauria d'estar disponible ara.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

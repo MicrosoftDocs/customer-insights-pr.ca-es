@@ -2,19 +2,19 @@
 title: Exportar dades del Customer Insights a un emmagatzematge blob de l'Azure
 description: Més informació sobre com configurar la connexió a l'emmagatzematge de blob de l'Azure.
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269180"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596165"
 ---
 # <a name="connector-for-azure-blob-storage-preview"></a>Connector per a l'emmagatzematge de blob de l'Azure (visualització prèvia)
 
@@ -27,8 +27,8 @@ Emmagatzemeu les dades del Customer Insights a un emmagatzematge blob de l'Azure
 1. A **Emmagatzematge de blob de l'Azure**, seleccioneu **Configura**.
 
 1. Introduïu el **nom del compte**, la **clau del compte** i el **contenidor** per al compte d'emmagatzematge de blob de l'Azure.
-    - Per obtenir més informació sobre com trobar el nom i la clau del compte de l'emmagatzematge blob de l'Azure, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
-    - Per obtenir més informació sobre com crear un contenidor , vegeu [Crear un contenidor](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+    - Per obtenir més informació sobre com trobar el nom i la clau del compte de l'emmagatzematge blob de l'Azure, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
+    - Per obtenir més informació sobre com crear un contenidor , vegeu [Crear un contenidor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Doneu a la destinació un nom reconeixible al camp **Nom de visualització**.
 
@@ -42,7 +42,7 @@ Les dades exportades s'emmagatzemen al contenidor d'emmagatzematge de blob de l'
 
 - Per a les entitats i entitats d'origen generades pel sistema: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Exemple: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- El fitxer model.json per a les entitats exportades residirà en el nivell %ExportDestinationName%
+- El model.json de les entitats exportades residirà al nivell %ExportDestinationName%
   - Exemple: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 ## <a name="export-the-data"></a>Exportar les dades

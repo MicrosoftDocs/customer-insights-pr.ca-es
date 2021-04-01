@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270420"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598419"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
 
 També podeu veure el següent vídeo per obtenir més informació sobre les capacitats planificades durant els darrers sis mesos.
 
@@ -30,6 +30,40 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Actualitzacions de febrer del 2021
+
+Les actualitzacions de febrer del 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+#### <a name="extensibility"></a>Extensibilitat
+
+- **Exporta segments a AdRoll**
+
+  Hem ampliat les nostres destinacions d'exportació per incloure-hi AdRoll. Ara podeu exportar segments del Customer Insights als públics d'AdRoll i utilitzar-los com a base per a la publicitat. Per obtenir més informació, vegeu [Connector per a AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segments
+ 
+- **Duplicar un segment**
+  
+  Per crear un segment nou basat en un d'existent, ara podeu duplicar un segment i editar el segment duplicat per refinar-lo encara més. 
+
+- **Afegir atributs addicionals a un segment**
+
+  Ara podeu incloure atributs a la sortida del segment, encara que aquests atributs no formin part del perfil de client. Per exemple, podeu incloure els identificadors de subscripció en un segment tot i que formi part de l'entitat de subscripció que té una relació M:1 amb l'entitat de client. Sempre que l'atribut pertanyi a una entitat relacionada amb l'entitat de client, podreu incloure-hi aquests atributs.  
+
+#### <a name="predictions"></a>Prediccions
+
+- **Crear recomanacions de productes predictives**
+
+  Comprendre què estan interessats a comprar els clients és un dels primers passos que calen per millorar els ingressos de l'empresa i aconseguir fidelitzar els clients mitjançant la personalització i la interacció. Proporcionar recomanacions per a productes que no s'ajusten als interessos del client pot crear una sensació de desconnexió entre el client i la vostra empresa i, finalment, limitar els ingressos potencials globals i l'experiència d'un client. 
+
+  Amb les vostres pròpies dades, ara podeu crear prediccions per als productes que els vostres clients podrien comprar més endavant. Per obtenir més informació, vegeu [Predicció de recomanacions de productes](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **La còpia d'entorn admet més tipus de fonts de dades**
+
+  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de l'entorn de còpia per als casos en què s'utilitzen fonts de dades basades en un llac de dades del Common Data Service o una carpeta del Model de dades comú.
 
 ## <a name="january-2021-updates"></a>Actualitzacions de gener de 2021
 
