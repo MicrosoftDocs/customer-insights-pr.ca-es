@@ -1,20 +1,20 @@
 ---
 title: Treballar amb API
 description: Utilitzeu API i enteneu-ne les limitacions.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267512"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710448"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
@@ -36,7 +36,7 @@ Feu servir aquest article com a guia per accedir a les API del Customer Insights
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar API del Customer Insights":::
 
-1. Seleccioneu **Exploreu les nostres API** per provar les API.
+1. Seleccioneu **Exploreu les nostres API** per [provar les API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Trieu una operació d'API i seleccioneu **Proveu-ho**.
 
@@ -47,6 +47,9 @@ Feu servir aquest article com a guia per accedir a les API del Customer Insights
 1. Desplaceu-vos fins a la part inferior de la subfinestra lateral i seleccioneu **Envia**.
 
 La resposta HTTP apareixerà aviat tot seguit.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Gif animat que mostra com seleccionar les API de prova.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Crear un nou registre d'aplicació al portal de l'Azure
 
@@ -61,6 +64,8 @@ Amb aquests passos, podreu començar a utilitzar les API del Customer Insights e
 
 1. Al nou registre de l'aplicació, aneu a **Permisos de l'API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animat per definir el permís de l'API al registre de l'aplicació.":::
+
 1. Seleccioneu **Afegeix un permís** i seleccioneu **Customer Insights** a la subfinestra lateral.
 
 1. Com a **Tipus de permís**, seleccioneu **Permisos delegats** i seleccioneu el permís **user_impersonation**.
@@ -71,9 +76,11 @@ Amb aquests passos, podreu començar a utilitzar les API del Customer Insights e
 
 Podeu utilitzar l'identificador de l'aplicació o del client per a aquest registre de l'aplicació amb la biblioteca d'autenticació de Microsoft (MSAL) per obtenir un testimoni del portador que pugueu enviar amb la vostra sol·licitud a l'API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animat per atorgar el consentiment d'administrador.":::
+
 Per obtenir més informació sobre MSAL, vegeu la [informació general sobre la biblioteca d'autenticació de Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Per obtenir més informació sobre el registre d'aplicacions a l'Azure, vegeu [l'experiència de registre de noves aplicacions del portal de l'Azure](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Per obtenir més informació sobre el registre d'aplicacions a l'Azure, vegeu [l'experiència de registre de noves aplicacions del portal de l'Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Per obtenir informació sobre com utilitzar les API de les biblioteques de client, vegeu [Biblioteques de client del Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 1. Seleccioneu **Atorga el consentiment de l'administrador per a...** per completar el registre de l'aplicació.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animat per atorgar el consentiment d'administrador.":::
+
 1. Per acabar, cal afegir el nom del registre de l'aplicació com a usuari al Customer Insights.    
    Obriu Customer Insights, aneu a **Administració** > **Permisos** i seleccioneu **Afegeix un usuari**.
 
@@ -108,7 +117,7 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 ## <a name="customer-insights-client-libraries"></a>Biblioteques de client del Customer Insights
 
-Amb aquesta secció, podreu començar a utilitzar les biblioteques de client que hi ha disponibles per a les API del Customer Insights.
+Amb aquesta secció, podreu començar a utilitzar les biblioteques de client que hi ha disponibles per a les API del Customer Insights. Totes les aplicacions de mostra i de codi font de la biblioteca es poden trobar a la [pàgina de GitHub de Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>NuGet del C#
 
@@ -127,7 +136,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 
 #### <a name="use-the-c-client-library"></a>Utilitzar la biblioteca de client del C#
 
-1. Utilitzeu la [biblioteca d'autenticació de Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) per obtenir un `AccessToken` mitjançant el [registre de l'aplicació de l'Azure](#create-a-new-app-registration-in-the-azure-portal) existent.
+1. Utilitzeu la [biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) per obtenir un `AccessToken` mitjançant el [registre de l'aplicació de l'Azure](#create-a-new-app-registration-in-the-azure-portal) existent.
 
 1. Un cop us hagueu autenticat correctament i hagueu obtingut un testimoni, creeu un nou `HttpClient` o feu-ne servir un d'existent amb l'**"Autorització" de DefaultRequestHeaders** addicional definida com a **<access token> portador** i la **Ocp-Apim-Subscription-Key** definida com a [**clau de subscripció** des de l'entorn del Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Restabliu la capçalera d'**Autorització** si escau. Per exemple, quan el testimoni ha caducat.
@@ -141,5 +150,12 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 1. La resposta serà probablement de tipus `object` perquè el mètode pot retornar diversos tipus (per exemple, `IList<InstanceInfo>` i `ApiErrorResult`). Per comprovar el tipus de retorn, podeu convertir de manera segura els objectes en els tipus de resposta especificats a la [pàgina de detalls de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) corresponent a aquesta operació.    
    Si necessiteu més informació sobre la sol·licitud, utilitzeu els **mètodes de missatges http** per accedir a l'objecte de la resposta sense processar.
 
+### <a name="nodejs-package"></a>Paquet NodeJS
+
+Utilitzeu les biblioteques de client NodeJS disponibles a través d'NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Paquet Python
+
+Utilitzeu les biblioteques de client Python disponibles a través de Pypi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

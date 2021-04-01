@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269916"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654720"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
@@ -72,8 +72,8 @@ Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. P
    1. Seleccioneu **Edita les dimensions** per afegir atributs de dades pels quals voleu agrupar els valors de mesura. Per exemple, ciutat o gènere. Per defecte, la dimensió *CustomerID* se selecciona per crear *mesures del nivell del client*. Si voleu crear *mesures de nivell de negoci*, podeu suprimir la dimensió per defecte.
    1. Seleccioneu **Fet** per afegir les dimensions a la mesura.
 
-1. Si hi ha diversos rutes entre l'entitat de dades assignada i l'entitat Client, heu de triar una de les [rutes de relació d'entitat](relationships.md) identificades. Els resultats de la mesura poden variar en funció del camí seleccionat.
-   1. Seleccioneu **Preferències de les dades** i trieu el camí de l'entitat que s'utilitzarà per identificar la mesura.
+1. Si hi ha diversos rutes entre l'entitat de dades assignada i l'entitat *Client*, heu de triar un dels [camins de relació d'entitat](relationships.md) identificats. Els resultats de la mesura poden variar en funció del camí seleccionat. 
+   1. Seleccioneu **Preferències de les dades** i trieu el camí de l'entitat que s'utilitzarà per identificar la mesura. Si només hi ha un camí a l'entitat *Client*, aquest control no es mostrarà.
    1. Seleccioneu **Fet** per aplicar la vostra selecció. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccioneu la ruta d'entitat de la mesura.":::

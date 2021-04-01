@@ -2,19 +2,19 @@
 title: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 description: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5476983"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598618"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
 - **Suprimir les dades aïllades i unificar les dades dels clients**
 
   - Connecteu i unifiqueu les dades amb facilitat: incorporeu dades transaccionals, observacionals i conductuals des de [fonts de dades importants utilitzant connectors creats prèviament](data-sources.md).
-  - Transformeu les dades dels clients de manera intel·ligent: creeu perfils de clients unificats que segueixin el [Common Data Model](https://docs.microsoft.com/common-data-model/). Resoleu les identitats dels clients amb recomanacions orientades a l'IA/ML.
+  - Transformeu les dades dels clients de manera intel·ligent: creeu perfils de clients unificats que segueixin el [Common Data Model](/common-data-model/). Resoleu les identitats dels clients amb recomanacions orientades a l'IA/ML.
 
 - **Enriquir amb la intel·ligència del públic inclosa al Microsoft Graph**
 
@@ -42,7 +42,7 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
 - **Analistes/administradors de dades:**
 
   - Accés a una rica recopilació de connectors per ingerir totes les dades dels vostres clients.
-  - Capacitat d'unificar les dades dels clients i transformar-les al format del [Common data Model](https://docs.microsoft.com/common-data-model/).
+  - Capacitat d'unificar les dades dels clients i transformar-les al format del [Common data Model](/common-data-model/).
   - Enriquiu la informació dels clients amb informació d'intel·ligència del públic inclosa en el Microsoft Graph, com ara l'afinitat de la marca i els interessos.
   - Configuració i experiència de depuració de "clics sense codi" per ajudar a configurar fàcilment les conclusions del públic i identificar possibles problemes.
   - Netegeu i estandarditzeu les dades dels clients entre diverses fonts amb recomanacions basades en l'IA.  
