@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595644"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906890"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
 
@@ -49,6 +49,12 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
         - **Data i hora:** la data i l'hora de l'esdeveniment identificats per la clau principal.
         - **Incidència:** el nom de la incidència que voleu utilitzar. Per exemple, un camp anomenat "UserAction" d'un servei de transmissió de vídeos podria tenir el valor "Vist".
         - **Detalls:** informació detallada de la incidència. Per exemple, un camp anomenat "ShowTitle" d'un servei de transmissió de vídeos podria tenir el valor d'un vídeo que el client ha vist.
+- Característiques de les dades suggerides:
+    - Dades històriques suficients: dades de subscripció per almenys el doble de la finestra de temps seleccionada. Preferentment, de dos a tres anys de dades de subscripció.
+    - Estat de la subscripció: les dades inclouen subscripcions actives i inactives per a cada client, de manera que hi ha diverses entrades per identificador de client.
+    - Nombre de clients: almenys 10 perfils de client, preferentment més de 1.000 clients únics. El model fallarà amb menys de 10 clients i dades històriques insuficients.
+    - Integritat de les dades: menys del 20% de valors inexistents al camp de dades de l'entitat proporcionada.
+   
    > [!NOTE]
    > Necessitareu com a mínim dos registres d'activitat per al 50% dels clients per als quals voleu calcular la rotació.
 
@@ -67,7 +73,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 ### <a name="define-customer-churn"></a>Defineix la cancel·lació dels clients
 
 1. Introduïu el nombre de **Dies des que ha finalitzat la subscripció** que l'empresa considera que un client pot estar en un estat de rotació. Aquest període sol estar vinculat a activitats empresarials, com ara ofertes o altres iniciatives de màrqueting, que intenten evitar perdre el client.
-1. Introduïu el nombre de **Dies en el futur que es consultaran per predir la rotació** per definir una finestra per predir la rotació. Per exemple, per predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo als vostres esforços de retenció de màrqueting. Predir el risc de rotació per a períodes de temps més llargs o més curts pot fer que sigui més difícil abordar els factors del vostre perfil de risc de rotació, però això depèn molt dels vostres requisits de negoci específics. Per continuar, feu clic a **Següent**
+1. Introduïu el nombre de **Dies en el futur que es consultaran per predir la rotació** per definir una finestra per predir la rotació. Per exemple, per predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo als vostres esforços de retenció de màrqueting. Predir el risc de cancel·lació durant períodes de temps més llargs o més curts pot dificultar donar resposta als factors del vostre perfil de risc de cancel·lació, en funció de les necessitats específiques de la vostra empresa. Per continuar, feu clic a **Següent**
    >[!TIP]
    > Podeu seleccionar **Desa i tanca** en qualsevol moment per desar la predicció en forma d'esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
@@ -113,7 +119,8 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. Seleccioneu la predicció que voleu revisar.
    - **Nom de la predicció:** el nom de la predicció proporcionat en crear-la.
    - **Tipus de predicció:** el tipus de model utilitzat per a la predicció
-   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.
+   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.    
+     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-new-segment) amb el llindar preferit.
    - **Camp predit:** aquest camp només s'emplena per a alguns tipus de prediccions i no es fa servir a la predicció de rotació de subscripcions.
    - **Estat:** l'estat actual de l'execució de la predicció.
         - **A la cua:** la predicció actualment està a l'espera de l'execució d'altres processos.

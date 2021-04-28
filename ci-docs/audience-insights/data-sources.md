@@ -1,7 +1,7 @@
 ---
 title: Utilitzar fonts de dades per ingerir dades
 description: Més informació sobre com importar dades de diverses fonts.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595935"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887882"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -32,8 +32,15 @@ Podeu afegir una font de dades de tres maneres principals:
 - [Des d'una carpeta del Common Data Model](connect-common-data-model.md)
 - [Des del vostre propi llac del Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Encara no podeu afegir dades de les fonts de dades locals.
+## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
+
+La ingesta de dades de fonts de dades locals a l'Audience Insights està admesa als fluxos de dades del Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) en configurar l'entorn.
+
+Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de passarel·les de dades. Suprimir i tornar a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat per utilitzar passarel·les de dades locals.
+
+Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla de la pàgina de fonts de dades que mostra els enllaços que porten a l'entorn del Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisar les dades ingerides
 
@@ -65,7 +72,7 @@ Per actualitzar una font de dades segons demanda, seguiu aquests passos:
 
 2. Seleccioneu els punts suspensius verticals que hi ha al costat de la font de dades que voleu actualitzar i seleccioneu **Actualitza** a la llista desplegable.
 
-3. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades, s'actualitza tant l'esquema de l'entitat com les dades de totes les entitats especificades a la font de dades.
+3. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades s'actualitza tan l'esquema d'entitat com les dades de totes les entitats especificades a la font de dades.
 
 4. Seleccioneu **Para d'actualitzar** si voleu cancel·lar una actualització existent; la font de dades tornarà a l'últim estat d'actualització.
 

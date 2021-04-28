@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598419"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896223"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598419"
 
 Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
 
-També podeu veure el següent vídeo per obtenir més informació sobre les capacitats planificades durant els darrers sis mesos.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Implementarem les actualitzacions per regió. Per tant, algunes regions poden veure les característiques abans que altres. Si no s'especifica de manera diferent, no cal que feu cap acció i actualitzarem l'aplicació automàticament sense temps d'inactivitat.
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Actualitzacions de març del 2021
+
+Les actualitzacions del març de 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="activities"></a>Activitats
+
+- **Auxiliar d'activitats i tipus semàntics** Hem millorat i actualitzat la nostra experiència d'assignació d'activitats per guiar i simplificar la creació d'assignacions d'activitats. En aquesta nova experiència, els usuaris poden tenir una experiència guiada per ajudar a completar cada pas del procés. Al pas d'assignació de l'activitat, a més de triar entre molts tipus d'activitats, l'usuari pot triar d'assignar semànticament dades per a *Subscription* i/o *SalesOrderLine* als esquemes estàndard del sector, que es poden utilitzar per al consum descendent.    
+  Per obtenir més informació, vegeu [Activitats del client](activities.md).
+
+### <a name="data-ingestion"></a>Ingestió de dades
+
+- **Connecteu-vos a fonts de dades locals mitjançant fluxos de dades i passarel·les del Power Platform** Ens complau anunciar la versió preliminar dels fluxos de dades del Power Platform i la connectivitat local mitjançant l'ús de passarel·les al Customer Insights amb un entorn associat del Power Platform o del Dataverse. Totes les fonts de dades noves creades en un entorn del Customer Insights amb un entorn del Dataverse enllaçat seran per defecte fluxos de dades del Power Platform que aportaran connectivitat de dades locals i un conjunt enriquit de connectors i capacitats de transformació.
+
+### <a name="extensibility"></a>Extensibilitat
+
+- **Exportacions organitzades en connexions i exportacions** Hem canviat el nom de la pàgina **Destinacions d'exportació** per **Connexions** i hem afegit una pàgina independent per a les **Exportacions**. Com a part d'aquesta actualització, farem la transició de les exportacions existents a parells d'una connexió i una exportació que utilitzen aquesta connexió. Els administradors poden veure més clarament les dades sortints a la pàgina **Connexions**. Totes les funcions d'usuari tenen accés a la pàgina **Exportacions**, però només els administradors poden optar per permetre als col·laboradors d'editar exportacions específiques amb connexions compartides.     
+  Per obtenir més informació, vegeu [Informació general sobre les connexions](connections.md) i [Informació general sobre les exportacions](export-destinations.md).
+
+- **Exporteu segments a Campaign Monitor** Hem ampliat les nostres destinacions d'exportació per incloure-hi Campaign Monitor. Ara podeu exportar segments des del Customer Insights a les llistes de Campaign Monitor i utilitzar-los com a base per a les campanyes de màrqueting.    
+   Per obtenir més informació, vegeu [Exportació a Campaign Monitor](export-campaign-monitor.md).
+
+- **Exporteu segments a Constant Contact** Hem ampliat les nostres destinacions d'exportació per incloure-hi Constant Contact. Ara podeu exportar segments des del Customer Insights a les llistes de Constant Contact i utilitzar-los com a base per a les campanyes de màrqueting.   
+   Per obtenir més informació, vegeu [Exportació a Constant Contact](export-constant-contact.md).
+
+- **Exporteu segments a RollWorks** Hem ampliat les nostres destinacions d'exportació per incloure-hi RollWorks. Ara podeu exportar segments des del Customer Insights als públics de RollWorks i utilitzar-los com a base per a la publicitat B2B.    
+   Per obtenir més informació, vegeu [Exportació a RollWorks](export-rollworks.md).
+
+- **Exporteu segments a Snapchat** Hem ampliat les nostres destinacions d'exportació per incloure-hi Snapchat. Ara podeu exportar segments des del Customer Insights als públics de Snapchat i utilitzar-los com a base per a la publicitat.     
+   Per obtenir més informació, vegeu [Exportació a Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Prediccions
+
+- **Utilitzeu filtres de producte a les recomanacions de producte predictives** Hem afegit la capacitat d'utilitzar filtres de producte al nostre model de recomanació de productes. Ara podeu crear una predicció que només utilitzi un subconjunt dels vostres productes.    
+   Per obtenir més informació, vegeu [Configurar filtres de producte](predict-product-recommendation.md#configure-product-filters).
+
+- **Crear segments a partir de predictions de model** Hem afegit una manera ràpida de crear segments utilitzant els resultats d'un model de predicció. Des de la pàgina de resultats del model, podeu crear fàcilment un segment nou seleccionant l'opció **Crea un segment**.    
+  Per obtenir més informació, vegeu [Crear un segment basat en un model de predicció](prediction-based-segment.md).
+
+- **Explicacions de les recomanacions de producte** Hem afegit informació sobre els factors clau que aprèn el model d'IA per generar recomanacions de producte i el grau amb què aquests factors contribueixen a les recomanacions de producte. Aquesta informació s'afegeix a la pantalla de resultats del model.    
+   Per obtenir més informació, vegeu [Revisar un estat de predicció i els resultats](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Actualitzacions de febrer del 2021
 
@@ -107,7 +144,7 @@ Les actualitzacions de desembre de 2020 inclouen diverses característiques, mil
 
   A més, hem afegit noves opcions de configuració per controlar millor com voleu que els vostres perfils de client s'enriqueixin. 
 
-  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft-graph.md).
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
 
 - **Controleu quins perfils s'han d'enriquir**
 
@@ -309,8 +346,8 @@ Les actualitzacions d'agost de 2020 inclouen diverses característiques, millore
 
 - **Enriquiment d'afinitats d'interessos disponible a més mercats**
 
-  Ampliem la disponibilitat de l'enriquiment d'afinitats d'interès més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta extensió, podeu enriquir les dades dels clients amb més interessos aplicables a aquests mercats. També enriquim els perfils de client que es troben en aquests mercats mitjançant les dades de propietaris locals del Microsoft Graph.
-  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft-graph.md)
+  Ampliem la disponibilitat de l'enriquiment d'afinitats d'interès més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta extensió, podeu enriquir les dades dels clients amb més interessos aplicables a aquests mercats. També enriquirem els perfils de client que es troben en aquests mercats utilitzant dades locals propietat de Microsoft.
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Actualitzacions de juliol del 2020
@@ -330,8 +367,8 @@ Les actualitzacions de juliol del 2020 inclouen diverses característiques, actu
 
 - **Enriquiment d'afinitats de marques disponible a més mercats**
 
-  Ampliem la disponibilitat de l'enriquiment d'afinitats de marca més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta ampliació, podeu enriquir les dades dels clients amb marques locals en aquests mercats. També enriquim els perfils de client que es troben en aquests mercats mitjançant les dades de propietaris locals del Microsoft Graph.
-  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft-graph.md)
+  Ampliem la disponibilitat de l'enriquiment d'afinitats de marca més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta ampliació, podeu enriquir les dades dels clients amb marques locals en aquests mercats. També enriquirem els perfils de client que es troben en aquests mercats utilitzant dades locals propietat de Microsoft.
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Actualitzacions de juny del 2020
 
@@ -355,7 +392,7 @@ Les actualitzacions de juny del 2020 inclouen diverses característiques, actual
 - **Enriquiment d'afinitat de marca i interès independents**
 
   Les afinitats de marca i interès estan disponibles actualment com a dos enriquiments independents. Els enriquiment independents us donen la flexibilitat de configurar-los i administrar-los individualment, en funció dels requisits o les necessitats de l'empresa.    
-  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft-graph.md).
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Capacitat d'ampliació
 

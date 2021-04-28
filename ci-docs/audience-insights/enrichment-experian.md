@@ -1,7 +1,7 @@
 ---
 title: Enriquiment de amb l'enriquiment de tercers d'Experian
 description: Informació general sobre l'enriquiment de tercers d'Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597775"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896361"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir perfils de clients amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -25,10 +25,10 @@ Experian és un líder mundial en informes de consum i cedit empresarial i serve
 Per configurar Experian, cal complir els següents requisits previs:
 
 - Tenir una subscripció d'Experian activa. Per obtenir una subscripció, [poseu-vos en contacte amb Experian](https://www.experian.com/marketing-services/contact) directament. [Més informació sobre l'enriquiment de dades d'Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Tenir l'ID d'usuari, l'ID de grup i el número de model per al vostre compte de transport segur (ST) amb SSH que Experian us ha creat.
-- Teniu permisos d'[Administrador](permissions.md#administrator) a les conclusions del públic.
 
-## <a name="configuration"></a>Configuració
+- Un administrador ja ha configurat una connexió de l'Experian *o* teniu permisos d'[administrador](permissions.md#administrator). També necessiteu l'identificador d'usuari, l'identificador del grup i el número de model per al compte de Transport segur (ST) habilitat per a SSH que l'Experian ha creat.
+
+## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
 1. Aneu a **Dades** > **Enriquiment** i seleccioneu la pestanya **Descobreix**.
 
@@ -36,26 +36,46 @@ Per configurar Experian, cal complir els següents requisits previs:
 
    > [!div class="mx-imgBorder"]
    > ![Peça d'Experian](media/experian-tile.png "Peça d'Experian")
+   > 
 
-1. Seleccioneu **Comença** i introduïu l'ID d'usuari, l'ID de grup i el número de model per al vostre compte de transport segur d'Experian. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**. Confirmeu totes les entrades seleccionant **Aplica**.
+1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou un administrador, podeu crear una connexió seleccionant **Afegeix una connexió** i triant Experian al menú desplegable. 
 
-## <a name="map-your-fields"></a>Assignació dels camps
+1. Seleccioneu **Connecta't a Experian** per confirmar la selecció de la connexió.
 
-1.  Seleccioneu **Afegeix dades** i trieu el **conjunt de dades del client** que voleu enriquir amb les dades demogràfiques d'Experian. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+1.  Seleccioneu **Següent** i trieu el **Conjunt de dades de client** que voleu enriquir amb les dades demogràfiques de l'Experian. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
 
-1. Seleccioneu els identificadors clau de **Nom i adreça**, **Correu electrònic** o **Telèfon** per enviar a Experian per a la resolució d'identitats.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captura de pantalla quan trieu el conjunt de dades de clients.":::
 
-   > [!TIP]
-   > Si envieu més atributs d'identificador clau a Experian, probablement es produirà un percentatge de coincidència més alt.
+1. Seleccioneu **Següent** i definiu els tipus de camps dels perfils unificats que s'han d'utilitzar per cercar dades demogràfiques coincidents de l'Experian. Cal com a mínim un dels camps **Nom i adreça**, **Telèfon** o **Correu electrònic**. Per tenir una precisió de coincidència superior, es poden afegir fins a dos camps més. Aquesta selecció afectarà els camps d'assignació als quals teniu accés al pas següent.
 
-1. Seleccioneu **Següent** i assigneu els atributs corresponents de la vostra entitat de client unificat per als camps d'identificador clau seleccionats.
+    > [!TIP]
+    > Si envieu més atributs d'identificador clau a Experian, probablement es produirà un percentatge de coincidència més alt.
 
-1. Seleccioneu **Afegeix un atribut** per assignar qualsevol atribut addicional que vulgueu enviar a Experian.
+1. Seleccioneu **Següent** per iniciar l'assignació de camp.
 
-1.  Seleccioneu **Desa** per completar l'assignació de camps.
+1. Definiu quins camps dels perfils unificats que s'han d'utilitzar per cercar dades demogràfiques coincidents de l'Experian. Els camps obligatoris estan marcats.
 
-    > [!div class="mx-imgBorder"]
-    > ![Assignació de camps d'Experian](media/experian-field-mapping.png "Assignació de camps d'Experian")
+1. Proporcioneu un nom per a l'enriquiment i un nom per a l'entitat de sortida.
+
+1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
+
+## <a name="configure-the-connection-for-experian"></a>Configurar la connexió per a l'Experian 
+
+Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix una connexió** en configurar un enriquiment *o* aneu a **Administració** > **Connexions** i seleccioneu **Configuració** a la peça Experian.
+
+1. Seleccioneu **Introducció**.
+
+1. Introduïu un nom per a la connexió al quadre **Nom de visualització**.
+
+1. Introduïu l'identificador d'usuari, l'identificador del grup i el número de model vàlids per al compte de transport segur d'Experian.
+
+1. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**
+
+1. Seleccioneu **Verifica** per validar la configuració.
+
+1. Després de completar la verificació, seleccioneu **Desa**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Subfinestra de configuració de la connexió d'Experian.":::
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 

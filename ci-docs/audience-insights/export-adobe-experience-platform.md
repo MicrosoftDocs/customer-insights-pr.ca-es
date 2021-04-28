@@ -1,7 +1,7 @@
 ---
 title: Exportar les dades del Customer Insights a l'Adobe Experience Platform
 description: Més informació sobre com utilitzar els segments d'informació sobre el públic a l'Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596257"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760089"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilitzar els segments del Customer Insights a l'Adobe Experience Platform (versió preliminar)
 
@@ -51,21 +51,36 @@ El correu electrònic d'oferta que voleu enviar inclourà el nom, el cognom i la
 
 Un cop identificat el públic destinatari, podem configurar l'exportació des de la informació sobre el públic a un compte de l'Emmagatzematge blob de l'Azure.
 
-1. A les conclusions del públic, aneu a **Administració** > **Destinacions d'exportació**.
+### <a name="configure-a-connection"></a>Configurar una connexió
 
-1. A la peça **Emmagatzematge blob de l'Azure**, seleccioneu **Configura**.
+1. Aneu a **Administració** > **Connexions**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Peça de configuració de l'Emmagatzematge blob de l'Azure.":::
+1. Seleccioneu **Afegeix una connexió** i trieu **Emmagatzematge blob de l'Azure** o seleccioneu **Configura** a la peça **Emmagatzematge blob de l'Azure**:
 
-1. Proporcioneu un **Nom de visualització** per a aquesta nova destinació d'exportació i, a continuació, introduïu el **Nom de compte**, la **Clau del compte** i el **Contenidor** del compte d'Emmagatzematge blob de l'Azure al qual voleu exportar el segment.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Peça de configuració de l'Emmagatzematge blob de l'Azure."::: per configurar la connexió.
+
+1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
+
+1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduïu el **Nom de compte**, la **Clau del compte** i el **Contenidor** del compte d'Emmagatzematge blob al qual voleu exportar el segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captura de pantalla de la configuració del compte d'emmagatzematge."::: 
+   
+    - Per obtenir més informació sobre com trobar el compte i la clau del compte de l'Emmagatzematge blob, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
+    - Per obtenir més informació sobre com crear un contenidor , vegeu [Crear un contenidor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Per obtenir més informació sobre com trobar el nom i la clau del compte de l'emmagatzematge blob de l'Azure, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
+1. Seleccioneu **Desa** per completar la connexió. 
 
-   - Per obtenir més informació sobre com crear un contenidor , vegeu [Crear un contenidor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Configurar una exportació
 
-1. Seleccioneu **Següent**.
+Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+
+1. Vés a **Dades** > **Exportacions**.
+
+1. Per crear una exportació nova, seleccioneu **Afegeix una exportació**.
+
+1. Al camp **Connexió per a l'exportació**, trieu una connexió a la secció Emmagatzematge blob de l'Azure. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
 
 1. Trieu el segment que voleu exportar. En aquest exemple, és **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Un cop identificat el públic destinatari, podem configurar l'exportació des de
 
 1. Seleccioneu **Desa**.
 
-Després de desar la destinació de l'exportació, la trobareu a **Administració** > **Exportacions** > **Les meves destinacions d'exportació**.
+Després de desar la destinació d'exportació, la trobeu a **Dades** > **Exportacions**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Captura de pantalla amb la llista d'exportacions i alguns segments d'exemple destacats.":::
-
-Ara podeu [exportar el segment a petició](export-destinations.md#export-data-on-demand). L'exportació també s'executarà amb cada [actualització planificada](system.md).
+Ara podeu [exportar el segment a petició](export-destinations.md#run-exports-on-demand). L'exportació també s'executarà amb cada [actualització planificada](system.md).
 
 > [!NOTE]
 > Assegureu-vos que el nombre de registres del segment exportat es troba dins del límit permès de la llicència de l'Adobe Campaign Standard.

@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598618"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896453"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
   - Connecteu i unifiqueu les dades amb facilitat: incorporeu dades transaccionals, observacionals i conductuals des de [fonts de dades importants utilitzant connectors creats prèviament](data-sources.md).
   - Transformeu les dades dels clients de manera intel·ligent: creeu perfils de clients unificats que segueixin el [Common Data Model](/common-data-model/). Resoleu les identitats dels clients amb recomanacions orientades a l'IA/ML.
 
-- **Enriquir amb la intel·ligència del públic inclosa al Microsoft Graph**
+- **Enriquir amb intel·ligència del públic**
 
-  - Creeu perfils de client més rics [incorporant la intel·ligència del públic inclosa al Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Creeu perfils de client més enriquits [incorporant dades enriquides](enrichment-hub.md).  
 
 - **Alimentar els processos empresarials i experiències dels clients personalitzades**
 
@@ -43,7 +43,7 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
 
   - Accés a una rica recopilació de connectors per ingerir totes les dades dels vostres clients.
   - Capacitat d'unificar les dades dels clients i transformar-les al format del [Common data Model](/common-data-model/).
-  - Enriquiu la informació dels clients amb informació d'intel·ligència del públic inclosa en el Microsoft Graph, com ara l'afinitat de la marca i els interessos.
+  - Enriquiu la informació dels clients amb informació d'intel·ligència del públic, com ara l'afinitat de la marca i els interessos.
   - Configuració i experiència de depuració de "clics sense codi" per ajudar a configurar fàcilment les conclusions del públic i identificar possibles problemes.
   - Netegeu i estandarditzeu les dades dels clients entre diverses fonts amb recomanacions basades en l'IA.  
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597177"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906844"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predicció de rotació de transaccions (versió preliminar)
 
@@ -46,6 +46,14 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
         - **Data i hora:** la data i l'hora de l'esdeveniment identificats per la clau principal.
         - **Incidència:** el nom de la incidència que voleu utilitzar. Per exemple, un camp anomenat "UserAction" d'una botiga de queviures podria ser un cupó que el client ha utilitzat.
         - **Detalls:** informació detallada de la incidència. Per exemple, un camp anomenat "CouponValue" d'una botiga de queviures podria ser el valor monetari del cupó.
+- Característiques de les dades suggerides:
+    - Dades històriques suficients: dades de transacció per almenys el doble de la finestra de temps seleccionada. Preferentment, de dos a tres anys de dades de subscripció. 
+    - Múltiples compres per client: idealment almenys dues transaccions per client.
+    - Nombre de clients: almenys 10 perfils de client, preferentment més de 1.000 clients únics. El model fallarà amb menys de 10 clients i dades històriques insuficients.
+    - Integritat de les dades: menys del 20% de valors inexistents al camp de dades de l'entitat proporcionada.
+
+> [!NOTE]
+> Per a una empresa amb alta freqüència de compra de clients (cada poques setmanes) es recomana seleccionar una definició de finestra de predicció i cancel·lació més curta. Per a una freqüència de compra baixa (cada pocs mesos o un cop l'any), trieu una definició de finestra predicció i cancel·lació més llarga.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Crear una predicció de rotació de transaccions
 
@@ -129,7 +137,9 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
 1. Seleccioneu la predicció que voleu revisar.
    - **Nom de la predicció:** nom de la predicció que es proporcionarà en crear-la.
    - **Tipus de predicció:** tipus de model utilitzat per a la predicció
-   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.
+   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.    
+     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-new-segment) amb el llindar preferit.
+     No tots els clients són necessàriament clients actius. Alguns d'ells poden no haver tingut cap activitat durant molt de temps i es consideren ja cancel·lat, basant-se en la definició de cancel·lació. Predir el risc de cancel·lació per als clients que ja s'han cancel·lat no és útil perquè no són el públic d'interès.
    - **Camp predit:** aquest camp només s'emplena per a alguns tipus de prediccions i no es fa servir a la predicció de rotació.
    - **Estat:** estat de l'execució de la predicció.
         - **En cua:** la predicció està esperant que s'executin altres processos.

@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Marketo
-description: Apreneu a configurar la connexió a Marketo.
-ms.date: 11/12/2020
+description: Apreneu a configurar la connexió i exportar a Marketo.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597959"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759809"
 ---
-# <a name="connector-for-marketo-preview"></a>Connector per a Marketo (versió preliminar)
+# <a name="export-segments-to-marketo-preview"></a>Exportar segments a Marketo (versió preliminar)
 
 Exporteu segments de perfils de client unificats per generar campanyes, proporcionar màrqueting per correu electrònic i utilitzar grups específics de clients amb Marketo.
 
-## <a name="prerequisites"></a>Requisits previs
+## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
 -   Teniu un [compte de Marketo](https://login.marketo.com/) i les credencials d'administrador corresponents.
 -   Hi ha llistes a Marketo amb els identificadors corresponents. Per obtenir més informació, vegeu [Llistes de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Teniu [segments configurats](segments.md).
 -   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
-
-## <a name="connect-to-marketo"></a>Connectar-se a Marketo
-
-1. Aneu a **Administració** > **Destinacions d'exportació**.
-
-1. A **Marketo**, seleccioneu **Configura**.
-
-1. Doneu a la destinació d'exportació un nom reconeixible al camp **Nom de visualització**.
-
-1. Introduïu l'**[ID del client, el Secret del client i el Nom de l'amfitrió de l'extrem REST de Marketo](https://developers.marketo.com/rest-api/authentication/)**.
-
-1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
-
-1. Seleccioneu **Accepto** per confirmar el **Compliment i privadesa de les dades** i seleccioneu **Connecta't** per inicialitzar la connexió a Marketo.
-
-1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Captura de pantalla d'exportació per a la connexió a Marketo":::
-
-1. Seleccioneu **Següent** per configurar l'exportació.
-
-## <a name="configure-the-connector"></a>Configurar el connector
-
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
-
-1. També podeu exportar el **Nom**, el **Cognom**, la **Ciutat**, l'**Estat** i el **País/regió** com a camps addicionals per crear missatges de correu electrònic més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
-
-1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a Marketo.
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Seleccioneu els camps i els segments que voleu exportar a Marketo":::
-
-1. Seleccioneu **Desa**.
-
-## <a name="export-the-data"></a>Exportar les dades
-
-Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab). A Marketo, ara podeu cercar els segments a les [llistes de Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
@@ -69,6 +33,49 @@ Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació
 - L'exportació a Marketo es limita als segments.
 - L'exportació de segments amb un total d'un milió de perfils pot durar fins a 3 hores. 
 - El nombre de perfils que podeu exportar a Marketo és limitat i dependrà del contracte que tingueu amb Marketo.
+
+## <a name="set-up-connection-to-marketo"></a>Configuració de la connexió a Marketo
+
+1. Aneu a **Administració** > **Connexions**.
+
+1. Seleccioneu **Afegeix connexió** i trieu **Marketo** per configurar la connexió.
+
+1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
+
+1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduïu l'**[ID del client, el Secret del client i el Nom de l'amfitrió de l'extrem REST de Marketo](https://developers.marketo.com/rest-api/authentication/)**.
+
+1. Seleccioneu **Accepto** per confirmar el **Compliment i privadesa de les dades** i seleccioneu **Connecta't** per inicialitzar la connexió a Marketo.
+
+1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
+
+1. Seleccioneu **Desa** per completar la connexió.
+
+## <a name="configure-an-export"></a>Configurar una exportació
+
+Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+
+1. Vés a **Dades** > **Exportacions**.
+
+1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
+
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Marketo. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+
+1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+
+1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
+
+1. O bé podeu exportar **Nom**, **Cognom**, **Ciutat**, **Província** i **País o Regió** per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
+
+1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a Marketo.
+
+1. Seleccioneu **Desa**.
+
+Si deseu una exportació, no s'executarà l'exportació immediatament.
+
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). A Marketo, ara podeu cercar els segments a les [llistes de Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

@@ -1,7 +1,7 @@
 ---
 title: Enriquiment amb la importació personalitzada d'SFTP
 description: Informació general sobre l'enriquiment amb la importació personalitzada d'SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595843"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896269"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquir els perfils de client amb dades personalitzades (versió preliminar)
 
-La importació personalitzada del protocol de transferència segura de fitxers (SFTP) us permet importar dades que no han de passar pel procés d'unificació de dades. Es tracta d'un mètode flexible, segur i fàcil d'incorporar les vostres dades. La importació personalitzada d'SFTP es pot utilitzar combinada amb [l'exportació d'SFTP](export-sftp.md), que us permet exportar les dades del perfil del client necessàries per a l'enriquiment. Tot seguit, les dades es poden processar i enriquir; a més, la importació personalitzada d'SFTP es pot utilitzar per tornar les dades enriquides a la capacitat de conclusions del públic del Dynamics 365 Customer Insights.
+La importació personalitzada de protocol de transferència segura de fitxers (SFTP) permet importar dades que no han de passar pel procés d'unificació de dades. Es tracta d'un mètode flexible, segur i fàcil d'incorporar les vostres dades. La importació personalitzada d'SFTP es pot utilitzar combinada amb [l'exportació d'SFTP](export-sftp.md), que us permet exportar les dades del perfil del client necessàries per a l'enriquiment. Tot seguit, les dades es poden processar i enriquir; a més, la importació personalitzada d'SFTP es pot utilitzar per tornar les dades enriquides a la capacitat de conclusions del públic del Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Requisits previs
 
 Per poder configurar la importació personalitzada d'SFTP, s'han de complir els requisits previs següents:
 
-- Teniu credencials d'usuari (nom d'usuari i contrasenya) per a la ubicació d'SFTP des d'on s'importaran les dades.
-- Teniu l'adreça URL i el número de port (normalment, 22) per a l'amfitrió d'SFTP.
-- Teniu el nom i la ubicació del fitxer que s'importarà a l'amfitrió d'SFTP.
-- Un fitxer *model.json* especifica l'esquema de les dades que s'importaran. Aquest fitxer s'ha de trobar al mateix directori que el fitxer que s'importarà.
-- Teniu permisos d'[Administrador](permissions.md#administrator).
+- Teniu el nom de fitxer i la ubicació (camí) del fitxer que s'ha d'importar a l'amfitrió de l'SFTP.
+- Hi ha un fitxer *model.json* que especifica [l'esquema del Model de dades comú](/common-data-model/) per a les dades que s'han d'importar. Aquest fitxer s'ha de trobar al mateix directori que el fitxer que s'importarà.
+- Un administrador ja ha configurat una connexió SFTP *o* teniu permisos d'[administrador](permissions.md#administrator). Necessitareu les credencials d'usuari, l'adreça URL i el número de port de la ubicació SFTP des d'on voleu importar les dades.
 
-## <a name="configuration"></a>Configuració
+
+## <a name="configure-the-import"></a>Configurar la importació
 
 1. Aneu a **Dades** > **Enriquiment** i seleccioneu la pestanya **Descobreix**.
 
-1. A la **peça d'importació personalitzada d'SFTP**, seleccioneu **Enriqueix les meves dades**.
+1. A la **peça Importació personalitzada SFTP**, seleccioneu **Enriqueix les meves dades** i, a continuació, **Comença**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Peça de la importació personalitzada d'SFTP](media/SFTP_Custom_Import_tile.png "Peça de la importació personalitzada d'SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Peça de la importació personalitzada d'SFTP.":::
 
-1. Seleccioneu **Comença** i indiqueu les credencials i l'adreça del servidor SFTP. Per exemple, sftp://elmeuservidorsftp.com:22.
+1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou un administrador, podeu crear una connexió seleccionant **Afegeix una connexió** i triant **Importació personalitzada d'SFTP** al menú desplegable.
 
-1. Introduïu el nom del fitxer que conté les dades i el camí al fitxer del servidor SFTP si no es troba a la carpeta arrel.
+1. Seleccioneu **Connecta't a la importació personalitzada** per confirmar la connexió seleccionada.
 
-1. Seleccioneu **Connecta't a la importació personalitzada** per confirmar totes les entrades.
+1.  Seleccioneu **Següent** i introduïu el **Nom de fitxer** i el **Camí** del fitxer de dades que voleu importar.
 
-   > [!div class="mx-imgBorder"]
-   > ![Desplegable de la configuració d'importació personalitzada d'SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Desplegable de la configuració d'importació personalitzada d'SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de pantalla quan introduïu la ubicació de les dades.":::
+
+1. Seleccioneu **Següent** i proporcioneu un nom per a l'enriquiment i un nom per a l'entitat de sortida. 
+
+1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurar la connexió per a la importació personalitzada de l'SFTP 
+
+Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix una connexió** en configurar un enriquiment *o* aneu a **Administració** > **Connexions** i seleccioneu **Configuració** a la peça Importació personalitzada.
+
+1. Introduïu un nom per a la connexió al quadre **Nom de visualització**.
+
+1. Introduïu un nom d'usuari, una contrasenya i una adreça URL d'amfitrió vàlides per al servidor d'STFP on resideixin les dades que s'han d'importar.
+
+1. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**.
+
+1. Seleccioneu **Verifica** per validar la configuració.
+
+1. Quan la verificació s'hagi completat, feu clic a **Desa** per desar la connexió.
+
+> [!div class="mx-imgBorder"]
+   > ![Pàgina de configuració de la connexió d'Experian](media/enrichment-SFTP-connection.png "Pàgina de configuració de la connexió d'Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definició de les assignacions de camps 
 
@@ -105,8 +124,5 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 ## <a name="next-steps"></a>Passos següents
 
 Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md), [mesures](measures.md) i [exporteu les dades](export-destinations.md) per tal d'oferir experiències personalitzades als vostres clients.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597453"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896407"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrar dades web de les conclusions d'interacció amb les conclusions del públic
 
@@ -46,7 +46,7 @@ Consideracions en crear esdeveniments refinats:
     - Signal.Action.Name: indica els detalls de l'activitat
     - Signal.User.Id: s'utilitza per assignar-se amb l'identificador de client
     - Signal.View.Uri: s'utilitza com a adreça web com a base per a segments o mesures
-    - Signal.Export.Id: per utilitzar-la com a clau principal per als esdeveniments <!-- system generated, do we need to list?-->
+    - Signal.Export.Id: per utilitzar-la com a clau principal per als esdeveniments
     - Signal.Timestamp: per determinar la data i l'hora de l'activitat
 
 Seleccioneu els filtres en què us voleu centrar en els esdeveniments i les pàgines que importen per al cas d'ús. En aquest exemple, utilitzarem el nom de l'acció "Promoció per correu electrònic".

@@ -1,7 +1,7 @@
 ---
 title: Administrar permisos d'usuaris
 description: Informeu-vos sobre els permisos i les funcions d'usuari.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595690"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760361"
 ---
 # <a name="user-permissions"></a>Permisos d'usuari
 
@@ -31,7 +31,7 @@ Hi ha tres tipus de funcions:
 - Visualitzeu i exploreu la pàgina **Enriquiment**.
 - Exploreu i exporteu entitats mitjançant la pàgina **Entitats**.
 - Visualitzeu l'estat dels processos del sistema mitjançant la pàgina **Sistema**.
-- Exporteu segments de la pàgina **Segments**.
+- Visualitzeu les exportacions a la pàgina **Exportacions**.
 - Instal·leu i utilitzeu l'escriptori digital del **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Col·laborador
@@ -43,6 +43,7 @@ Hi ha tres tipus de funcions:
 - Creeu segments mitjançant la pàgina **Segments**.
 - Creeu mesures mitjançant la pàgina **Mesures**.
 - Administrar la configuració i enriquir els perfils dels clients des de la pàgina **Enriquiment** (només per a enriquiment propi).
+- Administrar i crear exportacions a partir de connexions compartides amb col·laboradors. [Més informació sobre com els administradors permeten als col·laboradors utilitzar una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrador
 
@@ -50,8 +51,9 @@ Hi ha tres tipus de funcions:
 - Canvieu la configuració de la pàgina **Sistema**, incloent-hi l'idioma de treball i les planificacions d'actualitzacions per als processos del sistema.
 - Visualitzeu i afegiu permisos mitjançant la pàgina **Permisos**.
 - Definiu les definicions de filtre i cerca per a la pàgina Clients mitjançant la pàgina **Cerca i filtra l'índex** (accessible a través de la pàgina **Clients**).
-- Definiu destinacions de segment del Dynamics 365 Sales mitjançant la pàgina **Destinacions d'exportació**.
+- Administrar connexions i permetre-les per a altres funcions d'usuari a la pàgina **Connexions**.
 - Administrar la configuració i enriquir els perfils dels clients des de la pàgina **Enriquiment** (per a tots els enriquiments).
+- Administrar i crear exportacions a la pàgina **Exportacions**.
 - Instal·leu i utilitzeu el **Complement de targeta del client**.
 - Afegiu i utilitzeu el **connector del Power Apps**.
 - Habiliteu l'ús de les [API del Customer Insights](apis.md).
