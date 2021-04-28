@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a AdRoll
-description: Apreneu a configurar la connexió a AdRoll.
-ms.date: 02/15/2021
+description: Apreneu a configurar la connexió i exportar a AdRoll.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,67 +9,76 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697062"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895947"
 ---
-# <a name="connector-for-adroll-preview"></a><span data-ttu-id="70af1-103">Connector per a AdRoll (versió preliminar)</span><span class="sxs-lookup"><span data-stu-id="70af1-103">Connector for AdRoll (preview)</span></span>
+# <a name="export-segment-lists-to-adroll-preview"></a><span data-ttu-id="6a336-103">Exportar llistes de segments a AdRoll (versió preliminar)</span><span class="sxs-lookup"><span data-stu-id="6a336-103">Export segment lists to AdRoll (preview)</span></span>
 
-<span data-ttu-id="70af1-104">Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a la publicitat.</span><span class="sxs-lookup"><span data-stu-id="70af1-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
+<span data-ttu-id="6a336-104">Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a la publicitat.</span><span class="sxs-lookup"><span data-stu-id="6a336-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
 
-## <a name="prerequisites"></a><span data-ttu-id="70af1-105">Requisits previs</span><span class="sxs-lookup"><span data-stu-id="70af1-105">Prerequisites</span></span>
+## <a name="prerequisites-for-a-connection"></a><span data-ttu-id="6a336-105">Requisits previs per a una connexió</span><span class="sxs-lookup"><span data-stu-id="6a336-105">Prerequisites for a connection</span></span>
 
--   <span data-ttu-id="70af1-106">Teniu un [compte d'AdRoll](https://www.adroll.com/) i les credencials d'administrador corresponents.</span><span class="sxs-lookup"><span data-stu-id="70af1-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="70af1-107">Teniu [segments configurats](segments.md) a les conclusions del públic.</span><span class="sxs-lookup"><span data-stu-id="70af1-107">You have [configured segments](segments.md) in audience insights.</span></span>
--   <span data-ttu-id="70af1-108">Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.</span><span class="sxs-lookup"><span data-stu-id="70af1-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="6a336-106">Teniu un [compte d'AdRoll](https://www.adroll.com/) i les credencials d'administrador corresponents.</span><span class="sxs-lookup"><span data-stu-id="6a336-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="6a336-107">Teniu [segments configurats](segments.md) a les conclusions del públic.</span><span class="sxs-lookup"><span data-stu-id="6a336-107">You have [configured segments](segments.md) in audience insights.</span></span>
+-   <span data-ttu-id="6a336-108">Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.</span><span class="sxs-lookup"><span data-stu-id="6a336-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-adroll"></a><span data-ttu-id="70af1-109">Connecta a AdRoll</span><span class="sxs-lookup"><span data-stu-id="70af1-109">Connect to AdRoll</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="6a336-109">Limitacions conegudes</span><span class="sxs-lookup"><span data-stu-id="6a336-109">Known limitations</span></span>
 
-1. <span data-ttu-id="70af1-110">Aneu a **Administració** > **Destinacions d'exportació**.</span><span class="sxs-lookup"><span data-stu-id="70af1-110">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="6a336-110">Podeu exportar fins a un total de 100.000 perfils per exportació a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-110">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
+- <span data-ttu-id="6a336-111">No podeu exportar segments amb menys de 100 perfils a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-111">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
+- <span data-ttu-id="6a336-112">L'exportació a AdRoll es limita als segments.</span><span class="sxs-lookup"><span data-stu-id="6a336-112">Exporting to AdRoll is limited to segments.</span></span>
+- <span data-ttu-id="6a336-113">L'exportació de fins a 250.000 perfils a AdRoll pot trigar fins a 10 minuts com a completar-se.</span><span class="sxs-lookup"><span data-stu-id="6a336-113">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
+- <span data-ttu-id="6a336-114">El nombre de perfils que podeu exportar a AdRoll és limitat i dependrà del contracte que tingueu amb AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-114">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
 
-1. <span data-ttu-id="70af1-111">A **AdRoll**, seleccioneu **Configura**.</span><span class="sxs-lookup"><span data-stu-id="70af1-111">Under **AdRoll**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-adroll"></a><span data-ttu-id="6a336-115">Configuració de la connexió a AdRoll</span><span class="sxs-lookup"><span data-stu-id="6a336-115">Set up connection to AdRoll</span></span>
 
-1. <span data-ttu-id="70af1-112">Doneu a la destinació d'exportació un nom reconeixible al camp **Nom de visualització**.</span><span class="sxs-lookup"><span data-stu-id="70af1-112">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="6a336-116">Aneu a **Administració** > **Connexions**.</span><span class="sxs-lookup"><span data-stu-id="6a336-116">Go to **Admin** > **Connections**.</span></span>
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Subfinestra de configuració per a la connexió d'AdRoll.":::
+1. <span data-ttu-id="6a336-117">Seleccioneu **Afegeix connexió** i trieu **AdRoll** per configurar la connexió.</span><span class="sxs-lookup"><span data-stu-id="6a336-117">Select **Add connection** and choose **AdRoll** to configure the connection.</span></span>
 
-1. <span data-ttu-id="70af1-114">Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.</span><span class="sxs-lookup"><span data-stu-id="70af1-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="6a336-118">Doneu a la connexió un nom reconeixible al camp **Nom de visualització**.</span><span class="sxs-lookup"><span data-stu-id="6a336-118">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="6a336-119">El nom i el tipus de connexió descriuen aquesta connexió.</span><span class="sxs-lookup"><span data-stu-id="6a336-119">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="6a336-120">Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.</span><span class="sxs-lookup"><span data-stu-id="6a336-120">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="70af1-115">Seleccioneu **Connecta't** per inicialitzar la connexió a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-115">Select **Connect** to initialize the connection to AdRoll.</span></span>
+1. <span data-ttu-id="6a336-121">Trieu qui pot utilitzar aquesta connexió.</span><span class="sxs-lookup"><span data-stu-id="6a336-121">Choose who can use this connection.</span></span> <span data-ttu-id="6a336-122">Si no feu cap acció, el valor per defecte serà Administradors.</span><span class="sxs-lookup"><span data-stu-id="6a336-122">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="6a336-123">Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="6a336-123">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="70af1-116">Seleccioneu **Autenticació amb AdRoll** i indiqueu les vostres credencials d'administrador d'AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-116">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
+1. <span data-ttu-id="6a336-124">Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.</span><span class="sxs-lookup"><span data-stu-id="6a336-124">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-1. <span data-ttu-id="70af1-117">Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="70af1-117">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="6a336-125">Seleccioneu **Connecta't** per inicialitzar la connexió a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-125">Select **Connect** to initialize the connection to AdRoll.</span></span>
 
-1. <span data-ttu-id="70af1-118">Introduïu l'**Identificador de l'anunciant d'AdRoll** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="70af1-118">Enter your **AdRoll Advertiser ID** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span></span>
+1. <span data-ttu-id="6a336-126">Seleccioneu **Autenticació amb AdRoll** i indiqueu les vostres credencials d'administrador d'AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-126">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
 
-1. <span data-ttu-id="70af1-119">Seleccioneu **Següent** per configurar l'exportació.</span><span class="sxs-lookup"><span data-stu-id="70af1-119">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="6a336-127">Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="6a336-127">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="70af1-120">Configurar el connector</span><span class="sxs-lookup"><span data-stu-id="70af1-120">Configure the connector</span></span>
+1. <span data-ttu-id="6a336-128">Seleccioneu **Desa** per completar la connexió.</span><span class="sxs-lookup"><span data-stu-id="6a336-128">Select **Save** to complete the connection.</span></span>
 
-1. <span data-ttu-id="70af1-121">A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client.</span><span class="sxs-lookup"><span data-stu-id="70af1-121">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="70af1-122">Cal que exporteu segments a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-122">It's required to export segments to AdRoll.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="6a336-129">Configurar una exportació</span><span class="sxs-lookup"><span data-stu-id="6a336-129">Configure an export</span></span>
 
-1. <span data-ttu-id="70af1-123">Seleccioneu els segments que voleu exportar.</span><span class="sxs-lookup"><span data-stu-id="70af1-123">Select the segments you want to export.</span></span> <span data-ttu-id="70af1-124">Seleccioneu un segment amb un mínim de 100 membres.</span><span class="sxs-lookup"><span data-stu-id="70af1-124">Select a segment with a least 100 members.</span></span> <span data-ttu-id="70af1-125">No podeu exportar segments més petits.</span><span class="sxs-lookup"><span data-stu-id="70af1-125">You can't export smaller segments.</span></span> <span data-ttu-id="70af1-126">A més, la mida màxima d'un segment que s'ha d'exportar és de 250.000 membres per exportació.</span><span class="sxs-lookup"><span data-stu-id="70af1-126">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
+<span data-ttu-id="6a336-130">Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus.</span><span class="sxs-lookup"><span data-stu-id="6a336-130">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="6a336-131">Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="6a336-131">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="70af1-127">Seleccioneu **Desa**.</span><span class="sxs-lookup"><span data-stu-id="70af1-127">Select **Save**.</span></span>
+1. <span data-ttu-id="6a336-132">Vés a **Dades** > **Exportacions**.</span><span class="sxs-lookup"><span data-stu-id="6a336-132">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="70af1-128">Exportar les dades</span><span class="sxs-lookup"><span data-stu-id="70af1-128">Export the data</span></span>
+1. <span data-ttu-id="6a336-133">Per crear una exportació nova, seleccioneu **Afegeix una destinació**.</span><span class="sxs-lookup"><span data-stu-id="6a336-133">To create a new export, select **Add destination**.</span></span>
 
-<span data-ttu-id="70af1-129">Podeu [exportar les dades segons demanda](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="70af1-129">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="70af1-130">L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="70af1-130">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="6a336-134">Al camp **Connexió per a l'exportació**, trieu una connexió de la secció AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-134">In the **Connection for export** field, choose a connection from the AdRoll section.</span></span> <span data-ttu-id="6a336-135">Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.</span><span class="sxs-lookup"><span data-stu-id="6a336-135">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="70af1-131">Limitacions conegudes</span><span class="sxs-lookup"><span data-stu-id="70af1-131">Known limitations</span></span>
+1. <span data-ttu-id="6a336-136">Introduïu l'**Identificador de l'anunciant d'AdRoll** Per obtenir més informació, vegeu [Perfils d'anunciant d'AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="6a336-136">Enter your **AdRoll Advertiser ID** For more information, see [AdRoll Advertiser Profiles](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span></span>
 
-- <span data-ttu-id="70af1-132">Podeu exportar fins a un total de 100.000 perfils per exportació a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-132">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
-- <span data-ttu-id="70af1-133">No podeu exportar segments amb menys de 100 perfils a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-133">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
-- <span data-ttu-id="70af1-134">L'exportació a AdRoll es limita als segments.</span><span class="sxs-lookup"><span data-stu-id="70af1-134">Exporting to AdRoll is limited to segments.</span></span>
-- <span data-ttu-id="70af1-135">L'exportació de fins a 250.000 perfils a AdRoll pot trigar fins a 10 minuts com a completar-se.</span><span class="sxs-lookup"><span data-stu-id="70af1-135">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
-- <span data-ttu-id="70af1-136">El nombre de perfils que podeu exportar a AdRoll és limitat i dependrà del contracte que tingueu amb AdRoll.</span><span class="sxs-lookup"><span data-stu-id="70af1-136">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
+3. <span data-ttu-id="6a336-137">A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client.</span><span class="sxs-lookup"><span data-stu-id="6a336-137">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="6a336-138">Cal que exporteu segments a AdRoll.</span><span class="sxs-lookup"><span data-stu-id="6a336-138">It's required to export segments to AdRoll.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="70af1-137">Compliment i privadesa de les dades</span><span class="sxs-lookup"><span data-stu-id="70af1-137">Data privacy and compliance</span></span>
+1. <span data-ttu-id="6a336-139">Seleccioneu els segments que voleu exportar.</span><span class="sxs-lookup"><span data-stu-id="6a336-139">Select the segments you want to export.</span></span> <span data-ttu-id="6a336-140">Seleccioneu un segment amb un mínim de 100 membres.</span><span class="sxs-lookup"><span data-stu-id="6a336-140">Select a segment with a least 100 members.</span></span> <span data-ttu-id="6a336-141">No podeu exportar segments més petits.</span><span class="sxs-lookup"><span data-stu-id="6a336-141">You can't export smaller segments.</span></span> <span data-ttu-id="6a336-142">A més, la mida màxima d'un segment que s'ha d'exportar és de 250.000 membres per exportació.</span><span class="sxs-lookup"><span data-stu-id="6a336-142">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
 
-<span data-ttu-id="70af1-138">Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a AdRoll, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals.</span><span class="sxs-lookup"><span data-stu-id="70af1-138">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="70af1-139">Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que AdRoll compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir.</span><span class="sxs-lookup"><span data-stu-id="70af1-139">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="70af1-140">Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="70af1-140">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+1. <span data-ttu-id="6a336-143">Seleccioneu **Desa**.</span><span class="sxs-lookup"><span data-stu-id="6a336-143">Select **Save**.</span></span>
 
-<span data-ttu-id="70af1-141">L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.</span><span class="sxs-lookup"><span data-stu-id="70af1-141">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+<span data-ttu-id="6a336-144">Si deseu una exportació, no s'executarà l'exportació immediatament.</span><span class="sxs-lookup"><span data-stu-id="6a336-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="6a336-145">L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="6a336-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="6a336-146">També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="6a336-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="6a336-147">Compliment i privadesa de les dades</span><span class="sxs-lookup"><span data-stu-id="6a336-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="6a336-148">Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a AdRoll, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals.</span><span class="sxs-lookup"><span data-stu-id="6a336-148">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="6a336-149">Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que AdRoll compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir.</span><span class="sxs-lookup"><span data-stu-id="6a336-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="6a336-150">Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="6a336-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+
+<span data-ttu-id="6a336-151">L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.</span><span class="sxs-lookup"><span data-stu-id="6a336-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>

@@ -65,7 +65,7 @@
         - name: Enriquir perfils de clients
           href: audience-insights/enrichment-hub.md
         - name: Afinitats de marca i d'interès
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: Enriquir amb HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Enriquir amb el Leadspace
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: Guia d'exemple per a la predicció de recomanacions de productes
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Crear segments basats en prediccions
+          href: audience-insights/prediction-based-segment.md
         - name: Implementar models d'aprenentatge automàtic personalitzats
           href: audience-insights/custom-models.md
         - name: Experiments amb l'Azure Machine Learning
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Opcions d'exportació
       items:
-        - name: Informació general de les destinacions d'exportació
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: Autopilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage Gen2
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: Dynamics 365 Customer Service (complement)
-          href: audience-insights/customer-card-add-in.md
-        - name: Dynamics 365 Marketing
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: "Dynamics\_365 Sales"
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Centre de vendes del Dynamics 365 (complement)
-          href: audience-insights/customer-card-add-in.md
-        - name: Administrador d'anuncis de Facebook
-          href: audience-insights/export-facebook.md
-        - name: Google Ads
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: Mailchimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (bot)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: Exportacions
+          items:
+            - name: Informació general sobre exportacions (versió preliminar)
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: Autopilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Storage
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage Gen2
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Adobe Experience Platform
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: Dynamics 365 Marketing
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: "Dynamics\_365 Sales"
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Administrador d'anuncis de Facebook
+              href: audience-insights/export-facebook.md
+            - name: Google Ads
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: Mailchimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: Altres usos
+          items:
+            - name: Dynamics 365 Customer Service (complement)
+              href: audience-insights/customer-card-add-in.md
+            - name: Centre de vendes del Dynamics 365 (complement)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (bot)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: Administració
       items:
         - name: Configurar la configuració del sistema
           href: audience-insights/system.md
         - name: Assignar permisos d'usuari
           href: audience-insights/permissions.md
+        - name: Informació general sobre les connexions (versió preliminar)
+          href: audience-insights/connections.md
         - name: Administrar diversos entorns
           href: audience-insights/manage-environments.md
         - name: Connectar-se a un compte d'emmagatzematge d'ADLS mitjançant una entitat de servei
@@ -212,10 +228,14 @@
       items:
         - name: Visualitza els informes
           href: engagement-insights/view-reports.md
-        - name: Crear informes personalitzats
+        - name: Creació d'informes personalitzats
           href: engagement-insights/custom-reports.md
         - name: Crear informes de perfils unificats
           href: engagement-insights/profile-reports.md
+    - name: Anàlisi de recorreguts
+      items:
+        - name: Crear i administrar informes d'embut
+          href: engagement-insights/funnel-reports.md
     - name: Recursos per a desenvolupadors
       items:
         - name: Informació general de recursos per a desenvolupadors
