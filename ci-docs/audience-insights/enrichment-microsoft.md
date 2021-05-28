@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896590"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064879"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
@@ -31,7 +31,7 @@ Per configurar l'enriquiment d'afinitats d'interessos, aneu a la pestanya **Dete
 
 ## <a name="how-we-determine-affinities"></a>Com determinem les similituds
 
-Utilitzem les dades de la cerca en línia de Microsoft per trobar similituds per a marques i interessos en diversos segments demogràfics (definits per edat, gènere o ubicació). El volum de cerques en línia d'una marca o un interès determina la quantitat d'afinitat d'un segment demogràfic, en comparació amb altres segments, que té a aquesta marca o interès. marca o interès.
+Utilitzem les dades de la cerca en línia de Microsoft per trobar similituds per a marques i interessos en diversos segments demogràfics (definits per edat, gènere o ubicació). El volum de cerques en línia d'una marca o un interès determina la quantitat d'afinitat d'un segment demogràfic, en comparació amb altres segments, que té a aquesta marca o interès.
 
 ## <a name="affinity-level-and-score"></a>Nivell d'afinitat i puntuació
 

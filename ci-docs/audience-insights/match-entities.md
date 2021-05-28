@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595552"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085610"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -103,6 +103,18 @@ Les regles de coincidència representen conjunts de condicions. Per fer coincidi
 
 > [!NOTE]
 > L'ordre de les regles és important. L'algoritme coincident intenta trobar una coincidència amb la primera regla i continua amb la segona regla només si no s'han identificat coincidències amb la primera regla.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Canviar l'ordre de les entitats a les regles de coincidència
+
+Podeu reordenar les entitats de les regles de coincidència per canviar l'ordre en què es processen. Les regles que entrin en conflicte a causa d'una comanda canviada se suprimiran. Cal tornar a crear les regles suprimides amb una configuració actualitzada.
+
+1. Aneu a **Dades** > **Unifica** > **Coincidències** i seleccioneu **Edita**.
+
+1. A la subfinestra **Edita la regla**, seleccioneu el control **Desplaça amunt/avall** o arrossegueu i deixeu anar les entitats per canviar l'ordre.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opcions per canviar en què es processen les entitats d'ordre a la fase de coincidència.":::
+
+1. Seleccioneu **Fet** per desar la regla.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir la desduplicació en una entitat de coincidència
 

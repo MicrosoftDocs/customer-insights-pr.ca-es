@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596395"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049382"
 ---
 # <a name="entities-in-audience-insights"></a>Entitats a les conclusions del públic
 
@@ -37,12 +37,12 @@ Seleccioneu una entitat per explorar els diferents camps i registres inclosos di
 > [!div class="mx-imgBorder"]
 > ![Seleccioneu una entitat](media/data-manager-entities-data.png "Seleccioneu una entitat")
 
-- La pestanya **Dades** està seleccionada per defecte i mostra una taula amb detalls sobre els registres individuals de l'entitat.
+- A la pestanya **Dades** es mostra una taula amb els detalls dels registres individuales de l'entitat.
 
 > [!div class="mx-imgBorder"]
 > ![Taula de camps](media/data-manager-entities-fields.PNG "Taula de camps")
 
-- A la pestanya **Camps** es mostra una taula per revisar els detalls de l'entitat seleccionada, com ara els noms de camp, els tipus de dades i els tipus. A la columna **Tipus** es mostren els tipus associats del Common Data Model, els quals són identificats automàticament pel sistema o [assignats manualment](map-entities.md) pels usuaris. Són tipus semàntics que poden diferir dels tipus de dades dels atributs; per exemple, el camp *Correu electrònic* següent té un tipus de dades *Text*, però el seu tipus del Common Data Model (semàntic) comú pot ser *Email* o *EmailAddress*.
+- La pestanya **Atributs** se selecciona per defecte i mostra una taula per revisar els detalls de l'entitat seleccionada, com ara els noms dels camps, els tipus de dades i els tipus. A la columna **Tipus** es mostren els tipus associats del Common Data Model, els quals són identificats automàticament pel sistema o [assignats manualment](map-entities.md) pels usuaris. Són tipus semàntics que poden diferir dels tipus de dades dels atributs; per exemple, el camp *Correu electrònic* següent té un tipus de dades *Text*, però el seu tipus del Common Data Model (semàntic) comú pot ser *Email* o *EmailAddress*.
 
 > [!NOTE]
 > Ambdues taules mostren només una mostra de les dades de l'entitat. Per visualitzar el conjunt de dades complet, aneu a la pàgina **Fonts de dades**, seleccioneu una entitat, seleccioneu **Edita** i, a continuació, visualitzeu les dades d'aquesta entitat amb l'editor del Power Query com s'explica a [Fonts de dades](data-sources.md).

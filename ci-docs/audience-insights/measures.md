@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887928"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049238"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
@@ -34,7 +34,7 @@ Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. P
 
 1. Seleccioneu **Edita el nom** i proporcioneu un **nom** per a la mesura. 
    > [!NOTE]
-   > Si la vostra nova configuració de mesura només té dos camps, per exemple, CustomerID i un càlcul, la sortida s'afegirà com una columna nova a l'entitat generada pel sistema anomenada Customer_Measure. I podreu veure el valor de la mesura al perfil de client unificat. Altres mesures generaran les seves pròpies entitats.
+   > Si la nova configuració de mesures només té dos camps, per exemple, CustomerID i un càlcul, la sortida s'afegirà com una columna nova a l'entitat generada pel sistema anomenada Customer_Measure. I podreu veure el valor de la mesura al perfil de client unificat. Altres mesures generaran les seves pròpies entitats.
 
 1. A l'àrea de configuració, trieu la funció d'agregació al menú desplegable **Seleccioneu una funció**. Les funcions d'agregació inclouen: 
    - **Suma**

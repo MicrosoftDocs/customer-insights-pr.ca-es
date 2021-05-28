@@ -1,7 +1,7 @@
 ---
-title: Instal·lar i configurar el Complement de targeta del client
-description: Instal·leu i configureu el complement de targeta del client per al Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Complement de la targeta del client de les aplicacions del Dynamics 365
+description: Mostra dades dels coneixements del públic a les aplicacions del Dynamics 365 amb aquest complement.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597315"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059576"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Visualitzeu dades demogràfiques, estadístiques i cronologies d'activitats amb el complement de targeta del client.
+Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Amb el complement de la targeta del client instal·lat a una aplicació compatible amb el Dynamics 365, podeu triar entre visualitzar la demografia, els coneixements i la cronologia d'activitats. El complement recuperarà les dades del Customer Insights sense que afectin les dades de l'aplicació del Dynamics 365 connectada. 
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Aplicació Dynamics 365 (com ara el Centre de vendes o el Centre del Customer Service), versió 9.0 o posterior amb la Interfície unificada habilitada.
-- Perfils de client [ingerits des de l'aplicació Dynamics 365 mitjançant el Common Data Service](connect-power-query.md).
-- Els usuaris del Complement de targeta del client s'han d'[afegir com a usuaris](permissions.md) a les conclusions del públic.
-- [Capacitats de cerca i filtratge configurades](search-filter-index.md).
-- Control demogràfic: Els camps demogràfics, com l'edat o el gènere, estan disponibles al perfil unificat del client.
-- Control Enriquiment: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
-- Control d'intel·ligència: Necessita dades generades mitjançant l'aprenentatge automàtic de l'Azure ([prediccions](predictions.md) o [models personalitzats](custom-models.md))
-- Control de mesures: Requereix [mesures configurades](measures.md).
-- Control de la cronologia: Requereix [activitats configurades](activities.md).
+- El complement només funciona amb les aplicacions controlades per models del Dynamics 365, com ara Vendes o Servei d'atenció al client, versió 9.0 i posteriors.
+- Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Common Data Service](connect-power-query.md).
+- Tots els usuaris del Dynamics 365 del complement de la targeta del client s'han d'[afegir com a usuaris](permissions.md) als coneixements del públic per veure les dades.
+- [Les capacitats de cerca i filtre configurades](search-filter-index.md) als coneixements del públic són necessàries per cercar dades per treballar.
+- Cada complement es basa en dades específiques dels coneixements del públic:
+  - Control de mesures: Requereix [mesures configurades](measures.md).
+  - Control d'intel·ligència: requereix dades generades mitjançant [prediccions](predictions.md) o [models personalitzats](custom-models.md).
+  - Control demogràfic: Els camps demogràfics, com l'edat o el gènere, estan disponibles al perfil unificat del client.
+  - Control Enriquiment: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
+  - Control de la cronologia: Requereix [activitats configurades](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instal·lar el complement de targeta del client
 
@@ -56,9 +57,9 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
    > [!NOTE]
    > Comproveu que el bloquejador d'elements emergents del navegador no bloquegi la finestra d'autenticació en seleccionar el botó **Inicia la sessió**.
 
-1. Seleccioneu l'entorn des del qual voleu obtenir dades.
+1. Seleccioneu l'entorn del Customer Insights des del qual voleu obtenir dades.
 
-1. Definiu l'assignació de camps a registres a l'aplicació Dynamics 365.
+1. Definiu l'assignació de camps als registres de l'aplicació del Dynamics 365. Segons les dades del Customer Insights, podeu triar entre assignar les opcions següents:
    - Per dur a terme l'assignació a un contacte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del contacte.
    - Per dur a terme l'assignació a un compte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del compte.
 

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597913"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976076"
 ---
 # <a name="power-automate-connector-preview"></a>Connector del Power Automate (visualització prèvia)
 
@@ -27,7 +27,7 @@ Utilitzeu disparadors per crear fluxos de núvol i automatitzar tasques repetiti
 - Disparador per quan no es pot actualitzar la font de dades. 
 - Disparador per quan la font de dades s'actualitza correctament.
 - Disparador per quan se supera un llindar en un segment. El disparador es limita a haver superat el llindar.
-- Disparador per quan se supera un llindar en una mesura empresarial. El disparador es limita a haver superat el llindar.
+- Disparador per quan se supera un llindar en una mesura empresarial. Només són compatibles les mesures empresarials sense cap dimensió. El disparador es limita a haver superat el llindar.
 - Disparador per quan hagi finalitzat una actualització completa de (fonts de dades, segments, mesures, etc.).
 - Es dispara quan s'ha completat una actualització del procés d'unificació (assignació, coincidència i combinació).
 

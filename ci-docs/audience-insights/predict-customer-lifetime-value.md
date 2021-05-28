@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595783"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954567"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicció del valor de vida del client (CLV) (versió preliminar)
 
@@ -38,11 +38,11 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
 - Identificador de client: identificador únic per fer coincidir les transaccions amb un client individual
 
 - Historial de transaccions: registre d'historial de transaccions amb l'esquema de dades semàntic següent
-    - ID de transacció: identificador únic de cada transacció
-    - Data de la transacció: data, preferiblement una marca de temps de cada transacció
-    - Import de la transacció: valor monetari (per exemple, ingressos o marge de benefici) de cada transacció
-    - Etiqueta assignada a les devolucions (opcional): valor booleà que indica si la transacció és una devolució 
-    - ID del producte (opcional): identificador del producte implicat a la transacció
+    - **ID de transacció**: identificador únic de cada transacció
+    - **Data de la transacció**: data, preferiblement una marca de temps de cada transacció
+    - **Import de la transacció**: valor monetari (per exemple, ingressos o marge de benefici) de cada transacció
+    - **Etiqueta assignada a les devolucions** (opcional): valor booleà que indica si la transacció és una devolució 
+    - **ID del producte** (opcional): identificador del producte implicat a la transacció
 
 - Dades addicionals (opcional), per exemple
     - Activitats web: historial de visites de llocs web, historial de correus electrònics
@@ -53,10 +53,20 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
     - Identificadors de clients per assignar activitats als clients
     - Informació d'activitat que conté el nom i la data de l'activitat
     - L'esquema de dades semàntic per a les activitats és el següent: 
-        - Clau principal: un identificador únic per a una activitat
-        - Data i hora: la data i l'hora de l'esdeveniment identificats per la clau principal
-        - Esdeveniment (nom de l'activitat): nom de l'esdeveniment que voleu utilitzar
-        - Detalls (import o valor): detalls de l'activitat del client
+        - **Clau principal**: un identificador únic per a una activitat
+        - **Data i hora**: la data i l'hora de l'esdeveniment identificats per la clau principal
+        - **Esdeveniment (nom de l'activitat)**: nom de l'esdeveniment que voleu utilitzar
+        - **Detalls (import o valor)**: detalls de l'activitat del client
+
+- Característiques de les dades suggerides:
+    - Dades històriques suficients: almenys un any de dades transaccionals. Preferentment de dos a tres anys de dades transaccionals per predir el CLV durant un any.
+    - Múltiples compres per client: l'ideal és almenys entre dues i tres transaccions per identificador de client, preferentment en múltiples dates.
+    - Nombre de clients: almenys 100 clients únics, preferentment més de 10.000 clients únics. El model fallarà amb menys de 100 clients i dades històriques insuficients
+    - Integritat de les dades: falten menys del 20% de valors als camps obligatoris de les dades d'entrada   
+
+> [!NOTE]
+> - El model requereix l'historial de transaccions dels clients. Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra/transaccions, les podeu unir al Power Query abans de la ingestió de dades.
+> - Per a dades addicionals d'activitat del client (opcionals), però, podeu afegir tantes entitats d'activitat del client com vulgueu que el model tingui en compte.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear una predicció del valor de vida del client
 
@@ -76,7 +86,7 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
    Per defecte, la unitat es defineix com a mesos. Podeu canviar-la a anys per consultar més endavant en el futur.
 
    > [!TIP]
-   > Per preveure amb precisió el CLV durant el període de temps que definiu, necessiteu un període comparable de dades històriques. Per exemple, si voleu preveure els pròxims 12 mesos, es recomana que tingueu com a mínim 18 a 24 mesos de dades històriques.
+   > Per preveure amb precisió el CLV durant el període de temps que definiu, necessiteu un període comparable de dades històriques. Per exemple, si voleu preveure el CLV durant els pròxims 12 mesos, es recomana que tingueu com a mínim 18 a 24 mesos de dades històriques.
 
 1. Especifiqueu què signifiquen els **clients actius** per a la vostra empresa. Definiu el període de temps en què un client ha d'haver fet com a mínim una transacció per tenir-lo en compte com a actiu. El model només predirà el CLV per als clients actius. 
    - **Deixa que el model calculi l'interval de compra (recomanat)**: el model analitza les dades i determina un període de temps segons les compres històriques.
@@ -181,14 +191,14 @@ A la pàgina de resultats hi ha tres seccions principals de dades.
   Mitjançant la definició dels clients d'alt valor proporcionada en configurar la predicció, el sistema avalua com fa funcionat el model d'IA a l'hora de predir els clients d'alt valor en comparació amb el model de base.    
 
   Les qualificacions es determinen segons les regles següents:
-  - A quan el model ha predit amb precisió almenys el 5% de clients de més valor en comparació amb el model de base.
-  - B quan el model ha predit amb precisió entre el 0 i el 5% de clients de més valor en comparació amb el model de base.
-  - C quan el model ha predit amb precisió menys clients de més valor en comparació amb el model de base.
+  - **A** quan el model ha predit amb precisió almenys el 5 % de clients de més valor en comparació amb el model de base.
+  - **B** quan el model ha predit amb precisió entre el 0 i el 5 % de clients de més valor en comparació amb el model de base.
+  - **C** quan el model ha predit amb precisió menys clients de més valor en comparació amb el model de base.
 
   A la subfinestra **Classificació del model** es mostren més detalls sobre el rendiment del model d'IA i el model de base. El model de vase utilitza un enfocament sense IA per calcular el valor de vida dels clients basat principalment en les compres històriques fetes pels clients.     
   La fórmula estàndard utilitzada per calcular el CLV pel model de base:    
 
-  *CLV per a cada client = Compra mitjana mensual realitzada pel client a la finestra del client activa * Nombre de mesos al període de predicció del CLV * Taxa de retenció global de tots els clients*
+  _**CLV per a cada client** = compra mitjana mensual realitzada pel client a la finestra del client activa * nombre de mesos al període de predicció del CLV * taxa de retenció global de tots els clients*_
 
   El model d'IA es compara amb el model de base segons dues mètriques de rendiment del model.
   

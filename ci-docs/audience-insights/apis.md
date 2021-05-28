@@ -1,7 +1,7 @@
 ---
 title: Treballar amb API
 description: Utilitzeu API i enteneu-ne les limitacions.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873650"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016580"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
@@ -90,19 +90,13 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 1. Al registre d'aplicacions del portal de l'Azure, aneu a **Permisos de l'API**.
 
-1. Seleccioneu **Afegeix un permís** i seleccioneu **Customer Insights** a la subfinestra lateral.
+1. Seleccioneu **Afegeix un permís**. 
+
+1. Seleccioneu la pestanya **API que utilitza la meva organització** i trieu **IA del Dynamics 365 per al Customer Insights** de la llista. 
 
 1. Com a **Tipus de permís**, seleccioneu **Permisos de l'aplicació** i seleccioneu el permís **CustomerInsights.Api.All**.
 
 1. Seleccioneu **Afegeix permisos**.
-
-1. Per poder donar el consentiment de l'administrador en aquest permís de l'aplicació, heu d'afegir una entitat de servei.
-
-   1. Instal·leu el mòdul del PowerShell Azure Active Directory (AD): `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Connecteu-vos al vostre compte d'AD: `Connect-AzureAD -TenantId <your tenant id>`. Trobareu l'identificador d'inquilí a **Informació general** > **Azure Active Directory**.
-   1. Executeu l'ordre següent per afegir una entitat de servei de l'Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` El paràmetre AppId pertany a l'aplicació de l'API del Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Exemple d'entitat de servei":::
 
 1. Per al registre de l'aplicació, torneu a **Permisos de l'API**.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887882"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085518"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -36,11 +36,9 @@ Podeu afegir una font de dades de tres maneres principals:
 
 La ingesta de dades de fonts de dades locals a l'Audience Insights està admesa als fluxos de dades del Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) en configurar l'entorn.
 
-Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de passarel·les de dades. Suprimir i tornar a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat per utilitzar passarel·les de dades locals.
+Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat a [utilitzar les passarel·les de dades locals](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla de la pàgina de fonts de dades que mostra els enllaços que porten a l'entorn del Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisar les dades ingerides
 

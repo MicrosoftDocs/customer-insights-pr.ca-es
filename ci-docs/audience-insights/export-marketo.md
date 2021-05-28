@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759809"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059304"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segments a Marketo (versió preliminar)
 
@@ -44,7 +44,7 @@ Exporteu segments de perfils de client unificats per generar campanyes, proporci
 
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduïu l'**[ID del client, el Secret del client i el Nom de l'amfitrió de l'extrem REST de Marketo](https://developers.marketo.com/rest-api/authentication/)**.
+1. Introduïu l'**[ID del client, el Secret del client i el Nom de l'amfitrió de l'extrem REST de Marketo](https://developers.marketo.com/rest-api/authentication/)**. El nom d'amfitrió de l'extrem REST és només el nom d'amfitrió, sense `https://`. Exemple:`xyz-abc-123.mktorest.com`. 
 
 1. Seleccioneu **Accepto** per confirmar el **Compliment i privadesa de les dades** i seleccioneu **Connecta't** per inicialitzar la connexió a Marketo.
 
@@ -62,7 +62,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Marketo. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
 
-1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. L'identificador de llista és un valor purament numèric. Per exemple, si l'identificador de la llista de Marketo és ST12345A7, suprimiu el caràcter abans i després dels numerals i introduïu `12345`. 
 
 1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
 
@@ -74,7 +74,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). A Marketo, ara podeu cercar els segments a les [llistes de Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). A Marketo, ara podeu cercar els segments a les [llistes de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
