@@ -1,7 +1,7 @@
 ---
 title: Enriquir els perfils de client amb dades de Microsoft
 description: Utilitzeu dades propietat de Microsoft per enriquir les dades dels vostres clients amb similituds de marca i d'interessos.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064879"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245695"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
@@ -69,12 +69,10 @@ Una experiència guiada us ajuda a través de la configuració dels enriquiments
 
 ### <a name="define-your-brands-or-interests"></a>Definir les marques o els interessos
 
-Seleccioneu una de les opcions següents:
+Trieu fins a cinc marques o interessos utilitzant una opció o totes dues:
 
-- **Sector**: el sistema identifica les principals marques o interessos rellevants per al sector i enriqueix les dades dels vostres clients.
-- **Trieu els vostres propis**: seleccioneu fins a cinc elements de la llista de marques o interessos que siguin més rellevants per a la vostra organització.
-
-Per afegir una marca o un interès, introduïu-la a l'àrea d'entrada per obtenir suggeriments segons els termes coincidents. Si no enumerem una marca o un interès que cerqueu, envieu-nos els vostres comentaris mitjançant l'enllaç **Suggereix**.
+- **Sector**: seleccioneu el vostre sector a la llista desplegable i, a continuació, trieu entre les marques principals o els interessos d'aquest sector.
+- **Trieu la vostra pròpia**: introduïu una marca o un interès rellevant per a la vostra organització i trieu entre els suggeriments de coincidència. Si no enumerem una marca o un interès que cerqueu, envieu-nos els vostres comentaris mitjançant l'enllaç **Suggereix**.
 
 ### <a name="review-enrichment-preferences"></a>Revisar les preferències de l'enriquiment
 

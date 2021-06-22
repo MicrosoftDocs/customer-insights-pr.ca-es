@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595261"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129887"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia d'exemple per a la predicció de recomanacions de productes (versió preliminar)
 
@@ -22,7 +22,7 @@ Se us guiarà per un exemple íntegre de predicció de recomanacions de producte
 
 ## <a name="scenario"></a>Escenari
 
-Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat, productes que ven a través del seu lloc web de Contoso Coffee. El seu objectiu és comprendre quins productes han de recomanar als seus clients periòdics. Conèixer el que és **probable que comprin** els clients els pot ajudar a estalviar esforços de màrqueting centrant-se en articles concrets.
+Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat que venen mitjançant el seu lloc web de Contoso Coffee. El seu objectiu és comprendre quins productes han de recomanar als seus clients periòdics. Conèixer el que és **probable que comprin** els clients els pot ajudar a estalviar esforços de màrqueting centrant-se en articles concrets.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -65,7 +65,7 @@ Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més conc
 
 1. Al camp **Nom** de la subfinestra lateral, canvieu el nom de la font de dades **Query** per **eCommercePurchases**.
 
-1. Deseu la font de dades.
+1. **Deseu** la font de dades.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerir dades de clients procedents de l'esquema de fidelització
@@ -83,11 +83,11 @@ Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més conc
 
 1. Al camp **Nom** de la subfinestra de la dreta, canvieu el nom de la font de dades **Query** per **loyCustomers**.
 
-1. Deseu la font de dades.
+1. **Deseu** la font de dades.
 
 ## <a name="task-2---data-unification"></a>Tasca 2 - Unificació de les dades
 
-Un cop feta la ingestió de les dades, començarem el procés d'**assignació, coincidència i combinació** per tal de crear un perfil de client unificat. Per obtenir més informació, vegeu [Unificació de les dades](data-unification.md).
+Després d'ingerir les dades, comencem el procés d'unificació de dades per crear un perfil de client unificat. Per obtenir més informació, vegeu [Unificació de les dades](data-unification.md).
 
 ### <a name="map"></a>Assignació
 
@@ -156,7 +156,7 @@ Amb els perfils de client unificats i a punt, ja podem executar la predicció de
 
    - **Nombre de productes**: definiu aquest valor en **5**. Aquesta configuració defineix quants productes voleu recomanar als clients.
 
-   - **Suggereix productes que han adquirit els clients recentment?**: seleccioneu **Sí** per indicar que voleu incloure productes a la recomanació que els clients ja han adquirit abans.
+   - **Repeteix les compres previstes**: seleccioneu **Sí** per indicar que voleu incloure productes a la recomanació que els vostres clients ja han adquirit.
 
    - **Finestra de cerca en el passat**: seleccioneu com a mínim **365 dies**. Aquesta configuració defineix quin temps en el passat consultarà el model a l'activitat del client per utilitzar-la com a entrada de les seves recomanacions.
    

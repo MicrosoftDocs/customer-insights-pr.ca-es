@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights
 description: Administrar les exportacions per compartir dades.
-ms.date: 03/25/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016602"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253028"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
@@ -26,22 +26,36 @@ Aneu a **Dades** > **Exportacions** per visualitzar la pàgina d'exportacions. T
 
 Per configurar o editar una exportació, heu de tenir connexions disponibles. Les connexions depenen de la vostra [funció d'usuari](permissions.md):
 - Els administradors tenen accés a totes les connexions. També poden crear connexions noves quan configuren una exportació.
-- Els col·laboradors poden tenir accés a connexions específiques. Depenen dels administradors per configurar i compartir connexions. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Els col·laboradors poden tenir accés a connexions específiques. Depenen dels administradors per configurar i compartir connexions. La llista d'exportacions mostra als contribuïdors si poden editar o només visualitzar una exportació a la columna **Els vostres permisos**. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 - Els visualitzadors només poden visualitzar les exportacions existents, però no les poden crear.
+
+### <a name="define-a-new-export"></a>Definir una exportació nova
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Seleccioneu **Afegeix una exportació** per crear una destinació d'exportació nova.
+1. Seleccioneu **Afegeix una exportació** per crear una exportació nova.
 
 1. A la subfinestra **Configura l'exportació**, seleccioneu la connexió que voleu utilitzar. Les [connexions](connections.md)les administren els administradors. 
 
 1. Proporcioneu els detalls necessaris i seleccioneu **Desa** per crear l'exportació.
 
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Definir una exportació nova basada en una exportació existent
+
+1. Vés a **Dades** > **Exportacions**.
+
+1. A la llista d'exportacions, seleccioneu l'exportació que vulgueu duplicar.
+
+1. Seleccioneu **Crea un duplicat** a la barra d'ordres per obrir la subfinestra **Configura l'exportació** amb els detalls de l'exportació seleccionada.
+
+1. Reviseu i adapteu l'exportació i seleccioneu **Desa** per crear una exportació nova.
+
 ### <a name="edit-an-export"></a>Editar una exportació
 
-1. Seleccioneu els punt suspensius verticals de la destinació d'exportació que voleu editar.
+1. Vés a **Dades** > **Exportacions**.
 
-1. Al menú desplegable, seleccioneu **Edita**.
+1. A la llista d'exportacions, seleccioneu l'exportació que vulgueu editar.
+
+1. Seleccioneu **Edita** a la barra d'ordres.
 
 1. Canvieu els valors que voleu actualitzar i seleccioneu **Desa**.
 
@@ -53,24 +67,48 @@ Un cop creades les destinacions d'exportació, es mostren a **Dades** > **Export
 
 1. Els usuaris sense permisos d'edició seleccionen **Visualització** en lloc d'**Edició** per veure els detalls de l'exportació.
 
-1. Aquesta subfinestra lateral mostra la configuració d'aquesta exportació. Sense permisos d'edició, els valors no es poden canviar. Seleccioneu **Tanca** per tornar a la pàgina d'exportacions.
+1. A la subfinestra lateral es mostra la configuració d'una exportació. Sense permisos d'edició, els valors no es poden canviar. Seleccioneu **Tanca** per tornar a la pàgina d'exportacions.
 
-## <a name="run-exports-on-demand"></a>Executar exportacions segons la demanda
+## <a name="schedule-and-run-exports"></a>Planificar i executar exportacions
 
-Després de configurar una exportació, s'executarà amb cada [actualització planificada](system.md#schedule-tab) sempre que tingui una connexió que funcioni.
+Cada exportació que configureu té una planificació d'actualització. Durant una actualització, el sistema cerca dades noves o actualitzades per incloure-les en una exportació. Per defecte, les exportacions s'executen com a part de cada [actualització del sistema planificada](system.md#schedule-tab). Podeu personalitzar la planificació d'actualització o desactivar-la per executar les exportacions manualment.
 
-Per exportar dades sense esperar una actualització planificada, aneu a **Dades** > **Exportacions**. Teniu dues opcions:
+Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions a les [dependències](system.md#refresh-policies) en curs quan s'ha d'iniciar una exportació planificada, el sistema finalitzarà primer les dependències i després executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
 
-- Per executar totes les exportacions, seleccioneu **Executa-ho tot** a la barra d'ordres. 
-- Per executar una sola exportació, seleccioneu els punts suspensius (...) d'un element de llista i, a continuació, trieu **Executa**.
+### <a name="schedule-exports"></a>Exportacions planificades
+
+Podeu definir planificacions d'actualització personalitzades per a exportacions individuals o diverses exportacions alhora. La planificació definida actualment es mostra a la columna **Planificació** de la llista d'exportació. El permís per canviar la planificació és el mateix que per [editar i definir exportacions](export-destinations.md#set-up-a-new-export). 
+
+1. Vés a **Dades** > **Exportacions**.
+
+1. Seleccioneu l'exportació que voleu planificar.
+
+1. Seleccioneu **Planifica** a la barra d'ordres.
+
+1. A la subfinestra **Planifica l'exportació**, definiu l'**Execució planificada** com a **Activada** per executar l'exportació automàticament. Definiu-la com a **Desactivada** per actualitzar-la manualment.
+
+1. Per actualitzar automàticament les exportacions, trieu un valor de **Periodicitat** i especifiqueu-ne els detalls. El temps definit s'aplica a totes les instàncies d'una periodicitat. És el moment en què una exportació hauria de començar a actualitzar-se.
+
+1. Per aplicar i activar els canvis, seleccioneu **Desa**.
+
+Quan editeu la planificació de diverses exportacions, heu de fer una selecció a **Conserva o substitueix les planificacions**:
+- **Conserva planificacions individuals**: mantingueu la planificació definida prèviament per a les exportacions seleccionades i només les inhabiliteu o habiliteu.
+- **Defineix una planificació nova per a totes les exportacions seleccionades**: substituïu les planificacions existents de les exportacions seleccionades.
+
+### <a name="run-exports-on-demand"></a>Executar exportacions segons la demanda
+
+Per exportar dades sense esperar una actualització planificada, aneu a **Dades** > **Exportacions**.
+
+- Per executar totes les exportacions, seleccioneu **Executa-ho tot** a la barra d'ordres. Aquesta acció només executarà les exportacions que tenen una planificació activa.
+- Per executar una única exportació, seleccioneu-la a la llista i seleccioneu **Executa** a la barra d'ordres. Així s'executen les exportacions sense planificacions actives. 
 
 ## <a name="remove-an-export"></a>Suprimir una exportació
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Seleccioneu els punt suspensius verticals de l'exportació que voleu suprimir.
+1. Seleccioneu l'exportació que voleu suprimir.
 
-1. Seleccioneu **Suprimeix** al menú desplegable.
+1. Seleccioneu **Elimina** a la barra d'ordres.
 
 1. Confirmeu la supressió seleccionant **Suprimeix** a la pantalla de confirmació.
 

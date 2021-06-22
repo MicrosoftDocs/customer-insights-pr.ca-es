@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887974"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259087"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -76,9 +76,9 @@ Per crear un entorn:
    > Només s'admeten comptes d'emmagatzematge Gen2 de l'Azure Data Lake de la mateixa regió de l'Azure que la que vau seleccionar en crear l'entorn.
    > Només admetem comptes d'emmagatzematge de l'Azure Data Lake gen2 habilitats per a l'espai de noms jeràrquic (HNS).
 
-   - En el caso de l'opció Gen2 de l'Azure Data Lake Storage, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions per a l'autenticació. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). El nom del **Contenidor** no es pot canviar i serà "customerinsights".
+   - En el caso de l'opció Gen2 de l'Azure Data Lake Storage, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions per a l'autenticació. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). El nom del **contenidor** no es pot canviar i serà `customerinsights`.
    
-   - Si voleu utilitzar [prediccions](predictions.md), configureu l'ús compartit de dades amb aplicacions i solucions basades en el Microsoft Dataverse, o habiliteu la ingestió de dades des de fonts de dades locals, proporcioneu l'adreça URL de l'entorn del Microsoft Dataverse a **Configurar l'ús compartit de dades amb el Microsoft Dataverse i habilitar capacitats addicionals**. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el Microsoft Dataverse Managed Data Lake.
+   - Si voleu utilitzar [prediccions](predictions.md), configureu l'ús compartit de dades amb el Microsoft Dataverse, o habiliteu la ingestió de dades des de fonts de dades locals, proporcioneu l'adreça URL de l'entorn del Microsoft Dataverse a **Configurar l'ús compartit de dades amb el Microsoft Dataverse i habilitar capacitats addicionals**. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - L'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake actualment no s'admet quan deseu totes les dades al vostre propi Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Per crear un entorn:
      > [!div class="mx-imgBorder"]
      > ![Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Quan executeu processos, com ara la ingestió de dades o la creació de segments, les carpetes corresponents es crearan al compte d'emmagatzematge que hagueu especificat anteriorment. Els fitxers de dades i els fitxers model.json es crearan i s'afegiran a les respectives subcarpetes en funció del procés que executeu.
+   Quan executeu processos, com ara la ingestió de dades o la creació de segments, les carpetes corresponents es crearan al compte d'emmagatzematge que hagueu especificat anteriorment. Els fitxers de dades i els fitxers model.json es crearan i s'afegiran a les carpetes en funció del nom del procés.
 
    Si creeu diversos entorns del Customer Insights i trieu desar les entitats de sortida d'aquests entorns al vostre compte d'emmagatzematge, es crearan carpetes independents per a cada entorn amb ci_<environmentid> al contenidor.
 
@@ -146,7 +146,7 @@ Podeu editar alguns dels detalls dels entorns existents.
    > - L'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake actualment no s'admet quan deseu totes les dades al vostre propi Azure Data Lake Storage.
    > - [Predicció de valors que falten d'una entitat](predictions.md) actualment no està admès quan habiliteu l'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake.
 
-   Quan habiliteu l'ús compartit de dades amb el Microsoft Dataverse, es dispararà una actualització completa única de les fonts de dades i altres processos. Si actualment els processos s'executen i es posen a la cua, no veureu l'opció per habilitar l'ús compartit de dades amb el Microsoft Dataverse. Podeu esperar que aquests processos es completin o cancel·lin per habilitar l'ús compartit de dades. 
+   Després d'habilitar l'ús compartit de dades amb el Microsoft Dataverse, s'inicia una actualització completa única de les fonts de dades i altres processos. Si actualment els processos s'executen, no veieu l'opció per habilitar l'ús compartit de dades amb el Microsoft Dataverse. Espereu que aquests processos es completin o cancel·lin per habilitar l'ús compartit de dades. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse.":::
    

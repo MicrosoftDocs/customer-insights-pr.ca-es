@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906844"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095590"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predicció de rotació de transaccions (versió preliminar)
 
@@ -144,7 +144,7 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
    - **Estat:** estat de l'execució de la predicció.
         - **En cua:** la predicció està esperant que s'executin altres processos.
         - **S'està actualitzant:** la predicció s'està executant per produir resultats que passaran a l'entitat de sortida.
-        - **Error:** s'ha produït un error en executar la predicció. Per obtenir més informació, [reviseu els registres](#troubleshoot-a-failed-prediction).
+        - **Error:** s'ha produït un error en executar la predicció. Per obtenir més informació, [reviseu els registres](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Ha reeixit:** la predicció s'ha realitzat correctament. Seleccioneu **Visualitza** a sota dels tres punts verticals per revisar la predicció
    - **Editat:** la data en què es va canviar la configuració de la predicció.
    - **Última actualització:** la data en què s'han actualitzat els resultats de la predicció a l'entitat de sortida.
@@ -168,35 +168,9 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
        
     1. **Factors més influents:** hi ha molts factors que s'han de tenir en compte a l'hora de crear la predicció. Cadascun dels factors té la seva importància calculada per a les prediccions agregades que crea un model. Podeu utilitzar aquests factors per ajudar a validar els resultats de la predicció. O bé, podeu utilitzar aquesta informació més endavant per [crear segments](segments.md) que ajudin a influir en el risc de rotació dels clients.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Resoldre problemes relacionats amb una predicció fallida
+## <a name="manage-predictions"></a>Administrar prediccions
 
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-
-1. Seleccioneu els punts suspensius verticals que hi ha al costat de la predicció els registres d'error de la qual voleu visualitzar.
-
-1. Seleccioneu **Registres**.
-
-1. Reviseu tots els errors. Hi ha diversos tipus d'errors que es poden produir i que descriuen la condició que ha causat l'error. Per exemple, un error que indica que no hi ha prou dades per predir amb precisió se sol resoldre amb la càrrega de dades addicionals al Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualitzar una predicció
-
-Les prediccions s'actualitzaran automàticament amb la mateixa [planificació d'actualització de les dades](system.md#schedule-tab) definida a la configuració. Podeu actualitzar-les manualment també.
-
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu actualitzar.
-
-1. Seleccioneu **Actualitza**.
-
-## <a name="delete-a-prediction"></a>Suprimir una predicció
-
-La supressió d'una predicció també comporta la supressió de la seva entitat de sortida.
-
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu suprimir.
-
-1. Seleccioneu **Suprimeix**.
+Es pot optimitzar, solucionar els problemes, actualitzar o suprimir predictions. Reviseu un informe d'ús de dades d'entrada per obtenir informació sobre com es pot realitzar una predicció més fiable més ràpidament. Per obtenir més informació, vegeu [Administrar prediccions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

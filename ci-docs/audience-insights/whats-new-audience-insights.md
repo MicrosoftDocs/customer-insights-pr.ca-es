@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988908"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263239"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Actualitzacions de maig de 2021
+
+Les actualitzacions del maig de 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="data-ingestion"></a>Ingestió de dades
+
+- **Visualitzeu o modifiqueu les metadades o la definició d'entitat quan adjunteu dades de l'Azure Data Lake Storage** Ara podeu visualitzar i editar les metadades o la definició d'entitat a l'auditori quan adjunteu dades d'una carpeta del Model de dades comú al vostre Azure Data Lake Storage. Aquesta capacitat proporciona comentaris en temps real, validació del model i comprovació d'errors. Permet editar tant model.json com manifest.json sense problemes.
+
+### <a name="extensibility"></a>Extensibilitat
+
+- **Exportacions de segments millorades, planificació personalitzada i duplicació** Ara podeu [veure totes les exportacions d'un segment concret](export-destinations.md#view-exports-and-export-details) en una llista. Aquesta nova visualització ajuda a administrar com s'utilitza un segment concret i adaptar o crear exportacions noves.    
+  Podeu [definir planificacions d'actualització personalitzades](export-destinations.md#schedule-and-run-exports) per a exportacions individuals o diverses exportacions alhora. Fins ara, totes les exportacions s'executaven amb cada actualització del sistema.    
+  En comptes de crear una exportació nova des de zero, podeu començar basant-vos en una d'existent per estalviar temps.
+
+- **Exporteu segments al Microsoft Advertising** Hem ampliat les nostres destinacions d'exportació per incloure-hi el Microsoft Advertising. Creeu públics del Customer Match al Microsoft Advertising amb les dades del perfil del client unificat i utilitzeu-los per a les campanyes de publicitat. Per obtenir-ne més informació, vegeu [Exportar segments al Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Exporteu segments a LinkedIn Ads** Hem ampliat les nostres destinacions d'exportació per incloure LinkedIn Ads i permetre-us desbloquejar la segmentació de contactes i d'empreses mitjançant LinkedIn i exportant les dades de perfil de client unificat. Per obtenir-ne més informació, vegeu [Exportar segments al LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Exporteu segments a Omnisend** Hem ampliat les nostres destinacions d'exportació per incloure-hi Omnisend. Utilitzeu els segments creats als coneixements del públic per generar campanyes, proporcionar contingut de màrqueting per correu electrònic i utilitzar grups específics de clients amb Omnisend. Per obtenir-ne més informació, vegeu [Exportar segments a Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Prediccions
+
+- **Informe d'ús de dades d'entrada** L'informe d'ús de dades d'entrada proporciona una visualització consolidada dels errors i advertiments que poden generar les previsions de sèrie. També recomana com millorar el rendiment del model.    
+  L'informe està disponible quan un model ha finalitzat el procés d'entrenament. Es crea per a cada model per separat, independentment de si s'ha completat correctament o no.
+  Actualment, aquesta característica només està disponible per al model de cancel·lació de la transacció. Per obtenir-ne més informació, vegeu [informe d'ús de dades d'entrada](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Relacions
+
+- **Visualitzador de relacions** El visualitzador de relacions us permet veure totes les relacions existents entre les entitats i la seva cardinalitat. Les relacions s'organitzen ara en grups: usuari creat, sistema i relacions heretades. També podeu exportar una visualització com a imatge. Per obtenir-ne més informació, consulteu [Visualitzar relacions](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Actualitzacions d'abril de 2021
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906752"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095544"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicció de recomanacions de productes (versió preliminar)
 
@@ -205,33 +205,9 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
        > [!div class="mx-imgBorder"]
        > ![Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat](media/product-recommendation-highconfidence.PNG "Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat")
 
-## <a name="fix-a-failed-prediction"></a>Corregir una predicció errònia
+## <a name="manage-predictions"></a>Administrar prediccions
 
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-
-1. Seleccioneu la predicció de la qual voleu visualitzar els registres d'error i seleccioneu **Registres**.
-
-1. Reviseu tots els errors. Hi ha diversos tipus d'errors que es poden produir i que descriuen la condició que ha causat l'error. Per exemple, un error que no hi ha prou dades per predir amb precisió normalment es resol carregant més dades al Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualitzar una predicció
-
-Les previsions s'actualitzen automàticament segons la mateixa [planificació que s'actualitzen les dades](system.md#schedule-tab) a la configuració.
-
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu actualitzar.
-
-1. Seleccioneu **Actualitza**.
-
-## <a name="delete-a-prediction"></a>Suprimir una predicció
-
-La supressió d'una predicció també comporta la supressió de la seva entitat de sortida.
-
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu suprimir.
-
-1. Seleccioneu **Suprimeix**.
+Es pot optimitzar, solucionar els problemes, actualitzar o suprimir predictions. Reviseu un informe d'ús de dades d'entrada per obtenir informació sobre com es pot realitzar una predicció més fiable més ràpidament. Per obtenir més informació, vegeu [Administrar prediccions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906890"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095636"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
 
@@ -147,30 +147,9 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
        > [!div class="mx-imgBorder"]
        > ![Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació](media/subscription-churn-influentialfactors.PNG "Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació")
 
-## <a name="fix-a-failed-prediction"></a>Corregir una predicció errònia
+## <a name="manage-predictions"></a>Administrar prediccions
 
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-1. Seleccioneu la predicció de la qual voleu visualitzar els registres d'error i seleccioneu **Registres**.
-   > [!div class="mx-imgBorder"]
-   > ![Visualització de la barra del menú Resultats, que inclou els botons Tanca, Edita el model i registres](media/subscription-churn-logsbutton.PNG "Visualització de la barra del menú Resultats, que inclou els botons Tanca, Edita el model i registres")
-1. Reviseu tots els errors. Hi ha diversos tipus d'errors que es poden produir i que descriuen la condició que ha causat l'error. Per exemple, un error que indiqui que no hi ha prou dades per predir amb precisió se sol resoldre carregant més dades.
-
-## <a name="refresh-a-prediction"></a>Actualitzar una predicció
-
-Les prediccions s'actualitzaran automàticament amb la mateixa [planificació d'actualització de les dades](system.md#schedule-tab) definida a la configuració.
-
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu actualitzar.
-1. Seleccioneu **Actualitza**.
-
-## <a name="delete-a-prediction"></a>Suprimir una predicció
-
-1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
-1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu suprimir.
-1. Seleccioneu **Suprimeix**.
-
-> [!NOTE]
-> En suprimir una predicció se suprimirà la seva entitat de sortida.
+Es pot optimitzar, solucionar els problemes, actualitzar o suprimir predictions. Reviseu un informe d'ús de dades d'entrada per obtenir informació sobre com es pot realitzar una predicció més fiable més ràpidament. Per obtenir més informació, vegeu [Administrar prediccions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

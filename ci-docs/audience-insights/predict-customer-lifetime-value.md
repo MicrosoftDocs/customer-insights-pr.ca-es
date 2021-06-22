@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954567"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095498"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicció del valor de vida del client (CLV) (versió preliminar)
 
@@ -149,7 +149,6 @@ Les dades que reflecteixen les interaccions clau dels clients (com ara el web, e
 
 1. Seleccioneu **Següent**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Revisar i executar la configuració del model
 
 1. Al pas **Revisió dels detalls del model**, valideu la configuració de la predicció. Podeu tornar enrere en qualsevol part de la configuració de predicció. Per fer-ho, seleccioneu **Edita** sota el valor que es mostra. També podeu seleccionar un pas de configuració de l'indicador de progrés.
@@ -170,11 +169,10 @@ Les dades que reflecteixen les interaccions clau dels clients (com ara el web, e
 - **Estat:** estat de l'execució de la predicció.
     - **En cua:** la predicció està esperant que es completin altres processos.
     - **S'està actualitzant:** la predicció s'està executant per crear resultats que passaran a l'entitat de sortida.
-    - **Error:** s'ha produït un error en executar la predicció. Per obtenir més informació, [reviseu els registres](#troubleshoot-a-failed-prediction).
+    - **Error:** s'ha produït un error en executar la predicció. Per obtenir més informació, [reviseu els registres](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Correcta:** la predicció s'ha realitzat correctament. Seleccioneu **Visualitza** a sota dels punts suspensius verticals per revisar els resultats de la predicció.
 - **Editat:** la data en què es va canviar la configuració de la predicció.
 - **Última actualització:** la data en què s'han actualitzat els resultats de la predicció a l'entitat de sortida.
-
 
 ### <a name="review-prediction-results"></a>Revisar els resultats de la predicció
 
@@ -216,28 +214,8 @@ A la pàgina de resultats hi ha tres seccions principals de dades.
 
 - **Factors més influents**: es tenen en compte diversos factors es consideren quan es crea la predicció de CLV a partir de les dades d'entrada proporcionades al model d'IA. Cadascun dels factors té la seva importància calculada per a les prediccions agregades que crea un model. Podeu utilitzar aquests factors per ajudar a validar els resultats de la predicció. Aquests factors també proporcionen més informació sobre els factors més rellevants que han contribuït a preveure el CLV a tots els clients.
 
-## <a name="refresh-a-prediction"></a>Actualitzar una predicció
+## <a name="manage-predictions"></a>Administrar prediccions
 
-Les previsions s'actualitzen automàticament segons la mateixa [planificació que s'actualitzen les dades](system.md#schedule-tab) a la configuració. Podeu actualitzar-les manualment també.
-
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-2. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu actualitzar.
-3. Seleccioneu **Actualitza**.
-
-## <a name="delete-a-prediction"></a>Suprimir una predicció
-
-La supressió d'una predicció també comporta la supressió de la seva entitat de sortida.
-
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-2. Seleccioneu els tres punts verticals que hi ha al costat de la predicció que voleu suprimir.
-3. Seleccioneu **Suprimeix**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Resoldre problemes relacionats amb una predicció fallida
-
-1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
-2. Seleccioneu els punts suspensius verticals que hi ha al costat de la predicció els registres d'error de la qual voleu visualitzar.
-3. Seleccioneu **Registres**.
-4. Reviseu tots els errors. Hi ha diversos tipus d'errors que es poden produir i que descriuen la condició que ha causat l'error. Per exemple, un error que indiqui que no hi ha prou dades per predir amb precisió se sol resoldre carregant més dades a les conclusions del públic.
-
+Es pot optimitzar, solucionar els problemes, actualitzar o suprimir predictions. Reviseu un informe d'ús de dades d'entrada per obtenir informació sobre com es pot realitzar una predicció més fiable més ràpidament. Per obtenir més informació, vegeu [Administrar prediccions](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

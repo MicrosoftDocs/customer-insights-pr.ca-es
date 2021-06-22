@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034000"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111375"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -32,22 +32,13 @@ Hi ha diverses maneres de crear un segment nou:
 - Suggeriments amb tecnologia d'IA basats en mesures o atributs: [segments suggerits per millorar mesures](suggested-segments.md)
 - Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Obtenir informació sobre els segments existents
-
-Descobriu informació addicional sobre els segments existents amb el [Segment insights](segment-insights.md). Esbrineu en què es diferencien dos segments o què tenen en comú.
-
-## <a name="find-similar-customers"></a>Cerca clients similars
-
-Cerqueu clients semblants als membres d'un segment seleccionat amb l'ajuda de la intel·ligència artificial. Per obtenir més informació, vegeu [clients semblants](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
 Aneu a la pàgina **Segments** per visualitzar tots els segments desats i administrar-los.
 
 Cada segment està representat per una fila que inclou informació addicional sobre el segment.
 
-> [!div class="mx-imgBorder"]
-> ![Opcions per administrar un segment existent](media/segments-selected-segment.png "Opcions per administrar un segment existent")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb opcions de llista desplegable i opcions disponibles.":::
 
 L'acció següent està disponible quan seleccioneu un segment:
 
@@ -59,7 +50,7 @@ L'acció següent està disponible quan seleccioneu un segment:
   Alternativament, podeu utilitzar la funcionalitat **Planifica més tard** al desplegable **Activa o desactiva** per especificar una data i hora futura per a l'activació i la desactivació d'un segment concret.
 - **Canviar el nom** del segment.
 - **Baixar** la llista de membres com a fitxer .CSV.
-- L'opció **Afegeix a** envia la llista d'identificadors de clients al segment per al processament en una altra aplicació.
+- **Administreu exportacions** per veure el segment relacionat amb les exportacions i administrar-les. [Més informació sobre les exportacions](export-destinations.md)
 - **Suprimir** el segment.
 
 ## <a name="refresh-segments"></a>Actualitzar els segments
@@ -68,6 +59,24 @@ Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot**
 
 > [!TIP]
 > Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+
+## <a name="export-segments"></a>Exportar segments
+
+Podeu exportar un segment des de la pàgina de segments o des de la [pàgina d'exportació](export-destinations.md). 
+
+1. Aneu a la pàgina **Segments**.
+
+1. Seleccioneu **Mostra'n més [...]** al segment que voleu exportar.
+
+1. Seleccioneu **Administra les exportacions** de les accions de la llista desplegable.
+
+1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per exportacions que contenen el segment actual o que no les contenen.
+
+   1. Per afegir el segment seleccionat a una exportació, seleccioneu l'exportació a la llista i seleccioneu **Afegeix un segment**.
+
+   1. Per crear una exportació nova amb el segment seleccionat, seleccioneu **Afegeix l'exportació**. Per obtenir més informació sobre la creació d'exportacions, vegeu [Configurar una exportació nova](export-destinations.md#set-up-a-new-export).
+
+1. Seleccioneu **Enrere** per tornar a la pàgina principal per als segments.
 
 ## <a name="view-processing-history-and-segment-members"></a>Visualitzar l'historial de processament i els membres del segment
 
