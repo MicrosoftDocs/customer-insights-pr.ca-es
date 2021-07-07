@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129887"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306154"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia d'exemple per a la predicció de recomanacions de productes (versió preliminar)
 
@@ -105,9 +105,9 @@ Després d'ingerir les dades, comencem el procés d'unificació de dades per cre
 
 1. Aneu a la pestanya **Coincidència** i seleccioneu **Definició d'ordre**.
 
-2. A la llista desplegable **Principal**, trieu **eCommerceContacts : eCommerce** com a font principal i incloeu-hi tots els registres.
+2. A la llista desplegable **Principal**, trieu **eCommerceContacts: eCommerce** com a font principal i incloeu tots els registres.
 
-3. A la llista desplegable **Entitat 2**, trieu **loyCustomers : LoyaltyScheme** i incloeu-hi tots els registres.
+3. A la llista desplegable **Entitat 2**, trieu **loyCustomers: LoyaltyScheme** i incloeu tots els registres.
 
    ![Unifiqueu la coincidència de comerç electrònic i de fidelització.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Després d'ingerir les dades, comencem el procés d'unificació de dades per cre
 
 5. Afegiu la primera condició amb el FullName.
 
-   - Per a eCommerceContacts, seleccioneu **FullName** al menú desplegable.
-   - Per a loyCustomers, seleccioneu **FullName** al menú desplegable.
+   - Per a eCommerceContacts seleccioneu **FullName** al desplegable.
+   - Per a loyCustomers seleccioneu **FullName** al desplegable.
    - Seleccioneu la llista desplegable **Normalitza** i trieu el **Tipus (Telèfon, Nom, Adreça...)**.
    - Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
 
 6. Introduïu el nom **Nom complet, correu electrònic** per a la regla nova.
 
    - Per afegir una segona condició per a l'adreça electrònica seleccioneu **Afegeix una condició**.
-   - Per a l'entitat eCommerceContacts, trieu **Correu electrònic** al menú desplegable.
-   - Per a l'entitat loyCustomers, trieu **Correu electrònic** al menú desplegable.
+   - Per a l'entitat eCommerceContacts, trieu **EMail** al desplegable.
+   - Per a l'entitat loyCustomers, trieu **EMail** al desplegable.
    - Deixeu Normalitza en blanc.
    - Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
 

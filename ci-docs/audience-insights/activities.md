@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866395"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304914"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
@@ -53,19 +53,19 @@ Les fonts de dades poden incloure entitats amb dades transaccionals i d'activita
 
 1. Al pas **Unificació d'activitats**, trieu la incidència d'activitat i l'hora d'inici de l'activitat. 
    - **Camps obligatoris**
-      1. **Activitat d'incidència**: camp que és la incidència per a aquesta activitat
-      2. **Marca horària**: camp que representa l'hora d'inici de la vostra activitat.
+      - **Activitat d'esdeveniment**: camp que és l'esdeveniment per a aquesta activitat.
+      - **Marca horària**: camp que representa l'hora d'inici de la vostra activitat.
 
    - **Camps opcionals**
-      1. **Detall addicional**: camp amb informació rellevant per a aquesta activitat.
-      2. **Icona** : icona que representa millor aquest tipus d'activitat.
-      3. **Adreça web**: camp que conté una adreça URL amb informació sobre aquesta activitat. Per exemple, el sistema transaccional que és l'origen d'aquesta activitat. Aquesta adreça URL pot ser qualsevol camp de la font de dades; o bé, es pot crear com a camp nou mitjançant una transformació del Power Query. Les dades d'adreça URL s'emmagatzemaran a l'entitat *Activitat unificada*, que es pot consumir als registres avall mitjançant [API](apis.md).
+      - **Detall addicional**: camp amb informació rellevant per a aquesta activitat.
+      - **Icona** : icona que representa millor aquest tipus d'activitat.
+      - **Adreça web**: camp que conté una adreça URL amb informació sobre aquesta activitat. Per exemple, el sistema transaccional que és l'origen d'aquesta activitat. Aquesta adreça URL pot ser qualsevol camp de la font de dades; o bé, es pot crear com a camp nou mitjançant una transformació del Power Query. Les dades d'adreça URL s'emmagatzemaran a l'entitat *Activitat unificada*, que es pot consumir als registres avall mitjançant [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifiqueu les dades de l'activitat de client en una entitat Activitat unificada.":::
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. Podeu seleccionar **Acabament i revisió** per desar l'activitat ara amb el tipus d'activitat definit com a **Altres**. 
 
-1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, els tipus d'activitats de *Subscription* & *SalesOrderLine* es poden assignar de manera administrada després d'acordar l'assignació dels camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
+1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, els tipus d'activitats de *Subscripció* i *SalesOrderLine* es poden assignar de manera semàntica després d'acordar l'assignació dels camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. 
 
@@ -89,7 +89,7 @@ Les accions següents estan disponibles en seleccionar una activitat.
 
 - **Editar**: s'obre la configuració de l'activitat al pas de revisió. Podeu canviar qualsevol o tota la configuració actual des d'aquest pas. Després de canviar la configuració, seleccioneu **Desa l'activitat** i, a continuació, seleccioneu **Executa** per processar els canvis.
 
-- **Canvia el nom**: obre un diàleg on s'introduirà un nom diferent per a l'activitat seleccionada. Seleccioneu **Desa** per aplicar els canvis.
+- **Canvia el nom**: obre un diàleg on podeu introduir un nom diferent per a l'activitat seleccionada. Seleccioneu **Desa** per aplicar els canvis.
 
 - **Suprimeix**: s'obre un diàleg per confirmar la supressió de l'activitat seleccionada. També podeu suprimir més d'una activitat alhora seleccionant les activitats i, a continuació, seleccionant la icona de supressió. Seleccioneu **Suprimeix** per confirmar la supressió.
 

@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016580"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304730"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
-Dynamics 365 Customer Insights inclou API per crear les vostres pròpies aplicacions basades en dades del Customer Insights.
+El Dynamics 365 Customer Insights proporciona API per crear les vostres pròpies aplicacions basades en les vostres dades al Customer Insights.
 
 > [!IMPORTANT]
 > Els detalls d'aquestes API es mostren a la [referència de les API del Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Inclouen informació addicional sobre operacions, paràmetres i respostes.
 
-Feu servir aquest article com a guia per accedir a les API del Customer Insights, crear un registre d'aplicacions de l'Azure i començar a utilitzar les biblioteques de client disponibles.
+En aquest article es descriu com accedir a les API del Customer Insights, crear un registre de l'aplicació de l'Azure i començar a utilitzar les biblioteques de client disponibles.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Començar a provar les API del Customer Insights
 
@@ -32,6 +32,7 @@ Feu servir aquest article com a guia per accedir a les API del Customer Insights
 1. Per habilitar les API a l'entorn del Customer Insights, aneu a **Administració** > **Permisos**. Per poder fer-ho, necessitareu permisos d'administració.
 
 1. Aneu a la pestanya **API** i seleccioneu el botó **Habilita**.    
+ 
    En habilitar les API, es crea una clau de subscripció principal i secundària per a la instància que s'utilitza a les sol·licituds d'API. Per tornar a generar les claus, seleccioneu **Torna a generar la principal** o **Torna a generar la secundària** a **Administració** > **Permisos** > **API**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar API del Customer Insights":::
@@ -40,7 +41,7 @@ Feu servir aquest article com a guia per accedir a les API del Customer Insights
 
 1. Trieu una operació d'API i seleccioneu **Proveu-ho**.
 
-1. A la subfinestra lateral, definiu el valor del menú desplegable **Autorització** com a **implícit**. S'afegeix a un testimoni del portador a la capçalera `Authorization`. La clau de subscripció s'emplenarà automàticament.
+1. A la subfinestra lateral, definiu el valor al menú desplegable **Autorització** com a **implícita**. La capçalera `Authorization` s'afegeix amb un testimoni de portador. La clau de subscripció s'emplenarà automàticament.
   
 1. També podeu afegir tots els paràmetres de consulta necessaris.
 
@@ -48,27 +49,27 @@ Feu servir aquest article com a guia per accedir a les API del Customer Insights
 
 La resposta HTTP apareixerà aviat tot seguit.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Gif animat que mostra com seleccionar les API de prova.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Com es proven les API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Crear un nou registre d'aplicació al portal de l'Azure
 
-Amb aquests passos, podreu començar a utilitzar les API del Customer Insights en una aplicació de l'Azure mitjançant els permisos delegats. Assegureu-vos que heu completat primer la [secció Com començar](#get-started-trying-the-customer-insights-apis).
+Aquests passos us ajuden a començar a utilitzar les API del Customer Insights en una aplicació de l'Azure utilitzant permisos delegats. Assegureu-vos de completar primer la [secció Introducció](#get-started-trying-the-customer-insights-apis).
 
 1. Inicieu la sessió al [portal de l'Azure](https://portal.azure.com) amb el compte que pugui accedir a les dades del Customer Insights.
 
 1. A l'esquerra, seleccioneu **Registres de l'aplicació**.
 
 1. Seleccioneu **Nou registre**, proporcioneu un nom per a l'aplicació i trieu el tipus de compte.
+ 
    També podeu afegir una adreça URL de redirecció. http://localhost és suficient per desenvolupar una aplicació a l'ordinador local.
 
 1. Al nou registre de l'aplicació, aneu a **Permisos de l'API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animat per definir el permís de l'API al registre de l'aplicació.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Com es defineixen els permisos de l'API al registre de l'aplicació.":::
 
 1. Seleccioneu **Afegeix un permís** i seleccioneu **Customer Insights** a la subfinestra lateral.
 
-1. Com a **Tipus de permís**, seleccioneu **Permisos delegats** i seleccioneu el permís **user_impersonation**.
+1. Per a **Tipus de permís**, seleccioneu **Permisos delegats** i seleccioneu el permís **user_impersonation**.
 
 1. Seleccioneu **Afegeix permisos**. Si heu d'accedir a l'API sense que cap usuari iniciï la sessió, reviseu la secció [Permisos d'aplicació entre servidors](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Amb aquests passos, podreu començar a utilitzar les API del Customer Insights e
 
 Podeu utilitzar l'identificador de l'aplicació o del client per a aquest registre de l'aplicació amb la biblioteca d'autenticació de Microsoft (MSAL) per obtenir un testimoni del portador que pugueu enviar amb la vostra sol·licitud a l'API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animat per atorgar el consentiment d'administrador.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Com atorgar el consentiment d'administració.":::
 
 Per obtenir més informació sobre MSAL, vegeu la [informació general sobre la biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Per obtenir més informació sobre el registre d'aplicacions a l'Azure, vegeu [l'experiència de registre de noves aplicacions del portal de l'Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
+Per obtenir més informació sobre el registre de l'aplicació a l'Azure, vegeu [Registrar una aplicació](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Per obtenir informació sobre com utilitzar les API de les biblioteques de client, vegeu [Biblioteques de client del Customer Insights](#customer-insights-client-libraries).
+Per obtenir informació sobre l'ús de les API de les nostres biblioteques de client, vegeu [Biblioteques de client del Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Permisos d'aplicació entre servidors
 
@@ -94,7 +95,7 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 1. Seleccioneu la pestanya **API que utilitza la meva organització** i trieu **IA del Dynamics 365 per al Customer Insights** de la llista. 
 
-1. Com a **Tipus de permís**, seleccioneu **Permisos de l'aplicació** i seleccioneu el permís **CustomerInsights.Api.All**.
+1. Per a **Tipus de permís**, seleccioneu **Permisos d'aplicació** i seleccioneu el permís **CustomerInsights.Api.All**.
 
 1. Seleccioneu **Afegeix permisos**.
 
@@ -102,9 +103,10 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 1. Seleccioneu **Atorga el consentiment de l'administrador per a...** per completar el registre de l'aplicació.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animat per atorgar el consentiment d'administrador.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Com atorgar el consentiment d'administració.":::
 
-1. Per acabar, cal afegir el nom del registre de l'aplicació com a usuari al Customer Insights.    
+1. Per acabar, cal afegir el nom del registre de l'aplicació com a usuari al Customer Insights.  
+   
    Obriu Customer Insights, aneu a **Administració** > **Permisos** i seleccioneu **Afegeix un usuari**.
 
 1. Cerqueu el nom del registre de l'aplicació, seleccioneu-lo als resultats de la cerca i seleccioneu **Desa**.
@@ -124,6 +126,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 1. Cerqueu **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Seleccioneu **Instal·la** per afegir el paquet al projecte.
+ 
    També podeu executar aquesta ordre a la **consola de l'administrador del paquet del NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Afegir el paquet del NuGet al projecte del Visual Studio":::
@@ -132,7 +135,8 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 
 1. Utilitzeu la [biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) per obtenir un `AccessToken` mitjançant el [registre de l'aplicació de l'Azure](#create-a-new-app-registration-in-the-azure-portal) existent.
 
-1. Un cop us hagueu autenticat correctament i hagueu obtingut un testimoni, creeu un nou `HttpClient` o feu-ne servir un d'existent amb l'**"Autorització" de DefaultRequestHeaders** addicional definida com a **<access token> portador** i la **Ocp-Apim-Subscription-Key** definida com a [**clau de subscripció** des de l'entorn del Customer Insights](#get-started-trying-the-customer-insights-apis).    
+1. Un cop us hagueu autenticat correctament i hagueu obtingut un testimoni, creeu un nou `HttpClient` o feu-ne servir un d'existent amb l'**"Autorització" de DefaultRequestHeaders** addicional definida com a **<access token> portador** i la **Ocp-Apim-Subscription-Key** definida com a [**clau de subscripció** des de l'entorn del Customer Insights](#get-started-trying-the-customer-insights-apis).   
+ 
    Restabliu la capçalera d'**Autorització** si escau. Per exemple, quan el testimoni ha caducat.
 
 1. Passeu el `HttpClient` a la creació del client de `CustomerInsights`.
@@ -142,6 +146,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 1. Feu trucades amb el client als "mètodes d'extensió", per exemple `GetAllInstancesAsync`. Si es preferia l'accés al subjacent `Microsoft.Rest.HttpOperationResponse`, utilitzeu els "mètodes de missatges http", per exemple `GetAllInstancesWithHttpMessagesAsync`.
 
 1. La resposta serà probablement de tipus `object` perquè el mètode pot retornar diversos tipus (per exemple, `IList<InstanceInfo>` i `ApiErrorResult`). Per comprovar el tipus de retorn, podeu convertir de manera segura els objectes en els tipus de resposta especificats a la [pàgina de detalls de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) corresponent a aquesta operació.    
+   
    Si necessiteu més informació sobre la sol·licitud, utilitzeu els **mètodes de missatges http** per accedir a l'objecte de la resposta sense processar.
 
 ### <a name="nodejs-package"></a>Paquet NodeJS

@@ -1,6 +1,6 @@
 ---
 title: Exportar les dades del Customer Insights a l'Adobe Experience Platform
-description: Més informació sobre com utilitzar els segments d'informació sobre el públic a l'Adobe Experience Platform.
+description: Apreneu a utilitzar els segments de conclusions del públic a l'Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760089"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305512"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilitzar els segments del Customer Insights a l'Adobe Experience Platform (versió preliminar)
 
-Com a usuari de la informació sobre el públic del Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de la informació sobre el públic a l'Adobe Experience Platform i aplicacions com ara l'Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
+Com a usuari de les conclusions del públic al Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de la informació sobre el públic a l'Adobe Experience Platform i aplicacions com ara l'Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de procés dels passos que es descriuen en aquest article.":::
 
@@ -55,19 +55,19 @@ Un cop identificat el públic destinatari, podem configurar l'exportació des de
 
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** i trieu **Emmagatzematge blob de l'Azure** o seleccioneu **Configura** a la peça **Emmagatzematge blob de l'Azure**:
+1. Seleccioneu **Afegeix una connexió** i trieu **Emmagatzematge de blob de l'Azure** o seleccioneu **Configura** a la peça **Emmagatzematge de blob de l'Azure** per configurar la connexió.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Peça de configuració de l'Emmagatzematge blob de l'Azure."::: per configurar la connexió.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Peça de configuració de l'Emmagatzematge blob de l'Azure."::: 
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduïu el **Nom de compte**, la **Clau del compte** i el **Contenidor** del compte d'Emmagatzematge blob al qual voleu exportar el segment.  
+1. Introduïu el **Nom de compte**, la **Clau del compte** i el **Contenidor** del compte d'emmagatzematge blob al qual voleu exportar el segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captura de pantalla de la configuració del compte d'emmagatzematge."::: 
    
-    - Per obtenir més informació sobre com trobar el compte i la clau del compte de l'Emmagatzematge blob, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
+    - Per obtenir més informació sobre com trobar el compte i la clau del compte de l'emmagatzematge blob, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
     - Per obtenir més informació sobre com crear un contenidor , vegeu [Crear un contenidor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Seleccioneu **Desa** per completar la connexió. 
@@ -80,7 +80,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió a la secció Emmagatzematge blob de l'Azure. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió a la secció Emmagatzematge blob de l'Azure. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
 1. Trieu el segment que voleu exportar. En aquest exemple, és **ChurnProneCustomers**.
 
@@ -123,7 +123,8 @@ Després de definir la connexió d'origen, [configureu un flux de dades](https:/
 
 Per enviar el correu electrònic d'aquesta campanya, utilitzarem l'Adobe Campaign Standard. Després d'importar les dades a l'Adobe Experience Platform, hem de [crear un públic](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) a l'Adobe Campaign Standard utilitzant les dades de l'Adobe Experience Platform.
 
-Apreneu a [utilitzar el constructor de segments](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) a l'Adobe Campaign Standard per definir un públic a partir de les dades de l'Adobe Experience Platform.
+
+Apreneu a [utilitzar el constructor de segments](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) a l'Adobe Campaign Standard per definir un públic a partir de les dades de l'Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Crear i enviar el correu electrònic mitjançant l'Adobe Campaign Standard
 

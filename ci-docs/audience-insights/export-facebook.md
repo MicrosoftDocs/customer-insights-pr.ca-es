@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976030"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305098"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar una llista de segments a Facebook Ads Manager (versió preliminar)
 
@@ -22,8 +22,8 @@ Exporteu els segments de perfils unificats de client al Facebook Ads Manager per
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
-- Heu de tenir un [**compte publicitari de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclogui un [**compte empresarial de Facebook**](https://business.facebook.com/).
-- Heu de ser un administrador del [**compte publicitari de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Heu de tenir un [**compte de Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclogui un [**compte empresarial de Facebook**](https://business.facebook.com/)
+- Heu de ser un administrador al [**compte de Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
@@ -42,19 +42,19 @@ Per poder crear una exportació, abans un administrador ha de configurar la conn
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
-1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà **Administradors**. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autentiqueu-vos a Facebook Ads Manager: 
 
-   1. Seleccioneu **Continua amb Facebook** per iniciar la sessió al vostre compte publicitari de Facebook.
+   1. Seleccioneu **Continua amb Facebook** per iniciar la sessió al compte de Facebook Ads.
 
    1. Activeu el permís **ads_management** un cop us hagueu autenticat amb el Facebook.
 
    1. Seleccioneu el **compte publicitari de Facebook** que voleu fer servir.
 
-   1. Seleccioneu un **Públic personalitzat existent** de la llista desplegable o creeu un **Nou públic personalitzat**. Per obtenir més informació, vegeu [**Públics al Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Seleccioneu un **Públic personalitzat existent** de la llista desplegable o creeu un **Públic personalitzat nou**. Per obtenir més informació, vegeu [**Públics al Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Només podeu crear o actualitzar públics personalitzats a Facebook del tipus *llista de clients* amb aquesta exportació. En alguns casos, a la llista desplegable es veuen públics personalitzats de diversos tipus. Seleccionar un tipus diferent de *llista de clients* tindrà com a resultat una exportació fallada. 
+      > Només podeu crear o actualitzar públics personalitzats a Facebook del tipus *llista de clients* amb aquesta exportació. En alguns casos, a la llista desplegable veureu públics personalitzats de diferents tipus. Seleccionar un tipus diferent de *llista de clients* tindrà com a resultat una exportació fallada. 
 
 1. Reviseu la **Privadesa de les dades i el compliment** i, a continuació, seleccioneu **Accepto**.
 
@@ -68,14 +68,15 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**. 
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció **Facebook Ads Manager**. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció **Facebook Ads Manager**. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
 1. Al camp **Trieu el vostre identificador de clau**, seleccioneu **Correu electrònic**, **Nom i adreça** o **Telèfon** per enviar al Facebook Ads Manager. 
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**.
 
 1. Assigneu els atributs corresponents de l'entitat del client unificat per a l'identificador de clau seleccionat.
-   > [CONSELL] Les millors oportunitats perquè hi hagi una coincidència es produeixen si seleccioneu **Correu electrònic** com a identificador de clau. L'addició d'identificadors addicionals podria millorar la coincidència.
+   > [!TIP]
+   > Les millors oportunitats perquè hi hagi una coincidència es produeixen si seleccioneu **Correu electrònic** com a identificador de clau. L'addició d'identificadors addicionals podria millorar la coincidència.
 
 1. Seleccioneu **Afegeix un atribut** per assignar més atributs per enviar-los a Facebook Ads Manager. Els atributs de Facebook Ads Manager s'assignen als noms de text descriptiu següents: **FN** = **Nom**, **LN** = **Cognom**, **FI** = **Primera inicial**, **PHONE** = **Telèfon**, **GEN** = **Gènere**, **DOB** = **Data de naixement**, **ST** = **Estat**, **CT** = **Ciutat**, **ZIP** = **Codi postal**, **COUNTRY** = **País/regió**
 
@@ -85,7 +86,9 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). 
+
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

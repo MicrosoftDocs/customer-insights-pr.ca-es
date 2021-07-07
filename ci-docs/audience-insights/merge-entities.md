@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085564"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305612"
 ---
 # <a name="merge-entities"></a>Combinar entitats
 
@@ -34,7 +34,7 @@ Per visualitzar els atributs que s'inclouen en un dels atributs combinats autom�
 
 Podeu canviar com el sistema processa els atributs combinats per generar el perfil de client unificat. Seleccioneu **Mostra'n més** i trieu què voleu canviar.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcions del menú desplegable Mostra'n més per gestionar atributs combinats.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcions del menú desplegable Mostra més per administrar els atributs combinats.":::
 
 Per obtenir més informació, vegeu les seccions següents.
 

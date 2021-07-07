@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253028"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305466"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
 A la pàgina **Exportacions** es mostren totes les exportacions configurades. Les exportacions comparteixen dades específiques amb diverses aplicacions. Poden incloure perfils de clients o entitats, esquemes i detalls d'assignació. Cada exportació requereix una [connexió, configurada per un administrador, per administrar l'autenticació i l'accés](connections.md).
 
-Aneu a **Dades** > **Exportacions** per visualitzar la pàgina d'exportacions. Totes les funcions d'usuari tenen accés per visualitzar les exportacions configurades. Utilitzeu el camp de cerca a la barra d'ordres per cercar les exportacions pel seu nom, nom de connexió o tipus de connexió.
+Aneu a **Dades** > **Exportacions** per visualitzar la pàgina d'exportacions. Totes les funcions d'usuari poden veure les exportacions configurades. Utilitzeu el camp de cerca de la barra d'ordres per cercar exportacions pel seu nom, nom de connexió o tipus de connexió.
 
 ## <a name="set-up-a-new-export"></a>Configurar una exportació nova
 
@@ -65,7 +65,7 @@ Un cop creades les destinacions d'exportació, es mostren a **Dades** > **Export
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Els usuaris sense permisos d'edició seleccionen **Visualització** en lloc d'**Edició** per veure els detalls de l'exportació.
+1. Els usuaris sense editar permisos seleccionen **Visualitza** en comptes d'**Edita** per veure els detalls de l'exportació.
 
 1. A la subfinestra lateral es mostra la configuració d'una exportació. Sense permisos d'edició, els valors no es poden canviar. Seleccioneu **Tanca** per tornar a la pàgina d'exportacions.
 
@@ -73,7 +73,7 @@ Un cop creades les destinacions d'exportació, es mostren a **Dades** > **Export
 
 Cada exportació que configureu té una planificació d'actualització. Durant una actualització, el sistema cerca dades noves o actualitzades per incloure-les en una exportació. Per defecte, les exportacions s'executen com a part de cada [actualització del sistema planificada](system.md#schedule-tab). Podeu personalitzar la planificació d'actualització o desactivar-la per executar les exportacions manualment.
 
-Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions a les [dependències](system.md#refresh-policies) en curs quan s'ha d'iniciar una exportació planificada, el sistema finalitzarà primer les dependències i després executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
+Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions en curs en [dependències](system.md#refresh-policies) quan s'hagi d'iniciar una exportació planificada, el sistema finalitzarà primer les actualitzacions i executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
 
 ### <a name="schedule-exports"></a>Exportacions planificades
 

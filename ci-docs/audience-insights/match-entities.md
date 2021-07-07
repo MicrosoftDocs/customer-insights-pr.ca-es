@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085610"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306016"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -209,7 +209,7 @@ Proveu diferents llindars de precisió a les condicions per trobar el valor òpt
 
 Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Captura de pantalla del menú desplegable amb les opcions de la regla de coincidència.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de pantalla del menú desplegable amb les opcions de les regles de coincidència.":::
 
 - **Canvieu l'ordre de les regles** si heu definit diverses regles. Per reordenar les regles de coincidència, seleccioneu les opcions **Desplaça amunt** i **Desplaça avall** o arrossegueu-les i deixeu-les anar.
 

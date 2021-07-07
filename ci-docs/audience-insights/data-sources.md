@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085518"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304684"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -30,15 +30,15 @@ Podeu afegir una font de dades de tres maneres principals:
 
 - [Mitjançant desenes de connectors del Power Query](connect-power-query.md)
 - [Des d'una carpeta del Common Data Model](connect-common-data-model.md)
-- [Des del vostre propi llac del Common Data Service](connect-common-data-service-lake.md)
+- [Des del vostre propi llac del Microsoft Dataverse](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
 
-La ingesta de dades de fonts de dades locals a l'Audience Insights està admesa als fluxos de dades del Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) en configurar l'entorn.
+La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) en configurar l'entorn.
 
-Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat a [utilitzar les passarel·les de dades locals](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat a [utilitzar les passarel·les de dades locals](/data-integration/gateway/service-gateway-app.md).
 
-Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
+Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 
 ## <a name="review-ingested-data"></a>Revisar les dades ingerides
 
@@ -56,7 +56,7 @@ Veureu el nom de cada font de dades ingerida, el seu estat i l'última vegada qu
 
 Seleccioneu el valor de la columna **Estat** de qualsevol font de dades per revisar més detalls. A la subfinestra **Detalls del progrés**, expandiu **Fonts de dades**. Seleccioneu **Visualitza els detalls** per a més informació sobre l'estat d'actualització, incloent-hi els detalls dels errors i les actualitzacions dels processos derivats.
 
-La càrrega de dades pot tardar una estona. Després d'una actualització correcta, les dades d'ingerides es poden revisar des de la pàgina **Entitats**. Per obtenir més informació, vegeu [Entitats](entities.md).
+La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades d'ingerides es poden revisar des de la pàgina **Entitats**. Per obtenir més informació, vegeu [Entitats](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Actualitzar una font de dades
 
@@ -68,7 +68,7 @@ Per actualitzar una font de dades segons demanda, seguiu aquests passos:
 
 1. A les conclusions del públic, aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu els punts suspensius verticals que hi ha al costat de la font de dades que voleu actualitzar i seleccioneu **Actualitza** a la llista desplegable.
+2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu actualitzar i seleccioneu **Actualitza** a la llista desplegable.
 
 3. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades s'actualitza tan l'esquema d'entitat com les dades de totes les entitats especificades a la font de dades.
 
@@ -78,7 +78,7 @@ Per actualitzar una font de dades segons demanda, seguiu aquests passos:
 
 1. A les conclusions del públic, aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu els punts suspensius vertical que hi ha al costat de la font de dades que voleu suprimir i seleccioneu **Suprimeix** al menú desplegable.
+2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu suprimir i seleccioneu **Suprimeix** al menú desplegable.
 
 3. Confirmeu la supressió.
 

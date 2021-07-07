@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595414"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306108"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia d'exemples de predicció de rotació de transaccions (versió preliminar)
 
-En aquesta guia, se us guiarà per un exemple íntegre de predicció de rotació de transaccions al Customer Insights mitjançant les dades següents. Les dades utilitzades en aquesta guia no són dades de clients reals i formen part del conjunt de dades de Contoso que es troba a l'entorn *Demo* de la vostra subscripció al Customer Insights.
+En aquesta guia, se us guiarà per un exemple íntegre de predicció de rotació de transaccions al Customer Insights mitjançant les dades següents. Totes les dades utilitzades en aquesta guia no són dades reals dels clients i formen part del conjunt de dades de Contoso que es troba a l'entorn *Demostració* de la vostra subscripció al Customer Insights.
 
 ## <a name="scenario"></a>Escenari
 
-Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat, productes que ven a través del seu lloc web de Contoso Coffee. El seu objectiu és saber quins clients que acostumen a comprar els seus productes de manera periòdica deixaran de ser clients actius en els propers 60 dies. Sabent quins dels seus clients és **probable que rotin**, pot ajudar l'empresa a estalviar estratègies i mesures de màrqueting centrades en mantenir-los.
+Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat que venen mitjançant el seu lloc web de Contoso Coffee. El seu objectiu és saber quins clients que acostumen a comprar els seus productes de manera periòdica deixaran de ser clients actius en els propers 60 dies. Sabent quins dels seus clients és **probable que rotin**, pot ajudar l'empresa a estalviar estratègies i mesures de màrqueting centrades en mantenir-los.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -109,9 +109,9 @@ Un cop feta la ingestió de les dades, començarem el procés d'**assignació, c
 
 1. Aneu a la pestanya **Coincidència** i seleccioneu **Definició d'ordre**.
 
-1. A la llista desplegable **Principal**, trieu **eCommerceContacts : eCommerce** com a font principal i incloeu-hi tots els registres.
+1. A la llista desplegable **Principal**, trieu **eCommerceContacts: eCommerce** com a font principal i incloeu tots els registres.
 
-1. A la llista desplegable **Entitat 2**, trieu **loyCustomers : LoyaltyScheme** i incloeu-hi tots els registres.
+1. A la llista desplegable **Entitat 2**, trieu **loyCustomers: LoyaltyScheme** i incloeu tots els registres.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifiqueu la coincidència de comerç electrònic i de fidelització.":::
 
@@ -119,16 +119,16 @@ Un cop feta la ingestió de les dades, començarem el procés d'**assignació, c
 
 1. Afegiu la primera condició amb el FullName.
 
-   * Per a eCommerceContacts, seleccioneu **FullName** al menú desplegable.
-   * Per a loyCustomers, seleccioneu **FullName** al menú desplegable.
+   * Per a eCommerceContacts seleccioneu **FullName** al desplegable.
+   * Per a loyCustomers seleccioneu **FullName** al desplegable.
    * Seleccioneu la llista desplegable **Normalitza** i trieu el **Tipus (Telèfon, Nom, Adreça...)**.
    * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
 
 1. Introduïu el nom **Nom complet, correu electrònic** per a la regla nova.
 
    * Per afegir una segona condició per a l'adreça electrònica seleccioneu **Afegeix una condició**.
-   * Per a l'entitat eCommerceContacts, trieu **Correu electrònic** al menú desplegable.
-   * Per a l'entitat loyCustomers, trieu **Correu electrònic** al menú desplegable. 
+   * Per a l'entitat eCommerceContacts, trieu **EMail** al desplegable.
+   * Per a l'entitat loyCustomers, trieu **EMail** al desplegable. 
    * Deixeu Normalitza en blanc. 
    * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
 

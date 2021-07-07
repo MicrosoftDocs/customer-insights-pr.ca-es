@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896315"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304592"
 ---
 # <a name="customer-profiles"></a>Perfils de client
 
@@ -57,13 +57,13 @@ Seleccioneu qualsevol de les peces del client per obrir la **pàgina Detalls del
 
 Els detalls del client inclouen:
 
--   **Peça del perfil del client:** En aquesta peça es mostren els diferents valors de l'entitat unificada del perfil del client. Entre aquests detalls s'inclouen l'adreça de correu electrònic, el nom, la ciutat, etc. 
+-   **Peça del perfil del client**: en aquesta peça es mostren els diferents valors de l'entitat unificada del perfil del client. Entre aquests detalls s'inclouen l'adreça de correu electrònic, el nom, la ciutat, etc. 
 
--   **Possibles interessos, possibles marques:** Mostra si heu configurat un enriquiment principal. Representa els possibles interessos i afinitats per a les marques que podria tenir un client amb un perfil semblant a aquest client. Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
+-   **Possibles interessos, possibles marques**: mostra si heu configurat un enriquiment principal. Representa els possibles interessos i afinitats per a les marques que podria tenir un client amb un perfil semblant a aquest client. Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
 
--   **Mesures:** Mostra si heu configurat una o més mesures d'un tipus concret: mesures d'atribut de client. Inclouen KPI calculats sobre els vostres clients per a cada client individual. Per obtenir més informació, vegeu [Definir i administrar mesures](measures.md).
+-   **Mesures**: mostra si heu configurat una o més mesures d'un tipus concret: mesures d'atribut de client. Inclouen KPI calculats sobre els vostres clients per a cada client individual. Per obtenir més informació, vegeu [Definir i administrar mesures](measures.md).
 
--   **Cronologia d'activitat:** Mostra si heu configurat activitats. La visualització de cronologia conté activitats d'aquest client ordenades cronològicament, començant per l'activitat més recent. Per obtenir més informació, vegeu [Activitats del client](activities.md).
+-   **Cronologia d'activitat**: mostra si heu configurat activitats. La visualització de cronologia conté activitats d'aquest client ordenades cronològicament, començant per l'activitat més recent. Per obtenir més informació, vegeu [Activitats del client](activities.md).
 
 Seleccioneu **Torna als clients** per tornar a la pàgina de cerca de clients.
 

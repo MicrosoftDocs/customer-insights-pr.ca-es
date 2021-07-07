@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954475"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305236"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -22,7 +22,8 @@ Utilitzeu dades de diverses fonts, com ara Microsoft i altres associats, per enr
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Pàgina del centre d'enriquiment":::
 
-A les conclusions del públic, aneu a **Dades** > **Enriquiment** per treballar amb les opcions d'enriquiment.    
+A les conclusions del públic, aneu a **Dades** > **Enriquiment** per treballar amb les opcions d'enriquiment.  
+
 Heu de tenir permisos de col·laborador o administrador per crear o editar els enriquiments. Per obtenir més informació, vegeu [Permisos](permissions.md).
 
 A la pestanya **Detecta**, trobareu els següents enriquiments:
@@ -39,7 +40,7 @@ A la pestanya **Els meus enriquiments** podeu veure els enriquiments que heu con
 
 ## <a name="manage-existing-enrichments"></a>Administrar els enriquiments existents
 
-Aneu a **Els meus enriquiments** per veure tots els enriquiments que heu configurat. Cada enriquiment es representa com una fila que inclou informació addicional sobre l'enriquiment.
+Aneu a la pestanya **Els meus enriquiments** per veure tots els enriquiments configurats. Cada enriquiment es representa com una fila que inclou informació addicional sobre l'enriquiment.
 
 Seleccioneu un enriquiment per veure les opcions disponibles. També podeu seleccionar els punts suspensius (...) en un element de llista per veure les opcions.
 
@@ -59,6 +60,6 @@ Les millores de tercers es configuren mitjançant [connexions](connections.md), 
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquiments del mateix tipus
 
-L'entitat que s'ha d'enriquir s'especifica durant la configuració de l'enriquiment, la qual cosa us permet enriquir només un subconjunt dels vostres perfils. Per exemple, enriquiu només les dades d'un segment concret. Podeu configurar diversos enriquiments del mateix tipus i reutilitzar la mateixa connexió. Alguns enriquiments tindran límits pel que fa al nombre d'enriquiments del mateix tipus que es poden crear. Els límits i l'ús actual es poden veure a la pàgina **Enriquiment**.
+L'entitat que s'ha d'enriquir s'especifica durant la configuració de l'enriquiment, la qual cosa us permet enriquir només un subconjunt dels vostres perfils. Per exemple, podeu enriquir només les dades d'un segment concret. Podeu configurar diversos enriquiments del mateix tipus i reutilitzar la mateixa connexió. Alguns enriquiments tindran límits pel que fa al nombre d'enriquiments del mateix tipus que es poden crear. Els límits i l'ús actual es poden veure a la pàgina **Enriquiment**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

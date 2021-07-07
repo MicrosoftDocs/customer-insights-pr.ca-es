@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896085"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304960"
 ---
 # <a name="connections-preview-overview"></a>Informació general sobre les connexions (versió preliminar)
 
@@ -42,7 +42,7 @@ Per afegir connexions, heu de tenir [permisos d'administrador](permissions.md). 
 
 1. Aneu a la pestanya **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** per crear una connexió nova. Trieu al menú desplegable quin tipus de connexió voleu crear.
+1. Seleccioneu **Afegeix una connexió** per crear una connexió nova. Trieu al menú desplegable el tipus de connexió que voleu crear.
 
 1. A la subfinestra **Configuració de la connexió**, proporcioneu els detalls necessaris. 
    1. El **Nom de visualització** i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
@@ -74,7 +74,9 @@ Quan configureu o editeu una connexió d'exportació, trieu quins usuaris poden 
 
 ## <a name="remove-a-connection"></a>Suprimir una connexió
 
-Si la connexió que suprimiu s'utilitza amb enriquiments o exportacions, primer les heu de desvincular o suprimir. El quadre de diàleg de supressió us guiarà als enriquiments o exportacions rellevants. Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiveu afegint-hi una altra connexió a la pàgina [Enriquiments](enrichment-hub.md) o [Exportacions](export-destinations.md).
+Si la connexió que suprimiu s'utilitza amb enriquiments o exportacions, primer les heu de desvincular o suprimir. El quadre de diàleg de supressió us guiarà als enriquiments o exportacions rellevants. 
+
+Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiveu afegint-hi una altra connexió a la pàgina [Enriquiments](enrichment-hub.md) o [Exportacions](export-destinations.md).
 
 1. Aneu a **Administració** > **Connexions (versió preliminar)**.
 

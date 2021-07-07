@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111375"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306245"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -38,7 +38,7 @@ Aneu a la pàgina **Segments** per visualitzar tots els segments desats i admini
 
 Cada segment està representat per una fila que inclou informació addicional sobre el segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb opcions de llista desplegable i opcions disponibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb la llista desplegable d'opcions i opcions disponibles.":::
 
 L'acció següent està disponible quan seleccioneu un segment:
 
@@ -68,7 +68,7 @@ Podeu exportar un segment des de la pàgina de segments o des de la [pàgina d'e
 
 1. Seleccioneu **Mostra'n més [...]** al segment que voleu exportar.
 
-1. Seleccioneu **Administra les exportacions** de les accions de la llista desplegable.
+1. Seleccioneu **Administra les exportacions** a la llista desplegable d'accions.
 
 1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per exportacions que contenen el segment actual o que no les contenen.
 

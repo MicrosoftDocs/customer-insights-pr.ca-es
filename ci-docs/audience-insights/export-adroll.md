@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124353"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304791"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segments a AdRoll (versió preliminar)
 
@@ -28,11 +28,11 @@ Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a un total de 100.000 perfils per exportació a AdRoll.
+- Podeu exportar com a màxim 250.000 perfils alhora a AdRoll.
 - No podeu exportar segments amb menys de 100 perfils a AdRoll. 
 - L'exportació a AdRoll es limita als segments.
-- L'exportació de fins a 250.000 perfils a AdRoll pot trigar fins a 10 minuts com a completar-se. 
-- El nombre de perfils que podeu exportar a AdRoll és limitat i dependrà del contracte que tingueu amb AdRoll.
+- L'exportació de fins a 250.000 perfils a AdRoll pot tardar fins a 10 minuts a completar-se. 
+- El nombre de perfils que podeu exportar a AdRoll depèn del contracte que tingueu amb AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configuració de la connexió a AdRoll
 
@@ -62,9 +62,9 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció AdRoll. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció AdRoll. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
-1. Introduïu l'**Identificador de l'anunciant d'AdRoll** Per obtenir més informació, vegeu [Perfils d'anunciant d'AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Introduïu l'**ID d'anunciant d'AdRoll**. Per obtenir més informació, vegeu [Perfils d'anunciant d'AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a AdRoll.
 
@@ -74,7 +74,9 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). 
+
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades

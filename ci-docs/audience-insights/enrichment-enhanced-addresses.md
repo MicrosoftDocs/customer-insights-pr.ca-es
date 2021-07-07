@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965566"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305420"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquiment de perfils de clients amb adreces millorades
 
@@ -22,7 +22,7 @@ Les adreces de les dades poden ser desestructurades, incompletes o incorrectes. 
 
 ## <a name="how-we-enhance-addresses"></a>Com potenciem les adreces
 
-El nostre model passa per un procés de dos passos per millorar una adreça. En primer lloc, analitza l'adreça per identificar-ne els components i els posa en un format estructurat. A continuació, utilitzem la intel·ligència artificial per corregir, completar i estandarditzar els valors de l'adreça.
+El nostre model passa per un procés de dos passos per millorar una adreça. En primer lloc, analitza l'adreça per identificar-ne els components i els posa en un format estructurat. A continuació, utilitzem l'IA per corregir, completar i estandarditzar els valors de l'adreça.
 
 ### <a name="example"></a>Exemple
 
@@ -50,7 +50,7 @@ Les adreces millorades només funcionen amb els valors que ja existeixen a les d
 2. Verifica si algun dels valors, com ara els codis postals o els noms de carrers, són vàlids.
 3. Canvia els valors que no reconeix.
 
-El model utilitza tècniques basades en l'aprenentatge automàtic per millorar les adreces. Tot i que apliquem un llindar d'alta confiança per quan el model canvia un valor d'entrada, com en qualsevol model basat en aprenentatge automàtic, no es garanteix la precisió del 100%.
+El model utilitza tècniques basades en l'aprenentatge automàtic per millorar les adreces. Tot i que apliquem un llindar d'alta confiança per a quan el model canvia un valor d'entrada, com qualsevol model basat en l'aprenentatge automàtic, no es garanteix la precisió del 100 per cent.
 
 ## <a name="supported-countries-or-regions"></a>Països o regions admesos
 
@@ -76,7 +76,7 @@ Les adreces han de contenir un valor de país o de regió. No processem adreces 
 1. Seleccioneu com es formaten les adreces al conjunt de dades. Trieu **Adreça d'un sol atribut** si les adreces de les dades utilitzen un únic camp. Trieu **Adreça de diversos atributs** si les adreces de les dades utilitzen més d'un camp de dades.
 
    > [!NOTE]
-   > El país o la regió és obligatori tant a l'adreça d'un sol atribut com a l'adreça de diversos atributs. Les adreces que no continguin valors de país o regió vàlids o admesos no s'enriquiran
+   > El país o regió és obligatori a les adreces d'un sol atribut i de diversos atributs. Les adreces que no continguin valors de país o regió vàlids o admesos no s'enriquiran.
 
 1.  Assigneu els camps d'adreça de l'entitat de client unificada.
 
@@ -98,6 +98,6 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="next-steps"></a>Passos següents
 
-Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md), [mesures](measures.md) i fins i tot [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

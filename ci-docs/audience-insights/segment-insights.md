@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595322"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306062"
 ---
 # <a name="segment-insights-preview"></a>Informació dels segments (versió preliminar)
 
@@ -50,7 +50,7 @@ Seleccioneu una informació per veure els resultats de l'anàlisi:
 
 - Nombre de membres que solapen els segments seleccionats per a l'anàlisi.
 - Nombre de membres que s'inclouen en un dels segments però no a la resta de segments.
-- Si heu seleccionat camps en configurar l'anàlisi de superposició, els trobareu a les pestanyes corresponents. Podeu utilitzar el filtre desplegable per seleccionar qualsevol nivell d'atribut d'interès i la taula a la part inferior mostrarà les dades corresponents.
+- Si heu seleccionat camps en configurar l'anàlisi de superposició, els trobareu a les pestanyes corresponents. Podeu utilitzar el desplegable de filtre per seleccionar qualsevol nivell d'interès d'atribut i la taula de la part inferior mostrarà les dades corresponents.
 
 ## <a name="segment-differentiators"></a>Diferenciadors del segment
 

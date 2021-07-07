@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895901"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305190"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquiment de perfils d'empresa amb el Leadspace (versió preliminar)
 
@@ -57,13 +57,13 @@ Per configurar el Leadspace, cal complir els requisits previs següents:
 
 Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix una connexió** en configurar un enriquiment *o* aneu a **Administració** > **Connexions** i seleccioneu **Configuració** a la peça Leadspace.
 
-1. Seleccioneu **Comença** 
+1. Seleccioneu **Introducció**. 
 
 1. Introduïu un nom per a la connexió al quadre **Nom de visualització**.
 
 1. Proporcioneu un testimoni vàlid del Leadspace.
 
-1. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**
+1. Reviseu i proporcioneu el vostre consentiment per a la **Privadesa de les dades i conformitat** seleccionant **Accepta**.
 
 1. Seleccioneu **Verifica** per validar la configuració.
 
@@ -81,7 +81,7 @@ Per obtenir més informació, vegeu [API del Leadspace](https://support.leadspac
 
 ## <a name="next-steps"></a>Passos següents
 
-Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md), [mesures](measures.md) i fins i tot [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

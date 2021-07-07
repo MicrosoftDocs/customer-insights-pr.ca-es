@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760269"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305374"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilitzar els segments del Customer Insights a l'Adobe Campaign Standard (versió preliminar)
 
-Com a usuari de la informació sobre el públic del Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de la informació sobre el públic a l'Adobe Experience Platform i aplicacions com ara l'Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
+Com a usuari de les conclusions del públic al Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de la informació sobre el públic a l'Adobe Experience Platform i aplicacions com ara l'Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de procés dels passos que es descriuen en aquest article.":::
 
@@ -28,7 +28,7 @@ Com a usuari de la informació sobre el públic del Dynamics 365 Customer Insigh
 -   Llicència de l'Adobe Campaign Standard
 -   Compte de l'Emmagatzematge blob de l'Azure
 
-## <a name="campaign-overview"></a>Informació general de la campanya
+## <a name="campaign-overview"></a>Informació general de Campaign
 
 Per comprendre millor com podeu utilitzar els segments de la informació sobre el públic a l'Adobe Experience Platform, plantegem una campanya d'exemple fictícia.
 
@@ -54,7 +54,7 @@ Un cop identificat el públic destinatari, podem configurar l'exportació des de
 
 1. A les conclusions del públic, aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** i trieu **Adobe Campaign** per configurar la connexió o seleccioneu **Configuració** a la peça d'**Adobe Campaign**
+1. Seleccioneu **Afegeix una connexió** i trieu **Adobe Campaign** per configurar la connexió o seleccioneu **Configuració** a la peça d'**Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Peça de configuració per a l'Adobe Campaign Standard.":::
 
@@ -80,7 +80,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Adobe Campaign. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Adobe Campaign. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
 1. Trieu el segment que voleu exportar. En aquest exemple, és **ChurnProneCustomers**.
 
@@ -118,7 +118,7 @@ Quan s'exporta un segment de la informació del públic, conté les columnes que
 
 Per utilitzar el segment a l'Adobe Campaign Standard, hem d'ampliar l'esquema de perfil de l'Adobe Campaign Standard per incloure-hi dos camps addicionals. Apreneu a [ampliar el recurs de perfil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) amb camps nous a l'Adobe Campaign Standard.
 
-Al nostre exemple, aquests camps són *Nom del segment i Data del segment (opcional).*
+Al nostre exemple, aquests camps són *Nom del segment i Data del segment (opcional)*.
 
 Utilitzarem aquests camps per identificar els perfils de l'Adobe Campaign Standard als quals volem adreçar aquesta campanya.
 
@@ -128,7 +128,7 @@ Si no hi ha cap altre registre a l'Adobe Campaign Standard a banda del que impor
 
 Ara que tot està al seu lloc, hem d'importar les dades del públic preparades des de la informació del públic a l'Adobe Campaign Standard per crear perfils. Apreneu a [importar perfils a l'Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) utilitzant un flux de treball.
 
-El flux de treball d'importació de la imatge següent s'ha configurat per executar-se cada 8 hores i cerca segments d'informació del públic exportats (fitxer .csv a l'Azure Blob Storage). El flux de treball extreu el contingut del fitxer .csv en un ordre de columnes especificat. Aquest flux de treball s'ha creat per realitzar la gestió bàsica d'errors i assegurar que cada registre té una adreça electrònica abans de transmetre les dades a l'Adobe Campaign Standard. El flux de treball també extreu el nom del segment del nom de fitxer abans d'actualitzar les dades de perfil d'ACS.
+El flux de treball d'importació de la imatge següent s'ha configurat per executar-se cada vuit hores i cercar segments de conclusions del públic exportats (fitxer .csv a l'emmagatzematge blob de l'Azure). El flux de treball extreu el contingut del fitxer .csv en un ordre de columnes especificat. Aquest flux de treball s'ha creat per realitzar la gestió bàsica d'errors i assegurar que cada registre té una adreça electrònica abans de transmetre les dades a l'Adobe Campaign Standard. El flux de treball també extreu el nom del segment del nom del fitxer abans d'actualitzar-lo a les dades de perfil d'Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Captura de pantalla d'un flux de treball d'importació a la interfície d'usuari de l'Adobe Campaign Standard.":::
 

@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049238"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304777"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
-Les mesures us ajuden a comprendre millor els comportaments dels clients i el rendiment empresarial. Miren els valors rellevants dels [perfils unificats](data-unification.md). Per exemple, una empresa vol veure la *despesa total per client* per comprendre l'historial de compra del client individual o mesurar les *vendes totals de l'empresa* per comprendre els ingressos a nivell agregat de tot el negoci.  
+Les mesures us ajuden a comprendre millor els comportaments dels clients i el rendiment empresarial. Miren els valors rellevants dels [perfils unificats](data-unification.md). Per exemple, una empresa vol veure la *despesa total per client* per comprendre l'historial de compra d'un client individual o mesurar les *vendes totals de l'empresa* per comprendre els ingressos del nivell agregat de tot el negoci.  
 
 Les mesures es creen mitjançant el creador de mesures, una plataforma de consulta de dades amb diversos operadors i opcions d'assignació simples. Permet filtrar les dades, agrupar els resultats, detectar [rutes de relació d'entitats](relationships.md) i obtenir una visualització prèvia de la sortida.
 
@@ -69,12 +69,14 @@ Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. P
    1. Seleccioneu **Aplica** per afegir els filtres a la mesura.
 
 1. Per afegir dimensions, seleccioneu **Dimensió** a l'àrea de configuració. Les dimensions es mostraran com a columnes a l'entitat de sortida de mesura.
+ 
    1. Seleccioneu **Edita les dimensions** per afegir atributs de dades pels quals voleu agrupar els valors de mesura. Per exemple, ciutat o gènere. Per defecte, la dimensió *CustomerID* se selecciona per crear *mesures del nivell del client*. Si voleu crear *mesures de nivell de negoci*, podeu suprimir la dimensió per defecte.
    1. Seleccioneu **Fet** per afegir les dimensions a la mesura.
 
 1. Si hi ha valors a les dades que heu de substituir per un enter, per exemple, substituir *nul* per *0*, seleccioneu **Regles**. Configureu la regla i assegureu-vos que trieu només els nombres enters com a substituts.
 
 1. Si hi ha diversos rutes entre l'entitat de dades assignada i l'entitat *Client*, heu de triar un dels [camins de relació d'entitat](relationships.md) identificats. Els resultats de la mesura poden variar en funció del camí seleccionat. 
+   
    1. Seleccioneu **Preferències de les dades** i trieu el camí de l'entitat que s'utilitzarà per identificar la mesura. Si només hi ha un camí a l'entitat *Client*, aquest control no es mostrarà.
    1. Seleccioneu **Fet** per aplicar la vostra selecció. 
 
@@ -113,7 +115,7 @@ Al procediment següent es descriuen els passos per crear una mesura nova mitjan
 
 1. Seleccioneu **Crea** i seleccioneu **Tria una plantilla**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla del menú desplegable quan es crea una mesura nova amb la plantilla destacada.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla del menú desplegable quan es crea una mesura nova amb el la plantilla destacada.":::
 
 1. Cerqueu la plantilla que s'ajusti a les vostres necessitats i seleccioneu **Tria la plantilla**.
 
@@ -123,7 +125,7 @@ Al procediment següent es descriuen els passos per crear una mesura nova mitjan
 
 1. Seleccioneu **Fet**.
 
-1. A la secció **Definiu el període de temps**, definiu el període de temps de les dades que voleu utilitzar. Trieu si voleu que la mesura nova cobreixi tot el conjunt de dades seleccionant **Tot el temps**. O si voleu que la mesura se centri en un **Període de temps específic**.
+1. A la secció **Definiu el període de temps**, definiu el període de temps de les dades que voleu utilitzar. Trieu si voleu que la mesura nova cobreixi tot el conjunt de dades seleccionant **Tot el temps** o si voleu que la mesura se centri en un **Període de temps específic**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que mostra la secció de període de temps en configurar una mesura a partir d'una plantilla.":::
 
@@ -142,12 +144,12 @@ Al procediment següent es descriuen els passos per crear una mesura nova mitjan
 
 Podeu consultar la llista de mesures a la pàgina **Mesures**.
 
-Trobareu informació sobre el tipus de mesura, l'autor, la data de creació, l'estat i l'estat. Quan seleccioneu una mesura de la llista, podeu obtenir una visualització prèvia de la sortida i baixar un fitxer .CSV.
+Trobareu informació sobre el tipus de mesura, l'autor, la data de creació, l'estat i l'estat. Quan seleccioneu una mesura de la llista, podeu obtenir una visualització prèvia de la sortida i baixar un fitxer CSV.
 
 Per actualitzar totes les mesures al mateix temps, seleccioneu **Actualitza-ho tot** sense seleccionar una mesura concreta.
 
 > [!div class="mx-imgBorder"]
-> ![Accions per administrar mesures individuals](media/measure-actions.png "Accions per administrar mesures individuals")
+> ![Accions per administrar mesures individuals.](media/measure-actions.png "Accions per administrar mesures individuals.")
 
 Seleccioneu una mesura de la llista per a les opcions següents:
 
@@ -159,11 +161,11 @@ Seleccioneu una mesura de la llista per a les opcions següents:
 - **Activeu** o **desactiveu-la**. Les mesures inactives no s'actualitzaran durant una [actualització planificada](system.md#schedule-tab).
 
 > [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, última data de processament i tots els errors i advertiments associats amb la tasca.
 
 ## <a name="next-step"></a>Pas següent
 
-Podeu utilitzar mesures existents per crear un [segment de client](segments.md).
+Podeu utilitzar les mesures existents per crear un [segment de client](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

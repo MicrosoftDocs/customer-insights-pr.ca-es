@@ -9,24 +9,23 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976306"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305328"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segments a Google Ads (versió preliminar)
 
-Exporteu els segments de perfils de client unificats a la llista de públics de Google Ads i utilitzeu-los per anunciar-vos a la Cerca de Google, Gmail, YouTube i la Xarxa de Display de Google. 
+Exporteu segments de perfils de client unificats a una llista de públics de Google Ads i utilitzeu-los per anunciar-vos a la cerca de Google, Gmail, YouTube i a la Xarxa de Display de Google. 
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
 -   Teniu un [compte de Google Ads](https://ads.google.com/) i les credencials d'administrador corresponents.
--   Teniu un [testimoni aprovat de Google Ads per a desenvolupadors](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Compliu els requisits de la [Política de segments de clients](https://support.google.com/adspolicy/answer/6299717)
--   Compliu els requisits de les [mides de la llista de remàrqueting](https://support.google.com/google-ads/answer/7558048) 
-
+-   Teniu un [testimoni aprovat de Google Ads per a desenvolupadors](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Compliu els requisits de la [Política de segments de clients](https://support.google.com/adspolicy/answer/6299717).
+-   Compliu els requisits de les [mides de la llista de remàrqueting](https://support.google.com/google-ads/answer/7558048).
 -   Hi ha públics a Google Ads amb els identificadors corresponents. Per obtenir més informació, vegeu [Públics de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Teniu [segments configurats](segments.md).
 -   Els perfils de client unificats dels segments exportats contenen camps que representen una adreça electrònica, el nom i el cognom.
@@ -68,7 +67,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Google Ads. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Google Ads. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
 1. Introduïu el vostre **[Identificador de públic de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i seleccioneu **Connecta't** per inicialitzar la connexió a Google Ads.
 
@@ -78,7 +77,9 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). 
+
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

@@ -1,5 +1,5 @@
 ---
-title: Enriquiment de amb l'enriquiment de tercers de HERE Technologies
+title: Enriquiment amb l'enriquiment de tercers de HERE Technologies
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896039"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305282"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
 
@@ -26,7 +26,7 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
 
 - Heu de tenir una subscripció activa amb HERE Technologies. Per obtenir una subscripció, podeu [registrar-vos aquí](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) o [posar-vos en contacte directament amb HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Més informació sobre l'enriquiment d'ubicació de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Hi ha una [connexió](connections.md) de HERE disponible *o* teniu permisos d'[administrador](permissions.md#administrator) i la clau API de HERE Technologies.
+- Hi ha una [connexió](connections.md) a HERE disponible *o* teniu permisos d'[administrador](permissions.md#administrator) i la clau API de HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
@@ -37,7 +37,7 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
    > [!div class="mx-imgBorder"]
    > ![Peça de HERE Technologies](media/HERE-tile.png "Peça de HERE Technologies")
 
-1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió**. Trieu **HERE Tecnologies** a la llista desplegable. 
+1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió**. A la llista desplegable, trieu **HERE Technologies**. 
 
 1. Seleccioneu **Connecta't a HERE Technologies** per confirmar la selecció.
 
@@ -66,13 +66,13 @@ Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix un
 
 1. Proporcioneu una clau d'API vàlida de HERE Technologies.
 
-1. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**
+1. Reviseu i proporcioneu el vostre consentiment per a la **Privadesa de les dades i conformitat** seleccionant **Accepta**.
 
 1. Seleccioneu **Verifica** per validar la configuració.
 
 1. Després de completar la verificació, seleccioneu **Desa**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Pàgina de configuració de la connexió de HERE Technologies](media/enrichment-HERE-connection.png "Pàgina de configuració de la connexió de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
@@ -85,7 +85,7 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="next-steps"></a>Passos següents
 
-Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md), [mesures](measures.md) i fins i tot [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
