@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596533"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554882"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connectar-se a una carpeta del Common Data Model amb un compte de l'Azure Data Lake
 
@@ -45,7 +45,7 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 1. Per a l'autenticació, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Introduïu la informació del **Contenidor** i seleccioneu **Següent**.
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg per introduir nous detalls de connexió a l'Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Quadre de diàleg per introduir nous detalls de connexió a l'Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Necessiteu una de les funcions següents al contenidor o al compte d'emmagatzematge abans descrit per poder connectar-vos i crear una font de dades:
    >  - Lector de dades de Blob de l'emmagatzematge
@@ -58,11 +58,11 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 1. Obtindreu una llista d'entitats disponibles al fitxer model.json o manifest.json seleccionat. Podeu revisar i seleccionar a la llista d'entitats disponibles i seleccioneu **Desa**. Totes les entitats seleccionades s'ingeriran des de la nova font de dades.
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg que mostra una llista d'entitats des d'un fitxer model.json](media/review-entities.png)
+   > ![Quadre de diàleg que mostra una llista d'entitats des d'un fitxer model.json.](media/review-entities.png)
 
 8. Indiqueu per a quines entitats de dades voleu habilitar la perfilació de dades i seleccioneu **Desa**. La generació de perfils de dades habilita les anàlisis i altres capacitats. Podeu seleccionar tota l'entitat, amb la qual cosa se seleccionen tots els atributs de l'entitat, o bé seleccionar determinats atributs de la vostra elecció. Per defecte, no s'habilita cap entitat per a la perfilació de dades.
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg on es mostra una perfilació de dades](media/dataprofiling-entities.png)
+   > ![Quadre de diàleg on es mostra una perfilació de dades.](media/dataprofiling-entities.png)
 
 9. Després de desar les seleccions, s'obre la pàgina **Fonts de dades**. Ara hauríeu de veure la connexió de la carpeta del Common Data Model com a font de dades.
 
@@ -81,12 +81,12 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 4. Opcionalment, actualitzeu la **Clau d'accés** i seleccioneu **Següent**.
 
-   ![Diàleg per editar i actualitzar una clau d'accés per a una font de dades existent](media/edit-access-key.png)
+   ![Diàleg per editar i actualitzar una clau d'accés per a una font de dades existent.](media/edit-access-key.png)
 
 5. Com a alternativa, podeu actualitzar-la des d'una connexió de clau de compte a una connexió basada en recursos o en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Quan actualitzeu la connexió, no podreu canviar la informació del **Contenidor**.
    > [!div class="mx-imgBorder"]
 
-   > ![Quadre de diàleg per introduir els detalls de connexió a l'Azure Data Lake a un compte d'emmagatzematge existent](media/enter-existing-storage-details.png)
+   > ![Quadre de diàleg per introduir els detalls de connexió a l'Azure Data Lake a un compte d'emmagatzematge existent.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Necessiteu una de les funcions següents al contenidor o al compte d'emmagatzematge abans descrit per poder connectar-vos i crear una font de dades:

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305612"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650122"
 ---
 # <a name="merge-entities"></a>Combinar entitats
 
@@ -109,7 +109,7 @@ Algunes entitats contenen més detalls que altres. Si una entitat inclou les dad
 Ja sigui si combineu els atributs manualment o deixeu que el sistema els combini, sempre podeu executar la combinació. A la pàgina **Combinació**, seleccioneu **Executa** per iniciar el procés.
 
 > [!div class="mx-imgBorder"]
-> ![Desa i executa la combinació de dades](media/configure-data-merge-save-run.png "Desa i executa la combinació de dades")
+> ![Desa i executa la combinació de dades.](media/configure-data-merge-save-run.png "Desa i executa la combinació de dades")
 
 Trieu **Executa només la combinació** si només voleu veure la sortida reflectida a l'entitat de client unificada. Els processos descendents s'actualitzaran segons [ho defineixi la planificació d'actualització](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Trieu **Executa la combinació i els processos descendents** per actualitzar el 
 Per fer més canvis i tornar a executar el pas, podeu cancel·lar una combinació en curs. Seleccioneu **S'està actualitzant...** i seleccioneu **Cancel·la la feina** a la subfinestra lateral que es mostra.
 
 > [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+> Després d'executar el procés de combinació, seleccioneu l'estat del procés per obrir la subfinestra **Detalls de la tasca**. Ofereix una visió general sobre el temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca. Seleccioneu **Mostra els detalls** per veure quines entitats han participat en el procés de coincidència, si la resolució de conflictes s'ha resolt correctament i si les actualitzacions s'han publicat correctament.  
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Camí de desglossament per accedir als detalls del procés des de l'enllaç d'estat de la tasca.":::
 
 ## <a name="next-step"></a>Pas següent
 

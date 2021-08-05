@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595889"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692515"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Completar les dades parcials amb prediccions
 
@@ -31,11 +31,11 @@ Les prediccions us permeten crear fàcilment valors previstos que poden millorar
 
 Per tal que la vostra organització pugui utilitzar la característica de prediccions, heu de complir els requisits previs següents:
 
-1. La vostra organització té una instància [configurada al Common Data Service](/ai-builder/build-model#prerequisites) i es troba a la mateixa organització que el Customer Insights.
+1. La vostra organització té una instància [configurada al Microsoft Dataverse](/ai-builder/build-model#prerequisites) i és a la mateixa organització que el Customer Insights.
 
-2. El vostre entorn s'adjunta a la vostra instància del Common Data Service.
+2. L'entorn de conclusions sobre el públic s'adjunta a la vostra instància del Dataverse.
 
-Si [creeu un nou entorn](manage-environments.md), configureu-lo al quadre de diàleg **Crea un entorn** i seleccioneu **Avançat**. Si ja heu creat un entorn, aneu a la seva configuració i seleccioneu **Avançat**. De qualsevol manera, a la secció **Utilitza les prediccions**, introduïu l'adreça URL de la instància del Common Data Service a la qual voleu adjuntar l'entorn.
+Si [creeu un nou entorn](get-started-paid.md), configureu-lo al quadre de diàleg **Crea un entorn** i seleccioneu **Avançat**. Si ja heu creat un entorn, aneu a la seva configuració i seleccioneu **Avançat**. De qualsevol manera, a la secció **Utilitza les prediccions**, introduïu l'adreça URL de la instància del Dataverse a la qual voleu adjuntar l'entorn.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Crear una predicció a l'entitat Client
 
@@ -47,17 +47,17 @@ Si [creeu un nou entorn](manage-environments.md), configureu-lo al quadre de di�
 
 4. Cerqueu el nom de l'atribut per al qual voleu predir els valors i, a continuació, seleccioneu la icona **Informació general** a la columna **Resum**.
    > [!div class="mx-imgBorder"]
-   > ![Icona d'informació general](media/intelligence-overviewicon.png "Icona d'informació general")
+   > ![Icona d'informació general.](media/intelligence-overviewicon.png "Icona d'informació general")
 
 5. Si hi ha un índex elevat de valors que falten per a l'atribut, seleccioneu **Prediu els valors que falten** per continuar amb la vostra predicció.
    > [!div class="mx-imgBorder"]
-   > ![Estat d'informació general amb el botó Prediu els valors que falten](media/intelligence-overviewpredictmissingvalues.png "Estat d'informació general amb el botó Prediu els valors que falten")
+   > ![Estat d'informació general amb el botó Prediu els valors que falten.](media/intelligence-overviewpredictmissingvalues.png "Estat d'informació general amb el botó Prediu els valors que falten")
 
 6. Proporcioneu un **Nom de visualització** i un **Nom d'entitat de sortida** per als resultats de la predicció.
 
 7. Una llista d'opcions prèviament emplenada es mostrarà, on podeu assignar els valors a una categoria que s'hagi predit. En aquest cas, les úniques opcions de categoria seran 0 o 1, ja que s'assignen a la naturalesa certa/falsa o binària de la predicció. Assigneu els valors de camp que voleu que es classifiquin com a "0" a la predicció final a "0" a la columna Categoria i els elements que voleu que es classifiquin com a "1" a la predicció final a "1".
    > [!div class="mx-imgBorder"]
-   > ![Exemple que mostra els valors de camp assignats a categories](media/intelligence-categorymapping.png "Exemple que mostra els valors de camp assignats a categories")
+   > ![Exemple que mostra els valors de camp assignats a categories.](media/intelligence-categorymapping.png "Exemple que mostra els valors de camp assignats a categories")
 
 8. Seleccioneu **Fet** i es processarà la predicció. El processament tardarà una estona, en funció de la mida i la complexitat de les dades. Els resultats estaran disponibles en una entitat nova basada en el **Nom de l'entitat de sortida** de la predicció que heu creat.
 
@@ -77,7 +77,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 5. Si el segment que heu creat té dades incompletes al camp d'origen, podeu triar predir els valors que falten.
    > [!div class="mx-imgBorder"]
-   > ![Botó de predicció](media/segments-predictoption.png "Botó de predicció")
+   > ![Botó de predicció.](media/segments-predictoption.png "Botó de predicció")
 
 6. Proporcioneu un **Nom de visualització** i un **Nom d'entitat de sortida** per als resultats de la predicció.
 
@@ -93,7 +93,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 4. Veureu un nombre de punts de dades a la visualització de la vostra predicció.
    > [!div class="mx-imgBorder"]
-   > ![Pàgina Prediccions](media/intelligence-predictionsviewpage.png "Pàgina Prediccions")
+   > ![Pàgina Prediccions.](media/intelligence-predictionsviewpage.png "Pàgina Prediccions")
 
    - **Valors previstos** mostra l'assignació que heu creat durant la fase d'assignació de valor de camp a categoria. Hi ha valors del conjunt de dades que s'han assignat a una categoria concreta.
    -Els **influenciadors principals** són els factors del conjunt de dades que tenen més probabilitats d'influir en la confiança de la predicció del valor del camp assignat a una categoria concreta.
@@ -139,7 +139,7 @@ A la següent execució de la vostra predicció s'utilitzarà el model actualitz
 
 ## <a name="troubleshooting"></a>Detecció d'errors
 
-Si no podeu completar el procés d'adjunció del Common Data Service a causa d'un error, podeu provar d'acabar el procés manualment. Hi ha dos problemes coneguts que es poden produir en el procés d'adjunció:
+Si no podeu completar el procés d'adjunció del Dataverse a causa d'un error, podeu provar d'acabar el procés manualment. Hi ha dos problemes coneguts que es poden produir en el procés d'adjunció:
 
 - La solució de complement de targeta de client no està instal·lada.
     1. Completeu les instruccions per [instal·lar i configurar la solució](customer-card-add-in.md).

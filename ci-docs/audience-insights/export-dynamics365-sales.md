@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 9f11ab189117da5bcc1aee843b73962ec6615e82
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976214"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692286"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Ús de segments al Dynamics 365 Sales (versió preliminar)
 
@@ -24,7 +24,7 @@ Utilitzeu les dades dels vostres clients per crear llistes de màrqueting, fer u
 
 ## <a name="prerequisite-for-connection"></a>Requisit previ per a la connexió
 
-1. Els registres de contacte han d'estar presents al Dynamics 365 Sales per poder exportar un segment del Customer Insights al Sales. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Sales mitjançant el Common Data Services](connect-power-query.md).
+1. Els registres de contacte han d'estar presents al Dynamics 365 Sales per poder exportar un segment del Customer Insights al Sales. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Sales mitjançant el Microsoft Dataverse](connect-power-query.md).
 
    > [!NOTE]
    > L'exportació de segments de les conclusions del públic al Sales no crearà registres de contacte nous a les instàncies del Sales. Els registres de contacte del Sales s'han d'ingerir a les conclusions del públic i s'han d'utilitzar com a font de dades. També s'han d'incloure a l'entitat Client unificada per assignar els identificadors de client als identificadors de contacte abans d'exportar els segments.

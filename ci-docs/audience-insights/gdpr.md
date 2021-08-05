@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597499"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554293"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD
 
@@ -40,7 +40,7 @@ Un administrador del Customer Insights pot seguir aquests passos per suprimir le
    2. Consulteu l'estat de la font de dades a **Estat**. Una marca de selecció significa que l'actualització s'ha realitzat correctament. Un triangle d'advertiment significa que alguna cosa ha anat malament. Si es mostra un triangle d'advertiment, poseu-vos en contacte amb D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Gestionar les sol·licituds de l'RGPD de supressió de dades de clients](media/gdpr-data-sources.png "Gestionar les sol·licituds de l'RGPD de supressió de dades de clients")
+> ![Gestionar les sol·licituds de l'RGPD de supressió de dades de clients.](media/gdpr-data-sources.png "Gestionar les sol·licituds de l'RGPD de supressió de dades de clients")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Administrar les sol·licituds de supressió de dades d'usuaris
 
@@ -52,7 +52,7 @@ Un administrador del Customer Insights pot seguir aquests passos per suprimir le
 4. Seleccioneu **Suprimeix**.
 
 > [!div class="mx-imgBorder"]
-> ![Gestionar sol·licituds de l'RGPD de supressió de dades d'usuaris](media/gdpr-permissions.png "Gestionar sol·licituds de l'RGPD de supressió de dades d'usuaris")
+> ![Gestionar sol·licituds de l'RGPD de supressió de dades d'usuaris.](media/gdpr-permissions.png "Gestionar sol·licituds de l'RGPD de supressió de dades d'usuaris")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Respondre a sol·licituds de l'RGPD d'exportació de subjecte de dades
 

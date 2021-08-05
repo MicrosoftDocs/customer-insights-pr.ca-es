@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095590"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559393"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predicció de rotació de transaccions (versió preliminar)
 
@@ -47,7 +47,7 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
         - **Incidència:** el nom de la incidència que voleu utilitzar. Per exemple, un camp anomenat "UserAction" d'una botiga de queviures podria ser un cupó que el client ha utilitzat.
         - **Detalls:** informació detallada de la incidència. Per exemple, un camp anomenat "CouponValue" d'una botiga de queviures podria ser el valor monetari del cupó.
 - Característiques de les dades suggerides:
-    - Dades històriques suficients: dades de transacció per almenys el doble de la finestra de temps seleccionada. Preferentment, de dos a tres anys de dades de subscripció. 
+    - Dades històriques suficients: dades de transacció per almenys el doble de la finestra de temps seleccionada. Preferentment, de dos a tres anys de l'historial de transaccions. 
     - Múltiples compres per client: idealment almenys dues transaccions per client.
     - Nombre de clients: almenys 10 perfils de client, preferentment més de 1.000 clients únics. El model fallarà amb menys de 10 clients i dades històriques insuficients.
     - Integritat de les dades: menys del 20% de valors inexistents al camp de dades de l'entitat proporcionada.

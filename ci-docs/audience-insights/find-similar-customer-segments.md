@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596763"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554193"
 ---
 # <a name="similar-customers-preview"></a>Clients semblants (versió preliminar)
 
@@ -50,7 +50,7 @@ Aquesta característica us permet trobar clients semblants a la base de clients 
 Després de processar el segment similar, trobareu el nou segment a la pàgina **Segments**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment de clients similars](media/expanded-segment.png "Segment de clients similars")
+> ![Segment de clients similars.](media/expanded-segment.png "Segment de clients similars")
 
 Seleccioneu **Visualitza** a la barra d'accions per obrir el detall del segment. Aquesta visualització conté informació sobre la distribució dels resultats en les [puntuacions de similitud](#about-similarity-scores). També trobareu els valors de puntuació de similitud a la **Visualització prèvia dels membres del segment**.
 

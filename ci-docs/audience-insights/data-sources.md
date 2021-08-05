@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304684"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692423"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -30,13 +31,13 @@ Podeu afegir una font de dades de tres maneres principals:
 
 - [Mitjançant desenes de connectors del Power Query](connect-power-query.md)
 - [Des d'una carpeta del Common Data Model](connect-common-data-model.md)
-- [Des del vostre propi llac del Microsoft Dataverse](connect-common-data-service-lake.md)
+- [Des del vostre propi llac del Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
 
-La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) en configurar l'entorn.
+La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Els fluxos de dades es poden habilitar al Customer Insights [proporcionant l'adreça URL de l'entorn del Microsoft Dataverse](get-started-paid.md) en configurar l'entorn.
 
-Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat a [utilitzar les passarel·les de dades locals](/data-integration/gateway/service-gateway-app.md).
+Les fonts de dades que es creen després d'associar un entorn del Dataverse amb el Customer Insights utilitzaran [fluxos de dades del Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que hi havia abans a l'entorn del Dataverse que estava associat a [utilitzar les passarel·les de dades locals](/data-integration/gateway/service-gateway-app).
 
 Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 
@@ -47,7 +48,7 @@ Veureu el nom de cada font de dades ingerida, el seu estat i l'última vegada qu
 > [!div class="mx-imgBorder"]
 > ![Font de dades afegida](media/configure-data-datasource-added.png "Font de dades afegida")
 
-|Estat  |Descripció  |
+|Estat d'execució  |Descripció  |
 |---------|---------|
 |Correcte   |La font de dades s'ha ingerit correctament si es mostra una hora a la columna **Actualitzat**.
 |No s'ha iniciat   |La font de dades no té encara dades ingerides o encara es troben en mode d'esborrany.         |

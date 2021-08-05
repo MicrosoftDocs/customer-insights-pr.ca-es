@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305282"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555295"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
 
@@ -35,7 +35,7 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
 1. Seleccioneu **Enriqueix les meves dades** a la peça HERE Technologies i seleccioneu **Comença**.
 
    > [!div class="mx-imgBorder"]
-   > ![Peça de HERE Technologies](media/HERE-tile.png "Peça de HERE Technologies")
+   > ![Peça de HERE Technologies.](media/HERE-tile.png "Peça de HERE Technologies")
 
 1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió**. A la llista desplegable, trieu **HERE Technologies**. 
 
@@ -50,7 +50,7 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
 1. Definiu els camps dels perfils unificats que s'hauran d'utilitzar per cercar dades d'ubicació coincidents des de HERE Technologies. Els camps **Carrer 1** i **Codi postal** són obligatoris per a l'adreça principal o secundària seleccionada. Per augmentar la precisió de la coincidència, es poden afegir més camps.
 
    > [!div class="mx-imgBorder"]
-   > ![Pàgina de configuració d'enriquiment de HERE Technologies](media/enrichment-HERE-configuration.png "Pàgina de configuració d'enriquiment de HERE Technologies")
+   > ![Pàgina de configuració d'enriquiment de HERE Technologies.](media/enrichment-HERE-configuration.png "Pàgina de configuració d'enriquiment de HERE Technologies")
 
 1. Seleccioneu **Següent** per completar l'assignació de camp.
 
@@ -73,7 +73,7 @@ Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix un
 1. Després de completar la verificació, seleccioneu **Desa**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pàgina de configuració de la connexió de HERE Technologies](media/enrichment-HERE-connection.png "Pàgina de configuració de la connexió de HERE Technologies")
+   > ![Pàgina de configuració de la connexió de HERE Technologies.](media/enrichment-HERE-connection.png "Pàgina de configuració de la connexió de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 

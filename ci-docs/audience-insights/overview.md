@@ -9,12 +9,13 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.custom: intro-internal
+ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
+ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896453"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "6539103"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 

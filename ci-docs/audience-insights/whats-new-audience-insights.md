@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263239"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692377"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Actualitzacions de juny del 2021
+
+Les actualitzacions de juny del 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="data-ingestion"></a>Ingestió de dades
+
+- **Actualitzacions del progrés millorat d'unificació de dades** Ara podeu veure actualitzacions d'estat dinàmic més granulars i millorades als passos del [procés d'unificació de dades](data-unification.md). Aquesta característica us permet fer un seguiment del progrés detallat per entendre el flux del procés i actuar si algun pas necessita atenció.
+
+### <a name="extensibility"></a>Extensibilitat
+
+- **Exportar segments i altres dades a Salesforce Marketing Cloud** Hem ampliat les nostres destinacions d'exportació per incloure [Salesforce Marketing Cloud](export-salesforce.md). Ara podeu exportar segments i altres tipus de dades a Salesforce Marketing Cloud a través d'una exportació SFTP de marca. La importació de dades es pot automatitzar completament al Salesforce i es pot utilitzar per crear campanyes de màrqueting més efectives.  
+ 
+- **Exportar segments a ActiveCampaign** Hem ampliat les nostres destinacions d'exportació per incloure [Active Campaign](export-active-campaign.md). Ara podeu exportar segments per generar campanyes, dirigir contingut de màrqueting per correu electrònic i treballar amb grups específics de l'ActiveCampaign.
+ 
+- **Exportar segments a Sendinblue** Hem ampliat les nostres destinacions d'exportació per incloure [Sendinblue](export-sendinblue.md). Ara podeu exportar segments per generar campanyes, dirigir contingut de màrqueting per correu electrònic i treballar amb grups específics amb el Sendinblue.
+ 
+### <a name="ux-updates"></a>Actualitzacions de l'experiència d'usuari 
+
+- **Pàgina Clients nova i millorada i pàgina de detalls del perfil** Hem redissenyat la pàgina Clients i les pàgines de detalls del perfil per millorar l'experiència de l'usuari i un millor rendiment. Aquests canvis us permeten veure, ordenar, cercar i filtrar clients. Els filtres ara es representen a l'adreça URL per compartir els resultats de la cerca amb altres usuaris sense problemes. Els resultats de la cerca també es poden desar com a segments.    
+  La pàgina de detalls dels perfils de client ara agrupa les dades en diverses subseccions, com ara dades demogràfiques, identificadors i altres atributs de perfil per millorar la llegibilitat. Altres seccions de la pàgina de detalls del perfil ara són més interactives. Per exemple, la secció d'activitats ara permet filtrar i ordenar.
+
 
 ## <a name="may-2021-updates"></a>Actualitzacions de maig de 2021
 
@@ -170,7 +192,7 @@ Les actualitzacions de febrer del 2021 inclouen diverses característiques, actu
 
 - **La còpia d'entorn admet més tipus de fonts de dades**
 
-  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de l'entorn de còpia per als casos en què s'utilitzen fonts de dades basades en un llac de dades del Common Data Service o una carpeta del Model de dades comú.
+  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de còpia de l'entorn per als casos en què s'utilitzen fonts de dades basades en un llac de dades administrat pel Microsoft Dataverse o una carpeta del model de dades comú.
 
 ## <a name="january-2021-updates"></a>Actualitzacions de gener de 2021
 

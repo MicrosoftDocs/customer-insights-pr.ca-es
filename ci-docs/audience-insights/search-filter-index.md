@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597131"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554009"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfils de client: índex de cerca i filtratge
 
 El resultat d'unificar les dades dels clients és una entitat de perfil de client que proporciona una visualització unificada a la base de clients total. Per [cercar ràpidament informació sobre un client o un grup de clients determinat](customer-profiles.md), podeu configurar les funcionalitats **Cerca** i **Filtre** a la pàgina **Clients**. Seguiu llegint per obtenir més informació sobre com els administradors poden editar els atributs a la pàgina **Índex de cerca i filtre**, que estan disponibles per als usuaris per cercar i filtrar.
 
 > [!div class="mx-imgBorder"]
-> ![Filtre de cerca](media/search-filter.png "Filtre de cerca")
+> ![Filtre de cerca.](media/search-filter.png "Filtre de cerca")
 
 ## <a name="add-fields-and-specify-attributes"></a>Afegir camps i especificar atributs
 

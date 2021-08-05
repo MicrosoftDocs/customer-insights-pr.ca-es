@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259179"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650030"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb dades del Customer Insights al Microsoft Dataverse
 
@@ -24,11 +24,11 @@ El Customer Insights ofereix l'opció de fer que les entitats de sortida estigui
 
 **Organitzacions amb entorns del Dataverse existents**
 
-Les organitzacions que ja utilitzen el Dataverse poden [utilitzar un dels entorns del Dataverse existents](manage-environments.md#create-an-environment-in-an-existing-organization) quan un administrador configura conclusions del públic. En proporcionar l'adreça URL a l'entorn del Dataverse, s'adjunta a l'entorn nou de les conclusions del públic. Per garantir el millor rendiment possible, els entorns del Customer Insights i del Dataverse s'han d'allotjar a la mateixa regió.
+Les organitzacions que ja utilitzen el Dataverse poden [utilitzar un dels entorns del Dataverse existents](get-started-paid.md) quan un administrador configura conclusions del públic. En proporcionar l'adreça URL a l'entorn del Dataverse, s'adjunta a l'entorn nou de les conclusions del públic. Per garantir el millor rendiment possible, els entorns del Customer Insights i del Dataverse s'han d'allotjar a la mateixa regió.
 
 Per adjuntar un entorn del Dataverse, expandiu la **Configuració avançada** en crear l'entorn de les conclusions del públic. Proporcioneu l'**adreça URL de l'entorn del Microsoft Dataverse** i activeu la casella de selecció per **Habilitar l'ús compartit de dades**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Organització nova**
 

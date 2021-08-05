@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 195bee789dc043057b47c12c8d93e6d53edb59cd
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976788"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692469"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Ús de segments al Dynamics 365 Marketing (versió preliminar)
 
@@ -24,7 +24,7 @@ Utilitzeu [segments](segments.md) per generar campanyes i posar-vos en contacte 
 
 ## <a name="prerequisite-for-a-connection"></a>Requisit previ per a la connexió
 
-- Els registres de contacte han d'estar presents al Dynamics 365 Marketing per poder exportar un segment del Customer Insights al Marketing. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Marketing mitjançant el Common Data Services](connect-power-query.md).
+- Els registres de contacte han d'estar presents al Dynamics 365 Marketing per poder exportar un segment del Customer Insights al Marketing. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Marketing mitjançant el Microsoft Dataverse](connect-power-query.md).
 
   > [!NOTE]
   > L'exportació de segments de les conclusions del públic al Marketing no crearà registres de contacte nous a les instàncies del Marketing. Els registres de contacte del Marketing s'han d'ingerir a les conclusions del públic i s'han d'utilitzar com a font de dades. També s'han d'incloure a l'entitat Client unificada per assignar els identificadors de client als identificadors de contacte abans d'exportar els segments.

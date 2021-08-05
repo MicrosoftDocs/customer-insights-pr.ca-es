@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598143"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554101"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connector del Microsoft Power Apps (visualització prèvia)
 
@@ -56,12 +56,12 @@ Per exemple, afegiu perfils de client a un [control de galeria](/powerapps/maker
 1. Afegiu un control de **Galeria** a una aplicació que estigueu creant.
 
 > [!div class="mx-imgBorder"]
-> ![Afegir un element de galeria](media/connector-powerapps9.png "Afegir un element de galeria")
+> ![Afegir un element de galeria.](media/connector-powerapps9.png "Afegir un element de galeria")
 
 1. Seleccioneu **Client** com a font de dades dels elements.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccioneu un origen de dades](media/choose-datasource-powerapps.png "Seleccioneu un origen de dades")
+    > ![Seleccioneu un origen de dades.](media/choose-datasource-powerapps.png "Seleccioneu un origen de dades")
 
 1. Podeu canviar la subfinestra de dades a la dreta per seleccionar quin camp de l'entitat Client es mostrarà a la galeria.
 

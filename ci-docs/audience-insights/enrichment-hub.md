@@ -1,7 +1,7 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305236"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555249"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
 Utilitzeu dades de diverses fonts, com ara Microsoft i altres associats, per enriquir les dades dels clients.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pàgina del centre d'enriquiment":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pàgina del centre d'enriquiment.":::
 
 A les conclusions del públic, aneu a **Dades** > **Enriquiment** per treballar amb les opcions d'enriquiment.  
 
@@ -42,17 +43,17 @@ A la pestanya **Els meus enriquiments** podeu veure els enriquiments que heu con
 
 Aneu a la pestanya **Els meus enriquiments** per veure tots els enriquiments configurats. Cada enriquiment es representa com una fila que inclou informació addicional sobre l'enriquiment.
 
-Seleccioneu un enriquiment per veure les opcions disponibles. També podeu seleccionar els punts suspensius (...) en un element de llista per veure les opcions.
+Seleccioneu l'enriquiment per veure les opcions disponibles. També podeu seleccionar els punts suspensius (...) en un element de llista per veure les opcions. Si heu configurat diversos enriquiments, podeu utilitzar el quadre de cerca per trobar-lo ràpidament.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcions per administrar els enriquiments a la llista d'enriquiments":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcions per administrar els enriquiments a la llista d'enriquiments.":::
 
 - **Visualitzeu** els detalls de l'enriquiment amb el nombre de perfils de client enriquits.
 - **Editeu** la configuració d'enriquiment.
 - **Executeu** l'enriquiment per actualitzar els perfils dels clients amb les últimes dades.
 - **Desactiveu** un enriquiment existent per impedir que s'actualitzi de manera automàtica amb cada actualització planificada. Les dades de l'última actualització correcta continuaran estaran disponibles. **Activeu** un enriquiment inactiu per reiniciar l'actualització automàtica amb cada actualització planificada.
-- **Suprimiu** un enriquiment.
+- **Suprimeix** l'enriquiment.
 
-Podeu executar o desactivar múltiples enriquiments alhora seleccionant-los a la llista. Les opcions de visualització i edició no estan disponibles com a accions massives i només funcionen per a un enriquiment a la vegada.
+Executeu o desactiveu diversos enriquiments alhora seleccionant-los a la llista. Les opcions de visualització i edició no estan disponibles com a acció massiva. Només funcionen per a un enriquiment alhora.
 
 ## <a name="enrichments-and-connections"></a>Enriquiments i connexions
 

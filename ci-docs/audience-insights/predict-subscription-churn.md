@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095636"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556295"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
 
@@ -63,9 +63,9 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. A les conclusions del públic, aneu a **Intel·ligència** > **Prediccions**.
 1. Seleccioneu la peça **Model de rotació de subscripcions (versió preliminar)** i seleccioneu **Utilitza aquest model**.
    > [!div class="mx-imgBorder"]
-   > ![Icona Model de rotació de subscripcions amb el botó Utilitza aquest model](media/subscription-churn-usethismodel.PNG "Icona Model de rotació de subscripcions amb el botó Utilitza aquest model")
+   > ![Icona Model de rotació de subscripcions amb el botó Utilitza aquest model.](media/subscription-churn-usethismodel.PNG "Icona Model de rotació de subscripcions amb el botó Utilitza aquest model")
 
-### <a name="name-model"></a>Model de nom
+### <a name="name-model"></a>Assignació d'un nom al model
 
 1. Proporcioneu un nom per al model per diferenciar-lo de la resta de models.
 1. Proporcioneu un nom per a l'entitat de sortida només amb lletres i números, sense cap espai. Aquest és el nom que utilitzarà l'entitat del model. A continuació, seleccioneu **Següent**.
@@ -86,11 +86,11 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
     1. Seleccioneu l'**entitat Client** que coincideixi amb l'entitat Client principal.
     1. Introduïu un nom que descrigui la relació.
        > [!div class="mx-imgBorder"]
-       > ![Pàgina Historial de subscripcions que mostra la creació d'una relació amb el client](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pàgina Historial de subscripcions que mostra la creació d'una relació amb el client")
+       > ![Pàgina Historial de subscripcions que mostra la creació d'una relació amb el client.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pàgina Historial de subscripcions que mostra la creació d'una relació amb el client")
 1. Seleccioneu **Següent**.
 1. Assigneu els camps semàntics als atributs de l'entitat Historial de subscripcions i seleccioneu **Desa**. Per a les descripcions dels camps, consulteu els [requisits previs](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Pàgina Historial de subscripcions que mostra els atributs semàntics assignats als camps de l'entitat Historial de subscripcions seleccionada](media/subscription-churn-subscriptionhistorymapping.PNG "Pàgina Historial de subscripcions que mostra els atributs semàntics assignats als camps de l'entitat Historial de subscripcions seleccionada")
+   > ![Pàgina Historial de subscripcions que mostra els atributs semàntics assignats als camps de l'entitat Historial de subscripcions seleccionada.](media/subscription-churn-subscriptionhistorymapping.PNG "Pàgina Historial de subscripcions que mostra els atributs semàntics assignats als camps de l'entitat Historial de subscripcions seleccionada")
 1. Seleccioneu **Afegeix dades** a **Activitats del client** i trieu l'entitat que proporcioni la informació de l'activitat del client tal com es descriu als requisits previs.
 1. Seleccioneu un tipus d'activitat que coincideixi amb el tipus d'activitat del client que configureu.  Seleccioneu **Crea** i proporcioneu un nom si no veieu una opció que coincideixi amb el tipus d'activitat que necessiteu.
 1. Haureu de configurar la relació des de l'entitat Activitat del client a l'entitat Client.
@@ -101,7 +101,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. Assigneu els camps semàntics als atributs de l'entitat Activitat del client i seleccioneu **Desa**. Per a les descripcions dels camps, consulteu els [requisits previs](#prerequisites).
 1. (Opcional) Si teniu altres activitats del client que voleu incloure, repetiu els passos anteriors.
    > [!div class="mx-imgBorder"]
-   > ![Definir la relació d'entitat](media/subscription-churn-customeractivitiesmapping.PNG "Pàgina Activitats del client que mostra els atributs semàntics assignats als camps de l'entitat Activitat del client seleccionada")
+   > ![Definiu la relació de l'entitat.](media/subscription-churn-customeractivitiesmapping.PNG "Pàgina Activitats del client que mostra els atributs semàntics assignats als camps de l'entitat Activitat del client seleccionada")
 1. Seleccioneu **Següent**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Definir la planificació i revisar la configuració
@@ -115,7 +115,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 
 1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
    > [!div class="mx-imgBorder"]
-   > ![Visualització de la pàgina Les meves prediccions](media/subscription-churn-mypredictions.PNG "Visualització de la pàgina Les meves prediccions")
+   > ![Visualització de la pàgina Les meves prediccions.](media/subscription-churn-mypredictions.PNG "Visualització de la pàgina Les meves prediccions")
 1. Seleccioneu la predicció que voleu revisar.
    - **Nom de la predicció:** el nom de la predicció proporcionat en crear-la.
    - **Tipus de predicció:** el tipus de model utilitzat per a la predicció
@@ -131,7 +131,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
    - **Última actualització:** la data en què s'han actualitzat els resultats de la predicció a l'entitat de sortida.
 1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció de la qual voleu revisar els resultats i seleccioneu **Visualitza**.
    > [!div class="mx-imgBorder"]
-   > ![Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió](media/subscription-churn-verticalellipses.PNG "Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió")
+   > ![Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió.](media/subscription-churn-verticalellipses.PNG "Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió")
 1. A la pàgina de resultats hi ha tres seccions principals de dades:
     1. **Rendiment del model d'entrenament:** A, B o C són les puntuacions possibles. Aquesta puntuació indica el rendiment de la predicció i pot ser que us ajudi a prendre la decisió d'utilitzar els resultats emmagatzemats a l'entitat de sortida.
         - La puntuació es determina en funció de les regles següents:
@@ -139,13 +139,13 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
             - **B** quan el model ha previst correctament com a mínim el 50% del total de les prediccions, i quan el percentatge de prediccions precises per als clients que han canviat supera la taxa històrica de rotació mitjana fins a un 10% de la taxa de rotació mitjana històrica.
             - **C** quan el model ha predit amb precisió menys el 50% del total de les prediccions, o quan el percentatge de prediccions precises per als clients que han canviat és inferior a la taxa de rotació mitjana històrica.
                > [!div class="mx-imgBorder"]
-               > ![Visualització del resultat del rendiment del model](media/subscription-churn-modelperformance.PNG "Visualització del resultat del rendiment del model")
+               > ![Visualització del resultat del rendiment del model.](media/subscription-churn-modelperformance.PNG "Visualització del resultat del rendiment del model")
     1. **Probabilitat de rotació (nombre de clients):** grups de clients segons el risc predit de rotació. Aquestes dades us poden ajudar més endavant si voleu crear un segment de clients amb un alt risc de rotació. Aquests segments ajuden a entendre on heu de definit la data límit de la subscripció del segment.
        > [!div class="mx-imgBorder"]
-       > ![Gràfic que mostra la distribució dels resultats de rotació, desglossat en intervals entre 0-100%](media/subscription-churn-resultdistribution.PNG "Gràfic que mostra la distribució dels resultats de rotació, desglossat en intervals entre 0-100%")
+       > ![Gràfic que mostra la distribució dels resultats de rotació, desglossat en intervals entre 0-100 %.](media/subscription-churn-resultdistribution.PNG "Gràfic que mostra la distribució dels resultats de rotació, desglossat en intervals entre 0-100%")
     1. **Factors més influents:** hi ha molts factors que s'han de tenir en compte a l'hora de crear la predicció. Cadascun dels factors té la seva importància calculada per a les prediccions agregades que crea un model. Podeu utilitzar aquests factors per ajudar a validar els resultats de la predicció. O bé, podeu utilitzar aquesta informació més endavant per [crear segments](segments.md) que ajudin a influir en el risc de rotació dels clients.
        > [!div class="mx-imgBorder"]
-       > ![Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació](media/subscription-churn-influentialfactors.PNG "Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació")
+       > ![Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació.](media/subscription-churn-influentialfactors.PNG "Llista que mostra els factors influents i la seva importància en la predicció del resultat de rotació")
 
 ## <a name="manage-predictions"></a>Administrar prediccions
 

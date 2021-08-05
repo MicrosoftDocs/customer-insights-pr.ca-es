@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305144"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555479"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
@@ -27,7 +27,7 @@ Per configurar l'enriquiment d'afinitats de marques, aneu a la pestanya **Detect
 Per configurar l'enriquiment d'afinitats d'interessos, aneu a la pestanya **Detecta** i seleccioneu **Enriqueix les meves dades** a la peça **Interessos**.
 
    > [!div class="mx-imgBorder"]
-   > ![Peces de marques i interessos](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
+   > ![Peces de marques i interessos.](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
 
 ## <a name="how-we-determine-affinities"></a>Com determinem les similituds
 
@@ -123,7 +123,7 @@ En funció de la mida de les dades dels clients, l'execució d'enriquiment pot t
 
 Després de l'execució del procés d'enriquiment, aneu a **Els meus enriquiments** per revisar el nombre total de clients enriquits i un desglossament de les marques o els interessos dels perfils de clients enriquits.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment.":::
 
 Reviseu les dades enriquides seleccionant **Visualitza les dades enriquides** al gràfic. Les dades enriquits per a les marques van a l'entitat **BrandAffinityFromMicrosoft**. Les dades d'interès es troben a l'entitat **InterestAffinityFromMicrosoft**. També trobareu aquestes entitats enumerades al grup **Enriquiment** a **Dades** > **Entitats**.
 
@@ -131,7 +131,7 @@ Reviseu les dades enriquides seleccionant **Visualitza les dades enriquides** al
 
 Les afinitats de marca i d'interès també es poden visualitzar en targetes de clients individuals. Aneu a **Clients** i seleccioneu un perfil de client. A la targeta del client, trobareu gràfics per a les marques o els interessos per als quals els usuaris del perfil demogràfic del client tenen afinitat.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Targeta del client amb dades enriquides":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Targeta del client amb dades enriquides.":::
 
 ## <a name="next-steps"></a>Passos següents
 

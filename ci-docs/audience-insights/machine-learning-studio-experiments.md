@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598327"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555157"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilitzar models basats en el Machine Learning Studio (clàssic) de l'Azure
 
@@ -41,7 +41,7 @@ En un primer pas, necessitem crear una àrea de treball i obrir el Machine Learn
 
 1. Després de crear el recurs, es mostrarà l'escriptori digital de l'àrea de treball del Machine Learning Studio. Seleccioneu **Inicia el Machine Learning Studio**.
 
-   ![Interfície de l'usuari de l'Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Interfície de l'usuari de l'Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Treballar amb l'Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Ara podeu crear un experiment nou o importar una plantilla d'experiments existen
 
 1. Si creeu un experiment nou o utilitzeu una plantilla d'experiments de la galeria, heu de configurar les propietats de les **Dades d'importació**. Utilitzeu l'experiència guiada o proporcioneu directament els detalls per accedir a l'emmagatzematge blob de l'Azure que conté les dades.  
 
-   ![Experiment de l'Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment de l'Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Ara podeu crear un pipeline de processament personalitzat per netejar i preprocessar les dades, extreure'n característiques i entrenar un model adient.
 
@@ -63,15 +63,15 @@ Ara podeu crear un experiment nou o importar una plantilla d'experiments existen
 
 1. Quan us satisfaci la qualitat d'un model, seleccioneu **Configura el servei web** > **Servei web predictiu**. Aquesta opció importa el model entrenat i el pipeline de caracterització de l'experiment d'entrenament a un servei predictiu. El servei predictiu pot utilitzar un altre conjunt de dades d'entrada amb l'esquema utilitzat a l'experiment d'entrenament per fer prediccions.
 
-   ![Configurar un servei web predictiu](media/predictive-webservice-control.png)
+   ![Configurar un servei web predictiu.](media/predictive-webservice-control.png)
 
 1. Quan l'experiment del servei web predictiu tingueu èxit, podreu implementar-lo per a la planificació automàtica. Per fer que el servei web funcioni amb el Customer Insights, seleccioneu **Implementa el servei web** > **Implementa el servei web [Nou] Versió preliminar**. [Més informació sobre implementar un servei web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Implementar un servei web predictiu](media/predictive-webservice-deploy.png)
+   ![Implementar un servei web predictiu.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Models d'exemple de la galeria
 
-Farem servir un escenari fictici de l'Hotel Contoso per als models d'aquest article. L'Hotel Contoso recull les dades següents:
+Utilitzarem un escenari fictici de Contoso Hotel per als models d'aquest article. Contoso Hotel recull les dades següents:
 
 - Dades del CRM que consisteixen en l'activitat d'estades de l'hotel. El conjunt de dades inclou informació sobre les dates d'estada de cada client registrat. També conté informació sobre la reserva, els tipus d'habitacions, els detalls de les despeses, etc. Les dades abasten quatre anys, de gener del 2014 a gener del 2018.
 - Perfils de client dels hostes de l'hotel. Aquests perfils contenen informació sobre cada client, com ara el nom, la data de naixement, l'adreça postal, el sexe i el número de telèfon.
@@ -87,13 +87,13 @@ La definició de rotació pot ser diferent en funció de l'escenari. En aquest e
 
 La plantilla de l'experiment es pot importar des de la galeria. En primer lloc, assegureu-vos que importeu les dades corresponents a **Activitat d'estades de l'hotel**, **Dades dels clients** i **Dades d'ús del servei** des de l'emmagatzematge blob de l'Azure.
 
-   ![Importar dades per al model de rotació](media/import-data-azure-blob-storage.png)
+   ![Importar dades per al model de rotació.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Caracterització
 
 En funció de la definició de rotació, primer identifiquem les característiques sense processar que influiran en l'etiqueta. A continuació, processem aquestes característiques i les convertim en característiques numèriques que es poden utilitzar amb models d'aprenentatge automàtic. Les dades s'integren al Customer Insights per tal que puguem unir aquestes taules mitjançant l'*ID de client*.
 
-   ![Unir dades importades](media/join-imported-data.png)
+   ![Unir dades importades.](media/join-imported-data.png)
 
 La caracterització per a la creació del model per a l'anàlisi de rotació pot ser una mica complicada. Les dades són una funció de temps amb l'activitat de l'hotel nova registrada diàriament. Durant la caracterització, volem generar característiques estàtiques a partir de dades dinàmiques. En aquest cas, generem diverses característiques de l'activitat de l'hotel amb una finestra lliscant d'un any. També ampliem les característiques de categories, com ara el tipus d'habitació o el tipus de reserva, i les convertim en característiques separades mitjançant la codificació one-hot.  
 
@@ -114,7 +114,7 @@ Ara hem de triar l'algoritme òptim que voleu utilitzar. En aquest cas, la major
 
 A la imatge següent es mostra el pipeline d'entrenament i avaluació del model de l'Azure Machine Learning Studio:
 
-![Model de rotació de l'Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Model de rotació de l'Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 També apliquem una tècnica anomenada **Importància de característica de permutació**, un aspecte important de l'optimització de models. Els models integrats no tenen pràcticament cap impacte en qualsevol característica específica de la predicció final. La calculadora d'importància de característica utilitza un algoritme personalitzat per calcular la influència de les característiques individuals en el resultat d'un model específic. La importància de característica es normalitza entre +1 i -1. Una influència negativa significa que la característica corresponent té una influència poc intuïtiva en el resultat i s'hauria de suprimir del model. Una influència positiva indica que la característica contribueix en gran mesura a la predicció. Aquests valors no són coeficients de correlació perquè són mètriques diferents. Per obtenir més informació, vegeu [Importància de característica de permutació](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Definim l'objectiu com a maximitzar la quantitat de dòlars de l'ús del servei 
 
 Igual que el model de rotació, unim el valor de ServiceCustomerID de l'hotel amb el de CustomerID per crear recomanacions coherents per al valor de CustomerID.
 
-![Caracterització del model de recomanacions](media/azure-machine-learning-model-featurization.png)
+![Caracterització del model de recomanacions.](media/azure-machine-learning-model-featurization.png)
 
 Les dades provenen de tres entitats diferents i característiques que se'n deriven. La caracterització del problema de recomanació és diferent en comparació amb els escenaris de rotació o del CLTV. El model de recomanació necessita introduir dades en tres conjunts de característiques.
 
@@ -156,13 +156,13 @@ Les dades provenen de tres entitats diferents i característiques que se'n deri
 
 Preveiem els productes o serveis mitjançant l'algoritme anomenat **Entrena el recomanador de Matchbox** per entrenar el model de recomanació.
 
-![Algoritme de recomanació de productes](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritme de recomanació de productes.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Els tres ports d'entrada per al model **Entrena el recomanador de Matchbox** utilitzen les dades d'ús del servei d'aprenentatge, la descripció del client (opcional) i la descripció del servei. Hi ha tres maneres diferents de puntuar el model. Una és per a l'avaluació de models en què es calcula una puntuació de guanys acumulats descomptats normalitzats (NDCG) per classificar els elements que s'han valorat. En aquest experiment, la puntuació de l'NDCG és 0,97. Les altres dues opcions puntuen el model en relació amb tot el catàleg de serveis recomanables o només els elements que els usuaris no han utilitzat abans.
 
 Si ens fixem més en les distribucions de les recomanacions de tot el catàleg de serveis, veurem que els principals serveis que s'han de recomanar són el telèfon, el Wi-Fi i la missatgeria. Això és coherent amb el que hem trobat a les distribucions de les dades de consum del servei:
 
-![Resultat del model de recomanació](media/azure-machine-learning-model-output.png)
+![Resultat del model de recomanació.](media/azure-machine-learning-model-output.png)
 
 Podeu accedir a [tot l'experiment de recomanació de productes a la Galeria d'IA de l'Azure.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596349"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692293"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
@@ -24,7 +24,7 @@ El [Common Data Model](/common-data-model/) és una especificació declarativa i
 
 Es tracta d'un model de dades compartit que permet que les aplicacions i els integradors de dades col·laborin més fàcilment proporcionant una definició unificada de les dades. El Common Data Model inclou un ric sistema de metadades amb les entitats, les relacions, les jerarquies, els trets i altres característiques, entre d'altres. Es va originar a partir de les aplicacions del Dynamics 365 i és de codi obert a GitHub amb més de 260 entitats estàndard. Un gran sistema d'associats interns i externs aporten conceptes específics del sector al Common Data Model.
 
-Actualment, diversos sistemes i plataformes implementen el Common Data Model, incloent-hi els fluxos de dades del Power BI i els serveis de dades de l'Azure. Ja s'admet al Common Data Service, el Dynamics 365, el Power Apps, el Power BI i els serveis de dades de l'Azure disponibles pròximament, i acumula valor directament cap a l'[Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+En l'actualitat, diversos sistemes i plataformes implementen el Common Data Model, incloent-hi els fluxos de dades del Power BI i els serveis de dades de l'Azure. Ja és compatible amb el Microsoft Dataverse, el Dynamics 365, el Power Apps, el Power BI i els propers serveis de dades de l'Azure, cosa que acumular valor directament vers l'[Open Data Initiative](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Esquemes d'entitat del Customer Insights
 
@@ -44,7 +44,7 @@ Per obtenir més informació, vegeu la documentació sobre els [Esquemes d'entit
 
 Podeu visualitzar entitats al [navegador d'entitats del Common Data Model](https://microsoft.github.io/CDM/). Seleccioneu el botó **Carrega des de GitHub!** i aneu a **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, on trobareu la llista d'entitats del Customer Insights i les seves definicions.
 > [!div class="mx-imgBorder"]
-> ![Navegador d'entitats del CDM que mostra l'entitat CustomerActivity](media/CDM-entity-navigator.png "Navegador d'entitats del CDM que mostra l'entitat CustomerActivity")
+> ![Navegador d'entitats del CDM que mostra l'entitat CustomerActivity.](media/CDM-entity-navigator.png "Navegador d'entitats del CDM que mostra l'entitat CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977365"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327352"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dades a l'Azure Synapse Analytics (versió preliminar)
 
@@ -74,8 +74,10 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 1. Proporcioneu un **Nom de visualització** recognoscible per a l'exportació i un **Nom de la base de dades**.
 
 1. Seleccioneu les entitats que voleu exportar a l'Azure Synapse Analytics.
+   > [!NOTE]
+   > Les fonts de dades basades en una [carpeta del model de dades comú](connect-common-data-model.md) no són compatibles.
 
-1. Seleccioneu **Desa**.
+2. Seleccioneu **Desa**.
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306016"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650306"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -138,7 +138,7 @@ No és obligatori especificar regles de desduplicació. Si no es configura cap r
    - **Menys recent**: identifica el registre menys recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
  
    > [!div class="mx-imgBorder"]
-   > ![Pas 1 de les regles de desduplicació](media/match-selfconflation.png "Pas 1 de les regles de desduplicació")
+   > ![Pas 1 de les regles de desduplicació.](media/match-selfconflation.png "Pas 1 de les regles de desduplicació")
  
 1. Un cop seleccionades les entitats i definida la seva preferència de combinació, seleccioneu **Afegeix una regla** per definir les regles de desduplicació en el nivell d'entitat.
    - **Seleccioneu un camp** mostra tots els camps disponibles de l'entitat. Trieu el camp on voleu comprovar si hi ha duplicats. Trieu els camps que probablement siguin únics per a cada client. Per exemple, una adreça electrònica o la combinació de nom, ciutat i número de telèfon.
@@ -146,7 +146,7 @@ No és obligatori especificar regles de desduplicació. Si no es configura cap r
    - Definiu més condicions seleccionant **Afegeix una condició**.
  
    > [!div class="mx-imgBorder"]
-   > ![Pas 2 de les regles de desduplicació](media/match-selfconflation-rules.png "Pas 2 de les regles de desduplicació")
+   > ![Pas 2 de les regles de desduplicació.](media/match-selfconflation-rules.png "Pas 2 de les regles de desduplicació")
 
   Podeu crear diverses regles de desduplicació per a una mateixa entitat. 
 
@@ -179,7 +179,9 @@ Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Executa** per
 Trobareu el resultat d'una execució correcta, l'entitat del perfil de client unificada, a la pàgina **Entitats**. L'entitat de client unificada s'anomena **Clients** i és a la secció **Perfils**. La primera execució de coincidències correcta crea l'entitat *Client* unificada. Totes les execucions de coincidència posteriors amplien aquesta entitat.
 
 > [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+> Després d'executar el procés de coincidència, seleccioneu l'estat del procés per obrir la subfinestra **Detalls de la tasca**. Ofereix una visió general sobre el temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca. Seleccioneu **Mostra els detalls** per veure quines entitats han participat en el procés de coincidència, quines regles se'ls ha aplicat i si les actualitzacions s'han publicat correctament.  
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Camí de desglossament per accedir als detalls del procés des de l'enllaç d'estat de la tasca.":::
 
 ## <a name="review-and-validate-your-matches"></a>Revisar i validar les coincidències
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595981"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555111"
 ---
 # <a name="map-entities-and-attributes"></a>Assignar entitats i atributs
 
@@ -35,14 +35,14 @@ Per obtenir més informació sobre el flux general d'unificació de dades, vegeu
 3. Seleccioneu les entitats i els atributs que voleu utilitzar a les fases de *coincidència* i *combinació*. Podeu seleccionar els atributs necessaris individualment d'una entitat o incloure tots els atributs d'una entitat seleccionant la casella de selecció **Inclou tots els camps** del nivell d'entitat. Es recomana seleccionar com a mínim dues entitats per beneficiar-se del procés d'unificació de dades.
 
    > [!div class="mx-imgBorder"]
-   > ![Exemple d'addició d'entitats](media/data-manager-configure-map-add-entities-example.png "Exemple d'addició d'entitats")
+   > ![Exemple d'addició d'entitats.](media/data-manager-configure-map-add-entities-example.png "Exemple d'addició d'entitats")
 
    En aquest exemple, estem afegint les entitats **eCommerceContacts** i **loyCustomers**. En triar aquestes entitats, podeu derivar informació sobre els client de quina empresa en línia són membres del programa de fidelització.
    
    Podeu fer cerques per paraules clau a tots els atributs i les entitats per seleccionar els atributs necessaris que voleu assignar.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemple de camps de cerca](media/data-manager-configure-map-search-fields-example.png "Exemple de camps de cerca")
+   > ![Exemple de camps de cerca.](media/data-manager-configure-map-search-fields-example.png "Exemple de camps de cerca")
 
 4. Seleccioneu **Aplica** per confirmar les seleccions.
 
@@ -55,7 +55,7 @@ Després de seleccionar les entitats, la pàgina **Assignació** enumera les ent
 - **Tipus semàntic d'atribut**: categories dels atributs, com ara l'adreça electrònica o el nom. Per utilitzar models d'IA per a la predicció intel·ligent de la semàntica, estalviar temps i millorar la precisió, establiu **Assignació intel·ligent** a **Activada**. L'assignació intel·ligent destaca la recomanació semàntica basada en IA en el camp **Tipus**. Si la establiu a **Desactivada**, veureu les nostres recomanacions normals d'assignació. Podeu seleccionar qualsevol tipus semàntic de la llista d'opcions disponibles i substituir la selecció suggerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipus d'atribut i predicció semàntica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipus d'atribut i predicció semàntica")
+> ![Tipus d'atribut i predicció semàntica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipus d'atribut i predicció semàntica")
 
 L'addició d'un tipus semàntic d'entitat personalitzat també és possible. Seleccioneu el camp de tipus per a un atribut i escriviu el nom del tipus semàntic de l'atribut personalitzat. D'aquesta manera, també podeu canviar els tipus d'atribut que s'han identificat pel sistema.
 
@@ -64,7 +64,7 @@ Tots els atributs per als quals s'identifica automàticament un tipus semàntic 
 Els atributs que no estan assignats automàticament a un tipus semàntic s'agrupen a la secció **Definiu les dades als camps no assignats**. Seleccioneu el camp tipus semàntic per als atributs no assignats o introduïu el nom del tipus d'atribut personalitzat.
 
 > [!div class="mx-imgBorder"]
-> ![Clau principal i tipus d'atribut](media/data-manager-configure-map-add-attributes.png "Clau principal i tipus d'atribut")
+> ![Clau principal i tipus d'atribut.](media/data-manager-configure-map-add-attributes.png "Clau principal i tipus d'atribut")
 
 > [!NOTE]
 > Un camp hauria d'assignar-se a l'usuari de tipus semàntic Person.FullName per emplenar el nom del client a la targeta del client. Altrament, les targetes del client apareixeran sense nom. 
@@ -76,7 +76,7 @@ Els atributs que no estan assignats automàticament a un tipus semàntic s'agrup
 2. A la subfinestra **Edita els camps**, afegiu o suprimiu els atributs i les entitats. Utilitzeu la cerca o desplaçament per cercar i seleccionar els atributs i les entitats d'interès. No podeu suprimir un atribut ni una entitat si ja s'han assignat.
 
    > [!div class="mx-imgBorder"]
-   > ![Afegir o suprimir atributs](media/configure-data-map-edit.png "Afegir o suprimir atributs")
+   > ![Afegir o suprimir atributs.](media/configure-data-map-edit.png "Afegir o suprimir atributs")
 
 3. Seleccioneu **Aplica**.
 

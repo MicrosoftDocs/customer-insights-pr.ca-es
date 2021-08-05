@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596487"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692101"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure per a les conclusions del públic
 
 Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Seguiu llegint per obtenir més informació sobre com connectar les conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage mitjançant una entitat de servei de l'Azure en comptes de les claus de compte d'emmagatzematge. 
 
-Podeu utilitzar l'entitat de servei per [afegir o editar de manera segura una carpeta de Common Data Model com a font de dades](connect-common-data-model.md) o [crear un entorn nou o actualitzar-ne un d'existent](manage-environments.md#create-an-environment-in-an-existing-organization).
+Podeu utilitzar l'entitat de servei per [afegir o editar de manera segura una carpeta de Common Data Model com a font de dades](connect-common-data-model.md) o [crear un entorn nou o actualitzar-ne un d'existent](get-started-paid.md).
 
 > [!IMPORTANT]
 > - El compte d'emmagatzematge de l'Azure Data Lake Storage Gen2 que té com a objectiu utilitzar l'entitat de servei ha de tenir habilitat l'[Espai jeràrquic de noms (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ La propagació dels canvis pot trigar fins a 15 minuts.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduïu l'identificador de recurs de l'Azure o els detalls de subscripció de l'Azure al fitxer adjunt del compte d'emmagatzematge de les conclusions del públic.
 
-Adjunteu un compte d'emmagatzematge de l'Azure Data Lake a les conclusions del públic per [emmagatzemar dades de sortida](manage-environments.md) o [utilitzar-les com a font de dades](connect-common-data-service-lake.md). Si trieu l'opció de l'Azure Data Lake, podreu triar entre un mètode basat en recursos o un basat en subscripcions.
+Adjunteu un compte d'emmagatzematge de l'Azure Data Lake a les conclusions del públic per [emmagatzemar dades de sortida](manage-environments.md) o [utilitzar-les com a font de dades](connect-dataverse-managed-lake.md). Si trieu l'opció de l'Azure Data Lake, podreu triar entre un mètode basat en recursos o un basat en subscripcions.
 
 Seguiu els passos que es descriuen a continuació per proporcionar la informació necessària sobre el mètode seleccionat.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059576"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692193"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
@@ -25,7 +25,7 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 ## <a name="prerequisites"></a>Requisits previs
 
 - El complement només funciona amb les aplicacions controlades per models del Dynamics 365, com ara Vendes o Servei d'atenció al client, versió 9.0 i posteriors.
-- Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Common Data Service](connect-power-query.md).
+- Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Microsoft Dataverse](connect-power-query.md).
 - Tots els usuaris del Dynamics 365 del complement de la targeta del client s'han d'[afegir com a usuaris](permissions.md) als coneixements del públic per veure les dades.
 - [Les capacitats de cerca i filtre configurades](search-filter-index.md) als coneixements del públic són necessàries per cercar dades per treballar.
 - Cada complement es basa en dades específiques dels coneixements del públic:
@@ -50,7 +50,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Seleccioneu l'enllaç **Nom de visualització** per a la solució del **Complement de targeta de client del Dynamics 365 Customer Insights (visualització prèvia)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Seleccionar el nom de visualització](media/select-display-name.png "Seleccionar el nom de visualització")
+   > ![Seleccionar el nom de visualització.](media/select-display-name.png "Seleccionar el nom de visualització")
 
 1. Seleccioneu **Inicia la sessió** i introduïu les credencials del compte d'administrador que utilitzeu per configurar el Customer Insights.
 
@@ -64,7 +64,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
    - Per dur a terme l'assignació a un compte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del compte.
 
    > [!div class="mx-imgBorder"]
-   > ![Camp Identificador de contacte](media/contact-id-field.png "Camp Identificador de contacte")
+   > ![Camp Identificador de contacte.](media/contact-id-field.png "Camp Identificador de contacte")
 
 1. Seleccioneu **Desa la configuració** per desar la configuració.
 
@@ -83,7 +83,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Seleccioneu el formulari de contacte al qual voleu afegir els controls de la targeta del client.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccioneu el formulari de contacte](media/contact-active-forms.png "Seleccioneu el formulari de contacte")
+    > ![Seleccioneu el formulari de contacte.](media/contact-active-forms.png "Seleccioneu el formulari de contacte")
 
 1. Per afegir un control, a l'editor de formularis, arrossegueu qualsevol camp de l'**Explorador de camps** a on voleu que aparegui el control.
 
@@ -110,7 +110,7 @@ El complement de targeta del client no s'actualitza automàticament. Per actuali
 
 1. Seleccioneu **Aplica l'actualització de la solució** a la barra d'accions.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualitzar la solució a l'àrea Personalització de les aplicacions del Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualitzar la solució a l'àrea Personalització de les aplicacions del Dynamics 365.":::
 
 1. Després d'iniciar el procés d'actualització, veureu un indicador de càrrega fins que finalitzi l'actualització. Si no hi ha cap versió nova, l'actualització mostrarà un missatge d'error.
 

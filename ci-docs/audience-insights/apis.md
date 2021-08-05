@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304730"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554469"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
@@ -35,7 +35,7 @@ En aquest article es descriu com accedir a les API del Customer Insights, crear 
  
    En habilitar les API, es crea una clau de subscripció principal i secundària per a la instància que s'utilitza a les sol·licituds d'API. Per tornar a generar les claus, seleccioneu **Torna a generar la principal** o **Torna a generar la secundària** a **Administració** > **Permisos** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar API del Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar API del Customer Insights.":::
 
 1. Seleccioneu **Exploreu les nostres API** per [provar les API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
  
    També podeu executar aquesta ordre a la **consola de l'administrador del paquet del NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Afegir el paquet del NuGet al projecte del Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Afegir el paquet del NuGet al projecte del Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Utilitzar la biblioteca de client del C#
 
@@ -141,7 +141,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 
 1. Passeu el `HttpClient` a la creació del client de `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Exemple d'httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Exemple d'httpclient.":::
 
 1. Feu trucades amb el client als "mètodes d'extensió", per exemple `GetAllInstancesAsync`. Si es preferia l'accés al subjacent `Microsoft.Rest.HttpOperationResponse`, utilitzeu els "mètodes de missatges http", per exemple `GetAllInstancesWithHttpMessagesAsync`.
 

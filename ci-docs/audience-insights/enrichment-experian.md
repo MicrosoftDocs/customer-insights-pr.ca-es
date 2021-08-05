@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309808"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555341"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -39,7 +39,7 @@ Actualment admetem l'enriquiment de perfils de clients només als Estats Units.
 1. Seleccioneu **Enriqueix les meves dades** a la peça d'Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Peça del Experian](media/experian-tile.png "Peça del Experian")
+   > ![Peça de l'Experian.](media/experian-tile.png "Peça del Experian")
    > 
 
 1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió** i triant a la llista desplegable Experian. 

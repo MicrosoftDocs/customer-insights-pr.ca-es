@@ -1,7 +1,7 @@
 ---
 title: Enriquiment per millorar l'adreça
 description: Enriquiu i normalitzeu la informació de les adreces dels perfils dels clients amb els models de Microsoft.
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305420"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692241"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquiment de perfils de clients amb adreces millorades
 
@@ -58,6 +58,10 @@ Actualment admetem adreces enriquides en aquests països o regions:
 
 - Austràlia
 - Canadà
+- França
+- Alemanya
+- Itàlia
+- Japó
 - Regne Unit
 - Estats Units
 

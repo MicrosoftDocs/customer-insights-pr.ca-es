@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar segments
 description: Creeu segments de clients per agrupar-los segons diversos atributs.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064925"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685450"
 ---
 # <a name="create-and-manage-segments"></a>Crear i administrar segments
+
+> [!IMPORTANT]
+> Hi ha diversos canvis que s'implementaran a l'experiència de creació de segments al setembre de 2021: 
+> - El constructor de segments serà lleugerament diferent amb elements renovats i un flux d'usuari millorat.
+> - Els nous operadors datetime i un selector de dates millorat estaran habilitats al creador de segments.
+> - Podreu afegir o suprimir condicions i regles dels segments. 
+> - Les regles incrustades que comencin amb una condició OR estaran disponibles. Ja no necessitareu una condició AND a la capa més externa.
+> - Una subfinestra lateral estarà constantment disponible per seleccionar atributs.
+> - Opció per seleccionar camins de relació d'entitat.
+> Per provar el nou constructor de segments, envieu un correu electrònic amb l'assumpte "Sol·licitud per habilitar el nou constructor de segments" a cihelp [arrova] microsoft.com. Incloeu el nom de l'organització i l'identificador de l'entorn d'espai aïllat.
 
 Definiu filtres complexos per a l'entitat de client unificada i les entitats relacionades. Cada segment, després del processament, crea un conjunt de registres de client que podeu exportar i on podeu prendre mesures. Els segments s'administren a la pàgina **Segments**. 
 
@@ -50,7 +60,7 @@ En crear un segment, podeu desar un esborrany. Es desarà com un segment inactiu
 1. Trieu un operador i un valor per a l'atribut seleccionat.
 
    > [!div class="mx-imgBorder"]
-   > ![Filtre de grup personalitzat](media/customer-group-numbers.png "Filtre de grup de client")
+   > ![Filtre de grup personalitzat.](media/customer-group-numbers.png "Filtre de grup de client")
 
    |Nombre |Definició  |
    |---------|---------|
@@ -66,7 +76,7 @@ En crear un segment, podeu desar un esborrany. Es desarà com un segment inactiu
       - Operador **OR**: una de les condicions ha de complir-se com a part del procés de segmentació. Aquesta opció és més útil quan definiu diverses condicions per a la mateixa entitat.
 
       > [!div class="mx-imgBorder"]
-      > ![Operador OR quan s'ha de complir qualsevol condició](media/segmentation-either-condition.png "Operador OR quan s'ha de complir qualsevol condició")
+      > ![Operador OR quan s'ha de complir qualsevol condició.](media/segmentation-either-condition.png "Operador OR quan s'ha de complir qualsevol condició")
 
       Actualment és possible imbricar un operador **OR** en un operador **AND**, però no a l'inrevés.
 
@@ -74,12 +84,12 @@ En crear un segment, podeu desar un esborrany. Es desarà com un segment inactiu
    Seleccioneu **Afegeix un grup**.
 
       > [!div class="mx-imgBorder"]
-      > ![Afegir un grup a un grup de clients](media/customer-group-add-group.png "Afegir un grup a un grup de clients")
+      > ![Afegir un grup a un grup de clients.](media/customer-group-add-group.png "Afegir un grup a un grup de clients")
 
    1. Seleccioneu un dels operadors de conjunts: **Union**, **Intersect** o **Except**.
 
    > [!div class="mx-imgBorder"]
-   > ![Afegir una unió a un grup de clients](media/customer-group-union.png "Afegir una unió a un grup de clients")
+   > ![Afegir una unió a un grup de clients.](media/customer-group-union.png "Afegir una unió a un grup de clients")
 
    - **Unió** uneix els dos grups.
 
@@ -90,7 +100,7 @@ En crear un segment, podeu desar un esborrany. Es desarà com un segment inactiu
 1. Si l'entitat està connectada a l'entitat de client unificada per [relacions](relationships.md), heu de definir el camí de la relació per crear un segment vàlid. Afegiu les entitats del camí de la relació fins que pugueu seleccionar l'entitat **Client: CustomerInsights** del menú desplegable. A continuació, trieu **Tots els registres** per a cada pas.
 
    > [!div class="mx-imgBorder"]
-   > ![Camí de la relació durant la creació del segment](media/segments-multiple-relationships.png "Camí de la relació durant la creació del segment")
+   > ![Camí de la relació durant la creació del segment.](media/segments-multiple-relationships.png "Camí de la relació durant la creació del segment")
 
 1. Per defecte, els segments generen una entitat de sortida que conté tots els atributs dels perfils de client que coincideixen amb els filtres definits. Si un segment es basa en entitats que no són l'entitat *Client*, podeu afegir més atributs d'aquestes entitats a l'entitat de sortida. Seleccioneu **Atributs del projecte** per triar els atributs que s'annexaran a l'entitat de sortida.  
   
@@ -127,7 +137,7 @@ Els segments ràpids us permeten crear segments senzills amb un sol operador rà
 4. El sistema us proporcionarà una **Mida de segment aproximada**. Podeu triar si voleu generar el segment que heu definit o, en primer lloc, tornar a examinar-lo per aconseguir una mida diferent del segment.
 
     > [!div class="mx-imgBorder"]
-    > ![Nom i estimació per a un segment ràpid](media/quick-segment-name.png "Nom i estimació per a un segment ràpid")
+    > ![Nom i estimació per a un segment ràpid.](media/quick-segment-name.png "Nom i estimació per a un segment ràpid")
 
 5. Proporcioneu un **Nom** per al segment. Opcionalment, proporcioneu un **Nom de visualització**.
 

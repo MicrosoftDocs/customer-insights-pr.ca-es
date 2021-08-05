@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760315"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555433"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segments a LiveRamp&reg; (versió preliminar)
 
@@ -56,7 +56,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Al camp **Trieu el vostre identificador de clau**, seleccioneu el **Correu electrònic**, **Nom i adreça** o **Telèfon** per enviar a LiveRamp per a la resolució de la identitat.
    > [!div class="mx-imgBorder"]
-   > ![Connector de LiveRamp amb l'assignació d'atributs](media/export-liveramp-segments.png "Connector de LiveRamp amb l'assignació d'atributs")
+   > ![Connector de LiveRamp amb l'assignació d'atributs.](media/export-liveramp-segments.png "Connector de LiveRamp amb l'assignació d'atributs")
 
 1. Assigneu els atributs corresponents de l'entitat del client unificat per a l'identificador de clau seleccionat.
 

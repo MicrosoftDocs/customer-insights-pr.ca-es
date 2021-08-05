@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304592"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554606"
 ---
 # <a name="customer-profiles"></a>Perfils de client
 
@@ -23,11 +23,11 @@ A la pàgina **Clients** es mostra una visualització combinada dels clients bas
 Els clients poden ser persones o organitzacions (visualització prèvia). Cada client o perfil d'organització està representat per una peça. Seleccioneu una peça per veure informació addicional sobre aquest client o organització en concret. Utilitzeu els controls de pàgina de la part inferior de la pàgina per veure registres addicionals.
 
 > [!div class="mx-imgBorder"] 
-> ![Perfils de client B2C](media/profiles-customers.png "Perfils de client B2C")
+> ![Perfils de client B2C.](media/profiles-customers.png "Perfils de client B2C")
 
 Organitzacions (visualització prèvia)
 > [!div class="mx-imgBorder"] 
-> ![Perfils de client B2B](media/profile-customers-b2b.png "Perfils de client B2B")
+> ![Perfils de client B2B.](media/profile-customers-b2b.png "Perfils de client B2B")
 
 > [!NOTE]
 > Si no podeu veure les peces del en seleccionar **Clients** a la navegació, l'administrador ha de [definir com a mínim un atribut que es pugui cercar](search-filter-index.md) a l'**Índex de cerca i filtratge**.
@@ -47,7 +47,7 @@ Podeu filtrar clients pels camps de l'entitat Perfil de client. De forma similar
 2. Activeu les caselles que hi ha al costat dels atributs pels quals voleu filtrar els clients.
 
    > [!div class="mx-imgBorder"] 
-   > ![Perfils de client](media/profiles-customers3.png "Perfils de client")
+   > ![Perfils de client.](media/profiles-customers3.png "Perfils de client")
 
 3. Per suprimir els filtres, seleccioneu **Esborra els filtres** a la pàgina **Clients**.
 

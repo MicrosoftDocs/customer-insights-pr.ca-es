@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124215"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362497"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segments a Mailchimp (versió preliminar)
 
@@ -38,7 +38,7 @@ Exporteu segments de perfils de client unificats a Mailchimp per crear butlletin
 
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix connexió** i trieu **Autopilot** per configurar la connexió.
+1. Seleccioneu **Afegeix una connexió** i trieu **Mailchimp** per configurar la connexió.
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 

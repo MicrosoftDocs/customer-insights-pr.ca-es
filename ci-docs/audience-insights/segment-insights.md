@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306062"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554973"
 ---
 # <a name="segment-insights-preview"></a>Informació dels segments (versió preliminar)
 
@@ -44,7 +44,7 @@ També podeu analitzar com canvia la superposició per atributs específics.
 Després de completar l'anàlisi, trobareu detalls sobre aquesta informació a **Segments** > **Informació (versió preliminar)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalls de la informació de superposició de segments":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalls de la informació de superposició de segments.":::
 
 Seleccioneu una informació per veure els resultats de l'anàlisi:
 
@@ -77,7 +77,7 @@ Els diferenciadors del segment us ajudaran a descobrir els elements diferencials
 Després de completar l'anàlisi, trobareu detalls sobre aquesta informació a **Segments** > **Informació (versió preliminar)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalls de la informació de diferenciador de segments":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalls de la informació de diferenciador de segments.":::
 
 Seleccioneu una informació per veure els resultats de l'anàlisi. Una anàlisi de diferenciador inclou dues pestanyes. La pestanya **Atributs** enumera els atributs del perfil considerats com a diferenciadors. La pestanya **Mesures** enumera els diferenciadors. Cada pestanya inclou els detalls següents:
 

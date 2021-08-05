@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095544"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556112"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicció de recomanacions de productes (versió preliminar)
 
@@ -64,7 +64,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 1. Seleccioneu la peça **Model de recomanacions de productes (versió preliminar)** i seleccioneu **Utilitza aquest model**.
    > [!div class="mx-imgBorder"]
-   > ![Peça Model de recomanació de productes amb el botó Utilitza aquest model](media/product-recommendation-usethismodel.PNG "Peça Model de recomanació de productes amb el botó Utilitza aquest model")
+   > ![Peça Model de recomanació de productes amb el botó Utilitza aquest model.](media/product-recommendation-usethismodel.PNG "Peça Model de recomanació de productes amb el botó Utilitza aquest model")
 
 1. Reviseu la informació sobre els requisits del model. Si teniu les dades necessàries, seleccioneu **Comença**.
 
@@ -93,7 +93,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 1. Assigneu els camps semàntics als atributs de l'entitat d'historial de compres i seleccioneu **Següent**. Per a les descripcions dels camps, consulteu els [requisits previs](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definir la relació d'entitat](media/product-recommendation-purchasehistorymapping.PNG "Pàgina de compra de l'historial que mostra els atributs administrats que estan assignats a camps de l'entitat de l'historial de compra seleccionat")
+   > ![Definiu la relació de l'entitat.](media/product-recommendation-purchasehistorymapping.PNG "Pàgina de compra de l'historial que mostra els atributs administrats que estan assignats a camps de l'entitat de l'historial de compra seleccionat")
 
 1. Si els següents camps no estan emplenats, configureu la relació des de l'entitat de l'historial de compres a l'entitat *Client*.
     1. Seleccioneu l'**Entitat de l'historial de compres**.
@@ -101,7 +101,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
     1. Seleccioneu l'**entitat Client** que coincideixi amb l'entitat Client principal.
     1. Introduïu un nom que descrigui la relació.
        > [!div class="mx-imgBorder"]
-       > ![Pàgina Historial de compres que mostra la creació d'una relació amb el client](media/model-purchase-join.png "Pàgina Historial de compres que mostra la creació d'una relació amb el client")
+       > ![Pàgina Historial de compres que mostra la creació d'una relació amb el client.](media/model-purchase-join.png "Pàgina Historial de compres que mostra la creació d'una relació amb el client")
 
 1. Seleccioneu **Desa**.
 
@@ -145,7 +145,7 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
 
 1. Aneu a la pestanya **Les meves prediccions** a **Intel·ligència** > **Prediccions**.
    > [!div class="mx-imgBorder"]
-   > ![Visualització de la pàgina Les meves prediccions](media/product-recommendation-mypredictions.PNG "Visualització de la pàgina Les meves prediccions")
+   > ![Visualització de la pàgina Les meves prediccions.](media/product-recommendation-mypredictions.PNG "Visualització de la pàgina Les meves prediccions")
 
 1. Seleccioneu la predicció que voleu revisar.
    - **Nom de la predicció:** el nom de la predicció proporcionat en crear-la.
@@ -163,7 +163,7 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
 
 1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció de la qual voleu revisar els resultats i seleccioneu **Visualitza**.
    > [!div class="mx-imgBorder"]
-   > ![Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió](media/product-recommendation-verticalellipses.PNG "Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió")
+   > ![Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió.](media/product-recommendation-verticalellipses.PNG "Visualització d'opcions del menú dels tres punts verticals d'una predicció, que inclou l'edició, l'actualització, la visualització, els registres i la supressió")
 
 1. Hi ha cinc seccions principals de dades a la pàgina de resultats:
     1. **Rendiment del model d'entrenament:** A, B o C són les puntuacions possibles. Aquesta puntuació indica el rendiment de la predicció i pot ser que us ajudi a prendre la decisió d'utilitzar els resultats emmagatzemats a l'entitat de sortida.
@@ -173,13 +173,13 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
             - **C** Un model es considerarà de qualitat **C** si la mètrica "Èxit @ K" és inferior a la línia de base.
                
                > [!div class="mx-imgBorder"]
-               > ![Visualització del resultat del rendiment del model](media/product-recommendation-modelperformance.PNG "Visualització del resultat del rendiment del model")
+               > ![Visualització del resultat del rendiment del model.](media/product-recommendation-modelperformance.PNG "Visualització del resultat del rendiment del model")
             - **Referència**: el model agafa els productes més recomanats pel nombre de compres de tots els clients i utilitza regles apreses identificades pel model per crear un conjunt de recomanacions per als clients. A continuació, les previsions es comparen amb els productes principals, segons el nombre de clients que havien adquirit el producte. Si un client té com a mínim un producte en els seus productes recomanats que també s'ha observat als productes que s'han adquirit més, es consideren part de la referència. Si hi havia 10 d'aquests clients que havien adquirit un producte recomanat de 100 clients totals, la referència seria del 10%.
             - **Èxit @ K**: mitjançant un conjunt de validació de període de temps de les transaccions, es creen recomanacions per a tots els clients i es comparen amb el conjunt de transaccions de validació. Per exemple, en un període de 12 mesos, el mes 12 es podria separar com a conjunt de dades de validació. Si el model preveu almenys un producte que adquiriríeu al mes 12 segons el que s'ha après dels 11 mesos anteriors, el client augmentaria la mètrica "Èxit @ K".
     
     1. **Productes més suggerits (amb recompte):** els cinc millors productes que es van predir per als vostres clients.
        > [!div class="mx-imgBorder"]
-       > ![Gràfic que mostra els 5 productes més recomanats](media/product-recommendation-topproducts.PNG "Gràfic que mostra els 5 productes més recomanats")
+       > ![Gràfic que mostra els 5 productes més recomanats.](media/product-recommendation-topproducts.PNG "Gràfic que mostra els 5 productes més recomanats")
     
     1. **Factors clau de recomanació:** el model utilitza l'historial de transaccions dels clients per fer recomanacions de productes. Aprèn patrons basats en compres passades i troba similituds entre clients i productes. Aquestes similituds s'utilitzen per generar recomanacions de productes.
     Aquests són els factors que podrien influir en una recomanació de producte generada pel model. 
@@ -190,20 +190,20 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
         Cada recomanació de producte està influenciada per un o més d'aquests factors. El percentatge de recomanacions en què intervé cada factor d'influència es visualitza en un gràfic. En l'exemple següent, el 100% de les recomanacions van estar influenciades per transaccions passades, el 60% per similitud del client i el 22% per similitud del producte. Passeu el cursor per sobre de les barres del gràfic per veure el percentatge exacte amb què han intervingut els factors d'influència.
 
         > [!div class="mx-imgBorder"]
-        > ![Factors clau de recomanació](media/product-recommendation-keyrecommendationfactors.png "Factors clau de recomanació apresos pel model per generar recomanacions de producte")
+        > ![Factors clau de recomanació.](media/product-recommendation-keyrecommendationfactors.png "Factors clau de recomanació apresos pel model per generar recomanacions de producte")
        
      
    1. **Estadístiques de dades**: proporciona una visió general del nombre de transaccions, clients i productes que ha considerat el model. Es basa en les dades d'entrada que s'han utilitzat per aprendre patrons i generar recomanacions de productes.
 
       > [!div class="mx-imgBorder"]
-      > ![Estadístiques de dades](media/product-recommendation-datastatistics.png "Estadístiques de dades al voltant de les dades d'entrada utilitzades pel model per aprendre patrons")
+      > ![Estadístiques de dades.](media/product-recommendation-datastatistics.png "Estadístiques de dades al voltant de les dades d'entrada utilitzades pel model per aprendre patrons")
 
       Aquesta secció mostra estadístiques al voltant dels punts de dades que ha utilitzat el model per aprendre patrons i generar recomanacions de productes. El filtratge, tal com està configurat en la configuració del model, s'aplicarà sobre la sortida generada pel model. No obstant això, el model utilitza totes les dades disponibles per aprendre patrons. Per tant, si utilitzeu el filtratge de productes a la configuració del model, en aquesta secció es mostrarà el nombre total de productes que el model ha analitzat per aprendre patrons, que poden diferir del nombre de productes que coincideixen amb els criteris de filtratge definits.
 
    1. **Recomanacions de productes d'alta seguretat:** mostra de recomanacions que es proporcionen als clients que el model creu amb seguretat que pot adquirir el client.    
       Si s'afegeix un catàleg de productes, els identificadors de producte se substitueixen per noms de producte. Els noms de producte proporcionen una informació més útil i intuïtiva sobre les prediccions.
        > [!div class="mx-imgBorder"]
-       > ![Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat](media/product-recommendation-highconfidence.PNG "Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat")
+       > ![Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat.](media/product-recommendation-highconfidence.PNG "Llista que mostra els suggeriments d'alta seguretat per a un conjunt de clients individuals seleccionat")
 
 ## <a name="manage-predictions"></a>Administrar prediccions
 

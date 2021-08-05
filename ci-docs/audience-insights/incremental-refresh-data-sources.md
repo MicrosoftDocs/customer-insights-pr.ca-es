@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596809"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554147"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualització incremental per a fonts de dades basades en el Power Query
 
@@ -45,7 +45,7 @@ Les conclusions del públic permeten actualitzar de manera incremental fonts de 
 1. A la **Configuració de l'actualització incremental**, configurareu l'actualització incremental per a totes les entitats que heu seleccionat en crear la font de dades.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar les entitats en una font de dades per a l'actualització incremental](media/incremental-refresh-settings.png "Configurar les entitats en una font de dades per a l'actualització incremental")
+   > ![Configurar les entitats en una font de dades per a l'actualització incremental.](media/incremental-refresh-settings.png "Configurar les entitats en una font de dades per a l'actualització incremental")
 
 1. Seleccioneu una entitat i proporcioneu els detalls següents:
 

@@ -1,7 +1,7 @@
 ---
 title: Connector del Power BI
 description: Apreneu com utilitzar el connector del Dynamics 365 Customer Insights al Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596027"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661090"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
 
@@ -39,7 +39,7 @@ Creeu visualitzacions per a les dades amb el Power BI Desktop. Genereu informaci
 
 1. Al quadre de diàleg **Navegador**. podeu veure la llista de tots els entorns als quals teniu accés. Expandiu un entorn i obriu qualsevol de les carpetes (entitats, mesures, segments i enriquiments). Per exemple, obriu la carpeta **Entitats** per veure totes les entitats que podeu importar.
 
-   ![Navegador del connector del Power BI](media/power-bi-navigator.png "Navegador del connector del Power BI")
+   ![Navegador del connector del Power BI.](media/power-bi-navigator.png "Navegador del connector del Power BI")
 
 1. Activeu les caselles de selecció que hi ha al costat de les entitats que voleu incloure i **Carrega**. Podeu seleccionar diverses entitats de diversos entorns.
 
@@ -68,5 +68,11 @@ Podeu identificar i suprimir les relacions duplicades.
 3. Suprimiu les relacions duplicades identificades.
 
 Després de la supressió de les relacions duplicades, proveu de tornar a configurar el connector del Power BI. L'entorn hauria d'estar disponible ara.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Errors als camps de data en carregar entitats al Power BI Desktop
+
+En carregar entitats que contenen camps amb un format de data com MM/DD/YYYY, podeu trobar errors a causa de formats de configuració regional no coincidents. Aquest desajust es produeix quan el fitxer del Power BI Desktop està definit en una configuració regional que no és l'anglès (Estats Units), perquè els camps de data de les conclusions del públic es desen en format estatunidenc.
+
+El fitxer del Power BI Desktop té una configuració regional única que s'aplica en recuperar dades. Per fer que aquests camps de data s'interpretin correctament, definiu la configuració regional del fitxer .BPI a Anglès (Estats Units). [Obteniu informació sobre com podeu canviar la configuració regional d'un fitxer del Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

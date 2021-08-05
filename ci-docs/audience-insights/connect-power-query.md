@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305879"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554671"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a una font de dades del Power Query
 
@@ -42,7 +42,7 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 1. El diàleg **Power Query: edita les consultes** permet revisar i refinar les dades. Les entitats que els sistemes han identificat a la font de dades seleccionada apareixen a la subfinestra esquerra.
 
    > [!div class="mx-imgBorder"]
-   > ![Quadre de diàleg Edita les consultes](media/data-manager-configure-edit-queries.png "Quadre de diàleg Edita les consultes")
+   > ![Quadre de diàleg Edita les consultes.](media/data-manager-configure-edit-queries.png "Quadre de diàleg Edita les consultes")
 
 1. També podeu transformar les dades. Seleccioneu una entitat per editar o transformar. Utilitzeu les opcions de la finestra del Power Query per aplicar transformacions. Cada transformació apareix a **Passos aplicats**. El Power Query proporciona nombroses opcions de transformació incorporades. Per a més informació, vegeu [Transformacions del Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Els connectors amb una marca de selecció a la columna **Customer Insights (flux
 2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu canviar i seleccioneu **Edita** al menú desplegable.
 
    > [!div class="mx-imgBorder"]
-   > ![Opció Edita](media/edit-option-data-sources.png "Opció Edita")
+   > ![Opció Edita.](media/edit-option-data-sources.png "Opció Edita")
 
 3. Apliqueu els canvis i transformacions al diàleg **Power Query: edita les consultes** tal com es descriu a la secció [Crear una nova font de dades](#create-a-new-data-source).
 

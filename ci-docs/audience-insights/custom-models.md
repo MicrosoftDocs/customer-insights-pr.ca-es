@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305609"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554836"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
@@ -42,7 +42,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 1. Doneu al model personalitzat un nom que pugueu reconèixer al camp **Nom**.
 
    > [!div class="mx-imgBorder"]
-   > ![Captura de pantalla de la subfinestra Flux de treball nou](media/new-workflowv2.png "Captura de pantalla de la subfinestra Flux de treball nou")
+   > ![Captura de pantalla de la subfinestra Flux de treball nou.](media/new-workflowv2.png "Captura de pantalla de la subfinestra Flux de treball nou")
 
 1. Seleccioneu l'organització que conté el servei web a **Inquilí que conté el servei web**.
 
@@ -59,7 +59,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
    > El flux de treball del model personalitzat aplicarà heurística per assignar els camps d'entrada del servei web als atributs de l'entitat segons el nom i el tipus de dades del camp. Veureu un error si un camp del servei web no es pot assignar a una entitat.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar un flux de treball](media/intelligence-screen2-updated.png "Configurar un flux de treball")
+   > ![Configurar un flux de treball.](media/intelligence-screen2-updated.png "Configurar un flux de treball")
 
 1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
    - Machine Learning Studio (clàssic)
@@ -70,12 +70,12 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
       1. Seleccioneu, al menú desplegable, el **Nom del paràmetre de camí de sortida** del pipeline per lots.
 
       > [!div class="mx-imgBorder"]
-      > ![Subfinestra Paràmetre de sortida del model](media/intelligence-screen3-outputparameters.png "Subfinestra Paràmetre de sortida del model")
+      > ![Subfinestra Paràmetre de sortida del model.](media/intelligence-screen3-outputparameters.png "Subfinestra Paràmetre de sortida del model")
 
 1. Seleccioneu l'atribut coincident de la llista desplegable **Identificador de client als resultats** que identifica els clients i seleccioneu **Desa**.
 
    > [!div class="mx-imgBorder"]
-   > ![Subfinestra Relacioneu els resultats amb les dades del client](media/intelligence-screen4-relatetocustomer.png "Subfinestra Relacioneu els resultats amb les dades del client")
+   > ![Subfinestra Relacioneu els resultats amb les dades del client.](media/intelligence-screen4-relatetocustomer.png "Subfinestra Relacioneu els resultats amb les dades del client")
 
 1. Veureu la pantalla **Flux de treball desat** amb els detalls sobre el flux de treball.    
    Si heu configurat un flux de treball per a un pipeline de l'aprenentatge automàtic de l'Azure, les conclusions del públic s'adjuntaran a l'àrea de treball que conté el pipeline. Les conclusions del públic obtindran una funció de **Col·laborador** a l'àrea de treball de l'Azure.

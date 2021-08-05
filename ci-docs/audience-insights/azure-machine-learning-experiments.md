@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597407"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554423"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 
@@ -52,7 +52,7 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
      Al dissenyador, obriu **Selecciona les columnes del conjunt de dades** i seleccioneu **Defineix com a paràmetre del pipeline** per indicar un nom per al paràmetre.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrització de conjunts de dades del dissenyador](media/intelligence-designer-dataset-parameters.png "Parametrització de conjunts de dades del dissenyador")
+     > ![Parametrització de conjunts de dades del dissenyador.](media/intelligence-designer-dataset-parameters.png "Parametrització de conjunts de dades del dissenyador")
    
 * Paràmetre del conjunt de dades a l'SDK (Python)
    
@@ -78,7 +78,7 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
 
 * El dissenyador proporciona el [mòdul de dades ](/azure/machine-learning/algorithm-module-reference/export-data)d'exportació que permet exportar la sortida d'un pipeline a l'Azure Storage. Actualment, el mòdul ha d'utilitzar el tipus de magatzem de dades **Emmagatzematge blob de l’Azure** i parametritzar el **Magatzem de dades** i el **Camí** relatiu. El Customer Insights substitueix aquests dos paràmetres durant l'execució del pipeline per un magatzem de dades i un camí accessible per al producte.
    > [!div class="mx-imgBorder"]
-   > ![Exportar la configuració de mòduls de dades](media/intelligence-designer-importdata.png "Exportar la configuració de mòduls de dades")
+   > ![Exportar la configuració de mòduls de dades.](media/intelligence-designer-importdata.png "Exportar la configuració de mòduls de dades")
    
 * Quan escriviu la sortida d'inferència mitjançant codi, podreu pujar la sortida a un camí dins d'un *magatzem de dades registrat* a l'àrea de treball. Si el camí i el magatzem de dades es parametritzen al pipeline, el Customer Insights podrà llegir i importar la sortida d'inferència. Actualment s'admet una única sortida tabular en format csv. El camí ha d'incloure el directori i el nom del fitxer.
 
