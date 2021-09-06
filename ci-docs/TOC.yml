@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Límits de servei
       href: engagement-insights/quotas.md
-- name: Poseu-vos en contacte amb el servei d'assistència tècnica
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integrar conclusions d'interacció i del públic
+  items:
+    - name: Enllaç de les conclusions d'interacció i del públic
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Ús dels segments de conclusions del públic en informes de conclusions sobre la interacció
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Utilitzar dimensions demogràfiques per dividir dades de comportament
+      href: engagement-insights/curate-dimensions.md
+- name: Obteniu assistència tècnica
+  href: 'https://dynamics.microsoft.com/en-us/support/'

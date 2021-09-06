@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685450"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377776"
 ---
 # <a name="create-and-manage-segments"></a>Crear i administrar segments
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685450"
 > - Una subfinestra lateral estarà constantment disponible per seleccionar atributs.
 > - Opció per seleccionar camins de relació d'entitat.
 > Per provar el nou constructor de segments, envieu un correu electrònic amb l'assumpte "Sol·licitud per habilitar el nou constructor de segments" a cihelp [arrova] microsoft.com. Incloeu el nom de l'organització i l'identificador de l'entorn d'espai aïllat.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elements del creador de segments." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organitzeu el segment amb regles i subregles. Cada regla o subregles consta de condicions. Combinar les condicions amb operadors lògics
+>
+> 2 - Trieu el [camí de la relació](relationships.md) entre les entitats que s'apliquen a una regla. El camí de la relació determina quins atributs es poden utilitzar en una condició.
+>
+> 3 - Administreu regles i subregles. Canvieu la posició d'una regla o suprimiu-la.
+>
+> 4 - Afegiu condicions i creeu el nivell adequat d'imbricació amb subregles
+>
+> 5- Apliqueu operacions de conjunt a les regles connectades.
+>
+> 6 - Utilitzeu la subfinestra d'atributs per afegir atributs d'entitat disponibles o crear condicions segons els atributs. A la subfinestra es mostra la llista d'entitats i d'atributs, segons el camí de relació seleccionat, que estan disponibles per a la regla seleccionada.
+>
+> 7 - Afegiu condicions basades en atributs a regles i subregles existents o afegiu-les a una regla nova.
+>
+> 8 - Desfés i refés canvis en crear el segment.
 
 Definiu filtres complexos per a l'entitat de client unificada i les entitats relacionades. Cada segment, després del processament, crea un conjunt de registres de client que podeu exportar i on podeu prendre mesures. Els segments s'administren a la pàgina **Segments**. 
 
@@ -147,6 +164,6 @@ Els segments ràpids us permeten crear segments senzills amb un sol operador rà
 
 ## <a name="next-steps"></a>Passos següents
 
-[Exporteu un segment](export-destinations.md) i exploreu la [targeta del client](customer-card-add-in.md) i els [connectors](export-power-bi.md) per obtenir informació al nivell del client.
+[Exporteu un segment](export-destinations.md) i exploreu la [integració amb la targeta de client](customer-card-add-in.md) per utilitzar segments en altres aplicacions.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

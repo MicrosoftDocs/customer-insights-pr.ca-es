@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights al Dynamics 365 Marketing
 description: Apreneu a configurar la connexió i exportar a Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692469"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417193"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Ús de segments al Dynamics 365 Marketing (versió preliminar)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Utilitzeu [segments](segments.md) per generar campanyes i posar-vos en contacte amb grups específics de clients amb el Dynamics 365 Marketing. Per obtenir més informació, vegeu [Utilitzar segments del Dynamics 365 Customer Insights amb el Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Utilitzeu [segments](segments.md) per generar campanyes i posar-vos en contacte amb grups específics de clients amb el Dynamics 365 Marketing. Per obtenir més informació, vegeu [Utilitzar segments del Dynamics 365 Customer Insights amb el Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Si utilitzeu les noves funcionalitats del Dynamics 365 Marketing per a l'orquestració del recorregut del client en temps real en una organització del Dataverse, no cal que creeu una exportació estàndard al Dynamics 365 Marketing. Els contactes i els segments de les conclusions del públic estan disponibles directament al Dynamics 365 Marketing després de connectar el Marketing i el Customer Insights Abans de suprimir les exportacions existents, reviseu la documentació sobre [com connectar les conclusions del públic i l'orquestració del recorregut del client del Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Requisit previ per a la connexió
 

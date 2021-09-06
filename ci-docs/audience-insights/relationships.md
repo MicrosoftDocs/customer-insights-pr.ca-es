@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171152"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035219"
 ---
 # <a name="relationships-between-entities"></a>Relacions entre entitats
 
@@ -82,7 +82,7 @@ Aquesta pàgina ofereix un conjunt d'opcions per a relacions existents i noves:
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar el visualitzador de relacions
 
-El visualitzador de relacions mostra un diagrama de xarxa de les relacions existents entre les entitats connectades i la seva cardinalitat.
+El visualitzador de relacions mostra un diagrama de xarxa de les relacions existents entre les entitats connectades i la seva cardinalitat. També visualitza el camí de la relació.
 
 Per personalitzar la visualització, podeu canviar la posició dels quadres arrossegant-los al llenç.
 
@@ -92,6 +92,20 @@ Opcions disponibles:
 - **Exporta com a imatge**: deseu la visualització actual com a fitxer d'imatge.
 - **Canvia a la disposició horitzontal/vertical**: canvieu l'alineació de les entitats i les relacions.
 - **Edita**: actualitzeu les propietats de les relacions personalitzades a la subfinestra d'edició i deseu els canvis.
+
+### <a name="relationship-path"></a>Camí de la relació
+
+El camí de la relació descriu les entitats que estan connectades amb relacions entre una entitat d'origen i una entitat de destinació. S'utilitza quan es crea un segment o una mesura que inclou altres entitats que no són l'entitat de perfil unificada i hi ha diverses opcions per arribar a l'entitat de perfil unificada.
+
+El camí de la relació informa el sistema sobre les relacions per accedir a l'entitat de perfil unificada. Les diferents rutes de relació poden donar resultats diferents.
+
+Per exemple, l'entitat *eCommerce_eCommercePurchases* té les relacions següents amb l'entitat del *client* del perfil unificat:
+
+- eCommerce_eCommercePurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
+
+El camí de la relació determina quines entitats podeu utilitzar quan es creen regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases), en un punt de venda (POS_posPurchases), i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
 
 ## <a name="manage-existing-relationships"></a>Administrar le relacions existents 
 
@@ -105,6 +119,6 @@ Seleccioneu una relació i trieu una de les opcions següents:
 
 ## <a name="next-step"></a>Pas següent
 
-Les relacions de sistema i les personalitzades s'utilitzen per [crear segments](segments.md) basats en diverses fonts de dades que ja no estan aïllades.
+Les relacions del sistema i personalitzades s'utilitzen per [crear segments](segments.md) i [mesures](measures.md) basades en diverses fonts de dades que no estan aïllades.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

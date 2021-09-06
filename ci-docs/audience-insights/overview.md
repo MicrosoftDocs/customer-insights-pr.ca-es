@@ -1,7 +1,7 @@
 ---
 title: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 description: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539103"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034348"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
-Les conclusions del públic us permeten analitzar més profundament els vostres clients. Connecteu dades de diverses fonts transaccionals, conductuals i observacionals per crear una visualització del client de 360 graus. Utilitzeu aquests coneixements per utilitzar processos i experiències centrades en el client. Unifiqueu i analitzeu les dades dels clients i aprofiteu-les per prendre conclusions i mesures intel·ligents.
+[Conclusions del públic, una funcionalitat del Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) que us ajuda a comprendre millor els clients. Connecteu dades de diverses fonts transaccionals, conductuals i observacionals per crear una visualització del client de 360 graus. Utilitzeu aquests coneixements per utilitzar processos i experiències centrades en el client. Unifiqueu i analitzeu les dades dels clients i aprofiteu-les per prendre conclusions i mesures intel·ligents.
 
 ## <a name="main-benefits"></a>Principals avantatges 
 
@@ -34,9 +34,9 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
 
 - **Alimentar els processos empresarials i experiències dels clients personalitzades**
 
-  - Impulseu la interacció personalitzada entre canals: oferiu als professionals de màrqueting, vendes i servei informació del client contextual i de fàbrica i targetes de perfil del client a mida incorporades en les aplicacions empresarials que ja utilitzen cada dia
-  - Automatitzeu els processos i experiències centrats en el client a partir de perfils personalitzables, mesures empresarials i segments.
-  - Habiliteu i amplieu les experiències de línia de negoci creades sobre el [Microsoft Power Platform](https://powerplatform.microsoft.com/). Creeu ràpidament aplicacions amb informació incrustada mitjançant un eficaç mètode de codi baix del PowerApps.  
+  - Impulseu la interacció personalitzada entre canals: apodereu els professionals del màrqueting, les vendes i el servei. Utilitzeu targetes de perfil de client adaptades, predefinides i de conclusions que s'integrin amb les aplicacions empresarials que ja utilitzen.
+  - Automatitzeu els processos i experiències centrats en perfils personalitzables, mesures empresarials i segments.
+  - Habiliteu i amplieu les experiències de línia de negoci creades sobre el [Microsoft Power Platform](https://powerplatform.microsoft.com/). Creeu ràpidament aplicacions amb informació incrustada mitjançant un eficaç mètode de codi baix del Power Apps.  
 
 ## <a name="key-audiences"></a>Públics clau
 
@@ -50,13 +50,18 @@ Les conclusions del públic us permeten analitzar més profundament els vostres 
 
 - **Usuaris empresarials:**
 
-  - Informació sobre els perfils de client de 360 graus i visualitzacions d'extrem a extrem del recorregut del client.
-  - Visualitzeu dades del client de 360 graus dins dels processos empresarials del Dynamics 365 amb paquets creats prèviament.
+  - Conclusions sobre els perfils de client de 360 graus i recorreguts dels clients.
+  - Obteniu una visualització de 360º de les dades del client en processos empresarials del Dynamics 365 amb paquets creats prèviament.
 
 - **Analistes empresarials:**
 
   - Creeu perfils personalitzables, definiu mesures, creeu segments i beneficieu-vos de l'anàlisi predictiva per obtenir una visualització de 360 graus del client, específica de la vostra organització.  
-  - Utilitzeu connectors de fàbrica per a diverses aplicacions o API de Microsoft i de tercers per processar encara més les conclusions.
+  - Utilitzeu connectors predefinits per a diverses aplicacions o API de Microsoft i de tercers per processar les conclusions.
 
+## <a name="pricing-and-licensing"></a>Preus i llicències
+
+El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Les funcionalitats amb drets inclouen un conjunt de perfils, actualitzacions diàries del sistema, sol·licituds del Power Platform i dos entorns. Podeu adquirir capacitat addicional i una llicència per augmentar la quota per defecte. 
+- Capacitat i drets detallats: [Guia de llicències del Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Informació general sobre els preus: [Preus del Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
