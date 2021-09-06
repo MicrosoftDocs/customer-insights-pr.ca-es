@@ -1,6 +1,6 @@
 ---
-title: Exportar les dades del Customer Insights a l'Adobe Experience Platform
-description: Apreneu a utilitzar els segments de conclusions del públic a l'Adobe Experience Platform.
+title: Exportar dades del Customer Insights a l'Adobe Experience Platform
+description: Obteniu informació sobre com utilitzar els segments de conclusions del públic a l'Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305512"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032105"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilitzar els segments del Customer Insights a l'Adobe Experience Platform (versió preliminar)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilitzar segments del Customer Insights a l'Adobe Experience Platform (versió preliminar)
 
-Com a usuari de les conclusions del públic al Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de la informació sobre el públic a l'Adobe Experience Platform i aplicacions com ara l'Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
+Com a usuari de les conclusions del públic al Dynamics 365 Customer Insights, pot ser que hàgiu creat segments per fer que les campanyes de màrqueting siguin més eficients adreçant-vos a públics rellevants. Per utilitzar un segment de conclusions del públic a l'Adobe Experience Platform i aplicacions, com ara Adobe Campaign Standard, heu de seguir alguns passos que es descriuen en aquest article.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de procés dels passos que es descriuen en aquest article.":::
 
 ## <a name="prerequisites"></a>Requisits previs
 
 -   Llicència del Dynamics 365 Customer Insights
--   Llicència de l'Adobe Experience Platform
+-   Llicència del Adobe Experience Platform
 -   Llicència de l'Adobe Campaign Standard
 -   Compte de l'Emmagatzematge blob de l'Azure
 
 ## <a name="campaign-overview"></a>Informació general de la campanya
 
-Per comprendre millor com podeu utilitzar els segments de la informació sobre el públic a l'Adobe Experience Platform, plantegem una campanya d'exemple fictícia.
+Per comprendre millor com podeu utilitzar els segments de les conclusions del públic a l'Adobe Experience Platform, analitzarem una campanya fictícia d'exemple.
 
-Suposem que la vostra empresa ofereix un servei mensual basat en subscripció als seus clients dels Estats Units. Voleu identificar els clients les subscripcions dels qual s'han de renovar en els propers vuit dies però que encara no han renovat la seva subscripció. Per mantenir aquests clients, heu d'enviar-los una oferta promocional per correu electrònic, mitjançant l'Adobe Experience Platform.
+Suposem que la vostra empresa ofereix un servei mensual basat en subscripció als seus clients dels Estats Units. Voleu identificar els clients les subscripcions dels qual s'han de renovar en els propers vuit dies però que encara no han renovat la seva subscripció. Per mantenir aquests clients, us recomanem que els envieu una oferta promocional per correu electrònic mitjançant l'Adobe Experience Platform.
 
 En aquest exemple, volem executar la campanya promocional de correu electrònic d'un cop. En aquest article no es cobreix el cas d'ús de l'execució de la campanya més d'una vegada.
 
@@ -107,26 +107,26 @@ Exemple: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definir el model de dades d'experiència (XDM) a l'Adobe Experience Platform
 
-Abans que les dades exportades des de la informació sobre el públic es puguin utilitzar a l'Adobe Experience Platform, hem de definir l'esquema del Model de dades d'experiència i [configurar les dades del perfil de client en temps real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Per poder utilitzar les dades exportades de les conclusions del públic a l'Adobe Experience Platform, hem de definir l'esquema del Model de dades d'experiència i [configurar les dades del perfil de client en temps real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Apreneu [què és l'XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) i compreneu els [conceptes bàsics de la composició de l'esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Importar dades a l'Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Importeu dades al Adobe Experience Platform
 
-Ara que tot està al seu lloc, hem d'importar les dades del públic preparades des de la informació del públic a l'Adobe Experience Platform.
+Ara que tot està preparat, hem d'importar les dades del públic preparades de les conclusions del públic a l'Adobe Experience Platform.
 
 En primer lloc, [creeu una connexió d'origen d'emmagatzematge blob de l'Azure](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Després de definir la connexió d'origen, [configureu un flux de dades](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) per a una connexió per lots d'emmagatzematge en el núvol per importar la sortida del segment de la informació sobre el públic a l'Adobe Experience Platform.
+Després de definir la connexió d'origen, [configureu un flux de dades](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) per a una connexió per lots d'emmagatzematge al núvol per importar la sortida del segment de les conclusions del públic a l'Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Crear un públic a l'Adobe Campaign Standard
 
-Per enviar el correu electrònic d'aquesta campanya, utilitzarem l'Adobe Campaign Standard. Després d'importar les dades a l'Adobe Experience Platform, hem de [crear un públic](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) a l'Adobe Campaign Standard utilitzant les dades de l'Adobe Experience Platform.
+Per enviar el correu electrònic per a aquesta campanya, utilitzarem l'Adobe Campaign Standard. Després d'importar les dades a l'Adobe Experience Platform, hem de [crear un públic](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) a l'Adobe Campaign Standard amb les dades de l'Adobe Experience Platform.
 
 
-Apreneu a [utilitzar el constructor de segments](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) a l'Adobe Campaign Standard per definir un públic a partir de les dades de l'Adobe Experience Platform.
+Obteniu informació sobre com [utilitzar el creador de segments](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) a l'Adobe Campaign Standard per definir un públic basat en les dades de l'Adobe Experience Platform.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Crear i enviar el correu electrònic mitjançant l'Adobe Campaign Standard
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Crear i enviar el correu electrònic amb l'Adobe Campaign Standard
 
 Creeu el contingut del correu electrònic i, a continuació, [proveu i envieu](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) el correu electrònic.
 
