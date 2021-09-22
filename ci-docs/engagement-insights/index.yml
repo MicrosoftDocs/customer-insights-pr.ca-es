@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Capacitat dels coneixements d'interacció (versió preliminar) al Dynamics 365 Customer Insights
+summary: Recopileu dades per als llocs web. Compreneu les interaccions i l'ús dels clients en els vostres llocs de manera interactiva. Utilitzeu la integració completa entre els coneixements d'interacció i els coneixements del públic per enriquir les anàlisis de comportament en temps real amb els informes de perfil del client. Enriquiu els perfils de client amb activitats web per obtenir dades de comportament en temps real amb dades rellevants dels clients. Transformeu l'empresa per obtenir un valor immediat de les dades dels vostres clients.
+metadata:
+  title: Documentació dels coneixements d'interacció (versió preliminar)
+  description: Centre d'ajuda amb enllaços clau per als coneixements d'interacció.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: ca-ES
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036226"
+landingContent:
+- title: Quant a
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informació general de les capacitats
+      url: overview.md
+    - text: Termes i conceptes
+      url: glossary.md
+    - text: Descobriu les conclusions sobre la interacció
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Incorporació
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Introducció
+      url: get-started.md
+    - text: Crea una àrea de treball
+      url: create-workspace.md
+    - text: Equipar el vostre lloc web
+      url: instrument-website.md
+- title: Informes
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Visualitza els informes
+      url: view-reports.md
+    - text: Creació d'informes personalitzats
+      url: custom-reports.md
+    - text: Veure l'informe de perfils unificats
+      url: profile-reports.md
+    - text: Crear informes d'embut
+      url: funnel-reports.md
+- title: Esdeveniments
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crea esdeveniments refinats
+      url: refined-events.md
+    - text: Exporta esdeveniments
+      url: export-events.md
+    - text: Suprimir i exportar dades personals
+      url: delete-export-personal-data.md
+- title: Recursos per a desenvolupadors
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Recursos per a desenvolupadors
+      url: developer-resources.md
+    - text: Exemple del WebSDK
+      url: websdk-sample.md
+    - text: Escenaris avançats de l'SDK web
+      url: advanced-SDK-implementation.md
+    - text: Exemple de l'SDK de l'Android
+      url: get-started-android.md
+    - text: Exemple de l'SDK de l'iOS
+      url: get-started-ios.md
+- title: Administració
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Administrar entorns i àrees de treball
+      url: manage-environments-workspaces.md
+    - text: Connexió de les conclusions del públic
+      url: configure-connections.md
+    - text: Administrar les galetes i el consentiment de l'usuari
+      url: user-consent-storage.md
