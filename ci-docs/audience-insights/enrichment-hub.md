@@ -1,7 +1,7 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032516"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469940"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -29,6 +29,7 @@ Heu de tenir permisos de col·laborador o administrador per crear o editar els e
 
 A la pestanya **Detecta**, trobareu els següents enriquiments:
 
+- [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
 - [Marques](enrichment-microsoft.md) proporcionades per Microsoft
 - [Interessos](enrichment-microsoft.md) proporcionats per Microsoft
 - [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft
@@ -62,5 +63,17 @@ Les millores de tercers es configuren mitjançant [connexions](connections.md), 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquiments del mateix tipus
 
 L'entitat que s'ha d'enriquir s'especifica durant la configuració de l'enriquiment, la qual cosa us permet enriquir només un subconjunt dels vostres perfils. Per exemple, podeu enriquir només les dades d'un segment concret. Podeu configurar diversos enriquiments del mateix tipus i reutilitzar la mateixa connexió. Alguns enriquiments tindran límits pel que fa al nombre d'enriquiments del mateix tipus que es poden crear. Els límits i l'ús actual es poden veure a la pàgina **Enriquiment**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Veure el progrés del procés d'enriquiment
+
+Podeu trobar detalls sobre el processament d'un enriquiment, incloent-hi l'estat i els possibles problemes mentre s'actualitza o després de l'actualització. Compreneu quins processos s'impliquen per actualitzar un enriquiment i el temps que ha trigat a executar els processos. L'estat d'enriquiment està admès per a Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
+
+Per veure l'estat d'un enriquiment
+
+1. Aneu a **Dades** > **Enriquiment**. 
+1. A la pestanya **Els meus enriquiments**, seleccioneu l'estat d'un enriquiment per obrir una subfinestra lateral. 
+1. A la subfinestra **Detalls del progrés**, expandiu la secció **Enriquiments**. 
+1. A l'enriquiment del qual voleu veure el progrés, seleccioneu **Mostra els detalls**. 
+1. A la subfinestra **Detalls de la tasca**, seleccioneu **Mostra els detalls** per veure els processos implicats en l'actualització de l'enriquiment i el seu estat. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

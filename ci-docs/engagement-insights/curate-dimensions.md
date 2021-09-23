@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461091"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466336"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilitzar dimensions demogràfiques per dividir dades de comportament
 
@@ -29,7 +29,7 @@ Mitjançant dimensions demogràfiques del perfil unificat, els usuaris de conclu
 - Un entorn de conclusions d’interacció en què tingueu dades de perfil del client enllaçades a l’entorn de conclusions del públic on es creen els perfils de clients. Més informació: [Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Després de crear un enllaç entre els entorns de conclusions del públic i d'interacció, pot ser que només vulgueu dades específiques de les propietats del perfil del client, que poden ser útils com a dimensions de les conclusions d'interacció. Per obtenir-ne més informació, aneu a [Habilitació dels segments i els atributs dels perfils unificats de les conclusions del públic](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Després de crear un enllaç entre els entorns de conclusions del públic i d'interacció, pot ser que només vulgueu dades específiques de les propietats del perfil del client, que poden ser útils com a dimensions de les conclusions d'interacció. Per obtenir-ne més informació, aneu a [Habilitació dels segments i els atributs dels perfils unificats de les conclusions del públic](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crear un informe nou personalitzat
 

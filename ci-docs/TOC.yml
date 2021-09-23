@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Característiques noves i actualitzades
       href: audience-insights/whats-new-audience-insights.md
-    - name: Creació d'un entorn nou
-      href: audience-insights/get-started-paid.md
+    - name: Introducció
+      items:
+        - name: Guia d'inici ràpid
+          href: audience-insights/get-started.md
+        - name: Creació d'un entorn nou
+          href: audience-insights/get-started-paid.md
+        - name: Explorar la informació del públic
+          href: audience-insights/home.md
     - name: Aprendre mòduls
       items:
         - name: Ingerir dades
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adreces millorades
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Enriquir amb l'Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Enriquir amb HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Enriquir amb el Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Referències d'API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Límits de servei
-      href: audience-insights/service-limits.md
-    - name: Sol·licituds DSR de l'RGPD
-      href: audience-insights/gdpr.md
-- name: Conclusions d'interacció (versió preliminar)
+- name: Conclusions sobre la interacció (versió preliminar)
   items:
     - name: Centre d'ajuda
       href: engagement-insights/index.yml
     - name: Informació general de les capacitats
       href: engagement-insights/overview.md
-    - name: Prova gratuïta
-      href: 'https://pi.dynamics.com/'
     - name: Introducció
       items:
-        - name: Introducció
+        - name: Guia d'inici ràpid
           href: engagement-insights/get-started.md
         - name: Crea una àrea de treball
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Administrar entorns i àrees de treball
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Configurar connexions
-          href: engagement-insights/configure-connections.md
         - name: Administrar les galetes i el consentiment de l'usuari
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Suprimir i exportar dades personals
-          href: engagement-insights/delete-export-personal-data.md
     - name: Disponibilitat regional
       href: engagement-insights/regional-availability.md
-    - name: Límits de servei
-      href: engagement-insights/quotas.md
 - name: Integrar conclusions d'interacció i del públic
   items:
     - name: Enllaç de les conclusions d'interacció i del públic
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Utilitzar dimensions demogràfiques per dividir dades de comportament
       href: engagement-insights/curate-dimensions.md
+- name: Límits de servei
+  href: service-limits.md
+- name: Drets i sol·licituds de DSR
+  href: dsr-rights-requests.md
 - name: Obteniu assistència tècnica
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

@@ -1,20 +1,20 @@
 ---
 title: Activitats del client
-description: Definiu activitats de client i visualitzeu-les a la cronologia del client.
-ms.date: 04/07/2021
+description: Definir activitats de client i visualitzar-les en una cronologia dels perfils del client.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033619"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494399"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
@@ -60,12 +60,15 @@ Les fonts de dades poden incloure entitats amb dades transaccionals i d'activita
       - **Detall addicional**: camp amb informació rellevant per a aquesta activitat.
       - **Icona** : icona que representa millor aquest tipus d'activitat.
       - **Adreça web**: camp que conté una adreça URL amb informació sobre aquesta activitat. Per exemple, el sistema transaccional que és l'origen d'aquesta activitat. Aquesta adreça URL pot ser qualsevol camp de la font de dades; o bé, es pot crear com a camp nou mitjançant una transformació del Power Query. Les dades d'adreça URL s'emmagatzemaran a l'entitat *Activitat unificada*, que es pot consumir als registres avall mitjançant [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifiqueu les dades de l'activitat de client en una entitat Activitat unificada.":::
+
+   - **Mostra a la cronologia**
+      - Trieu si voleu que es mostri aquesta activitat a la visualització de la cronologia dels vostres perfils de client. Seleccioneu **Sí** per mostrar l'activitat a la cronologia o **No** per amagar-la'n.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifiqueu les dades de l'activitat de client en una entitat Activitat unificada.":::
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. Podeu seleccionar **Acabament i revisió** per desar l'activitat ara amb el tipus d'activitat definit com a **Altres**. 
 
-1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, els tipus d'activitats de *Subscripció* i *SalesOrderLine* es poden assignar de manera semàntica després d'acordar l'assignació dels camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
+1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, els tipus d'activitats de *Comentaris*, *Fidelitat*, *SalesOrder*, *SalesOrderLine* i *Subscripció* es poden assignar semànticament després d'acordar l'assignació dels camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. 
 

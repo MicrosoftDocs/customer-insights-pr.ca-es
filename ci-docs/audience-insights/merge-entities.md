@@ -1,7 +1,7 @@
 ---
 title: Combinar entitats a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034990"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494307"
 ---
 # <a name="merge-entities"></a>Combinar entitats
 
@@ -66,7 +66,7 @@ Canvieu el nom de visualització dels atributs combinats. No podeu canviar el no
 
 Excloeu un atribut del perfil de client unificat. Si el camp s'utilitza en altres processos, per exemple, en un segment, suprimiu-lo d'aquests processos abans d'excloure'l del perfil de client. 
 
-1. Seleccioneu el camp combinat.
+1. Seleccioneu un camp combinat.
   
 1. Seleccioneu **Mostra'n més** i trieu **Exclou**.
 
@@ -76,17 +76,40 @@ Excloeu un atribut del perfil de client unificat. Si el camp s'utilitza en altre
 
 A la pàgina **Combina**, seleccioneu **Camps exclosos** per veure la llista de tots els camps exclosos. Aquesta subfinestra us permet tornar a afegir camps exclosos.
 
+## <a name="edit-a-merged-field"></a>Editar un camp combinat
+
+1.  Seleccioneu un camp combinat.
+
+1.  Seleccioneu **Mostra'n més** i trieu **Edita**.
+
+1.  Especifiqueu com combinar els camps d'una de les tres opcions:
+    - **Importància**: s'identifica el valor guanyador en funció de la classificació d'importància especificada per als camps participants. És l'opció de combinació per defecte. Seleccioneu **Desplaça amunt/avall** per definir la classificació d'importància.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="L'opció d'importància al quadre de diàleg de camps combinats."::: 
+    - **Més recents**: identifica el valor guanyador en funció del més recent. Requereix una data o un camp numèric per a cada entitat participants a l'àmbit dels camps combinats per definir el temps d'antiguitat.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="L'opció del temps d'antiguitat al quadre de diàleg de camps combinats.":::
+    - **Menys recents**: identifica el valor guanyador en funció del menys recent. Requereix una data o un camp numèric per a cada entitat participants a l'àmbit dels camps combinats per definir el temps d'antiguitat.
+
+1.  Podeu afegir camps addicionals per participar en el procés de combinació.
+
+1.  Podeu canviar el nom del camp combinat.
+
+1. Seleccioneu **Fet** per aplicar els canvis.
+
+1. Seleccioneu **Desa** i **Executa** per processar els canvis. 
+
 ## <a name="manually-combine-fields"></a>Combinar camps manualment
 
 Especifiqueu un atribut combinat manualment. 
 
 1. A la pàgina **Combina**, seleccioneu **Combina els camps**.
 
-1. Proporcioneu un **Nom** i un **Nom de camp de sortida**.
+1. Especifiqueu la política de guanyador de combinació al desplegable **Combina els camps segons**.
 
 1. Trieu un camp per afegir-lo. Seleccioneu **Afegeix camps** per combinar-ne més.
 
-1. Confirmeu l'exclusió.
+1. Proporcioneu un **Nom** i un **Nom de camp de sortida**.
+
+1. Seleccioneu **Fet** per aplicar els canvis.
 
 1. Seleccioneu **Desa** i **Executa** per processar els canvis. 
 
@@ -103,6 +126,27 @@ Algunes entitats contenen més detalls que altres. Si una entitat inclou les dad
 1. Confirmeu el canvi.
 
 1. Seleccioneu **Desa** i **Executa** per processar els canvis.
+
+## <a name="configure-customer-id-generation"></a>Configuració de la generació de l'ID de client 
+
+Després de configurar els camps de combinació, podeu definir com generar els valors CustomerId, els identificadors únics del perfil de client. El pas de combinació del procés d'unificació de dades genera l'identificador únic del perfil de client. L'identificador és CustomerId de l'entitat *Client* que resulta del procés d'unificació de dades. 
+
+El CustomerId de l'entitat Client es basa en un hash del primer valor de les claus principals guanyadores que no són nul·les. Aquestes tecles provenen de les entitats utilitzades a la fase de coincidència i combinació i estan influencides per l'ordre de la coincidència.Per tant, el CustomerID pot canviar quan canvia un valor clau principal a l'entitat principal de l'ordre de coincidència. Per tant, és possible que el valor clau principal no sempre representi el mateix client.
+
+Configurar un identificador de client estable us permet evitar aquest comportament.
+
+**Configuració d'un ID de client únic**
+
+1. Aneu a **Unifica** > **Combina**.
+
+1. A la pàgina **Combina**, seleccioneu la pestanya **Claus**. 
+
+1. Passeu el cursor per sobre de la fila **CustomerId** i seleccioneu l'opció **Configura**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Control per personalitzar la generació d'ID.":::
+
+1. Seleccioneu fins a cinc camps que formaran un identificador de client únic i que siguin més estables. Els registres que no coincideixen amb la configuració utilitzen un ID configurat pel sistema.  
+
+1. Seleccioneu **Fet** i executeu el procés de combinació per aplicar els canvis.
 
 ## <a name="run-your-merge"></a>Executar la combinació
 

@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034348"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474045"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034348"
 
   - Creeu perfils personalitzables, definiu mesures, creeu segments i beneficieu-vos de l'anàlisi predictiva per obtenir una visualització de 360 graus del client, específica de la vostra organització.  
   - Utilitzeu connectors predefinits per a diverses aplicacions o API de Microsoft i de tercers per processar les conclusions.
-
-## <a name="pricing-and-licensing"></a>Preus i llicències
-
-El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Les funcionalitats amb drets inclouen un conjunt de perfils, actualitzacions diàries del sistema, sol·licituds del Power Platform i dos entorns. Podeu adquirir capacitat addicional i una llicència per augmentar la quota per defecte. 
-- Capacitat i drets detallats: [Guia de llicències del Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Informació general sobre els preus: [Preus del Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Com crear, canviar el nom i suprimir àrees de treball i entorns.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034030"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486023"
 ---
 # <a name="manage-environments-and-workspaces"></a>Administrar entorns i àrees de treball
 
@@ -85,13 +85,11 @@ Si suprimiu una àrea de treball, se'n suprimirà de manera permanent tot el con
 
 1. Seleccioneu **Afegeix membres** per donar accés i [assignar funcions](user-roles.md). Actualment, només està disponible **Administrador de l'àrea de treball**.
 
-1. Si configureu una [connexió amb les estadístiques del públic](configure-connections.md), podeu seleccionar **Permet l'accés a les dades de perfil** per permetre que el membre vegi informes basats en [perfils d'usuari](profile-reports.md).
-
 1. Seleccioneu **Afegeix membres** per afegir-los a l'àrea de treball.
 
 ## <a name="manage-an-environment"></a>Gestionar un entorn
 
-Com a administrador de l'entorn, podeu accedir a un entorn des de la subfinestra de navegació esquerra. Podeu modificar la configuració de l'entorn, altres administradors de l'entorn, àrees de treball i [connexions amb les estadístiques del públic](configure-connections.md). Seleccioneu pestanyes per desplaçar-vos entre diferents àrees del centre d'administració.
+Com a administrador de l'entorn, podeu accedir a un entorn des de la subfinestra de navegació esquerra. Podeu configurar els paràmetres de l'entorn, altres administradors de l'entorn i àrees de treball. Seleccioneu pestanyes per desplaçar-vos entre diferents àrees del centre d'administració.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centre d'administració de l'entorn.":::
 
@@ -123,8 +121,6 @@ Com a administrador de l'entorn, podeu accedir a un entorn des de la subfinestra
 
 1. Seleccioneu **Afegeix membres** per actualitzar els membres i [assignar funcions](user-roles.md). Actualment, només està disponible **Administrador de l'entorn**.
 
-1. Si configureu una [connexió amb les estadístiques del públic](configure-connections.md), podeu seleccionar **Permet l'accés a les dades de perfil** per permetre que el membre vegi informes basats en [perfils d'usuari](profile-reports.md).
-
 1. Seleccioneu **Afegeix membres** per afegir-los a l'entorn.
 
 ### <a name="delete-an-environment"></a>Suprimir un entorn
@@ -143,7 +139,7 @@ Els administradors d'entorn poden suprimir entorns. Per poder suprimir un entorn
 
 Establir connexions amb les estadístiques del públic us permet veure informes dels coneixements d'interacció basada en perfils de client unificats. 
 
-Per obtenir-ne més informació, consulteu [Configurar connexions](configure-connections.md).
+Per obtenir-ne més informació, consulteu [Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Administrar dades personals
 

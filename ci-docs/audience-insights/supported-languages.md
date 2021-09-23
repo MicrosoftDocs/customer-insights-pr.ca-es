@@ -1,24 +1,23 @@
 ---
-title: Idiomes admesos per a les conclusions del públic
+title: Llengües compatibles per al Dynamics 365 Customer Insights
 description: Coneixeu i configureu el suport tècnic d'idiomes.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035127"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483330"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Idiomes admesos per a la capacitat de conclusions del públic
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Llengües compatibles per al Dynamics 365 Customer Insights
 
-La informació sobre el públic del Dynamics 365 Customer Insights està traduïda a moltes llengües. La llista següent conté les llengües disponibles i informació sobre el contingut traduït. També podeu obtenir més informació sobre com canviar la configuració de llengua. 
+El Dynamics 365 Customer Insights està traduït a moltes llengües. La llista següent conté les llengües disponibles i informació sobre el contingut traduït. També podeu obtenir més informació sobre com canviar la configuració de llengua. 
 
 ## <a name="languages"></a>Idiomes
 
@@ -69,7 +68,7 @@ La informació sobre el públic del Dynamics 365 Customer Insights està traduï
 
 ## <a name="whats-translated"></a>Què s'ha traduït
 
-L'aplicació utilitza la vostra preferència d'idioma per mostrar elements com ara el menú, el text de l'etiqueta i els missatges del sistema en el vostre idioma preferit.
+El Customer Insights utilitza la vostra preferència de llengua per mostrar elements com ara el menú, el text de les etiquetes i els missatges del sistema en la vostra llengua preferida.
 
 Com que la majoria de característiques es basen en les vostres dades, alguns elements romanen en la seva llengua original. Per exemple:
 

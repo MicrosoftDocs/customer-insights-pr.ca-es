@@ -4,17 +4,17 @@ description: Més informació sobre com personalitzar i executar l'SDK de l'iOS
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036861"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494218"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Introducció a l'SDK de l'iOS
 
@@ -45,11 +45,36 @@ Per iniciar el procés, seleccioneu una àrea de treball on treballar, seleccion
 
 - Si no teniu cap àrea de treball existent, seleccioneu **Nova àrea de treball** i seguiu els passos per crear una [àrea de treball nova](create-workspace.md).
 
+- Després de crear una àrea de treball, aneu a **Administració** > **Àrea de treball** i seleccioneu **Guia d'instal·lació**.
+
 ## <a name="configure-the-sdk"></a>Configurar l'SDK
 
-Un cop baixat l'SDK, podeu treballar-hi a Xcode per habilitar i definir esdeveniments.
+Un cop baixat l'SDK, podeu treballar-hi a Xcode per habilitar i definir esdeveniments. Hi ha dues maneres de fer-ho
 
-1. Després de crear una àrea de treball, aneu a **Administració** > **Àrea de treball** i seleccioneu **Guia d'instal·lació**.
+### <a name="option-1-using-cocoapods-recommended"></a>Opció 1: utilitzar CocoaPods (recomanat)
+CocoaPods es un administrador de dependències per als projectes de Cocoa Swift i Objective-C. Amb això es facilita la integració de l'SDK de la informació d'interacció per a iOS. CocoaPods també us permet actualitzar a l'última versió de l'SDK de la informació d'interacció. A continuació, s'explica com cal utilitzar CocoaPods per integrar l'SDK de la informació d'interacció al vostre projecte Xcode. 
+
+1. Instal·lar el CocoaPods. 
+
+1. Creeu un fitxer nou anomenat Podfile dins del directori arrel del vostre projecte i afegiu-hi les declaracions següents.Substituïu YOUR_TARGET_PROJECT_NAME pel nom del vostre projecte Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+La configuració anterior conté les versions de depuració i de llançament de l'SDK. Trieu la que sigui millor per al vostre projecte.
+
+1. Instal·leu-ho mitjançant l'execució de l'ordre següent: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Opció 2: utilitzar l'enllaç de baixada
 
 1. Baixeu l'[SDK de l'iOS de les conclusions d'interacció](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) i col·loqueu el fitxer `EIObjC.xcframework` a la carpeta `Frameworks`.
 

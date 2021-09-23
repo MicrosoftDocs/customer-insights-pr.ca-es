@@ -1,19 +1,19 @@
 ---
 title: Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció
 description: Creeu un enllaç actiu entre les conclusions del públic i les d'interacció per habilitar l'ús compartit bidireccional de dades.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461001"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487095"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció
 
@@ -26,14 +26,14 @@ Utilitzeu perfils i segments unificats de les conclusions del públic per obteni
 ## <a name="prerequisites"></a>Requisits previs
 
 - Els perfils de les conclusions del públic s'han d'emmagatzemar en un compte del Azure Data Lake Storage que tingueu o en un llac de dades administrat pel [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-
+- A més, l'entorn de les conclusions del públic ha de tenir un entorn del Dataverse associat. I si aquest entorn també utilitza el Dataverse per a l'emmagatzematge de dades, assegureu-vos de comprovar l'opció **Habilita l'ús compartit de dades** a la informació del públic. Per obtenir-ne més informació, consulteu [Creació i configuració d'un entorn de pagament a les conclusions del públic](../audience-insights/get-started-paid.md).
 - Necessiteu permisos d'administrador per als entorns de les conclusions del públic i les conclusions d'interacció.
-
 - Els entorns enllaçats han d'estar a la mateixa regió geogràfica.
 
 > [!NOTE]
 > - Si la vostra subscripció a les conclusions del públic és una prova, que utilitza un llac de dades gestionat internament amb conclusions del públic, poseu-vos en contacte amb [pirequest@microsoft.com](mailto:pirequest@microsoft.com) per obtenir ajuda. 
-> - Si el vostre entorn de conclusions del públic utilitza la vostra instància del Azure Data Lake Storage per emmagatzemar dades, heu d'afegir una entitat de seguretat de servei de l'Azure al compte d'emmagatzematge. Per obtenir més informació, aneu a [Connexió amb un compte de l'Azure Data Lake Storage amb l'entitat de seguretat de servei de l'Azure per a les conclusions del públic](../audience-insights/connect-service-principal.md). A més, l'entorn de conclusions del públic hauria de tenir un entorn del [Dataverse](../audience-insights/get-started-paid.md) associat. 
+> - Si el vostre entorn de conclusions del públic utilitza la vostra instància del Azure Data Lake Storage per emmagatzemar dades, heu d'afegir una entitat de seguretat de servei de l'Azure al compte d'emmagatzematge. Per obtenir més informació, aneu a [Connexió amb un compte de l'Azure Data Lake Storage amb l'entitat de seguretat de servei de l'Azure per a les conclusions del públic](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Crear un enllaç de l'entorn
 
@@ -75,6 +75,7 @@ Després d'enllaçar els entorns, podeu seleccionar característiques opcionals 
 
    > [!IMPORTANT]
    > Si no afegiu explícitament usuaris en aquest pas, les dades s'amagaran per als usuaris a les conclusions d'interacció.
+   > Per tal que els segments de conclusions del públic es mostrin a les conclusions d'interacció, primer heu d'[executar la combinació i els processos descendents](../audience-insights/merge-entities.md). Els processos descendents són importants perquè generen una taula única que prepara els segments de conclusions del públic per compartir-se amb les conclusions sobre la interacció. (Si es planifica una actualització del sistema, inclourà automàticament processos descendents.)
 
 1. Reviseu la selecció i, a continuació, seleccioneu **Finalitza**.
 

@@ -7,12 +7,12 @@ metadata:
   ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
+  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
   ms.translationtype: HT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036545"
+  ms.lasthandoff: 09/17/2021
+  ms.locfileid: "7498585"
 title: Documentació del Dynamics 365 Customer Insights
 summary: Trobeu recursos útils per començar i obtenir informació sobre les característiques i les funcionalitats del Customer Insights.
 landingContent:
@@ -26,16 +26,16 @@ landingContent:
       url: /dynamics365-release-plan/
     - text: Descobriu el CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
-- title: Introducció a les conclusions del públic
+- title: Introducció al Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Registreu-vos per a una prova gratuïta
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Novetats
+    - text: Novetats de la informació del públic
       url: audience-insights/whats-new-audience-insights.md
-    - text: Documentació de conclusions del públic
-      url: audience-insights/index.yml
+    - text: Novetats de la informació d'interacció
+      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Posar-se en contacte
   linkLists:
   - linkListType: overview
@@ -44,18 +44,18 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2073991
     - text: Compartiu les vostres idees
       url: https://go.microsoft.com/fwlink/?linkid=2074172
-    - text: Informa d'un problema
+    - text: Notifica un problema
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Tutorials de conclusions del públic
+- title: Compartir dades entre capacitats
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
-    - text: Crea un entorn nou
-      url: audience-insights/home.md
-    - text: Crear un perfil de client unificat
-      url: /learn/modules/unified-customer-profile/
-    - text: Treballar amb l'aplicació
-      url: /learn/modules/working-with-customer-insights/
+    - text: Crear un enllaç entre capacitats
+      url: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - text: Crear segments per utilitzar-los als informes
+      url: engagement-insights/integrate-audience-insights-segments.md
+    - text: Utilitzar les propietats del perfil per a l'anàlisi interactiva
+      url: engagement-insights/curate-dimensions.md
 - title: Exportar dades de conclusions del públic
   linkLists:
   - linkListType: how-to-guide

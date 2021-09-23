@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033849"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466612"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
@@ -126,6 +126,8 @@ Després de l'execució del procés d'enriquiment, aneu a **Els meus enriquiment
 :::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment.":::
 
 Reviseu les dades enriquides seleccionant **Visualitza les dades enriquides** al gràfic. Les dades enriquits per a les marques van a l'entitat **BrandAffinityFromMicrosoft**. Les dades d'interès es troben a l'entitat **InterestAffinityFromMicrosoft**. També trobareu aquestes entitats enumerades al grup **Enriquiment** a **Dades** > **Entitats**.
+
+Veureu un gràfic amb el nombre de perfils de clients enriquits al llarg del temps i una versió preliminar de l'entitat enriquida. Seleccioneu **Mostra'n més** a la peça de versió preliminar per obrir l'entitat enriquida.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veure dades d'enriquiment a la targeta del client
 

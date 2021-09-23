@@ -4,17 +4,17 @@ description: Com s'utilitzen els informes d'embut per comprendre com el públic 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032243"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498630"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Crear i administrar informes d'embut
 
@@ -158,4 +158,21 @@ Podeu canviar el nom d'un informe d'embut, suprimir-lo o modificar-ne els passos
 1. Seleccioneu un nom per obrir l'informe.
 
 1. Seleccioneu el pas que vulgueu eliminar i seleccioneu **Suprimeix**.
+
+## <a name="funnel-insights"></a>Informació sobre l'embut 
+
+Ara, la informació de la interacció ofereix informació sobre l'embut per als clients. Utilitzeu la informació sobre l'embut per obtenir informació més detallada sobre el comportament dels clients sobre els passos de l'informe de l'embut. En crear i desar un informe d'embut nou, la informació sobre l'embut es genera automàticament per a l'informe. 
+
+Podeu visualitzar la informació sobre l'embut de les categories següents, als nivells principal i de pas: 
+
+ - Taxa de conversió 
+ - Temps de transició 
+ - Hora de finalització 
+
+Utilitzeu aquesta informació per explorar més el comportament dels clients i comprendre millor els punts d'abandonament i les conversions de l'informe d'embut. 
+
+La informació d'embut es torna a calcular cada 24 hores o quan **deseu** l'informe d'embut. 
+
+> [!NOTE]
+> Per poder visualitzar la informació d'embut, heu de desar l'informe cada vegada que feu canvis. 
 

@@ -1,20 +1,20 @@
 ---
 title: Predicció de recomanacions de productes
 description: Predieu els productes que pot comprar o interactuar un client.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034944"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494527"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicció de recomanacions de productes (versió preliminar)
 
@@ -89,23 +89,24 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 ### <a name="add-required-data"></a>Addició de les dades necessàries
 
-1. Seleccioneu **Afegeix dades** per a l'**Historial de transaccions del client** i trieu l'entitat que proporciona la informació de l'historial de transaccions o compres tal com es descriu als [requisits previs](#prerequisites).
+1. Seleccioneu **Afegeix dades** i trieu el tipus d'activitat a la subfinestra lateral que conté la informació de l'historial de transacció o de compra.
 
-1. Assigneu els camps semàntics als atributs de l'entitat d'historial de compres i seleccioneu **Següent**. Per a les descripcions dels camps, consulteu els [requisits previs](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definiu la relació de l'entitat.](media/product-recommendation-purchasehistorymapping.PNG "Pàgina de compra de l'historial que mostra els atributs administrats que estan assignats a camps de l'entitat de l'historial de compra seleccionat")
+1. A **Tria les activitats**, trieu les activitats específiques de l'activitat seleccionada en la qual voleu centrar el càlcul.
 
-1. Si els següents camps no estan emplenats, configureu la relació des de l'entitat de l'historial de compres a l'entitat *Client*.
-    1. Seleccioneu l'**Entitat de l'historial de compres**.
-    1. Seleccioneu el **Camp** que identifica el client a l'entitat de l'historial de compres. S'ha de relacionar amb l'identificador del client principal de l'entitat *Client*.
-    1. Seleccioneu l'**entitat Client** que coincideixi amb l'entitat Client principal.
-    1. Introduïu un nom que descrigui la relació.
-       > [!div class="mx-imgBorder"]
-       > ![Pàgina Historial de compres que mostra la creació d'una relació amb el client.](media/model-purchase-join.png "Pàgina Historial de compres que mostra la creació d'una relació amb el client")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Subfinestra lateral que mostra la tria d'activitats específiques sota el tipus semàntic.":::
+
+1. Si encara no heu assignat l'activitat a un tipus semàntic, seleccioneu **Edita** per fer-ho. S'obrirà l'experiència guiada per assignar activitats administrades. Assigneu les dades als camps corresponents del tipus d'activitat seleccionat.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipus d'activitat de configuració de pàgina.":::
+
+1. Després d'assignar l'activitat al tipus semàntic corresponent, seleccioneu **Següent** per continuar 
+ 
+1. Assigneu els atributs semàntics als camps necessaris per executar el model.
 
 1. Seleccioneu **Desa**.
 
 1. Seleccioneu **Següent**.
+
 
 ### <a name="configure-product-filters"></a>Configurar filtres de productes
 

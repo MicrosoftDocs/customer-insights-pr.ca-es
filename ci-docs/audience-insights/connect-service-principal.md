@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei
 description: Utilitzeu una entitat de seguretat de servei de l'Azure per connectar-vos al vostre llac de dades.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461136"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483513"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Seguiu llegint per obtenir informació sobre com connectar el Dynamics 365 Customer Insights amb un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure en lloc de claus del compte d'emmagatzematge. 
 
-Podeu utilitzar l'entitat de seguretat de servei per [afegir o editar de manera segura una carpeta del Common Data Model com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Podeu utilitzar l'entitat de seguretat de servei per [afegir o editar de manera segura una carpeta del Common Data Model com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](get-started-paid.md).
 
 > [!IMPORTANT]
-> - El compte del Data Lake Storage que utilitzi<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> l'entitat de seguretat de servei ha de tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
+> - El compte del Data Lake Storage que utilitzarà l'entitat de servei ha de tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
 > - Per poder crear l'entitat de servei, heu de tenir permisos d'administrador per a la vostra subscripció a l'Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entitat de seguretat de servei de l'Azure per al Customer Insights
@@ -38,7 +38,7 @@ Abans de crear una nova entitat de seguretat de servei per a les conclusions del
 
 3. A **Administra**, seleccioneu **Aplicacions empresarials**.
 
-4. Cerqueu<!--note from editor: Via Microsoft Writing Style Guide.--> l'identificador d’aplicació de l'Azure:
+4. Cerqueu l'ID de l'aplicació de Microsoft:
    - Conclusions del públic: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` amb el nom `Dynamics 365 AI for Customer Insights`
    - Conclusions d'interacció: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` amb el nom `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Abans de crear una nova entitat de seguretat de servei per a les conclusions del
 6. Si no es retorna cap resultat, creeu una nova entitat de servei.
 
 >[!NOTE]
->Per utilitzar totes les funcionalitats del Dynamics 365 Customer Insights, suggerim que afegiu ambdues aplicacions a l'entitat de seguretat de servei.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Per utilitzar totes les funcionalitats del Dynamics 365 Customer Insights, suggerim que afegiu ambdues aplicacions a l'entitat de seguretat de servei.
 
 ### <a name="create-a-new-service-principal"></a>Crear una nova entitat de servei
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Instal·leu la versió més recent del PowerShell de l'Azure Active Directory per al Graph. Per obtenir més informació, aneu a [Instal·lació del PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. A l'ordinador, seleccioneu la tecla del Windows al teclat, cerqueu el **Windows PowerShell** i seleccioneu **Executa com a administrador**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. A l'ordinador, seleccioneu la tecla del Windows al teclat, cerqueu el **Windows PowerShell** i seleccioneu **Executa com a administrador**.
    
    1. A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
 
 2. Creeu l'entitat de seguretat de servei per al Customer Insights amb el mòdul del PowerShell de l'Azure AD.
 
-   1. A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substituïu *"[l'ID de l'inquilí]"*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> pel real de l'inquilí on voleu crear l'entitat de seguretat de servei. El paràmetre del nom de l'entorn, `AzureEnvironmentName`, és opcional.
+   1. A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substituïu l'*[identificador d'inquilí]* per l'identificador real del vostre inquilí on voleu crear l'entitat de servei. El paràmetre del nom de l'entorn, `AzureEnvironmentName`, és opcional.
   
    1. Introduïu `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Amb aquesta ordre es crea l'entitat de servei per a les conclusions del públic a l'inquilí seleccionat. 
 
-   1. Introduïu `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Aquesta ordre crea l'entitat de servei de seguretat per a les conclusions d'interacció<!--note from editor: Edit okay?--> a l'inquilí seleccionat.
+   1. Introduïu `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Aquesta ordre crea l'entitat de servei de seguretat per a les conclusions d'interacció de l'inquilí seleccionat.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedir permisos a l'entitat de servei per accedir al compte d'emmagatzematge
 
@@ -90,7 +90,7 @@ La propagació dels canvis pot trigar fins a 15 minuts.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduïu l'identificador de recurs de l'Azure o els detalls de subscripció de l'Azure al fitxer adjunt del compte d'emmagatzematge de les conclusions del públic.
 
-Podeu<!--note from editor: Edit suggested only if this section is optional.--> adjuntar un compte del Data Lake Storage a les conclusions del públic per [ emmagatzemar-hi dades de sortida](manage-environments.md) o [utilitzar-lo com a font de dades ](connect-common-data-service-lake.md). Aquesta opció us permet triar entre un mètode basat en recursos o un mètode basat en subscripció. Segons l'enfocament que trieu, seguiu el procediment d'una de les seccions següents.<!--note from editor: Suggested.-->
+Podeu adjuntar un compte del Data Lake Storage a les conclusions del públic per [ emmagatzemar-hi dades de sortida](manage-environments.md) o [utilitzar-lo com a font de dades ](connect-common-data-service-lake.md). Aquesta opció us permet triar entre un mètode basat en recursos o un mètode basat en subscripció. Segons l'enfocament que trieu, seguiu el procediment d'una de les seccions següents.
 
 ### <a name="resource-based-storage-account-connection"></a>Connexió al compte d'emmagatzematge basat en recursos
 
