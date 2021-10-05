@@ -1,40 +1,49 @@
 ---
-title: Informació general de la capacitat dels coneixements d'interacció
+title: Quant a la capacitat dels coneixements d'interacció del Dynamics 365 Customer Insights
 description: Introducció de característiques i avantatges de la capacitat dels coneixements d'interacció.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 07/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b7bb1e5aa1adc5893dd0118bc7a3653913bfdc874a589f366c8c37152bbfef4d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d6d40d41fc79a34c04f86146fe902a766b71e74d
+ms.sourcegitcommit: cf139b37ea1ab62c48a1713bcf6b3a6e01f578bf
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033344"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "7507705"
 ---
 # <a name="about-dynamics-365-customer-insights-engagement-insights-capability"></a>Quant a la capacitat dels coneixements d'interacció del Dynamics 365 Customer Insights 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-[Les conclusions d'interacció, una funcionalitat del Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/), us permeten comprendre de manera interactiva com utilitzen els vostres clients els vostres serveis i productes, individualment i de manera integral, en llocs web, aplicacions mòbils i als productes connectats.
+[Les conclusions d'interacció, una capacitat del Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/), us permet comprendre, mitjançant mètriques interactives, com els clients utilitzen els vostres serveis i productes. Podeu fer-ho individualment i de manera global, en llocs web, aplicacions mòbils i productes connectats.
 
-Podeu combinar les anàlisis de comportament amb els tipus de dades transaccionals, demogràfiques, d'enquestes i altres tipus de dades del Microsoft Dynamics 365 Customer Insights. La combinació crea coneixements enriquits que ajuden a impulsar les millors accions i experiències personalitzades següents.
+Amb les conclusions d'interacció, podeu combinar les anàlisis de comportament amb tipus de dades de transaccions, demogràfiques, d'enquestes i d'altres tipus del Microsoft Dynamics 365 Customer Insights. Aquesta capacitat crea coneixements enriquits que ajuden a impulsar les millors accions posteriors i experiències personalitzades.
 
 ## <a name="features-and-benefits"></a>Característiques i avantatges
 
+Amb la capacitat de conclusions d'interacció, podeu:
+
 - Recopileu, mesureu i compreneu el comportament dels clients al vostre lloc web.
 
-- Utilitzeu informes immediats per accedir a les mètriques del lloc de manera interactiva i per veure la mida del públic. Descobriu detalls sobre les visites, les visualitzacions de pàgina, el trànsit de referència i identifiqueu les pàgines amb el millor rendiment.
+- Compartir dades entre les conclusions d'interacció i les conclusions del públic. Podeu enllaçar entorns des de totes dues capacitats i permet compartir les dades de manera bidireccional entre elles.
 
-- Utilitzeu el constructor d'informes personalitzats per crear les vostres pròpies visualitzacions a partir de [mètriques](glossary.md) i [propietats](glossary.md) seleccionades. Les visualitzacions creen les visualitzacions que necessiteu per respondre a les vostres preguntes empresarials.
+- Utilitzeu perfils i segments unificats de les conclusions del públic per obtenir més opcions d'anàlisi a les conclusions d'interacció. Exporteu incidències que tenen un valor empresarial alt de les conclusions d'interacció. Utilitzeu aquestes incidències per afegir dades a perfils unificats de les conclusions del públic.
+
+- Creeu dimensions demogràfiques per dividir dades de comportament. A continuació, utilitzeu les propietats del perfil en anàlisis interactives de dades de comportament, incloent-hi les dades capturades per les conclusions d'interacció, al lloc web o l'aplicació mòbil.
+
+- Creeu conclusions d'embut que proporcionin dades i informes per informar les decisions i identificar àrees d'optimització i millores en el procés, per identificar els camins que han de seguir els clients abans de fer una compra. 
+
+-  Utilitzeu informes predefinits per accedir de manera interactiva a les mètriques del lloc i veure el nombre real de visitants del vostre lloc web. Descobriu detalls sobre les visites, les visualitzacions de pàgina, el trànsit de referència i identifiqueu les pàgines amb el millor rendiment.
+
+- Utilitzeu el creador d'informes personalitzat per crear les vostres pròpies visualitzacions a partir de [mètriques](glossary.md) i [dimensions](glossary.md) seleccionades. Aquestes visualitzacions creen les vistes que necessiteu per respondre a les vostres preguntes empresarials.
 
 - Aporteu dades de diversos canals. Per exemple, utilitzeu dades de comportament de les interaccions amb llocs web amb dades transaccionals i demogràfiques sobre els clients. Utilitzeu les dades per crear i visualitzar informes interactius que inclouen activitats web i perfils de client per a anàlisis enriquides. Creeu i exporteu incidències refinades. Visualitzeu activitats web amb perfils, activitats i segments de clients al Customer Insights per a una visualització de 360 graus dels vostres clients.
-
 
 ## <a name="next-steps"></a>Passos següents
 

@@ -1,20 +1,20 @@
 ---
 title: Relacions entre entitats i camins d'entitats
 description: Creeu i administreu relacions entre entitats procedents de diverses fonts de dades.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035219"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557340"
 ---
 # <a name="relationships-between-entities"></a>Relacions entre entitats
 
@@ -93,11 +93,11 @@ Opcions disponibles:
 - **Canvia a la disposició horitzontal/vertical**: canvieu l'alineació de les entitats i les relacions.
 - **Edita**: actualitzeu les propietats de les relacions personalitzades a la subfinestra d'edició i deseu els canvis.
 
-### <a name="relationship-path"></a>Camí de la relació
+## <a name="relationship-paths"></a>Camins de relació
 
-El camí de la relació descriu les entitats que estan connectades amb relacions entre una entitat d'origen i una entitat de destinació. S'utilitza quan es crea un segment o una mesura que inclou altres entitats que no són l'entitat de perfil unificada i hi ha diverses opcions per arribar a l'entitat de perfil unificada.
+Un camí de relació descriu les entitats que estan connectades amb relacions entre una entitat d'origen i una entitat de destinació. S'utilitza quan es crea un segment o una mesura que inclou altres entitats que no són l'entitat de perfil unificada i hi ha diverses opcions per arribar a l'entitat de perfil unificada. 
 
-El camí de la relació informa el sistema sobre les relacions per accedir a l'entitat de perfil unificada. Les diferents rutes de relació poden donar resultats diferents.
+Un camí de relació informa el sistema sobre quines relacions calen per accedir a l'entitat de perfil unificada. Les diferents rutes de relació poden donar resultats diferents.
 
 Per exemple, l'entitat *eCommerce_eCommercePurchases* té les relacions següents amb l'entitat del *client* del perfil unificat:
 
@@ -105,7 +105,43 @@ Per exemple, l'entitat *eCommerce_eCommercePurchases* té les relacions següent
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
 
-El camí de la relació determina quines entitats podeu utilitzar quan es creen regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases), en un punt de venda (POS_posPurchases), i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
+Un camí de relació determina quines entitats podeu utilitzar quan creeu regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases), en un punt de venda (POS_posPurchases), i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
+
+### <a name="direct-relationship"></a>Relació directa
+
+Una relació es classifica com una **relació directa** quan una entitat d'origen es relaciona amb una entitat de destinació amb només una relació.
+
+Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchases* connecta a una entitat de destinació *eCommerce_eCommerceContacts* només a través de *ContactId*, és una relació directa.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="L'entitat d'origen es connecta directament a l'entitat de destinació.":::
+
+#### <a name="multi-path-relationship"></a>Relació de diversos camins
+
+Una **relació de diversos camins** és un tipus especial de relació directa que connecta una entitat d'origen a més d'una entitat de destinació.
+
+Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchases* es relaciona amb dues entitats de destinació, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, és una relació de diversos camins.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="L'entitat d'origen es connecta directament a més d'una entitat de destinació a través d'una relació de diversos salts.":::
+
+### <a name="indirect-relationship"></a>Relació indirecta
+
+Una relació es classifica com una **relació indirecta** quan una entitat d'origen es relaciona amb un o més entitats addicionals abans de relacionar-se amb una entitat de destinació.
+
+#### <a name="multi-hop-relationship"></a>Relació de diversos salts
+
+Una *relació de diversos salts* és una *relació indirecta* que permet connectar una entitat d'origen a una entitat de destinació a través d'una o diverses entitats intermèdies.
+
+Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchasesWest* es connecta a una entitat intermèdia anomenada *eCommerce_eCommercePurchasesEast* i després es connecta a una entitat de destinació anomenada *eCommerce_eCommerceContacts*, es tracta d'una relació de diversos salts.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="L'entitat d'origen es connecta directament a una entitat de destinació amb una entitat intermèdia.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relació de diversos salts i de diversos camins
+
+Les relacions de diversos salts i diversos camins es poden utilitzar per crear **relacions de diversos salts i diversos camins**. Aquest tipus especial combina les funcions de les **relacions de diversos salts** i les **relacions de diversos camins**. Us permet connectar-vos a més d'una entitat de destinació quan utilitzeu entitats intermèdies.
+
+Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchasesWest* es connecta a una entitat intermèdia anomenada *eCommerce_eCommercePurchasesEast* i després es connecta a dues entitats de destinació anomenades *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, es tracta d'una relació de diversos salts i diversos camins.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="L'entitat d'origen es connecta directament a una entitat de destinació i es connecta a una altra entitat de destinació a través d'una entitat intermèdia.":::
 
 ## <a name="manage-existing-relationships"></a>Administrar le relacions existents 
 

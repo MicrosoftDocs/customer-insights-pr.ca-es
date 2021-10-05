@@ -4,27 +4,27 @@ description: Trobeu informació sobre els SDK i com fer-los servir.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036271"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558734"
 ---
 # <a name="developer-resources-overview"></a>Informació general de recursos per a desenvolupadors
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-En aquest article s'enumeren tots els fragments de codi i els exemples disponibles per obtenir una referència ràpida. Obteniu el codi d'un remitent d'incidències per a la vostra plataforma i seguiu els tutorials. 
+En aquest article s'enumeren tots els fragments de codi de conjunt d'eines de desenvolupament de programari (SDK) disponibles perquè els desenvolupadors comparteixin dades amb el Dynamics 365 Customer Insights. Per obtenir el codi de les incidències específiques de la vostra plataforma, seguiu els tutorials.
 
 ## <a name="capture-events-from-websites"></a>Captura d'esdeveniments de llocs web
 
-- [Com afegir el fragment de codi en un lloc web](instrument-website.md)
+- [Instrumentar un lloc web](instrument-website.md)
 - [Mostra de l'SDK web](websdk-sample.md)
 - [Equipació avançada de l'SDK de webs](advanced-SDK-implementation.md)
 

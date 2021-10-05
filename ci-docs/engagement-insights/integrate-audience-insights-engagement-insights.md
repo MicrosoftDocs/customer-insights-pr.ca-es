@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487095"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559006"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció
 
@@ -54,6 +54,9 @@ Podeu crear un enllaç de l'entorn mitjançant l'actualització de la configurac
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Habilitació dels segments i els atributs dels perfils unificats de les conclusions del públic
 
 Després d'enllaçar els entorns, podeu seleccionar característiques opcionals per als entorns enllaçats. Aquestes característiques permeten atributs i segments del perfil unificats a partir de les conclusions del públic per a una anàlisi interactiva de les dades dels clients.
+
+> [!IMPORTANT]
+> Per tal que els segments de conclusions del públic es mostrin a les conclusions d'interacció, primer heu d'[executar la combinació i els processos descendents](../audience-insights/merge-entities.md). Els processos descendents són importants perquè generen una taula única que prepara els segments de conclusions del públic per compartir-se amb les conclusions sobre la interacció. (Si es planifica una actualització del sistema, inclourà automàticament processos descendents.)
 
 **Per analitzar dades web a les conclusions sobre la interacció**
 
