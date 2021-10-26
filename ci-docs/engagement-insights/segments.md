@@ -4,17 +4,17 @@ description: Com crear, editar i suprimir segments i on s'utilitzen.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036136"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623575"
 ---
 # <a name="view-and-create-segments"></a>Visualitzar i crear segments
 
@@ -44,22 +44,27 @@ Aquesta secció descriu com es crea un *segment en blanc* des de zero.
 
 1. Seleccioneu **Nou segment**.
 
-1. A la **Biblioteca de recursos**, trieu l'atribut pel qual voleu filtrar. Actualment, només podeu crear segments basats en dimensions.
+1. A la **Biblioteca de recursos**, seleccioneu (+) al costat de l'atribut pel qual voleu filtrar. Actualment, només podeu crear segments basats en dimensions.
 
-1. Trieu un operador i un valor per a l'atribut seleccionat. Són compatibles les operacions següents.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Crear un segment nou.":::
+
+1. A la secció **Regla**, trieu un operador i un valor per a l'atribut seleccionat. Són compatibles les operacions següents.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Trieu un operador per al segment nou.":::
+
    - **és**: requereix una coincidència exacta per incloure valors. Utilitza **igual que** per a un únic valor o **qualsevol de** per incloure diversos valors.
    - **no és**: requereix una coincidència exacta per excloure valors. Utilitza **igual que** per a un únic valor o **qualsevol de** per incloure diversos valors.
    - **comença amb**: una cadena amb la qual comencen els valors coincidents.
    - **acaba amb**: una cadena amb la qual acaben els valors coincidents.
    - **conté**: una cadena que es troba als valors coincidents.
 
-1. Per afegir més condicions a un grup, podeu utilitzar dos operadors lògics. Els atributs previstos es factoritzen quan s'utilitzen operadors de conjunts.
+1. Per afegir més condicions a un grup, podeu utilitzar operadors lògics. Els atributs previstos es factoritzen quan s'utilitzen operadors de conjunts.
    - Operador **AND**: cal complir ambdues condicions com a part del procés de segmentació. Aquesta opció és més útil quan definiu les condicions entre diverses entitats diferents.
    - Operador **OR**: una de les condicions ha de complir-se com a part del procés de segmentació. Aquesta opció és més útil quan definiu diverses condicions per a la mateixa entitat.
 
 1. Seleccioneu **Desa** i anomeneu el segment. 
 
-El segment es mostrarà a la pàgina Segments i el podeu aplicar a tots els informes i embuts de l'àrea de treball.
+El segment es mostrarà a la pàgina **Segments** i el podeu aplicar a tots els informes i embuts de l'àrea de treball.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Utilitzar un segment en un informe o un embut
 
@@ -67,7 +72,7 @@ Podeu aplicar segments a un informe o a un embut per filtrar-los segons les cond
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Informe de visualitzacions de pàgina amb una llista desplegable ampliada per triar els segments que voleu aplicar.":::
 
-Per aplicar un segment, obriu l'informe o embut. Seleccioneu **Afegeix una condició** i trieu **Filtra per segment**. Trieu el segment de la llista que voleu aplicar. El segment s'aplica a l'informe. Si un gràfic no admet el segment, es mostra un error.
+Per aplicar un segment, obriu l'informe o embut. Seleccioneu **+ Afegeix una condició** i trieu **Filtra per segment**. Trieu el segment de la llista que voleu aplicar. El segment s'aplica a l'informe. Si un gràfic no admet el segment, es mostra un error. Per obtenir més informació, vegeu [Crear i administrar informes d'embut](funnel-reports.md).
  
 Podeu aplicar *fins a tres segments* a un informe o a un embut.
 
@@ -91,5 +96,7 @@ Podeu aplicar *fins a tres segments* a un informe o a un embut.
 1. A la llista de segments, seleccioneu **Més [...]**. 
 1. A la llista desplegable, trieu **Suprimeix**.
 1. Seleccioneu **Suprimeix** per confirmar.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,23 +4,23 @@ description: Apreneu a crear i personalitzar informes.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036951"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582863"
 ---
 # <a name="create-and-edit-custom-reports"></a>Crear i editar informes personalitzats
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-A banda dels informes immediats, podeu crear un informe personalitzat amb visualitzacions de gràfics i taules per ajudar-vos a entendre el comportament dels usuaris. En aquest article s'explica com crear un informe amb les dades que necessiteu mitjançant les visualitzacions de taules i gràfics. 
+A banda dels informes estàndard (OOB), podeu crear un informe personalitzat amb visualitzacions de gràfics i taules que us ajudin a comprendre el comportament dels usuaris. En aquest article s'explica com crear un informe amb les dades que necessiteu mitjançant les visualitzacions de taules i gràfics. Per obtenir informació sobre els informes OOB, vegeu [Visualitzar informes](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Crear un informe personalitzat
 
@@ -35,11 +35,13 @@ A banda dels informes immediats, podeu crear un informe personalitzat amb visual
     - Seleccioneu **Afegeix visual** a la barra d'ordres per crear una visualització de taula per defecte.
     - O bé, seleccioneu una visualització de columna, barra, línia, àrea, circular, dònut o taula des de la subfinestra **Editor d'informes**.
 
-1. A la subfinestra **Dades**, trieu una de les **Mètriques** disponibles (per exemple, visualitzacions de pàgina) que es mostrarà. A continuació, afegiu **Condicions** (per exemple, país) per mostrar a la visualització. Per obtenir més informació sobre com afegir opcions addicionals per triar, vegeu [Visualitzar i crear mètriques](metrics.md) i [Visualitzar i crear dimensions](dimensions.md).
+1. A la secció **Dades** de la subfinestra **Editor de visualització**, trieu una de les opcions disponibles (per exemple, visualitzacions de pàgina) al desplegable **Mètriques**. També podeu afegir **Dimensions** (per exemple, país) per mostrar-les a la visualització. Per obtenir més informació, vegeu [Visualitzar i crear mètriques](metrics.md) i [Visualitzar i crear dimensions](dimensions.md).
 
-1. Seleccioneu **Disseny** a la subfinestra **Editor de visualització** per afegir **Text de títol** i definiu la **Posició**, les **Etiquetes de dades** i l'**Eix**.  També podeu canviar la visualització seleccionant un altre tipus de gràfic.
+   :::image type="content" source="media/page-views.png" alt-text="Trieu una mètrica per a l'informe.":::
 
-1. Podeu canviar la mida i la posició d'una visualització:
+1. Seleccioneu la secció **Disseny** de la subfinestra **Editor de visualització** per afegir **Text de títol** i activar i desactivar el **títol**.  També podeu canviar el tipus de visualització seleccionant un altre gràfic, com ara un **gràfic circular**.
+
+1. Per canviar la mida i la posició d'una visualització:
    - Seleccioneu la visualització i arrossegueu una de les cantonades o les vores per ajustar-ne la mida.
    - Seleccioneu la visualització i desplaceu-la a una nova posició. També podeu utilitzar les tecles de fletxa per canviar la posició.
 1. Per afegir una altra visualització, seleccioneu **Afegeix visual** a la barra d'ordres.
@@ -47,17 +49,27 @@ A banda dels informes immediats, podeu crear un informe personalitzat amb visual
 
 1. Proporcioneu un nom per a l'informe personalitzat i seleccioneu **Desa** per crear-lo.
  
+## <a name="filter-a-custom-report"></a>Filtrar un informe personalitzat
+
+Podeu seleccionar el període de temps o l'interval de dates en un informe personalitzat per centrar-vos en un valor o un període de temps.
+
+Per seleccionar un període de temps, a la part superior dreta de la visualització d'informe, seleccioneu un valor a la llista desplegable de l'informe. També podeu triar un *Interval de dates fix*.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Filtrar per hora o interval de dates.":::
+
+Per a la majoria d'informes, seleccioneu **+ Afegeix una condició**, per triar una dimensió o un segment per filtrar l'informe. Per obtenir més informació, vegeu [Visualitzar i crear segments](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Editar un informe personalitzat
 
 1. Aneu a **Analitza** > **Personalitza** per accedir a la llista d'informes personalitzats.
 
 1. A la llista d'informes personalitzats, seleccioneu **Més [...]** 
 
-1. Trieu **Edita els detalls** per canviar el nom de l'informe.
+1. Trieu **Edita el nom** per canviar el nom de l'informe.
 
-1. Seleccioneu el nom de l'informe i utilitzeu les opcions **Afegeix visual** i **Edita** per afegir, suprimir, canviar la posició o canviar la mida de les visualitzacions.
+1. Seleccioneu el nom de l'informe i utilitzeu les opcions **+ Afegeix visual** i **Edita** per afegir, suprimir, canviar la posició o canviar la mida de les visualitzacions.
 
-1. Per canviar les propietats d'una visualització, seleccioneu **...** i, a continuació, seleccioneu **Edita visual**.
+1. Per canviar les propietats d'una visualització, seleccioneu el visual, seleccioneu ... **i** i, després, **Edita el visual**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Edició de les propietats del gràfic per als informes personalitzats.":::
 
@@ -72,5 +84,6 @@ A banda dels informes immediats, podeu crear un informe personalitzat amb visual
 1. Trieu **Suprimeix** per suprimir l'informe.
 
 1. Confirmeu la supressió per suprimir l'informe permanentment.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

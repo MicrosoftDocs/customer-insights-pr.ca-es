@@ -1,7 +1,7 @@
 ---
 title: Segments als coneixements del públic
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036361"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617323"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -26,11 +26,19 @@ Els perfils de client que coincideixen amb els filtres d'una definició de segme
 
 Hi ha diverses maneres de crear un segment nou: 
 
-- Segment complex amb el creador de segments: [segment en blanc](segment-builder.md#create-a-new-segment)
-- Segments senzills amb un operador: [segment ràpid](segment-builder.md#quick-segments)
-- Forma amb tecnologia d'IA per trobar clients semblants: [clients semblants](find-similar-customer-segments.md)
-- Suggeriments amb tecnologia d'IA basats en mesures o atributs: [segments suggerits per millorar mesures](suggested-segments.md)
-- Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+
+- Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment) 
+- Segments senzills amb un operador: [segment ràpid](segment-builder.md#quick-segments) 
+- Forma amb tecnologia d'IA per trobar clients semblants: [clients semblants](find-similar-customer-segments.md) 
+- Suggeriments amb tecnologia d'IA basats en mesures o atributs: [segments suggerits per millorar mesures](suggested-segments.md) 
+- Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+
+- Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
@@ -70,9 +78,9 @@ Podeu exportar un segment des de la pàgina de segments o des de la [pàgina d'e
 
 1. Seleccioneu **Administra les exportacions** a la llista desplegable d'accions.
 
-1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per exportacions que contenen el segment actual o que no les contenen.
+1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per si contenen el segment actual o no.
 
-   1. Per afegir el segment seleccionat a una exportació, seleccioneu l'exportació a la llista i seleccioneu **Afegeix un segment**.
+   1. Per afegir el segment seleccionat a una exportació, **editeu** l'exportació respectiva per seleccionar el segment corresponent i deseu. En entorns de clients individuals, en lloc d'això podeu seleccionar l'exportació a la llista i seleccionar **Afegeix un segment** per obtenir el mateix resultat.
 
    1. Per crear una exportació nova amb el segment seleccionat, seleccioneu **Afegeix l'exportació**. Per obtenir més informació sobre la creació d'exportacions, vegeu [Configurar una exportació nova](export-destinations.md#set-up-a-new-export).
 

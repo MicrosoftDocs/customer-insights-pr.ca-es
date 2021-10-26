@@ -2,8 +2,14 @@
   href: index.yml
 - name: Informació del producte
   href: overview.md
-- name: Crear una versió de prova
-  href: audience-insights/get-started-trial.md
+- name: Prova gratuïta
+  items:
+    - name: Registrar-se per a una prova gratuïta
+      href: trial-signup.md
+    - name: Preguntes més freqüents sobre la prova
+      href: trial-FAQ.md
+- name: Començar amb una llicència de pagament
+  href: paid-license.md
 - name: Accés a l'entorn
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Conclusions sobre el públic
@@ -19,9 +25,11 @@
         - name: Guia d'inici ràpid
           href: audience-insights/get-started.md
         - name: Creació d'un entorn nou
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Explorar la informació del públic
           href: audience-insights/home.md
+    - name: Treballar amb comptes d'empresa
+      href: audience-insights/work-with-business-accounts.md
     - name: Aprendre mòduls
       items:
         - name: Ingerir dades
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Enumerar les activitats d'un client
           href: audience-insights/activities.md
+        - name: Definir assignacions semàntiques
+          href: audience-insights/semantic-mappings.md
     - name: Enriquiment de dades
       items:
         - name: Enriquir perfils de clients
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predir la rotació de subscripcions
               href: audience-insights/predict-subscription-churn.md
-            - name: Predir la rotació de transaccions
+            - name: Predir la cancel·lació de transaccions
               href: audience-insights/predict-transactional-churn.md
             - name: Utilitzar models personalitzats de l'aprenentatge automàtic de l'Azure
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Guia d'exemples de predicció de rotació de subscripcions
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Guia d'exemples de predicció de rotació de transaccions
+            - name: Guia d'exemple per a la predicció de la cancel·lació de transaccions
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Guia d'exemple per a la predicció de recomanacions de productes
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Administrar diversos entorns
           href: audience-insights/manage-environments.md
-        - name: Connectar-se a un compte d'emmagatzematge d'ADLS mitjançant una entitat de servei
-          href: audience-insights/connect-service-principal.md
         - name: Llengües admeses
           href: audience-insights/supported-languages.md
+        - name: Seguretat
+          items:
+            - name: Porteu el vostre propi Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Connectar-se a un compte d'emmagatzematge d'ADLS mitjançant una entitat de servei
+              href: audience-insights/connect-service-principal.md
     - name: Extensibilitat
       items:
         - name: Integrar dades web de conclusions d'interacció
@@ -248,6 +262,8 @@
       items:
         - name: Guia d'inici ràpid
           href: engagement-insights/get-started.md
+        - name: Crear un entorn
+          href: engagement-insights/create-new-environment.md
         - name: Crea una àrea de treball
           href: engagement-insights/create-workspace.md
         - name: Capturar esdeveniments de llocs web i aplicacions mòbils

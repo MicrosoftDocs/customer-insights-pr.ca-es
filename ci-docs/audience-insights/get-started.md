@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466565"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645252"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Començar a utilitzar la capacitat d'informació del públic del Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Les conclusions del públic us ajuden a comprendre millor els clients. Connecteu
 
 ## <a name="step-1-create-an-environment"></a>Pas 1: crear un entorn
 
-Per començar, primeu heu de crear un entorn per a treballar-hi. Si l'organització ja ha adquirit una llicència, vegeu [Comença amb una subscripció de pagament](get-started-paid.md). Per iniciar una versió de prova per a la informació del públic, vegeu [Configurar un entorn de prova](get-started-trial.md). 
+Per començar, primeu heu de crear un entorn per a treballar-hi. Si l'organització ja ha adquirit una llicència, vegeu [Crear un entorn](create-environment.md). Per iniciar una versió de prova per a la informació del públic, vegeu [Configurar un entorn de prova](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Pas 2: explorar la informació del públic
 

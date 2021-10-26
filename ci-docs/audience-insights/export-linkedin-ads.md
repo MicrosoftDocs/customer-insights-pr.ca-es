@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a LinkedIn Ads
 description: Apreneu a configurar la connexió i exportar a LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034211"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618279"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segments a LinkedIn Ads (versió preliminar)
 
@@ -28,9 +28,9 @@ Exporteu segments de perfils de client unificats a LinkedIn Ads per crear públi
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 100 000 perfils per exportació a LinkedIn Ads.
+- Podeu exportar fins a 100.000 perfils de client per exportació a LinkedIn Ads.
 - L'exportació a LinkedIn Ads es limita als segments.
-- L'exportació de fins a 100 000 perfils a LinkedIn Ads pot trigar fins a 10 minuts com a màxim. 
+- L'exportació de fins a 100.000 perfils de client a LinkedIn Ads pot trigar fins a 10 minuts a completar-se. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Configurar la connexió a LinkedIn Ads
 
@@ -66,7 +66,7 @@ Podeu configurar una exportació si teniu accés a una connexió d'aquest tipus.
 
 1. Trieu si voleu exportar les dades per fer [segmentació de contactes](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) o [segmentació d'empreses](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) a LinkedIn. 
 
-1. A la secció **Coincidències de dades**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a LinkedIn Ads.
+1. A la secció **Coincidència de dades**, per a la destinació dels contactes, seleccioneu com a mínim un camp que representi l'adreça electrònica, l'identificador d'anunci d'Apple, l'identificador d'anunci de Google, l'identificador d'usuari de Google o nom i cognom d'un client. Si trieu la destinació d'empresa, seleccioneu com a mínim un camp que representi un nom d'empresa, un domini de correu electrònic, l'URL de la pàgina del LinkedIn, el símbol borsari o el lloc web. Es poden seleccionar altres camps per definir encara més l'exportació. 
 
 1. Seleccioneu els segments que voleu exportar. Els públics coincidents al LinkedIn Campaign Manager es crearan automàticament amb el nom dels segments que heu seleccionat per exportar. Cada segment serà un públic coincident diferent. 
 

@@ -1,7 +1,7 @@
 ---
 title: Complement de la targeta del client de les aplicacions del Dynamics 365
 description: Mostra dades dels coneixements del públic a les aplicacions del Dynamics 365 amb aquest complement.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032976"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643349"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Amb el complement de la targeta del client instal·lat a una aplicació compatible amb el Dynamics 365, podeu triar entre visualitzar la demografia, els coneixements i la cronologia d'activitats. El complement recuperarà les dades del Customer Insights sense que afectin les dades de l'aplicació del Dynamics 365 connectada. 
+Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Amb el complement de targeta de client instal·lat a l'aplicació del Dynamics 365 admesa, podeu triar si voleu que es visualitzin els camps, les conclusions i la cronologia d'activitat del perfil del client. El complement recuperarà les dades del Customer Insights sense que afectin les dades de l'aplicació del Dynamics 365 connectada.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -28,20 +30,19 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 - Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Microsoft Dataverse](connect-power-query.md).
 - Tots els usuaris del Dynamics 365 del complement de la targeta del client s'han d'[afegir com a usuaris](permissions.md) als coneixements del públic per veure les dades.
 - [Les capacitats de cerca i filtre configurades](search-filter-index.md) als coneixements del públic són necessàries per cercar dades per treballar.
-- Cada complement es basa en dades específiques dels coneixements del públic:
-  - Control de mesures: Requereix [mesures configurades](measures.md).
-  - Control d'intel·ligència: requereix dades generades mitjançant [prediccions](predictions.md) o [models personalitzats](custom-models.md).
-  - Control demogràfic: Els camps demogràfics, com l'edat o el gènere, estan disponibles al perfil unificat del client.
-  - Control Enriquiment: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
-  - Control de la cronologia: Requereix [activitats configurades](activities.md).
+- Cada complement es basa en dades específiques dels coneixements del públic. Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
+  - **Control de mesura**: requereix [mesures configurades](measures.md) dels atributs de tipus client.
+  - **Control d'intel·ligència**: requereix dades generades mitjançant [prediccions](predictions.md) o [models personalitzats](custom-models.md).
+  - **Control de detalls del client**: tots els camps del perfil estan disponibles al perfil de client unificat.
+  - **Control d'enriquiment**: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
+  - **Control de contactes**: requereix una definició d'entitat semàntica de contactes de tipus.
+  - **Control de la cronologia**: requereix [activitats configurades](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instal·lar el complement de targeta del client
 
 El complement de la targeta del client és una solució per a les aplicacions d'interacció amb els clients al Dynamics 365. Per instal·lar la solució, aneu a AppSource i cerqueu **Targeta del client del Dynamics**. Seleccioneu el [Complement de targeta del client a AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i seleccioneu **Obtén ara**.
 
-Potser heu d'iniciar la sessió amb les credencials d'administrador de l'aplicació Dynamics 365 per instal·lar la solució.
-
-Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
+Potser heu d'iniciar la sessió amb les credencials d'administrador de l'aplicació Dynamics 365 per instal·lar la solució. Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 
 ## <a name="configure-the-customer-card-add-in"></a>Configurar el complement de targeta del client
 
@@ -50,7 +51,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Seleccioneu l'enllaç **Nom de visualització** per a la solució del **Complement de targeta de client del Dynamics 365 Customer Insights (visualització prèvia)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Seleccionar el nom de visualització.](media/select-display-name.png "Seleccionar el nom de visualització")
+   > ![Seleccionar el nom de visualització.](media/select-display-name.png "Seleccioneu el nom de visualització.")
 
 1. Seleccioneu **Inicia la sessió** i introduïu les credencials del compte d'administrador que utilitzeu per configurar el Customer Insights.
 
@@ -64,7 +65,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
    - Per dur a terme l'assignació a un compte, seleccioneu el camp de l'entitat de client que coincideixi amb l'identificador de l'entitat del compte.
 
    > [!div class="mx-imgBorder"]
-   > ![Camp Identificador de contacte.](media/contact-id-field.png "Camp Identificador de contacte")
+   > ![Camp Identificador de contacte.](media/contact-id-field.png "Camp Identificador de contacte.")
 
 1. Seleccioneu **Desa la configuració** per desar la configuració.
 
@@ -73,7 +74,9 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Assigneu la funció **Personalitzador de targetes del Customer Insights** a usuaris que personalitzaran el contingut que es mostra a la targeta per a tota l'organització.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Afegir controls de la targeta de client a formularis
-  
+
+Segons el vostre escenari, podeu triar afegir controls al formulari de **Contacte** o al formulari de **Compte**. Si el vostre entorn de coneixements sobre el públic és per a comptes empresarials, es recomana afegir els controls al formulari de Compte. En aquest cas, substituïu "contacte" als passos següents per "compte".
+
 1. Per afegir els controls de la targeta del client al formulari de contacte, aneu a **Configuració** > **Personalitzacions** al Dynamics 365.
 
 1. Seleccioneu **Personalitza el sistema**.
@@ -83,7 +86,7 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Seleccioneu el formulari de contacte al qual voleu afegir els controls de la targeta del client.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccioneu el formulari de contacte.](media/contact-active-forms.png "Seleccioneu el formulari de contacte")
+    > ![Seleccioneu el formulari de contacte.](media/contact-active-forms.png "Seleccioneu el formulari Contacte.")
 
 1. Per afegir un control, a l'editor de formularis, arrossegueu qualsevol camp de l'**Explorador de camps** a on voleu que aparegui el control.
 
@@ -102,7 +105,8 @@ Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 1. Per personalitzar el que voleu que es mostri en el control personalitzat, seleccioneu el botó Edita a la cantonada superior dreta.
 
 ## <a name="upgrade-customer-card-add-in"></a>Actualitzar el complement de targeta del client
-El complement de targeta del client no s'actualitza automàticament. Per actualitzar a l'última versió, seguiu aquest procediment a l'aplicació Dynamics 365 que té el complement instal·lat.
+
+El complement de targeta del client no s'actualitza automàticament. Per actualitzar a l'última versió, seguiu aquests passos a l'aplicació Dynamics 365 que té el complement instal·lat.
 
 1. A l'aplicació Dynamics 365, aneu a **Configuració** > **Personalització** i seleccioneu **Solucions**.
 

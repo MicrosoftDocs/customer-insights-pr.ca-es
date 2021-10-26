@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Snapchat
 description: Apreneu a configurar la connexió i exportar a Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033389"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618648"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segments a Snapchat (versió preliminar)
 
@@ -29,7 +29,7 @@ Exporteu segments de perfils de client unificats a Snapchat i utilitzeu-los per 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
 - L'exportació a Snapchat es limita als segments.
-- L'exportació de fins a 1 milió de perfils a Snapchat pot trigar fins a 15 minuts com a màxim. 
+- L'exportació de fins a 1 milió de perfils de client a Snapchat pot trigar fins a 15 minuts a completar-se. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configuració de la connexió a Snapchat
 
@@ -63,7 +63,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'[**Identificador de públic de Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a Snapchat.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Snapchat.
 
 1. Seleccioneu els segments que voleu exportar. 
 

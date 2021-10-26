@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Sendinblue
 description: Més informació sobre com configurar la connexió i l'exportació a Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036043"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617773"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Exportar segments a Sendinblue (versió preliminar)
 
@@ -29,10 +29,10 @@ Exporteu els segments de perfils de client unificats per generar campanyes, prop
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a 1 milió de perfils per exportació a Sendinblue.
+- Fins a 1 milió de perfils de client per exportar a Sendinblue.
 - L'exportació a Sendinblue es limita als segments.
-- L'exportació de segments amb un total d'1 milió de perfils pot tardar fins a 90 minuts. 
-- El nombre de perfils que podeu exportar a Sendinblue depèn i està limitat pel contracte que tingueu amb Sendinblue.
+- L'exportació de segments amb un total de 1 milions de perfils de client pot trigar fins a 90 minuts. 
+- El nombre de perfils de client que podeu exportar a Sendinblue depèn del vostre contracte amb Sendinblue i pot estar limitat.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Configuració de la connexió a Sendinblue
 
@@ -64,7 +64,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'**ID de llista de SendinBlue**. 
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. 
 
 1. Opcionalment, podeu exportar el **nom**, **cognom** i **telèfon** per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 

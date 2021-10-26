@@ -1,7 +1,7 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469940"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617543"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -27,16 +27,26 @@ A les conclusions del públic, aneu a **Dades** > **Enriquiment** per treballar 
 
 Heu de tenir permisos de col·laborador o administrador per crear o editar els enriquiments. Per obtenir més informació, vegeu [Permisos](permissions.md).
 
-A la pestanya **Detecta**, trobareu els següents enriquiments:
+A la pestanya **Descobriu**, trobareu totes les opcions d'enriquiment admeses.
 
-- [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+
 - [Marques](enrichment-microsoft.md) proporcionades per Microsoft
 - [Interessos](enrichment-microsoft.md) proporcionats per Microsoft
-- [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft
-- [Dades de l'empresa](enrichment-leadspace.md) proporcionades per Leadspace
+- [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft 
 - [Dades demogràfiques](enrichment-experian.md) proporcionades per Experian
-- [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies
-- [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP)
+- [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+
+# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+
+- [Dades de l'empresa](enrichment-leadspace.md) proporcionades per Leadspace
+- [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft 
+- [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
+- [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+
+---
 
 A la pestanya **Els meus enriquiments** podeu veure els enriquiments que heu configurat i editar-ne les propietats.
 
@@ -58,7 +68,7 @@ Executeu o desactiveu diversos enriquiments alhora seleccionant-los a la llista.
 
 ## <a name="enrichments-and-connections"></a>Enriquiments i connexions
 
-Les millores de tercers es configuren mitjançant [connexions](connections.md), que un administrador configura amb credencials i proporciona el consentiment per a les transferències de dades. Els administradors i els col·laboradors poden utilitzar la connexió per configurar enriquiments.  
+Les millores de tercers es configuren mitjançant [connexions](connections.md), que un administrador configura amb credencials i proporciona el consentiment per a les transferències de dades. Els administradors i els col·laboradors poden utilitzar les connexions per configurar enriquiments.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquiments del mateix tipus
 

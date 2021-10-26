@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034165"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645114"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -26,7 +26,7 @@ Seleccioneu el control **Entorn** a la part superior dreta de la pàgina per can
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de pantalla del control per canviar d'entorn.":::
 
-Els administradors poden [crear](get-started-paid.md) i administrar entorns.
+Els administradors poden [crear](create-environment.md) i administrar entorns.
 
 ## <a name="edit-an-existing-environment"></a>Editar un entorn existent
 
@@ -36,23 +36,9 @@ Podeu editar alguns dels detalls dels entorns existents.
 
 2.  Seleccioneu la icona **Edita**.
 
-3. Al quadre **Edita l'entorn**, podeu actualitzar el **nom de visualització** de l'entorn, però no podeu canviar la **regió** ni el **tipus**.
+3. Al quadre **Edita l'entorn** podeu actualitzar la configuració de l'entorn.
 
-4. Si un entorn està configurat per emmagatzemar dades a l'Azure Data Lake Storage, podeu actualitzar la **Clau de compte**. No obstant això, no podeu canviar el **Nom del compte** ni el del **Contenidor**.
-
-5. Com a alternativa, podeu canviar d'una connexió basada en claus de comptes a una connexió basada en recursos o en subscripcions. Un cop actualitzada, no podreu tornar a la clau de compte després de l'actualització. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Quan actualitzeu la connexió, no podreu canviar la informació del **Contenidor**.
-
-6. O bé, podeu proporcionar una URL d'entorn del Microsoft Dataverse a **Configurar l'ús compartit de dades amb el Microsoft Dataverse i habilitar capacitats addicionals**. Aquestes capacitats utilitzen l'ús compartit de dades amb aplicacions i solucions basades en el Microsoft Dataverse, la ingestió de dades des de fonts de dades locals o [prediccions](predictions.md). Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el Microsoft Dataverse Managed Data Lake.
-
-   > [!NOTE]
-   > - L'ús compartit de dades amb el Microsoft Dataverse Managed Data Lake actualment no s'admet quan deseu totes les dades al vostre propi Azure Data Lake Storage.
-   > - Actualment no s'admeten la [predicció dels valors que falten en una entitat](predictions.md) ni els informes del Power BI Embedded a les conclusions del públic (si estan habilitades al vostre entorn) quan habiliteu l'ús compartit de dades amb el llac de dades administrat pel Microsoft Dataverse.
-
-   Després d'habilitar l'ús compartit de dades amb el Microsoft Dataverse, s'inicia una actualització completa única de les fonts de dades i altres processos. Si actualment els processos s'executen, no veieu l'opció per habilitar l'ús compartit de dades amb el Microsoft Dataverse. Espereu que aquests processos es completin o cancel·lin per habilitar l'ús compartit de dades. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse.":::
-   
-   Quan executeu processos, com ara la ingestió de dades o la creació de segments, les carpetes corresponents es crearan al compte d'emmagatzematge que hagueu especificat anteriorment. Els fitxers de dades i els fitxers model.json es crearan i s'afegiran a les subcarpetes respectives, en funció del procés que executeu.
+Per obtenir més informació sobre la configuració de l'entorn, vegeu [Crear un entorn nou](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configuració de l'entorn
 

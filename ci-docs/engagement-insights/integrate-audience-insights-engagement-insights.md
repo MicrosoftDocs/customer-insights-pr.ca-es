@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559006"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645570"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció
 
@@ -26,7 +26,7 @@ Utilitzeu perfils i segments unificats de les conclusions del públic per obteni
 ## <a name="prerequisites"></a>Requisits previs
 
 - Els perfils de les conclusions del públic s'han d'emmagatzemar en un compte del Azure Data Lake Storage que tingueu o en un llac de dades administrat pel [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-- A més, l'entorn de les conclusions del públic ha de tenir un entorn del Dataverse associat. I si aquest entorn també utilitza el Dataverse per a l'emmagatzematge de dades, assegureu-vos de comprovar l'opció **Habilita l'ús compartit de dades** a la informació del públic. Per obtenir-ne més informació, consulteu [Creació i configuració d'un entorn de pagament a les conclusions del públic](../audience-insights/get-started-paid.md).
+- A més, l'entorn de les conclusions del públic ha de tenir un entorn del Dataverse associat. I si aquest entorn també utilitza el Dataverse per a l'emmagatzematge de dades, assegureu-vos de comprovar l'opció **Habilita l'ús compartit de dades** a la informació del públic. Per obtenir més informació, vegeu [Crear i configurar un entorn a les conclusions del públic](../audience-insights/create-environment.md).
 - Necessiteu permisos d'administrador per als entorns de les conclusions del públic i les conclusions d'interacció.
 - Els entorns enllaçats han d'estar a la mateixa regió geogràfica.
 

@@ -1,32 +1,32 @@
 ---
 title: Enriquiment de perfils d'empresa amb l'enriquiment de tercers de Leadspace
 description: Informació general sobre l'enriquiment de tercers de Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031691"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617339"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquiment de perfils d'empresa amb el Leadspace (versió preliminar)
 
-Leadspace és una empresa de ciència de dades que proporciona una plataforma de dades de clients B2B. Permet enriquir les dades als clients amb perfils de clients unificats per a les empreses. Els enriquiments inclouen més atributs, com ara la mida de l'empresa, la ubicació, el sector, etc.
+Leadspace és una empresa de ciència de dades que proporciona una plataforma de dades de clients B2B. Permet als entorns amb perfils de client unificats basats en comptes enriquir les seves dades. Enriquiu els *perfils de client* amb atributs com ara la mida de l'empresa, la ubicació o el sector. Enriquiu els *Perfils de contacte* amb atributs com ara el títol, la persona o la verificació de correu electrònic.
 
 ## <a name="prerequisites"></a>Requisits previs
 
 Per configurar el Leadspace, cal complir els requisits previs següents:
 
 - Teniu una llicència activa del Leadspace.
-- Tenir [perfils de clients unificats](customer-profiles.md) per a empreses.
-- Un administrador ja ha configurat una connexió del Leadspace o teniu permisos d'[administrador](permissions.md#administrator) i la "clau perpètua" (anomenada **testimoni del Leadspace**). Poseu-vos en contacte directament amb [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) per obtenir informació sobre el producte.
+- Teniu [perfils de client unificats](customer-profiles.md) basats en comptes.
+- Un administrador ja ha configurat una connexió del Leadspace o teniu permisos d'[administrador](permissions.md#administrator) i la "clau perpètua" (anomenada **testimoni del Leadspace**). Poseu-vos en contacte directament amb [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) per obtenir informació sobre el producte.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
@@ -50,6 +50,10 @@ Per configurar el Leadspace, cal complir els requisits previs següents:
 
 1. Seleccioneu **Següent** per completar l'assignació de camp.
 
+1. Activeu la casella si teniu *Perfils de contacte* que voleu enriquir. Les conclusions del públic s'assignaran automàticament als camps necessaris.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Enriquiment dels registres de contacte del Leadspace.":::
+ 
 1. Proporcioneu un nom per a l'enriquiment i seleccioneu **Desa l'enriquiment** després de revisar les vostres opcions.
 
 
@@ -81,7 +85,8 @@ Per obtenir més informació, vegeu [API del Leadspace](https://support.leadspac
 
 ## <a name="next-steps"></a>Passos següents
 
-Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

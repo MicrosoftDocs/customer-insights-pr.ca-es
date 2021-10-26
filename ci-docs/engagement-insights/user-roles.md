@@ -4,27 +4,33 @@ description: Informació general de funcions i permisos disponibles per als memb
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036681"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645525"
 ---
 # <a name="roles-and-permissions"></a>Funcions i permisos
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Una àrea de treball és com emmagatzemeu i administreu incidències i informes. Un membre és un usuari que pot accedir a una àrea de treball. Podeu assignar membres a l'àrea de treball i definir les seves funcions i permisos. Les funcions d'administrador administren les àrees de treball i els entorns i configuren les conclusions d'interacció per a altres usuaris. Les funcions de col·laborador estan dirigides a analistes que no necessiten configurar les conclusions d'interacció, però volen crear els seus propis informes, embuts de conversió o segments.
+En un espai de treball s'emmagatzemen i administren incidències i informes. Per obtenir més informació, vegeu [Crear una àrea de treball i afegir-hi membres](create-workspace.md). 
+
+Una àrea de treball pot incloure les funcions i els permisos següents:
+
+- Les funcions de *membre* són usuaris que poden accedir a una àrea de treball. Podeu assignar membres a l'àrea de treball i definir les seves funcions i permisos. 
+- Les funcions d'*administrador* administren les àrees de treball i els entorns i configuren les conclusions d'interacció per a altres usuaris. 
+- Les funcions de *col·laborador* estan orientades a analistes que no necessiten configurar informació d'interacció, però que volen crear els seus propis informes, embuts o segments.
 
 ## <a name="permissions"></a>Permisos
   
-El gràfic següent identifica permisos per a cada funció. 
+A la taula següent s'identifiquen els permisos per a cada funció. 
 
 | Permís | Administrador de l'entorn | Administrador de l'àrea de treball | Col·laborador de l'entorn | Col·laborador de l'àrea de treball | 
 |--|--|--|--|--|

@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a ActiveCampaign
 description: Més informació sobre com configurar la connexió i l'exportació a ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032197"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618141"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exportar segments a ActiveCampaign (versió preliminar)
 
@@ -28,9 +28,9 @@ Exporteu segments de perfils de client unificats a ActiveCampaign i utilitzeu-lo
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 1 milió de perfils per exportació a ActiveCampaign i pot tardar fins a 90 minuts com a màxim.
+- Podeu exportar fins a 1 milió de perfils de client per exportar-los a ActiveCampaign i pot trigar fins a 90 minuts com a completar-se.
 - L'exportació a ActiveCampaign es limita als segments.
-- El nombre de perfils que podeu exportar a ActiveCampaign depèn del contracte que tingueu amb ActiveCampaign.
+- El nombre de perfils de client que podeu exportar a ActiveCampaign depèn del vostre contracte amb ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Configuració de la connexió a ActiveCampaign
 
@@ -64,7 +64,7 @@ Podeu configurar una exportació si teniu accés a una connexió d'aquest tipus.
 
 1. Introduïu l'[**ID de llista d'ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. És necessària per exportar segments a ActiveCampaign. Opcionalment, podeu exportar el nom, cognom i telèfon per crear correus electrònics més personalitzats. Seleccioneu Afegeix un atribut per assignar aquests camps.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. És necessària per exportar segments a ActiveCampaign. Opcionalment, podeu exportar el nom, cognom i telèfon per crear correus electrònics més personalitzats. Seleccioneu Afegeix un atribut per assignar aquests camps.
 
 1. Seleccioneu **Desa**.
 

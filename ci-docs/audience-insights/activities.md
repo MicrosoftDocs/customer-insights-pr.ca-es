@@ -1,7 +1,7 @@
 ---
 title: Activitats del client
 description: Definir activitats de client i visualitzar-les en una cronologia dels perfils del client.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494399"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617957"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
@@ -24,8 +24,7 @@ Combinar les activitats de client de [diverses fonts de dades](data-sources.md) 
 
 Les fonts de dades poden incloure entitats amb dades transaccionals i d'activitats procedents de diverses fonts de dades. Identifiqueu aquestes entitats i seleccioneu les activitats que voleu visualitzar a la cronologia del client. Trieu l'entitat que inclogui l'activitat o les activitats de destinació.
 
-> [!NOTE]
-> Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclosa en una cronologia de client i no es poden afegir entitats sense camps **Data**. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
+Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclosa en una cronologia de client i no es poden afegir entitats sense camps **Data**. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
 
 1. A les conclusions del públic, aneu a **Dades** > **Activitats**.
 
@@ -41,13 +40,16 @@ Les fonts de dades poden incloure entitats amb dades transaccionals i d'activita
 
 1. Seleccioneu **Següent** per anar al pas següent.
 
-1. En el pas **Relació**, configureu els detalls per connectar les dades de l'activitat al client corresponent. Aquest pas visualitza la connexió entre entitats.  
+1. En el pas **Relació**, configureu els detalls per connectar les dades de l'activitat al seu registre de client corresponent. Aquest pas visualitza la connexió entre entitats.  
 
    - **Primer**: camp extern de la vostra entitat d'activitat que s'utilitzarà per establir una relació amb una altra entitat.
    - **Segon**: entitat de client d'origen corresponent amb la qual estarà relacionada l'entitat d'activitat. Només podeu relacionar amb entitats de client d'origen utilitzades en el procés d'unificació de dades.
    - **Tercer**: si ja hi ha una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació tindrà lloc en mode només de lectura. Si no hi ha cap relació, es crearà una relació nova amb el nom que proporcioneu en aquest quadre.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiu la relació de l'entitat.":::
+
+   > [!TIP]
+   > En entorns B2B, podeu seleccionar entre les entitats de compte i altres entitats. Si seleccioneu una entitat de compte, el camí de la relació es defineix automàticament. Per a la resta d'entitats, heu de definir el camí de la relació per damunt d'una o diverses entitats intermèdies fins que arribeu a una entitat de compte.
 
 1. Seleccioneu **Següent** per anar al pas següent. 
 
@@ -95,5 +97,34 @@ Les accions següents estan disponibles en seleccionar una activitat.
 - **Canvia el nom**: obre un diàleg on podeu introduir un nom diferent per a l'activitat seleccionada. Seleccioneu **Desa** per aplicar els canvis.
 
 - **Suprimeix**: s'obre un diàleg per confirmar la supressió de l'activitat seleccionada. També podeu suprimir més d'una activitat alhora seleccionant les activitats i, a continuació, seleccionant la icona de supressió. Seleccioneu **Suprimeix** per confirmar la supressió.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Visualitzar cronologies d'activitats als perfils de client
+
+Després de configurar activitats de client, seleccioneu **Mostra a la cronologia d'activitats** a la configuració de l'activitat per cercar totes les activitats del client al seu perfil de client.
+
+Per obrir la cronologia d'un client, aneu a **Clients** i trieu el perfil de client que voleu visualitzar.
+
+Si un client ha participat en una activitat que heu configurat, la trobareu a la secció **Cronologia d'activitats**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualitzar les activitats configurades als perfils de client.":::
+
+Hi ha diverses maneres de filtrar les activitats a la cronologia d'activitats:
+
+- Podeu seleccionar una o moltes de les icones d'activitat per refinar els resultats per incloure només els tipus seleccionats.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrar activitats per tipus utilitzant les icones.":::
+
+- Podeu seleccionar **Filtra** per obrir una subfinestra de filtre per configurar els filtres de cronologia.
+
+   1. Podeu filtrar per *ActivityType* i *Data*
+   1. Seleccioneu **Aplica** per utilitzar els filtres a la cronologia d'activitats.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilitzeu la subfinestra de filtre per configurar les condicions de filtre.":::
+
+Per suprimir filtres, seleccioneu la **x** al costat de cada filtre aplicat a la cronologia o seleccioneu **Esborra els filtres**.
+
+
+> [!NOTE]
+> Els filtres d'activitat se suprimeixen quan sortiu d'un perfil de client. Els heu d'aplicar cada vegada que obriu en un perfil de client.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

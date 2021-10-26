@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a RollWorks
 description: Apreneu a configurar la connexió i exportar a RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034578"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617432"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Exportar segments a RollWorks (versió preliminar)
 
@@ -28,11 +28,11 @@ Exporteu segments de perfils de client unificats a RollWorks i utilitzeu-los per
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 250.000 perfils per exportació al RollWorks.
-- No podeu exportar segments amb menys de 100 perfils al RollWorks. 
+- Podeu exportar fins a 250.000 perfils de client per exportació a RollWorks.
+- No podeu exportar segments amb menys de 100 perfils de client a RollWorks. 
 - L'exportació a RollWorks es limita als segments.
-- L'exportació de fins a 250.000 perfils a RollWorks pot trigar fins a 10 minuts com a màxim. 
-- El nombre de perfils que podeu exportar a RollWorks depèn i està limitat pel contracte amb RollWorks.
+- L'exportació de fins a 250.000 perfils de client a RollWorks pot trigar fins a 10 minuts a completar-se. 
+- El nombre de perfils de client que podeu exportar a RollWorks depèn del vostre contracte amb RollWorks i pot estar limitat.
 
 ## <a name="set-up-connection-to-rollworks"></a>Configuració de la connexió a RollWorks
 
@@ -66,7 +66,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'**Identificador d'anunciant de RollWorks** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a RollWorks.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a RollWorks.
 
 1. Seleccioneu els segments que voleu exportar. Seleccioneu un segment amb un mínim de 100 membres. No podeu exportar segments més petits. A més, la mida màxima d'un segment que s'ha d'exportar és de 250.000 membres per exportació. 
 

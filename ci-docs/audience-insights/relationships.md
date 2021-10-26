@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557340"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622866"
 ---
 # <a name="relationships-between-entities"></a>Relacions entre entitats
 
@@ -68,6 +68,20 @@ La relació consisteix en una *entitat d'origen* que conté la clau externa i un
 
 4. Seleccioneu **Desa** per crear la connexió personalitzada.
 
+## <a name="set-up-account-hierarchies"></a>Configurar jerarquies de comptes
+
+Els entorns configurats per utilitzar comptes empresarials com a públic principal de destinació poden configurar jerarquies de comptes per als comptes empresarials relacionats. Per exemple, una empresa que té unitats de negoci independents. 
+
+Les organitzacions creen jerarquies de comptes per administrar millor els comptes i les seves relacions entre si. La capacitat de conclusions del públic admet jerarquies de comptes principals i secundaris que ja existeixen a les dades de clients ingerides. Per exemple, comptes del Dynamics 365 Sales. Aquestes jerarquies es poden configurar a la pàgina **Relacions** de les conclusions del públic, a la pestanya de jerarquia de comptes.
+
+1. Aneu a **Dades** > **Relacions**.
+1. Seleccioneu la pestanya **Jerarquia del compte**.
+1. Seleccioneu **Nova jerarquia de comptes**. 
+1. A la subfinestra **Jerarquia de comptes**, proporcioneu un nom per a la jerarquia. El sistema crea un nom per a l'entitat de sortida. Podeu canviar el nom de l'entitat de sortida.
+1. Seleccioneu l'entitat que conté la jerarquia de comptes. Normalment és a la mateixa entitat que conté els comptes.
+1. Seleccioneu l'**ID del compte** i l'**ID principal del compte** de l'entitat seleccionada 
+1. Seleccioneu **Desa** per aplicar la configuració i finalitzar la jerarquia de comptes.
+
 ## <a name="view-relationships"></a>Visualitza relacions
 
 A la pàgina Relacions s'enumeren totes les relacions que s'han creat. Cada fila representa una relació, que també inclou detalls sobre l'entitat d'origen, l'entitat de destinació i la cardinalitat. 
@@ -105,7 +119,7 @@ Per exemple, l'entitat *eCommerce_eCommercePurchases* té les relacions següent
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
 
-Un camí de relació determina quines entitats podeu utilitzar quan creeu regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases), en un punt de venda (POS_posPurchases), i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
+Un camí de relació determina quines entitats podeu utilitzar quan creeu regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases) en un punt de venda (POS_posPurchases) i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
 
 ### <a name="direct-relationship"></a>Relació directa
 

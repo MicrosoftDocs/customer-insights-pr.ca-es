@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033206"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605937"
 ---
 # <a name="connections-preview-overview"></a>Informació general sobre les connexions (versió preliminar)
 
@@ -47,6 +47,7 @@ Per afegir connexions, heu de tenir [permisos d'administrador](permissions.md). 
 1. A la subfinestra **Configuració de la connexió**, proporcioneu els detalls necessaris. 
    1. El **Nom de visualització** i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
    1. Els camps exactes depenen del servei amb què us connecteu. Podeu obtenir informació sobre els detalls d'un tipus de connexió específic a l'article sobre el servei de destinació.
+   1. Si [utilitzeu el vostre propi magatzem de claus](use-azure-key-vault.md) per emmagatzemar secrets, activeu **Utilitza Key Vault** i trieu el secret de la llista.
 
 1. Per crear la connexió, seleccioneu **Desa**.
 
@@ -93,3 +94,6 @@ Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiv
 
 1. Per confirmar la supressió, seleccioneu **Suprimeix**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar les connexions amb els secrets administrats pel vostre propi Key Vault
+
+Algunes connexions necessiten secrets com ara les claus de l'API o les contrasenyes. Algunes connexions admeten secrets emmagatzemats al vostre propi Key Vault. Més informació sobre les connexions admeses i com configurar-les al [vostre propi Key Vault per a les conclusions del públic](use-azure-key-vault.md).

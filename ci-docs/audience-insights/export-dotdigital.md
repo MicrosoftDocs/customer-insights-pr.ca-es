@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a DotDigital
 description: Apreneu a configurar la connexió i exportar a DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034624"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618371"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exportar segments a DotDigital (versió preliminar)
 
@@ -22,17 +22,17 @@ Exporteu els segments de perfils de client unificats a llibretes d'adreces de Do
 
 ## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
 
--   Teniu un [compte de DotDigital](https://dotdigital.com/) i les credencials d'administrador corresponents.
+-   Teniu un [compte de DotDigital](https://dotdigital.com/) i heu creat un [usuari de l'API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Necessitareu utilitzar les credencials d'usuari de l'API per crear una connexió
 -   Hi ha llibretes d'adreces a DotDigital amb els identificadors corresponents. L'identificador es troba a l'adreça URL quan seleccioneu i obriu una llibreta d'adreces. Per obtenir més informació, vegeu [Llibretes d'adreces de DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Teniu [segments configurats](segments.md) a les conclusions del públic.
 -   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a un milió de perfils per exportació a DotDigital.
+- Fins a 1 milió de perfils de client per exportar a DotDigital.
 - L'exportació a DotDigital es limita als segments.
-- L'exportació de segments amb un total d'un milió de perfils pot durar fins a 3 hores a causa de les possibles limitacions del proveïdor. 
-- El nombre de perfils que podeu exportar a DotDigital és limitat i dependrà del contracte que tingueu amb DotDigital.
+- L'exportació de segments amb un total d'1 milió de perfils de client pot trigar fins a 3 hores a causa de les limitacions del proveïdor. 
+- El nombre de perfils de client que podeu exportar a DotDigital depèn del vostre contracte amb DotDigital i pot estar limitat.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Configuració de la connexió a DotDigital
 
@@ -44,7 +44,7 @@ Exporteu els segments de perfils de client unificats a llibretes d'adreces de Do
 
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduïu el **nom d'usuari i la contrasenya de DotDigital**.
+1. Introduïu el **nom d'usuari i la contrasenya de l'API de DotDigital**. 
 
 1. Introduïu l'**[identificador de la llibreta d'adreces de DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció DotDigital. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
 
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Repetiu els mateixos passos per a altres camps opcionals com ara el **Nom**, el **Cognom**, el **Nom complet**, el **Sexe** i el **Codi postal**.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Repetiu els mateixos passos per a altres camps opcionals com ara el **Nom**, el **Cognom**, el **Nom complet**, el **Sexe** i el **Codi postal**.
 
 1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a DotDigital.
 

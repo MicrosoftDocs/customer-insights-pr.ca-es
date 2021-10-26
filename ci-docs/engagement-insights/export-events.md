@@ -4,23 +4,23 @@ description: Com s'exporten incidències refinades i incidències de base.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032373"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606179"
 ---
 # <a name="export-events"></a>Exportar incidències
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Una incidència representa el comportament de l'usuari. Registra quan un usuari visualitza una pàgina (incidència de visualització) o interactua amb el contingut (incidència d'acció). Quan podeu decidir quines propietats de les dades voleu que es visualitzin en un informe, aquesta visualització virtual de les dades s'anomena *incidència refinada*. 
+Una incidència representa el comportament de l'usuari. Registra quan un usuari visualitza una pàgina (incidència de visualització) o interactua amb el contingut (incidència d'acció). Quan podeu decidir quines propietats de les dades voleu que es visualitzin en un informe, aquesta visualització virtual de les dades s'anomena *incidència refinada*. Per obtenir més informació, vegeu [Crear i modificar incidències](refined-events.md).
 
 - Podeu exportar incidències i incidències refinades a un emmagatzematge extern. 
 - Les exportacions són una seqüència de dades enviades. No podeu recarregar la seqüència. 
@@ -45,26 +45,28 @@ Abans de configurar una exportació, heu de tenir accés i una subscripció acti
 
 ## <a name="export-events"></a>Exporta esdeveniments
 
-Hi ha dues maneres d'exportar incidències: 
+Hi ha dues maneres d'obrir el quadre de diàleg **Exporta les incidències**: 
 - Aneu a **Dades** > **Exportacions** i seleccioneu **Exportació nova**.
 - Aneu a **Dades** > **Esdeveniments**, seleccioneu **Més [...]** al costat de l'esdeveniment que voleu exportar i seleccioneu **Exporta** al menú desplegable. 
 
+:::image type="content" source="media/new-export.png" alt-text="Creeu un projecte nou.":::
+
 Us guiarem pels passos que cal seguir per crear una exportació:
 
-1. Proporcioneu un **Nom d'exportació**.
+1. Proporcioneu un **Nom d'exportació** i, a continuació, seleccioneu **Següent**.
 
 1. A la llista desplegable **Selecció d'esdeveniments**, trieu els esdeveniments base i els esdeveniments refinats que voleu incloure a l'exportació. 
 
-1. A **Estructura dels fitxers**, seleccioneu la cadència per crear fitxers nous a l'emmagatzematge de destinació. Les incidències s'exporten contínuament tan bon punt arriben.
+1. A la secció **Estructura de fitxers**, seleccioneu la cadència (horària o diària) per crear fitxers nous a l'emmagatzematge de destinació i, a continuació, seleccioneu **Següent**. Les incidències s'exporten contínuament tan bon punt arriben.
 
-1. Seleccioneu el format de l'exportació. Podeu triar entre el format **model de dades comú**, **CSV** i **JSON**. Per utilitzar l'exportació amb altres aplicacions del Dynamics 365, us recomanem que utilitzeu el format del model de dades comú.
+1. Al quadre de diàleg **Trieu el format**, seleccioneu el format de l'exportació. Trieu entre els formats **Common Data Model**, **CSV** i **JSON**. Per utilitzar l'exportació amb altres aplicacions del Dynamics 365, us recomanem el format **Common Data Model**.
 
-1. Al pas **Tria la destinació**, especifiqueu la ubicacó de l'Azure Data Lake Storage Gen 2.
+1. Al quadre de diàleg **Trieu la destinació**, especifiqueu la ubicació de l'Azure Data Lake Storage Gen 2.
     1. El **nom de compte d'ADLS Gen 2** és el nom del compte d'emmagatzematge al qual voleu desar l'exportació. 
     1. La **ruta de la carpeta** defineix on s'ha d'emmagatzemar l'exportació al sistema de fitxers i l'estructura de directoris del compte d'emmagatzematge.
     1. La **clau compartida** està disponible des del portal de l'Azure per al compte d'emmagatzematge.
 
-1. Reviseu i confirmeu les seleccions.
+1. Reviseu i confirmeu les vostres seleccions per acabar.
 
 ## <a name="view-and-manage-exports"></a>Visualitzar i administrar exportacions
 

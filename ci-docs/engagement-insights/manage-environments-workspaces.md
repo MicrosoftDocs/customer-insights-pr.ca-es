@@ -4,17 +4,17 @@ description: Com crear, canviar el nom i suprimir àrees de treball i entorns.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486023"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645434"
 ---
 # <a name="manage-environments-and-workspaces"></a>Administrar entorns i àrees de treball
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486023"
 
 ## <a name="overview"></a>Informació general
 
-Una àrea de treball és un espai on es poden emmagatzemar i administrar incidències i informes. És on podeu visualitzar l'activitat dels usuaris en temps real. Quan creeu una àrea de treball, seleccioneu el tipus de dades que voleu enviar a l'àrea de treball. Actualment, s'admeten les dades web i les aplicacions mòbils.
+En aquest tema es tracta la manera d'administrar les àrees de treball i els entorns quan ja han estat creats. 
 
-Un entorn és una àrea on administreu les vostres àrees de treball i connexions. La manera d'utilitzar els entorns depèn de la vostra organització i del cas d'ús. Per exemple, podeu crear:
+- Una *àrea de treball* és un espai on es poden emmagatzemar i administrar incidències i informes. És on podeu visualitzar l'activitat dels usuaris en temps real. Quan creeu una àrea de treball, seleccioneu el tipus de dades que voleu enviar a l'àrea de treball. Actualment, s'admeten les dades web i les aplicacions mòbils. Per obtenir més informació, vegeu [Crear una àrea de treball i afegir-hi membres](create-workspace.md).
 
--   Un entorn únic.
--   Entorns diferents per a provar i produir.
--   Entorns separats per a equips o departaments específics de la vostra organització que contenen incidències rellevants per a cada públic.
--   Entorns separats per a diferents branques globals de la vostra empresa.
--   Connexions a la capacitat d'estadístiques del públic del Customer Insights.
+- Un *entorn* és una àrea on administreu les vostres àrees de treball i connexions. Per obtenir més informació, vegeu [Crear un entorn nou](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Triar un entorn i crear una àrea de treball 
-
-Cada àrea de treball ha de ser en un entorn. Podeu seleccionar un entorn existent o crear-ne un de nou quan creeu una àrea de treball. A continuació, podeu afegir membres de l'àrea de treball i començar a recopilar dades.
-
-**Per a crear la vostra primera àrea de treball**
-
-1. Als coneixements d'interacció, seleccioneu **Crea** al commutador de l'àrea de treball. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Selector d'àrea de treball de la pàgina del Customer Insights.":::
-
-1. Trieu un entorn de la llista o seleccioneu **Crea un entorn nou**.
-
-1. Introduïu un nom a **Nom de l'àrea de treball**. 
-
-1. Seleccioneu el tipus d'entorn que voleu crear, en funció de si voleu mesurar què succeeix en un lloc web o en una aplicació mòbil. 
-
-1. Podeu afegir membres i assignar el seu nivell de permís des de la llista de **Funcions**. A continuació, seleccioneu **Finalitza** per crear l'àrea de treball o **Següent** per instal·lar el codi. 
-
-1. Instal·leu el fragment de codi per començar a rebre dades i, a continuació, seleccioneu **Fet**. 
-
-## <a name="manage-a-workspace"></a>Administrar una àrea de treball
+## <a name="manage-an-existing-workspace"></a>Administrar una àrea de treball existent
 
 Podeu mantenir diverses àrees de treball simultàniament en un entorn. La vostra [funció](user-roles.md) determina com podeu treballar-hi. 
 
  - Heu de ser un administrador de l'entorn o un administrador de l'àrea de treball per administrar l'àrea de treball.
  - Com a administrador de l'àrea de treball, podeu canviar el nom de les àrees de treball existents o suprimir-les. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centre d'administració de l'àrea de treball.":::
 
 ### <a name="edit-a-workspace-name"></a>Edita un nom de l’àrea de treball
 
@@ -75,7 +53,7 @@ Si suprimiu una àrea de treball, se'n suprimirà de manera permanent tot el con
 
 1. Seleccioneu **Suprimeix l'àrea de treball**. 
 
-1. Al diàleg **Supressió de l'àrea de treball**, introduïu **CONFIRMA LA SUPRESSIÓ**. 
+1. Al quadre de diàleg **Suprimeix l'àrea de treball**, introduïu **CONFIRMA LA SUPRESSIÓ** tot en majúscules. 
 
 1. Seleccioneu **Suprimeix** per suprimir de manera permanent l'àrea de treball.
 
@@ -87,27 +65,11 @@ Si suprimiu una àrea de treball, se'n suprimirà de manera permanent tot el con
 
 1. Seleccioneu **Afegeix membres** per afegir-los a l'àrea de treball.
 
-## <a name="manage-an-environment"></a>Gestionar un entorn
+## <a name="manage-an-existing-environment"></a>Administrar un entorn existent
 
 Com a administrador de l'entorn, podeu accedir a un entorn des de la subfinestra de navegació esquerra. Podeu configurar els paràmetres de l'entorn, altres administradors de l'entorn i àrees de treball. Seleccioneu pestanyes per desplaçar-vos entre diferents àrees del centre d'administració.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centre d'administració de l'entorn.":::
-
-### <a name="create-an-environment"></a>Creació d'un entorn
-
-1. Al selector d'àrees de treball, seleccioneu **+Crea**.
-
-1. A l'experiència guiada, obriu el menú desplegable **Entorn** i seleccioneu **Crea un entorn nou**. 
-
-1. Proporcioneu un **Nom d'entorn**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Pas de l'experiència guiada per especificar els detalls de l'entorn.":::
-
-1. Trieu la **Regió** i seleccioneu **Següent**. 
-
-1. Proporcioneu un Nom d'àrea de treball i trieu quin tipus d'àrea de treball voleu crear. 
-
-1.  Opcionalment, afegiu membres i copieu els fragment de codi per completar el procés de creació.
+:::image type="content" source="media/environment-edit.png" alt-text="Centre d'administració de l'entorn.":::
 
 ### <a name="rename-an-environment"></a>Canviar el nom d'un entorn
 
@@ -131,7 +93,7 @@ Els administradors d'entorn poden suprimir entorns. Per poder suprimir un entorn
 
 1. Seleccioneu **Suprimeix l'entorn**. 
 
-1. Al diàleg **Supressió de l'àrea de treball**, introduïu **CONFIRMA LA SUPRESSIÓ**. 
+1. Al quadre de diàleg **Suprimeix l'àrea de treball**, introduïu **CONFIRMA LA SUPRESSIÓ** tot en majúscules. 
 
 1. Seleccioneu **Suprimeix** per suprimir l'entorn permanentment.
 

@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483513"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645160"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
 
 Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Seguiu llegint per obtenir informació sobre com connectar el Dynamics 365 Customer Insights amb un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure en lloc de claus del compte d'emmagatzematge. 
 
-Podeu utilitzar l'entitat de seguretat de servei per [afegir o editar de manera segura una carpeta del Common Data Model com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](get-started-paid.md).
+Podeu utilitzar l'entitat de seguretat de servei per [afegir o editar de manera segura una carpeta del Common Data Model com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](create-environment.md).
 
 > [!IMPORTANT]
 > - El compte del Data Lake Storage que utilitzarà l'entitat de servei ha de tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).

@@ -1,7 +1,7 @@
 ---
 title: Informació general sobre les situacions de predicció admeses
 description: Situacions i opcions de predicció cobertes per l'aplicació del Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035997"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618831"
 ---
 # <a name="predictions-overview"></a>Informació general sobre les prediccions
 
@@ -24,10 +24,20 @@ El Dynamics 365 Customer Insights inclou diverses opcions que poden utilitzar l'
 ## <a name="out-of-box-models"></a>Models de sèrie
 
 La manera més fàcil de començar amb la predicció de dades són els models predefinits, que sovint es coneixen com a models de sèrie. Només necessiten determinades dades i estructura per generar informació ràpidament. Actualment, hi ha disponibles els models següents: 
-- [Valor de vida dels clients](predict-customer-lifetime-value.md): preveu els ingressos potencials d'un client durant tota la interacció amb una empresa. 
+
+# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+
+- [Valor de vida dels clients](predict-customer-lifetime-value.md): preveu els ingressos potencials d'un client durant tota la interacció amb una empresa.
 - [Recomanació de producte](predict-product-recommendation.md): suggereix conjunts de recomanacions de productes predictives a partir del comportament de compra i dels clients amb patrons de compra similars.
 - [Cancel·lació de subscripció](predict-subscription-churn.md): prediu si un client està en risc de deixar d'utilitzar els productes o serveis de subscripció de la vostra empresa.
 - [Cancel·lació de subscripció](predict-transactional-churn.md): prediu si un client ja no comprarà els vostres productes o serveis en un determinat període de temps.
+
+# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+
+- [Cancel·lació de subscripció](predict-transactional-churn.md): prediu si un client ja no comprarà els vostres productes o serveis en un determinat període de temps.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integració de l'aprenentatge automàtic de l'Azure
 

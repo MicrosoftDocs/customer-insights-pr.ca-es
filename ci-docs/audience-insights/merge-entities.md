@@ -1,7 +1,7 @@
 ---
 title: Combinar entitats a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494307"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648242"
 ---
 # <a name="merge-entities"></a>Combinar entitats
 
@@ -89,7 +91,7 @@ A la pàgina **Combina**, seleccioneu **Camps exclosos** per veure la llista de 
     :::image type="content" source="media/recency-merge-option.png" alt-text="L'opció del temps d'antiguitat al quadre de diàleg de camps combinats.":::
     - **Menys recents**: identifica el valor guanyador en funció del menys recent. Requereix una data o un camp numèric per a cada entitat participants a l'àmbit dels camps combinats per definir el temps d'antiguitat.
 
-1.  Podeu afegir camps addicionals per participar en el procés de combinació.
+1.  Podeu afegir més camps per participar en el procés de combinació.
 
 1.  Podeu canviar el nom del camp combinat.
 
@@ -131,7 +133,7 @@ Algunes entitats contenen més detalls que altres. Si una entitat inclou les dad
 
 Després de configurar els camps de combinació, podeu definir com generar els valors CustomerId, els identificadors únics del perfil de client. El pas de combinació del procés d'unificació de dades genera l'identificador únic del perfil de client. L'identificador és CustomerId de l'entitat *Client* que resulta del procés d'unificació de dades. 
 
-El CustomerId de l'entitat Client es basa en un hash del primer valor de les claus principals guanyadores que no són nul·les. Aquestes tecles provenen de les entitats utilitzades a la fase de coincidència i combinació i estan influencides per l'ordre de la coincidència.Per tant, el CustomerID pot canviar quan canvia un valor clau principal a l'entitat principal de l'ordre de coincidència. Per tant, és possible que el valor clau principal no sempre representi el mateix client.
+El CustomerId de l'entitat Client es basa en un hash del primer valor de les claus principals guanyadores que no són nul·les. Aquestes tecles provenen de les entitats utilitzades a la fase de coincidència i combinació i estan influencides per l'ordre de la coincidència.Per tant, el CustomerID pot canviar quan canvia un valor clau principal a l'entitat principal de l'ordre de coincidència. Per tant, el valor clau principal no sempre representa el mateix client.
 
 Configurar un identificador de client estable us permet evitar aquest comportament.
 
@@ -139,7 +141,7 @@ Configurar un identificador de client estable us permet evitar aquest comportame
 
 1. Aneu a **Unifica** > **Combina**.
 
-1. A la pàgina **Combina**, seleccioneu la pestanya **Claus**. 
+1. Seleccioneu la pestanya **Claus**. 
 
 1. Passeu el cursor per sobre de la fila **CustomerId** i seleccioneu l'opció **Configura**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Control per personalitzar la generació d'ID.":::
@@ -147,6 +149,30 @@ Configurar un identificador de client estable us permet evitar aquest comportame
 1. Seleccioneu fins a cinc camps que formaran un identificador de client únic i que siguin més estables. Els registres que no coincideixen amb la configuració utilitzen un ID configurat pel sistema.  
 
 1. Seleccioneu **Fet** i executeu el procés de combinació per aplicar els canvis.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Agrupar els perfils en domicilis o clústers
+
+Com a part del procés de configuració de la generació de perfils de client, podeu definir regles per agrupar els perfils relacionats en un clúster. Actualment hi ha dos tipus de clústers disponibles: clústers de domicili i personalitzats. El sistema selecciona automàticament un domicili amb regles predefinides si l'entitat *Client* conté els camps semàntics *Person.LastName* i *Location.Address*. També podeu crear un clúster amb les vostres pròpies regles i condicions, de manera semblant a les [regles de coincidència](match-entities.md#define-rules-for-match-pairs).
+
+**Definir un domicili o un clúster**
+
+1. Aneu a **Unifica** > **Combina**.
+
+1. A la pestanya **Combinació**, seleccioneu **Avançat** > **Crea un clúster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Control per crear un clúster nou.":::
+
+1. Trieu entre un clúster **de Domicili** o un de **Personalitzat**. Si els camps semàntics *Person.LastName* i *Location.Address* existeixen a l'entitat *Client*, se selecciona automàticament el domicili.
+
+1. Proporcioneu un nom del clúster i seleccioneu **Fet**.
+
+1. Seleccioneu la pestanya **Clústers** per cercar el clúster que heu creat.
+
+1. Especifiqueu les regles i les condicions per definir el clúster.
+
+1. Seleccioneu **Executa** per executar el procés de combinació i crear el clúster.
+
+Un cop executat el procés de combinació, els identificadors de clúster s'afegeixen com a camps nous a l'entitat *Client*.
 
 ## <a name="run-your-merge"></a>Executar la combinació
 

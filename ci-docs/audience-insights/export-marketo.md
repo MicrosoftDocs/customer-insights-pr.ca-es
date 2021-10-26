@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Marketo
 description: Apreneu a configurar la connexió i exportar a Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033481"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619153"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segments a Marketo (versió preliminar)
 
@@ -29,10 +29,10 @@ Exporteu segments de perfils de client unificats per generar campanyes, proporci
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a un milió de perfils per exportació a Marketo.
+- Fins a 1 milió de perfils de client per exportar a Marketo.
 - L'exportació a Marketo es limita als segments.
-- L'exportació de segments amb un total d'un milió de perfils pot durar fins a 3 hores. 
-- El nombre de perfils que podeu exportar a Marketo és limitat i dependrà del contracte que tingueu amb Marketo.
+- L'exportació de segments amb un total de 1 milions de perfils de client pot trigar fins a 3 hores. 
+- El nombre de perfils de client que podeu exportar a Marketo depèn del vostre contracte amb Marketo i pot estar limitat.
 
 ## <a name="set-up-connection-to-marketo"></a>Configuració de la connexió a Marketo
 
@@ -64,7 +64,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. L'identificador de llista és un valor purament numèric. Per exemple, si l'identificador de la llista de Marketo és ST12345A7, suprimiu el caràcter abans i després dels numerals i introduïu `12345`. 
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. 
 
 1. O bé podeu exportar **Nom**, **Cognom**, **Ciutat**, **Província** i **País o Regió** per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 

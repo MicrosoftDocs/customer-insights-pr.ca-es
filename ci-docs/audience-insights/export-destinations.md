@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights
 description: Administrar les exportacions per compartir dades.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034670"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623089"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
-A la pàgina **Exportacions** es mostren totes les exportacions configurades. Les exportacions comparteixen dades específiques amb diverses aplicacions. Poden incloure perfils de clients o entitats, esquemes i detalls d'assignació. Cada exportació requereix una [connexió, configurada per un administrador, per administrar l'autenticació i l'accés](connections.md).
+A la pàgina **Exportacions** es mostren totes les exportacions configurades. Les exportacions comparteixen dades específiques amb diverses aplicacions. Poden incloure perfils de client, entitats, esquemes i detalls d'assignació. Cada exportació requereix una [connexió, configurada per un administrador, per administrar l'autenticació i l'accés](connections.md).
 
 Aneu a **Dades** > **Exportacions** per visualitzar la pàgina d'exportacions. Totes les funcions d'usuari poden veure les exportacions configurades. Utilitzeu el camp de cerca de la barra d'ordres per cercar exportacions pel seu nom, nom de connexió o tipus de connexió.
 
-## <a name="set-up-a-new-export"></a>Configurar una exportació nova
+## <a name="export-types"></a>Tipus d'exportacions
 
+Hi ha dos tipus principals d'exportacions:  
+
+- Les **exportacions de dades** us permeten exportar qualsevol tipus d'entitat disponible a les conclusions del públic. Les entitats que seleccioneu per a l'exportació s'exporten amb tots els camps de dades, les metadades, els esquemes i els detalls de les assignacions. 
+- Les **exportacions de segments** us permeten segmentar les entitats de les conclusions del públic. Els segments representen una llista de perfils de client. Quan configureu l'exportació, seleccioneu els camps de dades inclosos, en funció del sistema de destinació al què exporteu les dades. 
+
+### <a name="export-segments"></a>Exportar segments
+
+**Exportar segments en entorns per a comptes empresarials (B2B) o clients individuals (B2C)**  
+La majoria d'opcions d'exportació admeten ambdós tipus d'entorns. L'exportació de segments a diversos sistemes de destinació té requisits específics. Generalment, un membre del segment, el perfil del client, conté informació de contacte. Tot i que normalment és així en el cas dels segments creats amb clients individuals (B2C), no és necessàriament ho és en el cas dels segments basats en comptes empresarials (B2B). 
+
+**Segmentar entorns d'exportació per a comptes empresarials (B2B)**  
+- Els segments en el context dels entorns de comptes empresarials estan integrats a l'entitat *compte*. Per exportar els segments de compte, és necessari que el sistema de destinació admeti segments de compte purs. Aquest és el cas del [LinkedIn](export-linkedin-ads.md) quan trieu l'opció **empresa** en definir l'exportació.
+- La resta de sistemes de destinació requereixen camps de l'entitat contacte. Per garantir que els segments de compte poden recuperar dades de contactes relacionats, la definició del segment ha de projectar els atributs de l'entitat contacte. Més informació sobre com [configurar segments i atributs de projecte](segment-builder.md).
+
+**Segmentar les exportacions en entorns per a clients individuals (B2C)**  
+- Els segments en el context dels entorns per a clients individuals estan integrats a l'entitat *perfil de client unificat*. Tots els segments que compleixen els requisits dels sistemes de destinació (per exemple, una adreça electrònica) es poden exportar.
+
+**Límits de les exportacions de segments**  
+- Els sistemes de destinació de tercers poden limitar el nombre de perfils de client que podeu exportar. 
+- Per als clients individuals, en seleccionar un segment per a l'exportació veureu el nombre real de membres del segment. Rebreu un advertiment si un segment és massa gran. 
+- Per als comptes empresarials, veureu el nombre de comptes en un segment; tanmateix, el nombre de contactes que es poden projectar no es mostra. En alguns casos, podria fer que el segment exportat contingui realment més perfils de clients que els que accepta el sistema de destinació. Superar els límits dels resultats dels sistemes de destinació farà que s'ometi l'exportació. 
+
+## <a name="set-up-a-new-export"></a>Configurar una exportació nova  
 Per configurar o editar una exportació, heu de tenir connexions disponibles. Les connexions depenen de la vostra [funció d'usuari](permissions.md):
-- Els administradors tenen accés a totes les connexions. També poden crear connexions noves quan configuren una exportació.
-- Els col·laboradors poden tenir accés a connexions específiques. Depenen dels administradors per configurar i compartir connexions. La llista d'exportacions mostra als contribuïdors si poden editar o només visualitzar una exportació a la columna **Els vostres permisos**. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Els visualitzadors només poden visualitzar les exportacions existents, però no les poden crear.
+- Els **administradors** tenen accés a totes les connexions. També poden crear connexions noves quan configuren una exportació.
+- Els **col·laboradors** poden tenir accés a connexions específiques. Depenen dels administradors per configurar i compartir connexions. La llista d'exportacions mostra als contribuïdors si poden editar o només visualitzar una exportació a la columna **Els vostres permisos**. Per obtenir més informació, aneu a [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Els **visualitzadors** només poden visualitzar les exportacions existents, no crear-les.
 
 ### <a name="define-a-new-export"></a>Definir una exportació nova
 
