@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645114"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673721"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -67,7 +67,8 @@ Les dades següents *no* es copien:
 
 - Perfils de client.
 - Credencials de la font de dades. Haureu de proporcionar les credencials de cada font de dades i actualitzar manualment les fonts de dades.
-- Fonts de dades de la carpeta del Common Data Model i el Data Lake administrat pel Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
+
+- Fonts de dades de la carpeta del Model de dades comú i del llac de dades administrat pel Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
 
 Quan copieu un entorn, veureu un missatge de confirmació que s'ha creat l'entorn nou. Seleccioneu **Ves a les fonts de dades** per veure la llista de fonts de dades.
 

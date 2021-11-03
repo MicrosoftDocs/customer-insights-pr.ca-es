@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617339"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673218"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquiment de perfils d'empresa amb el Leadspace (versió preliminar)
 
-Leadspace és una empresa de ciència de dades que proporciona una plataforma de dades de clients B2B. Permet als entorns amb perfils de client unificats basats en comptes enriquir les seves dades. Enriquiu els *perfils de client* amb atributs com ara la mida de l'empresa, la ubicació o el sector. Enriquiu els *Perfils de contacte* amb atributs com ara el títol, la persona o la verificació de correu electrònic.
+Leadspace és una empresa de ciència de dades que proporciona una plataforma de dades de clients d'empresa a empresa. Permet als entorns amb perfils de client unificats basats en comptes enriquir les seves dades. Enriquiu els *perfils de client* amb atributs com ara la mida de l'empresa, la ubicació o el sector. Enriquiu els *Perfils de contacte* amb atributs com ara el títol, la persona o la verificació de correu electrònic.
 
 ## <a name="prerequisites"></a>Requisits previs
 

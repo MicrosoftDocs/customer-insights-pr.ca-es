@@ -1,7 +1,7 @@
 ---
 title: Segments suggerits basats en aprenentatge automàtic
 description: Deixeu que l'aprenentatge automàtic us ajudi a trobar segments nous i interessants en funció dels atributs del client.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028348"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673171"
 ---
 # <a name="suggested-segments-preview"></a>Segments suggerits (versió preliminar)
 
@@ -23,7 +23,7 @@ Descobriu segments interessants dels vostres clients amb l'ajuda d'un model d'IA
 > [!NOTE]
 > La característica de segments suggerits utilitza mitjans automatitzats per avaluar dades i fer previsions basades en aquestes dades i, per tant, té la capacitat d'utilitzar-se com a mètode de generació de perfils, tal com es defineix aquest terme al Reglament general de protecció de dades ("RGPD"). L'ús d'aquesta característica per processar dades pot estar subjecte a l'RGPD o altres lleis o normatives. Us responsabilitzeu de garantir que l'ús del Dynamics 365 Customer Insights, incloent-hi aquesta característica, compleixi totes les lleis i normatives aplicables, incloent-hi la legislació relacionada amb la privadesa, les dades personals, les dades biomètriques, la protecció de dades i la confidencialitat de comunicació.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Pàgina de segments suggerits al Customer Insights que mostra els detalls d'un suggeriment en una subfinestra lateral.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Pàgina de segments suggerits que mostra els detalls d'un suggeriment en una subfinestra lateral.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segments suggerits per millorar els KPI
 
@@ -49,7 +49,7 @@ Els suggeriments de segment són diferents si trieu un atribut numèric o un atr
 
 Amb un atribut numèric com *ingressos anuals* o *període de subscripció* com a atribut principal, el sistema suggereix segments que tenen un valor mitjà superior o inferior a l'atribut numèric en comparació amb tots els clients.
 
-Un atribut categòric, com ara la *satisfacció del client* com a atribut principal, mostra els resultats dels segments suggerits que tenen un percentatge superior o inferior dels clients que pertanyen a una categoria concreta en comparació amb el percentatge de tots els clients que pertanyen a la mateixa categoria. Per exemple, *satisfacció del client* es tria com a atribut principal i consta de tres categories (*Baixa*, *Mitjana* i *Alta*). Per a cada categoria, es suggereixen segments que tenen un percentatge considerablement superior o inferior dels clients que pertanyin a la mateixa categoria en comparació amb la proporció de tots els clients de la mateixa categoria. Si el 22% de tots els clients tenen una satisfacció *Alta*, només es suggeriran en aquesta categoria els segments que tinguin una proporció significativament superior o inferior de clients amb una alta satisfacció *Alta* en comparació amb el 22%. De la mateixa manera, es suggeriran segments per a cadascuna de les altres categories (*Baixa* i *Mitjana*) si són estadísticament significatives.
+Un atribut categòric, com ara la *satisfacció del client* com a atribut principal, mostra els resultats dels segments suggerits que tenen un percentatge superior o inferior dels clients que pertanyen a una categoria concreta en comparació amb el percentatge de tots els clients que pertanyen a la mateixa categoria. Per exemple, *satisfacció del client* es tria com a atribut principal i consta de tres categories (*Baixa*, *Mitjana* i *Alta*). Per a cada categoria, se suggeriran els segments que tinguin un percentatge superior o inferior als clients que pertanyin a la mateixa categoria en comparació amb la proporció de tots els clients de la mateixa categoria. Si el 22 % de tots els clients tenen una satisfacció *alta*, només se suggeriran en aquesta categoria els segments que tinguin una proporció superior o inferior de clients amb una satisfacció *alta* en comparació amb el 22 %. De la mateixa manera, es suggeriran segments per a cadascuna de les altres categories (*Baixa* i *Mitjana*) si són estadísticament significatives.
 
 > [!NOTE]
 > Actualment només admetem atributs categòrics principals que tinguin fins a 10 categories. Si voleu veure suggeriments de segments basats en un atribut principal amb més de 10 categories, és recomanable agrupar algunes de les categories per reduir el nombre de categories a 10 o menys. Aquesta limitació només s'aplica als atributs principals. Per als atributs categòrics influents, actualment admetem un màxim de 100 categories.
@@ -77,7 +77,7 @@ Un atribut categòric, com ara la *satisfacció del client* com a atribut princi
 
 Quan el model d'IA hagi generat els suggeriments, els trobareu enumerats a **Segments** > **Suggeriments (versió preliminar)**.
  
-Seleccioneu un segment suggerit per revisar els detalls d'aquest suggeriment, incloent-hi una comparació del valor mitjà i el nombre de membres del segment. També podeu revisar els valors o les regles dels atributs que el model d'IA ha après a suggerir el segment seleccionat.
+Seleccioneu un segment suggerit per revisar-ne els detalls. També podeu revisar els valors o les regles dels atributs que el model d'IA ha après a suggerir el segment seleccionat.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Desar un suggeriment com a segment
 

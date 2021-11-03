@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622847"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673358"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
@@ -28,7 +28,7 @@ Utilitzeu el creador de mesures per planificar activitats empresarials consultan
 
 Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. Podeu crear una mesura amb atributs de dades a partir d'entitats de dades que tenen una relació configurada per connectar-se a l'entitat de perfil de client unificada.
 
-# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 
 1. A les conclusions del públic, aneu a **Mesures**.
 
@@ -92,7 +92,7 @@ Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. P
 
 1. Aneu a **Mesures** per veure la mesura que s'ha creat recentment a la llista.
 
-# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 1. A les conclusions del públic, aneu a **Mesures**.
 
@@ -164,7 +164,7 @@ Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. P
 
 Podeu utilitzar plantilles predefinides de mesures que s'utilitzen habitualment per crear-les. Les descripcions detallades de les plantilles i una experiència guiada us ajuden a crear una mesura de manera eficient. Les plantilles es creen a partir de dades assignades de l'entitat *Activitat unificada*. Per tant, assegureu-vos que heu configurat [activitats de client](activities.md) abans de crear una mesura a partir d'una plantilla.
 
-# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 
 Podeu utilitzar plantilles predefinides de mesures que s'utilitzen habitualment per crear-les. Les descripcions detallades de les plantilles i una experiència guiada us ajuden a crear una mesura de manera eficient. Les plantilles es creen a partir de dades assignades de l'entitat *Activitat unificada*. Per tant, assegureu-vos que heu configurat [activitats de client](activities.md) abans de crear una mesura a partir d'una plantilla.
 
@@ -212,7 +212,7 @@ Al procediment següent es descriuen els passos per crear una mesura nova mitjan
 
 1. Ara podeu seleccionar **Executa** per calcular els resultats de la mesura. Per refinar-la més tard, seleccioneu **Desa l'esborrany**.
 
-# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 Aquesta característica només està disponible per a les mesures creades als entorns amb clients individuals com a públic de destinació principal.
 

@@ -1,7 +1,7 @@
 ---
 title: Predicció de cancel·lació de transaccions
 description: Predigueu si un client està en risc de deixar d'adquirir els vostres productes o serveis.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643365"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673033"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predicció de cancel·lació de transaccions (versió preliminar)
 
@@ -28,6 +28,32 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 > Proveu el tutorial per fer una predicció de la cancel·lació de transaccions amb dades d'exemple: [Predicció de la cancel·lació de transaccions (versió preliminar)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Requisits previs
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
+
+- Com a mínim, [Permisos de col·laborador](permissions.md) al Customer Insights.
+- Coneixements empresarials per entendre què significa la rotació per a l'empresa. S'admeten definicions de rotació basades en el temps, és a dir, quan es considera que un client ha entrat en rotació després d'un període sense compres.
+- Dades sobre les vostres transaccions/compres i historial corresponent:
+    - Identificadors de transaccions per distingir compres o transaccions.
+    - Identificadors de client per adaptar les transaccions als vostres clients.
+    - Dates dels esdeveniments de les transaccions, que defineixen les dates en què es van produir les transaccions.
+    - L'esquema de dades semàntiques per a compres o transaccions requereix la següent informació:
+        - **ID de transacció**: identificador únic de la compra o la transacció.
+        - **Data de la transacció**: data de la compra o la transacció.
+        - **Valor de la transacció**: moneda i import en valor numèric de la transacció o l'article.
+        - (Opcional) **ID de producte únic**: identificador del producte o servei adquirit quan les dades es troben en el nivell d'element de línia.
+        - (Opcional) **Si aquesta transacció ha estat una devolució**: camp vertader o fals que identifica si la transacció ha estat una devolució o no. Si el **Valor de la transacció** és negatiu, també farem servir aquesta informació per inferir una devolució.
+- (Opcional) Dades sobre les activitats del client:
+    - Identificadors d'activitat per distingir les activitats del mateix tipus.
+    - Identificadors de clients per assignar activitats als clients.
+    - Informació d'activitat que conté el nom i la data de l'activitat.
+    - L'esquema de dades semàntiques de les activitats del client inclou:
+        - **Clau principal:** un identificador únic per a una activitat. Per exemple, una visita a un lloc web o un registre d'ús que revelen que el client ha provat una mostra del producte.
+        - **Data i hora:** la data i l'hora de l'esdeveniment identificats per la clau principal.
+        - **Incidència:** el nom de la incidència que voleu utilitzar. Per exemple, un camp anomenat "UserAction" d'una botiga de queviures podria ser un cupó que el client ha utilitzat.
+        - **Detalls:** informació detallada de la incidència. Per exemple, un camp anomenat "CouponValue" d'una botiga de queviures podria ser el valor monetari del cupó.
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 - Com a mínim, [Permisos de col·laborador](permissions.md) al Customer Insights.
 - Coneixements empresarials per entendre què significa la rotació per a l'empresa. S'admeten definicions de rotació basades en el temps, és a dir, quan es considera que un client ha entrat en rotació després d'un període sense compres.
@@ -51,7 +77,7 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
         - **Incidència:** el nom de la incidència que voleu utilitzar. Per exemple, un camp anomenat "UserAction" d'una botiga de queviures podria ser un cupó que el client ha utilitzat.
         - **Detalls:** informació detallada de la incidència. Per exemple, un camp anomenat "CouponValue" d'una botiga de queviures podria ser el valor monetari del cupó.
 - (Opcional) Dades sobre els clients:
-    - Aquestes dades només s'han d'alinear amb els atributs més estàtics per assegurar-vos que el model s'ajusti millor.
+    - Aquestes dades s'han d'alinear amb els atributs més estàtics per assegurar-vos que el model s'ajusti millor.
     - L'esquema de dades semàntiques per a les dades dels clients inclou:
         - **CustomerID:** Identificador únic d'un client.
         - **Data de creació:** la data en què inicialment es va afegir el client.
@@ -59,6 +85,9 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
         - **País:** el país d'un client.
         - **Sector:** el tipus de sector d'un client. Per exemple, un camp anomenat "Sector" en un torrefactor de cafè podria indicar si el client era minorista.
         - **Classificació:** la classificació d'un client per al vostre negoci. Per exemple, un camp anomenat "ValueSegment" en un torrefactor de cafè podria ser el nivell de client segons la mida del client.
+
+---
+
 - Característiques de les dades suggerides:
     - Dades històriques suficients: dades de transacció per almenys el doble de la finestra de temps seleccionada. Preferentment, de dos a tres anys de l'historial de transaccions. 
     - Múltiples compres per client: idealment almenys dues transaccions per client.
@@ -114,6 +143,32 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Seleccioneu **Següent**.
 
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Afegir dades addicionals (opcional)
+
+Configureu la relació des de l'entitat d'activitat de client a l'entitat *Client*.
+
+1. Seleccioneu el camp que identifica el client a la taula de l'activitat del client. Pot estar directament relacionat amb l'ID de client principal de l'entitat *Client*.
+
+1. Seleccioneu l'entitat que és l'entitat *Client* principal.
+
+1. Introduïu un nom que descrigui la relació.
+
+#### <a name="customer-activities"></a>Activitats del client
+
+1. També podeu seleccionar **Afegeix dades** per a les **Activitats del client**.
+
+1. Seleccioneu el tipus d'activitat semàntica que conté les dades que voleu utilitzar i, a continuació, seleccioneu una o diverses activitats a la secció **Activitats**.
+
+1. Seleccioneu un tipus d'activitat que coincideixi amb el tipus d'activitat del client que configureu. Seleccioneu **Crea'n un de nou** i trieu un tipus d'activitat disponible o bé creeu un nou tipus.
+
+1. Seleccioneu **Següent** i, a continuació **Desa**.
+
+1. Si teniu altres activitats del client que vulgueu incloure, repetiu els passos anteriors.
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Seleccionar el nivell de predicció
 
 La majoria de les prediccions es creen en el nivell del client. En algunes situacions, pot ser que no sigui prou granular per a les vostres necessitats empresarials. Podeu utilitzar aquesta característica per predir la rotació per a una branca d'un client, per exemple, no pas per al client en conjunt.
@@ -122,9 +177,9 @@ La majoria de les prediccions es creen en el nivell del client. En algunes situa
 
 1. Expandiu les entitats de les quals voleu triar el nivell secundari o utilitzeu el quadre de filtre de cerca per filtrar les opcions seleccionades.
 
-1. Trieu l'atribut que voleu utilitzar com a nivell secundari i seleccioneu **Afegeix**
+1. Trieu l'atribut que voleu utilitzar com a nivell secundari i seleccioneu **Afegeix**.
 
-1. Seleccioneu **Següent**
+1. Seleccioneu **Següent**.
 
 > [!NOTE]
 > Les entitats disponibles en aquesta secció es mostren perquè tenen una relació amb l'entitat que heu triat a la secció anterior. Si no veieu l'entitat que voleu afegir, assegureu-vos que té una relació vàlida present a **Relacions**. Només les relacions d'un a un i de diversos a un són vàlides per a aquesta configuració.
@@ -159,7 +214,7 @@ Configureu la relació des de l'entitat d'activitat de client a l'entitat *Clien
 
 1. Seleccioneu **Següent**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Proporcionar una llista opcional de comptes de referència (només comptes empresarials)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Proporcionar una llista opcional de comptes de referència
 
 Afegiu una llista de clients empresarials i de comptes que voleu utilitzar com a referències. Obtindreu [detalls per a aquests comptes de referència](#review-a-prediction-status-and-results) com, per exemple, la puntuació de rotació i les característiques que han influït més en la seva predicció de rotació.
 
@@ -168,6 +223,8 @@ Afegiu una llista de clients empresarials i de comptes que voleu utilitzar com a
 1. Trieu els clients que actuen com a referències.
 
 1. Per continuar, feu clic a **Següent**.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Definir la planificació i revisar la configuració
 
@@ -201,6 +258,25 @@ Afegiu una llista de clients empresarials i de comptes que voleu utilitzar com a
 1. Seleccioneu els tres punts verticals que hi ha al costat de la predicció de la qual voleu revisar els resultats i seleccioneu **Visualitza**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Control de visualització per veure els resultats d'una predicció.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
+
+1. A la pàgina de resultats hi ha tres seccions principals de dades:
+   - **Rendiment del model d'entrenament**: A, B o C són les puntuacions possibles. Aquesta puntuació indica el rendiment de la predicció i pot ser que us ajudi a prendre la decisió d'utilitzar els resultats emmagatzemats a l'entitat de sortida. La puntuació es determina en funció de les regles següents: 
+        - **A** quan el model ha predit correctament com a mínim el 50 % del total de les prediccions, i el percentatge de prediccions precises per als clients que han rotat és superior a la ràtio de referència com a mínim en un 10 %.
+            
+        - **B** quan el model ha predit correctament com a mínim el 50 % del total de les prediccions, i el percentatge de prediccions precises per als clients que han rotat és fins a un 10 % superior al valor de referència.
+            
+        - **C** quan el model ha predit correctament menys del 50 % del total de les prediccions, o el percentatge de prediccions precises per als clients que han rotat és inferior al valor de referència.
+               
+        - La **línia de base** pren l'entrada del període de predicció per al model (per exemple, un any) i el model crea diferents fraccions de temps dividint-ho per 2 fins que arriba a un mes o menys. Utilitza aquestes fraccions per crear una regla de negocis per als clients que no han comprat durant aquest període. Aquests clients es consideren rotació. La regla de negocis basada en el temps amb la capacitat més elevada de predir qui és probable que roti es tria com a model de referència.
+            
+    - **Probabilitat de rotació (nombre de clients)**: grups de clients segons el risc predit de rotació. Aquestes dades us poden ajudar més endavant si voleu crear un segment de clients amb un alt risc de rotació. Aquests segments ajuden a entendre on heu de definit la data límit de la subscripció del segment.
+       
+    - **Factors més influents**: hi ha molts factors que s'han de tenir en compte a l'hora de crear la predicció. Cadascun dels factors té la seva importància calculada per a les prediccions agregades que crea un model. Podeu utilitzar aquests factors per ajudar-vos a validar els resultats de la predicció o utilitzar aquesta informació més endavant per [crear segments](segments.md) que puguin ajudar a influir en el risc de rotació dels clients.
+
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 1. A la pàgina de resultats hi ha tres seccions principals de dades:
    - **Rendiment del model d'entrenament**: A, B o C són les puntuacions possibles. Aquesta puntuació indica el rendiment de la predicció i pot ser que us ajudi a prendre la decisió d'utilitzar els resultats emmagatzemats a l'entitat de sortida. La puntuació es determina en funció de les regles següents: 
@@ -237,6 +313,11 @@ Afegiu una llista de clients empresarials i de comptes que voleu utilitzar com a
        Quan prediu la rotació al nivell de compte, tots els comptes es tenen en compte a l'hora de derivar els valors mitjans de les característiques dels segments de rotació. Per a les previsions de rotació en el nivell secundari de cada compte, la derivació dels segments de rotació depèn del nivell secundari de l'element seleccionat a la subfinestra lateral. Per exemple, si un article té un nivell secundari de categoria de producte = material d'oficina, només es consideren els elements que tenen material d'oficina com a categoria de producte a l'hora de derivar els valors mitjans de característica dels segments de rotació. Aquesta lògica s'aplica per garantir una comparació justa dels valors de característica de l'element amb els valors mitjans en segments de rotació de nivell baix, mitjà i alt.
 
        En alguns casos, el valor mitjà dels segments de rotació de nivell baix, mitjà o alt està buit o no està disponible perquè no hi ha cap element que pertanyi als segments de rotació corresponents basant-se en la definició anterior.
+       
+       > [!NOTE]
+       > La interpretació dels valors sota la mitjana de les columnes baixa, mitjana i alta és diferent per a les característiques classificades, com ara el país o el sector. Com que la noció del valor de característica "mitjana" no s'aplica a les característiques classificades en categories, els valors d'aquestes columnes són la proporció dels clients en segments d'abandó baix, mitjà o alt que tenen el mateix valor de la característica de la categoria en comparació amb l'element seleccionat a la subfinestra lateral.
+
+---
 
 ## <a name="manage-predictions"></a>Administrar prediccions
 

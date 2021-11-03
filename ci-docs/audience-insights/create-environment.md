@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645666"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673379"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorn a les conclusions del públic
 
@@ -46,7 +46,7 @@ Al pas **Informació bàsica**, trieu si voleu crear un entorn des de zero o [co
 
 Proporcioneu els següents detalls:
    - **Nom**: el nom de l'entorn en qüestió. Aquest camp ja s'emplena si heu copiat des d'un entorn existent, però es pot canviar.
-   - **Trieu la vostra empresa**: trieu el públic principal del nou entorn. Podeu treballar amb clients individuals (B2C) o [comptes empresarials](work-with-business-accounts.md) (B2B).
+   - **Trieu la vostra empresa**: trieu el públic principal del nou entorn. Podeu treballar amb consumidors individuals (d'empresa a consumidor) o amb [comptes empresarials](work-with-business-accounts.md) (d'empresa a empresa).
    - **Tipus**: seleccioneu si voleu crear un entorn de producció o d'espai aïllat. Els entorns d'espai aïllat no permeten l'actualització planificada de dades i estan destinats a la implementació prèvia i les proves. Els entorns aïllats utilitzen el mateix públic principal que l'entorn de producció seleccionat actualment.
    - **Regió**: la regió en la qual s'implementa i s'allotja el servei.
 
@@ -66,7 +66,7 @@ En desar les dades a l'Azure Data Lake Storage, accepteu que les dades es transf
 > - Els comptes del Azure Data Lake Storage de la mateixa regió de l'Azure que heu seleccionat en crear l'entorn.
 > - Comptes de l'Azure Data Lake Storage que tenen habilitat l'*espai de nom jeràrquic*.
 
-Per a l'opció Azure Data Lake Storage, podeu triar entre una opció basada en recursos i una opció basada en subscripció per a l'autenticació. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). El nom del **Contenidor** serà `customerinsights` i no es pot canviar.
+Per a l'opció Azure Data Lake Storage, podeu triar entre una opció basada en recursos i una opció basada en subscripció per a l'autenticació. Per obtenir més informació, vegeu [Connectar-se a un compte de l'Azure Data Lake Storage mitjançant l'entitat de servei de l'Azure](connect-service-principal.md). El nom del **Contenidor** serà `customerinsights` i no es pot canviar.
 
 Quan es completen processos del sistema, com ara la ingesta de dades, el sistema crea les carpetes corresponents al compte d'emmagatzematge que heu especificat. Els fitxers de dades i els fitxers *model.json* es creen i s'afegeixen a carpetes basades en el nom del procés.
 
@@ -76,14 +76,14 @@ Si creeu diversos entorns del Customer Insights i trieu de desar les entitats de
    
 El pas del **Microsoft Dataverse** us permet connectar el Customer Insights al vostre entorn del Dataverse.
 
-Per utilitzar [models de predicció estàndard](predictions-overview.md#out-of-box-models) , configureu l'ús compartit de dades amb el Dataverse. O podeu habilitar la ingesta de dades des de fonts de dades locals, proporcionant l'adreça URL de l'entorn del Microsoft Dataverse que administra l'organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el Dataverse Managed Data Lake.
+Per utilitzar [models de predicció estàndard](predictions-overview.md#out-of-box-models) , configureu l'ús compartit de dades amb el Dataverse. O podeu habilitar la ingesta de dades des de fonts de dades locals, proporcionant l'adreça URL de l'entorn del Microsoft Dataverse que administra l'organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el llac de dades administrat del Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse.":::
 
 > [!NOTE]
 > El Customer Insights no admet els escenaris d'ús compartit de dades següents:
-> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un Data Lake administrat pel Microsoft Dataverse .
-> - Si habiliteu l'ús compartit de dades amb un Data Lake administrat pel Microsoft Dataverse, no podreu [crear valors previstos o que falten en una entitat](predictions.md).
+> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un llac de dades administrat pel Dataverse .
+> - Si habiliteu l'ús compartit de dades amb el Dataverse, no podreu [crear valors previstos o que falten en una entitat](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Pas 4: finalitzar la configuració
 
@@ -93,7 +93,7 @@ També podeu canviar la majoria de les opcions de configuració més endavant. P
 
 ## <a name="work-with-your-new-environment"></a>Treballar amb el nou entorn
 
-Reviseu els articles següents per ajudar-vos a començar a configurar el Customer Insights. 
+Reviseu els articles següents per començar a configurar el Customer Insights: 
 
 - [Afegiu més usuaris i assigneu permisos](permissions.md).
 - [Ingeriu les fonts de dades](data-sources.md) i executeu-les a través del [procés d'unificació de dades](data-unification.md) per obtenir [perfils de client unificats](customer-profiles.md).

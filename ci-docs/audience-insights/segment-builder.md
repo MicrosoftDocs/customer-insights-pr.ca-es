@@ -1,7 +1,7 @@
 ---
 title: Crear segments amb el creador de segments
 description: Creeu segments de clients per agrupar-los segons diversos atributs.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622859"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673538"
 ---
 # <a name="create-segments"></a>Crear segments
 
@@ -23,6 +23,7 @@ Definiu filtres complexos per a l'entitat de client unificada i les entitats rel
 > [!TIP]
 > - Els segments ràpids només estan admesos als entorns per a **clients individuals**.    
 > - Els segments basats en **clients individuals** inclouen automàticament la informació de contacte disponible per als membres del segment. En entorns de **comptes empresarials**, els segments es basen en comptes (empreses o filials). Per incloure informació de contacte en un segment, utilitzeu la funcionalitat **Atributs del projecte** al creador de segments.
+>    - Assegureu-vos que les fonts de dades del contacte [s'assignen de manera semàntica a l'entitat ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Creador de segments
 
@@ -52,7 +53,7 @@ L'exemple anterior il·lustra la capacitat de segmentació. Hem definit un segme
 
 Hi ha diverses maneres de crear un segment nou. Aquesta secció descriu com crear el vostre propi segment de zero. També podeu crear un *segment ràpid* basat en entitats existents o utilitzar els models d'aprenentatge automàtic per obtenir *segments suggerits*. Per obtenir més informació, aneu a la [Informació general dels segments](segments.md).
 
-En crear un segment, podeu desar un esborrany. A la fase d'esborrany, un segment es desa com a segment inactiu. Quan completeu la configuració del segment, executeu-la per activar-lo. O bé, podeu **activar** _ un segment des de la pàgina *Tots els segments**.
+En crear un segment, podeu desar un esborrany. A la fase d'esborrany, un segment es desa com a segment inactiu. Quan completeu la configuració del segment, executeu-la per activar-lo. També podeu **Activar** un segment des de la pàgina **Tots els segments**.
 
 1. Aneu a la pàgina **Segments**.
 
@@ -86,17 +87,25 @@ En crear un segment, podeu desar un esborrany. A la fase d'esborrany, un segment
 
    Quan utilitzeu l'operador O, totes les condicions s'han de basar en entitats incloses al camí de la relació.
 
-   - Podeu crear diverses regles per crear diferents conjunts de registres de client. Podeu combinar grups per incloure els clients necessaris per al cas empresarial. Per crear una regla nova, seleccioneu **Afegeix una regla**. En concret, si no podeu incloure cap entitat en una regla a causa del camí de relació especificat, heu de crear una regla nova per triar-ne els atributs.
+   - Podeu crear diverses regles per crear diferents conjunts de registres de client. Podeu combinar grups per incloure els clients necessaris per al cas empresarial. Per crear una regla nova, seleccioneu **Afegeix una regla**. En concret, si no podeu incloure cap entitat en una regla a causa del camí de relació especificat, heu de crear una regla nova per triar els atributs que la formen.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Afegiu una regla nova a un segment i trieu l'operador de conjunt.":::
 
    - Seleccioneu un dels operadors de conjunts: **Union**, **Intersect** o **Except**.
 
       - **Unió** uneix els dos grups.
-      - **Intersecció** solapa els dos grups. Només es conserven al grup unificat les dades *que siguin comunes* a tots dos grups.
-      - **Excepte** combina els dos grups. Només es conserven les dades del grup A que *no siguin comunes* a les dades del grup B.
+      - **Intersecció** solapa els dos grups. Al grup unificat, només hi queden dades *comunes* a ambdós grups.
+      - **Excepte** combina els dos grups. Només es conserven les dades del grup A que *no són comunes* a les dades del grup B.
 
-1. Per defecte, els segments generen l'entitat de sortida que conté tots els atributs dels perfils de client que coincideixen amb els filtres definits. Si un segment es basa en entitats que no són l'entitat *Client*, podeu afegir més atributs d'aquestes entitats a l'entitat de sortida. Seleccioneu **Atributs del projecte** per triar els atributs que s'annexaran a l'entitat de sortida.  
+1. Per defecte, els segments generen l'entitat de sortida que conté tots els atributs dels perfils de client que coincideixen amb els filtres definits. Si un segment es basa en entitats que no són l'entitat *Client*, podeu afegir més atributs d'aquestes entitats a l'entitat de sortida. Seleccioneu **Atributs del projecte** per triar els atributs que s'annexaran a l'entitat de sortida. 
+
+   > [!IMPORTANT]
+   > Per als segments basats en comptes empresarials, s'han d'incloure detalls d'un o diversos contactes de cada compte de l'entitat *ContactProfile* al segment per permetre que aquest segment s'activi o s'exporti a destinacions que requereixin informació de contacte. Per obtenir més informació sobre l'entitat *ContactProfile*, vegeu [Assignacions semàntiques](semantic-mappings.md).
+   > Una sortida de mostra d'un segment basat en comptes empresarials amb atributs previstos de contactes podria tenir aquest aspecte: 
+   >
+   > |ID  |Nom del compte  |Ingressos  |Nom del contacte  | Funció de contacte|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100 000 | [Abbie Moss, Ruth Soto]  | [Director general, cap del proveïment]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'atributs previstos seleccionats a la subfinestra lateral per afegir-se a l'entitat de sortida.":::
   
@@ -107,13 +116,14 @@ En crear un segment, podeu desar un esborrany. A la fase d'esborrany, un segment
    > - Si l'atribut que voleu projectar és a més d'un salt de l'entitat *Client*, segons ho defineix la relació, aquest atribut s'ha d'utilitzar a cada regla de la consulta de segment que esteu creant. 
    > - Si l'atribut que voleu projectar és a només un salt de l'entitat *Client*, aquest atribut no cal que estigui present a cada regla de la consulta de segment que esteu creant. 
    > - Els **atributs projectats** es factoritzen quan s'utilitzen operadors de conjunts.
-   > - Per als segments basats en comptes empresarials, s'han d'incloure detalls d'un o diversos contactes de cada compte al segment per permetre que aquest segment s'activi o s'exporti a destinacions que requereixin informació de contacte.
 
 1. Abans de desar i executar el segment, seleccioneu **Edita els detalls** al costat del nom del segment. Proporcioneu un nom per al segment i actualitzeu el **Nom de l'entitat de sortida** suggerit per al segment. També podeu afegir una descripció al segment.
 
 1. Seleccioneu **Executa** per desar el segment, activeu-lo i comenceu a processar el segment basant-vos en totes les regles i condicions. Altrament, es desarà com a segment inactiu.
-
+   
 1. Seleccioneu **Torna als segments** per tornar a la pàgina **Segments**.
+
+1. Per defecte, el segment es crea com a segment dinàmic. Això vol dir que el segment s'actualitzarà durant les actualitzacions del sistema. Per [aturar l'actualització automàtica](segments.md#manage-existing-segments), seleccioneu el segment i trieu l'opció **Converteix en estàtic**. Els segments estàtics es poden [actualitzar manualment](segments.md#refresh-segments) en qualsevol moment.
 
 > [!TIP]
 > - El creador de segments no suggerirà valors vàlids de les entitats quan es configurin els operadors per a les condicions. Podeu anar a **Dades** > **Entitats** i baixar les dades de l'entitat per veure quins valors estan disponibles.

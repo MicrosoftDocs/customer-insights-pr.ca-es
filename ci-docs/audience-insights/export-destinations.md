@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623089"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673311"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
@@ -32,14 +32,14 @@ Hi ha dos tipus principals d'exportacions:
 
 ### <a name="export-segments"></a>Exportar segments
 
-**Exportar segments en entorns per a comptes empresarials (B2B) o clients individuals (B2C)**  
-La majoria d'opcions d'exportació admeten ambdós tipus d'entorns. L'exportació de segments a diversos sistemes de destinació té requisits específics. Generalment, un membre del segment, el perfil del client, conté informació de contacte. Tot i que normalment és així en el cas dels segments creats amb clients individuals (B2C), no és necessàriament ho és en el cas dels segments basats en comptes empresarials (B2B). 
+**Exportar segments en entorns per a comptes empresarials (d'empresa a empresa) o consumidors individuals (d'empresa a consumidor)**  
+La majoria d'opcions d'exportació admeten ambdós tipus d'entorns. L'exportació de segments a diversos sistemes de destinació té requisits específics. Generalment, un membre del segment, el perfil del client, conté informació de contacte. Tot i que normalment és així en el cas dels segments creats amb consumidors individuals (d'empresa a consumidor), no és necessàriament ho és en el cas dels segments basats en comptes empresarials (d'empresa a empresa). 
 
-**Segmentar entorns d'exportació per a comptes empresarials (B2B)**  
+**Segmentar entorns d'exportació per a comptes empresarials (d'empresa a empresa)**  
 - Els segments en el context dels entorns de comptes empresarials estan integrats a l'entitat *compte*. Per exportar els segments de compte, és necessari que el sistema de destinació admeti segments de compte purs. Aquest és el cas del [LinkedIn](export-linkedin-ads.md) quan trieu l'opció **empresa** en definir l'exportació.
 - La resta de sistemes de destinació requereixen camps de l'entitat contacte. Per garantir que els segments de compte poden recuperar dades de contactes relacionats, la definició del segment ha de projectar els atributs de l'entitat contacte. Més informació sobre com [configurar segments i atributs de projecte](segment-builder.md).
 
-**Segmentar les exportacions en entorns per a clients individuals (B2C)**  
+**Segmentar les exportacions en entorns per a consumidors individuals (d'empresa a consumidor)**  
 - Els segments en el context dels entorns per a clients individuals estan integrats a l'entitat *perfil de client unificat*. Tots els segments que compleixen els requisits dels sistemes de destinació (per exemple, una adreça electrònica) es poden exportar.
 
 **Límits de les exportacions de segments**  

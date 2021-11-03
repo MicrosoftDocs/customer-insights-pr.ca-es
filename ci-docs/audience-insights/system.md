@@ -1,7 +1,7 @@
 ---
 title: Configuració del sistema a les conclusions del públic
 description: Coneixeu la configuració del sistema per a capacitat de conclusions del públic del Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035880"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651828"
 ---
 # <a name="system-configuration"></a>Configuració del sistema
 
@@ -24,9 +24,9 @@ La pàgina **Sistema** inclou les pestanyes següents:
 - [Ús de l'API](#api-usage-tab)
 - [Quant a](#about-tab)
 - [General](#general-tab)
+- [Seguretat](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Pàgina del sistema.](media/system-tabs.png "Pàgina del sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Pestanyes de configuració de la pàgina del sistema.":::
 
 ## <a name="status-tab"></a>Pestanya Estat
 
@@ -84,9 +84,15 @@ La pestanya **Quant a** conté el **Nom de visualització** de l'organització, 
 
 ## <a name="general-tab"></a>Pestanya General
 
-Hi ha dues opcions a la pestanya **General**, **Llengua** i **Format de país o de regió**.
+Podeu canviar la llengua i el format de país/regió a la pestanya **General**.
 
-L'aplicació [admet diversos idiomes](supported-languages.md). Per canviar la llengua preferida, trieu una **llengua** al menú desplegable.
+El Customer Insights [admet diverses llengües](/dynamics365/get-started/availability). L'aplicació utilitza la vostra preferència d'idioma per mostrar elements com ara el menú, el text de l'etiqueta i els missatges del sistema en el vostre idioma preferit.
+
+Les dades importades i la informació que heu introduït manualment no estan traduïdes.
+
+### <a name="update-the-settings"></a>Actualitzar la configuració
+
+Per canviar la llengua preferida, trieu una **llengua** al menú desplegable.
 
 Per canviar el format preferit per a les dates, l'hora i els números, utilitzeu el menú desplegable **Format de país o de regió**. Es mostra una visualització prèvia de format en aquest camp. El sistema suggerirà automàticament una opció per triar quan trieu un idioma nou.
 
@@ -105,6 +111,13 @@ L'**ús de l'API** conté tres seccions:
 
    Les operacions que utilitzen la [ingesta de dades en temps real](real-time-data-ingestion.md) contenen un botó amb un símbol de binocles per visualitzar l'ús de l'API en temps real. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.   
    Utilitzeu el quadre **Agrupa per** a la subfinestra **Ús de l'API en temps real** per triar com es presenten millor les interaccions en temps real. Podeu agrupar les dades per mètode de l'API, nom complet de l'entitat (entitat ingerida), creat per (origen de la incidència), resultat (correcte o error) o codis d'error. Les dades estan disponibles com a gràfic d'historial i com a taula.
+
+## <a name="security-tab"></a>Pestanya Seguretat
+
+La pestanya **Seguretat** us permet enllaçar i administrar el vostre propi [magatzem de claus de l'Azure](/azure/key-vault/general/basic-concepts) a l'entorn.
+El magatzem de claus dedicat es pot utilitzar per escenificar i utilitzar els secrets en el límit de compliment de l'organització. Les conclusions del públic poden utilitzar els secrets de l'Azure Key Vault per [configurar connexions](connections.md) amb sistemes de tercers.
+
+Per obtenir més informació, vegeu [Portar el vostre propi magatzem de claus de l'Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

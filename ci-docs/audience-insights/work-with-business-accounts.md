@@ -1,7 +1,7 @@
 ---
 title: Començar a utilitzar els comptes empresarials com a públic de destinació principal
 description: Obteniu més informació sobre començar a utilitzar els comptes empresarials com a públic de destinació principal al Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644976"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673675"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Treballar amb comptes empresarials a les conclusions del públic
 
-La capacitat de conclusions del públic del Dynamics 365 Customer Insights us permet configurar l'entorn per a diferents públics de destinació principals: clients individuals (B2C) i comptes empresarials (B2B). Als escenaris B2C, les dades se centren en individus. Per als B2B, els públics de destinació principals són comptes, organitzacions o empreses, i contactes. Aquest article us ajuda a començar a utilitzar un entorn per a comptes empresarials. Inclou les diferències en les àrees de característica de les conclusions del públic, en funció del focus del vostre entorn. Per obtenir més informació sobre les diferències, reviseu els documents de les àrees de característica. 
+La capacitat de conclusions del públic del Dynamics 365 Customer Insights us permet configurar l'entorn per a diferents públics de destinació principals: consumidors individuals (d'empresa a consumidor) i comptes empresarials (d'empresa a empresa). Als escenaris d'empresa a consumidor, les dades se centren en individus. Per als casos d'empresa a empresa, els públics de destinació principals són comptes, organitzacions o empreses, i contactes. Aquest article us ajuda a començar a utilitzar un entorn per a comptes empresarials. Inclou les diferències en les àrees de característica de les conclusions del públic, en funció del focus del vostre entorn. Per obtenir més informació sobre les diferències, reviseu els documents de les àrees de característica. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Crear un entorn per a comptes empresarials
 
@@ -32,7 +32,7 @@ Després d'unificar les dades, [especifiqueu les jerarquies de comptes](relation
 
 Si la vostra organització manté entorns per a clients individuals i comptes empresarials, podeu utilitzar el commutador de la subfinestra esquerra per triar el públic de destinació principal.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Commutador per canviar el públic de destinació principal entre clients individuals i comptes empresarials.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Commutador per canviar el públic de destinació principal entre clients individuals i comptes empresarials.":::
 
 ## <a name="supported-feature-areas"></a>Àrees de característica admeses
 
