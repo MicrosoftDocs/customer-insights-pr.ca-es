@@ -1,7 +1,7 @@
 ---
 title: Millora de dades de l'empresa
 description: Enriquir i normalitzar les dades de l'empresa amb els models de Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770158"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813907"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquiment de perfils d'empresa amb dades d'empresa millorades
 
@@ -51,7 +51,8 @@ Hi ha algunes limitacions amb les dades millorades. Els elements de la llista se
 
 1.  Confirmar la identitat de l'empresa. No verifiquem si l'entrada és una organització existent o que una empresa utilitza la sortida com a nom estàndard.
 2.  Cobreix de forma integral a les empreses a nivell mundial. Les dades de Microsoft recopilades tenen cobertura global, però ofereixen la major cobertura a Austràlia, Canadà, Regne Unit i els Estats Units.
-3.  Garantir l'exactitud o frescor de les dades. Atesa que la informació empresarial sovint canvia, no podem garantir que les dades de l'empresa millorades proporcionades siguin sempre exactes o actualitzades.
+3.  Estandarditzar les adreces de l'empresa a nivell mundial. Actualment donem suport a l'estandardització d'adreces en aquests països o regions: Austràlia, Canadà, França, Alemanya, Itàlia, Japó, Regne Unit i Estats Units.
+4.  Garantir l'exactitud o frescor de les dades. Atesa que la informació empresarial sovint canvia, no podem garantir que les dades de l'empresa millorades proporcionades siguin sempre exactes o actualitzades.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
