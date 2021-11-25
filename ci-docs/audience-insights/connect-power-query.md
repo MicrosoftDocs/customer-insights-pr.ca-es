@@ -1,7 +1,7 @@
 ---
 title: Ingerir dades a través d'un connector del Power Query
 description: Connectors per a fonts de dades basades en el Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643482"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732206"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a una font de dades del Power Query
 
-El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors estan admesos pel Dynamics 365 Customer Insights. Afegir fonts de dades basades en connectors del Power Query generalment implica els passos indicats a la secció següent. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per a més informació, vegeu la documentació sobre connectors individuals a la [Referència de connectors del Power Query](/power-query/connectors/).
+El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors són compatibles amb Dynamics 365 Customer Insights. Afegir fonts de dades basades en connectors del Power Query generalment implica els passos indicats a la secció següent. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per a més informació, vegeu la documentació sobre connectors individuals a la [Referència de connectors del Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Els connectors amb una marca de selecció a la columna **Customer Insights (flux
    > [!div class="mx-imgBorder"]
    > ![Opció Edita.](media/edit-option-data-sources.png "Opció Edita")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Apliqueu els canvis i transformacions al diàleg **Power Query: edita les consultes** tal com es descriu a la secció [Crear una nova font de dades](#create-a-new-data-source).
 
 4. Seleccioneu **Desa** al Power Query després de completar les vostres edicions per desar els canvis.

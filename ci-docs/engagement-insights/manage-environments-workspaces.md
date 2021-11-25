@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645434"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673777"
 ---
 # <a name="manage-environments-and-workspaces"></a>Administrar entorns i àrees de treball
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645434"
 
 En aquest tema es tracta la manera d'administrar les àrees de treball i els entorns quan ja han estat creats. 
 
-- Una *àrea de treball* és un espai on es poden emmagatzemar i administrar incidències i informes. És on podeu visualitzar l'activitat dels usuaris en temps real. Quan creeu una àrea de treball, seleccioneu el tipus de dades que voleu enviar a l'àrea de treball. Actualment, s'admeten les dades web i les aplicacions mòbils. Per obtenir més informació, vegeu [Crear una àrea de treball i afegir-hi membres](create-workspace.md).
+- Una *àrea de treball* és un espai on es poden emmagatzemar i administrar incidències i informes. És on podeu visualitzar l'activitat dels usuaris en temps real. Quan creeu una àrea de treball, seleccioneu el tipus de dades que voleu enviar a l'àrea de treball. Actualment, s'admeten les dades web i les aplicacions mòbils. Per obtenir més informació, vegeu [Crear una àrea de treball nova i afegir membres](create-workspace.md).
 
 - Un *entorn* és una àrea on administreu les vostres àrees de treball i connexions. Per obtenir més informació, vegeu [Crear un entorn nou](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Podeu mantenir diverses àrees de treball simultàniament en un entorn. La vostr
 
 ### <a name="delete-a-workspace"></a>Suprimir una àrea de treball
 
-Si suprimiu una àrea de treball, se'n suprimirà de manera permanent tot el contingut, les dades, la configuració i els permisos. Aquesta operació no es pot desfer.
+Si suprimiu una àrea de treball, se suprimirà permanentment tot el contingut, les dades, la configuració i els permisos. Aquesta operació no es pot desfer.
 
 1. Aneu a **Administrador** > **Àrea de treball** i seleccioneu **Configuració**.
 
@@ -71,19 +71,11 @@ Com a administrador de l'entorn, podeu accedir a un entorn des de la subfinestra
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centre d'administració de l'entorn.":::
 
-### <a name="rename-an-environment"></a>Canviar el nom d'un entorn
+### <a name="edit-an-environment-name"></a>Editar un nom d'entorn
 
 1. Aneu a **Administrador** > **Entorn** i seleccioneu **Configuració**.
 
 1. Actualitzeu el **Nom de l'entorn** i seleccioneu **Desa** per aplicar els canvis.
-
-### <a name="manage-environment-members"></a>Administra els membres de l'entorn
-
-1. Aneu a **Administrador** > **Entorn** i seleccioneu **Membres**.
-
-1. Seleccioneu **Afegeix membres** per actualitzar els membres i [assignar funcions](user-roles.md). Actualment, només està disponible **Administrador de l'entorn**.
-
-1. Seleccioneu **Afegeix membres** per afegir-los a l'entorn.
 
 ### <a name="delete-an-environment"></a>Suprimir un entorn
 
@@ -97,6 +89,14 @@ Els administradors d'entorn poden suprimir entorns. Per poder suprimir un entorn
 
 1. Seleccioneu **Suprimeix** per suprimir l'entorn permanentment.
 
+### <a name="manage-environment-members"></a>Administra els membres de l'entorn
+
+1. Aneu a **Administrador** > **Entorn** i seleccioneu **Membres**.
+
+1. Seleccioneu **Afegeix membres** per actualitzar els membres i [assignar funcions](user-roles.md). Actualment, només està disponible **Administrador de l'entorn**.
+
+1. Seleccioneu **Afegeix membres** per afegir-los a l'entorn.
+
 ## <a name="manage-connections"></a>Administrar les connexions
 
 Establir connexions amb les estadístiques del públic us permet veure informes dels coneixements d'interacció basada en perfils de client unificats. 
@@ -107,7 +107,6 @@ Per obtenir-ne més informació, consulteu [Creació d'un enllaç entre les conc
 
 Per protegir les dades personals dels clients, podeu suprimir o exportar dades identificables de l'usuari final.
 
-Per obtenir més informació, vegeu [Suprimir i exportar dades d'incidències que contenen informació personal](delete-export-personal-data.md).
-
+Per obtenir més informació, vegeu [Suprimir i exportar dades d'incidències que contenen informació personal](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Fer coincidir entitats per a la unificació de dades
 description: Feu coincidir les entitats per combinar conjunts de dades i crear perfils de client unificats.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648196"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732622"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -180,10 +180,7 @@ Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Executa** per
 
 Trobareu el resultat d'una execució correcta, l'entitat del perfil de client unificada, a la pàgina **Entitats**. L'entitat de client unificada s'anomena **Clients** i és a la secció **Perfils**. La primera execució de coincidències correcta crea l'entitat *Client* unificada. Totes les execucions de coincidència posteriors amplien aquesta entitat.
 
-> [!TIP]
-> Després d'executar el procés de coincidència, seleccioneu l'estat del procés per obrir la subfinestra **Detalls de la tasca**. Ofereix una visió general sobre el temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca. Seleccioneu **Mostra els detalls** per veure quines entitats han participat en el procés de coincidència, quines regles se'ls ha aplicat i si les actualitzacions s'han publicat correctament.  
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Camí de desglossament per accedir als detalls del procés des de l'enllaç d'estat de la tasca.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Revisar i validar les coincidències
 

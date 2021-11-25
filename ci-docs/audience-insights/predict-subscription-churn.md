@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035311"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799717"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
 
 La predicció de rotació de subscripcions ajuda a predir si un client està en risc de deixar d'utilitzar els productes o els serveis de la subscripció de l'empresa. Podeu crear una nova predicció de rotació de subscripcions a la pàgina **Intel·ligència** > **Prediccions**. Seleccioneu **Les meves prediccions** per veure la resta de prediccions que heu creat.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Proveu el tutorial de predicció de rotació de subscripcions amb dades d'exemple: [Guia d'exemples de predicció de rotació de subscripcions](sample-guide-predict-subscription-churn.md).

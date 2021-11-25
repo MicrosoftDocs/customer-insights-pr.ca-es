@@ -1,7 +1,7 @@
 ---
 title: Emplenar dades parcials mitjançant prediccions
 description: Utilitzeu prediccions per emplenar les dades incompletes dels clients.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645022"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732366"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Completar les dades parcials amb prediccions
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa les teves dades parcials amb prediccions (obsoletes)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Aquesta funció es **descomptarà** a partir del 5 de novembre de **2021**. Les implementacions actuals continuaran funcionant fins que se suprimeixi la característica, però no podreu crear noves integracions usant les instruccions següents.
 
 Les prediccions us permeten crear fàcilment valors previstos que poden millorar la comprensió d'un client. A la pàgina **Intel·ligència** > **Prediccions**, seleccioneu **Les meves prediccions** per veure les prediccions que heu configurat en altres parts de les conclusions del públic i seguir personalitzant-les.
 
 > [!NOTE]
 > No podeu utilitzar aquesta característica si l'entorn utilitza l'emmagatzematge de l'Azure Data Lake Gen 2.
 >
-> La característica de prediccions utilitza mitjans automatitzats per avaluar dades i fer prediccions a partir d'aquestes dades i, per tant, té la capacitat de ser utilitzada com a mètode de perfilació, com es defineix el terme al Reglament general de protecció de dades ("RGPD"). L'ús del client d'aquesta característica per processar les dades pot estar subjecte a l'RGPD o altres lleis o regulacions. Us responsabilitzeu de garantir que l'ús del Dynamics 365 Customer Insights, incloent-hi prediccions, compleixi totes les lleis i normatives aplicables, incloent-hi la legislació relacionada amb la privadesa, les dades personals, les dades biomètriques, la protecció de dades i la confidencialitat de comunicació.
+> La característica de prediccions utilitza mitjans automatitzats per avaluar dades i fer prediccions a partir d'aquestes dades i, per tant, té la capacitat de ser utilitzada com a mètode de perfilació, com es defineix el terme al Reglament general de protecció de dades ("RGPD"). L'ús del client d'aquesta característica per processar les dades pot estar subjecte a l'RGPD o altres lleis o regulacions. Vostè és responsable d'assegurar-se que el seu ús de Dynamics 365 Customer Insights, incloses les prediccions, compleix amb totes les lleis i regulacions aplicables, incloses les lleis relacionades amb la privacitat, les dades personals, les dades biomètriques, la protecció de dades i la confidencialitat de les comunicacions.
 
 ## <a name="prerequisites"></a>Requisits previs
 
 Per tal que la vostra organització pugui utilitzar la característica de prediccions, heu de complir els requisits previs següents:
 
-1. La vostra organització té una instància [configurada al Microsoft Dataverse](/ai-builder/build-model#prerequisites) i és a la mateixa organització que el Customer Insights.
+1. La vostra organització té una instància [establerta a Microsoft Dataverse](/ai-builder/build-model#prerequisites) i es fa a la mateixa organització que Customer Insights.
 
-2. L'entorn de conclusions sobre el públic s'adjunta a la vostra instància del Dataverse.
+2. El vostre entorn d'informació del públic s'adjunta a la vostra instància Dataverse.
 
 Per obtenir més informació, vegeu [Crear un entorn nou](create-environment.md).
 
@@ -60,6 +61,8 @@ Per obtenir més informació, vegeu [Crear un entorn nou](create-environment.md)
    > ![Exemple que mostra els valors de camp assignats a categories.](media/intelligence-categorymapping.png "Exemple que mostra els valors de camp assignats a categories")
 
 8. Seleccioneu **Fet** i es processarà la predicció. El processament tardarà una estona, en funció de la mida i la complexitat de les dades. Els resultats estaran disponibles en una entitat nova basada en el **Nom de l'entitat de sortida** de la predicció que heu creat.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear una predicció durant la creació d'un segment
 
@@ -96,7 +99,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
    > ![Pàgina Prediccions.](media/intelligence-predictionsviewpage.png "Pàgina Prediccions")
 
    - **Valors previstos** mostra l'assignació que heu creat durant la fase d'assignació de valor de camp a categoria. Hi ha valors del conjunt de dades que s'han assignat a una categoria concreta.
-   -Els **influenciadors principals** són els factors del conjunt de dades que tenen més probabilitats d'influir en la confiança de la predicció del valor del camp assignat a una categoria concreta.
+   - Els **influenciadors principals** són els factors del conjunt de dades que tenen més probabilitats d'influir en la confiança de la predicció del valor del camp assignat a una categoria concreta.
    - El **rendiment** indica la manera com estan les prediccions. Seleccioneu l'enllaç per obtenir més informació.
    - **Visualització prèvia** mostra mostres del conjunt de dades de sortida de la predicció i la probabilitat, o la confiança, del valor previst, on 0 és incert i 1 és segur.
 
@@ -137,9 +140,9 @@ A la següent execució de la vostra predicció s'utilitzarà el model actualitz
 
 4. Confirmar la supressió.
 
-## <a name="troubleshooting"></a>Detecció d'errors
+## <a name="troubleshooting"></a>Solució de problemes
 
-Si no podeu completar el procés d'adjunció del Dataverse a causa d'un error, podeu provar d'acabar el procés manualment. Hi ha dos problemes coneguts que es poden produir en el procés d'adjunció:
+Si no podeu completar el procés d'adjuntació Dataverse a causa d'un error, podeu intentar completar el procés manualment. Hi ha dos problemes coneguts que es poden produir en el procés d'adjunció:
 
 - La solució de complement de targeta de client no està instal·lada.
     1. Completeu les instruccions per [instal·lar i configurar la solució](customer-card-add-in.md).
@@ -152,7 +155,7 @@ Si no podeu completar el procés d'adjunció del Dataverse a causa d'un error, p
     1. Seleccioneu **+Nou** i seleccioneu **Usuari**.
     1. Seleccioneu **Usuari de l'aplicació** si ja no està seleccionat i introduïu la següent informació:
         - **Nom d'usuari:** cihelp@microsoft.com
-        - **Identificador d'aplicació:** 38c77d00-5fcb-4cce-9d93-af4738258e3c
+        - **Identificador de sol·licitud:** 38c77d00-5fcb-4cce-9d93-af4738258e3c
         - **Nom:** Customer
         - **Cognoms:** Insights
         - **Correu electrònic principal:** cihelp@microsoft.com

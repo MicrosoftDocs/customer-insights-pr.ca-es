@@ -9,19 +9,21 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034515"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799671"
 ---
 # <a name="similar-customers-preview"></a>Clients semblants (versió preliminar)
 
 Aquesta característica us permet trobar clients semblants a la base de clients mitjançant la intel·ligència artificial. Heu de tenir com a mínim un segment creat per utilitzar aquesta característica. Expandir els criteris d'un segment existent ajuda a cercar clients que siguin semblants a aquest segment.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
+
 > [!NOTE]
-> *Cerca clients similars* utilitza mitjans automatitzats per avaluar dades i fer prediccions basades en les dades, i per tant té la capacitat d'utilitzar-se com a mètode de perfilació, tal com es defineix el terme al Reglament general de protecció de dades ("RGPD"). L'ús del client d'aquesta característica per processar les dades pot estar subjecte a l'RGPD o altres lleis o regulacions. Us responsabilitzeu de garantir que l'ús del Dynamics 365 Customer Insights, incloent-hi prediccions, compleixi totes les lleis i normatives aplicables, incloent-hi la legislació relacionada amb la privadesa, les dades personals, les dades biomètriques, la protecció de dades i la confidencialitat de comunicació.
+> *Cerca clients similars* utilitza mitjans automatitzats per avaluar dades i fer prediccions basades en les dades, i per tant té la capacitat d'utilitzar-se com a mètode de perfilació, tal com es defineix el terme al Reglament general de protecció de dades ("RGPD"). L'ús del client d'aquesta característica per processar les dades pot estar subjecte a l'RGPD o altres lleis o regulacions. Vostè és responsable d'assegurar-se que el seu ús de Dynamics 365 Customer Insights, incloses les prediccions, compleix amb totes les lleis i regulacions aplicables, incloses les lleis relacionades amb la privacitat, les dades personals, les dades biomètriques, la protecció de dades i la confidencialitat de les comunicacions.
 
 ## <a name="finding-similar-customers"></a>Cercar clients semblants
 

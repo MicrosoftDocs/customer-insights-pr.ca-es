@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643349"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792016"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
@@ -27,20 +27,20 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 ## <a name="prerequisites"></a>Requisits previs
 
 - El complement només funciona amb les aplicacions controlades per models del Dynamics 365, com ara Vendes o Servei d'atenció al client, versió 9.0 i posteriors.
-- Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Microsoft Dataverse](connect-power-query.md).
+- Perquè les dades del Dynamics 365 s'assignin als perfils de clients de les estadístiques d'audiència, s'han [d'ingerir des de l'aplicació Del Dynamics 365 mitjançant el connector Microsoft Dataverse](connect-power-query.md).
 - Tots els usuaris del Dynamics 365 del complement de la targeta del client s'han d'[afegir com a usuaris](permissions.md) als coneixements del públic per veure les dades.
 - [Les capacitats de cerca i filtre configurades](search-filter-index.md) als coneixements del públic són necessàries per cercar dades per treballar.
 - Cada complement es basa en dades específiques dels coneixements del públic. Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
   - **Control de mesura**: requereix [mesures configurades](measures.md) dels atributs de tipus client.
   - **Control d'intel·ligència**: requereix dades generades mitjançant [prediccions](predictions.md) o [models personalitzats](custom-models.md).
   - **Control de detalls del client**: tots els camps del perfil estan disponibles al perfil de client unificat.
-  - **Control d'enriquiment**: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client.
+  - **Control d'enriquiment**: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client. El complement de la targeta admet aquests enriquiments: [marques](enrichment-microsoft.md) proporcionades per Microsoft, [interessos](enrichment-microsoft.md) proporcionats per Microsoft.
   - **Control de contactes**: requereix una definició d'entitat semàntica de contactes de tipus.
   - **Control de la cronologia**: requereix [activitats configurades](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instal·lar el complement de targeta del client
 
-El complement de la targeta del client és una solució per a les aplicacions d'interacció amb els clients al Dynamics 365. Per instal·lar la solució, aneu a AppSource i cerqueu **Targeta del client del Dynamics**. Seleccioneu el [Complement de targeta del client a AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i seleccioneu **Obtén ara**.
+El complement de la targeta del client és una solució per a les aplicacions d'interacció amb els clients al Dynamics 365. Per instal·lar la solució, aneu a AppSource i cerqueu **la targeta de client del Dynamics**. Seleccioneu el [complement de la targeta de client a AppSource i seleccioneu](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview)[Obtén-lo ara](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview).
 
 Potser heu d'iniciar la sessió amb les credencials d'administrador de l'aplicació Dynamics 365 per instal·lar la solució. Pot ser que la solució tardi una estona en instal·lar-se al vostre entorn.
 
@@ -48,7 +48,7 @@ Potser heu d'iniciar la sessió amb les credencials d'administrador de l'aplicac
 
 1. Com a administrador, aneu a la secció **Configuració** al Dynamics 365 i seleccioneu **Solucions**.
 
-1. Seleccioneu l'enllaç **Nom de visualització** per a la solució del **Complement de targeta de client del Dynamics 365 Customer Insights (visualització prèvia)**.
+1. Seleccioneu **l'enllaç Nom de visualització** per a la solució de complement de targeta de client Dynamics 365 Customer Insights **(previsualització).**
 
    > [!div class="mx-imgBorder"]
    > ![Seleccionar el nom de visualització.](media/select-display-name.png "Seleccioneu el nom de visualització.")

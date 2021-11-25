@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673721"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799625"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -39,6 +39,19 @@ Podeu editar alguns dels detalls dels entorns existents.
 3. Al quadre **Edita l'entorn** podeu actualitzar la configuració de l'entorn.
 
 Per obtenir més informació sobre la configuració de l'entorn, vegeu [Crear un entorn nou](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Connecta't a Microsoft Dataverse
+   
+El **pas Microsoft Dataverse us permet connectar les idees del client amb el vostre entorn** Dataverse.
+
+Per utilitzar [models de predicció fora de](predictions-overview.md#out-of-box-models) caixa, configureu l'ús compartit de dades amb Dataverse. O podeu habilitar la ingestió de dades des de fonts de dades local, proporcionant l'URL de l'entorn Microsoft Dataverse que administra la vostra organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir dades de sortida de Customer Insights amb un llac de dades gestionat per Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb Microsoft Dataverse.":::
+
+> [!NOTE]
+> El Customer Insights no admet els escenaris d'ús compartit de dades següents:
+> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un llac de dades gestionat per Dataverse.
+> - Si activeu l'ús compartit de dades amb Dataverse, no podreu [crear valors predits o que falten en una entitat](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configuració de l'entorn
 
@@ -68,7 +81,7 @@ Les dades següents *no* es copien:
 - Perfils de client.
 - Credencials de la font de dades. Haureu de proporcionar les credencials de cada font de dades i actualitzar manualment les fonts de dades.
 
-- Fonts de dades de la carpeta del Model de dades comú i del llac de dades administrat pel Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
+- Orígens de dades de la carpeta Del model de dades comú i del llac de dades gestionat per Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
 
 Quan copieu un entorn, veureu un missatge de confirmació que s'ha creat l'entorn nou. Seleccioneu **Ves a les fonts de dades** per veure la llista de fonts de dades.
 

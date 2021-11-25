@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648105"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673630"
 ---
 # <a name="create-a-new-environment"></a>Creació d'un entorn nou 
 
@@ -40,13 +40,13 @@ Un entorn és una àrea on administreu les vostres àrees de treball i connexion
 
 1. Trieu la **Regió** i seleccioneu **Següent**. 
 
-1. Escriviu un **Nom de l'àrea de treball**, que us permet recopilar dades per a llocs web o aplicacions específics. Per obtenir més informació, vegeu [Crear una àrea de treball](create-workspace.md).
+1. Escriviu un **nom d'àrea de treball** que us permeti recopilar dades per a llocs web o aplicacions específiques. Per obtenir més informació, vegeu [Crear una àrea de treball](create-workspace.md).
 
-1. Trieu el **Tipus d'àrea de treball** (web o mòbil) que voleu crear. 
+1. Trieu el **tipus d'àrea de treball** (web o mòbil) que voleu crear. 
 
 1. Seleccioneu **Mostra la configuració avançada** per habilitar o inhabilitar aquesta configuració opcional:
 
-   - Activeu o desactiveu **De desconegut a conegut** en "habilitat" per associar incidències web amb usuaris que s'han autenticat anteriorment. Per obtenir més informació, vegeu [Reconèixer incidències web de visitants autenticats prèviament](unknown-to-known.md)
+   - Activeu o desactiveu **De desconegut a conegut** en "habilitat" per associar incidències web amb usuaris que s'han autenticat anteriorment. Per obtenir més informació, [vegeu Reconèixer esdeveniments web de visitants prèviament autenticats](unknown-to-known.md).
    - Commuteu **Filtra el trànsit del bot** "habilitat" per eliminar el trànsit web dels bots per a aquesta àrea de treball. 
 
 1. Quan hagueu acabat, seleccioneu **Completat**. 

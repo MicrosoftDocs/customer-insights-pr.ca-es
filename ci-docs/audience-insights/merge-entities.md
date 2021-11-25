@@ -1,7 +1,7 @@
 ---
 title: Combinar entitats a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648242"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732760"
 ---
 # <a name="merge-entities"></a>Combinar entitats
 
@@ -187,10 +187,9 @@ Trieu **Executa la combinació i els processos descendents** per actualitzar el 
 
 Per fer més canvis i tornar a executar el pas, podeu cancel·lar una combinació en curs. Seleccioneu **S'està actualitzant...** i seleccioneu **Cancel·la la feina** a la subfinestra lateral que es mostra.
 
-> [!TIP]
-> Després d'executar el procés de combinació, seleccioneu l'estat del procés per obrir la subfinestra **Detalls de la tasca**. Ofereix una visió general sobre el temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca. Seleccioneu **Mostra els detalls** per veure quines entitats han participat en el procés de coincidència, si la resolució de conflictes s'ha resolt correctament i si les actualitzacions s'han publicat correctament.  
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Camí de desglossament per accedir als detalls del procés des de l'enllaç d'estat de la tasca.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Camí de desglossament per accedir als detalls del procés des de l'enllaç d'estat de la tasca.":::
 
 ## <a name="next-step"></a>Pas següent
 

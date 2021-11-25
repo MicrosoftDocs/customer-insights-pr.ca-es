@@ -1,7 +1,7 @@
 ---
 title: Configuració del sistema a les conclusions del públic
-description: Coneixeu la configuració del sistema per a capacitat de conclusions del públic del Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Obteniu informació sobre la configuració del sistema a Dynamics 365 Customer Insights capacitat d'informació de l'audiència.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651828"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732349"
 ---
 # <a name="system-configuration"></a>Configuració del sistema
+
+Per accedir a les configuracions del sistema a les estadístiques de l'audiència, des de la barra de navegació esquerra seleccioneu **Sistema d'administració** > **per visualitzar una llista de tasques i** processos del sistema.
 
 La pàgina **Sistema** inclou les pestanyes següents:
 - [Estat d'execució](#status-tab)
@@ -30,39 +32,55 @@ La pàgina **Sistema** inclou les pestanyes següents:
 
 ## <a name="status-tab"></a>Pestanya Estat
 
-La **pestanya Estat** us permet fer un seguiment del progrés de la ingesta de dades, les exportacions de dades i altres processos de producte importants. Reviseu la informació d'aquesta pestanya per garantir la integritat dels processos actius.
+La **pestanya Estat** us permet fer un seguiment del progrés de les tasques, la ingestió de dades, les exportacions de dades i diversos altres processos de producte importants. Reviseu la informació d'aquesta pestanya per garantir la integritat de les vostres tasques i processos actius.
 
-Aquesta pestanya inclou taules amb estat i informació de processament per a diversos processos. Cada taula fa el seguiment del **Nom** de la tasca i l'entitat corresponent, l'**Estat** de l'execució més recent i la data de l'**Última actualització**.
+Aquesta pestanya inclou taules amb estat i informació de processament per a diversos processos. Cada taula fa el seguiment del **Nom** de la tasca i l'entitat corresponent, l'**Estat** de l'execució més recent i la data de l'**Última actualització**. Podeu veure els detalls de les últimes execucions seleccionant el nom de la tasca o del procés. 
 
-Per visualitzar els detalls de les darreres execucions de les tasques, seleccioneu-ne el nom.
+Seleccioneu l'estat que hi ha al costat de la tasca o el procés de la **columna Estat per obrir la** **subfinestra Detalls del** Progrés.
 
-### <a name="status-types"></a>Tipus d'estat
+   :::image type="content" source="media/system-progress-details.png" alt-text="Subfinestra de detalls del progrés del sistema":::
 
-Hi ha sis tipus d'estat per a les tasques. Els tipus d'estat següents també es mostren a les pàgines *Coincidència*, *Combinació*, *Fonts de dades*, *Segments*, *Mesures*, *Enriquiment*, *Activitats* i *Prediccions*:
+### <a name="status-definitions"></a>Definicions d'estat
 
-- **Processament**: la tasca està en curs. L'estat pot canviar a Correcta o Error.
-- **Correcta**: s'ha completat correctament la tasca.
-- **Omesa:** s'ha omès la tasca. Un o diversos processos descendents dels quals depèn aquesta tasca s'han omès o no s'han completat.
-- **Error**: el processament de la tasca ha fallat.
-- **Cancel·lada:** l'usuari ha cancel·lat el processament abans d'haver acabat.
-- **Cua**: el processament està a la cua i s'iniciarà quan s'hagin completat totes les tasques prèvies. Per obtenir més informació, vegeu [Normes d'actualització](#refresh-policies).
+El sistema utilitza els estats següents per a tasques i processos:
 
-### <a name="refresh-policies"></a>Normes d'actualització
+|Estat d'execució  |Definició  |
+|---------|---------|
+|Cancel·lada |El processament ha estat cancel·lat per l'usuari abans d'acabar-lo.   |
+|Errònia   |L'ingestió de dades ha trobat errors.         |
+|Error  |El processament ha fallat.  |
+|Sense iniciar   |La font de dades no té encara dades ingerides o encara es troben en mode d'esborrany.         |
+|S’està processant  |La tasca o el procés estan en curs.  |
+|S'està actualitzant    |La ingestió de dades està en curs. Per cancel·lar aquesta operació, seleccioneu **Deixa d'actualitzar** a la columna **Accions**. Si atureu l'actualització d'una font de dades, es revertirà a l'últim estat d'actualització.       |
+|Omesa  |S'ha omès la tasca o el procés. Un o diversos processos descendents dels quals depèn aquesta tasca s'han omès o no s'han completat.|
+|Correcte  |La tasca o el procés s'han completat correctament. Per als orígens de dades, indica que les dades s'han ingerit correctament si s'esmenta un temps a la **columna** Actualitzada.|
+|A la cua | El processament està a la cua i s'iniciarà un cop es completin totes les tasques i processos aigües amunt. Per obtenir més informació, [vegeu Actualitzar processos](#refresh-processes).|
 
-En aquesta llista es mostren les normes d'actualització per a cadascun dels processos principals:
+### <a name="refresh-processes"></a>Actualitza els processos
 
-- **Fonts de dades**: s'executa segons la [planificació configurada](#schedule-tab). No depèn de cap altre procés. La coincidència depèn de la finalització correcta d'aquest procés.
-- **Coincidència**: s'executa segons la [planificació configurada](#schedule-tab). Depèn del processament de les fonts de dades que s'utilitzen a la definició de la concordança. La combinació depèn de la finalització correcta d'aquest procés.
-- **Combinació**: s'executa segons la [planificació configurada](#schedule-tab). Depèn de la finalització correcta del procés de coincidència. Els segments, les mesures, l'enriquiment, la cerca, les activitats, les prediccions i la preparació de dades depenen de la finalització correcta d'aquest procés.
-- **Segments**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn de la combinació. Les estadístiques depenen del seu processament.
-- **Mesures**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn de la combinació.
-- **Activitats**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn de la combinació.
-- **Enriquiment**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn de la combinació.
-- **Cerca**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn de la combinació.
-- **Preparació de dades**: s'executa segons la [planificació configurada](#schedule-tab). Depèn de la combinació.
-- **Informació**: s'executa manualment (l'actualització en un sol temps) i d'acord amb la [planificació configurada](#schedule-tab). Depèn dels segments.
+L'actualització de les tasques i els processos s'executa d'acord amb la [planificació configurada](#schedule-tab). 
 
-Seleccioneu l'estat d'una tasca per veure els detalls del progrés de tota la feina en què es trobava. Les normes d'actualització anteriors us poden ajudar a comprendre què podeu fer per tractar una tasca **Omesa** o **A la cua**.
+|Processar  |Descripció  |
+|---------|---------|
+|Activitat  |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació. Les estadístiques depenen del seu processament.|
+|Enllaç de l'anàlisi |S'executa manualment (actualització d'una sola vegada). Depèn dels segments.  |
+|Preparació de l'anàlisi |S'executa manualment (actualització d'una sola vegada). Depèn dels segments.  |
+|Preparació de les dades   |Depèn de la combinació.   |
+|Fonts de dades   |No depèn de cap altre procés. La coincidència depèn de la finalització correcta d'aquest procés.  |
+|Enriquiments   |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació. |
+|Destinacions d'exportació |S'executa manualment (actualització d'una sola vegada). Depèn dels segments.  |
+|Informació detallada |S'executa manualment (actualització d'una sola vegada). Depèn dels segments.  |
+|Intel·ligència   |Depèn de la combinació.   |
+|Coincidència |Depèn del processament de les fonts de dades que s'utilitzen a la definició de la concordança.      |
+|Mesures  |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació.  |
+|Combinació   |Depèn de la finalització correcta del procés de coincidència. Els segments, les mesures, l'enriquiment, la cerca, les activitats, les prediccions i la preparació de dades depenen de la finalització correcta d'aquest procés.   |
+|Perfils   |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació. |
+|Cerca   |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació. |
+|Segments  |S'executa manualment (actualització d'una sola vegada). Depèn del procés de combinació. Les estadístiques depenen del seu processament.|
+|Sistema   |Depèn de la finalització correcta del procés de coincidència. Els segments, les mesures, l'enriquiment, la cerca, les activitats, les prediccions i la preparació de dades depenen de la finalització correcta d'aquest procés.   |
+|Usuari  |S'executa manualment (actualització d'una sola vegada). Depèn de les entitats.  |
+
+Seleccioneu l'estat d'un procés per veure els detalls de progrés de tota la feina en què es trobava. Els processos d'actualització anteriors poden ajudar a entendre què podeu fer per fer front a una tasca o procés o en cua **o om o en** **·** cua.
 
 ## <a name="schedule-tab"></a>Pestanya Planificació
 
@@ -86,7 +104,7 @@ La pestanya **Quant a** conté el **Nom de visualització** de l'organització, 
 
 Podeu canviar la llengua i el format de país/regió a la pestanya **General**.
 
-El Customer Insights [admet diverses llengües](/dynamics365/get-started/availability). L'aplicació utilitza la vostra preferència d'idioma per mostrar elements com ara el menú, el text de l'etiqueta i els missatges del sistema en el vostre idioma preferit.
+Customer Insights [admet molts](/dynamics365/get-started/availability) idiomes. L'aplicació utilitza la vostra preferència d'idioma per mostrar elements com ara el menú, el text de l'etiqueta i els missatges del sistema en el vostre idioma preferit.
 
 Les dades importades i la informació que heu introduït manualment no estan traduïdes.
 
@@ -109,7 +127,7 @@ L'**ús de l'API** conté tres seccions:
 
 -  **Operacions**: una taula amb files per a cada operació de l'API disponible i detalls sobre l'ús de les operacions. Podeu seleccionar un nom d'operació per anar a la [referència de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Les operacions que utilitzen la [ingesta de dades en temps real](real-time-data-ingestion.md) contenen un botó amb un símbol de binocles per visualitzar l'ús de l'API en temps real. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.   
+   Les operacions que utilitzen [la ingestió de dades en temps real](real-time-data-ingestion.md) contenen un botó amb un símbol binocular per veure l'ús de l'API en temps real. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.   
    Utilitzeu el quadre **Agrupa per** a la subfinestra **Ús de l'API en temps real** per triar com es presenten millor les interaccions en temps real. Podeu agrupar les dades per mètode de l'API, nom complet de l'entitat (entitat ingerida), creat per (origen de la incidència), resultat (correcte o error) o codis d'error. Les dades estan disponibles com a gràfic d'historial i com a taula.
 
 ## <a name="security-tab"></a>Pestanya Seguretat

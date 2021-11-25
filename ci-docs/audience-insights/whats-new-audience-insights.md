@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,58 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673803"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753105"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats en la capacitat d'informació de l'audiència de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
+Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, feu un cop d'ull als plans de llançament del [Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
 Implementarem les actualitzacions per regió. Per tant, algunes regions poden veure les característiques abans que altres. Si no s'especifica de manera diferent, no cal que feu cap acció i actualitzarem l'aplicació automàticament sense temps d'inactivitat.
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Actualitzacions d'octubre de 2021
+
+Les actualitzacions a l'octubre de 2021 inclouen noves característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="b-to-b"></a>B-a-B
+
+A partir d'octubre de 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment als consumidors individuals. Es van actualitzar diverses àrees de característiques per donar suport als escenaris B-a-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B compatibles, consulta [Treballar amb comptes d'empresa a les estadístiques de l'audiència](work-with-business-accounts.md).
+
+En els següents apartats destaquen algunes de les àrees clau que es van adaptar per donar suport als comptes empresarials i als consumidors individuals.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Exportar segments basats en comptes d'empresa
+
+Totes les exportacions de segments en informació d'audiència estan disponibles en el context dels comptes empresarials. La majoria de les exportacions de segments requereixen una configuració addicional i [informació de contacte projectada en els](segment-builder.md#create-a-new-segment) segments subjacents per ser vàlida per als comptes empresarials. Per obtenir més informació, [vegeu Segments d'exportació](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilitzar l'exportació d'anuncis de LinkedIn amb comptes d'empresa
+
+L'exportació de LinkedIn Ads ja està disponible per a la segmentació de contactes i empreses en el context dels comptes empresarials. En seleccionar la segmentació de l'empresa com a focus principal de l'exportació de LinkedIn, podeu exportar segments basats en comptes empresarials sense necessitat de projectar informació de contacte. Per obtenir més informació, aneu als documents sobre [l'exportació de LinkedIn Ads](export-linkedin-ads.md) i la diferència entre la [segmentació per contacte i](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) la [segmentació per a l'empresa.](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crear mesures basades en els comptes empresarials i la seva jerarquia
+
+El constructor de mesures us permet crear mesures al voltant dels comptes empresarials i opcionalment utilitzar la informació de la jerarquia. La informació de jerarquia s'utilitza per fer un càlcul de mesura a través d'un compte i tots els seus sub comptes relacionats. Per exemple, podeu crear mesures com els ingressos totals per a cada grup de comptes empresarials identificats per la seva jerarquia. Per obtenir més informació, vegeu [Definir i administrar mesures](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crear segments basats en comptes empresarials i la seva jerarquia
+
+El constructor de segments us permet crear segments de comptes empresarials que opcionalment inclouen informació de contacte per a cada compte en un segment. Si teniu la jerarquia de comptes establerta, podeu utilitzar la informació de jerarquia de comptes a la creació de segments. Per obtenir més informació, [vegeu Crear un segment nou](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva els teus comptes d'empresa amb informació profunda de la seva tendència a l'enrenant
+
+El model predicció de clients ara també admet comptes empresarials. Podeu avaluar el risc de batre no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que comprin de vosaltres. Aquesta addició us ajuda a entendre si un compte és més probable que deixi de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos encara més a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogi. Per obtenir més informació, [vegeu Transacció predicció (previsualització)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Veure els contactes d'un compte d'empresa a la visualització del client
+
+Si els comptes d'empresa s'assignen a comptes relacionats, l'aplicació Customer Insights mostra aquests contactes relacionats com a part de la visualització de detalls del client. Per obtenir més informació, vegeu [Perfils de clients](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Actualitzacions de setembre de 2021
 
@@ -78,7 +113,7 @@ Les actualitzacions del maig de 2021 inclouen diverses característiques, actual
 
 ### <a name="data-ingestion"></a>Ingestió de dades
 
-- **Visualitzeu o modifiqueu les metadades o la definició d'entitat quan adjunteu dades de l'Azure Data Lake Storage** Ara podeu visualitzar i editar les metadades o la definició d'entitat a l'auditori quan adjunteu dades d'una carpeta del Model de dades comú al vostre Azure Data Lake Storage. Aquesta capacitat proporciona comentaris en temps real, validació del model i comprovació d'errors. Permet editar tant model.json com manifest.json sense problemes.
+- **Visualitza o modifica les metadades o la definició d'entitat en adjuntar dades del teu Azure Data Lake Storage** Ara pots veure i editar metadades o definició d'entitat a les estadístiques de l'audiència en adjuntar dades d'una carpeta del Model de Dades Comú al Azure Data Lake Storage. Aquesta capacitat proporciona comentaris en temps real, validació del model i comprovació d'errors. Permet editar tant model.json com manifest.json sense problemes.
 
 ### <a name="extensibility"></a>Extensibilitat
 
@@ -153,7 +188,7 @@ Les actualitzacions del març de 2021 inclouen diverses característiques, actua
 
 ### <a name="data-ingestion"></a>Ingestió de dades
 
-- **Connecteu-vos a fonts de dades locals mitjançant fluxos de dades i passarel·les del Power Platform** Ens complau anunciar la versió preliminar dels fluxos de dades del Power Platform i la connectivitat local mitjançant l'ús de passarel·les al Customer Insights amb un entorn associat del Power Platform o del Dataverse. Totes les fonts de dades noves creades en un entorn del Customer Insights amb un entorn del Dataverse enllaçat seran per defecte fluxos de dades del Power Platform que aportaran connectivitat de dades locals i un conjunt enriquit de connectors i capacitats de transformació.
+- **Connectar-nos a local fonts de dades mitjançant fluxos de dades Power Platform i passarel·les** Ens complau anunciar la previsualització de Power Platform fluxos de dades i connectivitat local mitjançant passarel·les a Customer Insights amb un Power Platform associat o Dataverse entorn. Qualsevol nou origen de dades creat en un entorn d'informació del client amb un entorn de Dataverse enllaçat per defecte Power Platform fluxos de dades que comportin la connectivitat de dades local i un ric conjunt de connectors i capacitats de transformació.
 
 ### <a name="extensibility"></a>Extensibilitat
 
@@ -215,7 +250,7 @@ Les actualitzacions de febrer del 2021 inclouen diverses característiques, actu
 
 - **La còpia d'entorn admet més tipus de fonts de dades**
 
-  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de còpia de l'entorn per als casos en què s'utilitzen fonts de dades basades en un llac de dades administrat pel Microsoft Dataverse o una carpeta del model de dades comú.
+  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de l'entorn de còpia per als casos en què s'utilitzen fonts de dades basades en un llac de dades administrades Microsoft Dataverse o una carpeta del Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualitzacions de gener de 2021
 
@@ -241,7 +276,7 @@ Les actualitzacions de gener del 2021 inclouen diverses característiques, actua
 
 #### <a name="system-administration"></a>Administració del sistema
 
-- **Compartiu fàcilment dades amb el Microsoft Dataverse** Ara podeu compartir la sortida del Customer Insights amb les aplicacions del Microsoft Dataverse que utilitzen el Microsoft Dataverse Managed Data Lake. Quan associeu un entorn del Dataverse amb el Customer Insights, teniu l'opció d'habilitar l'ús compartit de dades.
+- **Compartiu sense problemes les dades a Microsoft Dataverse** Ara podeu compartir la sortida d'informació del client amb Microsoft Dataverse aplicacions que utilitzen el Microsoft Dataverse Data Lake gestionat. Una vegada que associeu un entorn Dataverse amb Customer Insights, obtindreu l'opció d'habilitar l'ús compartit de dades.
   Per obtenir més informació, vegeu [Administrar entorns](manage-environments.md).
 
 

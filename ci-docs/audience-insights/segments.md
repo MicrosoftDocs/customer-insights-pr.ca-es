@@ -1,7 +1,7 @@
 ---
 title: Segments als coneixements del públic
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673748"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732576"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -65,8 +65,7 @@ L'acció següent està disponible quan seleccioneu un segment:
 
 Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**.
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Exportar segments
 
@@ -105,5 +104,6 @@ La part inferior conté una llista dels membres del segment.
 > Els camps que apareixen en aquesta llista es basen en els atributs de les entitats del vostre segment.
 >
 >La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, heu d'[exportar el segment](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

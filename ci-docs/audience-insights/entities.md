@@ -1,7 +1,7 @@
 ---
 title: Entitats i conjunts de dades
 description: Visualitzeu dades de la pàgina Entitats.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033803"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732068"
 ---
 # <a name="entities-in-audience-insights"></a>Entitats a les conclusions del públic
 
-Després de [configurar les fonts de dades](data-sources.md), aneu a la pàgina **Entitats** per avaluar la qualitat de les dades que heu ingerit. Les entitats es consideren conjunts de dades. Diverses capacitats del Dynamics 365 Customer Insights es construeixen al voltant d'aquestes entitats. Revisar-les amb atenció us pot ajudar a validar la sortida d'aquestes funcions.
+Després de [configurar les fonts de dades](data-sources.md), aneu a la pàgina [Entitats](data-sources.md) per avaluar la qualitat de les dades que heu ingerit. Les entitats es consideren conjunts de dades. Es construeixen múltiples capacitats de Dynamics 365 Customer Insights al voltant d'aquestes entitats. Revisar-les amb atenció us pot ajudar a validar la sortida d'aquestes funcions.
 
 A la pàgina **Entitats** s'enumeren entitats i inclou diverses columnes:
 
@@ -26,9 +26,10 @@ A la pàgina **Entitats** s'enumeren entitats i inclou diverses columnes:
 - **Font**: tipus de font de dades que ha ingerit l'entitat
 - **Creat per**: nom de la persona que ha creat l'entitat
 - **Data de creació**: data i hora de creació de l'entitat
-- **Actualitzat per**: nom de la persona que ha actualitzat l'entitat
-- **Última actualització**: data i hora de l'última vegada que es va actualitzar l'entitat
-- **Darrera actualització**: data i hora de l'última actualització de les dades
+- **·** Actualització: Nom de la persona que ha actualitzat l'entitat
+- **Estat** : detalls sobre l'última actualització de l'entitat
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Explorar les dades d'una entitat concreta
 

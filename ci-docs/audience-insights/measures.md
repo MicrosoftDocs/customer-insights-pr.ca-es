@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar mesures
 description: Definiu mesures per analitzar i reflectir el rendiment del vostre negoci.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673358"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732714"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
@@ -238,8 +238,7 @@ Seleccioneu una mesura de la llista per a les opcions següents:
 - **Suprimiu** la mesura.
 - **Activeu** o **desactiveu-la**. Les mesures inactives no s'actualitzaran durant una [actualització planificada](system.md#schedule-tab).
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, última data de processament i tots els errors i advertiments associats amb la tasca.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Pas següent
 

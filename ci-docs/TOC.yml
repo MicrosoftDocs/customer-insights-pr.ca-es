@@ -4,7 +4,7 @@
   href: overview.md
 - name: Prova gratuïta
   items:
-    - name: Registrar-se per a una prova gratuïta
+    - name: Registre per a una prova gratuïta
       href: trial-signup.md
     - name: Preguntes més freqüents sobre la prova
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Afegir una carpeta del Common Data Model com a font de dades
           href: audience-insights/connect-common-data-model.md
-        - name: Afegir un llac de dades administrat del Dataverse
+        - name: Afegeix Dataverse llac de dades administrades
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Actualització incremental per a fonts de dades
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adreces millorades
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Millorar les dades de l'empresa
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquir amb l'Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Enriquir amb HERE Technologies
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: "Dynamics\_365 Sales"
               href: audience-insights/export-dynamics365-sales.md
-            - name: Administrador d'anuncis de Facebook
+            - name: Gestor d'anuncis Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -220,7 +222,7 @@
               href: audience-insights/export-power-apps.md
             - name: Power Automate
               href: audience-insights/export-power-automate.md
-            - name: Power BI
+            - name: "Power\_BI"
               href: audience-insights/export-power-bi.md
     - name: Administració
       items:
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Revisar els esquemes d'entitats al Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Dades del Customer Insights al Dataverse
+        - name: Dades de Customer Insights a Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Treballar amb API
           href: audience-insights/apis.md
         - name: Referències d'API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Gestió del consentiment (previsualització)
+  items:
+    - name: Centre d'ajuda
+      href: consent-management/index.yml
+    - name: Informació general de les capacitats
+      href: consent-management/overview.md
+    - name: Introducció
+      items:
+        - name: Introducció
+          href: consent-management/get-started.md
+        - name: Conceptes i terminologia
+          href: consent-management/glossary.md
+    - name: Importa les dades de consentiment
+      items:
+        - name: Importa les dades de consentiment
+          href: consent-management/import-consent-data.md
+        - name: Establir dades de consentiment i aplicar preferències de consentiment
+          href: consent-management/set-consent-rules.md
+    - name: Gestionar les dades de consentiment
+      items:
+        - name: Habilita les regles de consentiment en les estadístiques de l'audiència
+          href: audience-insights/activate-consent.md
+        - name: Administra les regles de consentiment per defecte en els segments d'informació d'audiència
+          href: audience-insights/change-default-consent-rules.md
+    - name: Administra la configuració i els usuaris
+      items:
+        - name: Configura la configuració del sistema
+          href: consent-management/system-settings.md
+        - name: Gestionar usuaris i permisos
+          href: consent-management/manage-users.md
+    - name: Utilitzar dades de consentiment
+      items:
+        - name: Crear prediccions amb dades de consentiment
+          href: consent-management/predictions-consent-data.md
 - name: Conclusions sobre la interacció (versió preliminar)
   items:
     - name: Centre d'ajuda
@@ -302,9 +338,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Mostra de l'SDK web
           href: engagement-insights/websdk-sample.md
-        - name: Tutorial de l'SDK de l'Android
+        - name: Tutorial de l'SDK d'Android
           href: engagement-insights/get-started-android.md
-        - name: Exemple de l'SDK de l'Android
+        - name: Android mostra de l'SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Tutorial de l'SDK d'iOS
           href: engagement-insights/get-started-ios.md

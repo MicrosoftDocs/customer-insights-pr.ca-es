@@ -1,7 +1,7 @@
 ---
 title: Activitats del client
 description: Definir activitats de client i visualitzar-les en una cronologia dels perfils del client.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673125"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732430"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
-Combinar les activitats de client de [diverses fonts de dades](data-sources.md) al Dynamics 365 Customer Insights per crear una cronologia on s'enumerin les activitats en ordre cronològic. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la solució de [complement de targeta de client](customer-card-add-in.md) o en un escriptori digital del Power BI.
+Combina les activitats dels clients de diversos orígens de [dades a Dynamics 365 Customer Insights per crear una](data-sources.md) cronologia que enumeri les activitats cronològicament. Inclou la cronologia a les aplicacions del Dynamics 365 amb la [solució de complement de la Targeta client o en un escriptori digital](customer-card-add-in.md) Power BI.
 
 ## <a name="define-an-activity"></a>Definir una activitat
 
@@ -82,9 +82,7 @@ Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclo
 
 1. A la pàgina **Activitats**, seleccioneu **Executa** per processar l'activitat. 
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Administrar activitats existents
 

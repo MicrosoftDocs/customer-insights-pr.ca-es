@@ -1,5 +1,5 @@
 ---
-title: Límits de servei al Dynamics 365 Customer Insights
+title: Límits de servei a Dynamics 365 Customer Insights
 description: Coneixeu els límits i les restriccions.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483645"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791970"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Límits de servei a les capacitats del Customer Insights
 
@@ -22,11 +22,11 @@ En aquest article es descriuen els límits incorporats al servei del Customer In
 
 ## <a name="audience-insights"></a>Conclusions sobre el públic
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Límits de servei de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Límits de servei en la capacitat d'informació de l'audiència Dynamics 365 Customer Insights
 
 | Àrees  | Límits  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segments i mesures | 100 segments o mesures. | El nombre total de [segments](audience-insights/segments.md) i [mesures](audience-insights/measures.md) actius combinats no pot superar els 100.  |
+| Segments, mesures i prediccions | 300  | El nombre total de [...](audience-insights/segments.md) segments, mesures i [...](audience-insights/measures.md)[prediccions](audience-insights/predictions.md) combinades no pot superar els 300.  |
 | Relacions | 20 nivells de profunditat en les relacions en camins d'entitat. | En crear [segments](audience-insights/segments.md) o [mesures](audience-insights/measures.md) mitjançant la interfície del constructor, els camins d'entitat poden tenir fins a 20 salts de relació entre l'entitat inicial i l'entitat de destinació.  |
 
 

@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights
 description: Administrar les exportacions per compartir dades.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673311"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732123"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
@@ -59,7 +59,7 @@ Per configurar o editar una exportació, heu de tenir connexions disponibles. Le
 
 1. Seleccioneu **Afegeix una exportació** per crear una exportació nova.
 
-1. A la subfinestra **Configura l'exportació**, seleccioneu la connexió que voleu utilitzar. Les [connexions](connections.md)les administren els administradors. 
+1. A la subfinestra **Configura l'exportació**, seleccioneu la connexió que voleu utilitzar. Les [connexions](connections.md) les administren els administradors. 
 
 1. Proporcioneu els detalls necessaris i seleccioneu **Desa** per crear l'exportació.
 
@@ -97,7 +97,9 @@ Un cop creades les destinacions d'exportació, es mostren a **Dades** > **Export
 
 Cada exportació que configureu té una planificació d'actualització. Durant una actualització, el sistema cerca dades noves o actualitzades per incloure-les en una exportació. Per defecte, les exportacions s'executen com a part de cada [actualització del sistema planificada](system.md#schedule-tab). Podeu personalitzar la planificació d'actualització o desactivar-la per executar les exportacions manualment.
 
-Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions en curs en [dependències](system.md#refresh-policies) quan s'hagi d'iniciar una exportació planificada, el sistema finalitzarà primer les actualitzacions i executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions en curs en [dependències](system.md#refresh-processes) quan s'hagi d'iniciar una exportació planificada, el sistema finalitzarà primer les actualitzacions i executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
 
 ### <a name="schedule-exports"></a>Exportacions planificades
 

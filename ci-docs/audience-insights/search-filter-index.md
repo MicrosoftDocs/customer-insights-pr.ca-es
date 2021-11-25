@@ -1,7 +1,7 @@
 ---
 title: Cercar i filtrar perfils de client
 description: Trobeu ràpidament informació sobre els perfils de client unificats i filtreu-los per atributs especificats.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469941"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732022"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfils de client: índex de cerca i filtratge
 
-El resultat d'unificar les dades dels clients és una entitat de perfil de client que proporciona una visualització unificada a la base de clients total. Per [cercar ràpidament informació sobre un client o un grup de clients determinat](customer-profiles.md), podeu configurar les funcionalitats **Cerca** i **Filtre** a la pàgina **Clients**. Seguiu llegint per obtenir més informació sobre com els administradors poden editar els atributs a la pàgina **Índex de cerca i filtre**, que estan disponibles per als usuaris per cercar i filtrar.
+El resultat d'unificar les dades dels clients és una entitat de perfil de client que proporciona una visualització unificada a la base de clients total. Per [cercar ràpidament informació sobre un client o un grup de clients determinat](customer-profiles.md), podeu configurar les funcionalitats [Cerca](customer-profiles.md) i [Filtre](customer-profiles.md) a la pàgina [Clients](customer-profiles.md). Seguiu llegint per obtenir més informació sobre com els administradors poden editar els atributs a la pàgina **Índex de cerca i filtre**, que estan disponibles per als usuaris per cercar i filtrar.
 
-> [!div class="mx-imgBorder"]
-> ![Filtre de cerca.](media/search-filter.png "Filtre de cerca")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtre de cerca":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Afegir camps i especificar atributs
 

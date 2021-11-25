@@ -1,7 +1,7 @@
 ---
 title: Assignacions semàntiques (versió preliminar)
 description: Informació general de les assignacions semàntiques i de com utilitzar-les.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622923"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731931"
 ---
 # <a name="semantic-mappings"></a>Assignacions semàntiques
 
@@ -75,8 +75,7 @@ Les assignacions semàntiques us permeten assignar les dades que no són d'activ
 
 1. Per executar una assignació semàntica en un moment posterior, seleccioneu l'assignació semàntica i seleccioneu **Actualitza**.
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Administrar assignacions semàntiques existents
 
@@ -91,5 +90,6 @@ A **Dades** > **Assignacions semàntiques (versió preliminar)**, podeu visualit
 - **Canvia el nom**: obre un diàleg on podeu introduir un nom diferent per a l'assignació semàntica seleccionada. Seleccioneu **Desa** per aplicar els canvis.
 
 - **Suprimeix**: obre un diàleg per confirmar la supressió de l'assignació semàntica seleccionada. També podeu suprimir més d'una assignació semàntica alhora seleccionant les assignacions semàntiques i la icona de supressió. Seleccioneu **Suprimeix** per confirmar la supressió.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

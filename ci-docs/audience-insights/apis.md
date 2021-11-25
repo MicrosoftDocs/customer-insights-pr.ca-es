@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033573"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732252"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
-El Dynamics 365 Customer Insights proporciona API per crear les vostres pròpies aplicacions basades en les vostres dades al Customer Insights.
+Dynamics 365 Customer Insights proporciona API per construir les vostres pròpies aplicacions basades en les vostres dades a Customer Insights.
 
 > [!IMPORTANT]
 > Els detalls d'aquestes API es mostren a la [referència de les API del Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Inclouen informació addicional sobre operacions, paràmetres i respostes.
@@ -115,27 +115,27 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 Amb aquesta secció, podreu començar a utilitzar les biblioteques de client que hi ha disponibles per a les API del Customer Insights. Totes les aplicacions de mostra i de codi font de la biblioteca es poden trobar a la [pàgina de GitHub de Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
-### <a name="c-nuget"></a>NuGet del C#
+### <a name="c-nuget"></a>C# NuGet
 
-Per obtenir informació sobre com començar a utilitzar les biblioteques de client del C#, aneu a NuGet.org. Per obtenir més informació sobre el paquet de NuGet, vegeu [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Actualment, aquest paquet té està destinat als marcs netstandard 2.0 i netcoreapp 2.0.
+Obteniu informació sobre com podeu començar a utilitzar les biblioteques de clients C# de NuGet.org. Per obtenir més informació sobre el paquet NuGet, vegeu [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Actualment, aquest paquet té està destinat als marcs netstandard 2.0 i netcoreapp 2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Afegir la biblioteca de client del C# a un projecte del C#
 
-1. Al Visual Studio, obriu l'**Administrador del paquet del NuGet** corresponent al vostre projecte.
+1. A Visual Studio, obriu el **gestor de paquets NuGet per al vostre** projecte.
 
 1. Cerqueu **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Seleccioneu **Instal·la** per afegir el paquet al projecte.
  
-   També podeu executar aquesta ordre a la **consola de l'administrador del paquet del NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Alternativament, executeu aquesta ordre a la **consola gestora de paquets** NuGet:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Afegir el paquet del NuGet al projecte del Visual Studio.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Afegiu NuGet paquet al projecte Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Utilitzar la biblioteca de client del C#
 
 1. Utilitzeu la [biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) per obtenir un `AccessToken` mitjançant el [registre de l'aplicació de l'Azure](#create-a-new-app-registration-in-the-azure-portal) existent.
 
-1. Un cop us hagueu autenticat correctament i hagueu obtingut un testimoni, creeu un nou `HttpClient` o feu-ne servir un d'existent amb l'**"Autorització" de DefaultRequestHeaders** addicional definida com a **<access token> portador** i la **Ocp-Apim-Subscription-Key** definida com a [**clau de subscripció** des de l'entorn del Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Després d'autenticar i adquirir amb èxit un testimoni, construir un nou o utilitzar un existent `HttpClient` amb **l'"Autorització" de DefaultRequestHeaders addicional** a **Bearer "testimoni d'accés"** i **Ocp-Apim-Subscription-Key** establert a la clau de [**subscripció** des de l'entorn Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Restabliu la capçalera d'**Autorització** si escau. Per exemple, quan el testimoni ha caducat.
 
