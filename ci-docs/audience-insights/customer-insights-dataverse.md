@@ -1,7 +1,7 @@
 ---
-title: Dades del Customer Insights al Microsoft Dataverse
-description: Utilitzeu les entitats del Customer Insights com a taules al Microsoft Dataverse.
-ms.date: 10/14/2021
+title: Dades del Customer Insights a Microsoft Dataverse
+description: Utilitzeu les entitats del Customer Insights com a taules a Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645206"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866922"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb dades del Customer Insights al Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb les dades del Customer Insights a Microsoft Dataverse
 
-El Customer Insights ofereix l'opció de fer que les entitats de sortida estiguin disponibles al [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Aquesta integració permet l'ús compartit fàcil de dades i el desenvolupament personalitzat mitjançant un mètode de poc codi/sense codi. Les entitats de sortida estaran disponibles com a taules al Dataverse. Aquestes taules permeten escenaris com ara [fluxos de treball automatitzats mitjançant el Power Automate](/power-automate/getting-started), [aplicacions impulsades per models](/powerapps/maker/model-driven-apps/) i [aplicacions de llenç](/powerapps/maker/canvas-apps/) mitjançant el Power Apps. Podeu utilitzar les dades de qualsevol altra aplicació basada en taules del Dataverse. La implementació actual admet principalment consultes on es poden obtenir dades de les entitats de coneixements del públic disponibles per a un identificador de client determinat.
+Customer Insights proporciona l'opció de fer que les entitats de sortida estiguin disponibles a [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Aquesta integració permet l'ús compartit fàcil de dades i el desenvolupament personalitzat mitjançant un mètode de poc codi/sense codi. Les entitats de sortida estaran disponibles com a taules a Dataverse. Aquestes taules permeten escenaris com [ara fluxos de treball automatitzats a través de Power Automate](/power-automate/getting-started), aplicacions [basades en models i aplicacions de](/powerapps/maker/model-driven-apps/) llenç a través de [Power](/powerapps/maker/canvas-apps/) Apps. Podeu utilitzar les dades per a qualsevol altra aplicació que es basi en taules Dataverse. La implementació actual admet principalment consultes on es poden obtenir dades de les entitats de coneixements del públic disponibles per a un identificador de client determinat.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Adjuntar un entorn del Dataverse al Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Adjuntar un entorn de Dataverse al Customer Insights
 
-**Organitzacions amb entorns del Dataverse existents**
+**Organitzacions amb entorns Dataverse existents**
 
-Les organitzacions que ja utilitzen el Dataverse poden [utilitzar un dels entorns del Dataverse existents](create-environment.md) quan un administrador configura conclusions del públic. En proporcionar l'adreça URL a l'entorn del Dataverse, s'adjunta a l'entorn nou de les conclusions del públic. Per garantir el millor rendiment possible, els entorns del Customer Insights i del Dataverse s'han d'allotjar a la mateixa regió.
+Les organitzacions que ja utilitzen Dataverse poden [utilitzar un dels seus entorns Dataverse existents quan un administrador configura](create-environment.md) estadístiques de públic. En proporcionar l'URL a l'entorn Dataverse, s'adjunta al seu nou entorn d'estadístiques de públic. Per garantir el millor rendiment possible, les estadístiques del client i els entorns Dataverse s'han d'allotjar a la mateixa regió.
 
 **Organització nova**
 
-Si creeu una organització nova en configurar el Customer Insights, obtindreu automàticament un entorn del Dataverse nou.
+Si creeu una organització nova en configurar el Customer Insights, obtindreu automàticament un entorn de Dataverse nou.
 
 > [!NOTE]
-> Si les organitzacions ja utilitzen el Dataverse al seu inquilí, és important recordar que [la creació de l'entorn del Dataverse està controlada per un administrador](/power-platform/admin/control-environment-creation.md). Per exemple, si configureu un entorn nou de conclusions del públic amb el vostre compte de l'organització i l'administrador ha inhabilitat la creació d'entorns de prova del Dataverse per a tots els usuaris, tret dels administradors, no podreu crear cap entorn de prova nou.
+> Si les vostres organitzacions ja utilitzen Dataverse al seu inquilí, és important recordar que [Dataverse creació d'entorn està controlada per un administrador](/power-platform/admin/control-environment-creation.md) . Per exemple, si esteu configurant un entorn d'estadístiques de públic nou amb el vostre compte d'organització i l'administrador ha desactivat la creació d'entorns de prova Dataverse per a tothom, excepte els administradors, no podeu crear un entorn de prova nou.
 > 
-> Els entorns de prova del Dataverse creats al Customer Insights tenen 3 GB d'emmagatzematge que no es compten per a la capacitat global de l'inquilí. Les subscripcions pagades tenen dret de 15 GB al Dataverse per a la base de dades i 20 GB per a l'emmagatzematge de fitxers.
+> Els entorns de prova Dataverse creats al Customer Insights tenen 3 GB d'emmagatzematge que no comptaran per a la capacitat global amb dret a l'inquilí. Les subscripcions pagades obtenen Dataverse dret de 15 GB per a la base de dades i de 20 GB per a l'emmagatzematge d'arxius.
 
 ## <a name="output-entities"></a>Entitats de sortida
 
-Algunes entitats de sortida dels coneixements del públic estan disponibles com a taules al Dataverse. Les seccions següents descriuen l'esquema esperat d'aquestes taules.
+Algunes entitats de sortida de les estadístiques de públic estan disponibles com a taules a Dataverse. Les seccions següents descriuen l'esquema esperat d'aquestes taules.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,6 +45,7 @@ Algunes entitats de sortida dels coneixements del públic estan disponibles com 
 - [CustomerMeasure](#customermeasure)
 - [Enriquiment](#enrichment)
 - [Predicció](#prediction)
+- [Pertinença al segment](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -60,7 +61,7 @@ La taula AlternativeKey conté les claus de les entitats que han participat en e
 |DataSourceName    |String         | Nom de la font de dades. Per exemple: `datasource5`        |
 |EntityName        | String        | Nom de l'entitat als coneixements del públic. Per exemple: `contact1`        |
 |AlternateValue    |String         |Identificador alternatiu assignat a l'identificador de client. Exemple: `cntid_1078`         |
-|KeyRing           | Text de diverses línies        | Valor JSON  </br> Exemple: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|KeyRing           | Text de diverses línies        | Valor JSON  </br> Exemple: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"claus":[" cntid_1078"]}]       |
 |CustomerId         | String        | Identificador del perfil de client unificat.         |
 |AlternateKeyId     | GUID         |  GUID determinista d'AlternateKey basat en msdynci_identifier       |
 |msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Exemple: `testdatasource|contact1|cntid_1078`    |
@@ -121,3 +122,16 @@ Aquesta taula conté la sortida de les prediccions de models.
 | Valors               | Cadena JSON | Llista d'atributs produïts pel model |
 | msdynci_predictionid | GUID        | GUID determinista generat a partir de msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Pertinença al segment
+
+Aquesta taula conté informació de pertinença al segment dels perfils de clients.
+
+| Column        | Type | Descripció                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Identificador del perfil del client        |
+| SegmentProvider      | String       | Aplicació que publica els segments. Per defecte: estadístiques del públic         |
+| SegmentMembershipType | String       | Tipus de client d'aquest registre de pertinença al segment. Admet diversos tipus, com ara client, contacte o compte. Per defecte: client  |
+| Segments       | Cadena JSON  | Llista de segments únics dels que el perfil de client és membre      |
+| msdynci_identifier  | String   | Identificador únic del registre de pertinença al segment. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID determinista generat a partir de`msdynci_identifier`          |

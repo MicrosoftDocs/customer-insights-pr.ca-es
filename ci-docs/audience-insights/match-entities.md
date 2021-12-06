@@ -1,7 +1,7 @@
 ---
 title: Fer coincidir entitats per a la unificació de dades
-description: Feu coincidir les entitats per combinar conjunts de dades i crear perfils de client unificats.
-ms.date: 11/01/2021
+description: Feu coincidir entitats per crear perfils de client unificats.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732622"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863799"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -224,17 +224,24 @@ Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència.
 
 ## <a name="specify-custom-match-conditions"></a>Especificar condicions de coincidència personalitzades
 
-Podeu especificar condicions amb les que certs registres han de coincidir sempre o mai. Aquestes regles es poden carregar per substituir el procés de coincidència estàndard. Per exemple, si als registres hi ha en Joan Duran I i en Joan Duran II, el sistema podria trobar-los com a coincidències d'una mateixa persona. Les regles de coincidència personalitzades us permeten especificar que els seus perfils fan referència a diferents persones. 
+Podeu especificar condicions que sobreescriuen la lògica de concordança per defecte. Hi ha quatre opcions disponibles: 
+
+|Opció  |Descripció |Exemple  |
+|---------|---------|---------|
+|Coincidència     | Defineix els valors que sempre coincideixen.         |  Sempre coincideixen amb *Mike* i *MikeR*.       |
+|No coincidència     | Defineix valors que mai coincideixen.        | Mai coincideixi amb *John* i *Jonathan*.        |
+|Omissió personalitzada     | Defineix valors que el sistema sempre ha d'ignorar en la fase de coincidència. |  Ignora els valors *11111* i Desconegut durant el *partit*.        |
+|Assignació d'àlies    | Definir valors que el sistema hauria de considerar com el mateix valor.         | Considereu *que Joe és igual a* *Josep*.        |
 
 1. Aneu a **Dades** > **Unifica** > **Coincidència** i seleccioneu **Coincidència personalitzada** a la secció **Detalls dels registres coincidents**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Captura de pantalla de la secció de regles de coincidència amb el control de Coincidència personalitzada ressaltat.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Captura de pantalla de la secció de regles de coincidència amb el control de Coincidència personalitzada ressaltat.":::
 
-1. Si no teniu definides regles de coincidència personalitzades, veureu una nova subfinestra de **Coincidència personalitzada** amb més detalls.
+1. A la **subfinestra** Personalitzada, aneu a la **pestanya** Registres.
 
-1. Seleccioneu **Emplena la plantilla** per obtenir un fitxer de plantilla que pugui especificar els registres de les entitats que han de coincidir sempre o no coincidir mai. Haureu d'emplenar per separat els registres "coincideix sempre" i "no coincideixis mai" en dos fitxers diferents.
+1. Trieu l'opció de coincidència personalitzada des del **menú desplegable tipus personalitzat i** seleccioneu Baixa la **plantilla**. Necessiteu una plantilla separada per a cada opció de partit.
 
-1. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Per exemple, si voleu que la clau principal *12345* de l'entitat *Vendes* coincideixi sempre amb la clau principal *34567* de l'entitat *Contacte*, empleneu la plantilla:
+1. Es baixa un fitxer de plantilla. Obre'l i emplena'n els detalls. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Per exemple, si voleu que la clau principal *12345* de l'entitat *Vendes* coincideixi sempre amb la clau principal *34567* de l'entitat *Contacte*, empleneu la plantilla:
     - Entity1: Vendes
     - Entity1Key: 12345
     - Entity2: Contacte
@@ -244,26 +251,32 @@ Podeu especificar condicions amb les que certs registres han de coincidir sempre
    
    Si voleu especificar la coincidència personalitzada per a la desduplicació en una entitat, proporcioneu la mateixa entitat com a Entitat1 i Entitat2 i definiu els diferents valors de clau principal.
 
-1. Després d'afegir totes les substitucions que voleu aplicar, deseu el fitxer de la plantilla.
+1. Després d'afegir totes les substitucions, deseu el fitxer de plantilla.
 
-1. Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves. Un cop ingerits, podeu utilitzar-los per especificar la configuració de la coincidència.
+1. Aneu a **Dades** > **Fonts de dades** i ingeriu els fitxers de plantilla com a entitats noves.
 
-1. Després de carregar els fitxers i que les entitats estiguin disponibles, torneu a seleccionar l'opció **Coincidència personalitzada**. Veureu opcions per especificar les entitats que voleu incloure. Seleccioneu les entitats necessàries al menú desplegable.
+1. Després de carregar els fitxers i que les entitats estiguin disponibles, torneu a seleccionar l'opció **Coincidència personalitzada**. Veureu opcions per especificar les entitats que voleu incloure. Seleccioneu les entitats necessàries al menú desplegable i seleccioneu **Fet**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de pantalla del diàleg per triar les substitucions per a un escenari de coincidència personalitzada.":::
 
-1. Seleccioneu les entitats que voleu utilitzar per a **Coincideix sempre** i **No coincideixis mai** i seleccioneu **Fet**.
+1. L'aplicació de la coincidència personalitzada depèn de l'opció de concordança que vulgueu utilitzar. 
+
+   - Per **a Sempre** coincideixi o no **coincideixi mai, aneu al pas** següent.
+   - Per a **l'assignació personalitzada de bypass** o **Àlies**, seleccioneu **Edita en una regla de** concordança existent o creeu una regla nova. Al menú desplegable Normalitzacions, trieu l'opció Bypass personalitzat **o** **Àlies** i seleccioneu **Fet**.
 
 1. Seleccioneu **Desa** a la pàgina **Coincidència** per aplicar la configuració de coincidència personalitzada.
 
 1. Seleccioneu **Executa** a la pàgina **Coincidència** per iniciar el procés de coincidència. La configuració de coincidència personalitzada substitueix altres regles de coincidència especificades.
 
-> [!TIP]
-> Aneu a **Dades** > **Entitats** i reviseu l'entitat **ConflationMatchPair** per confirmar que s'apliquen les substitucions.
+### <a name="known-issues"></a>Problemes coneguts
+
+- L'autocomunió no mostra les dades normalitzades en les entitats deduplicació. No obstant això, s'aplica la normalització internament durant la deduplicació. És per disseny per a totes les normalitzacions. 
+- Si la configuració del tipus semàntic s'elimina a la **fase Mapa quan una regla de** concordança utilitza l'assignació d'àlies o el bypass personalitzat, no s'aplicarà la normalització. Només passa si esborreu el tipus semàntic després de configurar la normalització a la regla de coincidència perquè el tipus semàntic serà desconegut.
+
 
 ## <a name="next-step"></a>Pas següent
 
-Després de completar el procés de coincidència com a mínim per a un parell de coincidència, podeu resoldre les contradiccions possibles de les dades anant al tema [**Combinació**](merge-entities.md).
+Després de completar el procés de coincidència per a almenys un parell de partits, continueu al [**pas**](merge-entities.md) Fusiona.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
