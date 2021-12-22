@@ -1,7 +1,7 @@
 ---
 title: Utilitzar fonts de dades per ingerir dades
 description: Més informació sobre com importar dades de diverses fonts.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,36 +10,39 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732115"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900324"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-La capacitat d'informació de l'audiència en Dynamics 365 Customer Insights es connecta amb dades d'un ampli conjunt de fonts. La connexió a una font de dades sovint es coneix com el procés d'*ingesta de dades*. Després d'ingerir les dades, les podeu [unificar](data-unification.md) i treballar-hi.
+La capacitat de conclusions del públic del Dynamics 365 Customer Insights connecta amb les dades d'un ampli conjunt de fonts. La connexió a una font de dades sovint es coneix com el procés d'*ingesta de dades*. Després d'ingerir les dades, les podeu [unificar](data-unification.md) i treballar-hi.
 
 ## <a name="add-a-data-source"></a>Afegeix un origen de dades
 
-Consulteu els articles detallats sobre com afegir una font de dades, en funció de l'opció que trieu.
+Consulteu els articles detallats sobre com afegir un font de dades, en funció de l'opció que trieu.
 
-Podeu afegir una font de dades de tres maneres principals:
+Podeu afegir els orígens de dades següents:
 
-- [Mitjançant desenes de connectors del Power Query](connect-power-query.md)
-- [Des d'una carpeta del Common Data Model](connect-common-data-model.md)
-- [Des del teu propi llac Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [connectors Power Query](connect-power-query.md)
+- [Model de dades comú](connect-common-data-model.md)
+- [Microsoft Dataverse llac](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Si utilitzeu la versió de prova, la secció Mètodes d'importació inclou una **opció de biblioteca de dades del Customer Insights.** Trieu aquesta opció per seleccionar un conjunt de dades d'exemple disponible per a diverses indústries. Per a més informació, vegeu [Dynamics 365 Customer Insights judici](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
 
-La ingesta de dades de fonts de dades local en els coneixements de l'audiència és compatible amb Microsoft Power Platform fluxos de dades. Els fluxos de dades es poden habilitar a l'insights del client [proporcionant l'adreça URL de l'entorn Microsoft Dataverse](create-environment.md) en configurar l'entorn.
+La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Podeu habilitar Els fluxos de dades a l'Insights del client [proporcionant l'ADREÇA URL de Microsoft Dataverse l'entorn en configurar](create-environment.md) l'entorn.
 
-Els orígens de dades que es creen després d'associar un entorn Dataverse amb els clients per obtenir informació utilitzaran [Power Platform fluxos de dades](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Suprimiu i torneu a crear fonts de dades que existien abans que un entorn Dataverse s'associés per [utilitzar les passarel·les de dades local](/data-integration/gateway/service-gateway-app).
+Els orígens de dades que es creen després d'associar un Dataverse entorn amb el Customer Insights utilitzen els [Power Platform fluxos de dades per](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Podeu suprimir i tornar a crear els orígens de dades que existien abans que Dataverse s'associés un entorn [mitjançant local passarel·les de dades](/data-integration/gateway/service-gateway-app).
 
-Les passarel·les de dades d'un entorn Power BI o Power Apps existent seran visibles i es podran reutilitzar a Customer Insights. La pàgina d'orígens de dades mostra enllaços per anar a l'entorn Microsoft Power Platform on podeu veure i configurar local passarel·les de dades.
+Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 
 ## <a name="review-ingested-data"></a>Revisar les dades ingerides
 

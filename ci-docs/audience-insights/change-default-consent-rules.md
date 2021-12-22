@@ -1,40 +1,55 @@
 ---
-title: Administra les regles de consentiment per defecte dels segments
-description: Amb la capacitat de gestió del consentiment, podeu desactivar o canviar les regles de consentiment per defecte si les anul·lades estan habilitades.
-ms.date: 10/30/2021
+title: Administra les regles de consentiment per defecte als segments
+description: Amb la capacitat de gestió del consentiment, podeu desactivar o canviar les regles de consentiment per defecte si les substitucions estan habilitades.
+ms.date: 12/01/2021
 ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790711"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884158"
 ---
-# <a name="disable-or-change-default-consent-rules"></a>Inhabilitar o canviar les regles de consentiment per defecte
+# <a name="disable-or-change-default-consent-rules"></a>Inhabilita o canvia les regles de consentiment per defecte
 
-Si les vostres organitzacions utilitzen la capacitat de [gestió del consentiment combinada amb informació de](../consent-management/overview.md) l'audiència, [els administradors poden fer complir les regles de consentiment](activate-consent.md) per als segments. 
+Si les organitzacions utilitzen la [capacitat de gestió de consentiment combinada amb les](../consent-management/overview.md) estadístiques del públic, [els administradors poden fer complir les regles de consentiment](activate-consent.md) per als segments. 
 
-Amb regles de consentiment forçades a l'àrea del segment, cada segment informa sobre l'estat de la comprovació i regles de consentiment. Si es permeten les anul·lars, les regles de consentiment per defecte es desactivaran per a segments específics. Cada creador d'un segment pot afegir més regles de consentiment a aquest segment. 
+Amb les normes de consentiment aplicades a l'àrea del segment, cada segment informa sobre l'estat de la comprovació de consentiment i les regles. Si es permeten les substitucions, les regles de consentiment per defecte estan desactivades per a segments específics. Cada creador d'un segment pot afegir més regles de consentiment a la part superior de les regles predeterminades a un segment. 
 
-:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Constructor de segments amb opcions de regla de consentiment.":::
+## <a name="for-administrators"></a>Per als administradors
+
+:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Creador de segments amb opcions de regla de consentiment.":::
 
 **Per desactivar les regles de consentiment per defecte:**
 
-1. A la notificació de **regles de** consentiment, seleccioneu **Veure detalls**. 
+1. A la **notificació de les regles de** consentiment, seleccioneu **Mostra els detalls**. 
 
-1. Definiu les **regles de consentiment per defecte** a **Desactiva.**
+1. Definiu les **regles de consentiment per defecte** per **desactivar**.
 
 **Per afegir més regles de consentiment:**
 
-1. A la notificació de **regles de** consentiment, seleccioneu **Veure detalls**. 
+1. A la **notificació de les regles de** consentiment, seleccioneu **Mostra els detalls**. 
 
-1. Seleccioneu **Afegeix regles de consentiment** i trieu una regla de consentiment del **menú desplegable Selecciona el tipus de dades de** consentiment.
+1. Seleccioneu **Afegeix regles de consentiment** i trieu una regla de consentiment al menú desplegable Selecciona el tipus de **dades de** consentiment.
 
 1. Seleccioneu **Desa** per aplicar la regla nova al segment.
+
+## <a name="for-contributors"></a>Per a col·laboradors
+
+Per crear un segment sense regles de consentiment aplicades, heu de treballar amb l'administrador per desactivar-los al segment. Tanmateix, podeu afegir les vostres pròpies regles de consentiment als segments que posseïu i gestioneu.
+
+És un procés de tres passos: 
+1. [Creeu el segment](segments.md) a les estadístiques del públic i deseu-lo. 
+
+1. Compartiu el nom del segment amb l'administrador i demaneu-li que [habiliti les substitucions per al segment](activate-consent.md). 
+
+1. Torneu a obrir els segments. A la **notificació de les regles de** consentiment, seleccioneu **Consulta els detalls i** afegiu les regles de consentiment que voleu aplicar. A continuació, **deseu** i **executeu** el segment.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

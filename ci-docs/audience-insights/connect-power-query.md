@@ -1,7 +1,7 @@
 ---
-title: Ingerir dades a través d'un connector del Power Query
+title: Ingereix dades a través d'un connector Power Query (Vídeo)
 description: Connectors per a fonts de dades basades en el Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732206"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903828"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a una font de dades del Power Query
 
-El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors són compatibles amb Dynamics 365 Customer Insights. Afegir fonts de dades basades en connectors del Power Query generalment implica els passos indicats a la secció següent. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per a més informació, vegeu la documentació sobre connectors individuals a la [Referència de connectors del Power Query](/power-query/connectors/).
+El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majoria d'aquests connectors estan admesos pel Dynamics 365 Customer Insights. 
+
+L'addició de fonts de dades basades en connectors Power Query generalment segueix els passos descrits en aquesta secció. Tot i això, en funció del connector que utilitzeu, es requereix informació diferent. Per obtenir més informació, vegeu la documentació sobre connectors individuals a la [referència del connector Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 
 1. Seleccioneu **Afegeix una font de dades**.
 
-1. Trieu el mètode **Importa dades** i seleccioneu **Següent**.
+1. Seleccioneu **Microsoft Power Query** i, a continuació, seleccioneu **Endavant**.
 
-1. Proporcioneu un **Nom** per a la font de dades i seleccioneu **Següent** per crear la font de dades. Directrius del nom: 
-   - Comenceu per una lletra.
-   - Utilitzeu només lletres i xifres. Els caràcters especials i els espais no estan permesos.
-   - Utilitzeu entre 3 i 64 caràcters.
+1. Proporcioneu un **Nom** per a la font de dades i seleccioneu **Següent** per crear la font de dades.
 
-1. Seleccioneu un dels [connectors disponibles](#available-power-query-data-sources). Per aquest exemple, seleccionem el connector **Text/CSV**.
+1. Seleccioneu un dels [connectors disponibles](#available-power-query-data-sources). En aquest exemple, seleccionem el **connector Text/CSV.**
 
 1. Introduïu els detalls necessaris a **Configuració de la connexió** per al connector seleccionat i seleccioneu **Següent** per veure una previsualització de les dades.
 
@@ -50,7 +49,7 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 
 1. Per afegir entitats addicionals a la font de dades, seleccioneu **Obtén les dades** al quadre de diàleg **Edita les consultes**.
 
-   Aquestes transformacions són molt recomanables:
+   Us recomanem que utilitzeu les transformacions següents:
 
    - Si esteu ingerint dades d'un fitxer CSV, la primera fila sovint conté capçaleres. Aneu a **Transforma la taula** i seleccioneu **Utilitza les capçaleres com a primera fila**.
    - Assegureu-vos que el tipus de dades s'ha establert correctament.
@@ -61,7 +60,7 @@ El Power Query ofereix un ampli conjunt de connectors per ingerir dades. La majo
 
 ## <a name="available-power-query-data-sources"></a>Fonts de dades del Power Query disponibles
 
-Vegeu la [Referència de connectors del Power Query](/power-query/connectors/) per veure una llista actualitzada de connectors que podeu seleccionar per importar dades al Customer Insights. 
+Consulteu la [referència del connector Power Query per obtenir una llista de](/power-query/connectors/) connectors que podeu utilitzar per importar dades al Customer Insights. 
 
 Els connectors amb una marca de selecció a la columna **Customer Insights (fluxos de dades)** estan disponibles per crear noves fonts de dades basades en el Power Query. Reviseu la documentació d'un connector específic per obtenir més informació sobre els seus prerequisits, limitacions i altres detalls.
 
@@ -70,7 +69,7 @@ Els connectors amb una marca de selecció a la columna **Customer Insights (flux
 > [!NOTE]
 > Pot ser que no es puguin fer canvis en les fonts de dades que s'estan utilitzant actualment en un dels processos del'aplicació(*segmentació*, *coincidència* o *combinació*, per exemple). 
 >
-> Mitjançant la pàgina **Configuració**, podeu fer el seguiment del progrés de cadascun dels processos actius. Quan es completi un procés, podeu tornar a la pàgina **Fonts de dades** i fer els canvis que vulgueu.
+> A la **pàgina** Configuració, podeu fer un seguiment del progrés de cadascun dels processos actius. Quan es completi un procés, podeu tornar a la pàgina **Fonts de dades** i fer els canvis que vulgueu.
 
 1. A les conclusions del públic, aneu a **Dades** > **Fonts de dades**.
 

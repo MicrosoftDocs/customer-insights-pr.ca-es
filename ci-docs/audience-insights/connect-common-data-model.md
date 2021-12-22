@@ -1,7 +1,7 @@
 ---
 title: Connectar dades del Common Data Model a un compte de l'Azure Data Lake
 description: Treballeu amb dades del Common Data Model mitjançant l'Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033114"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900185"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connectar-se a una carpeta del Common Data Model amb un compte de l'Azure Data Lake
 
@@ -30,7 +30,7 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 - L'Azure Data Lake amb el que us voleu connectar i del que voleu ingerir dades s'ha de trobar a la mateixa regió de l'Azure que l'entorn de Dynamics 365 Customer Insights. No s'admet la connexió a una carpeta del Common Data Model procedent d'un llac de dades d'una regió diferent de l'Azure. Per conèixer la regió de l'Azure de l'entorn, aneu a **Administració** > **Sistema** > **Quant a** a les conclusions del públic.
 
-- Les dades emmagatzemades als serveis en línia es poden emmagatzemar en una ubicació diferent de la ubicació on es processen o s'emmagatzemen al Dynamics 365 Customer Insights. En importar o connectar-vos a les dades emmagatzemades en un servei en línia, accepteu que les dades es poden transferir i emmagatzemar-se amb el Dynamics 365 Customer Insights.  [Més informació al Centre de confiança de Microsoft](https://www.microsoft.com/trust-center)
+- Les dades emmagatzemades en els serveis en línia es poden emmagatzemar en una ubicació diferent d'on es processen o emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades en serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights .  [Més informació al Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Connecta't a una carpeta del Common Data Model
 
@@ -38,12 +38,11 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
 
 1. Seleccioneu **Afegeix una font de dades**.
 
-1. Seleccioneu **Connecta't a una carpeta del Common Data Model**, introduïu un **Nom** per a la font de dades i, a continuació, seleccioneu **Següent**. Directrius del nom: 
-   - Comenceu per una lletra.
-   - Utilitzeu només lletres i xifres. Els caràcters especials i els espais no estan permesos.
-   - Utilitzeu entre 3 i 64 caràcters.
+1. Seleccioneu **Emmagatzematge del llac de dades de l'Azure,** introduïu un nom per a **la font de dades** i, a continuació, seleccioneu **Endavant**.
 
-1. Per a l'autenticació, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Introduïu la informació del **Contenidor** i seleccioneu **Següent**.
+   - Si se us demana, seleccioneu un dels conjunts de dades d'exemple que pertanyen a la vostra indústria i, a continuació, seleccioneu **Endavant**. 
+
+1. Per a l'autenticació, podeu triar entre utilitzar una opció basada en recursos i una basada en subscripcions. Per obtenir més informació, vegeu [Connectar conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure](connect-service-principal.md). Introduïu **l'adreça del servidor,** seleccioneu Inicia la sessió i **seleccioneu** Següent **·**.
    > [!div class="mx-imgBorder"]
    > ![Quadre de diàleg per introduir nous detalls de connexió a l'Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ En aquest article es proporciona informació sobre com ingerir dades d'una carpe
    > [!NOTE]
    > Els fitxers model.json o manifest.json associats amb una altra font de dades de l'entorn no es mostraran a la llista.
 
-1. Obtindreu una llista d'entitats disponibles al fitxer model.json o manifest.json seleccionat. Podeu revisar i seleccionar a la llista d'entitats disponibles i seleccioneu **Desa**. Totes les entitats seleccionades s'ingeriran des de la nova font de dades.
+1. Veureu una llista d'entitats disponibles al fitxer model.json o manifest.json seleccionat. Reviseu i seleccioneu-les a la llista d'entitats disponibles i, a continuació, seleccioneu **Desa**. Totes les entitats seleccionades s'ingeriran des de la nova font de dades.
    > [!div class="mx-imgBorder"]
    > ![Quadre de diàleg que mostra una llista d'entitats des d'un fitxer model.json.](media/review-entities.png)
 
-8. Indiqueu per a quines entitats de dades voleu habilitar la perfilació de dades i seleccioneu **Desa**. La generació de perfils de dades habilita les anàlisis i altres capacitats. Podeu seleccionar tota l'entitat, amb la qual cosa se seleccionen tots els atributs de l'entitat, o bé seleccionar determinats atributs de la vostra elecció. Per defecte, no s'habilita cap entitat per a la perfilació de dades.
+8. Indiqueu quines entitats de dades voleu habilitar l'elaboració de perfils de dades i, a continuació, seleccioneu **Desa**. La generació de perfils de dades habilita les anàlisis i altres capacitats. Podeu seleccionar tota l'entitat, amb la qual cosa se seleccionen tots els atributs de l'entitat, o bé seleccionar determinats atributs de la vostra elecció. Per defecte, no s'habilita cap entitat per a la perfilació de dades.
    > [!div class="mx-imgBorder"]
    > ![Quadre de diàleg on es mostra una perfilació de dades.](media/dataprofiling-entities.png)
 

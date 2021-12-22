@@ -1,7 +1,7 @@
 ---
 title: Experiments de l'aprenentatge automàtic de l'Azure
 description: Utilitzeu els models basats en l'aprenentatge automàtic de l'Azure al Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033160"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881726"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 
-Les dades unificades del Dynamics 365 Customer Insights constitueixen un origen per a la creació de models d'aprenentatge automàtic que puguin generar informació addicional de negoci. El Customer Insights s'integra amb el Machine Learning Studio (clàssic) i l'aprenentatge automàtic de l'Azure per utilitzar els vostres propis models personalitzats. Consulteu [Experiments amb el Machine Learning Studio (clàssic)](machine-learning-studio-experiments.md) per obtenir exemples d'experiments generats al Machine Learning Studio (clàssic). 
+Les dades unificades del Dynamics 365 Customer Insights constitueixen un origen per a la creació de models d'aprenentatge automàtic que puguin generar informació addicional de negoci. El Customer Insights s'integra amb l'Azure Machine Learning per utilitzar els vostres propis models personalitzats.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -35,7 +35,7 @@ Les dades unificades del Dynamics 365 Customer Insights constitueixen un origen 
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Treballar amb el dissenyador de l'aprenentatge automàtic de l'Azure
 
-El dissenyador de l'aprenentatge automàtic de l'Azure proporciona un llenç visual on podeu arrossegar i deixar anar conjunts de dades i mòduls, de manera semblant al Machine Learning Studio (clàssic). És possible integrar un pipeline per lots creat des del dissenyador en el Customer Insights si es configuren de manera corresponent. 
+El dissenyador de Aprenentatge automàtic De l'Azure proporciona un llenç visual on podeu arrossegar i deixar anar conjunts de dades i mòduls. És possible integrar un pipeline per lots creat des del dissenyador en el Customer Insights si es configuren de manera corresponent. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Treballar amb l'SDK de l'aprenentatge automàtic de l'Azure
 

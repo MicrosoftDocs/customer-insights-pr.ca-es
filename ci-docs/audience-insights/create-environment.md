@@ -1,7 +1,7 @@
 ---
 title: Crear entorns al Customer Insights
 description: Passos per crear entorns amb una subscripció amb llicència per al Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673379"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892326"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorn a les conclusions del públic
 
@@ -77,6 +77,9 @@ Si creeu diversos entorns del Customer Insights i trieu de desar les entitats de
 El pas del **Microsoft Dataverse** us permet connectar el Customer Insights al vostre entorn del Dataverse.
 
 Per utilitzar [models de predicció estàndard](predictions-overview.md#out-of-box-models) , configureu l'ús compartit de dades amb el Dataverse. O podeu habilitar la ingesta de dades des de fonts de dades locals, proporcionant l'adreça URL de l'entorn del Microsoft Dataverse que administra l'organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el llac de dades administrat del Dataverse.
+
+> [!IMPORTANT]
+> Customer Insights i Dataverse han d'estar a la mateixa regió per habilitar l'ús compartit de dades.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse.":::
 

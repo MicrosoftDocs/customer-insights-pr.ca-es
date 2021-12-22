@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799625"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892372"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -40,18 +40,21 @@ Podeu editar alguns dels detalls dels entorns existents.
 
 Per obtenir més informació sobre la configuració de l'entorn, vegeu [Crear un entorn nou](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Connecta't a Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Connectar a l’Microsoft Dataverse
    
-El **pas Microsoft Dataverse us permet connectar les idees del client amb el vostre entorn** Dataverse.
+El pas del **Microsoft Dataverse** us permet connectar el Customer Insights al vostre entorn del Dataverse.
 
-Per utilitzar [models de predicció fora de](predictions-overview.md#out-of-box-models) caixa, configureu l'ús compartit de dades amb Dataverse. O podeu habilitar la ingestió de dades des de fonts de dades local, proporcionant l'URL de l'entorn Microsoft Dataverse que administra la vostra organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir dades de sortida de Customer Insights amb un llac de dades gestionat per Dataverse.
+Per utilitzar [models de predicció estàndard](predictions-overview.md#out-of-box-models) , configureu l'ús compartit de dades amb el Dataverse. O podeu habilitar la ingesta de dades des de fonts de dades locals, proporcionant l'adreça URL de l'entorn del Microsoft Dataverse que administra l'organització. Seleccioneu **Habilita l'ús compartit de dades** per compartir les dades de sortida del Customer Insights amb el llac de dades administrat del Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Customer Insights i Dataverse han d'estar a la mateixa regió per habilitar l'ús compartit de dades.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcions de configuració per habilitar l'ús compartit de dades amb el Microsoft Dataverse.":::
 
 > [!NOTE]
 > El Customer Insights no admet els escenaris d'ús compartit de dades següents:
-> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un llac de dades gestionat per Dataverse.
-> - Si activeu l'ús compartit de dades amb Dataverse, no podreu [crear valors predits o que falten en una entitat](predictions.md).
+> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un llac de dades administrat pel Dataverse .
+> - Si habiliteu l'ús compartit de dades amb el Dataverse, no podreu [crear valors previstos o que falten en una entitat](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configuració de l'entorn
 
@@ -81,7 +84,7 @@ Les dades següents *no* es copien:
 - Perfils de client.
 - Credencials de la font de dades. Haureu de proporcionar les credencials de cada font de dades i actualitzar manualment les fonts de dades.
 
-- Orígens de dades de la carpeta Del model de dades comú i del llac de dades gestionat per Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
+- Fonts de dades de la carpeta del Model de dades comú i del llac de dades administrat pel Dataverse. Haureu de crear aquestes fonts de dades manualment amb el mateix nom que a l'entorn d'origen.
 
 Quan copieu un entorn, veureu un missatge de confirmació que s'ha creat l'entorn nou. Seleccioneu **Ves a les fonts de dades** per veure la llista de fonts de dades.
 

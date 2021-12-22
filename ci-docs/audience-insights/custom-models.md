@@ -1,7 +1,7 @@
 ---
 title: Models d'aprenentatge automàtic personalitzats | Microsoft Docs
 description: Treballeu amb models personalitzats de l'Aprenentatge automàtic de l'Azure al Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032930"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881772"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
+
+> [!NOTE]
+> El suport per a Aprenentatge automàtic Studio (clàssic) finalitzarà el 31 d'agost de 2024. Us recomanem que feu la transició a [l'Azure Aprenentatge automàtic](/azure/machine-learning/overview-what-is-azure-machine-learning) en aquesta data.
+>
+> A partir de l'1 de desembre de 2021, no podreu crear nous recursos de Aprenentatge automàtic Studio (clàssic). Fins al 31 d'agost de 2024, podeu continuar utilitzant els recursos existents de Aprenentatge automàtic Studio (clàssic). Per obtenir més informació, vegeu [Migrar a l'Azure Aprenentatge automàtic](/azure/machine-learning/migrate-overview).
+
 
 **Intel·ligència** > **Models personalitzats** us permet administrar fluxos de treball basats en models de l'aprenentatge automàtic de l'Azure. Els fluxos de treball us ajuden a triar les dades a partir de les quals voleu generar conclusions i assignar els resultats a les dades unificades del client. Per obtenir més informació sobre la creació de models de ML personalitzats, vegeu [Utilitzar models basats en l'aprenentatge automàtic de l'Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Actualment, aquesta característica admet serveis web publicats mitjançant el [Machine Learning Studio (clàssic)](https://studio.azureml.net) i els [pipelines per lots de l'aprenentatge automàtic de l'Azure](/azure/machine-learning/concept-ml-pipelines).
+- Aquesta característica admet serveis web publicats a través [de canonades per lots de l'Azure Aprenentatge automàtic](/azure/machine-learning/concept-ml-pipelines).
 
 - Per poder utilitzar aquesta característica, heu de tenir un compte d'emmagatzematge Gen2 de l'Azure Data Lake associat amb la vostra instància de l'Azure Studio. Per obtenir més informació, vegeu [Crear un compte d'emmagatzematge de l'Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 1. Si la subscripció a l'Azure Machine Learning és en un inquilí diferent del Customer Insights, seleccioneu **Inicia la sessió** amb les credencials de l'organització seleccionada.
 
-1. Seleccioneu els **Espais de treball** associats amb el servei web. Hi ha dues seccions, una per a l'Aprenentatge automàtic de l'Azure v1 (Machine Learning Studio [clàssic]) i una altra per a l'aprenentatge automàtic de l'Azure v2 (Aprenentatge automàtic de l'Azure). Si no esteu segur de quin àrea de treball és la correcta per al servei web del Machine Learning Studio (clàssic), seleccioneu **Qualsevol**.
+1. Seleccioneu els **Espais de treball** associats amb el servei web. 
 
-1. Trieu el servei web del Machine Learning Studio (clàssic) o el pipeline de l'aprenentatge automàtic de l'Azure en el menú desplegable del **Servei web que conté el vostre model**. A continuació, seleccioneu **Següent**.
-   - Més informació sobre la [publicació d'un servei web al Machine Learning Studio (clàssic)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Trieu el pipeline de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del** model. A continuació, seleccioneu **Següent**.    
+   Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Per a cada **Entrada del servei web**, seleccioneu l'**Entitat** coincident de les conclusions del públic i seleccioneu **Següent**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
    > ![Configurar un flux de treball.](media/intelligence-screen2-updated.png "Configurar un flux de treball")
 
 1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
-   - Machine Learning Studio (clàssic)
-      1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del servei web.
-   - Aprenentatge automàtic de l’Azure
       1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del pipeline.
       1. Seleccioneu, al menú desplegable, el **Nom del paràmetre de magatzem de dades de sortida** del pipeline per lots.
       1. Seleccioneu, al menú desplegable, el **Nom del paràmetre de camí de sortida** del pipeline per lots.
@@ -93,9 +95,6 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 1. Per a cada **Entrada del servei web**, podeu actualitzar l'**Entitat** coincident des de les conclusions del públic. A continuació, seleccioneu **Següent**.
 
 1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
-   - Machine Learning Studio (clàssic)
-      1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del servei web.
-   - Aprenentatge automàtic de l’Azure
       1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del pipeline.
       1. Seleccioneu el **Nom del paràmetre de magatzem de dades de sortida** per al pipeline de prova.
       1. Seleccioneu el **Nom del paràmetre de camí de sortida** per al pipeline de prova.

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770105"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884204"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -42,10 +42,11 @@ A la pestanya **Descobriu**, trobareu totes les opcions d'enriquiment admeses.
 
 - [Dades de l'empresa](enrichment-leadspace.md) proporcionades per Leadspace
 - [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft 
-- [Dades de l'empresa](enrichment-enhanced-company-data.md) millorades proporcionades per Microsoft
+- [Dades millorades de l'empresa](enrichment-enhanced-company-data.md) proporcionades per Microsoft
 - [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
 - [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+- [Dades d'interacció amb el compte](enrichment-office.md) proporcionades per Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ L'entitat que s'ha d'enriquir s'especifica durant la configuració de l'enriquim
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Veure el progrés del procés d'enriquiment
 
-Podeu trobar detalls sobre el processament d'un enriquiment, incloent-hi l'estat i els possibles problemes mentre s'actualitza o després de l'actualització. Compreneu quins processos s'impliquen per actualitzar un enriquiment i el temps que ha trigat a executar els processos. L'estat d'enriquiment és compatible amb Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
+Podeu trobar detalls sobre el processament d'un enriquiment, incloent-hi l'estat i els possibles problemes mentre s'actualitza o després de l'actualització. Compreneu quins processos s'impliquen per actualitzar un enriquiment i el temps que ha trigat a executar els processos. L'estat d'enriquiment està admès per a Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
 
 Per veure l'estat d'un enriquiment
 
