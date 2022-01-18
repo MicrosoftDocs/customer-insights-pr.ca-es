@@ -1,26 +1,27 @@
 ---
-title: Comença amb Android'SDK
-description: Obteniu informació sobre com podeu personalitzar i executar l'SDK Android
+title: Introducció a l'SDK de l'Android
+description: Més informació sobre com personalitzar i executar l'SDK de l'Android
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655330"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977501"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Comença amb l'SDK Android
+# <a name="get-started-with-the-android-sdk"></a>Introducció a l'SDK de l'Android
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Aquest tutorial us guia a través del procés d'instrumentació de la vostra aplicació Android amb un Dynamics 365 Customer Insights insights engagement SDK. Començareu a veure els esdeveniments al portal en cinc minuts o més aviat.
+Aquest tutorial us guiarà pel procés d'instrumentació de la vostra aplicació de l'Android amb l'SDK de conclusions d'interacció del Dynamics 365 Customer Insights. Començareu a veure els esdeveniments al portal en cinc minuts o més aviat.
 
 ## <a name="configuration-options"></a>Opcions de configuració
 Les opcions de configuració següents es poden enviar a l'SDK:
@@ -31,12 +32,12 @@ Les opcions de configuració següents es poden enviar a l'SDK:
 
 - Android Studio
 
-- Nivell mínim Android API: 16 (Jelly Bean)
+- Nivell d'API de l'Android mínim: 16 (Jelly Bean)
 
 - Clau d'ingestió (consulteu les instruccions següents per obtenir-la)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Integrar l'SDK a l'aplicació
-Comenceu el procés seleccionant un espai de treball, seleccionant la Android plataforma mòbil i descarregant l'SDK Android.
+Per iniciar el procés, seleccioneu una àrea de treball, seleccioneu la plataforma mòbil Android i descarregueu l'SDK de l'Android.
 
 - Utilitzeu el commutador d'àrea de treball de la subfinestra de navegació esquerra per seleccionar l'àrea de treball.
 
@@ -46,8 +47,8 @@ Comenceu el procés seleccionant un espai de treball, seleccionant la Android pl
 
 ## <a name="configure-the-sdk"></a>Configurar l'SDK
 
-Un cop descarregat l'SDK, podeu treballar amb ell en Android Studio per habilitar i definir esdeveniments. Hi ha dues maneres de fer-ho:
-### <a name="option-1-use-jitpack-recommended"></a>Opció 1: Utilitza JitPack (recomanat)
+Un cop baixat l'SDK, podeu treballar-hi a Android Studio per habilitar i definir esdeveniments. Hi ha dues maneres de fer-ho:
+### <a name="option-1-use-jitpack-recommended"></a>Opció 1: Utilitzeu JitPack (recomanat)
 1. Afegiu el dipòsit JitPack al `build.gradle` arrel:
     ```gradle
     allprojects {
@@ -66,8 +67,8 @@ Un cop descarregat l'SDK, podeu treballar amb ell en Android Studio per habilita
     }
     ```
 
-### <a name="option-2-use-download-link"></a>Opció 2: Utilitza l'enllaç de baixada
-1. Descarregueu les [idees de compromís Android LDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) i col·loqueu el `eiandroidsdk-debug.aar` fitxer a la `libs` carpeta.
+### <a name="option-2-use-download-link"></a>Opció 2: utilitzeu l'enllaç de baixada
+1. Baixeu l'[SDK de l'Android de les conclusions d'interacció](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) i col·loqueu el fitxer `eiandroidsdk-debug.aar` a la carpeta `libs`.
 
 1. Obriu el fitxer `build.gradle` de nivell de projecte i afegiu els fragments següents:
     ```gradle
@@ -120,9 +121,9 @@ Un cop descarregat l'SDK, podeu treballar amb ell en Android Studio per habilita
 1. Habiliteu o inhabiliteu la captura automàtica dels esdeveniments `View` definint el camp `autoCapture` anterior com a `true` o `false`. 
 
    >[!NOTE]
-   >`Action` Els esdeveniments s'han d'afegir manualment.
+   >`Action` els esdeveniments s'han d'afegir manualment.
 
-1. (Opcional) Altres configuracions inclouen definir l'adreça URL del recopilador d'extrems. Es poden afegir sota les metadades clau d'ingestió del `AndroidManifest.xml`.
+1. (Opcional) Altres configuracions inclouen definir l'adreça URL del recopilador d'extrems. Es poden afegir a les metadades de la clau d'ingestió del `AndroidManifest.xml`.
 
    ```xml
         <meta-data

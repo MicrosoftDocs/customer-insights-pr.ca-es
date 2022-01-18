@@ -1,7 +1,7 @@
 ---
-title: Complement de targeta de client per a aplicacions del Dynamics 365 (vídeo)
+title: Complement de targeta de client per a aplicacions del Dynamics 365 (conté vídeo)
 description: Mostra dades dels coneixements del públic a les aplicacions del Dynamics 365 amb aquest complement.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921853"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945415"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
@@ -27,12 +27,12 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 ## <a name="prerequisites"></a>Requisits previs
 
 - El complement només funciona amb les aplicacions controlades per models del Dynamics 365, com ara Vendes o Servei d'atenció al client, versió 9.0 i posteriors.
-- Perquè les dades del Dynamics 365 s'assignin als perfils de client dels coneixements del públic, han de ser [ingerides des de l'aplicació del Dynamics 365 utilitzant el connector del Microsoft Dataverse](connect-power-query.md).
+- Perquè les dades del Dynamics 365 s'assignin als perfils de clients de l'Audience Insights, us recomanem que [s'ingereixin des de l'aplicació Dynamics 365 mitjançant el Microsoft Dataverse connector](connect-power-query.md). Si utilitzeu un mètode diferent per ingerir contactes (o comptes del Dynamics 365), heu d'assegurar-vos que el `contactid` camp `accountid` (o) estigui definit com a clau principal per a aquesta font de dades al pas [d'assignació del procés d'unificació de dades](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Tots els usuaris del Dynamics 365 del complement de la targeta del client s'han d'[afegir com a usuaris](permissions.md) als coneixements del públic per veure les dades.
 - [Les capacitats de cerca i filtre configurades](search-filter-index.md) als coneixements del públic són necessàries per cercar dades per treballar.
 - Cada complement es basa en dades específiques dels coneixements del públic. Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
   - **Control de mesura**: requereix [mesures configurades](measures.md) dels atributs de tipus client.
-  - **Control d'intel·ligència:** Requereix dades generades mitjançant [prediccions o models personalitzats](predictions-overview.md).
+  - **Control d'intel·ligència:** requereix dades generades mitjançant [prediccions o models](predictions-overview.md) personalitzats.
   - **Control de detalls del client**: tots els camps del perfil estan disponibles al perfil de client unificat.
   - **Control d'enriquiment**: requereix [enriquiments](enrichment-hub.md) actius aplicats als perfils del client. El complement de la targeta admet aquests enriquiments: [marques](enrichment-microsoft.md) proporcionades per Microsoft, [Interessos](enrichment-microsoft.md) proporcionats per Microsoft i dades [d'interacció de l'Office](enrichment-office.md) proporcionades per Microsoft.
   - **Control de contactes**: requereix una definició d'entitat semàntica de contactes de tipus.

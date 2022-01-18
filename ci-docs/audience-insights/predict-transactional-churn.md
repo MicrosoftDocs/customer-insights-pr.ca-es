@@ -1,7 +1,7 @@
 ---
-title: Predicció de rotació de transaccions (Vídeo)
+title: Predicció de rotació de transaccions (conté vídeo)
 description: Predigueu si un client està en risc de deixar d'adquirir els vostres productes o serveis.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904060"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967735"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predicció de cancel·lació de transaccions (versió preliminar)
 
@@ -103,10 +103,10 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Seleccioneu la peça **Model d'abandonament de clients (versió preliminar)** i seleccioneu **Utilitza aquest model**.
 
-1. A la subfinestra **Model de rotació de clients**, trieu **Transacció** i seleccioneu **Comença**.
+1. A la **subfinestra Model de churn client (previsualització),** trieu **Transacció i** seleccioneu **Comença**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de pantalla amb l'opció de transacció seleccionada a la subfinestra del model de rotació de clients.":::
-
+ 
 ### <a name="name-model"></a>Assignació d'un nom al model
 
 1. Proporcioneu un nom per al model per diferenciar-lo de la resta de models.
@@ -117,11 +117,11 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 ### <a name="define-customer-churn"></a>Definició de l'abandonament de clients
 
-1. Definiu una rang de dies per predir la rotació al camp **Identifica els clients que poden cancel·lar en els pròxims**. Per exemple, podeu predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo amb les vostres estratègies de retenció de màrqueting. La predicció de risc de rotació durant un període de temps més llarg o curt pot fer que resulti més difícil abordar els factors del vostre perfil de risc de rotació, però això dependrà dels vostres requisits empresarials específics.
+1. Estableix la **finestra predicció**. Per exemple, podeu predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo amb les vostres estratègies de retenció de màrqueting. La predicció de risc de rotació durant un període de temps més llarg o curt pot fer que resulti més difícil abordar els factors del vostre perfil de risc de rotació, però això dependrà dels vostres requisits empresarials específics.
    >[!TIP]
-   > Podeu seleccionar **Desa i tanca** en qualsevol moment per desar la predicció en forma d'esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
+   > Podeu seleccionar **Desa** l'esborrany en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
-1. Introduïu el nombre de dies per definir la rotació al camp **Un client ha cancel·lat si no ha fet cap compra en:**. Per exemple, si un client no ha fet cap compra durant els darrers 30 dies, es podria considerar com a rotació per al vostre negoci. 
+1. Introduïu el nombre de dies per definir el churn al **camp de definició** churn. Per exemple, si un client no ha fet cap compra durant els darrers 30 dies, es podria considerar com a rotació per al vostre negoci. 
 
 1. Per continuar, feu clic a **Següent**.
 
@@ -129,19 +129,16 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Seleccioneu **Afegeix dades** i trieu el tipus d'activitat a la subfinestra lateral que conté la informació de l'historial de transacció o de compra.
 
-1. A **Tria les activitats**, trieu les activitats específiques de l'activitat seleccionada en la qual voleu centrar el càlcul.
+1. A **Selecciona activitats,** trieu les activitats específiques del tipus d'activitat seleccionat en què voleu que se centri el càlcul.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Subfinestra lateral que mostra la tria d'activitats específiques sota el tipus semàntic.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Subfinestra lateral que mostra la tria d'activitats específiques sota el tipus semàntic.":::
 
-1. Si encara no heu assignat l'activitat a un tipus semàntic, seleccioneu **Edita** per fer-ho. S'obrirà l'experiència guiada per assignar activitats administrades. Assigneu les dades als camps corresponents del tipus d'activitat seleccionat.
+   Si encara no heu assignat l'activitat a un tipus semàntic, seleccioneu **Edita** per fer-ho. S'obrirà l'experiència guiada per assignar activitats administrades. Assigneu les dades als camps corresponents del tipus d'activitat seleccionat.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipus d'activitat de configuració de pàgina.":::
+1. Assigneu els atributs semàntics als camps necessaris per executar el model. Si els següents camps no estan emplenats, configureu la relació des de l'entitat de l'historial de compres a l'entitat *Client*. Seleccioneu **Desa**.
 
-1. Després d'assignar l'activitat al tipus semàntic corresponent, seleccioneu **Següent** per continuar
+1. Al **pas Afegeix les dades necessàries,** seleccioneu **A continuació per continuar si no voleu afegir més** activitats.
 
-1. Assigneu els atributs semàntics als camps necessaris per executar el model. Si els següents camps no estan emplenats, configureu la relació des de l'entitat de l'historial de compres a l'entitat *Client*.
-
-1. Seleccioneu **Següent**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 

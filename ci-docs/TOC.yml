@@ -44,7 +44,7 @@
       items:
         - name: Informació general de les fonts de dades
           href: audience-insights/data-sources.md
-        - name: Afegir fons de dades mitjançant connectors del Power Query
+        - name: Afegeix orígens de dades a través de Power Query connectors
           href: audience-insights/connect-power-query.md
         - name: Afegir una carpeta del Common Data Model com a font de dades
           href: audience-insights/connect-common-data-model.md
@@ -80,11 +80,11 @@
       items:
         - name: Enriquir perfils de clients
           href: audience-insights/enrichment-hub.md
-        - name: Afinitats de marca i d'interès
+        - name: Marques i interessos
           href: audience-insights/enrichment-microsoft.md
         - name: Adreces millorades
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Dades empresarials millorades
+        - name: Dades d'empresa millorades
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquir amb l'Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predir la cancel·lació de transaccions
               href: audience-insights/predict-transactional-churn.md
+            - name: Analitzar el sentiment en la retroalimentació dels clients
+              href: audience-insights/sentiment-analysis.md
             - name: Utilitzar models personalitzats de l'aprenentatge automàtic de l'Azure
               href: audience-insights/custom-models.md
             - name: Completar les dades que falten parcialment

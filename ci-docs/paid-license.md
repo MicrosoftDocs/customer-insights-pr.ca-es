@@ -5,21 +5,21 @@ description: Familiaritzeu-vos amb l'experiència inicial al Dynamics 365 Custom
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673424"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977633"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Com començar després de comprar el Customer Insights
 
 En aquest article s'explica com heu de fer els primers passos al Dynamics 365 Customer Insights un cop l'organització ha adquirit una subscripció. Si voleu comprar el Customer Insights, les nostres opcions de contacte es mostren al [lloc web del Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de l'inquilí del Microsoft 365 rep un correu electrònic que el convida a crear l'entorn. 
+Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de Microsoft 365 l'inquilí rep un correu electrònic que el convida a crear l'entorn. 
 
 El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Podeu adquirir més capacitat i llicències per augmentar la quota per defecte. 
 - [Descripció general sobre els preus](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

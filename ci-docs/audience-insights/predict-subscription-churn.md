@@ -1,5 +1,5 @@
 ---
-title: Predicció de churn de subscripció (Vídeo)
+title: Predicció de churn de subscripció (conté vídeo)
 description: Es prediu si un client està en risc de deixar d'utilitzar els productes o els serveis de la subscripció de l'empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903937"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967689"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
 
@@ -77,7 +77,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. Introduïu el nombre de **Dies des que ha finalitzat la subscripció** que l'empresa considera que un client pot estar en un estat de rotació. Aquest període sol estar vinculat a activitats empresarials, com ara ofertes o altres iniciatives de màrqueting, que intenten evitar perdre el client.
 1. Introduïu el nombre de **Dies en el futur que es consultaran per predir la rotació** per definir una finestra per predir la rotació. Per exemple, per predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo als vostres esforços de retenció de màrqueting. Predir el risc de cancel·lació durant períodes de temps més llargs o més curts pot dificultar donar resposta als factors del vostre perfil de risc de cancel·lació, en funció de les necessitats específiques de la vostra empresa. Per continuar, feu clic a **Següent**
    >[!TIP]
-   > Podeu seleccionar **Desa i tanca** en qualsevol moment per desar la predicció en forma d'esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
+   > Podeu seleccionar **Desa** l'esborrany en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
 ### <a name="add-required-data"></a>Addició de les dades necessàries
 
