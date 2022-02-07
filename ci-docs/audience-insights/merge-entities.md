@@ -1,7 +1,7 @@
 ---
 title: Combinar entitats a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732760"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Combinar entitats
 
 La fase de combinació és l'última fase en el procés d'unificació de dades. La seva finalitat és la conciliació de dades contradictòries. Alguns exemples de dades contradictòries són un nom del client que es troba en dos dels vostres conjunts de dades, però apareix una mica diferent a cadascun d'ells ("Grant Marshall" o "Grant Marshal") o un número de telèfon que difereix en el format (617-803-091X versus 617803091X). La combinació d'aquests punts de dades conflictius es fa per atribut.
@@ -99,11 +94,13 @@ A la pàgina **Combina**, seleccioneu **Camps exclosos** per veure la llista de 
 
 1. Seleccioneu **Desa** i **Executa** per processar els canvis. 
 
-## <a name="manually-combine-fields"></a>Combinar camps manualment
+## <a name="combine-fields-manually"></a>Combina camps manualment
 
-Especifiqueu un atribut combinat manualment. 
+Especifiqueu un atribut combinat manualment.
 
-1. A la pàgina **Combina**, seleccioneu **Combina els camps**.
+1. A la **pàgina Combina**, seleccioneu **Combina**.
+
+1. Trieu l'opció **Camps**.
 
 1. Especifiqueu la política de guanyador de combinació al desplegable **Combina els camps segons**.
 
@@ -114,6 +111,26 @@ Especifiqueu un atribut combinat manualment.
 1. Seleccioneu **Fet** per aplicar els canvis.
 
 1. Seleccioneu **Desa** i **Executa** per processar els canvis. 
+
+## <a name="combine-a-group-of-fields"></a>Combina un grup de camps
+
+Tracta un grup de camps com una sola unitat. Per exemple, quan els nostres registres contenen els camps Adreça1, Adreça2, Ciutat, Estat i Zip. És probable que no vulguem fusionar-nos a l'Adreça 2 d'un registre diferent, pensant que faria que les nostres dades siguin més completes
+
+1. A la **pàgina Combina**, seleccioneu **Combina**.
+
+1. Trieu l'opció **Agrupa de camps**.
+
+1. Especifiqueu la política de combinació guanyadora als **grups de classificació per** menú desplegable.
+
+1. Seleccioneu **Afegeix** i trieu si voleu afegir més camps o grups addicionals als camps.
+
+1. Proporcioneu un **nom** i un **nom** de sortida per a cada camp combinat.
+
+1. Proporcioneu un **nom** per al grup de camps. 
+
+1. Seleccioneu **Fet** per aplicar els canvis.
+
+1. Seleccioneu **Desa** i **Executa** per processar els canvis.
 
 ## <a name="change-the-order-of-fields"></a>Canviar l'ordre dels camps
 

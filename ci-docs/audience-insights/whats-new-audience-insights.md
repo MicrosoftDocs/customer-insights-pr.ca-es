@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
-description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 12/02/2021
+description: 'Informació sobre les noves característiques, millores i correccions d''errors.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: ca-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884250"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
 
@@ -27,13 +22,57 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="december-2021-updates"></a>Actualitzacions de desembre de 2021
+
+Les actualitzacions de desembre de 2021 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Reenvia els registres de Customer Insights a l'Azure Monitor
+
+Customer Insights proporciona una integració directa amb l'Azure Monitor. Aquesta característica inclou esdeveniments d'auditoria i esdeveniments operatius. Els registres de recursos de l'Azure Monitor us permeten supervisar i enviar registres a l'Azure Storage, l'Azure Log Analytics o transmetre'ls als concentradors d'esdeveniments de l'Azure.
+
+Per obtenir més informació, vegeu [Inicia la sessió reenviant-la amb l'Azure Dynamics 365 Customer Insights Monitor (Visualització prèvia)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquir els perfils dels clients amb dades d'interacció
+
+Utilitzeu dades de per enriquir els perfils del compte de client amb estadístiques sobre les interaccions a través d'aplicacions Microsoft Office 365 Office 365. Les dades d'interacció consisteixen en l'activitat de correu electrònic i reunió, que s'agrega al nivell de compte. Per exemple, el nombre de correus electrònics d'un compte d'empresa o el nombre de reunions amb el compte. No es comparteixen dades sobre usuaris individuals. Aquest enriquiment està disponible a les següents regions: Regne Unit, Europa, Amèrica del Nord.
+
+Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'interacció (previsualització)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Característiques avançades d'unificació de dades
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Habilita les polítiques de resolució de conflictes al nivell d'atribut individual
+
+Quan deduplica els registres de client dins d'una entitat, és possible que no vulgueu haver de triar un registre complet com a guanyador. Ara us permetem combinar els millors camps de diversos registres basats en regles per a cada atribut. Per exemple, podeu triar mantenir el correu electrònic més recent i l'adreça més completa de diferents registres. 
+
+Ara podeu definir regles de combinació separades per a atributs individuals mentre deduplica i fusioneu registres dins d'una sola entitat. Anteriorment, només us permetem seleccionar una única regla de combinació (mantenint registres basats en la integritat de les dades de recència) i aquesta regla s'ha aplicat al nivell de registre a tots els atributs. Això no és ideal quan algunes de les dades que voleu conservar es troben al registre A i altres bones dades que es troben al registre B.
+
+Per obtenir més informació, vegeu [Definir la desduplicació en una entitat de coincidència](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Regles personalitzades per a la coincidència
+
+Hi ha moments en què heu d'especificar una excepció a les regles generals per tal de NO coincidir amb els registres. Això pot passar quan diversos individus comparteixen prou informació perquè el sistema els coincideixi com un sol individu. Per exemple, bessons amb la mateixa cognom, vivint a la mateixa ciutat i compartint la data de naixement.
+
+Les excepcions garanteixen que la unificació incorrecta de les dades es pugui abordar a les regles d'unificació. Podeu afegir diverses excepcions a una regla.
+
+Per obtenir més informació, vegeu [Afegir excepcions a una regla](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Proporcionar polítiques addicionals de resolució de conflictes i permetre l'agrupació d'atributs
+
+Aquesta característica us permet tractar un grup de camps com una sola unitat. Per exemple, quan els nostres registres contenen els camps Adreça1, Adreça2, Ciutat, Estat i Zip. És probable que no vulguem fusionar-nos a l'Adreça 2 d'un registre diferent, pensant que faria que les nostres dades siguin més completes.
+
+Ara podeu combinar un grup de camps relacionats i aplicar una única política de combinació al grup. 
+
+Per obtenir més informació, vegeu [Combinar un grup de camps](merge-entities.md#combine-a-group-of-fields).
+
+
 ## <a name="november-2021-updates"></a>Actualitzacions de novembre de 2021
 
 Les actualitzacions de novembre de 2021 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>La subscripció al segment ja està disponible a Dataverse
 
-La informació de pertinença al segment per als perfils de clients ja està disponible Dataverse juntament amb els perfils de clients i les estadístiques. Les aplicacions d'acció del Dynamics 365 i les aplicacions basades en models poden utilitzar aquestes dades per cercar els detalls de pertinença al segment per a un client determinat.
+La informació de pertinença al segment per als Dataverse perfils de clients ja està disponible juntament amb els perfils de clients i les estadístiques. Les aplicacions d'acció del Dynamics 365 i les aplicacions basades en models poden utilitzar aquestes dades per cercar els detalls de pertinença al segment per a un client determinat.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Les activitats admeten dades de nivell de contacte per als comptes d'empresa
 
@@ -45,17 +84,17 @@ Les actualitzacions a l'octubre de 2021 inclouen noves funcions, actualitzacions
 
 ### <a name="b-to-b"></a>B a B
 
-A partir de l'octubre del 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment a consumidors individuals. S'han actualitzat diverses àrees de característiques per donar suport a escenaris B-to-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B [compatibles, consulta Treballar amb comptes d'empresa a les estadístiques del públic](work-with-business-accounts.md).
+A partir de l'octubre del 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment a consumidors individuals. S'han actualitzat diverses àrees de característiques per donar suport a escenaris B-to-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B compatibles, consulta [Treballar amb comptes d'empresa a les estadístiques del](work-with-business-accounts.md) públic.
 
 Les seccions següents destaquen algunes de les àrees clau que es van adaptar per donar suport als comptes empresarials i als consumidors individuals.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Exportar segments basats en comptes d'empresa
 
-Totes les exportacions de segments a les estadístiques de públic estan disponibles en el context dels comptes d'empresa. La majoria de les exportacions de segments requereixen una configuració i informació de [contacte addicionals projectada](segment-builder.md#create-a-new-segment) als segments subjacents per ser vàlida per als comptes empresarials. Per obtenir més informació, vegeu [Segments d'exportació](export-destinations.md#export-segments).
+Totes les exportacions de segments a les estadístiques de públic estan disponibles en el context dels comptes d'empresa. La majoria de les exportacions de segments requereixen una configuració i [informació de contacte addicionals projectada](segment-builder.md#create-a-new-segment) als segments subjacents per ser vàlida per als comptes empresarials. Per obtenir més informació, vegeu [Segments](export-destinations.md#export-segments) d'exportació.
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilitzar l'exportació de LinkedIn Ads amb comptes d'empresa
 
-L'exportació de LinkedIn Ads ja està disponible per a la segmentació de contactes i empreses en el context dels comptes d'empresa. Quan seleccioneu la segmentació de l'empresa com a focus principal de l'exportació del LinkedIn, podeu exportar segments integrats en comptes empresarials sense necessitat de projectar informació de contacte. Per obtenir més informació, aneu als documents sobre [l'exportació d'anuncis de LinkedIn](export-linkedin-ads.md) i la diferència entre la segmentació per contacte i la [segmentació per empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[...](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+L'exportació de LinkedIn Ads ja està disponible per a la segmentació de contactes i empreses en el context dels comptes d'empresa. Quan seleccioneu la segmentació de l'empresa com a focus principal de l'exportació del LinkedIn, podeu exportar segments integrats en comptes empresarials sense necessitat de projectar informació de contacte. Per obtenir més informació, aneu als documents sobre [l'exportació](export-linkedin-ads.md) de LinkedIn Ads i la diferència entre [la segmentació per](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) contacte i [la segmentació per empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crear mesures basades en els comptes empresarials i la seva jerarquia
 
@@ -63,11 +102,11 @@ El constructor de mesures us permet crear mesures al voltant dels comptes d'empr
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crear segments basats en comptes d'empresa i la seva jerarquia
 
-El creador de segments us permet crear segments de comptes d'empresa que, opcionalment, inclouen informació de contacte per a cada compte d'un segment. Si teniu la jerarquia de comptes configurada, podeu utilitzar la informació de jerarquia de comptes a la creació de segments. Per obtenir més informació, vegeu [Crear un segment nou](segment-builder.md#create-a-new-segment).
+El creador de segments us permet crear segments de comptes d'empresa que, opcionalment, inclouen informació de contacte per a cada compte d'un segment. Si teniu la jerarquia de comptes configurada, podeu utilitzar la informació de jerarquia de comptes a la creació de segments. Per obtenir més informació, vegeu [Crear un segment](segment-builder.md#create-a-new-segment) nou.
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva els comptes de la teva empresa amb informació profunda sobre la seva tendència a l'enrenou
 
-El model predicció de rotació de clients ara també admet comptes empresarials. Podeu avaluar el risc de rotació no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que us compren. Aquesta addició us ajuda a entendre si un compte té més probabilitats de deixar de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogués. Per obtenir més informació, vegeu [Predicció de la transacció (previsualització)](predict-transactional-churn.md).
+El model predicció de rotació de clients ara també admet comptes empresarials. Podeu avaluar el risc de rotació no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que us compren. Aquesta addició us ajuda a entendre si un compte té més probabilitats de deixar de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogués. Per obtenir més informació, vegeu [Predicció de rotació de transaccions (previsualització)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Veure els contactes d'un compte d'empresa a la visualització de client
 

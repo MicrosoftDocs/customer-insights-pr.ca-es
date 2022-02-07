@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: ca-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977817"
 ---
+
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 La capacitat de conclusions del públic del Dynamics 365 Customer Insights connecta amb les dades d'un ampli conjunt de fonts. La connexió a una font de dades sovint es coneix com el procés d'*ingesta de dades*. Després d'ingerir les dades, les podeu [unificar](data-unification.md) i treballar-hi.
 
@@ -33,13 +28,13 @@ Podeu afegir els orígens de dades següents:
 - [Microsoft Dataverse llac](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Si utilitzeu la versió de prova, la secció Mètodes d'importació inclou una **opció de biblioteca de dades del Customer Insights.** Trieu aquesta opció per seleccionar un conjunt de dades d'exemple disponible per a diverses indústries. Per a més informació, vegeu [Dynamics 365 Customer Insights judici](../trial-signup.md).
+> Si utilitzeu la versió de prova, la secció Mètodes d'importació inclou una **opció de biblioteca** de dades del Customer Insights. Trieu aquesta opció per seleccionar un conjunt de dades d'exemple disponible per a diverses indústries. Per a més informació, vegeu [Dynamics 365 Customer Insights judici](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
 
-La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Podeu habilitar Els fluxos de dades a l'Insights del client [proporcionant l'ADREÇA URL de Microsoft Dataverse l'entorn en configurar](create-environment.md) l'entorn.
+La ingesta de dades de fonts de dades locals a les conclusions del públic està admesa als fluxos de dades del Microsoft Power Platform. Podeu habilitar Els fluxos de dades a l'Insights [del client proporcionant l'ADREÇA URL Microsoft Dataverse de l'entorn](create-environment.md) en configurar l'entorn.
 
-Els orígens de dades que es creen després d'associar un Dataverse entorn amb el Customer Insights utilitzen els [Power Platform fluxos de dades per](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Podeu suprimir i tornar a crear els orígens de dades que existien abans que Dataverse s'associés un entorn [mitjançant local passarel·les de dades](/data-integration/gateway/service-gateway-app).
+Els orígens de dades que es creen després d'associar un Dataverse entorn amb el Customer Insights utilitzen [Power Platform els fluxos de](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) dades per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Podeu suprimir i recrear els orígens de dades que existien abans que s'associés Dataverse un [entorn mitjançant local passarel·les](/data-integration/gateway/service-gateway-app) de dades.
 
 Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 

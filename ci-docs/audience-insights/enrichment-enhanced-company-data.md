@@ -1,7 +1,7 @@
 ---
 title: Millora de dades de l'empresa
 description: Enriquir i normalitzar les dades de l'empresa amb els models de Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: ca-ES
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927570"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquiment de perfils d'empresa amb dades d'empresa millorades
 
-Utilitzeu els models de Microsoft i les dades recopilades de l'empresa per corregir, complementar i estandarditzar els perfils de l'empresa. Utilitzarem el [format common data model](/common-data-model/schema/core/applicationcommon/account) per obtenir una millor precisió i estadístiques.
+Utilitzeu els models de Microsoft i les dades recopilades de l'empresa per corregir, complementar i estandarditzar els perfils de l'empresa. Utilitzarem el [format](/common-data-model/schema/core/applicationcommon/account) common data model per obtenir una millor precisió i estadístiques.
 
 ## <a name="how-we-enhance-company-data"></a>Com millorem les dades de l'empresa
 
@@ -58,7 +53,7 @@ Hi ha algunes limitacions amb les dades millorades. Els elements de la llista se
 
 1. Aneu a **Dades** > **Enriquiment**.
 
-1. Seleccioneu **Enriqueix les meves dades** a la peça de dades de **l'empresa** millorada.
+1. Seleccioneu **Enriqueix les meves dades** a la peça de dades **de l'empresa** millorada.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Peça d'enriquiment al centre d'enriquiment per a dades de l'empresa.":::
 
@@ -82,17 +77,17 @@ Per iniciar el procés d'enriquiment, seleccioneu **Executa** a la barra d'ordre
 
 Després de completar el procés d'enriquiment, podeu revisar les dades dels perfils de clients acabats d'enriquir a **Els meus enriquiments**. A més, trobareu l'hora de l'última actualització i el nombre de perfils enriquits.
 
-Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu **Visualitza les dades enriquides**.
+Podeu veure una mostra de les dades enriquides a la peça de visualització prèvia **de** clients enriquits. Seleccioneu **Veure més** i seleccioneu la **pestanya Dades** per accedir a una visualització detallada de cada perfil enriquit.
 
 ### <a name="overview-card"></a>Targeta general
 
 La targeta de visió general mostra detalls sobre la cobertura de l'enriquiment. 
 
-* **Clients processats i** canviats: el nombre de perfils de clients que s'han enriquit amb èxit.
+* **Empreses processades i canviades**: El nombre de perfils d'empresa de clients que s'han enriquit amb èxit.
 
-* **Clients processats i no modificats** : el nombre de perfils de clients que s'han reconegut però no canviat. Normalment passa quan les dades d'entrada són vàlides i no es poden millorar amb l'enriquiment.
+* **Empreses processades i no modificades**: Nombre de perfils d'empresa de clients que s'han reconegut però no canviat. Això sol passar quan les dades d'entrada són vàlides i no es poden millorar amb l'enriquiment.
 
-* **Clients no processats i no modificats** : el nombre de perfils que no han estat reconeguts. Normalment per a dades d'entrada que no són vàlides o no són compatibles amb l'enriquiment.
+* **Empreses no processades i no modificades**: El nombre de perfils d'empresa de clients que no han estat reconeguts. Això sol passar per a les dades d'entrada que no són vàlides o no són compatibles amb l'enriquiment.
 
 ## <a name="next-steps"></a>Passos següents
 

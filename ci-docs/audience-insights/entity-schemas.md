@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: ca-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380731"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 El [Common Data Model](/common-data-model/) és una especificació declarativa i una definició d'entitats estàndard que representen conceptes i activitats utilitzats habitualment entre aplicacions de negoci i de productivitat. Aquest model també s'amplia a les dades observacionals i d'anàlisi. El Common Data Model proporciona entitats empresarials definides, modulars i extensibles, com ara compte, unitat de negoci, cas, contacte, client potencial, oportunitat i producte, així com interaccions amb proveïdors, treballadors i clients, com ara activitats i acords de nivell de servei. Qualsevol persona pot crear i ampliar les definicions del Common Data Model per captar idees addicionals específiques de l'empresa.
 
