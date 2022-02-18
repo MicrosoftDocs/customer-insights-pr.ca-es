@@ -1,7 +1,7 @@
 ---
 title: Complement de targeta de client per a aplicacions del Dynamics 365 (conté vídeo)
 description: Mostra dades dels coneixements del públic a les aplicacions del Dynamics 365 amb aquest complement.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085195"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
 
 
@@ -113,5 +118,26 @@ El complement de targeta del client no s'actualitza automàticament. Per actuali
 
 1. Després d'iniciar el procés d'actualització, veureu un indicador de càrrega fins que finalitzi l'actualització. Si no hi ha cap versió nova, l'actualització mostrarà un missatge d'error.
 
+## <a name="troubleshooting"></a>Solució de problemes
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Els controls del complement de la targeta de client no troben dades
+
+**Problema:**
+
+Fins i tot amb camps d'identificador configurats correctament, els controls no poden trobar dades per a cap client.  
+
+**Resolució:**
+
+1. Assegureu-vos que heu configurat el complement de targeta d'acord amb les instruccions: [Configureu el complement de la targeta de client](#configure-the-customer-card-add-in) 
+
+1. Reviseu la configuració d'ingestió de dades. Editeu el font de dades per al sistema del Dynamics 365 que conté el GUID de l'identificador de contacte. Si el GUID de l'identificador de contacte es mostra amb caràcters en majúscula a l'editor Power Query, proveu el següent: 
+    1. Editeu el font de dades per obrir el font de dades a l'editor Power Query.
+    1. Seleccioneu la columna de l'identificador de contacte.
+    1. Seleccioneu **Transforma** a la barra de capçalera per veure les accions disponibles.
+    1. Seleccioneu **en minúscula**. Valida si els GUID de la taula ara són minúscules.
+    1. Deseu la font de dades.
+    1. Executeu processos d'ingestió, unificació i baixada de dades per propagar els canvis al GUID. 
+
+Després de completar l'actualització completa, els controls de complement de la targeta de client han de mostrar les dades esperades. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

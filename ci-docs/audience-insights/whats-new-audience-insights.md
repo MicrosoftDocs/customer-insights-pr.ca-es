@@ -1,7 +1,7 @@
 ---
 title: Característiques noves i previstes
-description: 'Informació sobre les noves característiques, millores i correccions d''errors.'
-ms.date: 01/27/2022
+description: Informació sobre les noves característiques, millores i correccions d'errors.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088273"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Actualitzacions de gener de 2022
+
+Les actualitzacions de gener de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Anàlisi del sentiment dels comentaris dels teus clients
+
+Customer Insights proporciona una nova funció amb IA per sintetitzar el sentiment del client i identificar aspectes empresarials específics com a oportunitats de millores específiques. Mitjançant l'anàlisi dels comentaris escrits dels vostres clients, podeu obtenir estadístiques precises a baix cost. Anàlisi de sentiments impulsat per models de processament del llenguatge natural (PNL) que generen dues estadístiques derivades per a cada identificador de client. Una puntuació de sentiment (de –5 a 5) i una llista dels aspectes empresarials aplicables. 
+
+Per obtenir més informació, vegeu [Analitzar el sentiment a la retroalimentació dels clients (Previsualització)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Actualitzacions de desembre de 2021
@@ -37,7 +53,7 @@ Per obtenir més informació, vegeu [Inicia la sessió reenviant-la amb l'Azure 
 
 Utilitzeu dades de per enriquir els perfils del compte de client amb estadístiques sobre les interaccions a través d'aplicacions Microsoft Office 365 Office 365. Les dades d'interacció consisteixen en l'activitat de correu electrònic i reunió, que s'agrega al nivell de compte. Per exemple, el nombre de correus electrònics d'un compte d'empresa o el nombre de reunions amb el compte. No es comparteixen dades sobre usuaris individuals. Aquest enriquiment està disponible a les següents regions: Regne Unit, Europa, Amèrica del Nord.
 
-Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'interacció (previsualització)](enrichment-office.md)
+Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'interacció (Previsualització)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Característiques avançades d'unificació de dades
 
@@ -106,7 +122,7 @@ El creador de segments us permet crear segments de comptes d'empresa que, opcion
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva els comptes de la teva empresa amb informació profunda sobre la seva tendència a l'enrenou
 
-El model predicció de rotació de clients ara també admet comptes empresarials. Podeu avaluar el risc de rotació no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que us compren. Aquesta addició us ajuda a entendre si un compte té més probabilitats de deixar de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogués. Per obtenir més informació, vegeu [Predicció de rotació de transaccions (previsualització)](predict-transactional-churn.md).
+El model predicció de rotació de clients ara també admet comptes empresarials. Podeu avaluar el risc de rotació no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que us compren. Aquesta addició us ajuda a entendre si un compte té més probabilitats de deixar de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogués. Per obtenir més informació, vegeu [Predicció de fragment de transacció (visualització prèvia)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Veure els contactes d'un compte d'empresa a la visualització de client
 

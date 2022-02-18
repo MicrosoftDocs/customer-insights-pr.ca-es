@@ -4,15 +4,15 @@ metadata:
   author: m-hartmann
   description: Cerqueu articles rellevants per començar amb el contingut de l'ajuda.
   ms.author: mhart
-  ms.date: 07/30/2021
+  ms.date: 03/02/2022
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
-  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
+  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
   ms.translationtype: HT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 09/17/2021
-  ms.locfileid: "7498585"
+  ms.lasthandoff: 02/10/2022
+  ms.locfileid: "8107187"
 title: Documentació del Dynamics 365 Customer Insights
 summary: Trobeu recursos útils per començar i obtenir informació sobre les característiques i les funcionalitats del Customer Insights.
 landingContent:
@@ -23,9 +23,13 @@ landingContent:
     - text: Informació general sobre el Customer Insights
       url: overview.md
     - text: Plans de llançament
-      url: /dynamics365-release-plan/
+      url: /dynamics365/release-plans/
     - text: Descobriu el CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Camí d'aprenentatge del Customer Insights
+      url: /learn/paths/build-customer-insights/
 - title: Introducció al Customer Insights
   linkLists:
   - linkListType: get-started
@@ -34,8 +38,26 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Novetats de la informació del públic
       url: audience-insights/whats-new-audience-insights.md
-    - text: Novetats de la informació d'interacció
-      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Guia d'inici ràpid
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Comença
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Administrar conclusions del públic
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: audience-insights/system.md
+    - text: Definir els permisos de l'usuari
+      url: audience-insights/permissions.md
+    - text: Administrar diversos entorns
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrar el Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Posar-se en contacte
   linkLists:
   - linkListType: overview
@@ -66,16 +88,6 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Connector del Power BI
       url: audience-insights/export-power-bi.md
-- title: Administrar conclusions del públic
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Configurar el sistema
-      url: audience-insights/system.md
-    - text: Definir els permisos de l'usuari
-      url: audience-insights/permissions.md
-    - text: Administrar diversos entorns
-      url: audience-insights/manage-environments.md
 - title: Quant a les conclusions d'interacció (versió preliminar)
   linkLists:
   - linkListType: overview

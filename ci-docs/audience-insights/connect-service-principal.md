@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900231"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088106"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
 
-En aquest article es discuteix com connectar-se Dynamics 365 Customer Insights amb un compte mitjançant un principal de servei de Azure Data Lake Storage l'Azure en lloc de claus de compte d'emmagatzematge. 
+En aquest article es discuteix com connectar-se Dynamics 365 Customer Insights amb un Azure Data Lake Storage compte mitjançant un principal de servei de l'Azure en lloc de claus de compte d'emmagatzematge. 
 
-Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Podeu utilitzar els principis de servei per afegir o editar de manera segura [una carpeta del Model de dades comú com a font de dades o crear o actualitzar un](connect-common-data-model.md)[entorn](create-environment.md).
+Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Podeu utilitzar els principis de servei per afegir o editar de manera [segura una carpeta del Model de dades comú com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](create-environment.md).
 
 > [!IMPORTANT]
-> - El compte del Data Lake Storage que utilitzarà l'entitat de servei ha de tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
+> - El compte d'emmagatzematge del llac de dades que utilitzarà el principal del servei ha de ser Gen2 i tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace). Els comptes d'emmagatzematge de l'Azure Data Lake Gen1 no són compatibles.
 > - Necessiteu permisos d'administració per a la vostra subscripció de l'Azure per crear un principal de servei.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entitat de seguretat de servei de l'Azure per al Customer Insights

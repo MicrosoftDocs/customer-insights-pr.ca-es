@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892326"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088090"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorn a les conclusions del públic
 
@@ -28,7 +28,7 @@ Les organitzacions poden crear *dos* entorns per a cada llicència del Customer 
 
 ## <a name="create-a-new-environment"></a>Creació d'un entorn nou
 
-Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de l'inquilí del Microsoft 365 rep un correu electrònic que el convida a crear l'entorn. Aneu a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) per començar. 
+Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de l'inquilí Microsoft 365 rep un correu electrònic que el convida a crear l'entorn. Aneu a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) per començar. 
 
 Una experiència guiada us ajuda a fer els passos necessaris per recopilar tota la informació per a un entorn nou. Necessiteu [permisos d'administrador](permissions.md) a les conclusions del públic per crear o administrar entorns.
 
@@ -64,7 +64,7 @@ En desar les dades a l'Azure Data Lake Storage, accepteu que les dades es transf
 > El Customer Insights actualment admet els següents serveis:
 > - Entitats ingerides de fluxos de dades del Power BI que s'emmagatzemen en un Data Lake administrat pel Microsoft Dataverse.  
 > - Els comptes del Azure Data Lake Storage de la mateixa regió de l'Azure que heu seleccionat en crear l'entorn.
-> - Comptes de l'Azure Data Lake Storage que tenen habilitat l'*espai de nom jeràrquic*.
+> - Azure Data Lake Storage comptes que són Gen2 i tenen *habilitat l'espai de* noms jeràrquic. Els comptes d'emmagatzematge de l'Azure Data Lake Gen1 no són compatibles.
 
 Per a l'opció Azure Data Lake Storage, podeu triar entre una opció basada en recursos i una opció basada en subscripció per a l'autenticació. Per obtenir més informació, vegeu [Connectar-se a un compte de l'Azure Data Lake Storage mitjançant l'entitat de servei de l'Azure](connect-service-principal.md). El nom del **Contenidor** serà `customerinsights` i no es pot canviar.
 

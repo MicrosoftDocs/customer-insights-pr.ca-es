@@ -2,6 +2,22 @@
   href: index.yml
 - name: Informació del producte
   href: overview.md
+- name: Catàleg d'aprenentatge
+  items:
+    - name: Comença
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Ingerir dades
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Crear un perfil de client unificat
+      href: /learn/modules/unified-customer-profile/
+    - name: Treballar amb estadístiques del públic
+      href: /learn/modules/working-with-customer-insights/
+    - name: Enriquir les dades i fer prediccions
+      href: /learn/modules/enrich-data/
+    - name: Administra les connexions externes
+      href: /learn/modules/configure-third-party-connections/
+    - name: Administrar el Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Prova gratuïta
   items:
     - name: Registrar-se per a una prova gratuïta
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Treballar amb comptes d'empresa
       href: audience-insights/work-with-business-accounts.md
-    - name: Aprendre mòduls
-      items:
-        - name: Ingerir dades
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Crear un perfil de client unificat
-          href: /learn/modules/unified-customer-profile/
-        - name: Treballar amb l'aplicació
-          href: /learn/modules/working-with-customer-insights/
-        - name: Enriquir dades i prediccions
-          href: /learn/modules/enrich-data/
     - name: Fonts de dades
       items:
         - name: Informació general de les fonts de dades
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Drets i sol·licituds de DSR
   href: dsr-rights-requests.md
+- name: Obteniu assistència tècnica
+  href: /power-platform/admin/get-help-support

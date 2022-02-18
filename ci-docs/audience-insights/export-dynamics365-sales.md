@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090911"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Ús de segments al Dynamics 365 Sales (versió preliminar)
 
 
 
 Utilitzeu les dades dels vostres clients per crear llistes de màrqueting, fer un seguiment de fluxos de treball i enviar promocions amb el Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Limitacions conegudes
+
+- Les exportacions al Dynamics 365 Sales estan limitades a 100.000 membres per segment.
+- Les exportacions de segments al Dynamics 365 Sales poden trigar fins a 3 hores a completar-se. 
 
 ## <a name="prerequisite-for-connection"></a>Requisit previ per a la connexió
 
