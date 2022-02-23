@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046551"
 ---
-
 # <a name="merge-entities"></a>Combinar entitats
 
 La fase de combinació és l'última fase en el procés d'unificació de dades. La seva finalitat és la conciliació de dades contradictòries. Alguns exemples de dades contradictòries són un nom del client que es troba en dos dels vostres conjunts de dades, però apareix una mica diferent a cadascun d'ells ("Grant Marshall" o "Grant Marshal") o un número de telèfon que difereix en el format (617-803-091X versus 617803091X). La combinació d'aquests punts de dades conflictius es fa per atribut.

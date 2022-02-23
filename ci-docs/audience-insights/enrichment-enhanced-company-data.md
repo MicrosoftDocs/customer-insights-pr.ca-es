@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: ca-ES
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010877"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquiment de perfils d'empresa amb dades d'empresa millorades
 
 Utilitzeu els models de Microsoft i les dades recopilades de l'empresa per corregir, complementar i estandarditzar els perfils de l'empresa. Utilitzarem el [format](/common-data-model/schema/core/applicationcommon/account) common data model per obtenir una millor precisió i estadístiques.
