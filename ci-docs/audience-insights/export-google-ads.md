@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Google Ads
 description: Apreneu a configurar la connexió i exportar a Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617906"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604265"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segments a Google Ads (versió preliminar)
 
 Exporteu segments de perfils de client unificats a una llista de públics de Google Ads i utilitzeu-los per anunciar-vos a la cerca de Google, Gmail, YouTube i a la Xarxa de Display de Google. 
-
-> [!IMPORTANT]
-> Actualment, només podeu crear una connexió nova i exportar dades a Google Ads si ja disposeu d'un testimoni aprovat de desenvolupador de Google Ads. A causa dels canvis normatius, en breu actualitzarem l'exportació de Google Ads i proporcionarem una opció d'exportació que no requereixi un testimoni de desenvolupador per garantir la continuïtat de la vostra experiència i simplificar l'exportació a Google Ads. Es recomana no configurar més connexions a Google Ads per facilitar el canvi a la nova opció d'exportació.
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
@@ -35,9 +32,9 @@ Exporteu segments de perfils de client unificats a una llista de públics de Goo
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a 1 milió de perfils de client per exportar a Google Ads.
+- Fins a un milió de perfils per exportació a Google Ads.
 - L'exportació a Google Ads es limita als segments.
-- L'exportació de segments amb un total d'1 milió de perfils de client pot trigar fins a 5 minuts a causa de les limitacions del proveïdor. 
+- L'exportació de segments amb un total d'un milió de perfils pot durar fins a 5 minuts a causa de les possibles limitacions del proveïdor. 
 - Les coincidències a Google Ads poden trigar fins a 48 hores.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configuració de la connexió a Google Ads
@@ -74,7 +71,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu el vostre **[Identificador de públic de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i seleccioneu **Connecta't** per inicialitzar la connexió a Google Ads.
 
-1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client.
+1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client.
 
 1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a Google Ads.
 

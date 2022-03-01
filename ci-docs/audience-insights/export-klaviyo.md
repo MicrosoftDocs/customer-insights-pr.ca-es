@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Klaviyo
 description: Més informació sobre com configurar la connexió i l'exportació a Klaviyo.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619061"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385776"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Exportar llistes de segments a Klaviyo (versió preliminar)
 
@@ -28,10 +28,10 @@ Exporteu segments de perfils de client unificats a Klaviyo i utilitzeu-los per a
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 100.000 perfils de client per exportació a Klaviyo.
+- Podeu exportar fins a 100.000 perfils per exportació al Klaviyo.
 - L'exportació a Klaviyo es limita als segments.
-- L'exportació de fins a 1 milió de perfils de client a Klaviyo pot trigar fins a 20 minuts a completar-se. 
-- El nombre de perfils de client que podeu exportar a Klaviyo depèn del vostre contracte amb Klaviyo i pot estar limitat.
+- L'exportació de fins a 1 milió de perfils al Klaviyo pot tardar fins a 20 minuts a completar-se. 
+- El nombre de perfils que podeu exportar al Klaviyo depèn i està limitat pel contracte que tingueu amb Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Configuració de la connexió a Klaviyo
 
@@ -67,7 +67,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'[**ID de llista del Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. És necessària per exportar segments al Klaviyo.
+3. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. És necessària per exportar segments al Klaviyo.
 
 1. Seleccioneu **Desa**.
 

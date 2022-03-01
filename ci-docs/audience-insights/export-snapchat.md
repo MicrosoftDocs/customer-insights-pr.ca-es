@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Snapchat
 description: Apreneu a configurar la connexió i exportar a Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618648"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760475"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Exportar segments a Snapchat (versió preliminar)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Exportar llistes de segments a Snapchat (versió preliminar)
 
 Exporteu segments de perfils de client unificats a Snapchat i utilitzeu-los per a la publicitat. 
 
@@ -29,7 +29,7 @@ Exporteu segments de perfils de client unificats a Snapchat i utilitzeu-los per 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
 - L'exportació a Snapchat es limita als segments.
-- L'exportació de fins a 1 milió de perfils de client a Snapchat pot trigar fins a 15 minuts a completar-se. 
+- L'exportació de fins a 1 milió de perfils a Snapchat pot trigar fins a 15 minuts com a màxim. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configuració de la connexió a Snapchat
 
@@ -63,7 +63,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'[**Identificador de públic de Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Snapchat.
+1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a Snapchat.
 
 1. Seleccioneu els segments que voleu exportar. 
 

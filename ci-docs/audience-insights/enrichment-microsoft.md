@@ -1,7 +1,7 @@
 ---
 title: Enriquir els perfils de client amb dades de Microsoft
-description: Utilitzeu dades propietàries de Microsoft per enriquir les vostres dades de clients amb afinitats i compartir la veu.
-ms.date: 11/11/2021
+description: Utilitzeu dades propietat de Microsoft per enriquir les dades dels vostres clients amb similituds de marca i d'interessos.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793693"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305144"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquir perfils de clients amb afinitats i quota de veu (previsualització)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquir els perfils de client amb afinitats de marca i d'interès (visualització prèvia)
 
-Utilitzeu les dades propietàries de Microsoft per enriquir les dades dels clients amb afinitats de marca, afinitats d'interessos i quota de veu (SoV). Aquestes afinitats i SoV es basen en dades de persones amb dades demogràfiques similars als teus clients. Aquesta informació t'ajuda a entendre millor i segmentar els teus clients en funció de les seves afinitats o SoV a marques i interessos específics.
+Utilitzeu dades propietat de Microsoft per enriquir les dades dels vostres clients amb similituds de marca i d'interessos. Aquestes afinitats es basen en les dades de persones en un grup demogràfic similar als vostres clients. Aquesta informació us ajudarà a conèixer i segmentar millor els vostres clients segons les seves afinitats amb determinades marques i interessos.
 
 A les conclusions del públic, aneu a **Dades** > **Enriquiment** per [configurar i visualitzar els enriquiments](enrichment-hub.md).
 
-Per configurar les afinitats de marca i l'enriquiment del SoV, aneu a la **pestanya Descobreix** i seleccioneu **Enriqueix les meves dades** a la peça **Marques**.
+Per configurar l'enriquiment d'afinitats de marques, aneu a la pestanya **Detecta** i seleccioneu **Enriqueix les meves dades** a la peça **Marques**.
 
-Per configurar les afinitats d'interessos i l'enriquiment del SoV, aneu a la **pestanya Descobreix** i seleccioneu **Enriqueix les meves dades** a la peça **Interessos**.
+Per configurar l'enriquiment d'afinitats d'interessos, aneu a la pestanya **Detecta** i seleccioneu **Enriqueix les meves dades** a la peça **Interessos**.
 
    > [!div class="mx-imgBorder"]
-   > ![Peces de marques i interessos.](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
+   > ![Peces de marques i interessos](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Com determinem les afinitats i el SoV
+## <a name="how-we-determine-affinities"></a>Com determinem les similituds
 
-Utilitzem les dades de cerca en línia de Microsoft per trobar afinitats i SoV per a marques i interessos en diversos segments demogràfics (definits per edat, sexe o ubicació). El volum de cerca en línia d'una marca o interès constitueix la base per determinar l'afinitat o el SoV. No obstant això, cadascuna proporciona una perspectiva diferent per entendre els seus clients.
-
-- L'afinitat és una comparació entre segments demogràfics. Podeu utilitzar aquesta informació per identificar segments demogràfics que tenen més afinitat per una marca o un interès determinats, en comparació amb altres segments.
-
-- La quota de veu és una comparació entre les vostres marques o interessos seleccionats. Podeu utilitzar aquesta informació per identificar quina marca o interès té la major quota de veu d'un segment demogràfic determinat, en comparació amb altres marques o interessos que heu seleccionat.
+Utilitzem les dades de la cerca en línia de Microsoft per trobar similituds per a marques i interessos en diversos segments demogràfics (definits per edat, gènere o ubicació). El volum de cerques en línia d'una marca o un interès determina la quantitat d'afinitat d'un segment demogràfic, en comparació amb altres segments, que té a aquesta marca o interès.
 
 ## <a name="affinity-level-and-score"></a>Nivell d'afinitat i puntuació
 
@@ -52,10 +48,6 @@ El *nivell d'afinitat* consta de quatre nivells i una *puntuació d'afinitat* es
 |Baixa     | 1-34        |
 
 Depenent de la granularitat que voleu per mesurar l'afinitat, podeu utilitzar el nivell d'afinitat o la puntuació. La puntuació d'afinitat us proporciona un control més precís.
-
-## <a name="share-of-voice-sov"></a>Quota de veu (SoV)
-
-Calculem sov en una escala de 100 punts. El SoV total en totes les marques o interessos per a cada perfil de client enriquit suma 100. A diferència de les afinitats, SoV és relatiu a les marques i interessos que seleccioneu. Per exemple, els valors de SoV per a 'Microsoft' poden ser diferents si les marques seleccionades són ('Microsoft', 'GitHub') versus ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Països o regions admesos
 
@@ -90,7 +82,7 @@ Reviseu les vostres preferències d'enriquiment per defecte i actualitzeu-les se
 
 ### <a name="select-entity-to-enrich"></a>Seleccionar l'entitat que voleu enriquir
 
-Seleccioneu **Entitat enriquida** i trieu el conjunt de dades que voleu enriquir amb les dades de Microsoft. Podeu seleccionar l'entitat Client per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+Seleccioneu **Entitat enriquida** i trieu el conjunt de dades que voleu enriquir amb les dades de l'empresa des de Microsoft. Podeu seleccionar l'entitat Client per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
 
 ### <a name="map-your-fields"></a>Assignació dels camps
 
@@ -124,25 +116,26 @@ Executeu l'enriquiment un cop hàgiu configurat les marques, els interessos i l'
 
 En funció de la mida de les dades dels clients, l'execució d'enriquiment pot trigar uns quants minuts a completar-se.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, última data de processament i tots els errors i advertiments associats amb la tasca.
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 
 Després de l'execució del procés d'enriquiment, aneu a **Els meus enriquiments** per revisar el nombre total de clients enriquits i un desglossament de les marques o els interessos dels perfils de clients enriquits.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment":::
 
-Trobareu un gràfic amb el nombre de perfils de clients enriquits al llarg del temps i les visualitzacions prèvies de les entitats enriquides. Reviseu les dades enriquides seleccionant **Mostra'n més** als gràfics Nivell **d**'afinitat o **"Compartir de** veu". Les dades enriquides per a marques van a les **entitats BrandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft.** Les dades per interessos es troba a les **entitats InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft.** També trobareu aquestes entitats enumerades al grup **Enriquiment** a **Dades** > **Entitats**.
+Reviseu les dades enriquides seleccionant **Visualitza les dades enriquides** al gràfic. Les dades enriquits per a les marques van a l'entitat **BrandAffinityFromMicrosoft**. Les dades d'interès es troben a l'entitat **InterestAffinityFromMicrosoft**. També trobareu aquestes entitats enumerades al grup **Enriquiment** a **Dades** > **Entitats**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veure dades d'enriquiment a la targeta del client
 
-El SoV de marca i interès també es pot veure a les targetes de client individuals. Aneu a **Clients** i seleccioneu un perfil de client. A la targeta de client, trobareu gràfics per a la marca o el SoV d'interès basats en persones del perfil demogràfic d'aquest client.
+Les afinitats de marca i d'interès també es poden visualitzar en targetes de clients individuals. Aneu a **Clients** i seleccioneu un perfil de client. A la targeta del client, trobareu gràfics per a les marques o els interessos per als quals els usuaris del perfil demogràfic del client tenen afinitat.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Targeta del client amb dades enriquides.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Targeta del client amb dades enriquides":::
 
 ## <a name="next-steps"></a>Passos següents
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

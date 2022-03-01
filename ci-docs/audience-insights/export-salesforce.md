@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Salesforce Marketing Cloud
 description: Més informació sobre com configurar la connexió i l'exportació a Salesforce Marketing Cloud.
-ms.date: 07/23/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b50539d6478a8fe196048f0fb421e5856f713a3ddc6577a637e593f90857ae8b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035541"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314579"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Exportar segments i altres dades a Salesforce Marketing Cloud (versió preliminar)
 
@@ -23,6 +23,11 @@ Utilitzeu les dades de clients a Salesforce Marketing Cloud exportant-les a trav
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
 - Disponibilitat d'un amfitrió SFTP i les credencials d'administració corresponents. [Com configurar ubicacions SFTP per a Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
+
+## <a name="known-limitations"></a>Limitacions conegudes
+
+- El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor. 
+- L'exportació d'entitats amb fins a 100 milions de perfils de client pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Configurar la connexió a Salesforce Marketing Cloud
 

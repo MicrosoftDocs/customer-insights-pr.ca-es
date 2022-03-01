@@ -1,5 +1,5 @@
 ---
-title: Exporta les dades de Customer Insights als amfitrions SFTP (conté vídeo)
+title: Exportar dades del Customer Insights a amfitrions d'SFTP
 description: Apreneu a configurar la connexió i exportar a una ubicació SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934875"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035449"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segments i altres dades a SFTP (versió preliminar)
 
 Utilitzeu les dades de client en aplicacions de tercers exportant-les a una ubicació de Protocol de transferència segura de fitxers (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
@@ -28,7 +26,6 @@ Utilitzeu les dades de client en aplicacions de tercers exportant-les a una ubic
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Les destinacions SFTP darrere dels tallafocs actualment no són compatibles. 
 - El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor. 
 - L'exportació d'entitats amb fins a 100 milions de perfils de clients pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada de dos nuclis de CPU i 1 Gb de memòria. 
 

@@ -1,7 +1,7 @@
 ---
 title: Enriquiment de la millora de l'adreça (conté vídeo)
 description: Enriquiu i normalitzeu la informació de les adreces dels perfils dels clients amb els models de Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010874"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934911"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquiment de perfils de clients amb adreces millorades
 
@@ -100,17 +100,17 @@ Per iniciar el procés d'enriquiment, seleccioneu **Executa** a la barra d'ordre
 
 Després de completar el procés d'enriquiment, podeu revisar les dades dels perfils de clients acabats d'enriquir a **Els meus enriquiments**. A més, trobareu l'hora de l'última actualització i el nombre de perfils enriquits.
 
-Podeu veure una mostra de les dades enriquides a la peça de visualització prèvia **de** clients enriquits. Seleccioneu **Veure més** i seleccioneu la **pestanya Dades** per accedir a una visualització detallada de cada perfil enriquit.
+Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu **Visualitza les dades enriquides**.
 
 ### <a name="overview-card"></a>Targeta general
 
 La targeta de visió general mostra detalls sobre la cobertura de l'enriquiment. 
 
-* **Adreces processades i canviades**: nombre de perfils de clients amb adreces que s'han enriquit correctament.
+* **Clients processats i** canviats: el nombre de perfils de clients que s'han enriquit amb èxit.
 
-* **Adreces processades i no canviades**: nombre de perfils de clients amb adreces reconegudes però no modificades. Normalment passa quan les dades d'entrada són vàlides i no es poden millorar amb l'enriquiment.
+* **Clients processats i no modificats** : el nombre de perfils de clients que s'han reconegut però no canviat. Normalment passa quan les dades d'entrada són vàlides i no es poden millorar amb l'enriquiment.
 
-* **Adreces no processades i no modificades**: nombre de perfils amb adreces que no s'han reconegut. Normalment per a dades d'entrada que no són vàlides o no són compatibles amb l'enriquiment.
+* **Clients no processats i no modificats** : el nombre de perfils que no han estat reconeguts. Normalment per a dades d'entrada que no són vàlides o no són compatibles amb l'enriquiment.
 
 ## <a name="next-steps"></a>Passos següents
 

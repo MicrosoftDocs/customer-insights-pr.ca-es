@@ -1,26 +1,26 @@
 ---
-title: Administrar les galetes i el consentiment de l'usuari per emmagatzemar les dades dels usuaris al Dynamics 365 Customer Insights
+title: Administrar galetes i el consentiment de l'usuari per emmagatzemar les dades d'usuari
 description: Enteneu com s'utilitzen les galetes i el consentiment de l'usuari per identificar els visitants de llocs web.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 09/27/2021
+ms.date: 10/30/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c824e50b723fe7f3b421048bb6ab96b7a9efc31f
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 7b3195a92c969ab36e5b43f4c2e4221ff477a0a8958838e1256528f58fe13dce
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558792"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036726"
 ---
 # <a name="manage-cookies-and-user-consent"></a>Administrar les galetes i el consentiment de l'usuari
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-La capacitat de conclusions d'interacció del Dynamics 365 Customer Insights utilitza galetes i claus (`localStorage`) per identificar els visitants del lloc web.
+La capacitat dels coneixements d'interacció del Dynamics 365 Customer Insights utilitza galetes i emmagatzematge local (`localStorage`) per identificar els visitants de llocs web.
 
 Les galetes són petits fitxers que emmagatzemen fragments d'informació sobre les interaccions d'un usuari amb el lloc web. S'emmagatzemen en navegadors web. Quan els usuaris visiten un lloc web per al qual els usuaris han emmagatzemat les galetes, el navegador envia aquesta informació al servidor, que retorna informació única de l'usuari. Aquesta és la tecnologia que permet, per exemple, que un carretó mantingui els articles seleccionats encara que un usuari marxi del lloc web.
 
@@ -28,29 +28,11 @@ Les galetes són petits fitxers que emmagatzemen fragments d'informació sobre l
 
 El [Reglament general de protecció de dades (RGPD)](/dynamics365/get-started/gdpr/) és un reglament de la Unió Europea (UE) que dicta com les organitzacions han de gestionar la privadesa i la seguretat dels seus usuaris. Les galetes emmagatzemen o recopilen sovint "dades personals", com ara un identificador en línia, que està cobert pel RGPD. Si el vostre negoci fa servir i/o ven a titulars de les dades de la UE, el RGPD us afecta. [Més informació sobre com Microsoft pot ajudar-vos a complir amb el RGPD](https://www.microsoft.com/trust-center/privacy/gdpr-faqs).
 
-Per permetre que l'SDK dels coneixements d'interacció emmagatzemin les galetes o altres dades confidencials, heu d'especificar si els usuaris han consentit. Això succeeix en la inicialització de l'SDK configurant un camp `userConsent` a la configuració.
+Per permetre que l'SDK dels coneixements d'interacció emmagatzemin les galetes o altres dades confidencials, heu d'especificar si els usuaris han consentit. Això succeeix en la inicialització de l'SDK.
 
 Si indiqueu que no hi ha cap consentiment de l'usuari, l'SDK no emmagatzemarà cap dada i no enviarà incidències que es puguin utilitzar per fer el seguiment del comportament de l'usuari. Qualsevol dada emmagatzemada prèviament se suprimirà del navegador.
 
 Si no s'especifica cap valor de consentiment de l'usuari, l'SDK suposarà que l'usuari ha donat el seu consentiment. Això significa que si vós (com a client) no especifiqueu cap valor per al consentiment de l'usuari a l'SDK, les dades es recopilaran. No obstant això, si especifiqueu que el valor del consentiment de l'usuari ha de ser "cert", no es recopilarà si un usuari rebutja o no mostra el consentiment explícit.
-
-A continuació es mostra un fragment de codi per inicialitzar l'SDK web amb el consentiment de l'usuari:
-```js
-<script>
-  (function(a,t,i){var e="MSEI";var s="Analytics";var o=e+"queue";a[o]=a[o]||[];var r=a[e]||function(n){var t={};t[s]={};function e(e){while(e.length){var r=e.pop();t[s][r]=function(e){return function(){a[o].push([e,n,arguments])}}(r)}}var r="track";var i="set";e([r+"Event",r+"View",r+"Action",i+"Property",i+"User","initialize","teardown"]);return t}(i.name);var n=i.name;if(!a[e]){a[n]=r[s];a[o].push(["new",n]);setTimeout(function(){var e="script";var r=t.createElement(e);r.async=1;r.src=i.src;var n=t.getElementsByTagName(e)[0];n.parentNode.insertBefore(r,n)},1)}else{a[n]=new r[s]}if(i.user){a[n].setUser(i.user)}if(i.props){for(var c in i.props){a[n].setProperty(c,i.props[c])}}a[n].initialize(i.cfg)})(window,document,{
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"EiJS",
-    cfg:{
-      ingestionKey:"YOUR-INGESTIONKEY",
-      autoCapture:{
-        view:true,
-        click:true
-      },
-      userConsent: true
-    }
-  });
-</script>
-```
 
 ## <a name="visitor-data-storage-in-engagement-insights-capability"></a>Emmagatzematge de dades dels visitants a la capacitat dels coneixements d'interacció
 
@@ -61,14 +43,14 @@ A continuació es mostra un fragment de codi per inicialitzar l'SDK web amb el c
 
 ### <a name="local-storage"></a>Emmagatzematge local
 
-La capacitat de conclusions d'interacció també utilitza claus (`localStorage`) per fer el seguiment de les dades no confidencials. Aquestes dades s'emmagatzemen totalment en el mateix navegador, sense trànsit enviat a ni des dels vostres servidors.
+La capacitat dels coneixements d'interacció també utilitza l'emmagatzematge local (`localStorage`) per fer el seguiment de dades no confidencials. Aquestes dades s'emmagatzemen totalment en el mateix navegador, sense trànsit enviat a ni des dels vostres servidors.
 
-- *EISession.Id*
+- *EISession.Id* 
     - Emmagatzema informació sobre la sessió de l'usuari en curs, com ara l'identificador de sessió, el moment en què comença i el moment en què caduca.
 - *EISession.Previous*
     - Emmagatzema l'adreça URL de la pàgina prèviament visitada a la sessió actual.
-
-Les claus de l'emmagatzematge local no caduquen automàticament i es restabliran durant la propera sessió de l'SDK.
+    
+Les claus de l'emmagatzematge local no caduquen automàticament. L'SDK les restablirà durant la propera sessió.
 
 ## <a name="deleting-cookies"></a>Suprimir galetes
 

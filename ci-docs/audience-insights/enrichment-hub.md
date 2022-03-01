@@ -1,7 +1,7 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098777"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672987"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -37,17 +37,14 @@ A la pestanya **Descobriu**, trobareu totes les opcions d'enriquiment admeses.
 - [Dades demogràfiques](enrichment-experian.md) proporcionades per Experian
 - [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
-- [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 - [Dades de l'empresa](enrichment-leadspace.md) proporcionades per Leadspace
 - [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft 
-- [Dades millorades de l'empresa](enrichment-enhanced-company-data.md) proporcionades per Microsoft
 - [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
 - [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
-- [Dades d'interacció amb](enrichment-office.md) el compte proporcionades per Microsoft
 
 ---
 

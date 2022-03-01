@@ -1,141 +1,97 @@
 ---
-title: Exportar dades del Customer Insights
-description: Administrar les exportacions per compartir dades.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+title: Destinacions d'exportació
+description: Exporteu dades i administreu destinacions d'exportació.
+ms.date: 07/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977955"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643851"
 ---
-# <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
+# <a name="export-destinations-preview"></a>Destinacions d'exportació (versió preliminar)
 
-A la pàgina **Exportacions** es mostren totes les exportacions configurades. Les exportacions comparteixen dades específiques amb diverses aplicacions. Poden incloure perfils de client, entitats, esquemes i detalls d'assignació. Cada exportació requereix una [connexió, configurada per un administrador, per administrar l'autenticació i l'accés](connections.md).
+A la pàgina **Destinacions d'exportació** es mostren totes les ubicacions per a les quals heu configurat l'exportació de dades. També podeu afegir noves destinacions per a l'exportació. A més, mostra les opcions d'exportació que hi ha disponibles actualment. Obteniu una descripció general i breu, i esbrineu què podeu fer amb cada opció d'extensibilitat. Exporteu els perfils unificats, les mesures i els segments a les aplicacions admeses rellevants per a la vostra empresa.
 
-Aneu a **Dades** > **Exportacions** per visualitzar la pàgina d'exportacions. Totes les funcions d'usuari poden veure les exportacions configurades. Utilitzeu el camp de cerca de la barra d'ordres per cercar exportacions pel seu nom, nom de connexió o tipus de connexió.
+Aneu a **Administració** > **Destinacions d'exportació** per trobar les següents opcions d'extensibilitat:
 
-## <a name="export-types"></a>Tipus d'exportacions
+- [Complement de targetes de clients del Dynamics 365](customer-card-add-in.md)
+- [Connector del Facebook Ads Manager](export-facebook.md)
+- [Connector del Power Automate](export-power-automate.md)
+- [Connector del Power Apps](export-power-apps.md)
+- [Connector del Power BI](export-power-bi.md)
+- [DotDigital](export-dotdigital.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
+- [Emmagatzematge blob de l’Azure](export-azure-blob-storage.md)
+- [Connector del LiveRamp&reg;](export-liveramp.md)
+- [Bot per al Microsoft Teams](export-teams-bot.md)
+- [Mailchimp](export-mailchimp.md)
+- [API del Customer Insights](apis.md)
 
-Hi ha dos tipus principals d'exportacions:  
+## <a name="add-a-new-export-destination"></a>Afegir una destinació d'exportació nova
 
-- Les **exportacions de dades** us permeten exportar qualsevol tipus d'entitat disponible a les conclusions del públic. Les entitats que seleccioneu per a l'exportació s'exporten amb tots els camps de dades, les metadades, els esquemes i els detalls de les assignacions. 
-- Les **exportacions de segments** us permeten segmentar les entitats de les conclusions del públic. Els segments representen una llista de perfils de client. Quan configureu l'exportació, seleccioneu els camps de dades inclosos, en funció del sistema de destinació al què exporteu les dades. 
+Per afegir destinacions d'exportació, heu de tenir [permisos d'administrador](permissions.md). Si exporteu a serveis de Microsoft, assumim que els dos serveis es troben a la mateixa organització.
 
-### <a name="export-segments"></a>Exportar segments
+1. Aneu a **Administració** > **Destinacions d'exportació**.
 
-**Exportar segments en entorns per a comptes empresarials (d'empresa a empresa) o consumidors individuals (d'empresa a consumidor)**  
-La majoria d'opcions d'exportació admeten ambdós tipus d'entorns. L'exportació de segments a diversos sistemes de destinació té requisits específics. Generalment, un membre del segment, el perfil del client, conté informació de contacte. Tot i que normalment és així en el cas dels segments creats amb consumidors individuals (d'empresa a consumidor), no és necessàriament ho és en el cas dels segments basats en comptes empresarials (d'empresa a empresa). 
+1. Canvieu a la pestanya **Les meves destinacions d'exportació**.
 
-**Segmentar entorns d'exportació per a comptes empresarials (d'empresa a empresa)**  
-- Els segments en el context dels entorns de comptes empresarials estan integrats a l'entitat *compte*. Per exportar els segments de compte, és necessari que el sistema de destinació admeti segments de compte purs. Aquest és el cas del [LinkedIn](export-linkedin-ads.md) quan trieu l'opció **empresa** en definir l'exportació.
-- La resta de sistemes de destinació requereixen camps de l'entitat contacte. Per garantir que els segments de compte poden recuperar dades de contactes relacionats, la definició del segment ha de projectar els atributs de l'entitat contacte. Més informació sobre com [configurar segments i atributs de projecte](segment-builder.md).
+1. Seleccioneu **Afegeix una destinació** per crear una destinació d'exportació nova.
 
-**Segmentar les exportacions en entorns per a consumidors individuals (d'empresa a consumidor)**  
-- Els segments en el context dels entorns per a clients individuals estan integrats a l'entitat *perfil de client unificat*. Tots els segments que compleixen els requisits dels sistemes de destinació (per exemple, una adreça electrònica) es poden exportar.
+1. A la subfinestra **Afegeix una destinació**, seleccioneu el **tipus** de destinació d'exportació al menú desplegable.
 
-**Límits de les exportacions de segments**  
-- Els sistemes de destinació de tercers poden limitar el nombre de perfils de client que podeu exportar. 
-- Per als clients individuals, en seleccionar un segment per a l'exportació veureu el nombre real de membres del segment. Rebreu un advertiment si un segment és massa gran. 
-- Per als comptes empresarials, veureu el nombre de comptes en un segment; tanmateix, el nombre de contactes que es poden projectar no es mostra. En alguns casos, podria fer que el segment exportat contingui realment més perfils de clients que els que accepta el sistema de destinació. Superar els límits dels resultats dels sistemes de destinació farà que s'ometi l'exportació. 
+1. Proporcioneu les dades necessàries i seleccioneu **Següent** per crear la destinació d'exportació.
 
-## <a name="set-up-a-new-export"></a>Configurar una exportació nova  
-Per configurar o editar una exportació, heu de tenir connexions disponibles. Les connexions depenen de la vostra [funció d'usuari](permissions.md):
-- Els **administradors** tenen accés a totes les connexions. També poden crear connexions noves quan configuren una exportació.
-- Els **col·laboradors** poden tenir accés a connexions específiques. Depenen dels administradors per configurar i compartir connexions. La llista d'exportacions mostra als contribuïdors si poden editar o només visualitzar una exportació a la columna **Els vostres permisos**. Per obtenir més informació, aneu a [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Els **visualitzadors** només poden visualitzar les exportacions existents, no crear-les.
+També podeu seleccionar **Configura** en una peça de la pestanya **Descobreix**.
 
-### <a name="define-a-new-export"></a>Definir una exportació nova
+## <a name="view-export-destinations"></a>Visualitzar les destinacions d'exportació
 
-1. Vés a **Dades** > **Exportacions**.
+Després de crear destinacions d'exportació, les trobareu en una taula de la pestanya **Les meves destinacions d'exportació**. Aquesta taula té tres columnes:
 
-1. Seleccioneu **Afegeix una exportació** per crear una exportació nova.
+- **Nom de visualització**: el nom que heu introduït en crear la destinació.
+- **Tipus**: el tipus de destinació d'exportació que definiu en crear la destinació.
+- **Data de creació**: la data de creació de la destinació.
 
-1. A la subfinestra **Configura l'exportació**, seleccioneu la connexió que voleu utilitzar. Les [connexions](connections.md)les administren els administradors. 
+## <a name="edit-an-export-destination"></a>Editar una destinació d'exportació
 
-1. Proporcioneu els detalls necessaris i seleccioneu **Desa** per crear l'exportació.
+1. Seleccioneu els punt suspensius verticals de la destinació d'exportació que voleu editar.
 
-### <a name="define-a-new-export-based-on-an-existing-export"></a>Definir una exportació nova basada en una exportació existent
+   > [!div class="mx-imgBorder"]
+   > ![Punts suspensius verticals](media/export-destinations-page-ellipsis.png "Punts suspensius verticals")
 
-1. Vés a **Dades** > **Exportacions**.
+1. Al menú desplegable, seleccioneu **Edita**.
 
-1. A la llista d'exportacions, seleccioneu l'exportació que vulgueu duplicar.
+1. Canvieu els valors que requereixin l'actualització i seleccioneu **Desa**.
 
-1. Seleccioneu **Crea un duplicat** a la barra d'ordres per obrir la subfinestra **Configura l'exportació** amb els detalls de l'exportació seleccionada.
+## <a name="export-data-on-demand"></a>Exportar dades segons demanda
 
-1. Reviseu i adapteu l'exportació i seleccioneu **Desa** per crear una exportació nova.
+Després de configurar un connector per a una destinació d'exportació, les exportacions s'executaran amb cada [actualització planificada](system.md#schedule-tab).
 
-### <a name="edit-an-export"></a>Editar una exportació
+Per exportar les dades sense haver d'esperar una actualització programada, aneu a la pestanya **Les meves destinacions d'exportació** a **Administració** > **Destinacions d'exportació**.
 
-1. Vés a **Dades** > **Exportacions**.
+> [!div class="mx-imgBorder"]
+> ![Punts suspensius verticals](media/export-destinations-page-ellipsis.png "Punts suspensius verticals")
 
-1. A la llista d'exportacions, seleccioneu l'exportació que vulgueu editar.
+- Seleccioneu **Exporta** sobre de la llista per executar l'exportació a totes les destinacions d'exportació simultàniament.
+- Seleccioneu els punts suspensius (...) després d'un element de la llista i, a continuació, trieu l'opció **Exporta** per executar l'exportació per a una única destinació d'exportació.
 
-1. Seleccioneu **Edita** a la barra d'ordres.
+## <a name="remove-an-export-destination"></a>Suprimir una destinació d'exportació
 
-1. Canvieu els valors que voleu actualitzar i seleccioneu **Desa**.
+Per suprimir una destinació d'exportació, comenceu des de la pàgina principal **Destinacions d'exportació**.
 
-## <a name="view-exports-and-export-details"></a>Visualitzar les exportacions i els detalls d'exportació
+1. Seleccioneu els punt suspensius verticals de la destinació d'exportació que voleu suprimir.
 
-Un cop creades les destinacions d'exportació, es mostren a **Dades** > **Exportacions**. Tots els usuaris poden veure quines dades es comparteixen i el seu estat més recent.
+   > [!div class="mx-imgBorder"]
+   > ![Punts suspensius verticals](media/export-destinations-page-ellipsis.png "Punts suspensius verticals")
 
-1. Vés a **Dades** > **Exportacions**.
+2. Seleccioneu **Suprimeix** al menú desplegable.
 
-1. Els usuaris sense editar permisos seleccionen **Visualitza** en comptes d'**Edita** per veure els detalls de l'exportació.
-
-1. A la subfinestra lateral es mostra la configuració d'una exportació. Sense permisos d'edició, els valors no es poden canviar. Seleccioneu **Tanca** per tornar a la pàgina d'exportacions.
-
-## <a name="schedule-and-run-exports"></a>Planificar i executar exportacions
-
-Cada exportació que configureu té una planificació d'actualització. Durant una actualització, el sistema cerca dades noves o actualitzades per incloure-les en una exportació. Per defecte, les exportacions s'executen com a part de cada [actualització del sistema planificada](system.md#schedule-tab). Podeu personalitzar la planificació d'actualització o desactivar-la per executar les exportacions manualment.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions en curs en [dependències](system.md#refresh-processes) quan s'hagi d'iniciar una exportació planificada, el sistema finalitzarà primer les actualitzacions i executarà l'exportació. Podeu veure quan s'ha actualitzat per darrer cop una exportació a la columna **Actualitzat**.
-
-### <a name="schedule-exports"></a>Exportacions planificades
-
-Podeu definir planificacions d'actualització personalitzades per a exportacions individuals o diverses exportacions alhora. La planificació definida actualment es mostra a la columna **Planificació** de la llista d'exportació. El permís per canviar la planificació és el mateix que per [editar i definir exportacions](export-destinations.md#set-up-a-new-export). 
-
-1. Vés a **Dades** > **Exportacions**.
-
-1. Seleccioneu l'exportació que voleu planificar.
-
-1. Seleccioneu **Planifica** a la barra d'ordres.
-
-1. A la subfinestra **Planifica l'exportació**, definiu l'**Execució planificada** com a **Activada** per executar l'exportació automàticament. Definiu-la com a **Desactivada** per actualitzar-la manualment.
-
-1. Per actualitzar automàticament les exportacions, trieu un valor de **Periodicitat** i especifiqueu-ne els detalls. El temps definit s'aplica a totes les instàncies d'una periodicitat. És el moment en què una exportació hauria de començar a actualitzar-se.
-
-1. Per aplicar i activar els canvis, seleccioneu **Desa**.
-
-Quan editeu la planificació de diverses exportacions, heu de fer una selecció a **Conserva o substitueix les planificacions**:
-- **Conserva planificacions individuals**: mantingueu la planificació definida prèviament per a les exportacions seleccionades i només les inhabiliteu o habiliteu.
-- **Defineix una planificació nova per a totes les exportacions seleccionades**: substituïu les planificacions existents de les exportacions seleccionades.
-
-### <a name="run-exports-on-demand"></a>Executar exportacions segons la demanda
-
-Per exportar dades sense esperar una actualització planificada, aneu a **Dades** > **Exportacions**.
-
-- Per executar totes les exportacions, seleccioneu **Executa-ho tot** a la barra d'ordres. Aquesta acció només executarà les exportacions que tenen una planificació activa.
-- Per executar una única exportació, seleccioneu-la a la llista i seleccioneu **Executa** a la barra d'ordres. Així s'executen les exportacions sense planificacions actives. 
-
-## <a name="remove-an-export"></a>Suprimir una exportació
-
-1. Vés a **Dades** > **Exportacions**.
-
-1. Seleccioneu l'exportació que voleu suprimir.
-
-1. Seleccioneu **Elimina** a la barra d'ordres.
-
-1. Confirmeu la supressió seleccionant **Suprimeix** a la pantalla de confirmació.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Confirmeu la supressió seleccionant **Suprimeix** a la pantalla de confirmació.

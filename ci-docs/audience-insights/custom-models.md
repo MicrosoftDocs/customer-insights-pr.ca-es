@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967643"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881772"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
@@ -40,8 +40,6 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
    > [!NOTE]
    > Les dades es transfereixen entre les vostres instàncies del Customer Insights i els pipelines o serveis web de l'Azure seleccionats al flux de treball. Quan transferiu dades a un servei de l'Azure, assegureu-vos que el servei estigui configurat per processar les dades de la manera i la ubicació necessàries per complir tots els requisits legals o normatius per a les dades en aquesta organització.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Afegir un flux de treball nou
 

@@ -1,6 +1,6 @@
 ---
 title: Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD | MicrosoftDocs
-description: Respondre a les sol·licituds d'interessats per a la capacitat d'informació de l'audiència Dynamics 365 Customer Insights.
+description: Responeu a les sol·licituds de subjecte de dades per a la capacitat de conclusions del públic del Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732668"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483644"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD
 
@@ -24,7 +24,7 @@ Ens comprometem a ajudar els nostres clients a complir les seves necessitats del
 
 ## <a name="audience-insights"></a>Conclusions sobre el públic
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>En resposta a l'interessat GDPR suprimeix les sol·licituds de capacitat d'informació de l'audiència Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Respondre a les sol·licituds de supressió del subjecte de dades del RGPD per a la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
 El "dret a suprimir" les dades personals de les dades del client d'una organització és una protecció clau del Reglament general de protecció de dades (RGPD). L'eliminació de dades personals inclou l'eliminació de totes les dades personals i registres generats pel sistema, tret de la informació del registre d'auditoria.
 
@@ -39,7 +39,7 @@ Les conclusions del públic ofereixen la següent experiència dins del producte
 
 Un administrador del Customer Insights pot seguir aquests passos per suprimir les dades del client que s'havien suprimit a la font de dades:
 
-1. Inicieu sessió a Dynamics 365 Customer Insights.
+1. Inicieu la sessió a Dynamics 365 Customer Insights.
 2. A les conclusions del públic, aneu a **Dades** > **Fonts de dades**.
 3. Per a cada font de dades de la llista que conté dades dels clients suprimides:
    1. Seleccioneu (...) i després trieu **Actualitza**.
@@ -52,7 +52,7 @@ Un administrador del Customer Insights pot seguir aquests passos per suprimir le
 
 Un administrador del Customer Insights pot seguir aquests passos per suprimir les dades d'usuari del Customer Insights:
 
-1. Inicieu sessió a Dynamics 365 Customer Insights.
+1. Inicieu la sessió a Dynamics 365 Customer Insights.
 2. A les conclusions del públic, aneu a **Administració** > **Permisos**.
 3. Activeu la casella de selecció de l'usuari que voleu suprimir.
 4. Seleccioneu **Suprimeix**.
@@ -79,14 +79,7 @@ Un administrador d'inquilins pot seguir aquests passos per exportar dades:
 2. Reconeixeu la confirmació per exportar les dades de l'usuari sol·licitat.
 3. Rebeu les dades exportades a través de l'adreça electrònica de l'administrador d'inquilins.
 
-## <a name="consent-management-preview"></a>Gestió del consentiment (previsualització)
-
-La capacitat de gestió del consentiment no recull directament les dades de l'usuari. Només importa i processa dades de consentiment que són proporcionades pels usuaris en altres aplicacions.
-
-Per eliminar les dades de consentiment sobre usuaris concrets, suprimiu-les en les fonts de dades ingerides a la capacitat de gestió del consentiment. Després d'actualitzar el font de dades, les dades eliminades també se suprimiran al Centre de consentiment. Les aplicacions que utilitzen l'entitat de consentiment també suprimiran les dades que s'han suprimit a l'origen després d'una [actualització](audience-insights/system.md#refresh-processes). Recomanem actualitzar les fonts de dades ràpidament després de respondre a una sol·licitud de l'interessat per eliminar les dades de l'usuari de tots els altres processos i aplicacions.
-
-
-## <a name="engagement-insights-preview"></a>Conclusions sobre la interacció (versió preliminar)
+## <a name="engagement-insights"></a>Conclusions d'interacció
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Suprimir i exportar dades d'incidències que contenen informació identificable de l'usuari final
 

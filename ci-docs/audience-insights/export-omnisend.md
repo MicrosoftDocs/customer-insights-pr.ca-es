@@ -1,7 +1,7 @@
 ---
 title: Exportar dades del Customer Insights a Omnisend
 description: Apreneu a configurar la connexió i exportar a Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619016"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124457"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportar segments a Omnisend (versió preliminar)
 
@@ -28,9 +28,9 @@ Exporteu segments de perfils de client unificats a Omnisend i utilitzeu-los per 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 1 milió de perfils de client per exportar-los a Omnisend i pot trigar fins a 4 hores a completar-se.
+- Podeu exportar fins a 1 milió de perfils per exportació a Omnisend i pot trigar fins a 4 hores a completar-se.
 - L'exportació a Omnisend es limita als segments.
-- El nombre de perfils de client que podeu exportar a Omnisend depèn del vostre contracte amb Omnisend.
+- El nombre de perfils que podeu exportar a Omnisend depèn del vostre contracte amb Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Configuració de la connexió a Omnisend
 
@@ -62,7 +62,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Omnisend. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
 
-1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Omnisend. O bé podeu exportar Nom, Cognom, Adreça, País o Regió, Província, Ciutat i Codi postal per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
+1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a Omnisend. O bé podeu exportar Nom, Cognom, Adreça, País o Regió, Província, Ciutat i Codi postal per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 
 1. Seleccioneu **Desa**.
 

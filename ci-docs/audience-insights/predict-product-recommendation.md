@@ -1,7 +1,7 @@
 ---
 title: Predicció de recomanacions de productes
 description: Predieu els productes que pot comprar o interactuar un client.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967782"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494527"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicció de recomanacions de productes (versió preliminar)
 
@@ -54,7 +54,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 > [!NOTE]
 > - El model requereix l'historial de transaccions dels clients. La definició d'una transacció és bastant flexible. Qualsevol dada que descrigui una interacció usuari-producte pot funcionar com una entrada. Per exemple, comprar un producte, fer una classe o assistir a un esdeveniment.
-> - Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra, unir-les Power Query abans de la ingestió de dades.
+> - Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra, uniu-les a Power Query abans de la ingestió de dades.
 > - Si la comanda i els detalls de la comanda són entitats diferents, uniu-los abans d'utilitzar-los al model. El model no funciona amb un sol identificador de comanda o identificador de rebut en una entitat.
 
 
@@ -79,11 +79,11 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 1. Definiu el **nombre de productes** que voleu recomanar a un client. Aquest valor depèn de com el mètode de lliurament emplena les dades. Si podeu recomanar tres productes, definiu aquest valor segons això.
    
    >[!TIP]
-   > Podeu seleccionar **Desa** l'esborrany en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de predicció a la pestanya **Les meves prediccions**.
+   > Podeu seleccionar **Desa i tanca** en qualsevol moment per desar la predicció en forma d'esborrany. Trobareu l'esborrany de predicció a la pestanya **Les meves prediccions**.
 
-1. Trieu si voleu incloure els productes que els clients han comprat recentment al **camp Repetició de compres esperades.**
+1. Trieu si voleu **suggerir productes que els clients han comprat recentment**.
 
-1. Estableix la **finestra Mira enrere**. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
+1. Si heu seleccionat que *no* recomaneu els productes adquirits recentment, definiu la **Finestra de cerca en el passat**. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
 
 1. Seleccioneu **Següent**
 

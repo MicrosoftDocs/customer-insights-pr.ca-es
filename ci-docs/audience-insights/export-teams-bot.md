@@ -1,27 +1,27 @@
 ---
 title: Bot per al Microsoft Teams
 description: Cerqueu els perfils de client unificats al Microsoft Teams amb l'ajuda d'un bot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967807"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405156"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot del Teams per al Dynamics 365 Customer Insights (versió preliminar)
 
 Connecteu amb el Microsoft Teams per permetre que un bot cerqui perfils de client unificats a canals del Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot del Teams que mostra un registre de client.](media/teams-bot.png "Bot del Teams que mostra un registre de client")
+> ![Bot del Teams que mostra un registre de client](media/teams-bot.png "Bot del Teams que mostra un registre de client")
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -31,10 +31,7 @@ Per configurar i configurar el bot, cal complir els requisits previs següents:
 - El [procés d'unificació](data-unification.md) s'ha completat.
 - S'han afegit camps a l'[índex de cerca i filtratge](search-filter-index.md).
 - El Customer Insights i el Teams es troben a la mateixa organització.
-- L'entorn té definits com a públic de destinació principal clients individuals. Els comptes empresarials no estan admesos.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurar el bot
 
 1. A les conclusions del públic, aneu a **Administració** > **Destinacions d'exportació**.
@@ -55,6 +52,3 @@ El bot proporciona la capacitat de cerca de perfils unificats de client.
 - Si l'organització manté diversos entorns del Customer Insights a la mateixa organització, podeu introduir **switchinstance** per triar a quin entorn voleu connectar el bot.
 
 - Introduïu **ajuda** per veure una llista de les ordres disponibles per al bot.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,19 +2,19 @@
 title: Ingestió de dades en temps real i limitacions
 description: Informació general sobre les capacitats en temps real de les conclusions del públic.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035265"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689163"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestió de dades en temps real (versió preliminar)
 
@@ -54,7 +54,7 @@ L'API en temps real us permet publicar una activitat nova des del sistema d'orig
 
 Hi ha dues maneres de connectar-se a l'API en temps real:
 
-- [indirectament](#connect-via-the-dynamics-365-customer-insights-connector), mitjançant el [connector del Dynamics 365 Customer Insights](/connectors/customerinsights/)
+- [indirectament](#connect-via-the-dynamics-365-customer-insights-connector), mitjançant el [connector del Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
 - [directament](#connect-directly-to-the-real-time-api), amb el codi
 
 Ambdues maneres comparteixen els requisits previs següents:
@@ -66,13 +66,13 @@ Ambdues maneres comparteixen els requisits previs següents:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Connectar-se amb el connector del Dynamics 365 Customer Insights
 
-L'API en temps real pot ingerir dades d'un connector del Power Platform dedicat, el [connector del Dynamics 365 Customer Insights](/connectors/customerinsights/), sense haver d'escriure ni implementar cap codi.    
-El connector pot fer les mateixes accions en temps real que l'API. Necessiteu una llicència vàlida per als connectors prèmium. Per obtenir més informació, vegeu [Preguntes freqüents de llicències del Power Apps i el Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
+L'API en temps real pot ingerir dades d'un connector del Power Platform dedicat, el [connector del Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), sense haver d'escriure ni implementar cap codi.    
+El connector pot fer les mateixes accions en temps real que l'API. Necessiteu una llicència vàlida per als connectors prèmium. Per obtenir més informació, vegeu [Preguntes freqüents de llicències del Power Apps i el Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps i/o Power Automate](/connectors/)
-- [Aplicacions lògiques](/azure/connectors/apis-list) de l'Azure
+- Power Platform [Power Apps i/o Power Automate](https://docs.microsoft.com/connectors/)
+- [Aplicacions lògiques](https://docs.microsoft.com/azure/connectors/apis-list) de l'Azure
 
-Per obtenir informació detallada sobre la creació de fluxos, vegeu la [documentació del Power Automate](/power-automate/).
+Per obtenir informació detallada sobre la creació de fluxos, vegeu la [documentació del Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Connectar-se directament a l'API en temps real
 
@@ -83,7 +83,6 @@ Els detalls d'aquesta API, incloent-hi els paràmetres i les respostes, es trobe
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendre l'ús en temps real amb la telemetria
 
-Obtingueu una visió general del volum de sol·licituds realitzades a l'API en temps real i la informació sobre els problemes que pot trobar el sistema. Podeu [accedir a la telemetria en temps real](system.md#api-usage-tab). 
+Obtingueu una visió general del volum de sol·licituds realitzades a l'API en temps real i la informació sobre els problemes que pot trobar el sistema. Per [accedir a la telemetria en temps real](system.md#api-usage-tab), aneu a **Administració** > **Sistema** > **Ús de l'API**. A la taula **Operacions**, les files d'operacions de l'API que utilitzen mètodes en temps real inclouen un botó per visualitzar l'ús de l'API en temps real. El botó es mostra amb el símbol d'uns prismàtics. Seleccioneu el botó per obrir una subfinestra lateral amb detalls per a l'ús de l'API en temps real a l'entorn actual.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Utilitzeu el selector **Agrupa per** amb la finalitat de triar com s'han de mostrar millor les interaccions en temps real en una cronologia que abasta des de les últimes 24 hores fins als últims 30 dies. Podeu agrupar les dades per mètode de l'API, nom complet de l'entitat (entitat ingerida), creat per (origen de la incidència), resultat (correcte o error) o codis d'error. Les dades estan disponibles com a gràfic d'historial i com a taula.

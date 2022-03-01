@@ -1,39 +1,37 @@
 ---
 title: Connector del LiveRamp
-description: Apreneu a configurar la connexió i exportar a LiveRamp.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Apreneu a exportar dades a LiveRamp.
+ms.date: 12/02/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: kishorem-ms
-ms.author: kishorem
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618923"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667172"
 ---
-# <a name="export-segments-to-liverampreg-preview"></a>Exportar segments a LiveRamp&reg; (versió preliminar)
+# <a name="liverampreg-connector-preview"></a>Connector de LiveRamp&reg; (visualització prèvia)
 
-Activeu les vostres dades a LiveRamp per connectar-vos amb més de 500 plataformes entre digital, social i televisió. Treballeu amb les dades de LiveRamp per orientar, suprimir i personalitzar les campanyes publicitàries.
+Activeu les dades a LiveRamp per connectar-vos amb més de 500 plataformes en ecosistemes digitals, socials i de TV. Treballeu amb les dades de LiveRamp per orientar, suprimir i personalitzar les campanyes publicitàries.
 
-## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
+## <a name="prerequisites"></a>Requisits previs
 
 - Es necessita una subscripció a LiveRamp per utilitzar aquest connector.
 - Per obtenir una subscripció, [poseu-vos en contacte amb LiveRamp](https://liveramp.com/contact/) directament. [Més informació sobre la incorporació a LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="set-up-connection-to-liveramp"></a>Configuració de la connexió a LiveRamp
+## <a name="connect-to-liveramp"></a>Connectar-se a LiveRamp
 
-1. Aneu a **Administració** > **Connexions**.
+1. A les conclusions del públic, aneu a **Administració** > **Destinacions d'exportació**.
 
-1. Seleccioneu **Afegeix connexió** i trieu **LiveRamp** per configurar la connexió.
+1. A la peça de **LiveRamp**, seleccioneu **Configura**.
 
-1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
-
-1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Doneu a la destinació un nom reconeixible al camp **Nom de visualització**.
 
 1. Proporcioneu un **nom d'usuari** i una **contrasenya** per al vostre compte de FTP segur (SFTP) de LiveRamp.
 Aquestes credencials poden ser diferents de les vostres credencials d'incorporació de LiveRamp.
@@ -42,25 +40,15 @@ Aquestes credencials poden ser diferents de les vostres credencials d'incorporac
 
 1. Després de la verificació correcta, proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**.
 
-1. Seleccioneu **Desa** per completar la connexió.
+1. Seleccioneu **Següent** per configurar el connector de LiveRamp.
 
-## <a name="configure-an-export"></a>Configurar una exportació
-
-Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
-
-1. Vés a **Dades** > **Exportacions**.
-
-1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
-
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció LiveRamp. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+## <a name="configure-the-connector"></a>Configurar el connector
 
 1. Al camp **Trieu el vostre identificador de clau**, seleccioneu el **Correu electrònic**, **Nom i adreça** o **Telèfon** per enviar a LiveRamp per a la resolució de la identitat.
-   > [!div class="mx-imgBorder"]
-   > ![Connector de LiveRamp amb l'assignació d'atributs.](media/export-liveramp-segments.png "Connector de LiveRamp amb l'assignació d'atributs")
 
-1. Assigneu els atributs corresponents de l'entitat *Client* per a l'identificador de clau seleccionat.
+1. Assigneu els atributs corresponents de l'entitat del client unificat per a l'identificador de clau seleccionat.
 
-1. Seleccioneu **Afegeix un atribut** per assignar més atributs per enviar-los a LiveRamp.
+1. Seleccioneu **Afegeix un atribut** per assignar atributs addicionals per enviar a LiveRamp.
 
    > [!TIP]
    > Si envieu més atributs d'identificador clau a LiveRamp, és possible que obtingueu una taxa de concordança més alta.
@@ -69,14 +57,15 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Seleccioneu **Desa**.
 
-Si deseu una exportació, no s'executarà l'exportació immediatament.
+> [!div class="mx-imgBorder"]
+> ![Connector de LiveRamp amb l'assignació d'atributs](media/export-liveramp-segments.png "Connector de LiveRamp amb l'assignació d'atributs")
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+## <a name="export-the-data"></a>Exportar les dades
 
+L'exportació començarà en breu si tots els requisits previs per a l'exportació s'han completat. L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab).
+Una vegada que l'exportació s'hagi completat correctament, podeu iniciar la sessió a la incorporació de LiveRamp per activar i distribuir les dades.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
 Quan habiliteu Dynamics 365 Customer Insights perquè transmeti dades a LiveRamp, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que LiveRamp compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

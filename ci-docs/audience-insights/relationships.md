@@ -1,20 +1,20 @@
 ---
 title: Relacions entre entitats i camins d'entitats
 description: Creeu i administreu relacions entre entitats procedents de diverses fonts de dades.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622866"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171152"
 ---
 # <a name="relationships-between-entities"></a>Relacions entre entitats
 
@@ -68,20 +68,6 @@ La relació consisteix en una *entitat d'origen* que conté la clau externa i un
 
 4. Seleccioneu **Desa** per crear la connexió personalitzada.
 
-## <a name="set-up-account-hierarchies"></a>Configurar jerarquies de comptes
-
-Els entorns configurats per utilitzar comptes empresarials com a públic principal de destinació poden configurar jerarquies de comptes per als comptes empresarials relacionats. Per exemple, una empresa que té unitats de negoci independents. 
-
-Les organitzacions creen jerarquies de comptes per administrar millor els comptes i les seves relacions entre si. La capacitat de conclusions del públic admet jerarquies de comptes principals i secundaris que ja existeixen a les dades de clients ingerides. Per exemple, comptes del Dynamics 365 Sales. Aquestes jerarquies es poden configurar a la pàgina **Relacions** de les conclusions del públic, a la pestanya de jerarquia de comptes.
-
-1. Aneu a **Dades** > **Relacions**.
-1. Seleccioneu la pestanya **Jerarquia del compte**.
-1. Seleccioneu **Nova jerarquia de comptes**. 
-1. A la subfinestra **Jerarquia de comptes**, proporcioneu un nom per a la jerarquia. El sistema crea un nom per a l'entitat de sortida. Podeu canviar el nom de l'entitat de sortida.
-1. Seleccioneu l'entitat que conté la jerarquia de comptes. Normalment és a la mateixa entitat que conté els comptes.
-1. Seleccioneu l'**ID del compte** i l'**ID principal del compte** de l'entitat seleccionada 
-1. Seleccioneu **Desa** per aplicar la configuració i finalitzar la jerarquia de comptes.
-
 ## <a name="view-relationships"></a>Visualitza relacions
 
 A la pàgina Relacions s'enumeren totes les relacions que s'han creat. Cada fila representa una relació, que també inclou detalls sobre l'entitat d'origen, l'entitat de destinació i la cardinalitat. 
@@ -96,7 +82,7 @@ Aquesta pàgina ofereix un conjunt d'opcions per a relacions existents i noves:
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar el visualitzador de relacions
 
-El visualitzador de relacions mostra un diagrama de xarxa de les relacions existents entre les entitats connectades i la seva cardinalitat. També visualitza el camí de la relació.
+El visualitzador de relacions mostra un diagrama de xarxa de les relacions existents entre les entitats connectades i la seva cardinalitat.
 
 Per personalitzar la visualització, podeu canviar la posició dels quadres arrossegant-los al llenç.
 
@@ -106,56 +92,6 @@ Opcions disponibles:
 - **Exporta com a imatge**: deseu la visualització actual com a fitxer d'imatge.
 - **Canvia a la disposició horitzontal/vertical**: canvieu l'alineació de les entitats i les relacions.
 - **Edita**: actualitzeu les propietats de les relacions personalitzades a la subfinestra d'edició i deseu els canvis.
-
-## <a name="relationship-paths"></a>Camins de relació
-
-Un camí de relació descriu les entitats que estan connectades amb relacions entre una entitat d'origen i una entitat de destinació. S'utilitza quan es crea un segment o una mesura que inclou altres entitats que no són l'entitat de perfil unificada i hi ha diverses opcions per arribar a l'entitat de perfil unificada. 
-
-Un camí de relació informa el sistema sobre quines relacions calen per accedir a l'entitat de perfil unificada. Les diferents rutes de relació poden donar resultats diferents.
-
-Per exemple, l'entitat *eCommerce_eCommercePurchases* té les relacions següents amb l'entitat del *client* del perfil unificat:
-
-- eCommerce_eCommercePurchases > Client
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
-
-Un camí de relació determina quines entitats podeu utilitzar quan creeu regles per a mesures o segments. Triar l'opció amb el camí de relació més llarg produirà menys resultats perquè els registres coincidents han de formar part de totes les entitats. En aquest exemple, un client ha d'haver adquirit béns mitjançant e-commerce(eCommerce_eCommercePurchases) en un punt de venda (POS_posPurchases) i participar en el nostre programa de fidelitat (loyaltyScheme_loyCustomers). Quan trieu la primera opció, és probable que rebeu més resultats perquè els clients només han d'existir en una entitat addicional.
-
-### <a name="direct-relationship"></a>Relació directa
-
-Una relació es classifica com una **relació directa** quan una entitat d'origen es relaciona amb una entitat de destinació amb només una relació.
-
-Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchases* connecta a una entitat de destinació *eCommerce_eCommerceContacts* només a través de *ContactId*, és una relació directa.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="L'entitat d'origen es connecta directament a l'entitat de destinació.":::
-
-#### <a name="multi-path-relationship"></a>Relació de diversos camins
-
-Una **relació de diversos camins** és un tipus especial de relació directa que connecta una entitat d'origen a més d'una entitat de destinació.
-
-Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchases* es relaciona amb dues entitats de destinació, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, és una relació de diversos camins.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="L'entitat d'origen es connecta directament a més d'una entitat de destinació a través d'una relació de diversos salts.":::
-
-### <a name="indirect-relationship"></a>Relació indirecta
-
-Una relació es classifica com una **relació indirecta** quan una entitat d'origen es relaciona amb un o més entitats addicionals abans de relacionar-se amb una entitat de destinació.
-
-#### <a name="multi-hop-relationship"></a>Relació de diversos salts
-
-Una *relació de diversos salts* és una *relació indirecta* que permet connectar una entitat d'origen a una entitat de destinació a través d'una o diverses entitats intermèdies.
-
-Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchasesWest* es connecta a una entitat intermèdia anomenada *eCommerce_eCommercePurchasesEast* i després es connecta a una entitat de destinació anomenada *eCommerce_eCommerceContacts*, es tracta d'una relació de diversos salts.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="L'entitat d'origen es connecta directament a una entitat de destinació amb una entitat intermèdia.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Relació de diversos salts i de diversos camins
-
-Les relacions de diversos salts i diversos camins es poden utilitzar per crear **relacions de diversos salts i diversos camins**. Aquest tipus especial combina les funcions de les **relacions de diversos salts** i les **relacions de diversos camins**. Us permet connectar-vos a més d'una entitat de destinació quan utilitzeu entitats intermèdies.
-
-Per exemple, si una entitat d'activitat anomenada *eCommerce_eCommercePurchasesWest* es connecta a una entitat intermèdia anomenada *eCommerce_eCommercePurchasesEast* i després es connecta a dues entitats de destinació anomenades *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, es tracta d'una relació de diversos salts i diversos camins.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="L'entitat d'origen es connecta directament a una entitat de destinació i es connecta a una altra entitat de destinació a través d'una entitat intermèdia.":::
 
 ## <a name="manage-existing-relationships"></a>Administrar le relacions existents 
 
@@ -169,6 +105,6 @@ Seleccioneu una relació i trieu una de les opcions següents:
 
 ## <a name="next-step"></a>Pas següent
 
-Les relacions del sistema i personalitzades s'utilitzen per [crear segments](segments.md) i [mesures](measures.md) basades en diverses fonts de dades que no estan aïllades.
+Les relacions de sistema i les personalitzades s'utilitzen per [crear segments](segments.md) basats en diverses fonts de dades que ja no estan aïllades.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

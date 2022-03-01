@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618670"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304638"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquir els perfils de client amb dades personalitzades (versió preliminar)
 
@@ -45,8 +45,6 @@ Per poder configurar la importació personalitzada d'SFTP, s'han de complir els 
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de pantalla quan introduïu la ubicació de les dades.":::
 
-1. Seleccioneu **Següent** i trieu el conjunt de dades de client. Pot ser tots els perfils de client o un segment.
-
 1. Seleccioneu **Següent** i proporcioneu un nom per a l'enriquiment i un nom per a l'entitat de sortida. 
 
 1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
@@ -66,7 +64,7 @@ Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix un
 1. Si la verificació s'ha completat, la connexió es pot desar seleccionant **Desa**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pàgina de configuració de connexió a Experian.](media/enrichment-SFTP-connection.png "Pàgina de configuració de connexió a Experian")
+   > ![Pàgina de configuració de connexió a Experian](media/enrichment-SFTP-connection.png "Pàgina de configuració de connexió a Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definició de les assignacions de camps 
@@ -125,6 +123,6 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="next-steps"></a>Passos següents
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

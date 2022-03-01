@@ -1,247 +1,113 @@
 ---
-title: Crear i administrar mesures
-description: Definiu mesures per analitzar i reflectir el rendiment del vostre negoci.
-ms.date: 11/01/2021
+title: Crear i editar mesures
+description: Definiu mesures relacionades amb el client per analitzar i reflectir el rendiment de determinades àrees de negoci.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732714"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405166"
 ---
 # <a name="define-and-manage-measures"></a>Definir i administrar mesures
 
-Les mesures us ajuden a comprendre millor els comportaments dels clients i el rendiment empresarial. Miren els valors rellevants dels [perfils unificats](data-unification.md). Per exemple, una empresa vol veure la *despesa total per client* per comprendre l'historial de compra d'un client individual o mesurar les *vendes totals de l'empresa* per comprendre els ingressos del nivell agregat de tot el negoci.  
+Les **mesures** representen indicadors clau de rendiment (KPI) que reflecteixen el rendiment i la salut d'àrees de negoci específiques. Les conclusions del públic proporcionen una experiència intuïtiva per a la creació de diversos tipus de mesures, mitjançant un creador de consultes que no necessita que escriviu cap codi o que valideu les mesures manualment. Podeu fer el seguiment de les mesures de la vostra empresa a la pàgina **Inici**, veure les mesures per a clients específics a la **Targeta del client** i utilitzar les mesures per definir segments de clients a la pàgina **Segments**.
 
-Les mesures es creen mitjançant el creador de mesures, una plataforma de consulta de dades amb diversos operadors i opcions d'assignació simples. Permet filtrar les dades, agrupar els resultats, detectar [rutes de relació d'entitats](relationships.md) i obtenir una visualització prèvia de la sortida.
+## <a name="create-a-measure"></a>Crear una mesura
 
-Utilitzeu el creador de mesures per planificar activitats empresarials consultant dades de clients i extreure informació. Per exemple, la creació d'una mesura de *despesa total per client* i *retorn total per client* ajuda a identificar un grup de clients amb una despesa alta però amb un retorn alt. Podeu [crear un segment](segments.md) per dirigir les pròximes accions recomanades. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Crear una mesura pròpia des de zero
-
-Aquesta secció us guia al llarg de la creació d'una nova mesura des de zero. Podeu crear una mesura amb atributs de dades a partir d'entitats de dades que tenen una relació configurada per connectar-se a l'entitat de perfil de client unificada.
-
-# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
+Aquesta secció us guiarà a través de la creació d'una mesura des de zero. Podeu crear mesures amb dades de diverses fonts de dades connectades a través de l'entitat Client. S'apliquen [límits de servei](service-limits.md).
 
 1. A les conclusions del públic, aneu a **Mesures**.
 
-1. Seleccioneu **Crea** i trieu **Crea'n una de pròpia**.
+2. Seleccioneu **Mesura nova**.
 
-1. Seleccioneu **Edita el nom** i proporcioneu un **nom** per a la mesura. 
+3. Trieu el **tipus** de mesura:
 
-1. A l'àrea de configuració, trieu la funció d'agregació al menú desplegable **Seleccioneu una funció**. Les funcions d'agregació inclouen: 
-   - **Suma**
-   - **Mitjana**
-   - **Recompte**
-   - **Compta únics**
-   - **Màx**
-   - **Min**
-   - **Primer**: pren el primer valor del registre de dades
-   - **Últim**: pren l'últim valor que s'ha afegit al registre de dades
+   - **Atribut de client**: un únic camp per client que reflecteix una puntuació, un valor o un estat per al client. Els atributs de client es creen com a atributs d'una nova entitat generada pel sistema anomenada **Customer_Measure**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Operadors per a càlculs de mesures.":::
+   - **Mesura del client**: informació sobre el comportament dels clients amb un desglossament per dimensions seleccionades. Es genera una entitat nova per a cada mesura, potencialment amb diversos registres per client.
 
-1. Seleccioneu **Afegeix un atribut** per seleccionar les dades que necessiteu per crear aquesta mesura.
-   
-   1. Seleccioneu la pestanya **Atributs**. 
-   1. Entitat de dades: trieu l'entitat que inclou l'atribut que voleu mesurar. 
-   1. Atribut de dades: trieu l'atribut que voleu utilitzar a la funció d'agregació per calcular la mesura. Només podeu seleccionar un atribut cada vegada.
-   1. Per seleccionar un atribut de dades d'una mesura existent, seleccioneu la pestanya **Mesures** o bé cerqueu una entitat o un nom de mesura. 
-   1. Seleccioneu **Afegeix** per afegir l'atribut seleccionat a la mesura.
+   - **Mesura empresarial**: segueix el rendiment de les empreses i la salut. Les mesures empresarials poden tenir dues sortides diferents: una sortida numèrica que es mostra a la pàgina **Inici** o a una entitat nova que trobeu a la pàgina **Entitats**.
 
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Seleccioneu un atribut que voleu utilitzar en els càlculs.":::
+4. Proporcioneu un **Nom** i un **Nom de visualització** opcional i, a continuació, seleccioneu **Següent**.
 
-1. Per crear mesures més complexes, podeu afegir més atributs o utilitzar operadors matemàtics a la funció de mesura.
+5. Per a la secció **Entitats**, seleccioneu la primera entitat de la llista desplegable. En aquest punt, haureu de decidir si necessitareu entitats addicionals com a part de la definició de la vostra mesura.
 
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Creeu una mesura complexa amb operadors matemàtics.":::
+   > [!div class="mx-imgBorder"]
+   > ![Definició de mesura](media/measure-definition.png "Definició de mesura")
 
-1. Per afegir filtres, seleccioneu el **Filtre** a l'àrea de configuració. 
-  
-   1. A la secció **Afegeix un atribut** de la subfinestra **Filtres**, seleccioneu l'atribut que voleu utilitzar per crear filtres.
-   1. Definiu els operadors de filtre per definir el filtre per a cada atribut seleccionat.
-   1. Seleccioneu **Aplica** per afegir els filtres a la mesura.
+   Per afegir més entitats, seleccioneu **Afegeix una entitat** i seleccioneu les entitats que voleu utilitzar per a la mesura.
 
-1. Per afegir dimensions, seleccioneu **Dimensió** a l'àrea de configuració. Les dimensions es mostraran com a columnes a l'entitat de sortida de mesura.
- 
-   1. Seleccioneu **Edita les dimensions** per afegir atributs de dades pels quals voleu agrupar els valors de mesura. Per exemple, ciutat o gènere. Per defecte, la dimensió *CustomerID* se selecciona per crear *mesures del nivell del client*. Si voleu crear *mesures de nivell de negoci*, podeu suprimir la dimensió per defecte.
-   1. Seleccioneu **Fet** per afegir les dimensions a la mesura.
+   > [!NOTE]
+   > Només podeu seleccionar les entitats que tenen relacions amb l'entitat inicial. Per obtenir més informació sobre la definició de relacions, vegeu [Relacions](relationships.md).
 
-1. Si hi ha valors a les dades que heu de substituir per un enter, seleccioneu **Regles**. Configureu la regla i assegureu-vos que trieu només els nombres enters com a substituts. Per exemple, substituïu *nul* per *0*.
+6. Opcionalment, podeu configurar variables. A la secció **Variables**, seleccioneu **Variable nova**.
 
-1. Si hi ha diversos rutes entre l'entitat de dades assignada i l'entitat *Client*, heu de triar un dels [camins de relació d'entitat](relationships.md) identificats. Els resultats de la mesura poden variar en funció del camí seleccionat. 
-   
-   1. Seleccioneu el **Camí de la relació** i trieu el camí d'entitat que s'ha d'utilitzar per identificar la mesura. Si només hi ha un camí a l'entitat *Client*, aquest control no es mostrarà.
-   1. Seleccioneu **Fet** per aplicar la vostra selecció. 
+   Les variables són càlculs que es fan a cadascun dels registres seleccionats. Per exemple, la summa de vendes en punt de venda (POS) i en línia per a cadascun dels registres dels vostres clients.
 
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccioneu la ruta d'entitat de la mesura.":::
+7. Proporcioneu un **Nom** per a la variable.
 
-1. Per afegir més càlculs per a la mesura, seleccioneu **Càlcul nou**. Només podeu utilitzar les entitats al mateix camí d'entitat per als càlculs nous. Més càlculs es mostraran com a columnes noves a l'entitat de sortida de mesura.
+8. A l'àrea **Expressió**, trieu un camp amb el qual començar el càlcul.
 
-1. Seleccioneu **...** en el càlcul per **duplicar**, **canviar el nom** o **suprimir** un càlcul d'una mesura.
+9. Escriviu una expressió a l'àrea **Expressió** mentre trieu més camps per incloure'ls al càlcul.
 
-1. A l'àrea **Visualització prèvia**, veureu l'esquema de dades de l'entitat de sortida de mesura, incloent-hi els filtres i dimensions. La visualització prèvia reacciona dinàmicament als canvis a la configuració.
+   > [!NOTE]
+   > Actualment, només s'admeten expressions aritmètiques. A més, el càlcul de variables no està admès per a entitats de diferents [camins d'entitat](relationships.md).
 
-1. Seleccioneu **Executa** per calcular els resultats de la mesura configurada. Seleccioneu **Desa i tanca** si voleu mantenir la configuració actual i executar la mesura més endavant.
+10. Seleccioneu **Fet**.
 
-1. Aneu a **Mesures** per veure la mesura que s'ha creat recentment a la llista.
+11. A la secció **Definició de la mesura**, definireu la manera com s'afegeixen les entitats escollides i de les variables calculades a una nova entitat o atribut de mesura.
 
-# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
+12. Seleccioneu **Dimensió nova**. Podeu pensar en una dimensió com a funció *Agrupa per*. La sortida de dades de l'entitat o l'atribut de mesura s'agruparà per totes les dimensions definides.
 
-1. A les conclusions del públic, aneu a **Mesures**.
+    > [!div class="mx-imgBorder"]
+    > ![Triar el cicle d'agregació](media/measures-businessreport-measure-definition2.png "Triar el cicle d'agregació")
 
-1. Seleccioneu **Crea** i trieu **Crea'n una de pròpia**.
+    Seleccioneu o introduïu la informació següent com a part de la definició de la dimensió:
 
-1. Seleccioneu **Edita el nom** i proporcioneu un **nom** per a la mesura. 
+    - **Entitat**: si definiu una entitat Mesura, hauria d'incloure com a mínim un atribut. Si definiu un atribut Mesura, només inclourà un atribut per defecte. Aquesta selecció és l'elecció de l'entitat que inclou aquest atribut.
+    - **Camp**: trieu l'atribut específic que s'ha d'incloure a l'entitat o l'atribut de mesura.
+    - **Dipòsit**: trieu si voleu agregar dades diàriament, mensualment o anualment. Només es tracta d'una selecció obligatòria si heu seleccionat un atribut de tipus de data.
+    - **Com a**: defineix el nom del camp nou.
+    - **Nom de visualització**: defineix el nom de visualització del camp.
 
-1. A l'àrea de configuració, trieu la funció d'agregació al menú desplegable **Seleccioneu una funció**. Les funcions d'agregació inclouen: 
-   - **Suma**
-   - **Mitjana**
-   - **Recompte**
-   - **Compta únics**
-   - **Màx**
-   - **Min**
-   - **Primer**: pren el primer valor del registre de dades
-   - **Últim**: pren l'últim valor que s'ha afegit al registre de dades
+    > [!NOTE]
+    > La mesura empresarial es desarà com una entitat de número únic i es mostrarà a la pàgina **Inici**, tret que afegiu més dimensions a la mesura. Després d'afegir més dimensions, la mesura *no* es mostrarà a la pàgina **Inici**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Operadors per a càlculs de mesures.":::
+13. Opcionalment, afegiu funcions d'agregació. Qualsevol agregació que creeu resulta en un valor nou a l'entitat o l'atribut de mesura. Les funcions d'agregació admeses són: **Mínim**, **Màxim**, **Mitjana**, **Mediana**, **Suma**, **Recompte únic**, **Primer** (pren el primer registre d'un valor de dimensió) i **Últim** (pren l'últim registre afegit a un valor de dimensió).
 
-1. Seleccioneu **Afegeix un atribut** per seleccionar les dades que necessiteu per crear aquesta mesura.
-   
-   1. Seleccioneu la pestanya **Atributs**. 
-   1. Entitat de dades: trieu l'entitat que inclou l'atribut que voleu mesurar. 
-   1. Atribut de dades: trieu l'atribut que voleu utilitzar a la funció d'agregació per calcular la mesura. Només podeu seleccionar un atribut cada vegada.
-   1. Per seleccionar un atribut de dades d'una mesura existent, seleccioneu la pestanya **Mesures** o bé cerqueu una entitat o un nom de mesura. 
-   1. Seleccioneu **Afegeix** per afegir l'atribut seleccionat a la mesura.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Seleccioneu un atribut que voleu utilitzar en els càlculs.":::
-
-1. Per crear mesures més complexes, podeu afegir més atributs o utilitzar operadors matemàtics a la funció de mesura.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Creeu una mesura complexa amb operadors matemàtics.":::
-
-1. Per afegir filtres, seleccioneu el **Filtre** a l'àrea de configuració. 
-  
-   1. A la secció **Afegeix un atribut** de la subfinestra **Filtres**, seleccioneu l'atribut que voleu utilitzar per crear filtres.
-   1. Definiu els operadors de filtre per definir el filtre per a cada atribut seleccionat.
-   1. Seleccioneu **Aplica** per afegir els filtres a la mesura.
-
-1. Per afegir dimensions, seleccioneu **Dimensió** a l'àrea de configuració. Les dimensions es mostraran com a columnes a l'entitat de sortida de mesura.
- 
-   1. Seleccioneu **Edita les dimensions** per afegir atributs de dades pels quals voleu agrupar els valors de mesura. Per exemple, ciutat o gènere. Per defecte, la dimensió *CustomerID* se selecciona per crear *mesures del nivell del client*. Si voleu crear *mesures de nivell de negoci*, podeu suprimir la dimensió per defecte.
-   1. Seleccioneu **Fet** per afegir les dimensions a la mesura.
-
-1. Si hi ha valors a les dades que heu de substituir per un enter, seleccioneu **Regles**. Configureu la regla i assegureu-vos que trieu només els nombres enters com a substituts. Per exemple, substituïu *nul* per *0*.
-
-1. Podeu utilitzar la **Genera un informe dels subcomptes** si [utilitzeu comptes amb jerarquies](relationships.md#set-up-account-hierarchies).
-   - Si està definit com a **Desactivat**, la mesura es calcula per a cada compte. Cada compte té el seu propi resultat.
-   - Si està definit com a **Activat**, seleccioneu **Edita** per triar la jerarquia de comptes segons les jerarquies ingerides. La mesura només produirà un resultat, perquè s'agrega amb subcomptes.
-
-1. Si hi ha diversos rutes entre l'entitat de dades assignada i l'entitat *Client*, heu de triar un dels [camins de relació d'entitat](relationships.md) identificats. Els resultats de la mesura poden variar en funció del camí seleccionat. 
-   
-   1. Seleccioneu el **Camí de la relació** i trieu el camí d'entitat que s'ha d'utilitzar per identificar la mesura. Si només hi ha un camí a l'entitat *Client*, aquest control no es mostrarà.
-   1. Seleccioneu **Fet** per aplicar la vostra selecció. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccioneu la ruta d'entitat de la mesura.":::
-
-1. Seleccioneu **...** en el càlcul per **duplicar**, **canviar el nom** o **suprimir** un càlcul d'una mesura.
-
-1. A l'àrea **Visualització prèvia**, veureu l'esquema de dades de l'entitat de sortida de mesura, incloent-hi els filtres i dimensions. La visualització prèvia reacciona dinàmicament als canvis a la configuració.
-
-1. Seleccioneu **Executa** per calcular els resultats de la mesura configurada. Seleccioneu **Desa i tanca** si voleu mantenir la configuració actual i executar la mesura més endavant.
-
-1. Aneu a **Mesures** per veure la mesura que s'ha creat recentment a la llista.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Utilitzar una plantilla per crear una mesura
-
-Podeu utilitzar plantilles predefinides de mesures que s'utilitzen habitualment per crear-les. Les descripcions detallades de les plantilles i una experiència guiada us ajuden a crear una mesura de manera eficient. Les plantilles es creen a partir de dades assignades de l'entitat *Activitat unificada*. Per tant, assegureu-vos que heu configurat [activitats de client](activities.md) abans de crear una mesura a partir d'una plantilla.
-
-# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
-
-Podeu utilitzar plantilles predefinides de mesures que s'utilitzen habitualment per crear-les. Les descripcions detallades de les plantilles i una experiència guiada us ajuden a crear una mesura de manera eficient. Les plantilles es creen a partir de dades assignades de l'entitat *Activitat unificada*. Per tant, assegureu-vos que heu configurat [activitats de client](activities.md) abans de crear una mesura a partir d'una plantilla.
-
-Plantilles de mesura disponibles: 
-- Valor de transacció mitjà (ATV)
-- Valor total de la transacció
-- Mitjana d'ingressos diaris
-- Mitjana d'ingressos anuals
-- Recompte de transaccions
-- Punts de fidelitat obtinguts
-- Punts de fidelitat bescanviats
-- Balanç de punts de fidelitat
-- Vida del client activa
-- Duració de la subscripció a la fidelitat
-- Temps des de l'última compra
-
-Al procediment següent es descriuen els passos per crear una mesura nova mitjançant una plantilla.
-
-1. A les conclusions del públic, aneu a **Mesures**.
-
-1. Seleccioneu **Crea** i seleccioneu **Tria una plantilla**.
-
-   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla del menú desplegable quan es crea una mesura nova amb el la plantilla destacada.":::
-
-1. Cerqueu la plantilla que s'ajusti a les vostres necessitats i seleccioneu **Tria la plantilla**.
-
-1. Reviseu les dades necessàries i seleccioneu **Introducció** si teniu totes les dades col·locades.
-
-1. A la subfinestra **Edita el nom**, definiu el nom de la mesura i l'entitat de sortida. 
-
-1. Seleccioneu **Fet**.
-
-1. A la secció **Definiu el període de temps**, definiu el període de temps de les dades que voleu utilitzar. Trieu si voleu que la mesura nova cobreixi tot el conjunt de dades seleccionant **Tot el temps** o si voleu que la mesura se centri en un **Període de temps específic**.
-
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que mostra la secció de període de temps en configurar una mesura a partir d'una plantilla.":::
-
-1. A la secció següent, seleccioneu **Afegeix dades** per triar les activitats i assignar les dades corresponents de l'entitat *Activitat unificada*.
-
-    1. Pas 1 de 2: a **Tipus d'activitat**, trieu el tipus d'entitat que voleu utilitzar. Per a les **Activitats**, seleccioneu les entitats que voleu assignar.
-    1. Pas 2 de 2: trieu l'atribut de l'entitat *Activitat unificada* per al component que requereix la fórmula. Per exemple, per al valor de Transacció mitjana, és l'atribut que representa el Valor de transacció. Per a la **Marca horària de l'activitat**, trieu l'atribut de l'entitat Activitat unificada que representi la data i l'hora de l'activitat.
-   
-1. Un cop l'assignació de dades s'ha completat, podeu veure l'estat com a **Completat** i el nom de les activitats i els atributs assignats.
-
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Captura de pantalla d'una configuració de plantilla de mesura completada.":::
-
-1. Ara podeu seleccionar **Executa** per calcular els resultats de la mesura. Per refinar-la més tard, seleccioneu **Desa l'esborrany**.
-
-# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
-
-Aquesta característica només està disponible per a les mesures creades als entorns amb clients individuals com a públic de destinació principal.
-
----
+14. Seleccioneu **Desa** per aplicar els canvis a la mesura.
 
 ## <a name="manage-your-measures"></a>Administrar les mesures
 
-Podeu consultar la llista de mesures a la pàgina **Mesures**.
+Un cop creada com a mínim una mesura, apareixerà una llista de mesures a la pàgina **Mesures**.
 
-Trobareu informació sobre el tipus de mesura, l'autor, la data de creació, l'estat i l'estat. Quan seleccioneu una mesura de la llista, podeu obtenir una visualització prèvia de la sortida i baixar un fitxer CSV.
+Trobareu informació sobre el tipus de mesura, el creador, la data i l'hora de la creació, la data i l'hora de la darrera edició, l'estat (si la mesura està activa, inactiva o amb errors) i la data i l'hora de la darrera actualització. Quan seleccioneu una mesura de la llista, podeu veure una visualització prèvia de la seva sortida.
 
 Per actualitzar totes les mesures al mateix temps, seleccioneu **Actualitza-ho tot** sense seleccionar una mesura concreta.
 
 > [!div class="mx-imgBorder"]
-> ![Accions per administrar mesures individuals.](media/measure-actions.png "Accions per administrar mesures individuals.")
+> ![Accions per administrar mesures individuals](media/measure-actions.png "Accions per administrar mesures individuals")
 
-Seleccioneu una mesura de la llista per a les opcions següents:
+De manera alternativa, seleccioneu una mesura de la llista i feu una de les accions següents:
 
 - Seleccioneu el nom de la mesura per veure'n els detalls.
 - **Editeu** la configuració de la mesura.
-- **Actualitzeu** la mesura segons les dades més recents.
 - **Canvieu el nom** de la mesura.
 - **Suprimiu** la mesura.
-- **Activeu** o **desactiveu-la**. Les mesures inactives no s'actualitzaran durant una [actualització planificada](system.md#schedule-tab).
+- Seleccioneu els punts suspensius (...) i, a continuació, **Actualitza** per iniciar el procés d'actualització per a la mesura.
+- Seleccioneu els punts suspensius (...) i després **Baixa** per obtenir un fitxer .CSV de la mesura.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
 
 ## <a name="next-step"></a>Pas següent
 
-Podeu utilitzar les mesures existents per crear un [segment de client](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Podeu utilitzar les mesures existents per crear el primer segment de client a la pàgina **Segments**. Per obtenir més informació, vegeu [Segments](segments.md).
