@@ -1,25 +1,24 @@
 ---
-title: Exporta les dades de Customer Insights als amfitrions SFTP (conté vídeo)
+title: Exportar dades del Customer Insights a amfitrions d'SFTP
 description: Apreneu a configurar la connexió i exportar a una ubicació SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 3663a48955f0b1db8a96e25403e5f8947bc6a220
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231142"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976881"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segments i altres dades a SFTP (versió preliminar)
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Exportar llistes de segments i altres dades a SFTP (versió preliminar)
 
 Utilitzeu les dades de client en aplicacions de tercers exportant-les a una ubicació de Protocol de transferència segura de fitxers (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
@@ -27,7 +26,6 @@ Utilitzeu les dades de client en aplicacions de tercers exportant-les a una ubic
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Les destinacions SFTP darrere dels tallafocs actualment no són compatibles. 
 - El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor. 
 - L'exportació d'entitats amb fins a 100 milions de perfils de clients pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada de dos nuclis de CPU i 1 Gb de memòria. 
 

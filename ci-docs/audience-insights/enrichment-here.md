@@ -3,17 +3,18 @@ title: Enriquiment amb l'enriquiment de tercers de HERE Technologies
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230370"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555295"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
 
@@ -84,7 +85,7 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="next-steps"></a>Passos següents
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md) i [mesures](measures.md) i, fins i tot, [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

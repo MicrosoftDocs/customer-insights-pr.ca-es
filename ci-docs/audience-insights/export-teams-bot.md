@@ -1,19 +1,20 @@
 ---
 title: Bot per al Microsoft Teams
 description: Cerqueu els perfils de client unificats al Microsoft Teams amb l'ajuda d'un bot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232090"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554338"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot del Teams per al Dynamics 365 Customer Insights (versió preliminar)
 
@@ -30,10 +31,7 @@ Per configurar i configurar el bot, cal complir els requisits previs següents:
 - El [procés d'unificació](data-unification.md) s'ha completat.
 - S'han afegit camps a l'[índex de cerca i filtratge](search-filter-index.md).
 - El Customer Insights i el Teams es troben a la mateixa organització.
-- L'entorn té definits com a públic de destinació principal clients individuals. Els comptes empresarials no estan admesos.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurar el bot
 
 1. A les conclusions del públic, aneu a **Administració** > **Destinacions d'exportació**.

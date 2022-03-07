@@ -3,17 +3,18 @@ title: Exportar dades del Customer Insights a LinkedIn Ads
 description: Apreneu a configurar la connexió i exportar a LinkedIn Ads.
 ms.date: 10/08/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7a6bb466652b8703a4784329a5e675965f557e82
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231091"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866876"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segments a LinkedIn Ads (versió preliminar)
 
@@ -21,7 +22,7 @@ Exporteu segments de perfils de client unificats a LinkedIn Ads per crear públi
 
 ## <a name="prerequisites"></a>Requisits previs
 
--   Teniu un [compte de LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) i les credencials d'administrador corresponents.
+-   Teniu un [compte LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) i les credencials d'administrador corresponents.
 -   Teniu [segments configurats](segments.md) a les conclusions del públic.
 -   Els perfils de client als segments exportats contenen un camp amb una adreça electrònica.
 
@@ -42,13 +43,13 @@ Exporteu segments de perfils de client unificats a LinkedIn Ads per crear públi
 
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte és administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporcioneu [l'identificador de compte del LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+1. Proporcioneu [l'identificador del compte LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
 
 1. Seleccioneu **Connecta't** per inicialitzar la connexió a Campaign Monitor.
 
-1. Seleccioneu **Autentica amb LinkedIn** i proporcioneu les vostres credencials d'administrador per a LinkedIn Campaign Manager.
+1. Seleccioneu **AUTENTICA amb el LinkedIn** i proporcioneu les vostres credencials d'administrador per a LinkedIn Campaign Manager.
 
 1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
 
@@ -68,7 +69,7 @@ Podeu configurar una exportació si teniu accés a una connexió d'aquest tipus.
 
 1. A la secció **Coincidència de dades**, per a la destinació dels contactes, seleccioneu com a mínim un camp que representi l'adreça electrònica, l'identificador d'anunci d'Apple, l'identificador d'anunci de Google, l'identificador d'usuari de Google o nom i cognom d'un client. Si trieu la destinació d'empresa, seleccioneu com a mínim un camp que representi un nom d'empresa, un domini de correu electrònic, l'URL de la pàgina del LinkedIn, el símbol borsari o el lloc web. Es poden seleccionar altres camps per definir encara més l'exportació. 
 
-1. Seleccioneu els segments que voleu exportar. Els públics coincidents al LinkedIn Campaign Manager es crearan automàticament amb el nom dels segments que heu seleccionat per exportar. Cada segment serà un públic coincident diferent. 
+1. Seleccioneu els segments que voleu exportar. Els públics coincidents de LinkedIn Campaign Manager es crearan automàticament amb el nom dels segments que heu seleccionat per exportar. Cada segment serà un públic coincident diferent. 
 
 1. Seleccioneu **Desa**.
 
@@ -79,6 +80,6 @@ L'exportació s'executa amb cada [actualització planificada](system.md#schedule
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
-Quan permeteu al Dynamics 365 Customer Insights transmetre dades a LinkedIn Ads, permeteu la transferència de dades fora del límit del Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades quan ho indiqueu, però sou responsable d'assegurar-vos que LinkedIn Ads compleixi les obligacions de privadesa o de seguretat que pugueu teniu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quan activeu Dynamics 365 Customer Insights transmetre dades a LinkedIn Ads, permeteu la transferència de dades fora del límit de compliment de Dynamics 365 Customer Insights, incloses dades potencialment sensibles, com ara dades personals. Microsoft transferirà aquestes dades quan ho indiqueu, però sou responsable d'assegurar-vos que LinkedIn Ads compleixi les obligacions de privadesa o de seguretat que pugueu teniu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per aturar l'ús d'aquesta funcionalitat.
+L'administrador Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per aturar l'ús d'aquesta funcionalitat.

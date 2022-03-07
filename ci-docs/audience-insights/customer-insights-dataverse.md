@@ -1,22 +1,20 @@
 ---
 title: Dades del Customer Insights al Microsoft Dataverse
 description: Utilitzeu les entitats del Customer Insights com a taules al Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 06/15/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355417"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650030"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb dades del Customer Insights al Microsoft Dataverse
 
@@ -26,7 +24,11 @@ El Customer Insights ofereix l'opció de fer que les entitats de sortida estigui
 
 **Organitzacions amb entorns del Dataverse existents**
 
-Les organitzacions que ja utilitzen el Dataverse poden [utilitzar un dels entorns del Dataverse existents](create-environment.md) quan un administrador configura conclusions del públic. En proporcionar l'adreça URL a l'entorn del Dataverse, s'adjunta a l'entorn nou de les conclusions del públic. Per garantir el millor rendiment possible, els entorns del Customer Insights i del Dataverse s'han d'allotjar a la mateixa regió.
+Les organitzacions que ja utilitzen el Dataverse poden [utilitzar un dels entorns del Dataverse existents](get-started-paid.md) quan un administrador configura conclusions del públic. En proporcionar l'adreça URL a l'entorn del Dataverse, s'adjunta a l'entorn nou de les conclusions del públic. Per garantir el millor rendiment possible, els entorns del Customer Insights i del Dataverse s'han d'allotjar a la mateixa regió.
+
+Per adjuntar un entorn del Dataverse, expandiu la **Configuració avançada** en crear l'entorn de les conclusions del públic. Proporcioneu l'**adreça URL de l'entorn del Microsoft Dataverse** i activeu la casella de selecció per **Habilitar l'ús compartit de dades**.
+
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Organització nova**
 
@@ -47,7 +49,6 @@ Algunes entitats de sortida dels coneixements del públic estan disponibles com 
 - [CustomerMeasure](#customermeasure)
 - [Enriquiment](#enrichment)
 - [Predicció](#prediction)
-- [Pertinença al segment](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -124,16 +125,3 @@ Aquesta taula conté la sortida de les prediccions de models.
 | Valors               | Cadena JSON | Llista d'atributs produïts pel model |
 | msdynci_predictionid | GUID        | GUID determinista generat a partir de msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Pertinença al segment
-
-Aquesta taula conté informació de pertinença al segment dels perfils de clients.
-
-| Column        | Type | Descripció                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Identificador del perfil del client        |
-| SegmentProvider      | String       | Aplicació que publica els segments. Per defecte: estadístiques del públic         |
-| SegmentMembershipType | String       | Tipus de client d'aquest registre de pertinença al segment. Admet diversos tipus, com ara client, contacte o compte. Per defecte: client  |
-| Segments       | Cadena JSON  | Llista de segments únics dels que el perfil de client és membre      |
-| msdynci_identifier  | String   | Identificador únic del registre de pertinença al segment. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID determinista generat a partir de`msdynci_identifier`          |

@@ -1,36 +1,41 @@
 ---
 title: Cercar i filtrar perfils de client
 description: Trobeu ràpidament informació sobre els perfils de client unificats i filtreu-los per atributs especificats.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+ms.date: 04/16/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-search-filter
-- customerInsights
-ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354497"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405170"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfils de client: índex de cerca i filtratge
 
 El resultat d'unificar les dades dels clients és una entitat de perfil de client que proporciona una visualització unificada a la base de clients total. Per [cercar ràpidament informació sobre un client o un grup de clients determinat](customer-profiles.md), podeu configurar les funcionalitats **Cerca** i **Filtre** a la pàgina **Clients**. Seguiu llegint per obtenir més informació sobre com els administradors poden editar els atributs a la pàgina **Índex de cerca i filtre**, que estan disponibles per als usuaris per cercar i filtrar.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Filtre de cerca":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Filtre de cerca](media/search-filter.png "Filtre de cerca")
 
 ## <a name="add-fields-and-specify-attributes"></a>Afegir camps i especificar atributs
 
 Si és la primera vegada que definiu els atributs que es poden cercar com a administrador, primer heu de definir els camps indexats. Us suggerim que trieu tots els atributs pels quals els usuaris puguin cercar i filtrar els clients a la pàgina **Clients**. Només podeu especificar els atributs que hi ha a l'entitat de perfil de client que heu creat durant el procés d'unificació de dades.
 
 1. Obriu la pàgina **Clients** i seleccioneu **Cerca i filtra l'índex**.
+
+> [!NOTE]
+> Creem una configuració d'índex de cerca per defecte als atributs disponibles de l'entitat Client dels tipus semàntics següents tal com es defineix a la pàgina d'assignació.
+> - Nom, cognom, segon nom, nom complet de la persona
+> - Nom de l'organització
+> - Adreça electrònica
+> - Número de telèfon
+> - Informació de la ubicació
 
 2. Seleccioneu **+ Afegeix** per especificar els camps indexats.
 
@@ -59,11 +64,4 @@ El menú **Filtre** de la pàgina **Clients** pot incloure un nombre variable de
 
 2. Seleccioneu **Desa** per aplicar els canvis.
 
-3. Seleccioneu **Executa** una vegada que estigueu a punt per aplicar la configuració. Un cop processats els canvis, els trobareu a les [targetes de client de la pàgina Client](customer-profiles.md). 
-
-## <a name="next-steps"></a>Passos següents
-
-Reviseu la [pàgina de perfils unificats](customer-profiles.md) per cercar perfils o utilitzar els camps indexats per veure un subconjunt de tots els perfils unificats.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Seleccioneu **Executa** una vegada que estigueu a punt per aplicar la configuració.

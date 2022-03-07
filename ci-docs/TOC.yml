@@ -56,10 +56,6 @@
           href: audience-insights/connect-common-data-model.md
         - name: Afegir un llac de dades administrat del Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Afegir el Azure Synapse Analytics
-          href: audience-insights/connect-synapse.md
-        - name: Enriquiment per a fonts de dades
-          href: audience-insights/data-sources-enrichment.md
         - name: Actualització incremental per a fonts de dades
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestió de dades en temps real
@@ -102,8 +98,6 @@
           href: audience-insights/enrichment-here.md
         - name: Enriquir amb el Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Enriqueix-ho amb LiveRamp
-          href: audience-insights/enrichment-liveramp.md
         - name: Enriquiment amb Experian
           href: audience-insights/enrichment-experian.md
         - name: Enriquir-se amb Office 365 dades
@@ -126,12 +120,8 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Mesures
       items:
-        - name: Visió general de les mesures
+        - name: Definir les mesures i els KPI
           href: audience-insights/measures.md
-        - name: Crea un compàs nou
-          href: audience-insights/measure-builder.md
-        - name: Utilitza una plantilla de compàs
-          href: audience-insights/measure-templates.md
     - name: Prediccions
       items:
         - name: Predir dades amb l'ajuda de l'IA
@@ -262,6 +252,8 @@
               href: audience-insights/diagnostics.md
     - name: Extensibilitat
       items:
+        - name: Integrar dades web de conclusions d'interacció
+          href: audience-insights/integrate-engagement-insights.md
         - name: Revisar els esquemes d'entitats al Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Dades del Customer Insights al Dataverse
@@ -305,7 +297,83 @@
         - name: Crear prediccions amb dades de consentiment
           href: consent-management/predictions-consent-data.md
 - name: Conclusions sobre la interacció (versió preliminar)
-  href: engagement-insights/overview.md
+  items:
+    - name: Centre d'ajuda
+      href: engagement-insights/index.yml
+    - name: Quant a les conclusions d'interacció
+      href: engagement-insights/overview.md
+    - name: Introducció
+      items:
+        - name: Guia d'inici ràpid
+          href: engagement-insights/get-started.md
+        - name: Creació d'un entorn
+          href: engagement-insights/create-new-environment.md
+        - name: Crea una àrea de treball
+          href: engagement-insights/create-workspace.md
+        - name: Capturar esdeveniments de llocs web i aplicacions mòbils
+          href: engagement-insights/developer-resources.md
+        - name: Conceptes i terminologia
+          href: engagement-insights/glossary.md
+    - name: Esdeveniments
+      items:
+        - name: Crear i modificar esdeveniments
+          href: engagement-insights/refined-events.md
+        - name: Reconèixer incidències web de visitants prèviament autenticats
+          href: engagement-insights/unknown-to-known.md
+        - name: Exporta esdeveniments
+          href: engagement-insights/export-events.md
+    - name: Informes
+      items:
+        - name: Visualitza els informes
+          href: engagement-insights/view-reports.md
+        - name: Creació d'informes personalitzats
+          href: engagement-insights/custom-reports.md
+        - name: Crear informes de perfils unificats
+          href: engagement-insights/profile-reports.md
+        - name: Visualitzar i crear dimensions
+          href: engagement-insights/dimensions.md
+        - name: Visualitzar i crear mètriques
+          href: engagement-insights/metrics.md
+        - name: Visualitzar i crear segments
+          href: engagement-insights/segments.md
+    - name: Anàlisi de recorreguts
+      items:
+        - name: Crear i administrar informes d'embut
+          href: engagement-insights/funnel-reports.md
+    - name: Recursos per a desenvolupadors
+      items:
+        - name: Informació general de recursos per a desenvolupadors
+          href: engagement-insights/developer-resources.md
+        - name: Tutorial de l'SDK web
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Mostra de l'SDK web
+          href: engagement-insights/websdk-sample.md
+        - name: Tutorial de l'SDK de l'Android
+          href: engagement-insights/get-started-android.md
+        - name: Exemple de l'SDK de l'Android
+          href: engagement-insights/androidsdk-sample.md
+        - name: Tutorial de l'SDK d'iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Exemple de l'SDK de l'iOS
+          href: engagement-insights/iossdk-sample.md
+    - name: Administració
+      items:
+        - name: Funcions i permisos
+          href: engagement-insights/user-roles.md
+        - name: Administrar entorns i àrees de treball
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Administrar les galetes i el consentiment de l'usuari
+          href: engagement-insights/user-consent-storage.md
+    - name: Disponibilitat regional
+      href: engagement-insights/regional-availability.md
+- name: Compartir dades entre capacitats
+  items:
+    - name: Enllaç de les conclusions d'interacció i del públic
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Ús dels segments de conclusions del públic en informes de conclusions sobre la interacció
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Utilitzar dimensions demogràfiques per dividir dades de comportament
+      href: engagement-insights/curate-dimensions.md
 - name: Límits de servei
   href: service-limits.md
 - name: Drets i sol·licituds de DSR

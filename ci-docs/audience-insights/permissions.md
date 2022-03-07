@@ -1,23 +1,20 @@
 ---
 title: Administrar permisos d'usuaris
 description: Informeu-vos sobre els permisos i les funcions d'usuari.
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-permissions
-- ci-system-security
-- customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355925"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689208"
 ---
 # <a name="user-permissions"></a>Permisos d'usuari
 
@@ -34,7 +31,7 @@ Hi ha tres tipus de funcions:
 - Visualitzeu i exploreu la pàgina **Enriquiment**.
 - Exploreu i exporteu entitats mitjançant la pàgina **Entitats**.
 - Visualitzeu l'estat dels processos del sistema mitjançant la pàgina **Sistema**.
-- Visualitzeu les exportacions a la pàgina **Exportacions**.
+- Exporteu segments de la pàgina **Segments**.
 - Instal·leu i utilitzeu l'escriptori digital del **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Col·laborador
@@ -46,7 +43,6 @@ Hi ha tres tipus de funcions:
 - Creeu segments mitjançant la pàgina **Segments**.
 - Creeu mesures mitjançant la pàgina **Mesures**.
 - Administrar la configuració i enriquir els perfils dels clients des de la pàgina **Enriquiment** (només per a enriquiment propi).
-- Administrar i crear exportacions a partir de connexions compartides amb col·laboradors. [Més informació sobre com els administradors permeten als col·laboradors utilitzar una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrador
 
@@ -54,9 +50,8 @@ Hi ha tres tipus de funcions:
 - Canvieu la configuració de la pàgina **Sistema**, incloent-hi l'idioma de treball i les planificacions d'actualitzacions per als processos del sistema.
 - Visualitzeu i afegiu permisos mitjançant la pàgina **Permisos**.
 - Definiu les definicions de filtre i cerca per a la pàgina Clients mitjançant la pàgina **Cerca i filtra l'índex** (accessible a través de la pàgina **Clients**).
-- Administrar connexions i permetre-les per a altres funcions d'usuari a la pàgina **Connexions**.
+- Definiu destinacions de segment del Dynamics 365 Sales mitjançant la pàgina **Destinacions d'exportació**.
 - Administrar la configuració i enriquir els perfils dels clients des de la pàgina **Enriquiment** (per a tots els enriquiments).
-- Administrar i crear exportacions a la pàgina **Exportacions**.
 - Instal·leu i utilitzeu el **Complement de targeta del client**.
 - Afegiu i utilitzeu el **connector del Power Apps**.
 - Habiliteu l'ús de les [API del Customer Insights](apis.md).
@@ -79,6 +74,3 @@ A les conclusions del públic, aneu a **Administració** > **Permisos** per veur
 - Les funcions s'especifiquen a la columna **Funció**.
 - Seleccioneu qualsevol títol de columna per ordenar els resultats pel valor de la columna.
 - Utilitzeu el camp **Cerca** de la part superior de la pàgina per localitzar usuaris concrets.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,21 +2,19 @@
 title: Assignacions semàntiques (versió preliminar)
 description: Informació general de les assignacions semàntiques i de com utilitzar-les.
 ms.date: 12/01/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-semantic-mapping
-- customerInsights
-ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353945"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881818"
 ---
 # <a name="semantic-mappings-preview"></a>Assignacions semàntiques (versió preliminar)
 
@@ -95,27 +93,27 @@ A **Dades** > **Assignacions semàntiques (versió preliminar)**, podeu visualit
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilitzeu una assignació d'entitats semàntiques ContactProfile per crear activitats de nivell de contacte
 
-Després de crear una *assignació d'entitats semàntiques ContactProfile*, podeu capturar activitats de contactes. Us permet veure a la cronologia de l'activitat d'un compte quin contacte era el responsable de cada activitat. La majoria dels passos segueixen la configuració típica de l'assignació d'activitats.
+Després de crear una *assignació* d'entitats semàntiques ContactProfile, podeu capturar activitats de contactes. Us permet veure a la cronologia de l'activitat d'un compte quin contacte era el responsable de cada activitat. La majoria dels passos segueixen la configuració típica de l'assignació d'activitats.
 
    > [!NOTE]
    > Perquè les activitats de nivell de contacte funcionin, heu de tenir **atributs AccountID** i **ContactID** per a cada registre dins de les dades d'activitat.
 
-1. [Definiu una assignació d'entitats *semàntiques ContactProfile* .](#define-a-contactprofile-semantic-entity-mapping) I executar l'assignació semàntica.
+1. [Definiu una *assignació* d'entitats semàntiques ContactProfile.](#define-a-contactprofile-semantic-entity-mapping) I executar l'assignació semàntica.
 
 1. A les conclusions del públic, aneu a **Dades** > **Activitats**.
 
-1. Seleccioneu **Afegeix activitat** per crear una activitat nova.
+1. Seleccioneu **Afegeix activitat per crear una activitat** nova.
 
 1. Anomeneu l'activitat, seleccioneu l'entitat d'activitat d'origen i seleccioneu la clau principal de l'entitat d'activitat.
 
-1. **Al pas Relacions**, creeu una relació indirecta entre les dades d'origen de l'activitat als comptes, utilitzant les dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins](relationships.md#relationship-paths) de relació directa i indirecta.
+1. Al **pas** Relacions, creeu una relació indirecta entre les dades d'origen de l'activitat als comptes, utilitzant les dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins de relació directa i indirecta](relationships.md#relationship-paths).
    - Relació d'exemple per a una activitat anomenada *Compres*:
-      - **Compres Dades de la data de l'activitat** > **d**'origen a l'atribut **ContactID**
-      - **Dades** > **de data** de contacte a l'atribut **AccountID**
+      - **Compra dades de contacte de** > **l**'activitat d'origen a l'atribut **ContactID**
+      - **Dades del compte de dades de contacte** > **de** l'atribut **AccountID**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuració de la relació d'exemple.":::
 
-1. Després de configurar les relacions, seleccioneu Endavant **i completeu** la configuració de l'assignació d'activitats. Per obtenir passos detallats sobre la creació d'activitats, vegeu [definir una activitat](activities.md).
+1. Després de configurar les relacions, seleccioneu **Endavant** i completeu la configuració de l'assignació d'activitats. Per obtenir passos detallats sobre la creació d'activitats, vegeu [definir una activitat](activities.md).
 
 1. Executeu les assignacions d'activitats.
 
@@ -125,7 +123,7 @@ Després de crear una *assignació d'entitats semàntiques ContactProfile*, pode
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtratge de cronologia d'activitat a nivell de contacte
 
-Després de configurar una assignació d'activitat de nivell de contacte i executar-la, s'actualitzarà la cronologia de l'activitat dels clients. Inclou els seus identificadors o noms, en funció de la configuració *de ContactProfile*, per a les activitats en què van actuar. Podeu filtrar les activitats per contactes a la cronologia per veure els contactes específics que us interessen. A més, podeu veure totes les activitats que no estan assignades a un contacte específic seleccionant **Activitats no assignades a un contacte**.
+Després de configurar una assignació d'activitat de nivell de contacte i executar-la, s'actualitzarà la cronologia de l'activitat dels clients. Inclou els seus identificadors o noms, en funció de la *configuració de ContactProfile,* per a les activitats en què van actuar. Podeu filtrar les activitats per contactes a la cronologia per veure els contactes específics que us interessen. A més, podeu veure totes les activitats que no estan assignades a un contacte específic seleccionant **Activitats no assignades a un contacte**.
 
    :::image type="content" source="media/Contact_Activities3.png" alt-text="Opcions de filtratge disponibles per a les activitats de nivell de contacte.":::
 

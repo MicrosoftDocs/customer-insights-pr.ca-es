@@ -3,17 +3,19 @@ title: Informació general de les conclusions del públic per al Dynamics 365 Cu
 description: Informació general de les conclusions del públic per al Dynamics 365 Customer Insights.
 ms.date: 08/04/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.custom: intro-internal
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230724"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034348"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informació general de les conclusions del públic per al Dynamics 365 Customer Insights
 
@@ -55,5 +57,11 @@ ms.locfileid: "8230724"
 
   - Creeu perfils personalitzables, definiu mesures, creeu segments i beneficieu-vos de l'anàlisi predictiva per obtenir una visualització de 360 graus del client, específica de la vostra organització.  
   - Utilitzeu connectors predefinits per a diverses aplicacions o API de Microsoft i de tercers per processar les conclusions.
+
+## <a name="pricing-and-licensing"></a>Preus i llicències
+
+El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Les funcionalitats amb drets inclouen un conjunt de perfils, actualitzacions diàries del sistema, sol·licituds del Power Platform i dos entorns. Podeu adquirir capacitat addicional i una llicència per augmentar la quota per defecte. 
+- Capacitat i drets detallats: [Guia de llicències del Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Informació general sobre els preus: [Preus del Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

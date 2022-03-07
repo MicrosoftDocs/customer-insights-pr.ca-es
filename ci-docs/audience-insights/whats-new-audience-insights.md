@@ -1,23 +1,24 @@
 ---
 title: Característiques noves i previstes
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 03/02/2022
+ms.date: 04/07/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232645"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896223"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
 
@@ -26,231 +27,14 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
-
-## <a name="january-2022-updates"></a>Actualitzacions de gener de 2022
-
-Les actualitzacions de gener de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Anàlisi del sentiment dels comentaris dels teus clients
-
-Customer Insights proporciona una nova funció amb IA per sintetitzar el sentiment del client i identificar aspectes empresarials específics com a oportunitats de millores específiques. Mitjançant l'anàlisi dels comentaris escrits dels vostres clients, podeu obtenir estadístiques precises a baix cost. Anàlisi de sentiments impulsat per models de processament del llenguatge natural (PNL) que generen dues estadístiques derivades per a cada identificador de client. Una puntuació de sentiment (de –5 a 5) i una llista dels aspectes empresarials aplicables. 
-
-Per obtenir més informació, vegeu [Analitzar el sentiment a la retroalimentació dels clients (Previsualització)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Actualitzacions de desembre de 2021
-
-Les actualitzacions de desembre de 2021 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Reenvia els registres de Customer Insights a l'Azure Monitor
-
-Customer Insights proporciona una integració directa amb l'Azure Monitor. Aquesta característica inclou esdeveniments d'auditoria i esdeveniments operatius. Els registres de recursos de l'Azure Monitor us permeten supervisar i enviar registres a l'Azure Storage, l'Azure Log Analytics o transmetre'ls als concentradors d'esdeveniments de l'Azure.
-
-Per obtenir més informació, vegeu [Inicia la sessió reenviant-la amb l'Azure Dynamics 365 Customer Insights Monitor (Visualització prèvia)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquir els perfils dels clients amb dades d'interacció
-
-Utilitzeu dades de per enriquir els perfils del compte de client amb estadístiques sobre les interaccions a través d'aplicacions Microsoft Office 365 Office 365. Les dades d'interacció consisteixen en l'activitat de correu electrònic i reunió, que s'agrega al nivell de compte. Per exemple, el nombre de correus electrònics d'un compte d'empresa o el nombre de reunions amb el compte. No es comparteixen dades sobre usuaris individuals. Aquest enriquiment està disponible a les següents regions: Regne Unit, Europa, Amèrica del Nord.
-
-Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'interacció (Previsualització)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Característiques avançades d'unificació de dades
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Habilita les polítiques de resolució de conflictes al nivell d'atribut individual
-
-Quan deduplica els registres de client dins d'una entitat, és possible que no vulgueu haver de triar un registre complet com a guanyador. Ara us permetem combinar els millors camps de diversos registres basats en regles per a cada atribut. Per exemple, podeu triar mantenir el correu electrònic més recent i l'adreça més completa de diferents registres. 
-
-Ara podeu definir regles de combinació separades per a atributs individuals mentre deduplica i fusioneu registres dins d'una sola entitat. Anteriorment, només us permetem seleccionar una única regla de combinació (mantenint registres basats en la integritat de les dades de recència) i aquesta regla s'ha aplicat al nivell de registre a tots els atributs. Això no és ideal quan algunes de les dades que voleu conservar es troben al registre A i altres bones dades que es troben al registre B.
-
-Per obtenir més informació, vegeu [Definir la desduplicació en una entitat de coincidència](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Regles personalitzades per a la coincidència
-
-Hi ha moments en què heu d'especificar una excepció a les regles generals per tal de NO coincidir amb els registres. Això pot passar quan diversos individus comparteixen prou informació perquè el sistema els coincideixi com un sol individu. Per exemple, bessons amb la mateixa cognom, vivint a la mateixa ciutat i compartint la data de naixement.
-
-Les excepcions garanteixen que la unificació incorrecta de les dades es pugui abordar a les regles d'unificació. Podeu afegir diverses excepcions a una regla.
-
-Per obtenir més informació, vegeu [Afegir excepcions a una regla](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Proporcionar polítiques addicionals de resolució de conflictes i permetre l'agrupació d'atributs
-
-Aquesta característica us permet tractar un grup de camps com una sola unitat. Per exemple, quan els nostres registres contenen els camps Adreça1, Adreça2, Ciutat, Estat i Zip. És probable que no vulguem fusionar-nos a l'Adreça 2 d'un registre diferent, pensant que faria que les nostres dades siguin més completes.
-
-Ara podeu combinar un grup de camps relacionats i aplicar una única política de combinació al grup. 
-
-Per obtenir més informació, vegeu [Combinar un grup de camps](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Actualitzacions de novembre de 2021
-
-Les actualitzacions de novembre de 2021 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>La subscripció al segment ja està disponible a Dataverse
-
-La informació de pertinença al segment per als Dataverse perfils de clients ja està disponible juntament amb els perfils de clients i les estadístiques. Les aplicacions d'acció del Dynamics 365 i les aplicacions basades en models poden utilitzar aquestes dades per cercar els detalls de pertinença al segment per a un client determinat.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Les activitats admeten dades de nivell de contacte per als comptes d'empresa
-
-Ara podeu configurar, visualitzar i filtrar activitats per als contactes de les línies de temps de l'activitat del compte d'empresa per entendre millor quins contactes del compte han participat en activitats específiques.
-
-## <a name="october-2021-updates"></a>Actualitzacions d'octubre de 2021
-
-Les actualitzacions a l'octubre de 2021 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="b-to-b"></a>B a B
-
-A partir de l'octubre del 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment a consumidors individuals. S'han actualitzat diverses àrees de característiques per donar suport a escenaris B-to-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B compatibles, consulta [Treballar amb comptes d'empresa a les estadístiques del](work-with-business-accounts.md) públic.
-
-Les seccions següents destaquen algunes de les àrees clau que es van adaptar per donar suport als comptes empresarials i als consumidors individuals.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Exportar segments basats en comptes d'empresa
-
-Totes les exportacions de segments a les estadístiques de públic estan disponibles en el context dels comptes d'empresa. La majoria de les exportacions de segments requereixen una configuració i [informació de contacte addicionals projectada](segment-builder.md#create-a-new-segment) als segments subjacents per ser vàlida per als comptes empresarials. Per obtenir més informació, vegeu [Segments](export-destinations.md#export-segments) d'exportació.
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilitzar l'exportació de LinkedIn Ads amb comptes d'empresa
-
-L'exportació de LinkedIn Ads ja està disponible per a la segmentació de contactes i empreses en el context dels comptes d'empresa. Quan seleccioneu la segmentació de l'empresa com a focus principal de l'exportació del LinkedIn, podeu exportar segments integrats en comptes empresarials sense necessitat de projectar informació de contacte. Per obtenir més informació, aneu als documents sobre [l'exportació](export-linkedin-ads.md) de LinkedIn Ads i la diferència entre [la segmentació per](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) contacte i [la segmentació per empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crear mesures basades en els comptes empresarials i la seva jerarquia
-
-El constructor de mesures us permet crear mesures al voltant dels comptes d'empresa i, opcionalment, utilitzar la informació de jerarquia. La informació de jerarquia s'utilitza per implementar un càlcul de compàs en un compte i tots els subprecons comptes relacionats. Per exemple, podeu crear mesures com ara els ingressos totals per a cada grup de comptes empresarials identificats per la seva jerarquia. Per obtenir més informació, vegeu [Definir i administrar mesures](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crear segments basats en comptes d'empresa i la seva jerarquia
-
-El creador de segments us permet crear segments de comptes d'empresa que, opcionalment, inclouen informació de contacte per a cada compte d'un segment. Si teniu la jerarquia de comptes configurada, podeu utilitzar la informació de jerarquia de comptes a la creació de segments. Per obtenir més informació, vegeu [Crear un segment](segment-builder.md#create-a-new-segment) nou.
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva els comptes de la teva empresa amb informació profunda sobre la seva tendència a l'enrenou
-
-El model predicció de clients ara també admet comptes empresarials. Podeu avaluar el risc de rotació no només per a un compte, sinó per a una combinació d'un compte i una categoria de producte o servei que us compren. Aquesta addició us ajuda a entendre si un compte té més probabilitats de deixar de comprar-vos en general o només per a una determinada categoria de béns o serveis. Per ajudar-vos a utilitzar aquest model d'IA, també enumera les raons per les quals és probable que un compte es mogués. Per obtenir més informació, vegeu [Predicció de fragment de transacció (previsualització)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Veure els contactes d'un compte d'empresa a la visualització de client
-
-Si els comptes d'empresa estan assignats a comptes relacionats, l'aplicació Customer Insights mostra aquests contactes relacionats com a part de la visualització de dades del client. Per obtenir més informació, vegeu [Perfils de clients](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Actualitzacions de setembre de 2021
-
-Les actualitzacions de setembre del 2021 inclouen noves característiques, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="activities"></a>Activitats
-
-- **Millores de la cronologia de l'activitat** Hem ampliat els filtres de la cronologia d'activitats als perfils de client. A més, podeu utilitzar la nova subfinestra de filtre per filtrar per tipus d'activitat i per data. Les dates es poden filtrar amb diferents condicions. Per obtenir més informació, vegeu [Visualitzar les cronologies d'activitats als perfils de client](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Relacions
-
-- **Compatibilitat amb les relacions de diversos salts** Utilitzeu relacions de diversos salts quan configureu activitats i definiu relacions entre entitats. Les relacions de diversos salts utilitzen una entitat intermèdia per connectar dues entitats. Quan configureu una activitat, podeu utilitzar una relació de diversos salts per connectar l'entitat d'activitat a una entitat intermèdia i després a una entitat de client. Podeu combinar relacions de diversos salts amb relacions de diversos camins. Per obtenir més informació, vegeu [Relació de diversos salts](relationships.md#multi-hop-relationship).
-
-- **Compatibilitat amb les relacions de diversos camins** Utilitzeu relacions de diversos camins quan configureu activitats i definiu relacions entre entitats. Les relacions de diversos camins relacionen una entitat d'origen amb més d'una entitat. Quan configureu una activitat, podeu utilitzar una relació de diversos camins per connectar l'entitat d'activitat a més d'una entitat de client. Podeu combinar relacions de diversos camins amb relacions de diversos salts. Per obtenir més informació, vegeu [Relació de diversos camins](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Actualitzacions d'agost de 2021
-
-Les actualitzacions del juliol i l'agost del 2021 inclouen una nova característica, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="extensibility"></a>Extensibilitat
-
-- **Exportar segments a Klaviyo** Hem ampliat les nostres [destinacions d'exportació per incloure Klaviyo](export-klaviyo.md). Ara podeu exportar segments per crear campanyes, fer contingut de màrqueting per correu electrònic i utilitzar grups específics de clients amb el Klaviyo. 
-
-
-## <a name="june-2021-updates"></a>Actualitzacions de juny del 2021
-
-Les actualitzacions de juny del 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="data-ingestion"></a>Ingestió de dades
-
-- **Actualitzacions del progrés millorat d'unificació de dades** Ara podeu veure actualitzacions d'estat dinàmic més granulars i millorades als passos del [procés d'unificació de dades](data-unification.md). Aquesta característica us permet fer un seguiment del progrés detallat per entendre el flux del procés i actuar si algun pas necessita atenció.
-
-### <a name="extensibility"></a>Extensibilitat
-
-- **Exportar segments i altres dades a Salesforce Marketing Cloud** Hem ampliat les nostres destinacions d'exportació per incloure [Salesforce Marketing Cloud](export-salesforce.md). Ara podeu exportar segments i altres tipus de dades a Salesforce Marketing Cloud a través d'una exportació SFTP de marca. La importació de dades es pot automatitzar completament al Salesforce i es pot utilitzar per crear campanyes de màrqueting més efectives.  
- 
-- **Exportar segments a ActiveCampaign** Hem ampliat les nostres destinacions d'exportació per incloure [Active Campaign](export-active-campaign.md). Ara podeu exportar segments per generar campanyes, dirigir contingut de màrqueting per correu electrònic i treballar amb grups específics de l'ActiveCampaign.
- 
-- **Exportar segments a Sendinblue** Hem ampliat les nostres destinacions d'exportació per incloure [Sendinblue](export-sendinblue.md). Ara podeu exportar segments per generar campanyes, dirigir contingut de màrqueting per correu electrònic i treballar amb grups específics amb el Sendinblue.
- 
-### <a name="ux-updates"></a>Actualitzacions de l'experiència d'usuari 
-
-- **Pàgina Clients nova i millorada i pàgina de detalls del perfil** Hem redissenyat la pàgina Clients i les pàgines de detalls del perfil per millorar l'experiència de l'usuari i un millor rendiment. Aquests canvis us permeten veure, ordenar, cercar i filtrar clients. Els filtres ara es representen a l'adreça URL per compartir els resultats de la cerca amb altres usuaris sense problemes. Els resultats de la cerca també es poden desar com a segments.    
-  La pàgina de detalls dels perfils de client ara agrupa les dades en diverses subseccions, com ara dades demogràfiques, identificadors i altres atributs de perfil per millorar la llegibilitat. Altres seccions de la pàgina de detalls del perfil ara són més interactives. Per exemple, la secció d'activitats ara permet filtrar i ordenar.
-
-
-## <a name="may-2021-updates"></a>Actualitzacions de maig de 2021
-
-Les actualitzacions del maig de 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="data-ingestion"></a>Ingestió de dades
-
-- **Visualitzeu o modifiqueu les metadades o la definició d'entitat quan adjunteu dades de l'Azure Data Lake Storage** Ara podeu visualitzar i editar les metadades o la definició d'entitat a l'auditori quan adjunteu dades d'una carpeta del Model de dades comú al vostre Azure Data Lake Storage. Aquesta capacitat proporciona comentaris en temps real, validació del model i comprovació d'errors. Permet editar tant model.json com manifest.json sense problemes.
-
-### <a name="extensibility"></a>Extensibilitat
-
-- **Exportacions de segments millorades, planificació personalitzada i duplicació** Ara podeu [veure totes les exportacions d'un segment concret](export-destinations.md#view-exports-and-export-details) en una llista. Aquesta nova visualització ajuda a administrar com s'utilitza un segment concret i adaptar o crear exportacions noves.    
-  Podeu [definir planificacions d'actualització personalitzades](export-destinations.md#schedule-and-run-exports) per a exportacions individuals o diverses exportacions alhora. Fins ara, totes les exportacions s'executaven amb cada actualització del sistema.    
-  En comptes de crear una exportació nova des de zero, podeu començar basant-vos en una d'existent per estalviar temps.
-
-- **Exporteu segments al Microsoft Advertising** Hem ampliat les nostres destinacions d'exportació per incloure-hi el Microsoft Advertising. Creeu públics del Customer Match al Microsoft Advertising amb les dades del perfil del client unificat i utilitzeu-los per a les campanyes de publicitat. Per obtenir-ne més informació, vegeu [Exportar segments al Microsoft Advertising](export-microsoft-advertising.md).
-
-- **Exporteu segments a LinkedIn Ads** Hem ampliat les nostres destinacions d'exportació per incloure LinkedIn Ads i permetre-us desbloquejar la segmentació de contactes i d'empreses mitjançant LinkedIn i exportant les dades de perfil de client unificat. Per obtenir-ne més informació, vegeu [Exportar segments al LinkedIn Ads](export-linkedin-ads.md).
-
-
-- **Exporteu segments a Omnisend** Hem ampliat les nostres destinacions d'exportació per incloure-hi Omnisend. Utilitzeu els segments creats als coneixements del públic per generar campanyes, proporcionar contingut de màrqueting per correu electrònic i utilitzar grups específics de clients amb Omnisend. Per obtenir-ne més informació, vegeu [Exportar segments a Omnisend](export-omnisend.md)
-
-### <a name="predictions"></a>Prediccions
-
-- **Informe d'ús de dades d'entrada** L'informe d'ús de dades d'entrada proporciona una visualització consolidada dels errors i advertiments que poden generar les previsions de sèrie. També recomana com millorar el rendiment del model.    
-  L'informe està disponible quan un model ha finalitzat el procés d'entrenament. Es crea per a cada model per separat, independentment de si s'ha completat correctament o no.
-  Actualment, aquesta característica només està disponible per al model de cancel·lació de la transacció. Per obtenir-ne més informació, vegeu [informe d'ús de dades d'entrada](manage-predictions.md#input-data-usability-report).
-
-### <a name="relationships"></a>Relacions
-
-- **Visualitzador de relacions** El visualitzador de relacions us permet veure totes les relacions existents entre les entitats i la seva cardinalitat. Les relacions s'organitzen ara en grups: usuari creat, sistema i relacions heretades. També podeu exportar una visualització com a imatge. Per obtenir-ne més informació, consulteu [Visualitzar relacions](relationships.md#view-relationships). 
-
-## <a name="april-2021-updates"></a>Actualitzacions d'abril de 2021
-
-Les actualitzacions de l'abril de 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
-
-### <a name="data-unification"></a>Unificació de dades
- 
-- **Experiència de combinació millorada per a la unificació de dades**    
-  
-   Ara tenim una experiència d'usuari millorada en la configuració de la combinació del procés d'unificació de dades. Els canvis inclouen l'ordenació intuïtiva dels camps combinats i les estadístiques detallades sobre camps combinats i únics.
-
-- **Reordenament d'entitat i configuració de tots els registres de l'entitat Client**  
-      
-   Ara podeu reordenar i suprimir entitats d'un pla de combinació existent al procés d'unificació de dades. Dona flexibilitat per reordenar les entitats en el procés de partit segons les necessitats empresarials. A més, habilitem la inclusió de tots els registres no coincidents a l'entitat *Client* final, que els permet definir la definició del conjunt de dades del perfil de client.
-
-### <a name="enrichments"></a>Enriquiments
-
- - **Enriquiment nou: adreces millorades**    
-  
-   Ens fa il·lusió introduir un nou enriquiment per millorar les adreces de les dades dels clients. Les adreces de les dades poden ser desestructurades, incompletes o incorrectes. Aquesta característica utilitza els models de Microsoft per normalitzar i enriquir les adreces en el format del model de dades comú per obtenir una millor precisió i informació.
- 
-   Per obtenir més informació, vegeu [Enriquiment dels perfils de client amb adreces millorades](enrichment-enhanced-addresses.md).
-
-- **Experiència de configuració guiada per a enriquiments**    
-  
-   Hem revisat l'experiència de configuració per a enriquiments amb una experiència guiada simple. Ara teniu un procés pas a pas clar per crear i editar enriquiments.
- 
-   A més, hem separat la configuració de les connexions per a enriquiments de tercers per permetre que s'utilitzi la mateixa connexió per diversos enriquiments. Només els administradors poden configurar noves connexions, però les connexions creades estan disponibles per als administradors i per als col·laboradors.    
-
-   Per obtenir més informació, consulteu [Informació general de les connexions](connections.md).
-
-- **Múltiples enriquiments del mateix tipus**    
-  
-   Ara permetem als usuaris crear i administrar diversos enriquiments del mateix tipus d'enriquiment. Per exemple, ara podeu crear dos enriquiments d'adreces independents per enriquir dos segments de clients diferents. Els límits s'apliquen sobre el nombre d'enriquiments del mateix tipus que es poden crear i varien segons el tipus d'enriquiment.
-  
-   Per obtenir més informació, vegeu [Enriquiment per a perfils de client](enrichment-hub.md).
-
 ## <a name="march-2021-updates"></a>Actualitzacions de març del 2021
 
 Les actualitzacions del març de 2021 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
 
 ### <a name="activities"></a>Activitats
 
-- **Auxiliar d'activitat i tipus semàntics**
-
-   Hem millorat i actualitzat la nostra experiència d'assignació d'activitats per guiar i simplificar la creació d'assignacions d'activitats. En aquesta nova experiència, els usuaris poden tenir una experiència guiada per ajudar a completar cada pas del procés. Al pas d'assignació de l'activitat, a més de triar entre molts tipus d'activitats, l'usuari pot triar d'assignar semànticament dades per a *Subscription* i/o *SalesOrderLine* als esquemes estàndard del sector, que es poden utilitzar per al consum descendent.   
-
-   Per obtenir més informació, vegeu [Activitats del client](activities.md).
+- **Auxiliar d'activitats i tipus semàntics** Hem millorat i actualitzat la nostra experiència d'assignació d'activitats per guiar i simplificar la creació d'assignacions d'activitats. En aquesta nova experiència, els usuaris poden tenir una experiència guiada per ajudar a completar cada pas del procés. Al pas d'assignació de l'activitat, a més de triar entre molts tipus d'activitats, l'usuari pot triar d'assignar semànticament dades per a *Subscription* i/o *SalesOrderLine* als esquemes estàndard del sector, que es poden utilitzar per al consum descendent.    
+  Per obtenir més informació, vegeu [Activitats del client](activities.md).
 
 ### <a name="data-ingestion"></a>Ingestió de dades
 
@@ -267,7 +51,7 @@ Les actualitzacions del març de 2021 inclouen diverses característiques, actua
 - **Exporteu segments a Constant Contact** Hem ampliat les nostres destinacions d'exportació per incloure-hi Constant Contact. Ara podeu exportar segments des del Customer Insights a les llistes de Constant Contact i utilitzar-los com a base per a les campanyes de màrqueting.   
    Per obtenir més informació, vegeu [Exportació a Constant Contact](export-constant-contact.md).
 
-- **Exporteu segments a RollWorks** Hem ampliat les nostres destinacions d'exportació per incloure-hi RollWorks. Ara podeu exportar segments del Customer Insights als públics del RollWorks i utilitzar-los com a base per a la publicitat d'empresa a empresa.    
+- **Exporteu segments a RollWorks** Hem ampliat les nostres destinacions d'exportació per incloure-hi RollWorks. Ara podeu exportar segments des del Customer Insights als públics de RollWorks i utilitzar-los com a base per a la publicitat B2B.    
    Per obtenir més informació, vegeu [Exportació a RollWorks](export-rollworks.md).
 
 - **Exporteu segments a Snapchat** Hem ampliat les nostres destinacions d'exportació per incloure-hi Snapchat. Ara podeu exportar segments des del Customer Insights als públics de Snapchat i utilitzar-los com a base per a la publicitat.     
@@ -316,7 +100,7 @@ Les actualitzacions de febrer del 2021 inclouen diverses característiques, actu
 
 - **La còpia d'entorn admet més tipus de fonts de dades**
 
-  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de còpia de l'entorn per als casos en què s'utilitzen fonts de dades basades en un llac de dades administrat pel Microsoft Dataverse o una carpeta del model de dades comú.
+  Els administradors poden copiar configuracions d'entorn a un entorn nou de la mateixa organització. Aquesta característica amplia la funcionalitat de l'entorn de còpia per als casos en què s'utilitzen fonts de dades basades en un llac de dades del Common Data Service o una carpeta del Model de dades comú.
 
 ## <a name="january-2021-updates"></a>Actualitzacions de gener de 2021
 
@@ -346,6 +130,462 @@ Les actualitzacions de gener del 2021 inclouen diverses característiques, actua
   Per obtenir més informació, vegeu [Administrar entorns](manage-environments.md).
 
 
+## <a name="december-2020-updates"></a>Actualitzacions de desembre de 2020
+
+Les actualitzacions de desembre de 2020 inclouen diverses característiques, millores del rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Característiques noves i actualitzades de desembre de 2020
+
+#### <a name="data-enrichment"></a>Enriquiment de dades
+
+- **Millores en l'enriquiment d'afinitat de marca i interès**
+  
+  Hem simplificat les nostres puntuacions d'afinitat per fer-les més fàcils d'entendre i utilitzar. Ara podeu identificar ràpidament els clients en funció de l'afinitat que tenen per a una marca o un interès determinats.
+
+  A més, hem afegit noves opcions de configuració per controlar millor com voleu que els vostres perfils de client s'enriqueixin. 
+
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
+
+- **Controleu quins perfils s'han d'enriquir**
+
+  Ara podeu enriquir només un subconjunt dels perfils de client amb l'opció de seleccionar una entitat de segment en comptes de l'entitat de client per defecte. Creeu un segment amb els perfils de client que voleu enriquir i seleccioneu-lo a la configuració d'enriquiment del conjunt de dades de clients.
+  Aquesta característica només està disponible per als enriquiments proporcionats per Experian i HERE Technologies. Habilitarem aquesta característica per a més enriquiments aviat.
+
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb dades demogràfiques d'Experian](enrichment-experian.md) o [Enriquiment de perfils de clients amb HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Extensibilitat
+
+- **Activar els segments mitjançant Autopilot**
+
+  Exporteu segments a Autopilot i utilitzeu-los per a finalitats de màrqueting. Per obtenir més informació, vegeu [Connector per a Autopilot (versió preliminar)](export-autopilot.md).
+
+- **Activar els segments mitjançant SendGrid**
+
+  Exporteu segments a SendGrid i utilitzeu-los per a finalitats de màrqueting. Per obtenir més informació, vegeu [Connector per a SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Experiència d'administració d'entorns actualitzada**
+  
+  Ara podeu crear, editar, suprimir i restablir entorns directament des del selector d'entorn a la capçalera de l'aplicació. 
+  
+  A més, l'entorn que utilitzeu s'ancorarà a la part superior de la finestra de l'entorn per tal que no hàgiu de cercar-lo més.
+
+  Per obtenir més informació, vegeu [Administrar entorns](manage-environments.md).
+
+## <a name="november-2020-updates"></a>Actualitzacions de novembre de 2020
+
+Les actualitzacions de novembre de 2020 inclouen diverses característiques, millores del rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-november-2020"></a>Característiques noves i actualitzades de novembre de 2020
+
+#### <a name="data-enrichment"></a>Enriquiment de dades
+
+- **Incorporeu les vostres pròpies dades d'enriquiment mitjançant la importació personalitzada del protocol de transferència segura de fitxers (SFTP)**
+  
+  La importació personalitzada d'SFTP us permet importar dades d'enriquiment que no han de passar pel procés d'unificació de dades. Més informació sobre la importació personalitzada d'SFTP.
+
+  Per obtenir més informació, vegeu [Enriquir els perfils de client amb dades personalitzades (versió preliminar)](enrichment-SFTP-custom-import.md).
+ 
+- **Enriquir les dades dels vostres clients amb dades d'ubicació de HERE Technologies**
+
+  Amb els serveis d'enriquiment de dades de HERE Technologies, podeu crear una localització més precisa dels clients amb la normalització d'adreces o l'extracció de la latitud i la longitud, entre d'altres. Apreneu sobre l'enriquiment amb HERE Technologies.
+
+  Per obtenir més informació, vegeu [Enriquiment de perfils de client amb HERE Technologies](enrichment-here.md).
+
+#### <a name="data-unification"></a>Unificació de dades
+
+- **Flexibilitat per habilitar la perfilació de dades en entitats i camps seleccionats del compte d'emmagatzematge**
+
+  Podeu indicar quines entitats i camps de dades d'una carpeta del Common Data Model del compte d'emmagatzematge de l'Azure Data Lake voleu habilitar per a la perfilació de dades com a part del procés d'ingestió de dades.
+
+  Per obtenir més informació, vegeu [Connectar-se a una carpeta del Common Data Model](connect-common-data-model.md#connect-to-a-common-data-model-folder).
+
+#### <a name="extensibility"></a>Extensibilitat
+
+- **Activar els segments mitjançant el Google Ads**
+
+  Exporteu els segments a llistes de públics de Google Ads i utilitzeu aquestes llistes per anunciar-vos a la Cerca de Google, la Xarxa de Display de Google, YouTube i Gmail. Més informació sobre l'activació dels segments a través de Google Ads.
+
+  Per obtenir més informació, vegeu [Connector per a Google Ads](export-google-ads.md).
+
+- **Activar els segments mitjançant Marketo**
+
+  Exporteu segments als públics de Marketo i utilitzeu aquests públics per a l'automatització del màrqueting. Més informació sobre l'activació dels segments a través de Marketo. 
+
+  Per obtenir més informació, vegeu [Connector per a Marketo](export-marketo.md).
+
+- **Activar els segments mitjançant DotDigital**
+
+  Exporteu segments a DotDigital i utilitzeu-los per a finalitats de màrqueting. Més informació sobre l'activació dels segments a través de DotDigital. 
+
+  Per obtenir més informació, vegeu [Connector per a DotDigital](export-dotdigital.md).
+
+#### <a name="predictions"></a>Prediccions
+
+- **Predir la rotació de transaccions**
+
+  La característica de predicció de rotació de transaccions us permet, sense l'ajuda d'un científic de dades, predir la probabilitat que un client deixi d'adquirir els vostres productes o serveis.  Amb la puntuació de la predicció, podeu combinar altres dades sobre els clients, com ara el valor del client, per crear segments d'alt risc de rotació o clients d'alt valor. Utilitzeu aquest segment per adreçar-vos directament als clients mitjançant activitats de màrqueting, servei d'atenció al client i altres escenaris per reduir el risc de rotació.
+ 
+  Configureu la definició de rotació com una finestra basada en el temps específica de la vostra empresa i definiu quan es consideraran els clients en rotació. Per exemple, una botiga de queviures pot considerar un client en rotació si no ha comprat res en els darrers 30 dies.
+ 
+  A mesura que continueu creant la predicció, se us guiarà pel que fa a les dades necessàries i podreu assignar dades sobre el vostre negoci als camps necessaris per predir la rotació dels vostres clients. També podeu definir una planificació per tornar a entrenar el model a partir de la nova informació del sistema per adaptar-lo a les circumstàncies canviants del negoci.
+ 
+  Per obtenir més informació, vegeu [Predicció de rotació de transaccions (versió preliminar)](predict-transactional-churn.md).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Restablir l’entorn**
+
+  Restabliu-ho tot en un entorn d'una instància seleccionada per començar des de zero.
+
+  Per obtenir més informació, vegeu [Restablir un entorn existent](manage-environments.md#reset-an-existing-environment).
+
+
+- **Connectar-vos al compte d'emmagatzematge de l'Azure Data Lake mitjançant una entitat de servei**
+
+  Escriviu la sortida de les dades en el vostre compte d'emmagatzematge i llegiu-ne les dades mitjançant una entitat de servei de l'Azure. Les connexions del compte d'emmagatzematge existents poden continuar utilitzant la clau del compte. També ofereixen una opció d'actualització per utilitzar l'entitat de servei en endavant. Les connexions noves es basaran en el mètode d'autenticació de l'entitat de servei corresponent al vostre compte d'emmagatzematge.
+
+  Per obtenir més informació, vegeu [Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure per a les conclusions del públic](connect-service-principal.md).
+
+## <a name="october-2020-updates"></a>Actualitzacions d'octubre de 2020
+
+Les actualitzacions d'octubre de 2020 inclouen diverses característiques, millores del rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-october-2020"></a>Característiques noves i actualitzades d'octubre de 2020
+
+#### <a name="extensibility"></a>Extensibilitat
+
+- **Exportar al Mailchimp**
+
+Exporteu segments a les llistes de públics existents del Mailchimp per proporcionar una experiència de correu electrònic personalitzada als vostres clients.
+
+Per obtenir més informació, vegeu [Connector per a Mailchimp](export-mailchimp.md).
+
+#### <a name="data-enrichment"></a>Enriquiment de dades
+
+- **Desduplicar els registres d'origen d'una entitat de coincidència**
+
+Especifiqueu les regles de desduplicació d'entitats que s'utilitzaran al procés de coincidència per tal d'identificar registres duplicats. Combineu-los en un únic registre i enllaceu tots els registres d'origen amb aquest registre combinat. Tot seguit, el registre desduplicat s'utilitzarà al procés de coincidència entre entitats.
+
+Per obtenir més informació, vegeu [Definir la desduplicació en una entitat de coincidència](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Orquestració: nova opció d'actualització a la combinació**
+
+Fins avui, quan executàveu el procés de combinació, el sistema executava tots els processos derivats que depenen de la combinació i els processos posteriors. Ara podeu comprovar el resultat del procés de combinació (l'entitat del client unificada) abans d'utilitzar-lo en el processament derivat, com ara segments o mesures.
+A la pàgina de combinació, ara podeu triar entre executar només el pas de combinació i executar només aquest procés. Per actualitzar també tots els processos derivats, podeu triar executar els processos de combinació i derivats. 
+
+## <a name="september-2020-updates"></a>Actualitzacions de setembre de 2020
+
+Les actualitzacions de setembre de 2020 inclouen diverses característiques, millores de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-september-2020"></a>Característiques noves i actualitzades al setembre de 2020
+
+#### <a name="activities"></a>Activitats
+
+- **Predicció intel·ligent de la semàntica d'atributs**
+
+Aquesta nova característica prediu els tipus semàntics dels atributs d'entrada que s'envien al procés d'unificació de dades. Utilitza models d'aprenentatge automàtic que milloren la precisió i estalvien temps.
+
+#### <a name="enrichments"></a>Enriquiments
+
+- **Enriquiment amb dades demogràfiques d'Experian**
+
+L'enriquiment demogràfic d'Experian està ara disponible en versió preliminar. Experian és un líder mundial en informes de consum i cedit empresarial i serveis de màrqueting. Amb els [serveis d'enriquiment de dades d'Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage), podeu obtenir una comprensió més profunda dels clients enriquint els perfils dels clients amb dades demogràfiques com la mida de la llar, els ingressos i més.
+
+Per utilitzar aquesta funció, heu de tenir una subscripció d'Experian activa.
+
+Per a més informació, vegeu [Enriquir perfils de clients amb dades demogràfiques d'Experian](enrichment-experian.md)
+
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Subfinestra Detalls de la tasca**
+
+La subfinestra de detalls de la tasca us permet veure els detalls sobre les tasques que executa el sistema. És una manera pràctica d'identificar problemes amb la configuració i trobar solucions.
+Reviseu els missatges d'error per veure com abordar problemes potencials.
+ 
+- **Informació de processament afegida a més pàgines**
+
+Aquesta millora afegeix informació sobre l'estat de les vostres entitats a la pàgina **Entitats** i **Clients**.
+ 
+A més, podeu trobar detalls sobre el progrés dels processos, juntament amb els detalls de la tasca, en ambdues pàgines.
+
+- **Millores a la pàgina d'estat del sistema**
+
+Hem millorat l'estructura de la taula de detalls d'estat a **Sistema** > **Estat** en revisar les exportacions de dades.
+ 
+A més, els errors de la columna **Detalls** són ara més detallats i fàcils d'aplicar. 
+ 
+- **La cancel·lació retorna la tasca a l'estat anterior**
+
+Quan cancel·leu una tasca, per exemple, en el procés de coincidència, tornarà al seu últim estat. Per exemple, si el procés de coincidència es va completar ahir i el cancel·leu avui, tornarà a l'estat correcte d'ahir.
+
+
+## <a name="august-2020-updates"></a>Actualitzacions d'agost de 2020
+
+Les actualitzacions d'agost de 2020 inclouen diverses característiques, millores de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-august-2020"></a>Característiques noves i actualitzades a l'agost de 2020
+
+#### <a name="data-unification"></a>Unificació de dades
+
+- **Experiència millorada per a la fase d'assignació durant la unificació de dades**
+
+  L'experiència a la fase d'assignació en el procés d'unificació de dades permet seleccionar entitats, atributs i definir la semàntica d'una manera més eficient.
+
+  Els canvis inclouen:
+  
+  - menys interaccions necessàries per afegir entitats i camps
+  - funcionalitats de cerca millorades a la pàgina d'assignació
+  - identificació visual i fàcil del tipus de camp suggerit
+
+#### <a name="enrichment"></a>Enriquiment
+
+- **Enriquiment d'afinitats d'interessos disponible a més mercats**
+
+  Ampliem la disponibilitat de l'enriquiment d'afinitats d'interès més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta extensió, podeu enriquir les dades dels clients amb més interessos aplicables a aquests mercats. També enriquirem els perfils de client que es troben en aquests mercats utilitzant dades locals propietat de Microsoft.
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md)
+
+
+## <a name="july-2020-updates"></a>Actualitzacions de juliol del 2020
+
+Les actualitzacions de juliol del 2020 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-july-2020"></a>Característiques noves i actualitzades de juliol del 2020
+
+#### <a name="extensibility"></a>Capacitat d'ampliació
+
+- **Disparador del Power Automate per al procés d'unificació finalitzat**
+
+  Hem ampliat els nostres disparadors per al Power Automate i us permetem crear una notificació o una acció quan s'hagi completat l'actualització del procés d'unificació (assignació, coincidència i combinació).    
+  Per obtenir més informació, vegeu [Connector del Power Automate](export-power-automate.md)
+
+#### <a name="enrichment"></a>Enriquiment
+
+- **Enriquiment d'afinitats de marques disponible a més mercats**
+
+  Ampliem la disponibilitat de l'enriquiment d'afinitats de marca més enllà dels Estats Units a cinc mercats més: Canadà, Austràlia, Regne Unit, França i Alemanya. Amb aquesta ampliació, podeu enriquir les dades dels clients amb marques locals en aquests mercats. També enriquirem els perfils de client que es troben en aquests mercats utilitzant dades locals propietat de Microsoft.
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md)
+
+## <a name="june-2020-updates"></a>Actualitzacions de juny del 2020
+
+Les actualitzacions de juny del 2020 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-june-2020"></a>Característiques noves i actualitzades de juny del 2020
+
+#### <a name="enrichment"></a>Enriquiment
+
+- **Enriquiment amb dades de l'empresa del Leadspace**
+  
+  Definiu els camps de perfils de client unificats que s'utilitzen per cercar dades d'empreses relacionades des del Leadspace. Després d'executar el procés d'enriquiment, els perfils de B2B s'enriqueixen amb més atributs, com ara la mida de l'empresa, la ubicació, el sector, etc.    
+  Aquesta col·laboració us permet millorar la qualitat de les dades amb l'entrada de serveis de tercers. Per utilitzar aquest enriquiment, necessitareu una llicència del Leadspace per accedir a les dades de l'empresa B2B. El sistema utilitzarà aquesta llicència per mantenir les dades constantment enriquides.    
+  Per obtenir més informació, vegeu [Enriquiment de perfils d'empresa amb el Leadspace](enrichment-leadspace.md).
+
+- **Pàgina del centre d'enriquiment**
+
+  Tots els enriquiments de dades disponibles de proveïdors d'enriquiment propis o de tercers es configuren al mateix lloc. Configurar l'enriquiment de dades és una experiència sense problemes que es gestiona des d'un lloc comú.    
+  Per obtenir més informació, vegeu [Enriquiment per a perfils de client](enrichment-hub.md).
+
+- **Enriquiment d'afinitat de marca i interès independents**
+
+  Les afinitats de marca i interès estan disponibles actualment com a dos enriquiments independents. Els enriquiment independents us donen la flexibilitat de configurar-los i administrar-los individualment, en funció dels requisits o les necessitats de l'empresa.    
+  Per obtenir més informació, vegeu [Enriquir els perfils de clients amb afinitats de marca i interès](enrichment-microsoft.md).
+
+#### <a name="extensibility"></a>Capacitat d'ampliació
+
+- **URL on es pot fer clic per a activitats unificades al complement de la targeta del client del Dynamics 365**
+
+  Les activitats unificades del complement de targeta de client mostren ara adreces URL on es pot fer clic si aquestes s'han definit durant la configuració de les activitats.    
+  Per obtenir més informació, vegeu [Complement de targeta del client](customer-card-add-in.md).
+
+- **Afinitats de marca i interès disponibles al complement de la targeta del client del Dynamics 365**
+
+  Un control nou del complement de la targeta del client del Dynamics 365 us permet mostrar els enriquiments de marca i interès dels vostres contactes a les aplicacions d'interacció amb els clients al Dynamics 365.    
+  Per obtenir més informació, vegeu [Complement de targeta del client](customer-card-add-in.md).
+
+- **Més disparadors del Power Automate**
+
+  Hem ampliat els nostres disparadors per al Power Automate i hem afegit els següents:
+  - Rebre una notificació o dur a terme una acció quan es completa una actualització completa automatitzada (fonts de dades, unificació, segments, mesures, exportacions)
+  - Definiu un llindar per a una mesura empresarial. Per exemple, podeu crear una notificació que s'enviï quan es passi el llindar definit. A més, el disparador porta informació que us permet crear fluxos de treball més complexos al Power Automate.    
+  Per obtenir més informació, vegeu [Connector del Power Automate](export-power-automate.md)
+
+- **Exporta al Facebook Ads Manager**
+  
+  Aquesta capacitat us permet exportar segments a l'Administrador d'anuncis del Facebook. Els segments s'exporten com a públics personalitzats per a l'ús de perfils de client unificats a les campanyes i anuncis de màrqueting del Facebook. Les audiències personalitzades també es poden utilitzar per crear campanyes a Instagram amb el Facebook Ads Manager.    
+  Per obtenir més informació, vegeu [Connector per al Facebook Ads Manager](export-facebook.md).
+
+#### <a name="predictions"></a>Prediccions
+
+- **Predicció de rotació de la subscripció**
+
+  Seguiu una experiència guiada per crear una predicció de rotació en àrees de subscripció com ara serveis al núvol, subscripcions de clients i altres sectors. 
+
+  La característica de predicció de rotació de la subscripció us permet predir la probabilitat que un client deixi d'utilitzar els productes o serveis basats en subscripcions sense interactuar amb un científic de dades. Amb la puntuació de predicció, podeu combinar més informació sobre els clients per crear segments d'alt risc de rotació. Amb l'ajuda d'aquest segment, podreu adreçar-vos directament als clients en el màrqueting, el servei d'atenció al client i altres escenaris per tal de reduir el risc de rotació de determinats clients i millorar així els ingressos i reduir els costos.
+
+  Dins de l'experiència, podeu configurar la definició de rotació com un període de temps específic per a l'empresa. Per exemple, un negoci de transmissió de vídeos que té un procés de subscripció mensual pot plantejar-se la rotació d'un client 15 dies després del venciment de la subscripció.
+
+  A mesura que continueu per la predicció, us guiarem per les dades que es necessiten i podreu assignar dades sobre la vostra empresa als camps necessaris per predir la rotació per als vostres clients. A mesura que canvia la informació de l'empresa, també podeu definir una planificació per tornar a entrenar la predicció quan hi hagi informació nova al sistema per adaptar-la a les circumstàncies empresarials canviants.    
+  Per obtenir més informació, vegeu [Predicció de rotació de la subscripció (versió preliminar)](predict-subscription-churn.md).
+
+#### <a name="segments"></a>Segments
+
+- **Cerca clients similars**
+  
+  Cerqueu clients semblants a la base de clients mitjançant la intel·ligència artificial. Un model d'aprenentatge automàtic de classificació binària assigna una puntuació de similitud als clients del segment ampliat. La puntuació es basa en la similitud amb els clients del segment d'origen. Segons la puntuació de similitud, els perfils dels clients s'afegeixen a un segment acabat de crear.
+
+  De vegades conegut com a modelatge de similitud al màrqueting digital, utilitza un model d'iA per ajudar a trobar clients que siguin semblants a un altre segment dels clients prenent més atributs. No només us permet triar els atributs, sinó que també us permet especificar el nombre màxim de clients que haurien d'estar en aquest nou segment. A continuació, el model d'IA calcula les puntuacions de similitud per a cada client en funció dels atributs seleccionats i trobarà els clients amb la puntuació de similitud mitjana més alta. El segment resultant inclourà els clients que tenen un aspecte semblant al client del segment original.    
+  Per obtenir més informació, vegeu [Clients semblants](find-similar-customer-segments.md).
+
+- **Superposició de segments i diferenciadors**
+
+  La superposició de segments us permet veure quants i quins són comuns entre dos o més segments. Per exemple, la superposició d'un segment de clients que gasten molts diners amb un segment de clients amb nivells alts de satisfacció o la superposició d'un segment de clients de rotació amb un segment de clients amb nivells baixos de satisfacció. A més, podeu analitzar com canvia la superposició segons un atribut addicional que vulgueu.
+
+  Els diferenciadors de segments revelen què diferencia un segment de la resta de clients o d'un altre segment. Tot el que heu de fer és identificar un segment i el sistema identificarà les mesures i els atributs del perfil que distingeixen el segment al formulari d'una llista de diferenciadors classificada: des dels diferenciadors més importants als menys importants.    
+  Per obtenir més informació, vegeu [Informació detallada de segments (versió preliminar)](segment-insights.md).
+
+- **Cicle de vida d'un segment**
+  
+  Definiu una planificació per activar o desactivar un segment.    
+  Per obtenir més informació, vegeu [Habilitar segments existents](segments.md#manage-existing-segments).
+
+## <a name="may-2020-updates"></a>Actualitzacions de maig de 2020
+
+Les actualitzacions de maig de 2020 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-may-2020"></a>Característiques noves i actualitzades al maig de 2020
+
+#### <a name="data-ingestion"></a>Ingestió de dades
+
+- **Ingestió de dades en temps real: visualitzacions d'historial**
+
+  Quan s'utilitza la nostra API per ingerir actualitzacions en temps real, podeu veure fins a 30 dies d'historial agregat per a aquestes actualitzacions. Teniu accés a agregacions de totes les trucades de l'API correctes o no, incloent-hi el seu resultat, el sistema d'origen i altres metadades útils.    
+  Per obtenir més informació, vegeu [Ingestió de dades en temps real](real-time-data-ingestion.md).
+
+- **Ingestió de dades en temps real: actualitzacions de perfil**
+
+  Aquesta extensió de l'ingestió de dades en temps real us permet veure, en qüestió de segons, els canvis en els camps específics d'un perfil d'usuari.    
+  A banda de la funcionalitat en temps real per a les activitats, el sistema admet actualitzacions de latència baixa per als camps de perfil. Les actualitzacions en temps real per als camps de perfil tenen una hora de venciment i, per tant, no són un substitut de les actualitzacions planificades.    
+  Per obtenir més informació, vegeu [Ingestió de dades en temps real](real-time-data-ingestion.md).
+
+#### <a name="extensibility"></a>Capacitat d'ampliació
+
+- **Cronologia actualitzada i paginació sobre el complement de la targeta del client**
+
+  La cronologia de la solució de complement de targeta de client coincideix amb la cronologia de l'activitat. La paginació de la cronologia ha millorat, que mostra fins a 50 activitats alhora. També permet carregar més activitats a la cronologia.    
+  Per obtenir més informació, vegeu [Complement de targeta del client](customer-card-add-in.md).
+
+- **Disparador del Power Automate de canvis de segment**
+
+  Els disparadors del Power Automate defineixen des de què podeu generar un flux. El disparador acabat d'afegir us permet definir un llindar per a un segment. Per exemple, podeu crear una notificació que s'enviï quan es passi el llindar definit.    
+  Per obtenir més informació, vegeu [Connector del Power Automate](export-power-automate.md).
+
+- **Comptabilitat amb diversos inquilins per a models personalitzats**
+
+  Configureu fluxos de treball per a models personalitzats amb un servei web d'un inquilí de l'aprenentatge automàtic de l'Azure diferent. Podreu iniciar la sessió a l'inquilí de l'aprenentatge automàtic de l'Azure quan creeu un flux de treball nou per a models personalitzats. Aquesta capacitat és una addició a la capacitat existent d'integrar el vostre propi servei web personalitzat de l'aprenentatge automàtic de l'Azure.    
+  Per obtenir més informació, vegeu [Models d'aprenentatge automàtic personalitzats](custom-models.md).
+
+#### <a name="segments"></a>Segments
+
+- **Automatització de camins d'entitat**
+
+  En crear un segment, els usuaris han de definir el camí de l'entitat. Aquesta capacitat fa un primer pas per automatitzar la definició de camí d'entitat per tal que pugueu centrar-vos en els criteris de segmentació que tingueu pensats.    
+  Si l'entitat per la qual voleu segmentar els clients està directament relacionada amb l'entitat del client unificada, ja no haureu de definir el camí d'entitat. No obstant, si hi ha més d'un camí d'entitat possible, encara l'heu de definir manualment.
+
+- **Accions en diversos segments**
+  
+  Els usuaris poden seleccionar diversos segments i dur-hi a terme accions, com ara actualitzar els segments, amb un sol clic.    
+
+- **Actualitzar els segments**
+
+  Els usuaris poden actualitzar un sol segment o seleccionar només els segments que volen actualitzar.    
+
+  
+- **Millores per a segments compostos**
+
+  Els usuaris poden crear, editar i suprimir segments que es basen en altres segments. Per exemple, un segment basat en un altre segment que es basava en un tercer segment.    
+
+- **Pàgina de llista de segments**
+
+  El nou disseny de la pàgina segments utilitza un format de llista que us permet veure més segments a la vegada. S'afegeix un camp de cerca per cercar segments ràpidament. Ara, els usuaris poden aplicar accions com la baixada o la supressió de diversos segments a la vegada. S'ha presentat una experiència de tendència nova per identificar ràpidament els canvis significatius als segments.    
+  Per a més informació, vegeu [Crear i administrar segments](segments.md).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Customer Insights disponible al Microsoft Dynamics 365 Online Government**
+
+  Amb més i més canals d'interaccions, les dades de ciutadans s'escampen per diversos sistemes, la qual cosa resulta en dades aïllades i una visió fragmentada de la informació sobre les interaccions dels ciutadans. Sense una visualització completa de les interaccions d'un ciutadà entre canals, és impossible que els governs es modernitzin a escala. Microsoft s'ha compromès a donar suport a les necessitats de tecnologia del govern per mantenir-se al dia amb les expectatives dels ciutadans per a una experiència coherent i sensible.    
+  Amb la fase 1 de llançament de 2020, el Dynamics 365 Customer Insights estarà disponible per al núvol comunitari de l'administració pública (GCC), un entorn creat per satisfer les necessitats de major compliment dels organismes governamentals dels Estats Units. Els organismes adquireixen una visió unificada dels ciutadans i utilitzen IA preconstruïda per obtenir informació que millori les interaccions, capaciti els empleats i transformi les comunitats, alhora que redueixi la complexitat de TI i compleixi els estàndards de compliment i de seguretat dels Estats Units. El Dynamics 365 Government compleix els exigents requisits del Programa d'administració de risc i autorització federal dels EUA (FedRAMP), que permet als organismes federals dels Estats Units beneficiar-se de l'estalvi de costos i de la seguretat rigorosa del núvol de Microsoft.
+
+## <a name="april-2020-updates"></a>Actualitzacions d'abril de 2020
+
+Les actualitzacions d'abril de 2020 inclouen diverses característiques, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="new-and-updated-features-in-april-2020"></a>Característiques noves i actualitzades a l'abril de 2020
+
+#### <a name="activities"></a>Activitats
+
+- **Assignar l'entitat d'activitat al tipus d'activitat estàndard**
+  
+  La configuració i l'emmagatzematge de l'activitat es basen actualment en un disseny estàtic per visualitzar-los en una cronologia. El significat semàntic de les activitats, que té el potencial per a diversos casos d'ús de models d'IA, no s'utilitza del tot en aquest moment. Planegem fer més dinàmica la cronologia de l'activitat segons el tipus d'activitat i millorar la comprensió semàntica de les activitats. Aquesta característica té com a objectiu identificar el tipus d'activitat que s'ha definit en el Common Data Model per a qualsevol activitat ingerida.
+  Per obtenir més informació, vegeu [Activitats del client](activities.md).
+
+#### <a name="data-ingestion"></a>Ingestió de dades
+
+- **Ingestió de dades en temps real: activitats**
+  
+  La ingestió de dades en temps real proporciona dades de manera immediata per al consum fins que la següent actualització planificada extreu aquestes dades de la font de dades.    
+  Per obtenir més informació, vegeu [Ingestió de dades en temps real](real-time-data-ingestion.md).
+
+- **Millores en la preparació de dades**
+  
+  Més informació sobre les dades ingerides en una entitat. Amb el resum de dades, podeu comprendre les característiques de qualitat de les dades que poden ajudar a emprendre l'acció adient.    
+  Per obtenir més informació, vegeu [Explorar les dades d'entitat](entities.md#exploring-a-specific-entitys-data).
+
+- **Ingerir dades analítiques del Dynamics 365 amb el Common Data Service**
+  
+  El Common Data Service està disponible com a mètode per crear fonts de dades. Els clients del Dynamics 365 existents poden ingerir entitats analítiques del Common Data Service al Customer Insights. Una sola font de dades pot utilitzar simultàniament el mateix llac administrat pel Common Data Service en un entorn del Customer Insights.    
+  Per obtenir més informació, vegeu [Connectar-se a les dades d'un llac de dades administrat del Common Data Service](connect-common-data-service-lake.md).
+
+#### <a name="extensibility"></a>Capacitat d'ampliació
+
+- **Exportar a LiveRamp**
+
+  Activeu les dades a LiveRamp® per connectar-vos amb més de 500 plataformes en ecosistemes digitals, socials i de TV. Utilitzeu les dades a LiveRamp per a dirigir, suprimir i personalitzar campanyes publicitàries.    
+  Per obtenir més informació, vegeu [Connector de LiveRamp&reg;](export-liveramp.md).
+
+- **Complement del Teams del Customer Insights**
+  
+  El bot proporciona la capacitat de cerca de perfils unificats de client. Es mostrarà una targeta amb fins a 15 camps del perfil de client resultant. Les coincidències múltiples retornen una llista de resultats on podeu seleccionar un perfil.    
+  Per obtenir més informació, vegeu [Bot del Teams per al Customer Insights](export-teams-bot.md).
+
+#### <a name="measures"></a>Mesures
+
+- **Pàgina de llista de mesures**
+  
+  Le millores de la pàgina de mesures inclouen el suport de les accions en una única mesura i en diverses mesures a la vegada. A més, trobareu un camp de cerca per trobar i fer un seguiment de les mesures ràpidament.    
+  Per a més informació, vegeu [Crear i administrar segments](segments.md).
+
+- **Millores per a mesures compostes**
+  
+  Els usuaris poden crear, editar i suprimir mesures que es basen en altres mesures. Per exemple, una mesura basada en una altra mesura que es basava en una tercera mesura.
+
+#### <a name="segments"></a>Segments
+
+- **Un altre operador**
+  
+  L'operador In-set permet la segmentació per als clients mitjançant diversos valors de cadena possibles. Abans d'afegir-se a aquest operador, havíeu de construir aquests segments amb diverses condicions OR. L'operador In-set us permet fer-ho amb una única condició.    
+  Per a més informació, vegeu [Crear i administrar segments](segments.md).
+
+#### <a name="system-administration"></a>Administració del sistema
+
+- **Copiar la configuració a un entorn nou**
+  
+  Copieu la configuració d'un entorn a un altre. Mentre creeu un entorn nou, podeu seleccionar un entorn existent del qual vulgueu copiar la configuració. Actualment admetem fonts de dades, unificació de dades, relacions, mesures i segments per copiar-los. No es copien les credencials ni les dades reals de la font de dades.    
+  Per obtenir més informació, vegeu [Administrar entorns](manage-environments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
