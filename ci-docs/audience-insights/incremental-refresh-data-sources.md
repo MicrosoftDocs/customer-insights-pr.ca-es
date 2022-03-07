@@ -1,24 +1,26 @@
 ---
-title: Actualització incremental per a fonts de dades basades en Power Query
-description: Actualitzeu dades noves i actualitzades per a les fonts de dades grans basades en el Power Query.
+title: Actualització incremental per als Power Query orígens de dades basats en
+description: Actualitza les dades noves i actualitzades dels orígens de dades grans en funció del Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900243"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353669"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualització incremental per a fonts de dades basades en el Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualització incremental per als orígens de dades basats en Power Query
 
-En aquest article es discuteix com configurar l'actualització incremental per als orígens de dades en funció de Power Query.
+En aquest article s'analitza com configurar l'actualització incremental per als orígens de dades en funció de Power Query.
 
 L'actualització incremental de les fonts de dades proporciona els següents avantatges:
 
@@ -28,13 +30,13 @@ L'actualització incremental de les fonts de dades proporciona els següents ava
 
 ## <a name="configure-incremental-refresh"></a>Configuració de l'actualització incremental
 
-Les conclusions del públic permeten actualitzar de manera incremental fonts de dades importades mitjançant el Power Query que admetin la ingestió incremental. Per exemple, les bases de dades de l'Azure SQL amb camps de data i hora, que indiquen quan s'han actualitzat per última vegada els registres de dades.
+Les estadístiques del públic permeten l'actualització incremental de les fonts de dades importades a través Power Query d'aquesta ingestió incremental. Per exemple, les bases de dades de l'Azure SQL amb camps de data i hora, que indiquen quan s'han actualitzat per última vegada els registres de dades.
 
-1. [Crear una font de dades nova basada en el Power Query](connect-power-query.md).
+1. [Crea un font de dades nou basat en Power Query](connect-power-query.md).
 
 1. Donar un **nom** a la font de dades.
 
-1. Seleccioneu un font de dades compatible amb l'actualització incremental, com ara la [base de dades SQL de l'Azure](/power-query/connectors/azuresqldatabase).
+1. Seleccioneu una font de dades que admeti l'actualització incremental, com [ara la base de dades SQL de l'Azure](/power-query/connectors/azuresqldatabase).
 
 1. Seleccioneu les entitats o taules que voleu ingerir.
 

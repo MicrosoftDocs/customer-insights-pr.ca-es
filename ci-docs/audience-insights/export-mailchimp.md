@@ -1,79 +1,85 @@
 ---
 title: Exportar dades del Customer Insights a Mailchimp
-description: Apreneu a configurar la connexió a Mailchimp.
-ms.date: 10/26/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Apreneu a configurar la connexió i exportar a Mailchimp.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2b465b32fa956e3f45a23f471dc3a3183def16ef
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: f7a33f2eddb6b625ddb8663b97103de75beab44c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267161"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226834"
 ---
-# <a name="connector-for-mailchimp-preview"></a>Connector per a Mailchimp (versió preliminar)
+# <a name="export-segments-to-mailchimp-preview"></a>Exportar segments a Mailchimp (versió preliminar)
 
 Exporteu segments de perfils de client unificats a Mailchimp per crear butlletins i campanyes de correu electrònic.
 
-## <a name="prerequisites"></a>Requisits previs
+## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
 -   Teniu un [compte de Mailchimp](https://mailchimp.com/) i les credencials d'administrador corresponents.
 -   Hi ha públics a Mailchimp amb els identificadors corresponents. Per obtenir més informació, vegeu [Públics de Mailchimp](https://mailchimp.com/help/create-audience/).
 -   Teniu [segments configurats](segments.md).
 -   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
-## <a name="connect-to-mailchimp"></a>Connecta al Mailchimp
+## <a name="known-limitations"></a>Limitacions conegudes
 
-1. Aneu a **Administració** > **Destinacions d'exportació**.
+- Fins a 1 milió de perfils de client per exportar a Mailchimp.
+- L'exportació a Mailchimp es limita als segments.
+- L'exportació de segments amb 1 milió de perfils de client pot trigar fins a tres hores. 
+- El nombre de perfils de client que podeu exportar a Mailchimp depèn del vostre contracte amb Mailchimp i pot estar limitat.
 
-1. A **Mailchimp**, seleccioneu **Configura**.
+## <a name="set-up-connection-to-mailchimp"></a>Configuració de la connexió a Mailchimp
 
-1. Doneu a la destinació d'exportació un nom reconeixible al camp **Nom de visualització**.
+1. Aneu a **Administració** > **Connexions**.
+
+1. Seleccioneu **Afegeix una connexió** i trieu **Mailchimp** per configurar la connexió.
+
+1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
+
+1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
 
-1. Introduïu el vostre **[Identificador de públic del Mailchimp](https://mailchimp.com/help/find-audience-id/)** i seleccioneu **Connecta't** per inicialitzar la connexió a Mailchimp.
+1. Seleccioneu **Connecta't** per inicialitzar la connexió a Mailchimp.
 
 1. Seleccioneu **Autentica amb el Mailchimp** i indiqueu les vostres credencials de Mailchimp.
 
 1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Captura de pantalla d'exportació per a la connexió a Mailchimp":::
-
-1. Seleccioneu **Següent** per configurar l'exportació.
+1. Seleccioneu **Desa** per completar la connexió. 
 
 ## <a name="configure-the-connector"></a>Configurar el connector
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. 
+Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
 
-1. També podeu exportar el **Nom** i el **Cognom** com a camps addicionals per crear missatges de correu electrònic més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
+1. Vés a **Dades**> **Exportacions**.
+
+1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
+
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Mailchimp. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+
+1. Introduïu l'**[Identificador de públic de Mailchimp](https://mailchimp.com/help/find-audience-id/)**
+
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. 
+
+1. O bé podeu exportar **Nom** i **Cognom** per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 
 1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a Mailchimp.
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Seleccioneu els camps i els segments que voleu exportar a Mailchimp":::
-
 1. Seleccioneu **Desa**.
 
-## <a name="export-the-data"></a>Exportar les dades
+Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab). A Mailchimp, ara podeu cercar els segments als [públics de Mailchimp](https://mailchimp.com/help/create-audience/).
-
-## <a name="known-limitations"></a>Limitacions conegudes
-
-- Fins a un milió de perfils per exportació a Mailchimp.
-- L'exportació a Mailchimp es limita als segments.
-- L'exportació de segments amb un total d'un milió de perfils pot durar fins a tres hores a causa de les possibles limitacions del proveïdor. 
-- El nombre de perfils que podeu exportar a Mailchimp és limitat i dependrà del contracte que tingueu amb Mailchimp.
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
 Quan habiliteu Dynamics 365 Customer Insights perquè transmeti dades a Mailchimp, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Mailchimp compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,22 +1,24 @@
 ---
 title: Assignacions semàntiques (versió preliminar)
 description: Informació general de les assignacions semàntiques i de com utilitzar-les.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622923"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353945"
 ---
-# <a name="semantic-mappings"></a>Assignacions semàntiques
+# <a name="semantic-mappings-preview"></a>Assignacions semàntiques (versió preliminar)
 
 Les assignacions semàntiques us permeten assignar les dades que no són d'activitat a esquemes predefinits. Aquests esquemes ajuden a entendre millor els atributs de dades a les conclusions del públic. Les assignacions semàntiques i les dades proporcionades permeten nous coneixements i característiques a les conclusions del públic. Per assignar les dades de l'activitat a esquemes, reviseu la documentació d'[activitats](activities.md).
 
@@ -75,8 +77,7 @@ Les assignacions semàntiques us permeten assignar les dades que no són d'activ
 
 1. Per executar una assignació semàntica en un moment posterior, seleccioneu l'assignació semàntica i seleccioneu **Actualitza**.
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Administrar assignacions semàntiques existents
 
@@ -91,5 +92,41 @@ A **Dades** > **Assignacions semàntiques (versió preliminar)**, podeu visualit
 - **Canvia el nom**: obre un diàleg on podeu introduir un nom diferent per a l'assignació semàntica seleccionada. Seleccioneu **Desa** per aplicar els canvis.
 
 - **Suprimeix**: obre un diàleg per confirmar la supressió de l'assignació semàntica seleccionada. També podeu suprimir més d'una assignació semàntica alhora seleccionant les assignacions semàntiques i la icona de supressió. Seleccioneu **Suprimeix** per confirmar la supressió.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilitzeu una assignació d'entitats semàntiques ContactProfile per crear activitats de nivell de contacte
+
+Després de crear una *assignació d'entitats semàntiques ContactProfile*, podeu capturar activitats de contactes. Us permet veure a la cronologia de l'activitat d'un compte quin contacte era el responsable de cada activitat. La majoria dels passos segueixen la configuració típica de l'assignació d'activitats.
+
+   > [!NOTE]
+   > Perquè les activitats de nivell de contacte funcionin, heu de tenir **atributs AccountID** i **ContactID** per a cada registre dins de les dades d'activitat.
+
+1. [Definiu una assignació d'entitats *semàntiques ContactProfile* .](#define-a-contactprofile-semantic-entity-mapping) I executar l'assignació semàntica.
+
+1. A les conclusions del públic, aneu a **Dades** > **Activitats**.
+
+1. Seleccioneu **Afegeix activitat** per crear una activitat nova.
+
+1. Anomeneu l'activitat, seleccioneu l'entitat d'activitat d'origen i seleccioneu la clau principal de l'entitat d'activitat.
+
+1. **Al pas Relacions**, creeu una relació indirecta entre les dades d'origen de l'activitat als comptes, utilitzant les dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins](relationships.md#relationship-paths) de relació directa i indirecta.
+   - Relació d'exemple per a una activitat anomenada *Compres*:
+      - **Compres Dades de la data de l'activitat** > **d**'origen a l'atribut **ContactID**
+      - **Dades** > **de data** de contacte a l'atribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuració de la relació d'exemple.":::
+
+1. Després de configurar les relacions, seleccioneu Endavant **i completeu** la configuració de l'assignació d'activitats. Per obtenir passos detallats sobre la creació d'activitats, vegeu [definir una activitat](activities.md).
+
+1. Executeu les assignacions d'activitats.
+
+1. Les activitats del nivell de contacte ara seran visibles a la cronologia del client.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultat final després de configurar les activitats de contacte":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtratge de cronologia d'activitat a nivell de contacte
+
+Després de configurar una assignació d'activitat de nivell de contacte i executar-la, s'actualitzarà la cronologia de l'activitat dels clients. Inclou els seus identificadors o noms, en funció de la configuració *de ContactProfile*, per a les activitats en què van actuar. Podeu filtrar les activitats per contactes a la cronologia per veure els contactes específics que us interessen. A més, podeu veure totes les activitats que no estan assignades a un contacte específic seleccionant **Activitats no assignades a un contacte**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opcions de filtratge disponibles per a les activitats de nivell de contacte.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

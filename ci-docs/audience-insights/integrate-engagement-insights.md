@@ -2,21 +2,23 @@
 title: Integrar dades web de les conclusions d'interacció amb les conclusions del públic
 description: Incorporeu informació web sobre els clients de les conclusions d'interacció a les conclusions del públic.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2789a7d1379e0cf56511b272a763c904d8a3d347058ea9e029aaff0f723a028
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033757"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350533"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrar dades web de les conclusions d'interacció amb les conclusions del públic
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Els clients solen fer el dia a dia de les transaccions en línia utilitzant llocs web. La característica de conclusions d'interacció (versió preliminar) del Dynamics 365 Customer Insights és una solució pràctica per integrar dades web com a font. A banda de les dades transaccionals, demogràfiques o de comportament, podem veure les activitats al web als perfils de client unificats. Podem utilitzar aquests perfils per obtenir informació addicional, com ara segments, mesures o previsions per a l'activació del públic.
 

@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645252"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353701"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Començar a utilitzar la capacitat d'informació del públic del Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ La primera vegada que inicieu sessió a la informació del públic, podeu ajusta
 
 Els perfils unificats són els fonaments per obtenir informació i dur a terme accions sobre les dades. Introduïu dades de diversos orígens i executeu el procés d'unificació de dades per combinar perfils unificats. Especifiqueu relacions entre les entitats ingerides utilitzant característiques d'enriquiment per afegir informació als perfils. 
 
-1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre els [connectors Power Query](connect-power-query.md), una [carpeta del Model de dades comú](connect-common-data-model.md) o el [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre [Power Query connectors](connect-power-query.md), una [carpeta](connect-common-data-model.md) del Model de dades comú o [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Executeu el [procés d'unificació de dades](data-unification.md) passant per les fases d'[assignació](map-entities.md), [coincidència](match-entities.md) i [combinació](merge-entities.md).
 

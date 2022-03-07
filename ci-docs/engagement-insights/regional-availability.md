@@ -4,26 +4,25 @@ description: Obteniu més informació sobre les regions i les zones geogràfique
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483285"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228094"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilitat regional per al Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Les conclusions d'interacció, una capacitat del Dynamics 365 Customer Insights, introdueix gradualment més regions on els clients poden optar per emmagatzemar les seves dades. Els administradors poden triar una regió quan [creïn un entorn nou](manage-environments-workspaces.md#create-an-environment). 
+Les conclusions d'interacció, una capacitat del Dynamics 365 Customer Insights, introdueix gradualment més regions on els clients poden optar per emmagatzemar les seves dades. Els administradors poden triar una regió quan [creïn un entorn nou](create-new-environment.md). 
 
-Quan configureu les conclusions d'interacció per primera vegada, podeu triar la regió mentre seguiu l'[experiència guiada de primera execució](quickstart.md). Més endavant, cada nou entorn permet triar la regió on s'emmagatzemaran les dades.
+Quan configureu les conclusions d'interacció per primera vegada, podeu triar la regió mentre seguiu l'[experiència guiada de primera execució](quickstart.md). Més endavant, cada entorn nou us permet triar la regió en la qual s'emmagatzemaran les dades.
 
-Actualment hi ha dues regions: EUA i Europa. Els usuaris poden triar entre la regió dels Estats Units Occidentals i la regió del nord d'Europa.
+Actualment donem suport a les geografies dels EUA i Europa. Els usuaris poden triar entre aquestes regions: Oest dels EUA, Est dels EUA, Nord d'Europa o Oest d'Europa.
 
 Una organització pot mantenir entorns en diferents regions. Per exemple, l'entorn A emmagatzema dades a Estats Units Occidentals i l'entorn B al nord d'Europa.
 

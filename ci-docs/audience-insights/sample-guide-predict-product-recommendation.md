@@ -3,26 +3,29 @@ title: Guia d'exemple per a la predicció de recomanacions de productes
 description: Utilitzeu aquesta guia d'exemples per provar el model de predicció de recomanacions de productes preparat per a l'ús.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035173"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354635"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia d'exemple per a la predicció de recomanacions de productes (versió preliminar)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guia d'exemple per a la predicció de recomanacions de productes
 
 Se us guiarà per un exemple íntegre de predicció de recomanacions de productes mitjançant les dades d'exemple següents.
 
 ## <a name="scenario"></a>Escenari
 
-Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat que venen mitjançant el seu lloc web de Contoso Coffee. El seu objectiu és comprendre quins productes han de recomanar als seus clients periòdics. Conèixer el que és **probable que comprin** els clients els pot ajudar a estalviar esforços de màrqueting centrant-se en articles concrets.
+Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat, productes que ven a través del seu lloc web de Contoso Coffee. El seu objectiu és comprendre quins productes han de recomanar als seus clients periòdics. Conèixer el que és **probable que comprin** els clients els pot ajudar a estalviar esforços de màrqueting centrant-se en articles concrets.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -31,7 +34,7 @@ Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat que venen
 
 ## <a name="task-1---ingest-data"></a>Tasca 1 - Ingerir dades
 
-Reviseu els articles [sobre la ingestió de dades](data-sources.md) i, més concretament, [la importació de fonts de dades mitjançant els connectors del Power Query](connect-power-query.md). La informació següent suposa que ja esteu familiaritzat amb el concepte d'ingestió de dades en general.
+Reviseu els articles [sobre la ingestió](data-sources.md) de dades i [la importació de fonts de dades mitjançant Power Query connectors](connect-power-query.md) específicament. La informació següent suposa que ja esteu familiaritzat amb el concepte d'ingestió de dades en general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dades de clients procedents de la plataforma de comerç electrònic
 

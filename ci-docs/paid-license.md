@@ -4,22 +4,21 @@ author: m-hartmann
 description: Familiaritzeu-vos amb l'experiència inicial al Dynamics 365 Customer Insights i exploreu les seves capacitats.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645665"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350119"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Com començar després de comprar el Customer Insights
 
 En aquest article s'explica com heu de fer els primers passos al Dynamics 365 Customer Insights un cop l'organització ha adquirit una subscripció. Si voleu comprar el Customer Insights, les nostres opcions de contacte es mostren al [lloc web del Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de l'inquilí del Microsoft 365 rep un correu electrònic que el convida a crear l'entorn. 
+Després de comprar una llicència de subscripció per al Customer Insights, l'administrador global de l'inquilí Microsoft 365 rep un correu electrònic que el convida a crear l'entorn. 
 
 El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Podeu adquirir més capacitat i llicències per augmentar la quota per defecte. 
 - [Descripció general sobre els preus](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ L'experiència de primera execució us ajuda a triar el focus inicial amb el Cus
 
 ## <a name="create-your-own-environment"></a>Creeu el vostre propi entorn
 
-Després del primer inici de sessió, veureu un entorn amb dades d'exemple. Podeu utilitzar aquestes dades per explorar les característiques i familiaritzar-vos amb l'aplicació. Per utilitzar les vostres pròpies dades, heu de crear un entorn en la capacitat en la qual voleu treballar.
-
-- [Creeu un entorn a les conclusions del públic.](audience-insights/get-started-paid.md)
-- [Creeu un entorn a les conclusions d'interacció.](engagement-insights/create-new-environment.md) 
+Després del primer inici de sessió, veureu un entorn amb dades d'exemple. Podeu utilitzar aquestes dades per explorar les característiques i familiaritzar-vos amb l'aplicació. Per utilitzar les vostres pròpies dades, heu de crear [un entorn](audience-insights/get-started-paid.md).
 
 
 

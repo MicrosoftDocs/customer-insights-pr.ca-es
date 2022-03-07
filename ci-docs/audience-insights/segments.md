@@ -1,32 +1,37 @@
 ---
 title: Segments als coneixements del públic
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617323"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355971"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
 Els segments us permeten agrupar els clients segons atributs demogràfics, de transaccions o de comportament. Podeu utilitzar segments per orientar les campanyes promocionals, les activitats de vendes i les accions d'atenció al client per assolir els vostres objectius empresarials.
 
-Els perfils de client que coincideixen amb els filtres d'una definició de segment es coneixen com a *membres* d'un segment. S'apliquen [límits de servei](service-limits.md).
+Els perfils de client que coincideixen amb els filtres d'una definició de segment es coneixen com a *membres* d'un segment. S'apliquen [límits de servei](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-new-segment"></a>Crear un segment nou
 
 Hi ha diverses maneres de crear un segment nou: 
 
-# <a name="individual-customers-b2c"></a>[Consumidors individuals (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 
 - Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment) 
 - Segments senzills amb un operador: [segment ràpid](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Hi ha diverses maneres de crear un segment nou:
 - Suggeriments amb tecnologia d'IA basats en mesures o atributs: [segments suggerits per millorar mesures](suggested-segments.md) 
 - Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Comptes d'empresa (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 - Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ L'acció següent està disponible quan seleccioneu un segment:
 
 Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**.
 
-> [!TIP]
-> Hi ha [sis tipus d'estat](system.md#status-types) per a les tasques o processos. A més, la majoria de processos [depenen d'altres processos posteriors](system.md#refresh-policies). Podeu seleccionar l'estat d'un procés per veure els detalls del progrés de tota la feina. Després de seleccionar **Visualitza els detalls** per a una de les tasques de la feina, trobareu informació addicional: temps de processament, l'última data de processament i tots els errors i advertiments associats a la tasca.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Exportar segments
 
@@ -106,4 +110,5 @@ La part inferior conté una llista dels membres del segment.
 >
 >La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, heu d'[exportar el segment](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

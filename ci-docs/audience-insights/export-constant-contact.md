@@ -1,22 +1,21 @@
 ---
 title: Exportar dades del Customer Insights a Constant Contact
 description: Apreneu a configurar la connexió i exportar a Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3a9372cc4ffa4fb112a96b1286aee9dc35059a50
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760476"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226391"
 ---
-# <a name="export-segment-lists-to-constant-contact-preview"></a>Exportar llistes de segments a Constant Contact (versió preliminar)
+# <a name="export-segments-to-constant-contact-preview"></a>Exportar segments a Constant Contact (versió preliminar)
 
 Exporteu segments de perfils de client unificats a Constant Contact i utilitzeu-los per a activitats de màrqueting. 
 
@@ -28,10 +27,10 @@ Exporteu segments de perfils de client unificats a Constant Contact i utilitzeu-
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 1 milió de perfils per exportació a Constant Contact.
+- Podeu exportar fins a 1 milió de perfils de client per exportar-los a Constant Contact.
 - L'exportació a Constant Contact es limita als segments.
-- L'exportació de fins a 1 milió de perfils a Constant Contact pot trigar fins a 1 hora com a màxim. 
-- El nombre de perfils que podeu exportar a Constant Contact depèn i està limitat pel contracte amb Constant Contact.
+- L'exportació de fins a 1 milió de perfils de client a Constant Contact pot trigar fins a 1 hora a completar-se. 
+- El nombre de perfils de client que podeu exportar a Constant Contact depèn del vostre contracte amb Constant Contact i pot estar limitat.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Configuració de la connexió a Constant Contact
 
@@ -47,7 +46,7 @@ Exporteu segments de perfils de client unificats a Constant Contact i utilitzeu-
 
 1. Seleccioneu **Connecta't** per inicialitzar la connexió a Constant Contact.
 
-1. Seleccioneu **Autentica amb AdRoll** i proporcioneu les vostres credencials d'administració per a Constant Contact. 
+1. Seleccioneu **Autentica amb Constant Contact** i proporcioneu les vostres credencials d'administrador per al Constant Contact. 
 
 1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
 
@@ -65,7 +64,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'[**ID de llista de Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Obriu una llista a Constant Contact per trobar l'identificador de llista a l'adreça URL.
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a Constant Contact.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Constant Contact.
 
 1. També podeu exportar el Nom i el Cognom com a camps addicionals per crear missatges de correu electrònic més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 

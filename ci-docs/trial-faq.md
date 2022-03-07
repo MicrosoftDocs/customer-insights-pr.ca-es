@@ -3,18 +3,17 @@ title: Preguntes freqüents de la versió de prova - Dynamics 365 Customer Insig
 description: Solucions a preguntes freqüents relacionades amb la configuració i l'administració de la versió de prova del Customer Insights. Més informació sobre com resoldre problemes específics de la plataforma i de l'aplicació.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
-ms.translationtype: HT
+ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642848"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229483"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntes més freqüents sobre la versió de prova del Dynamics 365 Customer Insights
 
@@ -24,7 +23,7 @@ ms.locfileid: "7642848"
 
 Aquesta aplicació és un servei basat en el núvol que no requereix programari especial més enllà d'un navegador web actualitzat, però s'hi apliquen algunes restriccions. Per tenir la millor experiència de prova, eviteu accedir al lloc de prova en mode d'incògnit i trieu la ubicació de prova que tingueu més a prop. [Més informació sobre els requisits de l'aplicació web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Com em puc subscriure a la versió de prova sense un inquilí del Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Com puc inscriure'm al judici sense inquilí Microsoft 365?
 
 Podeu introduir una adreça electrònica que no sigui laboral i crearem un compte i un inquilí.
 
@@ -43,7 +42,7 @@ Quan us registreu per obtenir la versió de prova, rebreu un correu electrònic 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Com afegeixo més usuaris a una versió de prova?
 
-Per afegir usuaris, aneu al [Centre d'administració del Microsoft 365](https://admin.microsoft.com) mitjançant el compte d'administració de prova. Seguiu les [instruccions del Centre d'administració](/microsoft-365/admin/add-users/add-users) per afegir usuaris al límit de llicències de la versió de prova. Si l'usuari que afegiu ja té un compte del Microsoft 365, assigneu-li una funció de seguretat a l'organització de prova. Per obtenir més informació, vegeu [Assignar una funció de seguretat a un usuari](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Per afegir usuaris, aneu al [Centre d'administració del Microsoft 365](https://admin.microsoft.com) mitjançant el compte d'administració de prova. Seguiu les [instruccions del Centre d'administració](/microsoft-365/admin/add-users/add-users) per afegir usuaris al límit de llicències de la versió de prova. Si l'usuari que esteu afegint ja té un Microsoft 365 compte, assigneu-li una funció de seguretat adequada a l'organització de prova. Per obtenir més informació, vegeu [Assignar un funció de seguretat a un usuari](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Quants usuaris puc afegir al meu entorn de prova?
 
@@ -63,7 +62,7 @@ Podeu ampliar la versió de prova directament a l'aplicació. Podeu ampliar la v
 
 En general, us recomanem que comenceu de nou amb les vostres pròpies dades quan actualitzeu a la versió de pagament del Customer Insights. 
 
-O bé, si només utilitzeu les conclusions del públic, podeu copiar les dades d'un entorn de prova si adquiriu el Customer Insights. Heu de ser l'administrador de la versió de prova del Customer Insights i l'administrador global del vostre inquilí del Microsoft 365 o l'administrador del Dynamics 365 a l'organització per migrar la configuració d'un entorn de prova a un entorn de pagament. 
+O bé, si només utilitzeu les conclusions del públic, podeu copiar les dades d'un entorn de prova si adquiriu el Customer Insights. Heu de ser l'administrador de la prova del Customer Insights i l'administrador global de l'inquilí Microsoft 365 o l'administrador del Dynamics 365 de la vostra organització per migrar la configuració d'un entorn de prova a un entorn de pagament. 
 
 Després d'iniciar la sessió a la instància de pagament del Customer Insights per primera vegada, se us demana que creeu un entorn nou. En aquest procés, podeu triar de copiar la configuració d'un entorn existent i migrar la majoria dels paràmetres. Si teniu els permisos esmentats anteriorment, l'entorn de prova es mostrarà en aquesta llista. Per obtenir més informació, vegeu [Copiar la configuració de l'entorn](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +81,9 @@ Quan us registreu a la versió de prova, veureu la pantalla principal de l'aplic
 
 La majoria de les característiques de les capacitats del Customer Insights estan disponibles a la versió de prova.
 
-La característica següent no està disponible: 
+No hi ha disponibles **les característiques següents**: 
 - No podeu crear entorns nous que utilitzin el vostre propi compte de l'Azure Data Lake Storage.
+- No podeu suprimir l'entorn de prova. 
 
 ### <a name="how-long-does-the-trial-last"></a>Quant de temps dura la versió de prova?
 

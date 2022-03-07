@@ -1,62 +1,73 @@
 ---
-title: Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei
-description: Utilitzeu una entitat de servei de l'Azure per a les conclusions del públic per connectar-vos al vostre llac de dades propi quan l'adjunteu a les conclusions del públic.
-ms.date: 02/10/2021
-ms.service: customer-insights
+title: Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei
+description: Utilitzeu una entitat de seguretat de servei de l'Azure per connectar-vos al vostre llac de dades.
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692101"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354176"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connectar-se a un compte Gen2 de l'Azure Data Lake Storage amb una entitat de servei de l'Azure per a les conclusions del públic
+# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
 
-Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Seguiu llegint per obtenir més informació sobre com connectar les conclusions del públic amb un compte Gen2 de l'Azure Data Lake Storage mitjançant una entitat de servei de l'Azure en comptes de les claus de compte d'emmagatzematge. 
+En aquest article es discuteix com connectar-se Dynamics 365 Customer Insights amb un Azure Data Lake Storage compte mitjançant un principal de servei de l'Azure en lloc de claus de compte d'emmagatzematge. 
 
-Podeu utilitzar l'entitat de servei per [afegir o editar de manera segura una carpeta de Common Data Model com a font de dades](connect-common-data-model.md) o [crear un entorn nou o actualitzar-ne un d'existent](get-started-paid.md).
+Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Podeu utilitzar els principals de servei per afegir o editar de manera [segura una carpeta del Model de dades comú com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](create-environment.md).
 
 > [!IMPORTANT]
-> - El compte d'emmagatzematge de l'Azure Data Lake Storage Gen2 que té com a objectiu utilitzar l'entitat de servei ha de tenir habilitat l'[Espai jeràrquic de noms (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
-> - Per poder crear l'entitat de servei, heu de tenir permisos d'administrador per a la vostra subscripció a l'Azure.
+> - El compte d'emmagatzematge del llac de dades que utilitzarà el principal del servei ha de ser Gen2 i tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace). Els comptes d'emmagatzematge de l'Azure Data Lake Gen1 no són compatibles.
+> - Necessiteu permisos d'administració per a la vostra subscripció de l'Azure per crear un principal de servei.
 
-## <a name="create-azure-service-principal-for-audience-insights"></a>Crear l'entitat de servei de l'Azure per a les conclusions del públic
+## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entitat de seguretat de servei de l'Azure per al Customer Insights
 
-Abans de crear una nova entitat de servei per a les conclusions del públic, comproveu si aquesta ja existeix a l'organització.
+Abans de crear un nou principi de servei per al Customer Insights, comproveu si ja existeix a la vostra organització.
 
 ### <a name="look-for-an-existing-service-principal"></a>Cercar una entitat de servei existent
 
 1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com) i inicieu-hi la sessió a la vostra organització.
 
-2. Seleccioneu **Azure Active Directory** als serveis de l'Azure.
+2. A **Serveis de l'Azure**, seleccioneu **Azure Active Directory**.
 
 3. A **Administra**, seleccioneu **Aplicacions empresarials**.
 
-4. Cerqueu l'identificador de l'aplicació principal de les conclusions del públic `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` o el nom `Dynamics 365 AI for Customer Insights`.
+4. Cerqueu l'ID de l'aplicació de Microsoft:
+   - Conclusions del públic: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` amb el nom `Dynamics 365 AI for Customer Insights`
+   - Conclusions d'interacció: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` amb el nom `Dynamics 365 AI for Customer Insights engagement insights`
 
-5. Si trobeu un registre coincident, vol dir que l'entitat de servei per a les conclusions del públic existeix. No cal que la torneu a crear.
+5. Si trobeu un registre coincident, significa que l'entitat de seguretat de servei ja existeix. 
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captura de pantalla con es mostra l'entitat de servei existent.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captura de pantalla que mostra un entitat de seguretat de servei existent.":::
    
 6. Si no es retorna cap resultat, creeu una nova entitat de servei.
 
+>[!NOTE]
+>Per utilitzar totes les funcionalitats del Dynamics 365 Customer Insights, suggerim que afegiu ambdues aplicacions a l'entitat de seguretat de servei.
+
 ### <a name="create-a-new-service-principal"></a>Crear una nova entitat de servei
 
-1. Instal·leu la versió més recent del **PowerShell de l'Azure Active Directory per al Graph**. Per obtenir més informació, vegeu [Instal·lar el PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
-   - Al PC, seleccioneu la tecla de Windows al teclat, cerqueu **Windows PowerShell** i seleccioneu **Executa com un administrador**.
-   
-   - A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
+1. Instal·leu la versió més recent del PowerShell de l'Azure Active Directory per al Graph. Per obtenir més informació, aneu a [Instal·lació del PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
 
-2. Creeu l'entitat de servei per a les conclusions del públic amb el mòdul del PowerShell de l'Azure AD.
-   - A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substituïu "l'identificador d'inquilí" per l'identificador real del vostre inquilí on voleu crear l'entitat de servei. El paràmetre del nom de l'entorn `AzureEnvironmentName` és opcional.
+   1. A l'ordinador, seleccioneu la tecla del Windows al teclat, cerqueu el **Windows PowerShell** i seleccioneu **Executa com a administrador**.
+   
+   1. A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
+
+2. Creeu l'entitat de seguretat de servei per al Customer Insights amb el mòdul del PowerShell de l'Azure AD.
+
+   1. A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substituïu l'*[identificador d'inquilí]* per l'identificador real del vostre inquilí on voleu crear l'entitat de servei. El paràmetre del nom de l'entorn, `AzureEnvironmentName`, és opcional.
   
-   - Introduïu `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Amb aquesta ordre es crea l'entitat de servei per a les conclusions del públic a l'inquilí seleccionat.  
+   1. Introduïu `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Amb aquesta ordre es crea l'entitat de servei per a les conclusions del públic a l'inquilí seleccionat. 
+
+   1. Introduïu `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Aquesta ordre crea l'entitat de servei de seguretat per a les conclusions d'interacció de l'inquilí seleccionat.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedir permisos a l'entitat de servei per accedir al compte d'emmagatzematge
 
@@ -66,14 +77,14 @@ Aneu al portal de l'Azure per concedir permisos a l'entitat de servei del compte
 
 1. Obriu el compte d'emmagatzematge al qual voleu que tingui accés l'entitat de servei per a les conclusions del públic.
 
-1. Seleccioneu **Control d'accés (IAM)** a la subfinestra de navegació i seleccioneu **Afegeix** > **Afegeix l'assignació de funcions**.
-   
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de pantalla on es mostra el portal de l'Azure mentre s'afegeix una assignació de funcions.":::
-   
-1. A la subfinestra **Afegeix l'assignació de funcions**, definiu les propietats següents:
-   - Funció: *Col·laborador de dades de Blob d'emmagatzematge*
-   - Assignació d'accés a: *Usuari, grup o entitat de servei*
-   - Seleccionar: *Dynamics 365 AI per a Customer Insights* (l'[entitat de servei que heu creat](#create-a-new-service-principal))
+1. A la subfinestra esquerra, seleccioneu **Control d'accés (IAM)** i, a continuació, seleccioneu **Afegeix** > **Afegeix una assignació de funcions**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de pantalla que mostra el portal de l'Azure mentre afegiu una assignació de funcions.":::
+
+1. A la subfinestra **Afegeix una assignació de funcions**, definiu les propietats següents:
+   - Funció: **Col·laborador de dades de Blob d'emmagatzematge**
+   - Assignació d'accés a: **Usuari, grup o entitat de servei**
+   - Seleccioneu **Dynamics 365 AI for Customer Insights** i **Dynamics 365 AI for Customer Insights engagement insights** (les dues [entitats de seguretat de servei](#create-a-new-service-principal) que heu creat abans en aquest procediment)
 
 1.  Seleccioneu **Desa**.
 
@@ -81,36 +92,34 @@ La propagació dels canvis pot trigar fins a 15 minuts.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduïu l'identificador de recurs de l'Azure o els detalls de subscripció de l'Azure al fitxer adjunt del compte d'emmagatzematge de les conclusions del públic.
 
-Adjunteu un compte d'emmagatzematge de l'Azure Data Lake a les conclusions del públic per [emmagatzemar dades de sortida](manage-environments.md) o [utilitzar-les com a font de dades](connect-dataverse-managed-lake.md). Si trieu l'opció de l'Azure Data Lake, podreu triar entre un mètode basat en recursos o un basat en subscripcions.
-
-Seguiu els passos que es descriuen a continuació per proporcionar la informació necessària sobre el mètode seleccionat.
+Podeu adjuntar un compte del Data Lake Storage a les conclusions del públic per [ emmagatzemar-hi dades de sortida](manage-environments.md) o [utilitzar-lo com a font de dades ](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). Aquesta opció us permet triar entre un mètode basat en recursos o un mètode basat en subscripció. Segons l'enfocament que trieu, seguiu el procediment d'una de les seccions següents.
 
 ### <a name="resource-based-storage-account-connection"></a>Connexió al compte d'emmagatzematge basat en recursos
 
-1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu-hi la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
+1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
 
-1. Aneu a **Configuració** > **Propietats** a la subfinestra de navegació.
+1. A la subfinestra esquerra, aneu a **Configuració** > **Propietats**.
 
 1. Copieu el valor de l'identificador de recurs del compte d'emmagatzematge.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Copieu l'identificador de recurs del compte d'emmagatzematge.":::
 
-1. A les conclusions del públic, inseriu l'identificador de recurs al camp de recurs que es mostra a la pantalla de connexió del compte d'emmagatzematge.
+1. A les conclusions del públic, inseriu l'ID del recurs al camp del recurs que es mostra a la pantalla de connexió del compte d'emmagatzematge.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Introduïu la informació de l'identificador de recurs del compte d'emmagatzematge.":::   
-   
+
 1. Continueu amb els passos restants a les conclusions del públic per adjuntar el compte d'emmagatzematge.
 
 ### <a name="subscription-based-storage-account-connection"></a>Connexió al compte d'emmagatzematge basat en subscripcions
 
-1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu-hi la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
+1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
 
-1. Aneu a **Configuració** > **Propietats** a la subfinestra de navegació.
+1. A la subfinestra esquerra, aneu a **Configuració** > **Propietats**.
 
 1. Reviseu la **Subscripció**, el **Grup de recursos** i el **Nom** del compte d'emmagatzematge per assegurar-vos de seleccionar els valors adequats a les conclusions del públic.
 
-1. A les conclusions del públic, trieu els valors o els camps corresponents quan adjunteu el compte d'emmagatzematge.
-   
+1. A les conclusions del públic, trieu els valors dels camps corresponents quan adjunteu el compte d'emmagatzematge.
+
 1. Continueu amb els passos restants a les conclusions del públic per adjuntar el compte d'emmagatzematge.
 
 

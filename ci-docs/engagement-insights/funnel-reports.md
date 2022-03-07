@@ -4,17 +4,16 @@ description: Com s'utilitzen els informes d'embut per comprendre com el públic 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-ms.translationtype: HT
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498630"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226248"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Crear i administrar informes d'embut
 
@@ -163,13 +162,23 @@ Podeu canviar el nom d'un informe d'embut, suprimir-lo o modificar-ne els passos
 
 Ara, la informació de la interacció ofereix informació sobre l'embut per als clients. Utilitzeu la informació sobre l'embut per obtenir informació més detallada sobre el comportament dels clients sobre els passos de l'informe de l'embut. En crear i desar un informe d'embut nou, la informació sobre l'embut es genera automàticament per a l'informe. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Conclusions d'embut.":::
+
+> [!NOTE]
+> Les conclusions d'embut només es poden generar per als passos d'embut que **no** inclouen dimensions personalitzades. Per generar conclusions d'embut per a tots els passos de l'embut, utilitzeu les dimensions predefinides de les conclusions d'interacció per crear els passos d'embut. 
+
 Podeu visualitzar la informació sobre l'embut de les categories següents, als nivells principal i de pas: 
 
- - Taxa de conversió 
+ - Taxa de conversió
+ -    La taxa de conversió entre Finalització de compra i Compra és del 22%.
  - Temps de transició 
+ -    El temps de conversió mitjà entre Carretó i Finalització de compra és de 23 minuts. 
  - Hora de finalització 
+ -    La mitjana de temps que triguen els clients a completar l'embut és de 47 minuts. 
 
 Utilitzeu aquesta informació per explorar més el comportament dels clients i comprendre millor els punts d'abandonament i les conversions de l'informe d'embut. 
+
+Per comparar les conclusions de diferents passos, seleccioneu **Mostra el desglossament del pas** o **Compara amb altres passos** a les targetes de conclusions. Es mostrarà un gràfic de barres en què es comparen les mètriques de cada pas de l'embut. 
 
 La informació d'embut es torna a calcular cada 24 hores o quan **deseu** l'informe d'embut. 
 

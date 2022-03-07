@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Capacitat d'informació d'interacció al Dynamics 365 Customer Insights (versió preliminar)
-summary: Recopileu dades per als llocs web. Compreneu les interaccions i l'ús dels clients en els vostres llocs de manera interactiva. Utilitzeu la integració completa entre els coneixements d'interacció i els coneixements del públic per enriquir les anàlisis de comportament en temps real amb els informes de perfil del client. Enriquiu els perfils de client amb activitats web per obtenir dades de comportament en temps real amb dades rellevants dels clients. Transformeu l'empresa per obtenir un valor immediat de les dades dels vostres clients.
+title: Finalitza la visualització prèvia de les estadístiques de compromís
+summary: La Dynamics 365 Customer Insights vista prèvia de la capacitat d'informació de compromís va finalitzar el 15 de febrer de 2022. Aquest canvi significa que l'experiència de prova del Customer Insights ja no inclou la possibilitat de crear embuts de conversió ni altres funcionalitats d'informes. Us convidem a explorar i avaluar les moltes altres característiques del Customer Insights, la Plataforma de Dades del Client de Microsoft (CDP). Poseu-vos en contacte directament amb l'equip del compte Microsoft si teniu preguntes sobre el final de la visualització prèvia de la capacitat. El vostre equip de comptes us mantindrà actualitzats en els propers llançaments. Gràcies!
 metadata:
   title: Documentació dels coneixements d'interacció (versió preliminar)
   description: Centre d'ajuda amb enllaços clau per als coneixements d'interacció.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-  ms.translationtype: HT
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494172"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350455"
 landingContent:
-- title: Quant a
+- title: Posar-se en contacte
   linkLists:
   - linkListType: overview
     links:
-    - text: Avantatges de la capacitat
-      url: overview.md
-    - text: Glossari de termes
-      url: glossary.md
-    - text: Característiques noves i actualitzades
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Incorporació
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Introducció
-      url: get-started.md
-    - text: Crea una àrea de treball
-      url: create-workspace.md
-    - text: Equipar el vostre lloc web
-      url: instrument-website.md
-- title: Visualitzar i filtrar informes
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Visualitza els informes
-      url: view-reports.md
-    - text: Veure l'informe de perfils unificats
-      url: profile-reports.md
-    - text: Utilitzar segments del públic per filtrar informes
-      url: integrate-audience-insights-segments.md
-- title: Analitza
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Crear informes d'embut
-      url: funnel-reports.md
-    - text: Analitzar les dades de comportament
-      url: curate-dimensions.md
-    - text: Creació d'informes personalitzats
-      url: custom-reports.md
-    - text: Crea esdeveniments refinats
-      url: refined-events.md
-    - text: Exporta esdeveniments
-      url: export-events.md
-- title: Recursos per a desenvolupadors
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Recursos per a desenvolupadors
-      url: developer-resources.md
-    - text: Exemple del WebSDK
-      url: websdk-sample.md
-    - text: Escenaris avançats de l'SDK web
-      url: advanced-SDK-implementation.md
-    - text: Exemple de l'SDK de l'Android
-      url: get-started-android.md
-    - text: Exemple de l'SDK de l'iOS
-      url: get-started-ios.md
-- title: Administració
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Administrar entorns i àrees de treball
-      url: manage-environments-workspaces.md
-    - text: Connexió de les conclusions del públic
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Administrar les galetes i el consentiment de l'usuari
-      url: user-consent-storage.md
-    - text: Suprimir i exportar dades personals
-      url: delete-export-personal-data.md
-    - text: Límits de servei
-      url: ../service-limits.md
+    - text: Uniu-vos a la comunitat del Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Compartiu les vostres idees
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Notifica un problema
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

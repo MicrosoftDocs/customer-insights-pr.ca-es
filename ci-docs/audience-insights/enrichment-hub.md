@@ -1,21 +1,25 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672987"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372690"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -37,14 +41,18 @@ A la pestanya **Descobriu**, trobareu totes les opcions d'enriquiment admeses.
 - [Dades demogràfiques](enrichment-experian.md) proporcionades per Experian
 - [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+- [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
+- [Identitat](enrichment-liveramp.md) proporcionada per LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
 - [Dades de l'empresa](enrichment-leadspace.md) proporcionades per Leadspace
 - [Adreces millorades](enrichment-enhanced-addresses.md) proporcionades per Microsoft 
+- [Dades millorades de l'empresa](enrichment-enhanced-company-data.md) proporcionades per Microsoft
 - [Dades d'ubicació](enrichment-here.md) proporcionades per HERE Technologies 
 - [Dades personalitzades](enrichment-SFTP-custom-import.md) a través del protocol de transferència segura de fitxers (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionat per Microsoft
+- [Dades d'interacció amb](enrichment-office.md) el compte proporcionades per Microsoft
 
 ---
 
@@ -73,6 +81,10 @@ Les millores de tercers es configuren mitjançant [connexions](connections.md), 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquiments del mateix tipus
 
 L'entitat que s'ha d'enriquir s'especifica durant la configuració de l'enriquiment, la qual cosa us permet enriquir només un subconjunt dels vostres perfils. Per exemple, podeu enriquir només les dades d'un segment concret. Podeu configurar diversos enriquiments del mateix tipus i reutilitzar la mateixa connexió. Alguns enriquiments tindran límits pel que fa al nombre d'enriquiments del mateix tipus que es poden crear. Els límits i l'ús actual es poden veure a la pàgina **Enriquiment**.
+
+## <a name="enrich-data-sources-before-unification"></a>Enriqueix els orígens de dades abans de la unificació
+
+Podeu enriquir les dades dels clients abans de la unificació de dades per ajudar a augmentar la qualitat d'una coincidència de dades. Per a més informació, consulteu [font de dades enriquiment](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Veure el progrés del procés d'enriquiment
 

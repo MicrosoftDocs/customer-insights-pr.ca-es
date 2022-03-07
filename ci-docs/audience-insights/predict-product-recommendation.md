@@ -1,22 +1,21 @@
 ---
 title: Predicció de recomanacions de productes
 description: Predieu els productes que pot comprar o interactuar un client.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494527"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355739"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predicció de recomanacions de productes (versió preliminar)
+# <a name="product-recommendation-prediction"></a>Predicció de recomanacions de productes
 
 El model de recomanació de productes crea conjunts de recomanacions de producte predictives. Les recomanacions es basen en el comportament de compra anterior i els clients amb patrons de compra similars. Podeu crear noves predictions de recomanació de productes a la pàgina **Intel·ligència** > **Prediccions**. Seleccioneu **Les meves prediccions** per veure la resta de prediccions que heu creat.
 
@@ -54,7 +53,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 > [!NOTE]
 > - El model requereix l'historial de transaccions dels clients. La definició d'una transacció és bastant flexible. Qualsevol dada que descrigui una interacció usuari-producte pot funcionar com una entrada. Per exemple, comprar un producte, fer una classe o assistir a un esdeveniment.
-> - Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra, uniu-les a Power Query abans de la ingestió de dades.
+> - Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra, unir-les abans de la Power Query ingestió de dades.
 > - Si la comanda i els detalls de la comanda són entitats diferents, uniu-los abans d'utilitzar-los al model. El model no funciona amb un sol identificador de comanda o identificador de rebut en una entitat.
 
 
@@ -62,7 +61,7 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 1. Al Customer Insights, aneu a **Intel·ligència** > **Prediccions**.
 
-1. Seleccioneu la peça **Model de recomanacions de productes (versió preliminar)** i seleccioneu **Utilitza aquest model**.
+1. Seleccioneu la peça del **model Recomanacions del producte** i seleccioneu **Utilitza aquest model**.
    > [!div class="mx-imgBorder"]
    > ![Peça Model de recomanació de productes amb el botó Utilitza aquest model.](media/product-recommendation-usethismodel.PNG "Peça Model de recomanació de productes amb el botó Utilitza aquest model")
 
@@ -79,11 +78,11 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 1. Definiu el **nombre de productes** que voleu recomanar a un client. Aquest valor depèn de com el mètode de lliurament emplena les dades. Si podeu recomanar tres productes, definiu aquest valor segons això.
    
    >[!TIP]
-   > Podeu seleccionar **Desa i tanca** en qualsevol moment per desar la predicció en forma d'esborrany. Trobareu l'esborrany de predicció a la pestanya **Les meves prediccions**.
+   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar la predicció com a esborrany. Trobareu l'esborrany de predicció a la pestanya **Les meves prediccions**.
 
-1. Trieu si voleu **suggerir productes que els clients han comprat recentment**.
+1. Trieu si voleu incloure els productes que els clients han comprat recentment al **camp Repetició de compres esperades**.
 
-1. Si heu seleccionat que *no* recomaneu els productes adquirits recentment, definiu la **Finestra de cerca en el passat**. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
+1. Estableix la **finestra Mira enrere**. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
 
 1. Seleccioneu **Següent**
 

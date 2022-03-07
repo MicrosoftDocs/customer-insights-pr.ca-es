@@ -1,24 +1,23 @@
 ---
 title: Esquemes d'entitats del Customer Insights al Common Data Model
 description: Treballeu amb entitats al Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692293"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230989"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 El [Common Data Model](/common-data-model/) és una especificació declarativa i una definició d'entitats estàndard que representen conceptes i activitats utilitzats habitualment entre aplicacions de negoci i de productivitat. Aquest model també s'amplia a les dades observacionals i d'anàlisi. El Common Data Model proporciona entitats empresarials definides, modulars i extensibles, com ara compte, unitat de negoci, cas, contacte, client potencial, oportunitat i producte, així com interaccions amb proveïdors, treballadors i clients, com ara activitats i acords de nivell de servei. Qualsevol persona pot crear i ampliar les definicions del Common Data Model per captar idees addicionals específiques de l'empresa.
 
@@ -42,7 +41,7 @@ Per obtenir més informació, vegeu la documentació sobre els [Esquemes d'entit
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Visualitzar entitats mitjançant el navegador d'entitats del Common Data Model
 
-Podeu visualitzar entitats al [navegador d'entitats del Common Data Model](https://microsoft.github.io/CDM/). Seleccioneu el botó **Carrega des de GitHub!** i aneu a **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, on trobareu la llista d'entitats del Customer Insights i les seves definicions.
+Podeu visualitzar entitats al [navegador d'entitats del Common Data Model](https://microsoft.github.io/CDM/). Seleccioneu una entitat de la secció Aplicació de l'Insights per obtenir la llista d'entitats del Customer Insights i les seves definicions.
 > [!div class="mx-imgBorder"]
 > ![Navegador d'entitats del CDM que mostra l'entitat CustomerActivity.](media/CDM-entity-navigator.png "Navegador d'entitats del CDM que mostra l'entitat CustomerActivity")
 

@@ -3,20 +3,24 @@ title: Predicció del valor del cicle de vida del client (CLV)
 description: Predieu el potencial d'ingressos per als clients actius en el futur.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035357"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355777"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicció del valor de vida del client (CLV) (versió preliminar)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predicció del valor del cicle de vida del client (CLV)
 
 Predieu el valor potencial (ingressos) que els clients actius individuals aportaran al vostre negoci en un període de temps futur definit. Aquesta característica us pot ajudar a aconseguir diversos objectius: 
 - Identificar clients d'alt valor i processar aquesta informació
@@ -65,7 +69,7 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
     - Integritat de les dades: falten menys del 20% de valors als camps obligatoris de les dades d'entrada   
 
 > [!NOTE]
-> - El model requereix l'historial de transaccions dels clients. Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra/transaccions, les podeu unir al Power Query abans de la ingestió de dades.
+> - El model requereix l'historial de transaccions dels clients. Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra/transacció, podeu unir-les abans de la Power Query ingestió de dades.
 > - Per a dades addicionals d'activitat del client (opcionals), però, podeu afegir tantes entitats d'activitat del client com vulgueu que el model tingui en compte.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear una predicció del valor de vida del client
@@ -74,7 +78,7 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
 
 1. Seleccioneu la peça **Valor de vida del client** i seleccioneu **Utilitza el model**. 
 
-1. A la subfinestra **Valor de vida del client (versió preliminar)**, seleccioneu **Comença**.
+1. A la **subfinestra de valors** de vida del client, seleccioneu **Comença**.
 
 1. **Anomeneu aquest model** i el **nom de l'entitat de sortida** per distingir-los d'altres models o entitats.
 

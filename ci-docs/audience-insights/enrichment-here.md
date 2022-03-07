@@ -1,20 +1,19 @@
 ---
-title: Enriquiment de amb l'enriquiment de tercers de HERE Technologies
+title: Enriquiment amb l'enriquiment de tercers de HERE Technologies
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
-ms.date: 12/10/2020
-ms.reviewer: jodahl
-ms.service: customer-insights
+ms.date: 04/09/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269502"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230370"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
 
@@ -26,35 +25,54 @@ Per poder configurar els enriquiments de HERE Technologies, s'han de complir els
 
 - Heu de tenir una subscripció activa amb HERE Technologies. Per obtenir una subscripció, podeu [registrar-vos aquí](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) o [posar-vos en contacte directament amb HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Més informació sobre l'enriquiment d'ubicació de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Teniu la clau d'API de HERE Technologies.
+- Hi ha una [connexió](connections.md) a HERE disponible *o* teniu permisos d'[administrador](permissions.md#administrator) i la clau API de HERE Technologies.
 
-- Teniu permisos d'[Administrador](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
-## <a name="configuration"></a>Configuració
+1. Aneu a **Dades** > **Enriquiment**. 
 
-1. Aneu a **Dades** > **Enriquiment**.
-
-1. Seleccioneu **Enriqueix les meves dades** a la peça de HERE Technologies.
+1. Seleccioneu **Enriqueix les meves dades** a la peça HERE Technologies i seleccioneu **Comença**.
 
    > [!div class="mx-imgBorder"]
-   > ![Peça de HERE Technologies](media/HERE-tile.png "Peça de HERE Technologies")
+   > ![Peça de HERE Technologies.](media/HERE-tile.png "Peça de HERE Technologies")
 
-1. Introduïu una **Clau de l'API de HERE Technologies** activa. Reviseu-ho i proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**. 
+1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió**. A la llista desplegable, trieu **HERE Technologies**. 
 
-1. Confirmeu totes dues entrades seleccionant **Connecta a HERE**.
+1. Seleccioneu **Connecta't a HERE Technologies** per confirmar la selecció.
 
-1.  Seleccioneu **Afegeix dades** i trieu el **conjunt de dades del client** que voleu enriquir amb les dades d'ubicació de HERE Technologies. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+1.  Seleccioneu **Següent** i trieu el **Conjunt de dades de client** que voleu enriquir amb les dades d'ubicació de HERE Technologies. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Captura de pantalla quan trieu el conjunt de dades de clients.":::
 
-1. Trieu si voleu assignar camps a l'adreça principal o secundària. Podeu especificar una assignació de camps per a totes dues adreces (per exemple, una adreça particular i de la feina) i enriquir els perfils per a ambdues adreces de manera separada. Seleccioneu **Següent**.
+1. Trieu si voleu assignar camps a l'adreça principal o secundària. Podeu especificar una assignació de camps per a ambdues adreces i enriquir els perfils de les dues adreces per separat. Per exemple, si hi ha una casa i una adreça de negoci. Seleccioneu **Següent**.
 
 1. Definiu els camps dels perfils unificats que s'hauran d'utilitzar per cercar dades d'ubicació coincidents des de HERE Technologies. Els camps **Carrer 1** i **Codi postal** són obligatoris per a l'adreça principal o secundària seleccionada. Per augmentar la precisió de la coincidència, es poden afegir més camps.
 
    > [!div class="mx-imgBorder"]
-   > ![Pàgina de configuració d'enriquiment de HERE Technologies](media/enrichment-HERE-configuration.png "Pàgina de configuració d'enriquiment de HERE Technologies")
+   > ![Pàgina de configuració d'enriquiment de HERE Technologies.](media/enrichment-HERE-configuration.png "Pàgina de configuració d'enriquiment de HERE Technologies")
 
-1. Seleccioneu **Aplica** per completar l'assignació de camps.
+1. Seleccioneu **Següent** per completar l'assignació de camp.
+
+1. Proporcioneu un nom per a l'enriquiment. 
+
+1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Configurar la connexió per a HERE Technologies 
+
+Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix una connexió** en configurar un enriquiment *o* aneu a **Administració** > **Connexions** i seleccioneu **Configuració** a la peça HERE Technologies.
+
+1. Introduïu un nom per a la connexió al quadre **Nom de visualització**.
+
+1. Proporcioneu una clau d'API vàlida de HERE Technologies.
+
+1. Reviseu i proporcioneu el vostre consentiment per a la **Privadesa de les dades i conformitat** seleccionant **Accepta**.
+
+1. Seleccioneu **Verifica** per validar la configuració.
+
+1. Després de completar la verificació, seleccioneu **Desa**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Pàgina de configuració de la connexió de HERE Technologies.](media/enrichment-HERE-connection.png "Pàgina de configuració de la connexió de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 
@@ -66,7 +84,7 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="next-steps"></a>Passos següents
 
-Construïu a partir de les dades de clients enriquits. Creeu [segments](segments.md), [mesures](measures.md) i fins i tot [exporteu les dades](export-destinations.md) per oferir experiències personalitzades als vostres clients.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

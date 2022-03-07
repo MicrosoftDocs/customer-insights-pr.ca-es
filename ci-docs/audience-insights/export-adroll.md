@@ -1,40 +1,47 @@
 ---
 title: Exportar dades del Customer Insights a AdRoll
-description: Apreneu a configurar la connexió a AdRoll.
-ms.date: 02/15/2021
+description: Apreneu a configurar la connexió i exportar a AdRoll.
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a318750077c71a17e5a47c40722f6153e6640f3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697062"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227608"
 ---
-# <a name="connector-for-adroll-preview"></a>Connector per a AdRoll (versió preliminar)
+# <a name="export-segments-to-adroll-preview"></a>Exportar segments a AdRoll (versió preliminar)
 
 Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a la publicitat. 
 
-## <a name="prerequisites"></a>Requisits previs
+## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
 
 -   Teniu un [compte d'AdRoll](https://www.adroll.com/) i les credencials d'administrador corresponents.
 -   Teniu [segments configurats](segments.md) a les conclusions del públic.
 -   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
-## <a name="connect-to-adroll"></a>Connecta a AdRoll
+## <a name="known-limitations"></a>Limitacions conegudes
 
-1. Aneu a **Administració** > **Destinacions d'exportació**.
+- Podeu exportar fins a 250.000 perfils de client alhora a AdRoll.
+- No podeu exportar segments amb menys de 100 perfils de client a AdRoll. 
+- L'exportació a AdRoll es limita als segments.
+- L'exportació de fins a 250.000 perfils de client a AdRoll pot trigar fins a 10 minuts a completar-se. 
+- El nombre de perfils de client que podeu exportar a AdRoll depèn del vostre contracte amb AdRoll.
 
-1. A **AdRoll**, seleccioneu **Configura**.
+## <a name="set-up-connection-to-adroll"></a>Configuració de la connexió a AdRoll
 
-1. Doneu a la destinació d'exportació un nom reconeixible al camp **Nom de visualització**.
+1. Aneu a **Administració** > **Connexions**.
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Subfinestra de configuració per a la connexió d'AdRoll.":::
+1. Seleccioneu **Afegeix connexió** i trieu **AdRoll** per configurar la connexió.
+
+1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
+
+1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
 
@@ -44,29 +51,32 @@ Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a 
 
 1. Seleccioneu **Afegeix-me com a usuari d'exportació** i proporcioneu les vostres credencials del Customer Insights.
 
-1. Introduïu l'**Identificador de l'anunciant d'AdRoll** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).
+1. Seleccioneu **Desa** per completar la connexió.
 
-1. Seleccioneu **Següent** per configurar l'exportació.
+## <a name="configure-an-export"></a>Configurar una exportació
 
-## <a name="configure-the-connector"></a>Configurar el connector
+Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
 
-1. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a AdRoll.
+1. Vés a **Dades** > **Exportacions**.
+
+1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
+
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció AdRoll. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
+
+1. Introduïu l'**ID d'anunciant d'AdRoll**. Per obtenir més informació, vegeu [Perfils d'anunciant d'AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a AdRoll.
 
 1. Seleccioneu els segments que voleu exportar. Seleccioneu un segment amb un mínim de 100 membres. No podeu exportar segments més petits. A més, la mida màxima d'un segment que s'ha d'exportar és de 250.000 membres per exportació. 
 
 1. Seleccioneu **Desa**.
 
-## <a name="export-the-data"></a>Exportar les dades
+Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-Podeu [exportar les dades segons demanda](export-destinations.md). L'exportació també s'executarà amb cada [actualització planificada](system.md#schedule-tab).
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). 
 
-## <a name="known-limitations"></a>Limitacions conegudes
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
 
-- Podeu exportar fins a un total de 100.000 perfils per exportació a AdRoll.
-- No podeu exportar segments amb menys de 100 perfils a AdRoll. 
-- L'exportació a AdRoll es limita als segments.
-- L'exportació de fins a 250.000 perfils a AdRoll pot trigar fins a 10 minuts com a completar-se. 
-- El nombre de perfils que podeu exportar a AdRoll és limitat i dependrà del contracte que tingueu amb AdRoll.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

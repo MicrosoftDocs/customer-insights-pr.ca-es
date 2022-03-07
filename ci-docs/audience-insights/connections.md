@@ -3,18 +3,20 @@ title: Connexions amb altres serveis des del Customer Insights.
 description: Compartiu dades amb altres serveis.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304960"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354371"
 ---
 # <a name="connections-preview-overview"></a>Informació general sobre les connexions (versió preliminar)
 
@@ -47,6 +49,7 @@ Per afegir connexions, heu de tenir [permisos d'administrador](permissions.md). 
 1. A la subfinestra **Configuració de la connexió**, proporcioneu els detalls necessaris. 
    1. El **Nom de visualització** i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
    1. Els camps exactes depenen del servei amb què us connecteu. Podeu obtenir informació sobre els detalls d'un tipus de connexió específic a l'article sobre el servei de destinació.
+   1. Si [utilitzeu el vostre propi magatzem de claus](use-azure-key-vault.md) per emmagatzemar secrets, activeu **Utilitza Key Vault** i trieu el secret de la llista.
 
 1. Per crear la connexió, seleccioneu **Desa**.
 
@@ -93,3 +96,6 @@ Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiv
 
 1. Per confirmar la supressió, seleccioneu **Suprimeix**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar les connexions amb els secrets administrats pel vostre propi Key Vault
+
+Algunes connexions necessiten secrets com ara les claus de l'API o les contrasenyes. Algunes connexions admeten secrets emmagatzemats al vostre propi Key Vault. Més informació sobre les connexions admeses i com configurar-les al [vostre propi Key Vault per a les conclusions del públic](use-azure-key-vault.md).

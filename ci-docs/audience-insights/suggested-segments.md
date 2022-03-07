@@ -3,18 +3,20 @@ title: Segments suggerits basats en aprenentatge automàtic
 description: Deixeu que l'aprenentatge automàtic us ajudi a trobar segments nous i interessants en funció dels atributs del client.
 ms.date: 10/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-segment-suggestions
+- customerInsights
+ms.openlocfilehash: 82345a7d7cf7fd38d74080552799de0b92461d78
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673171"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353577"
 ---
 # <a name="suggested-segments-preview"></a>Segments suggerits (versió preliminar)
 

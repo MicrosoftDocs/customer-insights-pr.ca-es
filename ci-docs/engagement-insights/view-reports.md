@@ -4,17 +4,16 @@ description: Utilitzeu els informes disponibles per veure l'activitat en temps r
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036636"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229728"
 ---
 # <a name="view-reports"></a>Visualitza els informes
 
@@ -92,12 +91,18 @@ L'**ús en temps real** proporciona una descripció general de l'activitat actua
 
 - Les **ubicacions** mostren informació sobre els usuaris de l'aplicació per país, regió i ciutat.
 
-## <a name="filter-by-time-or-value"></a>Filtrar per hora o valor
+## <a name="filter-by-time-or-date-range"></a>Filtrar per hora o interval de dates
 
-Podeu seleccionar un període de temps o un valor en un informe web o mòbil per centrar-vos en un valor o un període de temps. 
+Podeu seleccionar el període de temps o l'interval de dates en un informe web o mòbil per centrar-vos en un valor o un període de temps. 
 
-- Per seleccionar un període de temps, seleccioneu **Més [...]** a la llista desplegable de l'informe. La selecció d'interval de temps està inhabilitada per a un informe d'ús en temps real; l'interval de temps d'un informe d'ús en temps real és "ara".
+- Per seleccionar un període de temps, a la part superior dreta de la visualització d'informe, seleccioneu un valor a la llista desplegable de l'informe. També podeu triar un **Interval de dates fix**. 
 
-- A la majoria d'informes, seleccioneu un valor en un gràfic o una llista per filtrar l'informe segons el valor seleccionat.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrar per hora o interval de dates.":::   
+
+- Per a la majoria d'informes, seleccioneu un valor en un gràfic o una llista per filtrar l'informe.
+
+> [!NOTE]
+> La selecció d'interval de temps està inhabilitada per a un informe d'ús en temps real; l'interval de temps d'un informe d'ús en temps real és "ara".
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

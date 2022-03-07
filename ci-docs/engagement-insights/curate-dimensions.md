@@ -2,18 +2,17 @@
 title: Utilitzar dimensions demogràfiques per dividir dades de comportament (dimensions curades)
 description: Utilitzeu dimensions curades del perfil unificat per habilitar les propietats del perfil del client de les conclusions del públic.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461091"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232955"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilitzar dimensions demogràfiques per dividir dades de comportament
 
@@ -29,7 +28,7 @@ Mitjançant dimensions demogràfiques del perfil unificat, els usuaris de conclu
 - Un entorn de conclusions d’interacció en què tingueu dades de perfil del client enllaçades a l’entorn de conclusions del públic on es creen els perfils de clients. Més informació: [Creació d'un enllaç entre les conclusions del públic i les conclusions d'interacció](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Després de crear un enllaç entre els entorns de conclusions del públic i d'interacció, pot ser que només vulgueu dades específiques de les propietats del perfil del client, que poden ser útils com a dimensions de les conclusions d'interacció. Per obtenir-ne més informació, aneu a [Habilitació dels segments i els atributs dels perfils unificats de les conclusions del públic](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Després de crear un enllaç entre els entorns de conclusions del públic i d'interacció, pot ser que només vulgueu dades específiques de les propietats del perfil del client, que poden ser útils com a dimensions de les conclusions d'interacció. Per obtenir-ne més informació, aneu a [Habilitació dels segments i els atributs dels perfils unificats de les conclusions del públic](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crear un informe nou personalitzat
 

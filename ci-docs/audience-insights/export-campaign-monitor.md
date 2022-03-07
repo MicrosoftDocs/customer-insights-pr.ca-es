@@ -1,20 +1,19 @@
 ---
 title: Exportar dades del Customer Insights a Campaign Monitor
 description: Apreneu a configurar la connexió i exportar a Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 091a3197dc0c19ff78f0419fb4e88868e0f78359
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: be9c92a087ab4664077d18fe8585bf96715c1535
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124169"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228140"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Exportar segments a Campaign Monitor (versió preliminar)
 
@@ -28,10 +27,10 @@ Exporteu segments de perfils de client unificats a Campaign Monitor i utilitzeu-
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 1 milió de perfils per exportació a Campaign Monitor.
+- Podeu exportar fins a 1 milió de perfils de client per exportar-los a Campaign Monitor.
 - L'exportació a Campaign Monitor es limita als segments.
-- L'exportació de fins a 1 milió de perfils a Campaign Monitor pot trigar fins a 20 minuts com a màxim. 
-- El nombre de perfils que podeu exportar a Campaign Monitor depèn i està limitat pel contracte amb Campaign Monitor.
+- L'exportació de fins a 1 milió de perfils de client a Campaign Monitor pot trigar fins a 20 minuts a completar-se. 
+- El nombre de perfils de client que podeu exportar a Campaign Monitor depèn del vostre contracte amb Campaign Monitor i pot estar limitat.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Configurar la connexió a Campaign Monitor
 
@@ -66,7 +65,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 1. Introduïu l'[**ID de llista de Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    [Genereu la clau de l'API](https://www.campaignmonitor.com/api/getting-started/) des de **Configuració del compte** a Campaign Monitor per visualitzar primer l'ID de la llista de l'API.  
 
-3. A la secció **Coincidència de les dades**, al camp **Correu electrònic**, seleccioneu el camp del perfil de client unificat que representa l'adreça electrònica d'un client. Cal que exporteu segments a Campaign Monitor.
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Campaign Monitor.
 
 1. Seleccioneu **Desa**.
 

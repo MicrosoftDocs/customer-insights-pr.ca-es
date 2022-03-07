@@ -3,23 +3,25 @@ title: Models d'aprenentatge automàtic personalitzats | Microsoft Docs
 description: Treballeu amb models personalitzats de l'Aprenentatge automàtic de l'Azure al Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881772"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355039"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
 > [!NOTE]
-> El suport per a Aprenentatge automàtic Studio (clàssic) finalitzarà el 31 d'agost de 2024. Us recomanem que feu la transició a [l'Azure Aprenentatge automàtic](/azure/machine-learning/overview-what-is-azure-machine-learning) en aquesta data.
+> El suport per a Aprenentatge automàtic Studio (clàssic) finalitzarà el 31 d'agost de 2024. Us recomanem que feu la transició a l'Azure [Aprenentatge automàtic](/azure/machine-learning/overview-what-is-azure-machine-learning) en aquesta data.
 >
 > A partir de l'1 de desembre de 2021, no podreu crear nous recursos de Aprenentatge automàtic Studio (clàssic). Fins al 31 d'agost de 2024, podeu continuar utilitzant els recursos existents de Aprenentatge automàtic Studio (clàssic). Per obtenir més informació, vegeu [Migrar a l'Azure Aprenentatge automàtic](/azure/machine-learning/migrate-overview).
 
@@ -41,6 +43,8 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
    > [!NOTE]
    > Les dades es transfereixen entre les vostres instàncies del Customer Insights i els pipelines o serveis web de l'Azure seleccionats al flux de treball. Quan transferiu dades a un servei de l'Azure, assegureu-vos que el servei estigui configurat per processar les dades de la manera i la ubicació necessàries per complir tots els requisits legals o normatius per a les dades en aquesta organització.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+
 ## <a name="add-a-new-workflow"></a>Afegir un flux de treball nou
 
 1. Aneu a **Intel·ligència** > **Models personalitzats** i seleccioneu **Flux de treball nou**.
@@ -56,7 +60,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 1. Seleccioneu els **Espais de treball** associats amb el servei web. 
 
-1. Trieu el pipeline de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del** model. A continuació, seleccioneu **Següent**.    
+1. Trieu el pipeline de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del model**. A continuació, seleccioneu **Següent**.    
    Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Per a cada **Entrada del servei web**, seleccioneu l'**Entitat** coincident de les conclusions del públic i seleccioneu **Següent**.

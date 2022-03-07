@@ -1,22 +1,31 @@
 ---
 title: Exportar dades del Customer Insights a l'Azure Data Lake Storage Gen2
 description: Apreneu a configurar la connexió a l'Azure Data Lake Storage Gen2.
-ms.date: 03/03/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760039"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231662"
 ---
-# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Configurar la connexió amb l'Azure Data Lake Storage Gen2 (versió preliminar)
+# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportar la llista de segments i altres dades a l'Azure Data Lake Storage Gen2 (versió preliminar)
+
+Emmagatzemeu les dades del Customer Insights en un compte del Data Lake Storage Gen2 o utilitzeu-lo per transferir les vostres dades a altres aplicacions.
+
+## <a name="known-limitations"></a>Limitacions conegudes
+
+1. Per a l'Azure Data Lake Storage Gen2 podeu triar entre [rendiment estàndard i nivell de rendiment Premium](/azure/storage/blobs/create-data-lake-storage-account) quan esteu creant un compte d'emmagatzematge per al vostre emmagatzematge de dades. Si trieu el nivell de rendiment prèmium, seleccioneu els blobs en bloc prèmium com a tipus de compte. 
+
+
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar la connexió a l'Azure Data Lake Storage Gen2 
+
 
 1. Aneu a **Administració** > **Connexions**.
 

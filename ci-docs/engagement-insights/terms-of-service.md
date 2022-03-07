@@ -5,26 +5,25 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 06/09/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 101888ecc3a741a1ab6eb87c20055644eb8022b2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7774118"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228070"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS : Coneixements d'interacció (versió preliminar) 
 
-Les idees de compromís (previsualització) és una capacitat de previsualització prèvia al llançament, el que significa que té menys o diferents mesures de seguretat, privadesa i ubicació de dades que les característiques i capacitats que generalment estan disponibles en Dynamics 365 Customer Insights. Reviseu les condicions següents i la documentació del producte per determinar si els coneixements d'interacció (versió preliminar) són adequats per a les vostres dades.
+Els coneixements d'interacció (versió preliminar) són una capacitat de versió preliminar d'ús previ, la qual cosa significa que les mesures de seguretat, privadesa i ubicació de dades són inferiors o diferents de les característiques i les capacitats que normalment estan disponibles al Dynamics 365 Customer Insights. Reviseu les condicions següents i la documentació del producte per determinar si els coneixements d'interacció (versió preliminar) són adequats per a les vostres dades.
 
 ## <a name="preview-terms-of-service"></a>VERSIÓ PRELIMINARS DE LES CONDICIONS DEL SERVEI
 
 ACTUALITZAT PER ÚLTIM COP L'OCTUBRE DE 2020 
 
-En accedir o utilitzar la visualització prèvia dels serveis de la Dynamics 365 Customer Insights - Informació del Compromís (juntament amb qualsevol font de dades proporcionada per Microsoft, els "Serveis"), accepteu els termes i condicions d'aquest Acord. Si no les accepteu, no accediu ni utilitzeu els Serveis.
+En accedir o utilitzar la versió preliminar del servei del Dynamics 365 Customer Insights: coneixements d'interacció (juntament amb les fonts de dades proporcionades per Microsoft, els "Serveis"), accepteu els termes i les condicions d'aquest acord. Si no les accepteu, no accediu ni utilitzeu els Serveis.
 
 ## <a name="1-what-this-agreement-covers"></a>1. COBERTURA DE L'ACORD
 
@@ -90,7 +89,7 @@ Sou l'únic responsable de totes les dades proporcionades a Microsoft a través 
 
 En la mesura que Microsoft sigui un Processador o Subprocessador de Dades personals en connexió amb els Serveis, totes aquestes Dades personals estaran subjectes als compromisos de Microsoft relacionats amb les "Dades de serveis professionals" a les Condicions dels serveis en línia i a l'Addició de protecció de dades dels serveis en línia. Accepteu que teniu el consentiment adient de tots els temes de dades per a la transferència, l'emmagatzematge i el processament de Dades personals als Estats Units o a qualsevol altre país on Microsoft o els seus afiliats, filials o proveïdors de serveis tinguin instal·lacions. 
 
-## <a name="4-proprietary-rights"></a>8. 4. DRETS DE PROPIETAT
+## <a name="4-proprietary-rights"></a>4. DRETS DE PROPIETAT
 
 ### <a name="41-reservation-of-rights-no-other-license"></a>4.1. Reserva de drets; cap altra llicència
 
@@ -154,7 +153,7 @@ EN LA MESURA MÀXIMA PERMESA PER LA LLEI, MICROSOFT NO SERÀ RESPONSABLE EN CAP 
 
 ### <a name="111-term"></a>11.1. Terme
 
-Aquest acord és efectiu en la data en què hi esteu d'acord. Aquest Acord substitueix qualsevol acord anterior en virtut del qual hàgiu estat utilitzant Dynamics 365 Product Insights o qualsevol servei precursor. Aquest Acord acabarà tan bon punt (i) es compleixi la data de la primera disponibilitat d'una versió comercial dels Serveis (si n'hi ha) o (ii) quan la data en què Microsoft us avisi de la finalització. Microsoft pot suspendre o cancel·lar el vostre ús i accés a tots o a qualsevol part dels Serveis, o cancel·lar aquest Contracte en qualsevol moment per qualsevol raó i segons el seu únic criteri.
+Aquest acord és efectiu en la data en què hi esteu d'acord. Aquest Acord substitueix qualsevol acord anterior segons el qual heu estat utilitzant el Dynamics 365 Product Insights o qualsevol servei precursor. Aquest Acord acabarà tan bon punt (i) es compleixi la data de la primera disponibilitat d'una versió comercial dels Serveis (si n'hi ha) o (ii) quan la data en què Microsoft us avisi de la finalització. Microsoft pot suspendre o cancel·lar el vostre ús i accés a tots o a qualsevol part dels Serveis, o cancel·lar aquest Contracte en qualsevol moment per qualsevol raó i segons el seu únic criteri.
 
 ### <a name="112-effect-of-termination"></a>11.2. Efecte de la finalització
 

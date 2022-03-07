@@ -1,22 +1,21 @@
 ---
 title: Exportar dades del Customer Insights a l'Azure Synapse Analytics
-description: Apreneu a configurar la connexió amb l'Azure Synapse Analytics.
-ms.date: 04/12/2021
+description: Més informació sobre com configurar la connexió a Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
-ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6327352"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231300"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dades a l'Azure Synapse Analytics (versió preliminar)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporta les dades a Azure Synapse Analytics (visualització prèvia)
 
 L'Azure Synapse és un servei d'analítica que accelera el temps per obtenir informació sobre els magatzems de dades i els sistemes de macrodades. Podeu ingerir i utilitzar les dades del Customer Insights a l'[Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -49,9 +48,11 @@ A l’Azure:
 
 ### <a name="configure-a-connection"></a>Configurar una connexió
 
+Per crear una connexió, el principal del servei i el compte d'usuari del Customer Insights necessiten **permisos de lector** al grup *de* recursos on es troba l'àrea de treball de Synapse Analytics. A més, el principal del servei i l'usuari de l'àrea de treball de Synapse Analytics necessiten **permisos d'administrador de** sinapsi. 
+
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** i trieu **Azure Synapse Analytics** o seleccioneu **Configuració** a la peça de l'**Azure Synapse Analytics** per configurar la connexió.
+1. Seleccioneu **Afegeix una connexió** i trieu **Azure Synapse Analytics** o seleccioneu la **Configuració** a la **Azure Synapse Analytics** peça per configurar la connexió.
 
 1. Doneu a la connexió un nom reconeixible al camp Nom de visualització. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
@@ -63,17 +64,17 @@ A l’Azure:
 
 ### <a name="configure-an-export"></a>Configurar una exportació
 
-Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per configurar l'exportació amb una connexió compartida, necessiteu com a mínim **permisos de col·laborador** a l'Insights del client. Per obtenir més informació, vegeu [permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
 
 1. Vés a **Dades** > **Exportacions**.
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció **Azure Synapse Analytics**. Si no veieu aquest nom de secció, no hi ha cap [connexió](connections.md) d'aquest tipus disponible per a vós.
+1. **Al camp Connexió per a l'exportació**, trieu una connexió de la **Azure Synapse Analytics** secció. Si no veieu aquest nom de secció, no hi ha cap [connexió](connections.md) d'aquest tipus disponible per a vós.
 
 1. Proporcioneu un **Nom de visualització** recognoscible per a l'exportació i un **Nom de la base de dades**.
 
-1. Seleccioneu les entitats que voleu exportar a l'Azure Synapse Analytics.
+1. Seleccioneu a Azure Synapse Analytics quines entitats voleu exportar.
    > [!NOTE]
    > Les fonts de dades basades en una [carpeta del model de dades comú](connect-common-data-model.md) no són compatibles.
 
@@ -82,6 +83,8 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
 L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand).
+
+Per consultar les dades que s'han exportat a Synapse Analytics, necessiteu **accés del lector** de dades blob d'emmagatzematge a l'emmagatzematge de destinació a l'àrea de treball de les exportacions. 
 
 ### <a name="update-an-export"></a>Actualitzar una exportació
 

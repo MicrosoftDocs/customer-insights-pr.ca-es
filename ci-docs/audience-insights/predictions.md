@@ -1,24 +1,28 @@
 ---
 title: Emplenar dades parcials mitjançant prediccions
 description: Utilitzeu prediccions per emplenar les dades incompletes dels clients.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645022"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353991"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Completar les dades parcials amb prediccions
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa les teves dades parcials amb prediccions (obsoletes)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Aquesta característica quedarà **obsoleta a** partir del 5 de novembre de **2021**. Les implementacions actuals continuaran funcionant fins que se suprimeixi la característica, però no podreu crear integracions noves utilitzant les instruccions següents.
 
 Les prediccions us permeten crear fàcilment valors previstos que poden millorar la comprensió d'un client. A la pàgina **Intel·ligència** > **Prediccions**, seleccioneu **Les meves prediccions** per veure les prediccions que heu configurat en altres parts de les conclusions del públic i seguir personalitzant-les.
 
@@ -60,6 +64,8 @@ Per obtenir més informació, vegeu [Crear un entorn nou](create-environment.md)
    > ![Exemple que mostra els valors de camp assignats a categories.](media/intelligence-categorymapping.png "Exemple que mostra els valors de camp assignats a categories")
 
 8. Seleccioneu **Fet** i es processarà la predicció. El processament tardarà una estona, en funció de la mida i la complexitat de les dades. Els resultats estaran disponibles en una entitat nova basada en el **Nom de l'entitat de sortida** de la predicció que heu creat.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear una predicció durant la creació d'un segment
 
@@ -110,7 +116,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 ## <a name="edit-a-prediction"></a>Editar una predicció
 
-Després d'haver creat una predicció, podeu personalitzar el model de l'AI Builder per augmentar l'eficàcia del model.  
+Després de crear un predicció, podeu personalitzar el model al AI Builder per augmentar l'eficàcia del vostre model.  
 
 1. A les conclusions del públic, aneu a **Intel·ligència** > **Prediccions** > **Les meves prediccions**.
 
@@ -118,14 +124,14 @@ Després d'haver creat una predicció, podeu personalitzar el model de l'AI Buil
 
 3. Seleccioneu els punts suspensius de la columna **Accions** i trieu **Visualitza**.
 
-4. Seleccioneu **Personalitza a l'AI Builder**.
+4. Seleccioneu **Personalitza al AI Builder**.
 
-5. Actualitzeu el model a l'AI Builder. [Més informació sobre la gestió de models a l'AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Actualitza el teu model a la AI Builder. [Més informació sobre la gestió de models a l'AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 A la següent execució de la vostra predicció s'utilitzarà el model actualitzat que hàgiu creat.
 
 > [!NOTE]
-> Els models nous creats a l'AI Builder no es mostraran a les conclusions del públic si no s'ha creat el model a partir de les experiències enumerades anteriorment.
+> Els models nous creats no es mostraran a les estadístiques del públic tret que el model s'hagi creat a AI Builder partir de les experiències esmentades anteriorment.
 
 ## <a name="remove-a-prediction"></a>Suprimir una predicció
 

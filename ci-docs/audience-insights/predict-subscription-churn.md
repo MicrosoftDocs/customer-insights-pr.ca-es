@@ -3,20 +3,19 @@ title: Predicció de churn de subscripció (conté vídeo)
 description: Es prediu si un client està en risc de deixar d'utilitzar els productes o els serveis de la subscripció de l'empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967689"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354681"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predicció de rotació de subscripcions (versió preliminar)
+# <a name="subscription-churn-prediction"></a>Predicció de rotació de la subscripció
 
 La predicció de rotació de subscripcions ajuda a predir si un client està en risc de deixar d'utilitzar els productes o els serveis de la subscripció de l'empresa. Podeu crear una nova predicció de rotació de subscripcions a la pàgina **Intel·ligència** > **Prediccions**. Seleccioneu **Les meves prediccions** per veure la resta de prediccions que heu creat.
 
@@ -63,7 +62,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 ## <a name="create-a-subscription-churn-prediction"></a>Crear una predicció de rotació de subscripcions
 
 1. A les conclusions del públic, aneu a **Intel·ligència** > **Prediccions**.
-1. Seleccioneu la peça **Model de rotació de subscripcions (versió preliminar)** i seleccioneu **Utilitza aquest model**.
+1. Seleccioneu la peça del **model de rotació** de subscripció i seleccioneu **Utilitza aquest model**.
    > [!div class="mx-imgBorder"]
    > ![Icona Model de rotació de subscripcions amb el botó Utilitza aquest model.](media/subscription-churn-usethismodel.PNG "Icona Model de rotació de subscripcions amb el botó Utilitza aquest model")
 
@@ -77,7 +76,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. Introduïu el nombre de **Dies des que ha finalitzat la subscripció** que l'empresa considera que un client pot estar en un estat de rotació. Aquest període sol estar vinculat a activitats empresarials, com ara ofertes o altres iniciatives de màrqueting, que intenten evitar perdre el client.
 1. Introduïu el nombre de **Dies en el futur que es consultaran per predir la rotació** per definir una finestra per predir la rotació. Per exemple, per predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo als vostres esforços de retenció de màrqueting. Predir el risc de cancel·lació durant períodes de temps més llargs o més curts pot dificultar donar resposta als factors del vostre perfil de risc de cancel·lació, en funció de les necessitats específiques de la vostra empresa. Per continuar, feu clic a **Següent**
    >[!TIP]
-   > Podeu seleccionar **Desa** l'esborrany en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
+   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar la predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
 ### <a name="add-required-data"></a>Addició de les dades necessàries
 
