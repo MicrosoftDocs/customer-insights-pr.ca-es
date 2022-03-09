@@ -3,18 +3,17 @@ title: Guia de mostra per a les prediccions de valor de vida dels clients
 description: Utilitzeu aquesta guia d'exemple per provar el model de predicció del valor de vida dels clients.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 705e159f348e876f8a2a0ad3481608c6dd380df3dd74d7e5dba9dd3bebe25e52
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029479"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354819"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guia de mostra per a les prediccions de valor de vida dels clients (CLV)
 
@@ -22,7 +21,7 @@ Aquesta guia us explicarà un exemple final de la predicció del valor de vida d
 
 ## <a name="scenario"></a>Escenari
 
-Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat. Ven els productes mitjançant el seu lloc web de Contoso Coffee. L'empresa vol comprendre el valor (ingressos) que poden generar els seus clients en els propers 12 mesos. Conèixer el valor esperat dels seus clients durant els propers 12 mesos els ajudarà a dirigir els seus esforços de màrqueting cap als clients d'alt valor.
+Contoso és una empresa que produeix màquines de cafè i cafè d'alta qualitat. Venen els productes a través de la seva pàgina web Contoso Coffee. L'empresa vol comprendre el valor (ingressos) que poden generar els seus clients en els propers 12 mesos. Conèixer el valor esperat dels seus clients durant els propers 12 mesos els ajudarà a dirigir els seus esforços de màrqueting cap als clients d'alt valor.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -31,7 +30,7 @@ Contoso és una empresa que produeix cafè i cafeteres d'alta qualitat. Ven els 
 
 ## <a name="task-1---ingest-data"></a>Tasca 1 - Ingerir dades
 
-Reviseu els articles [sobre la ingestió de dades](data-sources.md) i la [importació de fonts de dades mitjançant els connectors del Power Query](connect-power-query.md). La informació següent suposa que ja esteu familiaritzat amb el concepte d'ingestió de dades en general.
+Reviseu els articles [sobre la ingestió](data-sources.md) de dades i [la importació d'orígens de dades mitjançant Power Query connectors](connect-power-query.md). La informació següent suposa que ja esteu familiaritzat amb el concepte d'ingestió de dades en general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dades de clients procedents de la plataforma de comerç electrònic
 
@@ -164,7 +163,7 @@ Després d'ingerir les dades, comencem el procés d'unificació de dades per cre
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tasca 3: configurar la predicció del valor de vida dels clients
 
-Amb els perfils de client unificats al seu lloc, ara podem executar la predicció del valor de vida dels clients. Per veure els passos detallats, vegeu [Predicció del valor de vida del client (versió preliminar)](predict-customer-lifetime-value.md).
+Amb els perfils de client unificats al seu lloc, ara podem executar la predicció del valor de vida dels clients. Per obtenir passos detallats, vegeu [Valor de vida del client predicció](predict-customer-lifetime-value.md).
 
 1. Aneu a **Intel·ligència**  > **Prediccions** i seleccioneu el **Model de valor de vida dels clients**.
 

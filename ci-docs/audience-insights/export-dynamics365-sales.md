@@ -3,28 +3,35 @@ title: Exportar dades del Customer Insights al Dynamics 365 Sales
 description: Apreneu a configurar la connexió i exportar a Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976214"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355004"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Ús de segments al Dynamics 365 Sales (versió preliminar)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Utilitzeu les dades dels vostres clients per crear llistes de màrqueting, fer un seguiment de fluxos de treball i enviar promocions amb el Dynamics 365 Sales.
 
+## <a name="known-limitations"></a>Limitacions conegudes
+
+- Les exportacions al Dynamics 365 Sales estan limitades a 100.000 membres per segment.
+- Les exportacions de segments al Dynamics 365 Sales poden trigar fins a 3 hores a completar-se. 
+
 ## <a name="prerequisite-for-connection"></a>Requisit previ per a la connexió
 
-1. Els registres de contacte han d'estar presents al Dynamics 365 Sales per poder exportar un segment del Customer Insights al Sales. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Sales mitjançant el Common Data Services](connect-power-query.md).
+1. Els registres de contacte han d'estar presents al Dynamics 365 Sales per poder exportar un segment del Customer Insights al Sales. Llegiu més informació sobre com ingerir contactes al [Dynamics 365 Sales mitjançant el Microsoft Dataverse](connect-power-query.md).
 
    > [!NOTE]
    > L'exportació de segments de les conclusions del públic al Sales no crearà registres de contacte nous a les instàncies del Sales. Els registres de contacte del Sales s'han d'ingerir a les conclusions del públic i s'han d'utilitzar com a font de dades. També s'han d'incloure a l'entitat Client unificada per assignar els identificadors de client als identificadors de contacte abans d'exportar els segments.

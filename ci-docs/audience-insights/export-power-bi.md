@@ -3,18 +3,17 @@ title: Connector del Power BI
 description: Apreneu com utilitzar el connector del Dynamics 365 Customer Insights al Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
-ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
-ms.translationtype: HT
+ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "6661090"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225503"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
 

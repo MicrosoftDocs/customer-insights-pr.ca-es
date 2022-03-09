@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645298"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229065"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Crear una àrea de treball nova i afegir-hi membres
 
@@ -26,17 +25,17 @@ Quan creeu una àrea de treball, seleccioneu el tipus de dades en què us voleu 
 
 ## <a name="create-a-new-workspace"></a>Crea una àrea de treball nova
 
-El procés de creació d'una àrea de treball inclou la configuració de l'*entorn* per organitzar l'àrea de treball. Un entorn és un espai que pot contenir una o diverses àrees de treball. Podeu utilitzar un entorn per administrar les àrees de treball i les connexions amb la capacitat dels coneixements d'interacció del Customer Insights.
+El procés de creació d'una àrea de treball inclou la configuració de l'*entorn* per organitzar l'àrea de treball. Un entorn és un espai que pot contenir una o diverses àrees de treball. Podeu utilitzar un entorn per gestionar els espais de treball i les connexions amb la capacitat de les estadístiques del públic.
 
-1. Seleccioneu **Crea** al commutador de l'àrea de treball.
+1. Seleccioneu **+Nou** del commutador d'espais de treball.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Pàgina del Customer Insights amb una crida a la subfinestra de navegació i a la descripció.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Pàgina del Customer Insights amb text destacat a la subfinestra de navegació i a la descripció.":::
 
 1. A la subfinestra **Àrea de treball**, introduïu un **Nom d'àrea de treball**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Escriviu el nom de l'àrea de treball.":::
 
-1. Trieu el tipus de plataforma (web o mòbil) que voleu mesurar.
+1. Tria el tipus de plataforma (web o mòbil) que vulguis mesurar.
 
 1. Seleccioneu **Mostra la configuració avançada** per habilitar o inhabilitar aquesta configuració opcional:
 

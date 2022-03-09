@@ -4,18 +4,17 @@ summary: Ingeriu, unifiqueu i organitzeu les dades dels clients de diversos orí
 metadata:
   title: Documentació de conclusions del públic
   description: Centre d'ajuda amb enllaços essencials per a les conclusions del públic.
-  ms.service: customer-insights
   ms.subservice: audience-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
-  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
-  ms.translationtype: HT
+  ms.date: 03/02/2022
+  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
+  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+  ms.translationtype: MT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "4745709"
+  ms.lasthandoff: 02/16/2022
+  ms.locfileid: "8231825"
 landingContent:
 - title: Quant a les conclusions del públic
   linkLists:
@@ -25,8 +24,12 @@ landingContent:
       url: overview.md
     - text: Característiques noves i actualitzades
       url: whats-new-audience-insights.md
-    - text: Lloc de la comunitat
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Descobriu les conclusions del públic
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
+    links:
+    - text: Camí d'aprenentatge del Customer Insights
+      url: /learn/paths/build-customer-insights/
 - title: Unificar dades
   linkLists:
   - linkListType: how-to-guide
@@ -37,7 +40,11 @@ landingContent:
       url: data-unification.md
     - text: Entendre les entitats
       url: entities.md
-- title: Enriquir i refinar dades
+  - linkListType: learn
+    links:
+    - text: Crear un perfil unificat
+      url: /learn/modules/unified-customer-profile/
+- title: Obtén informació detallada
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -45,9 +52,13 @@ landingContent:
       url: enrichment-hub.md
     - text: Configurar relacions
       url: relationships.md
-    - text: Enumerar les activitats d'un client
-      url: activities.md
-- title: Obtén informació detallada
+    - text: Completar dades amb prediccions
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Enriquir i predir dades
+      url: /learn/modules/enrich-data/
+- title: Basa't en les teves dades
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -55,8 +66,12 @@ landingContent:
       url: segments.md
     - text: Crear mesures
       url: measures.md
-    - text: Completar dades amb prediccions
-      url: predictions.md
+    - text: Enumerar les activitats d'un client
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Treballar amb l'aplicació
+      url: /learn/modules/working-with-customer-insights/
 - title: Exportar dades del client
   linkLists:
   - linkListType: how-to-guide
@@ -67,6 +82,10 @@ landingContent:
       url: customer-card-add-in.md
     - text: Connector del Power BI
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Administra les connexions externes
+      url: /learn/modules/configure-third-party-connections/
 - title: Administrar l'aplicació
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +96,7 @@ landingContent:
       url: permissions.md
     - text: Administrar diversos entorns
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrar el Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
