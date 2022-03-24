@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232645"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376450"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novetats de la capacitat de conclusions del públic del Dynamics 365 Customer Insights
-
-
 
 Estem molt contents d'anunciar les nostres actualitzacions més recents. En aquest article es resumeixen les característiques de versió preliminar pública, millores de disponibilitat general i actualitzacions de característiques. Per veure els plans de característiques a llarg termini, doneu una ullada als [plans de llançament del Dynamics 365 i el Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Actualitzacions de febrer del 2022
+
+Les actualitzacions de febrer de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="general-availability-for-prediction-models"></a>Disponibilitat general per a models predicció
+
+Els models de predicció de fora de la caixa, inclosos el **churn** de subscripció, **el churn** transaccional i **el valor de vida del client (CLV)** generalment estan disponibles com a part de Customer Insights. 
+
+Per obtenir més informació, vegeu [Visió general de les prediccions](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Font de dades nou: integració amb Azure Synapse Analytics (visualització prèvia)
+
+Azure Synapse Analytics És un servei d'anàlisi empresarial que accelera el temps per obtenir estadístiques a través de magatzems de dades i sistemes de big data.
+
+Si la vostra organització ja utilitza les capacitats d'anàlisi Azure Synapse Analytics avançades i emmagatzema la sortida a les bases de dades del Data Lake, podeu ingerir fàcilment aquestes dades al Customer Insights. Per obtenir més informació, vegeu [Connectar una Azure Synapse font de dades (Previsualització)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Enriquiment liveRamp (Preview)
+
+LiveRamp proporciona una resolució d'identitat fora de línia determinista i la consolidació de les dades dels clients. Podeu assignar identificadors personals a les vostres dades de client al gràfic d'identitat d'AbiliTec i rebre identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels clients.
+
+Per obtenir més informació, vegeu [Enriquer perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (Vista prèvia)
+
+Utilitzeu dades d'orígens com Microsoft i altres socis per enriquir les dades dels clients abans de la unificació de dades. Font de dades enriquiments ajuden a produir una major integritat i qualitat de les dades que poden ajudar a aconseguir millors resultats una vegada que unifiqueu les vostres dades.
+
+Per obtenir més informació, vegeu [Enriquiment per a fonts de dades (Previsualització)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Canvia el propietari de l'entorn
+
+Tot i que diversos usuaris poden tenir permisos d'administració a Customer Insights, només un usuari és el propietari d'un entorn. Una experiència millorada us permet canviar els propietaris d'un entorn i reclamar la propietat si un antic propietari va abandonar l'organització. 
+
+Per obtenir més informació, consulta [Canviar el propietari d'un entorn](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>El procés de preparació de dades llista la raó de corrupció dels registres malmesos
+
+El procés de preparació de dades ara mostra la raó de la corrupció de tots els camps amb dades corruptes a nivell de registre individual per facilitar la identificació. 
+
+Per obtenir més informació, vegeu [Orígens](entities.md#corrupted-data-sources) de dades malmesos.
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Final de la visualització prèvia per a les funcions d'informes a la capacitat d'informació d'interacció
+
+La Dynamics 365 Customer Insights vista prèvia de la capacitat d'informació de compromís va finalitzar el 15 de febrer de 2022.  
+Aquest canvi significa que l'experiència de prova del Customer Insights ja no inclou la possibilitat de crear embuts de conversió ni altres funcionalitats d'informes.
+
+Us convidem a explorar i avaluar les moltes altres característiques del Customer Insights [, la plataforma de dades de](https://dynamics.microsoft.com/ai/customer-insights/) clients de Microsoft (CDP).    
+ 
+Durant un període de transició, els participants de previsualització existents encara tenen accés a algunes capacitats i funcionalitats de visualització prèvia:
+
+- Obtén el codi per instrumentar un lloc web o una aplicació mòbil 
+- Veure esdeveniments i propietats de l'esdeveniment 
+- Millorar els perfils unificats amb esdeveniments ingerits i refinats per beneficiar-se del valor total de les seves dades de clients
+  
+Durant el període de transició, els esdeveniments capturats encara es transmeten al data lake connectat. Un cop desactivada aquesta funcionalitat, l'intercanvi de dades entre les estadístiques d'interacció i les estadístiques del públic s'aturarà i no s'enviaran esdeveniments nous a l'emmagatzematge connectat.
+Poseu-vos en contacte directament amb l'equip del compte Microsoft si teniu preguntes sobre el final de la visualització prèvia de la capacitat. L'equip del compte us mantindrà actualitzats en els propers llançaments. 
 
 ## <a name="january-2022-updates"></a>Actualitzacions de gener de 2022
 
@@ -52,7 +106,7 @@ Per obtenir més informació, vegeu [Inicia la sessió reenviant-la amb l'Azure 
 
 Utilitzeu dades de per enriquir els perfils del compte de client amb estadístiques sobre les interaccions a través d'aplicacions Microsoft Office 365 Office 365. Les dades d'interacció consisteixen en l'activitat de correu electrònic i reunió, que s'agrega al nivell de compte. Per exemple, el nombre de correus electrònics d'un compte d'empresa o el nombre de reunions amb el compte. No es comparteixen dades sobre usuaris individuals. Aquest enriquiment està disponible a les següents regions: Regne Unit, Europa, Amèrica del Nord.
 
-Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'interacció (Previsualització)](enrichment-office.md).
+Per obtenir més informació, vegeu [Enriquir els perfils de clients amb dades d'interacció (Previsualització)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Característiques avançades d'unificació de dades
 
@@ -99,7 +153,7 @@ Les actualitzacions a l'octubre de 2021 inclouen noves funcions, actualitzacions
 
 ### <a name="b-to-b"></a>B a B
 
-A partir de l'octubre del 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment a consumidors individuals. S'han actualitzat diverses àrees de característiques per donar suport a escenaris B-to-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B compatibles, consulta [Treballar amb comptes d'empresa a les estadístiques del](work-with-business-accounts.md) públic.
+A partir de l'octubre del 2021, podeu treballar amb comptes d'empresa i els seus contactes relacionats a Customer Insights. Abans, l'aplicació s'adaptava principalment a consumidors individuals. S'han actualitzat diverses àrees de característiques per donar suport a escenaris B-to-B a més d'un nou tipus d'entorn. Per obtenir una visió general de les funcions de B a B compatibles, consulta [Treballar amb comptes d'empresa a les estadístiques del públic](work-with-business-accounts.md).
 
 Les seccions següents destaquen algunes de les àrees clau que es van adaptar per donar suport als comptes empresarials i als consumidors individuals.
 

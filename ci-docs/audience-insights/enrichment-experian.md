@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229952"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376680"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -25,7 +25,7 @@ Per configurar Experian, cal complir els requisits previs següents:
 
 - Heu de tenir una subscripció activa d'Experian. Per obtenir una subscripció, [poseu-vos en contacte directament amb Experian](https://www.experian.com/marketing-services/contact). [Obteniu més informació sobre l'enriquiment de dades d'Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Un administrador ja ha configurat una connexió d'Experian *o* teniu permisos d'[administrador](permissions.md#administrator). També necessiteu l'identificador d'usuari, l'identificador del grup i el número de model per al compte de Secure Transport (ST) habilitat per a SSH que Experian ha creat.
+- Un administrador ja ha configurat una connexió d'Experian *o* teniu permisos d'[administrador](permissions.md#admin). També necessiteu l'identificador d'usuari, l'identificador del grup i el número de model per al compte de Secure Transport (ST) habilitat per a SSH que Experian ha creat.
 
 ## <a name="supported-countriesregions"></a>Països o regions admesos
 

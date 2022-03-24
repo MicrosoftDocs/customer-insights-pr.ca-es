@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226437"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376634"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquiment dels perfils de client amb l'Azure Maps (versió preliminar)
 
@@ -25,7 +25,7 @@ Per configurar l'enriquiment de dades de l'Azure Maps, cal complir els requisits
 
 - Heu de tenir una subscripció activa de l'Azure Maps. Per obtenir una subscripció, podeu [registrar-vos o obtenir una versió de prova gratuïta](https://azure.microsoft.com/services/azure-maps/).
 
-- Hi ha disponible una [connexió](connections.md) de l'Azure Maps *o* teniu permisos d'[administrador](permissions.md#administrator) i una clau de l'API de l'Azure Maps activa.
+- Hi ha disponible una [connexió](connections.md) de l'Azure Maps *o* teniu permisos d'[administrador](permissions.md#admin) i una clau de l'API de l'Azure Maps activa.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229019"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455940"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connector del Microsoft Power Apps (visualització prèvia)
 
@@ -38,6 +38,8 @@ Després d'afegir el Customer Insights com a connexió de dades, podeu triar les
 ### <a name="retrievable-entities"></a>Entitats recuperables
 
 Només podeu recuperar les entitats **Client**, **UnifiedActivity**, **Segments** i **ContactProfile** a través del connector del Power Apps. ContactProfile només està disponible en la instància de les conclusions del públic per a comptes empresarials. Es mostren altres entitats perquè el connector subjacent els admet mitjançant activacions al Power Automate.
+
+Pots fer un màxim de 100 trucades per 60 segons. Podeu trucar al punt final de l'API diverses vegades mitjançant el paràmetre $skip. [Obteniu més informació sobre el paràmetre $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegació
 

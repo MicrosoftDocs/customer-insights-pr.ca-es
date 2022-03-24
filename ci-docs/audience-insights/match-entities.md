@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372615"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376910"
 ---
 # <a name="match-entities"></a>Fer coincidir entitats
 
@@ -181,9 +181,11 @@ Una entitat de sortida de desduplicació conté la informació següent:
 - Camps que s'utilitzen per definir les regles de desduplicació.
 - Els camps Regla i Puntuació per denotar quines de les regles de desduplicació s'apliquen i la puntuació retornada per l'algorisme de coincidència.
  
-## <a name="include-enriched-entities-preview"></a>Inclou entitats enriquides (previsualització)
+## <a name="include-enriched-entities-preview"></a>Inclou entitats enriquides (Visualització prèvia)
 
 Si heu enriquit entitats al nivell font de dades, seleccioneu-les abans d'executar el procés de coincidència. Les entitats enriquides poden millorar els resultats de la unificació. Per obtenir més informació, vegeu [Enriquiment per a fonts](data-sources-enrichment.md) de dades. 
+
+L'entitat enriquida conté els camps de font de dades originals i els camps enriquits. Per tant, si decidiu treballar amb l'entitat enriquida, la configuració existent no es veurà afectada. Tanmateix, és possible que hàgiu d'actualitzar les regles de concordança per utilitzar els camps enriquits.
 
 1. Aneu a **DataUnifyMatch** > **·** > **i** seleccioneu **Utilitza entitats** enriquides a la part superior de la pàgina.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228462"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376818"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquir els perfils dels clients amb dades d'interacció (previsualització)
 
@@ -28,7 +28,7 @@ Per configurar l'enriquiment s'han de complir els requisits previs següents:
 - Teniu una llicència de núvol activa Office 365.
 - Teniu [perfils](customer-profiles.md) de clients unificats basats en [comptes d'empresa](work-with-business-accounts.md).
 - L'entorn del Customer Insights ha de tenir una [Microsoft Dataverse organització adjunta](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Teniu [permisos d'administrador](permissions.md#administrator).
+- Teniu [permisos d'administrador](permissions.md#admin).
 - Teniu o podeu obtenir el consentiment de l'administrador de l'inquilí Office 365 per utilitzar Office 365 les dades per proporcionar **estadístiques per a l'organització** dins de les aplicacions del Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
@@ -99,7 +99,7 @@ Totes les dades s'agreguen al nivell de compte. El sistema calcula una puntuaci�
 | Nivell d'agregació (any, mes o setmana)                                          |  Nivell d'agregació                        | 
 
 
-Reviseu les dades enriquides seleccionant **Mostra'n més** a la secció de visualització prèvia. Obre l'entitat de l'Office *·*. També podeu trobar l'entitat llistada al grup d'enriquiment a **DataEntities**.**·** > **·** També trobareu el *Office_UserEntity*, que conté els identificadors de l'Active Directory per a les adreces de correu electrònic que s'han triat durant la configuració d'enriquiment 
+Reviseu les dades enriquides seleccionant **Mostra'n més** a la secció de visualització prèvia. Obre l'entitat de l'Office *·*. També podeu trobar l'entitat llistada al grup d'enriquiment **a** **DataEntities** > **·**. També trobareu el *Office_UserEntity*, que conté els identificadors de l'Active Directory per a les adreces de correu electrònic que s'han triat durant la configuració d'enriquiment 
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veure dades d'enriquiment a la targeta del client
 

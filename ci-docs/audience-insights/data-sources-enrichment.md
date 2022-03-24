@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373056"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376567"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (vista prèvia)
 
@@ -40,7 +40,7 @@ Heu de tenir permisos de col·laborador o administrador per crear o editar enriq
 Actualment hi ha disponibles els següents enriquiments per a fonts de dades. Reviseu els passos detallats per a l'enriquiment per aprendre a configurar-lo.
 
 - [Adreces millorades](enrichment-enhanced-addresses.md)
-- [Dades d'identitat de LiveRamp](enrichment-liveramp.md)
+- [Dades d'empresa millorades](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestionar els enriquiments font de dades existents
 

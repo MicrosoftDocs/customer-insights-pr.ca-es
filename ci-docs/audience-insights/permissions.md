@@ -1,7 +1,7 @@
 ---
 title: Administrar permisos d'usuaris
 description: Informeu-vos sobre els permisos i les funcions d'usuari.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355925"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376726"
 ---
 # <a name="user-permissions"></a>Permisos d'usuari
 
@@ -48,7 +48,7 @@ Hi ha tres tipus de funcions:
 - Administrar la configuració i enriquir els perfils dels clients des de la pàgina **Enriquiment** (només per a enriquiment propi).
 - Administrar i crear exportacions a partir de connexions compartides amb col·laboradors. [Més informació sobre com els administradors permeten als col·laboradors utilitzar una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrador
+## <a name="admin"></a>Administrador
 
 - Tots els permisos disponibles per al col·laborador.
 - Canvieu la configuració de la pàgina **Sistema**, incloent-hi l'idioma de treball i les planificacions d'actualitzacions per als processos del sistema.
@@ -60,6 +60,12 @@ Hi ha tres tipus de funcions:
 - Instal·leu i utilitzeu el **Complement de targeta del client**.
 - Afegiu i utilitzeu el **connector del Power Apps**.
 - Habiliteu l'ús de les [API del Customer Insights](apis.md).
+- [Assigna la propietat de l'entorn](manage-environments.md#change-the-owner-of-an-environment) a un altre administrador.
+
+## <a name="admin-owner"></a>Administrador (propietari)
+
+- Tots els permisos disponibles per a l'administrador.
+- [Reinicialitza i suprimeix](manage-environments.md#reset-an-existing-environment) l'entorn.
 
 ## <a name="assign-roles-and-permissions"></a>Assignar funcions i permisos
 

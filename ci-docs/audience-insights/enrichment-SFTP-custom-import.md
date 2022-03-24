@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229615"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376542"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquir els perfils de client amb dades personalitzades (versió preliminar)
 
@@ -25,7 +25,7 @@ Per poder configurar la importació personalitzada d'SFTP, s'han de complir els 
 
 - Teniu el nom de fitxer i la ubicació (camí) del fitxer que s'ha d'importar a l'amfitrió SFTP.
 - Hi ha un fitxer *model.json* que especifica [l'esquema del Model de dades comú](/common-data-model/) per a les dades que s'han d'importar. Aquest fitxer s'ha de trobar al mateix directori que el fitxer que s'importarà.
-- Un administrador ja ha configurat una connexió SFTP *o* teniu permisos d'[administrador](permissions.md#administrator). Necessitareu les credencials d'usuari, l'adreça URL i el número de port de la ubicació SFTP des d'on voleu importar les dades.
+- Un administrador ja ha configurat una connexió SFTP *o* teniu permisos d'[administrador](permissions.md#admin). Necessitareu les credencials d'usuari, l'adreça URL i el número de port de la ubicació SFTP des d'on voleu importar les dades.
 
 
 ## <a name="configure-the-import"></a>Configurar la importació

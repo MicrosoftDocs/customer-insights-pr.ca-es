@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355879"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376496"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Porteu el vostre propi magatzem de claus de l'Azure (versió preliminar)
 
@@ -31,7 +31,7 @@ Per configurar el magatzem de claus a les conclusions del públic, cal complir e
 
 - Heu de tenir una subscripció activa de l'Azure.
 
-- Teniu una funció d'[Administrador](permissions.md#administrator) als coneixements del públic. Obteniu més informació sobre els [permisos d'usuari a les conclusions del públic](permissions.md#assign-roles-and-permissions).
+- Teniu una funció d'[Administrador](permissions.md#admin) als coneixements del públic. Obteniu més informació sobre els [permisos d'usuari a les conclusions del públic](permissions.md#assign-roles-and-permissions).
 
 - Teniu les funcions [Col·laborador](/azure/role-based-access-control/built-in-roles#contributor) i [Administrador d'accés d'usuari](/azure/role-based-access-control/built-in-roles#user-access-administrator) al magatzem de claus o al grup de recursos al qual pertany el magatzem de claus. Per obtenir més informació, aneu a [Afegir o eliminar assignacions de funcions de l'Azure utilitzant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal). Si no teniu la funció Administrador d'accés d'usuari al magatzem de claus, heu de configurar els permisos de control d'accés basats en funcions per a l'entitat de servei de l'Azure per al Dynamics 365 Customer Insights per separat. Seguiu els passos per [utilitzar l'entitat de servei de l'Azure](connect-service-principal.md) per al magatzem de claus que s'ha d'enllaçar.
 

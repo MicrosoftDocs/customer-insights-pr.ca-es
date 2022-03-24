@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354360"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376404"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Inicia la sessió amb l'Azure Dynamics 365 Customer Insights Monitor (Preview)
 
@@ -37,7 +37,7 @@ Customer Insights envia els registres d'incidències següents:
 Per configurar el diagnòstic al Customer Insights, s'han de complir els requisits previs següents:
 
 - Teniu una subscripció activa [de l'Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Teniu [permisos d'administrador](permissions.md#administrator) a l'Insights del client.
+- Teniu [permisos d'administrador](permissions.md#admin) a l'Insights del client.
 - Teniu la **funció d'administrador de** col·laboradors **i** d'accés a l'usuari al recurs de destinació de l'Azure. El recurs pot ser un compte d'emmagatzematge de l'Azure, un centre d'esdeveniments de l'Azure o una àrea de treball de l'Azure Log Analytics. Per obtenir més informació, vegeu [Afegeix o suprimeix assignacions de funcions de l'Azure mitjançant el portal](/azure/role-based-access-control/role-assignments-portal) de l'Azure.
 - [S'han complert els](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) requisits de destinació per a l'Azure Storage, l'Azure Event Hub o l'Azure Log Analytics.
 - Teniu com a mínim la **funció Lector** al grup de recursos al qual pertany el recurs.
@@ -132,7 +132,7 @@ Les incidències de l'API i les incidències del flux de treball tenen una estru
 | `resultSignature` | String    | Opcional          | Estat del resultat de l'esdeveniment. Si l'operació correspon a una trucada de l'API REST, és el codi d'estat HTTP.        | `200`             |
 | `durationMs`      | Long      | Opcional          | Durada de l'operació en mil·lisegons.     | `133`     |
 | `callerIpAddress` | String    | Opcional          | Adreça IP de la persona que truca, si l'operació correspon a una trucada API que prové d'una adreça IP disponible públicament.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcional          | Objecte JSON que descriu la identitat de l'usuari o aplicació que va fer l'operació.       | Vegeu la [secció Identitat](#identity-schema).     |  |
+| `identity`        | String    | Opcional          | Objecte JSON que descriu la identitat de l'usuari o aplicació que va fer l'operació.       | Vegeu la [secció Identitat](#identity-schema).     |  
 | `properties`      | String    | Opcional          | Objecte JSON amb més propietats a la categoria particular d'esdeveniments.      | Vegeu la [secció Propietats](#api-properties-schema).    |
 | `level`           | String    | Necessari          | Nivell de gravetat de l'esdeveniment.    | `Informational`, `Warning`, `Error` o `Critical`.           |
 | `uri`             | String    | Opcional          | Sol·licitud absoluta URI.    |               |
@@ -230,7 +230,7 @@ Les incidències del flux de treball tenen les propietats següents.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Sí      | Sí  | Sempre `WorkflowEvent`, marcant l'esdeveniment com a esdeveniment de flux de treball.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Sí      | Sí  | Identificador de l'execució del flux de treball. Tots els esdeveniments del flux de treball i de la tasca dins de l'execució del flux de treball tenen el mateix `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Sí      | Sí  | Identificador de l'operació, vegeu [Tipus d'operació]. (tipus #operation)                                                                                                                                                                                       |
+| `properties.operationType`                   | Sí      | Sí  | Identificador de l'operació, vegeu [Tipus d'operacions].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Sí      | No   | Només el flux de treball. Nombre de tasques que activa el flux de treball.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Sí      | No   | Opcional. Només les incidències del flux de treball. L'objectId Azure Active Directory [de l'usuari](/azure/marketplace/find-tenant-object-id#find-user-object-id) que ha activat el flux de treball, vegeu també `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Sí      | No   | `full` o `incremental` refrescar-se.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Les incidències del flux de treball tenen les propietats següents.
 | `properties.startTimestamp`                  | Sí      | Sí  | Marca horària UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Sí      | Sí  | Marca horària UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Sí      | Sí  | Marca horària UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Sí      | Sí  | Estadístiques del client`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Sí      | Sí  | Estadístiques del client`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Sí  | - Per a OperationType = `Export`, l'identificador és el guid de la configuració d'exportació. <br> - Per OperationType = `Enrichment`, és el guid de l'enriquiment <br> - Per a OperationType `Measures` i `Segmentation`, l'identificador és el nom de l'entitat. |
 | `properties.friendlyName`                    | No       | Sí  | Nom fàcil d'utilitzar de l'exportació o de l'entitat que es processa.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Sí  | Opcional. Missatge d'error amb més detalls.                                                                                                                                                                                                                  |

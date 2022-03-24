@@ -1,7 +1,7 @@
 ---
 title: Crear i administrar entorns
 description: Apreneu a registrar-vos al servei i a administrar entorns.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354267"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376864"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
-
-
 
 ## <a name="switch-environments"></a>Canvi d'entorn
 
@@ -98,9 +96,29 @@ Després d'actualitzar les fonts de dades, aneu a **Dades** > **Unifica**. Aquí
 
 Quan la unificació de dades hagi finalitzat, aneu a **Mesures** i **Segments** per actualitzar-los també.
 
+## <a name="change-the-owner-of-an-environment"></a>Canviar el propietari d'un entorn
+
+Tot i que diversos usuaris poden tenir permisos d'administració a Customer Insights, només un usuari és el propietari d'un entorn. Per defecte, és l'administrador qui crea un entorn inicialment. Com a administrador d'un entorn, podeu assignar la propietat a un altre usuari amb permisos d'administració.
+
+1. Seleccioneu el selector **Entorn** a la capçalera de l'aplicació.
+
+1. Seleccioneu la icona **Edita**.
+
+1. Al quadre Edita l'entorn **·**, aneu al **pas Informació** bàsica.
+
+1. Al camp Canvia el **propietari del camp d'entorn**, trieu el nou propietari de l'entorn.  
+
+1. Seleccioneu **Revisa i finalitza** i, a continuació **, Actualitza** per aplicar els canvis. 
+
+## <a name="claim-ownership-of-an-environment"></a>Reclamar la propietat d'un entorn
+
+Si el propietari d'un entorn surt de l'organització o se suprimeix el seu compte d'usuari, l'entorn no tindrà propietari. Un usuari amb permisos d'administrador pot reclamar la propietat i convertir-se en el nou propietari. Poden continuar sent propietaris de l'entorn o [canviar la propietat a un altre administrador](#change-the-owner-of-an-environment). 
+
+Per reclamar la propietat, seleccioneu el botó Pren la **propietat** que es mostra a la part superior de cada pàgina del Customer Insights quan el propietari original va sortir de l'organització.
+
 ## <a name="reset-an-existing-environment"></a>Restablir un entorn existent
 
-Com a administrador, podeu restablir un entorn en estat buit en el cas que vulgueu suprimir totes les configuracions i eliminar la informació ingerida.
+Com a propietari d'un entorn, podeu restablir un entorn a un estat buit si voleu suprimir totes les configuracions i suprimir les dades ingerides.
 
 1.  Seleccioneu el selector **Entorn** a la capçalera de l'aplicació. 
 
@@ -112,7 +130,7 @@ Com a administrador, podeu restablir un entorn en estat buit en el cas que vulgu
 
 ## <a name="delete-an-existing-environment"></a>Suprimir un entorn existent
 
-Com a administrador, podeu suprimir un entorn que administreu.
+Com a propietari d'un entorn, podeu suprimir un entorn que administreu.
 
 1.  Seleccioneu el selector **Entorn** a la capçalera de l'aplicació.
 

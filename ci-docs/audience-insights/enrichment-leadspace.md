@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230622"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376772"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquiment de perfils d'empresa amb el Leadspace (versió preliminar)
 
@@ -25,7 +25,7 @@ Per configurar el Leadspace, cal complir els requisits previs següents:
 
 - Teniu una llicència activa del Leadspace.
 - Teniu [perfils de client unificats](customer-profiles.md) basats en comptes.
-- Un administrador ja ha configurat una connexió del Leadspace o teniu permisos d'[administrador](permissions.md#administrator) i la "clau perpètua" (anomenada **testimoni del Leadspace**). Poseu-vos en contacte directament amb [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) per obtenir informació sobre el producte.
+- Un administrador ja ha configurat una connexió del Leadspace o teniu permisos d'[administrador](permissions.md#admin) i la "clau perpètua" (anomenada **testimoni del Leadspace**). Poseu-vos en contacte directament amb [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) per obtenir informació sobre el producte.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
