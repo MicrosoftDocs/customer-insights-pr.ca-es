@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231967"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487503"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segments a Marketo (versió preliminar)
 
@@ -63,7 +63,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Introduïu l'**[ID de la llista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. L'identificador de llista és un valor purament numèric. Per exemple, si l'identificador de la llista de Marketo és ST12345A7, suprimiu el caràcter abans i després dels numerals i introduïu `12345`. 
 
-1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. 
+1. A la **secció Coincidència de** dades, seleccioneu com a mínim un camp que representi l'adreça electrònica d'un client o l'identificador de Marketo d'un client. 
 
 1. O bé podeu exportar **Nom**, **Cognom**, **Ciutat**, **Província** i **País o Regió** per crear correus electrònics més personalitzats. Seleccioneu **Afegeix un atribut** per assignar aquests camps.
 

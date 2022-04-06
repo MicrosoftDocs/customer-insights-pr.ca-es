@@ -1,7 +1,7 @@
 ---
 title: Enriquir perfils de client unificats
 description: Utilitzeu les capacitats disponibles per enriquir les dades dels clients.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372690"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491936"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquiment per a perfils de clients (versió preliminar)
 
@@ -97,5 +97,19 @@ Per veure l'estat d'un enriquiment
 1. A la subfinestra **Detalls del progrés**, expandiu la secció **Enriquiments**. 
 1. A l'enriquiment del qual voleu veure el progrés, seleccioneu **Mostra els detalls**. 
 1. A la subfinestra **Detalls de la tasca**, seleccioneu **Mostra els detalls** per veure els processos implicats en l'actualització de l'enriquiment i el seu estat. 
+
+## <a name="enrichment-results"></a>Resultats de l'enriquiment
+
+Després d'una carrera d'enriquiment completa, podeu revisar els resultats de l'enriquiment.
+
+1. Aneu a **Dades** > **Enriquiment**. 
+1. Seleccioneu l'enriquiment sobre el qual voleu informació.
+
+Tots els enriquiments mostren informació bàsica com el nombre de perfils enriquits, una vista prèvia de l'entitat d'enriquiment generada i el nombre de perfils enriquits al llarg del temps. Si està disponible, el **nombre de clients enriquits per camp** proporciona una desglossament de la cobertura de cada camp enriquit.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Pàgina de resultats d'enriquiments.":::
+
+Alguns enriquiments també mostren informació específica per al tipus d'enriquiment. Consulteu la documentació per a l'enriquiment pertinent per obtenir més informació.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Segments als coneixements del públic
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355971"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508554"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -68,7 +68,9 @@ L'acció següent està disponible quan seleccioneu un segment:
 
 ## <a name="refresh-segments"></a>Actualitzar els segments
 
-Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**.
+Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**. Quan es configura una actualització periòdica, s'apliquen les regles següents:
+- Tots els segments amb el tipus **Dinàmic** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Quan s'ha completat l'actualització, l'estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca horària de l'última actualització correcta. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
+- Els segments amb el tipus **Estàtic** *no* s'actualitzaran automàticament. L'últim **refrescat** mostra una marca horària de l'última vegada que els segments estàtics s'han executat o s'actualitzen manualment.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

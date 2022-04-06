@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Preguntes més freqüents sobre la prova
       href: trial-FAQ.md
-- name: Començar amb una llicència de pagament
-  href: paid-license.md
 - name: Accés a l'entorn
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Conclusions sobre el públic
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Característiques noves i actualitzades
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introducció
+    - name: Comença
       items:
         - name: Guia d'inici ràpid
           href: audience-insights/get-started.md
+        - name: Començar amb una llicència de pagament
+          href: paid-license.md
         - name: Creació d'un entorn nou
           href: audience-insights/create-environment.md
         - name: Explorar la informació del públic
           href: audience-insights/home.md
-    - name: Treballar amb comptes d'empresa
-      href: audience-insights/work-with-business-accounts.md
+        - name: Treballar amb comptes d'empresa
+          href: audience-insights/work-with-business-accounts.md
     - name: Fonts de dades
       items:
         - name: Informació general de les fonts de dades
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestió de dades en temps real
           href: audience-insights/real-time-data-ingestion.md
-        - name: Entendre les entitats i els conjunts de dades
-          href: audience-insights/entities.md
     - name: Unificació de dades
       items:
         - name: Informació general sobre la unificació de dades
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Combinar entitats
           href: audience-insights/merge-entities.md
-        - name: Revisar perfils de client unificats
-          href: audience-insights/customer-profiles.md
-        - name: Filtrar perfils de client unificats
-          href: audience-insights/search-filter-index.md
-        - name: Crear relacions i entitats connectades
-          href: audience-insights/relationships.md
-        - name: Enumerar les activitats d'un client
-          href: audience-insights/activities.md
-        - name: Definir assignacions semàntiques
-          href: audience-insights/semantic-mappings.md
     - name: Enriquiment de dades
       items:
         - name: Enriquir perfils de clients
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Enriquir amb la importació personalitzada d'SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Perfils unificats
+      items:
+        - name: Revisar perfils de client unificats
+          href: audience-insights/customer-profiles.md
+        - name: Filtrar perfils de client unificats
+          href: audience-insights/search-filter-index.md
+        - name: Definir les activitats dels clients
+          href: audience-insights/activities.md
     - name: Segments
       items:
         - name: Descripció general dels segments
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entitats
+      items:
+        - name: Entendre les entitats
+          href: audience-insights/entities.md
+        - name: Revisar els esquemes d'entitats al Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Dades del Customer Insights al Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Crear relacions i entitats connectades
+          href: audience-insights/relationships.md
+        - name: Definir assignacions semàntiques
+          href: audience-insights/semantic-mappings.md
     - name: Administració
       items:
         - name: Configurar la configuració del sistema
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Administrar diversos entorns
           href: audience-insights/manage-environments.md
-        - name: Seguretat
-          items:
-            - name: Porteu el vostre propi Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Connectar-se a un compte d'emmagatzematge d'ADLS mitjançant una entitat de servei
-              href: audience-insights/connect-service-principal.md
-            - name: Exporta els registres de diagnòstic
-              href: audience-insights/diagnostics.md
-    - name: Extensibilitat
+        - name: Porteu el vostre propi Key Vault
+          href: audience-insights/use-azure-key-vault.md
+        - name: Connecta't a un compte d'emmagatzematge mitjançant el Service Principal
+          href: audience-insights/connect-service-principal.md
+        - name: Exporta els registres de diagnòstic
+          href: audience-insights/diagnostics.md
+        - name: Límits de servei
+          href: service-limits.md
+        - name: Drets i sol·licituds de DSR
+          href: dsr-rights-requests.md
+    - name: API
       items:
         - name: Revisar els esquemes d'entitats al Common Data Model
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Conclusions sobre la interacció (versió preliminar)
   href: engagement-insights/overview.md
-- name: Límits de servei
-  href: service-limits.md
-- name: Drets i sol·licituds de DSR
-  href: dsr-rights-requests.md
 - name: Obteniu assistència tècnica
   href: /power-platform/admin/get-help-support

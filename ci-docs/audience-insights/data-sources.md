@@ -1,7 +1,7 @@
 ---
 title: Utilitzar fonts de dades per ingerir dades
 description: Més informació sobre com importar dades de diverses fonts.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354037"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464037"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -47,7 +47,18 @@ Els orígens de dades que es creen després d'associar un Dataverse entorn amb e
 
 Les passarel·les de dades d'un entorn existent del Power BI o el Power Apps seran visibles i es poden reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 
+> [!IMPORTANT]
+> Assegureu-vos que les passarel·les s'actualitzin a la versió més recent. Podeu instal·lar una actualització i reconfigurar una passarel·la des d'un indicador que es mostra directament a la pantalla de la passarel·la o [descarregar la versió més recent](https://powerapps.microsoft.com/downloads/). Si no utilitzeu la versió més recent de la passarel·la, l'actualització del flux de dades falla amb missatges d'error com **La paraula clau no és compatible: propietats de configuració. Nom del paràmetre: paraula clau**.
+
 ## <a name="review-ingested-data"></a>Revisar les dades ingerides
+Si l'entorn conté Power Platform fluxos de dades, la **pàgina Orígens** de dades enumera tres seccions: 
+- **Compartit**: orígens de dades que poden ser gestionats per tots els administradors del Customer Insights. Power BI els fluxos de dades, el vostre propi compte d'emmagatzematge i l'adjunt a un Dataverse llac de dades gestionat són exemples de fonts de dades compartides.
+- **Gestionat per mi**: Power Platform fluxs de dades creats i només poden ser gestionats per vostè. Altres administradors del Customer Insights només poden veure aquests fluxos de dades, però no editar-los, actualitzar-los o suprimir-los.
+- **Gestionat per altres**: Power Platform fluxos de dades creats per altres administradors. Només els podeu veure. Enumera el propietari del flux de dades per contactar per obtenir qualsevol ajuda.
+> [!NOTE]
+> Altres usuaris poden visualitzar i utilitzar totes les entitats. La contextualització de l'usuari només s'aplica als orígens de dades i no a les entitats que resulten d'aquests fluxos de dades.
+
+Si no s'utilitzen Power Platform fluxos de dades, no veureu cap grup ni cap secció. La **pàgina Orígens** de dades només conté una llista de tots els orígens de dades.
 
 Veureu el nom de cada font de dades ingerida, el seu estat i l'última vegada que les dades s'han actualitzat per a aquesta font. Podeu ordenar la llista de fonts de dades per cada columna.
 

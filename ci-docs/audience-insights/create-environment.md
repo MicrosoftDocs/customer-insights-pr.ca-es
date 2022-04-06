@@ -1,23 +1,23 @@
 ---
 title: Crear entorns al Customer Insights
 description: Passos per crear entorns amb una subscripció amb llicència per al Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354083"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491901"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorn a les conclusions del públic
 
@@ -83,14 +83,16 @@ Proporcioneu el vostre propi Microsoft Dataverse entorn per compartir dades (per
 La connexió amb el vostre Dataverse entorn també us [permet ingerir dades de local orígens de dades mitjançant Power Platform fluxos de dades i passarel·les](data-sources.md#add-data-from-on-premises-data-sources). També podeu utilitzar [models](predictions-overview.md?tabs=b2c#out-of-box-models) de predicció des de la caixa connectant-vos a un Dataverse entorn.
 
 > [!IMPORTANT]
-> Customer Insights i Dataverse han d'estar a la mateixa regió per habilitar l'ús compartit de dades.
+> 1. Customer Insights i Dataverse han d'estar a la mateixa regió per habilitar l'ús compartit de dades.
+> 1. Heu de tenir una funció d'administrador global a l'entorn Dataverse. Comproveu si aquest [Dataverse entorn està associat](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinats grups de seguretat i assegureu-vos que esteu afegit a aquests grups de seguretat.
+> 1. No hi ha cap entorn del Customer Insights existent associat amb aquest Dataverse entorn. Obteniu informació sobre com [podeu suprimir una connexió existent amb un Dataverse entorn](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="l'ús compartit de dades amb Microsoft Dataverse l'automàtic habilitat per a instàncies noves de xarxa.":::
 
-> [!NOTE]
-> El Customer Insights no admet els escenaris d'ús compartit de dades següents:
-> - Si deseu totes les dades al vostre propi Azure Data Lake Storage, no podreu habilitar l'ús compartit de dades amb un llac de dades administrat pel Dataverse .
-> - Si habiliteu l'ús compartit de dades amb el Dataverse, no podreu [crear valors previstos o que falten en una entitat](predictions.md).
+Per obtenir més informació sobre l'habilitació de l'ús compartit Microsoft Dataverse de dades des del vostre, Azure Data Lake Storage vegeu [Connectar-vos a Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+El Customer Insights no admet els escenaris d'ús compartit de dades següents:
+- Si habiliteu l'ús compartit de dades amb el Dataverse, no podreu [crear valors previstos o que falten en una entitat](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Pas 4: finalitzar la configuració
 

@@ -1,42 +1,37 @@
 ---
 title: Exportar dades del Customer Insights a Google Ads
 description: Apreneu a configurar la connexió i exportar a Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226998"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523782"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segments a Google Ads (versió preliminar)
 
 Exporteu segments de perfils de client unificats a una llista de públics de Google Ads i utilitzeu-los per anunciar-vos a la cerca de Google, Gmail, YouTube i a la Xarxa de Display de Google. 
 
-> [!IMPORTANT]
-> Actualment, només podeu crear una connexió nova i exportar dades a Google Ads si ja disposeu d'un testimoni aprovat de desenvolupador de Google Ads. A causa dels canvis normatius, en breu actualitzarem l'exportació de Google Ads i proporcionarem una opció d'exportació que no requereixi un testimoni de desenvolupador per garantir la continuïtat de la vostra experiència i simplificar l'exportació a Google Ads. Es recomana no configurar més connexions a Google Ads per facilitar el canvi a la nova opció d'exportació.
 
 ## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
 
 -   Teniu un [compte de Google Ads](https://ads.google.com/) i les credencials d'administrador corresponents.
--   Teniu un [testimoni aprovat de Google Ads per a desenvolupadors](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   Compliu els requisits de la [Política de segments de clients](https://support.google.com/adspolicy/answer/6299717).
 -   Compliu els requisits de les [mides de la llista de remàrqueting](https://support.google.com/google-ads/answer/7558048).
--   Hi ha públics a Google Ads amb els identificadors corresponents. Per obtenir més informació, vegeu [Públics de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Teniu [segments configurats](segments.md).
--   Els perfils de client unificats dels segments exportats contenen camps que representen una adreça electrònica, el nom i el cognom.
+-   Els perfils de clients unificats dels segments exportats contenen camps que representen una adreça electrònica, un telèfon, un identificador d'anunciant mòbil, un identificador d'usuari de tercers o una adreça.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a 1 milió de perfils de client per exportar a Google Ads.
 - L'exportació a Google Ads es limita als segments.
-- L'exportació de segments amb un total d'1 milió de perfils de client pot trigar fins a 5 minuts a causa de les limitacions del proveïdor. 
+- L'exportació de segments amb un total d'1 milió de perfils de client pot trigar fins a 30 minuts a causa de les limitacions del proveïdor. 
 - Les coincidències a Google Ads poden trigar fins a 48 hores.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configuració de la connexió a Google Ads
@@ -50,8 +45,6 @@ Exporteu segments de perfils de client unificats a una llista de públics de Goo
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduïu el vostre **[ID de client de Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Introduïu el **[testimoni de desenvolupador autoritzat de Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
 
 1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
 
@@ -71,11 +64,11 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Google Ads. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
 
-1. Introduïu el vostre **[Identificador de públic de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i seleccioneu **Connecta't** per inicialitzar la connexió a Google Ads.
+1. Si voleu crear un públic nou, deixeu el camp De l'identificador de públic de Google en blanc. Crearem automàticament un públic nou al compte de Google Ads i utilitzarem el nom del segment exportat. Si voleu actualitzar un públic existent de Google Ads, introduïu l'identificador de públic de [Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client.
+1. A la **secció Coincidència de** dades, seleccioneu un o més camps de dades per exportar i seleccioneu el camp que representa els camps de dades corresponents al Customer Insights.
 
-1. Seleccioneu els segments que voleu exportar. Podeu exportar fins a un total d'un milió de perfils de client a Google Ads.
+1. Seleccioneu els segments que voleu exportar. 
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 

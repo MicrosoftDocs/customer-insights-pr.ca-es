@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376404"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523656"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Inicia la sessió amb l'Azure Dynamics 365 Customer Insights Monitor (Preview)
 
@@ -230,7 +230,7 @@ Les incidències del flux de treball tenen les propietats següents.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Sí      | Sí  | Sempre `WorkflowEvent`, marcant l'esdeveniment com a esdeveniment de flux de treball.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Sí      | Sí  | Identificador de l'execució del flux de treball. Tots els esdeveniments del flux de treball i de la tasca dins de l'execució del flux de treball tenen el mateix `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Sí      | Sí  | Identificador de l'operació, vegeu [Tipus d'operacions].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Sí      | Sí  | Identificador de l'operació, vegeu [Tipus](#operation-types) d'operacions.                                                                                                                                                                               |
 | `properties.tasksCount`                      | Sí      | No   | Només el flux de treball. Nombre de tasques que activa el flux de treball.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Sí      | No   | Opcional. Només les incidències del flux de treball. L'objectId Azure Active Directory [de l'usuari](/azure/marketplace/find-tenant-object-id#find-user-object-id) que ha activat el flux de treball, vegeu també `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Sí      | No   | `full` o `incremental` refrescar-se.                                                                                                                                                                                                                            |

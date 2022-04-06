@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354869"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523710"
 ---
 # <a name="customer-profiles"></a>Perfils de client
 
 A la pàgina **Clients** es mostra una visualització combinada dels perfils de client unificats. Els perfils de client estan disponibles un cop hàgiu [creat l'entitat Client unificada](data-unification.md). La pàgina us permet cercar clients i definir l'índex per a la cerca.
 
-Els clients poden ser persones o organitzacions. Cada perfil de client està representat per una peça. Utilitzeu els controls de paginació per obtenir més registres. La targeta visualitza camps de l'entitat *Client* segons es defineixi a l'**Índex de cerca i filtre**. Seleccioneu una peça per veure les dades del client seleccionat en una pàgina dedicada anomenada [Pàgina de detalls del client](customer-profiles.md#customer-details-page).
+Els clients poden ser persones o organitzacions. Cada perfil de client està representat per una peça. Utilitzeu els controls de paginació per obtenir més registres. La targeta visualitza camps de l'entitat *Client* segons es defineixi a l'**Índex de cerca i filtre**. L'ordre dels camps dins de cada targeta és escollit pel sistema.
+
+Seleccioneu una peça per veure les dades del client seleccionat en una pàgina dedicada anomenada [Pàgina de detalls del client](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Pàgina Clients que mostra les peces de resultats](media/customers-page-result-tiles-B2C.png "Pàgina Clients que mostra les peces de resultats")

@@ -1,19 +1,19 @@
 ---
 title: Informació general sobre les situacions de predicció admeses
 description: Situacions i opcions de predicció cobertes per l'aplicació del Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228232"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487487"
 ---
 # <a name="predictions-overview"></a>Informació general sobre les prediccions
 
@@ -36,6 +36,11 @@ La manera més fàcil de començar amb la predicció de dades són els models pr
 - [Cancel·lació de subscripció](predict-transactional-churn.md): prediu si un client ja no comprarà els vostres productes o serveis en un determinat període de temps.
 
 ---
+
+> [!TIP]
+> Us recomanem que actualitzeu regularment els models fora de la caixa amb dades actualitzades per assegurar-vos que informin amb precisió el vostre cas d'ús empresarial. Les dades s'actualitzen ad hoc quan el sistema ingereix fonts de dades noves o actualitzades. No obstant això, els models només es tornaran a col·lamentar en aquest cas i continuaran utilitzant les dades d'entrenament existents.
+> 
+> Podeu configurar una planificació **d'actualització** establint la planificació de reciclatge del model a l'experiència de configuració. El model es tornarà a entrenar i tornarà a marcar en aquesta planificació, que podeu canviar en qualsevol moment.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integració de l'aprenentatge automàtic de l'Azure

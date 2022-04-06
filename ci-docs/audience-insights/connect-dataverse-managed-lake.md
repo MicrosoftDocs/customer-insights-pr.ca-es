@@ -1,7 +1,7 @@
 ---
 title: Connexió a taules al Microsoft Dataverse
 description: Importeu dades d'un llac de dades administrat del Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354129"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464054"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
-
-
 
 En aquest article s'ofereix informació sobre com Dataverse els usuaris poden connectar-se ràpidament a entitats analítiques en un Microsoft Dataverse llac gestionat. 
 
@@ -29,7 +27,8 @@ En aquest article s'ofereix informació sobre com Dataverse els usuaris poden co
 
 ## <a name="important-considerations"></a>Consideracions importants
 
-Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades en serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Més informació al Microsoft Trust Center](https://www.microsoft.com/trust-center).
+1. Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades en serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Més informació al Microsoft Trust Center](https://www.microsoft.com/trust-center).
+2. Només Dataverse són visibles les entitats amb [seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis habilitat. Aquestes entitats es poden exportar al Dataverse llac de dades administrades i utilitzar-les al Customer Insights. Les taules fora de caixa Dataverse tenen el seguiment de canvis habilitat per defecte. Heu d'activar el seguiment de canvis per a taules personalitzades. Per comprovar si hi ha una Dataverse taula habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules de dades** > **·**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions** > **de ConfiguracióAdvanced** i reviseu la configuració De seguiment dels **canvis**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Connectar-se a un llac administrat del Dataverse
 
