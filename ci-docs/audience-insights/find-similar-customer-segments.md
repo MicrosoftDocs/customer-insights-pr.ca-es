@@ -1,23 +1,23 @@
 ---
 title: Cercar clients similars amb IA (conté vídeo)
 description: Cerqueu segments de client semblants amb la intel·ligència artificial.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355233"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561513"
 ---
 # <a name="similar-customers-preview"></a>Clients semblants (versió preliminar)
 
@@ -36,6 +36,8 @@ Aquesta característica us permet trobar clients semblants a la base de clients 
 
 1. Reviseu el nom suggerit per al segment nou i canvieu-lo si cal.
 
+1. Opcionalment, afegiu [etiquetes](work-with-tags-columns.md#manage-tags) al segment nou.
+
 1. Reviseu els camps que defineixen el segment nou. Aquests camps defineixen la base en què el sistema tractarà de cercar clients semblants al vostre segment d'origen. El sistema seleccionarà els camps recomanats per defecte.
   Els camps que poden reduir significativament el rendiment del model s'exclouen automàticament:
   
@@ -44,9 +46,9 @@ Aquesta característica us permet trobar clients semblants a la base de clients 
 
 1. Trieu si voleu incloure **tots els clients** o només els clients d'un **segment existent específic** al segment nou.
 
-1. Excloeu els clients del segment d'origen seleccionant la casella de selecció **Exclou tothom del segment d'origen**.
-
 1. Per defecte, el sistema suggereix incloure només el 20% de la mida del públic de destinació a la sortida. Editeu aquest llindar segons calgui. Si augmenteu el llindar, es reduirà la precisió.
+
+1. Incloeu clients al segment d'origen seleccionant la **casella Inclou membres del segment d'origen, a més de clients amb atributs** similars.
 
 1. Seleccioneu **Executa** a la part inferior de la pàgina per iniciar una tasca de classificació binària (un mètode d'aprenentatge automàtic) que analitza el conjunt de dades.
 
@@ -67,7 +69,7 @@ Podeu [treballar amb la sortida d'un segment semblant](segments.md) com ho feu a
 
 Per actualitzar un segment similar, seleccioneu-lo a la pàgina **Segments** i seleccioneu **Actualitza** a la barra d'accions.
 
-En editar un segment semblant s'han de tornar a processar les dades. El segment creat prèviament s'actualitza amb les dades actualitzades.    
+En editar un segment semblant s'han de tornar a processar les dades. El segment creat prèviament s'actualitza amb les dades actualitzades.
 Per editar un segment similar, seleccioneu-lo a la pàgina **Segments** i seleccioneu **Edita** a la barra d'accions. Apliqueu els canvis i seleccioneu **Executa** per iniciar el processament.
 
 ## <a name="delete-a-similar-segment"></a>Suprimir un segment similar
@@ -84,6 +86,5 @@ El model d'aprenentatge automàtic de classificació binària assigna una puntua
 - Les puntuacions de similitud entre 0,85-1 són clients que el sistema ha classificat com a *molt semblants*
 
 Els clients amb resultats de similitud per sota de 0,4 no s'inclouen a la sortida del model. El sistema no els considera prou semblants al segment d'origen.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

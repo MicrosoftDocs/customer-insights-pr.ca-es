@@ -1,22 +1,22 @@
 ---
 title: Crea mesures a partir de plantilles
 description: Definiu mesures utilitzant plantilles per a casos d'ús comú.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359951"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529389"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Utilitzar una plantilla per crear una mesura
 
@@ -51,7 +51,9 @@ Plantilles de mesura disponibles:
 
 1. Reviseu les dades necessàries i seleccioneu **Introducció** si teniu totes les dades col·locades.
 
-1. A la subfinestra **Edita el nom**, definiu el nom de la mesura i l'entitat de sortida. 
+1. Seleccioneu **Edita els detalls** que hi ha al costat del nom del compàs. Donar un nom per a la mesura. Opcionalment, afegiu [etiquetes](work-with-tags-columns.md#manage-tags) al compàs.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Quadre de diàleg Edita els detalls.":::
 
 1. Seleccioneu **Fet**.
 

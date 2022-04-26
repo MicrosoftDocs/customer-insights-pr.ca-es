@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225503"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552044"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
 
@@ -72,6 +72,6 @@ Després de la supressió de les relacions duplicades, proveu de tornar a config
 
 En carregar entitats que contenen camps amb un format de data com MM/DD/YYYY, podeu trobar errors a causa de formats de configuració regional no coincidents. Aquest desajust es produeix quan el fitxer del Power BI Desktop està definit en una configuració regional que no és l'anglès (Estats Units), perquè els camps de data de les conclusions del públic es desen en format estatunidenc.
 
-El fitxer del Power BI Desktop té una configuració regional única que s'aplica en recuperar dades. Per fer que aquests camps de data s'interpretin correctament, definiu la configuració regional del fitxer .BPI a Anglès (Estats Units). [Obteniu informació sobre com podeu canviar la configuració regional d'un fitxer del Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+El fitxer del Power BI Desktop té una configuració regional única que s'aplica en recuperar dades. Per fer que aquests camps de data s'interpretin correctament, definiu la configuració regional del fitxer .BPI a Anglès (Estats Units). [Obteniu informació sobre com podeu canviar la configuració regional d'un fitxer del Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

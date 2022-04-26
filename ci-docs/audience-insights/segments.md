@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508554"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529527"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -47,24 +47,30 @@ Hi ha diverses maneres de crear un segment nou:
 
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
-Aneu a la pàgina **Segments** per visualitzar tots els segments desats i administrar-los.
+Aneu a la **pàgina Segments** per visualitzar tots els segments desats i gestionar-los.
 
 Cada segment està representat per una fila que inclou informació addicional sobre el segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb la llista desplegable d'opcions i opcions disponibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb la llista desplegable d'opcions i opcions disponibles." lightbox="media/segments-selected-segment.png":::
 
-L'acció següent està disponible quan seleccioneu un segment:
+Les accions següents estan disponibles quan seleccioneu un segment:
 
 - **Visualitzar** els detalls del segment, incloent-hi la tendència de recompte de membres per obtenir la visualització prèvia dels membres del segment.
+- **Baixar** la llista de membres com a fitxer .CSV.
 - **Editar** el segment per canviar-ne les propietats.
 - **Crear un duplicat** d'un segment. Podeu editar-ne les propietats immediatament o simplement desar el duplicat.
 - **Actualitzar** el segment per incloure-hi les dades més recents.
-- **Activar** o **desactivar** el segment. Els segments tenen dos estats possibles: actiu o inactiu. Aquests estats són útils en editar un segment. Per als segments inactius, la definició del segment existeix però encara no conté cap client. Quan s'activa un segment, el seu estat canvia d'"inactiu" a "actiu" i comença a cercar clients que coincideixin amb la definició del segment. Si es configura una [actualització planificada](system.md#schedule-tab), els segments inactius tenen l'**estat** **Omès**, indicant que ni tan sols s'ha intentat una actualització. Quan s'activi un segment inactiu, s'actualitzarà i s'inclourà en les actualitzacions programades.
+- **Activar** o **desactivar** el segment. Per als segments inactius, la definició del segment existeix però encara no conté cap client. Un segment actiu cerca clients que coincideixin amb la definició del segment. Si es configura una [actualització planificada](system.md#schedule-tab), els segments inactius tenen l'**estat** **Omès**, indicant que ni tan sols s'ha intentat una actualització. Quan s'activi un segment inactiu, s'actualitzarà i s'inclourà en les actualitzacions programades.
   Alternativament, podeu utilitzar la funcionalitat **Planifica més tard** al desplegable **Activa o desactiva** per especificar una data i hora futura per a l'activació i la desactivació d'un segment concret.
+- **[Trobar clients](find-similar-customer-segments.md)** similars del segment.
 - **Canviar el nom** del segment.
+- **Etiqueta** per [administrar etiquetes](work-with-tags-columns.md#manage-tags) per al segment.
 - **Baixar** la llista de membres com a fitxer .CSV.
 - **Administreu exportacions** per veure el segment relacionat amb les exportacions i administrar-les. [Més informació sobre les exportacions](export-destinations.md)
 - **Suprimir** el segment.
+- **Columnes** per [personalitzar les columnes](work-with-tags-columns.md#customize-columns) que es mostren.
+- **Filtra-ho** per filtrar a [les etiquetes](work-with-tags-columns.md#filter-on-tags).
+- **Nom** de cerca per cercar pel nom del segment.
 
 ## <a name="refresh-segments"></a>Actualitzar els segments
 

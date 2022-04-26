@@ -1,19 +1,19 @@
 ---
 title: Exportar dades del Customer Insights a l'Azure Synapse Analytics
 description: Més informació sobre com configurar la connexió a Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231300"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560375"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporta les dades a Azure Synapse Analytics (visualització prèvia)
 
@@ -28,21 +28,21 @@ S'han de complir els requisits previs següents per configurar la connexió del 
 
 ## <a name="prerequisites-in-customer-insights"></a>Requisits previs al Customer Insights
 
-* Teniu una funció d'**Administrador** als coneixements del públic. Més informació quant a [la configuració de permisos d'usuari als coneixements del públic](permissions.md#assign-roles-and-permissions)
+* El vostre Azure Active Directory compte d'usuari (AD) té una funció d'administrador **a** Customer Insights. Més informació quant a [la configuració de permisos d'usuari als coneixements del públic](permissions.md#assign-roles-and-permissions)
 
 A l’Azure: 
 
 - Una subscripció activa de l'Azure.
 
-- Si s'utilitza un compte de l'Azure Data Lake Storage Gen2 nou, l'*entitat de seguretat del servei per als coneixements del públic* necessita permisos de **Col·laborador de dades BLOB d'emmagatzematge**. Obteniu més informació sobre com [podeu connectar-vos a un compte de l'Azure Data Lake Storage Gen2 amb l'enitat de seguretat del servei de l'Azure per als coneixements del públic](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
+- Si utilitzeu un compte Gen2 nou Azure Data Lake Storage, el principal de *servei del Customer Insights necessita* permisos **del col·laborador de** dades blob d'emmagatzematge. Obteniu més informació sobre com [podeu connectar-vos a un compte de l'Azure Data Lake Storage Gen2 amb l'enitat de seguretat del servei de l'Azure per als coneixements del públic](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Al grup de recursos on es troba l'àrea de treball de l'Azure Synapse, l'*entitat de seguretat del servei* i l'*usuari per als coneixements del públic* han de tenir assignats com a mínim permisos de **Lector**. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
+- Al grup de recursos on es troba l'àrea Azure Synapse de treball, cal assignar almenys *permisos del lector* al *Azure AD principal de* servei i a l'usuari **amb permisos d'administració del Customer Insights**. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- L'*usuari* necessita permisos del **Col·laborador de dades BLOB d'emmagatzematge** al compte de l'Azure Data Lake Storage Gen2 on es troben les dades i s'enllacen a l'àrea de treball de l'Azure Synapse. Obteniu més informació sobre [com podeu utilitzar el portal de l'Azure per assignar una funció de l'Azure per accedir a les dades BLOB i de la cua](/azure/storage/common/storage-auth-aad-rbac-portal) i [els permisos del col·laborador de dades BLOB d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- L'usuari *Azure AD amb permisos d'administrador a Customer Insights necessita* permisos **del contributor** de dades blob d'emmagatzematge al Azure Data Lake Storage compte Gen2 on es troben les dades i enllaçat a l'àrea Azure Synapse de treball. Obteniu més informació sobre [com podeu utilitzar el portal de l'Azure per assignar una funció de l'Azure per accedir a les dades BLOB i de la cua](/azure/storage/common/storage-auth-aad-rbac-portal) i [els permisos del col·laborador de dades BLOB d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - L'*[entitat gestionada per l'àrea de treball de l'Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* necessita permisos del **Col·laborador de dades BLOB d'emmagatzematge** al compte de l'Azure Data Lake Storage Gen2 on es troben les dades i s'enllacen a l'àrea de treball de l'Azure Synapse. Obteniu més informació sobre [com podeu utilitzar el portal de l'Azure per assignar una funció de l'Azure per accedir a les dades BLOB i de la cua](/azure/storage/common/storage-auth-aad-rbac-portal) i [els permisos del col·laborador de dades BLOB d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- A l'àrea de treball de l'Azure Synapse, l'*entitat de seguretat del servei per als coneixements del públic* necessita la funció **Administrador del Synapse** assignada. Per obtenir més informació, vegeu [Com configurar el control d'accés per a l'àrea de treball del Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- A l'àrea Azure Synapse de treball, el principal de *servei del Customer Insights* necessita **assignada la funció d'administrador del** Sinapsi. Per obtenir més informació, vegeu [Com configurar el control d'accés per a l'àrea de treball del Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurar la connexió i exportar a l'Azure Synapse
 
