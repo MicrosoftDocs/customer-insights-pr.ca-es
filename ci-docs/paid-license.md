@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8455986"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641842"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Com començar després de comprar el Customer Insights
 
@@ -34,9 +34,8 @@ L'experiència de primera execució us ajuda a triar el focus inicial amb el Cus
 
 1. Aneu a l'[URL de l'aplicació del Customer Insights](https://home.ci.ai.dynamics.com).
 1. Inicieu la sessió amb el compte acadèmic o laboral. 
-1. Accepteu les condicions del servei i definiu les preferències de contingut de la instància del Customer Insights.
-1. Trieu la capacitat en què voleu centrar-vos fins que aparegui la pàgina inicial de la capacitat seleccionada.
+1. Accepteu les condicions del servei i definiu les preferències de contingut per al vostre entorn del Customer Insights.
 
 ## <a name="create-your-own-environment"></a>Creeu el vostre propi entorn
 
-Després del primer inici de sessió, veureu un entorn amb dades d'exemple. Podeu utilitzar aquestes dades per explorar les característiques i familiaritzar-vos amb l'aplicació. Per utilitzar les vostres pròpies dades, heu de crear [un entorn](/dynamics365/customer-insights/audience-insights/create-environment).
+Després del primer inici de sessió, veureu un entorn amb dades d'exemple. Podeu utilitzar aquestes dades per explorar les característiques i familiaritzar-vos amb l'aplicació. Per utilitzar les vostres pròpies dades, heu de crear [un entorn](create-environment.md).

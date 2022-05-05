@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
-  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.openlocfilehash: e3a9f6d5f4d23ca3e85fa3f69272a0162ca7bd2d
+  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
   ms.translationtype: MT
   ms.contentlocale: ca-ES
-  ms.lasthandoff: 02/25/2022
-  ms.locfileid: "8350442"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "8641644"
 title: Documentació del Dynamics 365 Customer Insights
 summary: Trobeu recursos útils per començar i obtenir informació sobre les característiques i les funcionalitats del Customer Insights.
 landingContent:
@@ -23,8 +23,8 @@ landingContent:
       url: overview.md
     - text: Plans de llançament
       url: /dynamics365/release-plans/
-    - text: Descobriu el CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
+    - text: Característiques noves i actualitzades
+      url: whats-new-customer-insights.md
   - linkListType: learn
     links:
     - text: Camí d'aprenentatge del Customer Insights
@@ -35,24 +35,94 @@ landingContent:
     links:
     - text: Registreu-vos per a una prova gratuïta
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Novetats de la informació del públic
-      url: audience-insights/whats-new-audience-insights.md
-    - text: Guia d'inici ràpid
-      url: audience-insights/get-started.md
+    - text: Comencem amb el judici
+      url: trial-signup.md
+    - text: Introducció al Customer Insights
+      url: get-started.md
   - linkListType: learn
     links:
     - text: Comença
       url: /learn/modules/get-started-customer-data-platform/
+- title: Unificar dades
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Informació general de les fonts de dades
+      url: data-sources.md
+    - text: Informació general sobre la unificació
+      url: data-unification.md
+    - text: Entendre les entitats
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Crear un perfil unificat
+      url: /learn/modules/unified-customer-profile/
+- title: Obtén informació detallada
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Enriquir perfils de clients
+      url: enrichment-hub.md
+    - text: Configurar relacions
+      url: relationships.md
+    - text: Completar dades amb prediccions
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Enriquir i predir dades
+      url: /learn/modules/enrich-data/
+- title: Basa't en les teves dades
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear segments
+      url: segments.md
+    - text: Crear mesures
+      url: measures.md
+    - text: Definir les activitats dels clients
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Treballar amb l'aplicació
+      url: /learn/modules/working-with-customer-insights/
+- title: Exportar dades
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar destinacions d'exportació
+      url: export-destinations.md
+    - text: Targetes de clients a les aplicacions del Dynamics 365
+      url: customer-card-add-in.md
+    - text: Connector del Power BI
+      url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Administra les connexions externes
+      url: /learn/modules/configure-third-party-connections/
+- title: Administrar l'aplicació
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: system.md
+    - text: Definir els permisos de l'usuari
+      url: permissions.md
+    - text: Administrar diversos entorns
+      url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrar el Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Administrar el Customer Insights
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Configurar el sistema
-      url: audience-insights/system.md
+      url: system.md
     - text: Definir els permisos de l'usuari
-      url: audience-insights/permissions.md
+      url: permissions.md
     - text: Administrar diversos entorns
-      url: audience-insights/manage-environments.md
+      url: manage-environments.md
   - linkListType: learn
     links:
     - text: Administrar el Customer Insights

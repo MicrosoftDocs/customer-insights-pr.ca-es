@@ -1,39 +1,41 @@
 ---
-title: Informació del producte
+title: Dynamics 365 Customer Insights visió general del producte
 author: m-hartmann
-description: Obtingueu informació general del Dynamics 365 Customer Insights i les seves característiques.
+description: Obteniu una visió general Dynamics 365 Customer Insights de i les seves principals característiques.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560421"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641888"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Informació general del producte Dynamics 365 Customer Insights
 
-El [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) forma part de la plataforma de dades de clients (CDP) de Microsoft, que permet oferir experiències personalitzades als clients. Les característiques de la plataforma proporcionen informació sobre qui són els vostres clients i com interactuen amb la vostra plataforma. Unifiqueu les dades dels clients en diverses fonts per obtenir una visió única dels clients.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) és la plataforma de dades de clients (CDP) de Microsoft que ajuda a oferir experiències personalitzades dels clients. L'aplicació proporciona una visió holística dels clients amb un temps inigualable per obtenir informació. Obteniu la visualització més completa dels vostres clients unificant les dades dels clients amb dades operatives i IoT en temps real. Enriquir els perfils dels clients amb fonts de dades primeres i de tercers. 
 
-Les [conclusions del públic](audience-insights/overview.md) us ajuden a transformar l'empresa en una organització centrada en els clients. Els professionals de màrqueting, vendes i servei disposen dels coneixements que necessiten per personalitzar experiències. Connecteu dades de fonts transaccionals, conductuals i observacions per crear una visualització de client de 360 graus. Vegeu resultats més ràpidament amb una plataforma CDP dissenyada per oferir informació sobre la qual es pot actuar. 
-
-[Les estadístiques](engagement-insights/overview.md) d'interacció eren una capacitat de previsualització a les Estadístiques del Client que se centra en recopilar esdeveniments web i mòbils per obtenir estadístiques addicionals. La preestrena ha finalitzat el 15 de febrer de 2022.
+Customer Insights us ajuda a transformar el vostre negoci en una organització centrada en el client, apoderant els professionals del màrqueting, les vendes i els serveis per adaptar les interaccions 1: 1 a escala. Les integracions clau en mà amb Microsoft i aplicacions de tercers es poden utilitzar per activar estadístiques en temps real per generar accions significatives.
  
-## <a name="choose-a-capability"></a>Trieu una característica
+Connecteu dades de fonts de dades transaccionals, conductuals i demogràfiques per crear visualitzacions de clients de 360 graus. Deriven estadístiques fora de la caixa amb models d'IA precompilats o creeu, proveu i implementeu ràpidament models personalitzats d'IA / ML mitjançant solucions d'anàlisi avançades a una escala il·limitada.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Pàgina del Customer Insights que us permet navegar a les conclusions del públic o les conclusions d'interacció.":::
-
-Per triar una característica
-
-1. A la subfinestra de navegació, seleccioneu **Totes les aplicacions** per obrir la finestra **Trieu el focus**.
-1. Seleccioneu **Ves-hi ara** per navegar a la característica que voleu.
+Mantingueu un control total sobre les vostres dades de clients per garantir el màxim nivell de governança de dades i el compliment d'un CDP d'autoservei i de grau empresarial basat en Microsoft Azure. Donar suport al Reglament General de Protecció de Dades (RGPD) i altres requisits legislatius i estàndards de la indústria a través d'eines integrades de privadesa, seguretat i governança i gestió de consentiment.
 
 ## <a name="pricing-and-licensing"></a>Preus i llicències
+Customer Insights té llicència per inquilí i inclou tant capacitats d'empresa a consumidor (B2C) com d'empresa a empresa (B2B). Podeu comprar capacitat addicional amb llicències de complement per augmentar el nombre de perfils i comptes.
 
-El Customer Insights està llicenciat per inquilí i inclou diverses funcionalitats. Podeu adquirir capacitat addicional i una llicència per augmentar la quota per defecte. 
 - [Descripció general sobre els preus](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Capacitat i drets: [Guia de llicències del Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Lloc web de llicències per volum de Microsoft](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Proveu el Customer Insights i comenceu
+
+Inicieu avui una [prova](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) gratuïta de Customer Insights per provar l'aplicació amb les vostres pròpies dades de clients. [Esbrineu com podeu accedir ràpidament i explorar moltes de les funcions](trial-signup.md) clau de l'aplicació. 
+
+Navegueu pels [recursos](https://dynamics.microsoft.com/ai/customer-insights/resources/) d'aprenentatge destacats, inclosos els informes d'analistes, els seminaris web a la carta i les històries dels clients.
+
+Obteniu informació sobre com podeu construir una comprensió més profunda dels vostres clients amb la nostra [guia](get-started.md) d'inici.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
