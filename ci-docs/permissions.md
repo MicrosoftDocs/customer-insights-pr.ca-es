@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653556"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740891"
 ---
 # <a name="user-permissions"></a>Permisos d'usuari
 
 La **pàgina Permisos** és on configurareu funcions i permisos per utilitzar el Customer Insights.
 
-Heu de tenir permisos d'administrador per veure la pàgina. Per accedir a la pàgina de permisos, aneu a **AdminSecurityUsers** > **·** > **·**.
+Heu de tenir permisos d'administrador per veure la pàgina. Per accedir a la pàgina de permisos, aneu a **Usuaris de seguretat** > **d'administració** > **·**.
 
 Hi ha tres tipus de funcions:
 
@@ -41,7 +41,7 @@ Hi ha tres tipus de funcions:
 
 - Tots els permisos disponibles per al visualitzador.
 - Carregueu i transformeu dades mitjançant la pàgina **Fonts de dades**.
-- Completeu les seccions d'*Unificació de dades* (**Assignació**, **Coincidència** i **Combinació**) resultants a l'entitat de perfil de client unificat.
+- Completat ***Unificació** de dades que donen lloc a l'entitat unificada del perfil de client.
 - Definiu **Relacions** i **Activitats**.
 - Creeu segments mitjançant la pàgina **Segments**.
 - Creeu mesures mitjançant la pàgina **Mesures**.
@@ -69,7 +69,7 @@ Hi ha tres tipus de funcions:
 
 ## <a name="assign-roles-and-permissions"></a>Assignar funcions i permisos
 
-1. Aneu a **AdminSecurity** > **·** > **Usuaris***.
+1. Aneu a **seguretat** > **de l'administrador**> **Usuaris***.
 
 1. Seleccioneu **Afegeix usuaris** per obrir la subfinestra **Afegeix o edita els permisos**.
 
@@ -79,7 +79,7 @@ Hi ha tres tipus de funcions:
 
 ## <a name="view-current-permissions"></a>Veure els permisos actuals
 
-Aneu a **AdminSecurityUsers** > **·** > **per** veure quines tasques estan actives actualment.
+Aneu a **Usuaris** > **de seguretat** > **d'administració** per veure quines tasques de rol estan actives actualment.
 
 - La columna **Tipus** especifica un únic usuari, grup o aplicació. El sistema admet usuaris i grups individuals.
 - Les funcions s'especifiquen a la columna **Funció**.

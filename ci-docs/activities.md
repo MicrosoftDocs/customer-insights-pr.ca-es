@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642257"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755486"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
-Combinar les activitats de client de [diverses fonts de dades](data-sources.md) al Dynamics 365 Customer Insights per crear una cronologia on s'enumerin les activitats en ordre cronològic. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la solució de [complement de targeta de client](customer-card-add-in.md) o en un escriptori digital del Power BI.
+Combineu les activitats dels clients des de [diverses fonts de dades](data-sources.md) al Dynamics 365 Customer Insights. Creeu una cronologia que enumeri les activitats cronològicament. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la solució de [complement de targeta](customer-card-add-in.md) de client.
 
 ## <a name="define-an-activity"></a>Definir una activitat
 
@@ -34,7 +34,7 @@ Les fonts de dades poden incloure entitats amb dades transaccionals i d'activita
 
 Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclosa en una cronologia de client i no es poden afegir entitats sense camps **Data**. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
 
-1. Aneu a **DataActivities** > **·**.
+1. Aneu a Activitats de **dades** > **·**.
 
 1. Seleccioneu **Afegeix una activitat** per iniciar l'experiència guiada per al procés de configuració de l'activitat.
 
@@ -78,7 +78,7 @@ Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclo
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. Podeu seleccionar **Acabament i revisió** per desar l'activitat ara amb el tipus d'activitat definit com a **Altres**. 
 
-1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, els tipus d'activitats de *Comentaris*, *Fidelitat*, *SalesOrder*, *SalesOrderLine* i *Subscripció* es poden assignar semànticament després d'acordar l'assignació dels camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
+1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, *els tipus d'activitat Feedback*, *Loyalty*, *SalesOrderDer*, *SalesOrderLine* i *Subscription* admeten semàntica després d'acceptar assignar els camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
 
 1. Seleccioneu **Següent** per desplaçar-vos al pas següent. 
 
@@ -110,7 +110,7 @@ Després de configurar activitats de client, seleccioneu **Mostra a la cronologi
 
 Per obrir la cronologia d'un client, aneu a **Clients** i trieu el perfil de client que voleu visualitzar.
 
-Si un client ha participat en una activitat que heu configurat, la trobareu a la secció **Cronologia d'activitats**.
+Si un client ha participat en una activitat configurada, la trobareu a la secció Cronologia de l'activitat **·**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualitzar les activitats configurades als perfils de client.":::
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642256"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755438"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
@@ -25,7 +25,7 @@ El Dynamics 365 Customer Insights proporciona API per crear les vostres pròpies
 > [!IMPORTANT]
 > Els detalls d'aquestes API es mostren a la [referència de les API del Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Inclouen informació addicional sobre operacions, paràmetres i respostes.
 
-En aquest article es descriu com accedir a les API del Customer Insights, crear un registre de l'aplicació de l'Azure i començar a utilitzar les biblioteques de client disponibles.
+En aquest article es descriu com accedir a les API del Customer Insights, crear un registre d'aplicacions de l'Azure i començar a treballar a les biblioteques de clients.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Començar a provar les API del Customer Insights
 
@@ -83,13 +83,13 @@ Podeu utilitzar l'identificador de l'aplicació o del client per a aquest regist
 
 Per obtenir més informació sobre MSAL, vegeu la [informació general sobre la biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Per obtenir més informació sobre el registre de l'aplicació a l'Azure, vegeu [Registrar una aplicació](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Per obtenir més informació sobre el registre de l'aplicació a l'Azure, vegeu [Registrar una aplicació](/graph/auth-register-app-v2).
 
 Per obtenir informació sobre l'ús de les API de les nostres biblioteques de client, vegeu [Biblioteques de client del Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Permisos d'aplicació entre servidors
 
-A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-azure-portal) es descriu com registrar una aplicació que requereix que un usuari hi iniciï la sessió com a mètode d'autenticació. Informeu-vos sobre com crear un registre d'aplicacions que no necessiti la interacció de l'usuari i que es pugui executar en un servidor.
+A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-azure-portal) es descriu com registrar una aplicació que requereix que un usuari hi iniciï la sessió com a mètode d'autenticació. Obteniu informació sobre com podeu crear un registre d'aplicació que no necessiti la interacció de l'usuari i que es pugui executar en un servidor.
 
 1. Al registre d'aplicacions del portal de l'Azure, aneu a **Permisos de l'API**.
 
@@ -112,6 +112,10 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
    Obriu Customer Insights, aneu a **Administració** > **Permisos** i seleccioneu **Afegeix un usuari**.
 
 1. Cerqueu el nom del registre de l'aplicació, seleccioneu-lo als resultats de la cerca i seleccioneu **Desa**.
+
+## <a name="sample-queries"></a>Consultes d'exemple
+
+Hem compilat una breu llista de consultes de mostra d'OData per treballar amb les API: [exemples de consulta OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Biblioteques de client del Customer Insights
 
@@ -137,7 +141,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 
 1. Utilitzeu la [biblioteca d'autenticació de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) per obtenir un `AccessToken` mitjançant el [registre de l'aplicació de l'Azure](#create-a-new-app-registration-in-the-azure-portal) existent.
 
-1. Després d'autenticar i adquirir un testimoni amb èxit, construïu-ne un de nou o utilitzeu-ne un existent `HttpClient` amb l'opció "Authorization"**de DefaultRequestHeaders addicional** establerta com a **"testimoni d'accés"** del portador i **Ocp-Apim-Subscription-Key** establerta a la [**clau** de subscripció de l'entorn](#get-started-trying-the-customer-insights-apis) customer insights.   
+1. Després d'autenticar i adquirir un testimoni amb èxit, construïu-ne un de nou o utilitzeu-ne un existent `HttpClient` amb el **"Authorization"** de DefaultRequestHeaders definit com a **"testimoni d'accés"** i **Ocp-Apim-Subscription-Key** definit a la [**clau** de subscripció de l'entorn](#get-started-trying-the-customer-insights-apis) customer insights.   
  
    Restabliu la capçalera d'**Autorització** si escau. Per exemple, quan el testimoni ha caducat.
 
@@ -147,7 +151,7 @@ Per obtenir informació sobre com començar a utilitzar les biblioteques de clie
 
 1. Feu trucades amb el client als "mètodes d'extensió", per exemple `GetAllInstancesAsync`. Si es preferia l'accés al subjacent `Microsoft.Rest.HttpOperationResponse`, utilitzeu els "mètodes de missatges http", per exemple `GetAllInstancesWithHttpMessagesAsync`.
 
-1. La resposta serà probablement de tipus `object` perquè el mètode pot retornar diversos tipus (per exemple, `IList<InstanceInfo>` i `ApiErrorResult`). Per comprovar el tipus de retorn, podeu convertir de manera segura els objectes en els tipus de resposta especificats a la [pàgina de detalls de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) corresponent a aquesta operació.    
+1. La resposta serà probablement de tipus `object` perquè el mètode pot retornar diversos tipus (per exemple, `IList<InstanceInfo>` i `ApiErrorResult`). Per comprovar el tipus de retorn, utilitzeu els objectes dels tipus de resposta especificats a la pàgina [Detalls de l'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) per a aquesta operació.    
    
    Si necessiteu més informació sobre la sol·licitud, utilitzeu els **mètodes de missatges http** per accedir a l'objecte de la resposta sense processar.
 

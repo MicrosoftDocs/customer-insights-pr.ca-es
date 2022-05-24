@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642208"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755674"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (vista prèvia)
 
@@ -23,10 +23,10 @@ Utilitzeu dades d'orígens com Microsoft i altres socis per enriquir les dades d
 
 Heu de tenir permisos de col·laborador o administrador per crear o editar enriquiments. Per obtenir més informació, vegeu [Permisos](permissions.md).  
 
-1. Aneu a **DataUnify** > **·**. Seleccioneu l'entitat que voleu enriquir i seleccioneu un atribut com a clau principal per a l'entitat. Per obtenir més informació, vegeu [Seleccionar la clau principal](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Aneu a Unificació de **dades** > **·**. Seleccioneu l'entitat que voleu enriquir i seleccioneu un atribut com a clau principal per a l'entitat. Per obtenir més informació, vegeu [Seleccionar la clau principal](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Aneu a **Dades** > **Fonts de dades**.
- 
+
 1. Selecciona l'el·lipsi vertical que hi ha al costat de la font de dades vols enriquir i selecciona **Enrique**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pàgina d'enriquiment de fonts de dades.":::

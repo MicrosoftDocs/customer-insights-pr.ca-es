@@ -1,23 +1,22 @@
 ---
 title: Activa les regles de consentiment per als segments
 description: Seguiu aquests passos per enllaçar les dades del consentiment i activar els controls de consentiment al Dynamics 365 Customer Insights. Un administrador també pot desactivar les comprovacions de consentiment.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642221"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755158"
 ---
 # <a name="activate-consent-rules"></a>Activa les regles de consentiment
 
-El [Centre de consentiment (previsualització)](consent-management/overview.md) us ajuda a harmonitzar les dades de consentiment de diverses fonts. Utilitzeu l'entitat Consentiment *unificat* per aplicar comprovacions de consentiment per defecte. Després d'importar dades de consentiment al Centre de consentiment i configurar les regles de les dades, l'entitat *Consentiment* se sincronitza automàticament amb Dynamics 365 Customer Insights.
+El [Centre de consentiment (previsualització)](consent-management/overview.md) us ajuda a harmonitzar les dades de consentiment de diverses fonts. Utilitzeu l'entitat Consentiment *unificat* per aplicar comprovacions de consentiment per defecte. Després d'importar dades de consentiment i configurar les regles del mapa, l'entitat *Consentiment* se sincronitza automàticament amb Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Habilita comprovacions de consentiment
 

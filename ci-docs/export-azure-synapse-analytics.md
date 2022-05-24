@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642232"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741491"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporta les dades a Azure Synapse Analytics (visualització prèvia)
 
@@ -34,7 +34,7 @@ A l’Azure:
 
 - Una subscripció activa de l'Azure.
 
-- Si utilitzeu un compte Gen2 nou Azure Data Lake Storage, el principal de *servei del Customer Insights necessita* permisos **del col·laborador de** dades blob d'emmagatzematge. Obteniu més informació sobre com [podeu connectar-vos a un compte de l'Azure Data Lake Storage Gen2 amb l'enitat de seguretat del servei de l'Azure per als coneixements del públic](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
+- Si utilitzeu un compte Gen2 nou Azure Data Lake Storage, el principal de *servei del Customer Insights necessita* permisos **del col·laborador de** dades blob d'emmagatzematge. Obteniu més informació sobre com [podeu connectar-vos a un Azure Data Lake Storage compte Gen2 amb el principal de servei de l'Azure per al Customer Insights](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Al grup de recursos on es troba l'àrea Azure Synapse de treball, cal assignar almenys *permisos del lector* al *Azure AD principal de* servei i a l'usuari **amb permisos d'administració del Customer Insights**. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
 

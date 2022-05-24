@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642209"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739196"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -35,9 +35,6 @@ Podeu afegir els orígens de dades següents:
 - [Des d'una carpeta del Common Data Model](connect-common-data-model.md)
 - [Des del vostre propi llac del Microsoft Dataverse](connect-dataverse-managed-lake.md)
 - [Des d'una Azure Synapse Analytics base de dades](connect-synapse.md)
-
-> [!NOTE]
-> Si utilitzeu la versió de prova, la secció Mètodes d'importació inclou una **opció de biblioteca** de dades del Customer Insights. Trieu aquesta opció per seleccionar un conjunt de dades d'exemple disponible per a diverses indústries. Per a més informació, vegeu [Dynamics 365 Customer Insights judici](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Afegir dades des de fonts de dades locals
 

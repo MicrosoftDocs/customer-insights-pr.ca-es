@@ -1,19 +1,19 @@
 ---
 title: Guia d'exemples de predicció de rotació de transaccions
 description: Utilitzeu aquesta guia d'exemples per provar el model de predicció de rotació de transaccions preparat per a l'ús.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642398"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741307"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guia d'exemples de predicció de rotació de transaccions
 
@@ -86,69 +86,13 @@ Reviseu els articles [sobre la ingestió](data-sources.md) de dades i [la import
 
 1. Deseu la font de dades.
 
-
 ## <a name="task-2---data-unification"></a>Tasca 2 - Unificació de les dades
 
-Un cop feta la ingestió de les dades, començarem el procés d'**assignació, coincidència i combinació** per tal de crear un perfil de client unificat. Per obtenir més informació, vegeu [Unificació de les dades](data-unification.md).
-
-### <a name="map"></a>Assignació
-
-1. Un cop ingerides les dades, assigneu contactes de les dades de comerç electrònic i fidelització a tipus de dades comuns. Aneu a **Dades** > **Unifica** > **Assigna**.
-
-1. Seleccioneu les entitats que representen el perfil del client (**eCommerceContacts** i **loyCustomers**). 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificar les fonts de dades de comerç electrònic i de fidelització.":::
-
-1. Seleccioneu **ContactId** com a clau principal per a **eCommerceContacts** i **LoyaltyID** com a clau principal per a **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifiqueu LoyaltyId com a clau principal.":::
-
-### <a name="match"></a>Coincidència
-
-1. Aneu a la pestanya **Coincidència** i seleccioneu **Definició d'ordre**.
-
-1. A la llista desplegable **Principal**, trieu **eCommerceContacts: eCommerce** com a font principal i incloeu tots els registres.
-
-1. A la llista desplegable **Entitat 2**, trieu **loyCustomers: LoyaltyScheme** i incloeu tots els registres.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifiqueu la coincidència de comerç electrònic i de fidelització.":::
-
-1. Seleccioneu **Crea una regla nova**.
-
-1. Afegiu la primera condició amb el FullName.
-
-   * Per a eCommerceContacts seleccioneu **FullName** al desplegable.
-   * Per a loyCustomers seleccioneu **FullName** al desplegable.
-   * Seleccioneu la llista desplegable **Normalitza** i trieu el **Tipus (Telèfon, Nom, Adreça...)**.
-   * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-1. Introduïu el nom **Nom complet, correu electrònic** per a la regla nova.
-
-   * Per afegir una segona condició per a l'adreça electrònica seleccioneu **Afegeix una condició**.
-   * Per a l'entitat eCommerceContacts, trieu **EMail** al desplegable.
-   * Per a l'entitat loyCustomers, trieu **EMail** al desplegable. 
-   * Deixeu Normalitza en blanc. 
-   * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifiqueu la regla de coincidència per al nom i el correu electrònic.":::
-
-7. Seleccioneu **Desa** i **Executa**.
-
-### <a name="merge"></a>Combinació
-
-1. Aneu a la pestanya **Combinació**.
-
-1. Al **ContactId** de l'entitat **loyCustomers**, canvieu el nom de visualització per **ContactIdLOYALTY** per diferenciar-lo dels altres identificadors ingerits.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="canvieu el nom de contactid de l'identificador de fidelització.":::
-
-1. Seleccioneu **Desa** i **Executa** per iniciar el procés de combinació.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tasca 3 - Configurar la predicció de rotació de transaccions
 
-Amb els perfils de client unificats i a punt, ja podem executar la predicció de rotació de subscripcions. Per obtenir passos detallats, consulteu l'article [predicció](predict-subscription-churn.md) de subscripció. 
+Amb els perfils de clients unificats, ara podem executar el predicció de la transacció. Per obtenir passos detallats, vegeu l'article [predicció de l'article](predict-transactional-churn.md) Predicció transacció. 
 
 1. Aneu a **Intel·ligència** > **Detecta** i seleccioneu l'ús del **Model d'abandonament de clients**.
 
@@ -180,7 +124,7 @@ Amb els perfils de client unificats i a punt, ja podem executar la predicció de
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tasca 4 - Revisar els resultats i les explicacions del model
 
-Deixeu que el model completi la formació i la puntuació de les dades. Ara ja podeu revisar les explicacions del model de rotació de subscripcions. Per obtenir més informació, vegeu [Revisar un estat de predicció i els resultats](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deixeu que el model completi la formació i la puntuació de les dades. Ara podeu revisar les explicacions del model de churn. Per obtenir més informació, vegeu [Revisar un estat de predicció i els resultats](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tasca 5 - Crear un segment de clients amb un alt risc de rotació
 
@@ -192,14 +136,12 @@ Podeu crear un segment nou a partir de l'entitat creada pel model.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Creació d'un segment amb la sortida del model.":::
 
-1. Seleccioneu l'extrem **OOBSubscriptionChurnPrediction** i definiu el segment: 
+1. Seleccioneu el **punt final OOBeCommerceChurnPrediction** i definiu el segment: 
    - Camp: ChurnScore
    - Operador: major que
    - Valor: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configurar el segment de rotació de la subscripció.":::
 
-Ja teniu un segment que s'actualitza dinàmicament i que identifica els clients amb un alt risc de rotació per a aquest negoci de subscripció.
+Ara teniu un segment que s'actualitza dinàmicament i que identifica clients d'alt risc de rotació.
 
 Per a més informació, vegeu [Crear i administrar segments](segments.md).
 

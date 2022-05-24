@@ -1,8 +1,8 @@
 ---
 title: Guia d'exemples de predicció de rotació de subscripcions
 description: Utilitzeu aquesta guia d'exemples per provar el model de predicció de rotació de subscripcions preparat per a l'ús.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642347"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741399"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Guia d'exemples de predicció de rotació de subscripcions
 
@@ -112,61 +112,7 @@ Reviseu els articles [sobre la ingestió](data-sources.md) de dades i [la import
 
 ## <a name="task-2---data-unification"></a>Tasca 2 - Unificació de les dades
 
-Un cop feta la ingestió de les dades, començarem el procés d'**assignació, coincidència i combinació** per tal de crear un perfil de client unificat. Per obtenir més informació, vegeu [Unificació de les dades](data-unification.md).
-
-### <a name="map"></a>Assignació
-
-1. Un cop ingerides les dades, assigneu contactes de les dades de comerç electrònic i fidelització a tipus de dades comuns. Aneu a **Dades** > **Unifica** > **Assigna**.
-
-1. Seleccioneu les entitats que representen el perfil del client (**eCommerceContacts** i **loyCustomers**). 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificar les fonts de dades de comerç electrònic i de fidelització.":::
-
-1. Seleccioneu **ContactId** com a clau principal per a **eCommerceContacts** i **LoyaltyID** com a clau principal per a **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifiqueu LoyaltyId com a clau principal.":::
-
-### <a name="match"></a>Coincidència
-
-1. Aneu a la pestanya **Coincidència** i seleccioneu **Definició d'ordre**.
-
-1. A la llista desplegable **Principal**, trieu **eCommerceContacts: eCommerce** com a font principal i incloeu tots els registres.
-
-1. A la llista desplegable **Entitat 2**, trieu **loyCustomers: LoyaltyScheme** i incloeu tots els registres.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifiqueu la coincidència de comerç electrònic i de fidelització.":::
-
-1. Seleccioneu **Crea una regla nova**.
-
-1. Afegiu la primera condició amb el FullName.
-
-   * Per a eCommerceContacts seleccioneu **FullName** al desplegable.
-   * Per a loyCustomers seleccioneu **FullName** al desplegable.
-   * Seleccioneu la llista desplegable **Normalitza** i trieu el **Tipus (Telèfon, Nom, Adreça...)**.
-   * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-1. Introduïu el nom **Nom complet, correu electrònic** per a la regla nova.
-
-   * Per afegir una segona condició per a l'adreça electrònica seleccioneu **Afegeix una condició**.
-   * Per a l'entitat eCommerceContacts, trieu **EMail** al desplegable.
-   * Per a l'entitat loyCustomers, trieu **EMail** al desplegable. 
-   * Deixeu Normalitza en blanc. 
-   * Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifiqueu la regla de coincidència per al nom i el correu electrònic.":::
-
-7. Seleccioneu **Desa** i **Executa**.
-
-### <a name="merge"></a>Combinació
-
-1. Aneu a la pestanya **Combinació**.
-
-1. Al **ContactId** de l'entitat **loyCustomers**, canvieu el nom de visualització per **ContactIdLOYALTY** per diferenciar-lo dels altres identificadors ingerits.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="canvieu el nom de contactid de l'identificador de fidelització.":::
-
-1. Seleccioneu **Desa** i **Executa** per iniciar el procés de combinació.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tasca 3 - Configurar la predicció de rotació de subscripcions
 

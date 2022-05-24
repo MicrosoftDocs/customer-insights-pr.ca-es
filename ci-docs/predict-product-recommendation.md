@@ -1,25 +1,25 @@
 ---
 title: Predicció de recomanacions de productes
 description: Predieu els productes que pot comprar o interactuar un client.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642415"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762720"
 ---
 # <a name="product-recommendation-prediction"></a>Predicció de recomanacions de productes
 
 El model de recomanació de productes crea conjunts de recomanacions de producte predictives. Les recomanacions es basen en el comportament de compra anterior i els clients amb patrons de compra similars. Podeu crear noves predictions de recomanació de productes a la pàgina **Intel·ligència** > **Prediccions**. Seleccioneu **Les meves prediccions** per veure la resta de prediccions que heu creat.
 
-Les recomanacions de productes poden estar subjectes a les lleis i regulacions locals i a les expectatives dels clients, que el model no està construït per tenir específicament en compte.  Com a usuari d'aquesta capacitat predictiva, **heu de revisar les recomanacions abans de lliurar-les als vostres clients** per assegurar-vos que compliu les lleis o regulacions aplicables i les expectatives dels clients sobre el que podeu recomanar. 
+Les recomanacions de productes poden estar subjectes a les lleis i regulacions locals i a les expectatives dels clients, que el model no està construït per tenir específicament en compte.  Com a usuari d'aquesta capacitat predictiva, **heu de revisar les recomanacions abans de lliurar-les als vostres clients** per assegurar-vos que compliu les lleis o regulacions aplicables i les expectatives dels clients sobre el que podeu recomanar.
 
 A més, la sortida d'aquest model us proporcionarà recomanacions basades en l'identificador del producte. El mecanisme de lliurament haurà d'assignar els identificadors de producte previstos al contingut adequat perquè els clients tinguin en compte la localització, el contingut d'imatge i altres continguts o comportaments específics de l'empresa.
 
@@ -33,29 +33,31 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
 - Coneixements empresarials per comprendre diversos tipus de productes per a la vostra empresa i com interactuen els vostres clients. Admeten la recomanació de productes que ja han adquirit els vostres clients o recomanacions per a productes nous.
 
+- L'entorn s'ha de configurar per al públic objectiu principal dels **consumidors** individuals.
+
 - Dades sobre les vostres transaccions, compres i historial:
-    - Identificadors de transaccions per distingir compres o transaccions.
-    - Identificadors de client per assignar les transaccions als vostres clients.
-    - Dates dels esdeveniments de les transaccions que especifiquen les dates en què es van produir les transaccions.
-    - Informació de l'identificador del producte per a la transacció.
-    - (Opcional) Entitat de dades del catàleg de productes per utilitzar un filtre de producte.
-    - (Opcional) Si una transacció és una devolució o no.
-    - L'esquema de dades semàntiques requereix la següent informació:
-        - **ID de transacció:** identificador únic de la compra o la transacció.
-        - **Data de la transacció:** data de la compra o la transacció.
-        - **Valor de la transacció:** valor numèric de la compra o la transacció.
-        - **ID de producte únic:** identificador del producte o servei adquirit quan les dades es troben en el nivell d'element de línia.
-        - (Opcional) **Compra o devolució:** un camp booleà on el valor *true* identifica que una transacció era una devolució. Si no es faciliten les dades de Compra o Devolució en el model i el **Valor de la transacció** és negatiu, també utilitzarem aquesta informació per inferir una devolució.
+  - Identificadors de transaccions per distingir compres o transaccions.
+  - Identificadors de client per assignar les transaccions als vostres clients.
+  - Dates dels esdeveniments de les transaccions que especifiquen les dates en què es van produir les transaccions.
+  - Informació de l'identificador del producte per a la transacció.
+  - (Opcional) Entitat de dades del catàleg de productes per utilitzar un filtre de producte.
+  - (Opcional) Si una transacció és una devolució o no.
+  - L'esquema de dades semàntiques requereix la següent informació:
+    - **ID de transacció:** identificador únic de la compra o la transacció.
+    - **Data de la transacció:** data de la compra o la transacció.
+    - **Valor de la transacció:** valor numèric de la compra o la transacció.
+    - **ID de producte únic:** identificador del producte o servei adquirit quan les dades es troben en el nivell d'element de línia.
+    - (Opcional) **Compra o devolució:** un camp booleà on el valor *true* identifica que una transacció era una devolució. Si no es faciliten les dades de Compra o Devolució en el model i el **Valor de la transacció** és negatiu, també utilitzarem aquesta informació per inferir una devolució.
 - Característiques de les dades suggerides:
-    - Dades històriques suficients: almenys un any de dades transaccionals, preferiblement de dos a tres anys per incloure una mica d'estacionalitat.
-    - Múltiples compres per client: tres o més transaccions per identificador de client
-    - Nombre de clients: almenys 100 clients, preferentment més de 10.000 clients únics. El model fallarà amb menys de 100 clients.
+  - Dades històriques suficients: almenys un any de dades transaccionals, preferiblement de dos a tres anys per incloure una mica d'estacionalitat.
+  - Múltiples compres per client: tres o més transaccions per identificador de client
+  - Nombre de clients: almenys 100 clients, preferentment més de 10.000 clients únics. El model fallarà amb menys de 100 clients.
 
 > [!NOTE]
+>
 > - El model requereix l'historial de transaccions dels clients. La definició d'una transacció és bastant flexible. Qualsevol dada que descrigui una interacció usuari-producte pot funcionar com una entrada. Per exemple, comprar un producte, fer una classe o assistir a un esdeveniment.
 > - Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra, unir-les abans de la Power Query ingestió de dades.
 > - Si la comanda i els detalls de la comanda són entitats diferents, uniu-los abans d'utilitzar-los al model. El model no funciona amb un sol identificador de comanda o identificador de rebut en una entitat.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Crear una predicció de recomanacions de productes
 
@@ -76,13 +78,13 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 ### <a name="define-product-recommendation-configuration"></a>Definir la configuració de recomanació de producte
 
 1. Definiu el **nombre de productes** que voleu recomanar a un client. Aquest valor depèn de com el mètode de lliurament emplena les dades. Si podeu recomanar tres productes, definiu aquest valor segons això.
-   
+
    >[!TIP]
    > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar la predicció com a esborrany. Trobareu l'esborrany de predicció a la pestanya **Les meves prediccions**.
 
 1. Trieu si voleu incloure els productes que els clients han comprat recentment al **camp Repetició de compres esperades**.
 
-1. Estableix la **finestra Mira enrere**. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
+1. Estableix la **finestra** Mira enrere. Aquesta configuració especifica el període de temps que el model té en compte abans de recomanar el producte a l'usuari un altre cop. Per exemple, indica que un client compra un portàtil cada dos anys. Aquesta finestra analitzarà l'historial de compres dels dos últims anys i, si troba un article, el filtrarà a partir de les recomanacions.
 
 1. Seleccioneu **Següent**
 
@@ -98,14 +100,13 @@ Si esteu interessat a provar aquesta característica però no teniu dades per co
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipus d'activitat de configuració de pàgina.":::
 
-1. Després d'assignar l'activitat al tipus semàntic corresponent, seleccioneu **Següent** per continuar 
- 
+1. Després d'assignar l'activitat al tipus semàntic corresponent, seleccioneu **Endavant** per continuar.
+
 1. Assigneu els atributs semàntics als camps necessaris per executar el model.
 
 1. Seleccioneu **Desa**.
 
 1. Seleccioneu **Següent**.
-
 
 ### <a name="configure-product-filters"></a>Configurar filtres de productes
 
@@ -113,11 +114,11 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
 
 1. Al pas **Afegeix informació del producte**, afegiu el catàleg de productes amb informació per a cada producte. Assigneu la informació necessària i seleccioneu **Següent**.
 
-3. Al pas **Filtres de producte**, trieu entre les opcions següents.
+1. Al pas **Filtres de producte**, trieu entre les opcions següents.
 
-   * **Sense filtres**: utilitzeu tots els productes de la predicció de recomanació de productes.
+   - **Sense filtres**: utilitzeu tots els productes de la predicció de recomanació de productes.
 
-   * **Definir filtres de producte específics**: utilitzeu productes específics a la predicció de recomanació de productes.
+   - **Definir filtres de producte específics**: utilitzeu productes específics a la predicció de recomanació de productes.
 
 1. Seleccioneu **Següent**.
 
@@ -126,7 +127,7 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Subfinestra lateral que es mostra atribuïda a l'entitat del catàleg de productes per seleccionar els filtres de producte.":::
 
 1. Trieu si voleu que el filtre de producte utilitzi els connectors **and** o **or** per combinar lògicament la selecció d'atributs del catàleg de productes.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Configuració d'exemple de filtres de producte combinats amb connectors AND lògics.":::
 
 1. Seleccioneu **Següent**.
@@ -150,7 +151,7 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
 1. Seleccioneu la predicció que voleu revisar.
    - **Nom de la predicció:** el nom de la predicció proporcionat en crear-la.
    - **Tipus de predicció:** el tipus de model utilitzat per a la predicció
-   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.    
+   - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.
       La *puntuació* en l'entitat de sortida és una mesura quantitativa de la recomanació. El model recomana productes amb una puntuació més alta abans que els productes amb una puntuació més baixa.
    - **Camp predit:** aquest camp s'omple només per a alguns tipus de prediccions i no s'utilitza a la predicció de Recomanació de productes.
    - **Estat:** l'estat actual de l'execució de la predicció.
@@ -171,28 +172,27 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
             - **A** Un model es considerarà de qualitat **A** si la mètrica "Èxit @ K" és com a mínim un 10% superior a la línia de base. 
             - **B** Un model es considerarà de qualitat **B** si la mètrica "Èxit @ K" és d'un 0% a un 10% superior a la línia de base.
             - **C** Un model es considerarà de qualitat **C** si la mètrica "Èxit @ K" és inferior a la línia de base.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Visualització del resultat del rendiment del model.](media/product-recommendation-modelperformance.PNG "Visualització del resultat del rendiment del model")
             - **Referència**: el model agafa els productes més recomanats pel nombre de compres de tots els clients i utilitza regles apreses identificades pel model per crear un conjunt de recomanacions per als clients. A continuació, les previsions es comparen amb els productes principals, segons el nombre de clients que havien adquirit el producte. Si un client té com a mínim un producte en els seus productes recomanats que també s'ha observat als productes que s'han adquirit més, es consideren part de la referència. Si hi havia 10 d'aquests clients que havien adquirit un producte recomanat de 100 clients totals, la referència seria del 10%.
             - **Èxit @ K**: mitjançant un conjunt de validació de període de temps de les transaccions, es creen recomanacions per a tots els clients i es comparen amb el conjunt de transaccions de validació. Per exemple, en un període de 12 mesos, el mes 12 es podria separar com a conjunt de dades de validació. Si el model preveu almenys un producte que adquiriríeu al mes 12 segons el que s'ha après dels 11 mesos anteriors, el client augmentaria la mètrica "Èxit @ K".
-    
+
     1. **Productes més suggerits (amb recompte):** els cinc millors productes que es van predir per als vostres clients.
        > [!div class="mx-imgBorder"]
        > ![Gràfic que mostra els 5 productes més recomanats.](media/product-recommendation-topproducts.PNG "Gràfic que mostra els 5 productes més recomanats")
-    
+
     1. **Factors clau de recomanació:** el model utilitza l'historial de transaccions dels clients per fer recomanacions de productes. Aprèn patrons basats en compres passades i troba similituds entre clients i productes. Aquestes similituds s'utilitzen per generar recomanacions de productes.
-    Aquests són els factors que podrien influir en una recomanació de producte generada pel model. 
-        - **Transaccions anteriors**: els patrons de compra en el passat van ser utilitzats pel model per generar recomanacions de productes. Per exemple, el model pot recomanar un _Ratolí Surface Arc_ si algú ha comprat recentment un _Surface Book 3_ i un _Surface Pen_. El model ha après que històricament molts clients havien comprat un _Ratolí Surface Arc_ després de comprar un _Surface Book 3_ i un _Surface Pen_.
-        - **Similitud amb el client**: un producte recomanat va ser comprat històricament per altres clients que mostren patrons de compra similars. Per exemple, es va recomanar a John _Surface Headphones 2_ perquè Jennifer i Brad van comprar recentment _Surface Headphones 2_. El model creu que John és similar a Jennifer i Brad perquè històricament han tingut patrons de compra similars.
-        - **Similitud del producte**: un producte recomanat és similar a altres productes que el client havia comprat prèviament. El model considera que dos productes són similars si van ser comprats junts o per clients similars. Per exemple, algú rep una recomanació per a una _unitat d'emmagatzematge USB_ perquè prèviament ha comprat un _adaptador USB-C a USB_ i el model creu que la _unitat d'emmagatzematge USB_ és similar a l'_adaptador USB-C a USB_ basant-se en patrons de compra històrics.
+    Aquests són els factors que podrien influir en una recomanació de producte generada pel model.
+        - **Transaccions anteriors**: els patrons de compra en el passat van ser utilitzats pel model per generar recomanacions de productes. Per exemple, el model pot recomanar un *Ratolí Surface Arc* si algú ha comprat recentment un *Surface Book 3* i un *Surface Pen*. El model ha après que històricament molts clients havien comprat un *Ratolí Surface Arc* després de comprar un *Surface Book 3* i un *Surface Pen*.
+        - **Similitud amb el client**: un producte recomanat va ser comprat històricament per altres clients que mostren patrons de compra similars. Per exemple, es va recomanar a John *Surface Headphones 2* perquè Jennifer i Brad van comprar recentment *Surface Headphones 2*. El model creu que John és similar a Jennifer i Brad perquè històricament han tingut patrons de compra similars.
+        - **Similitud del producte**: un producte recomanat és similar a altres productes que el client havia comprat prèviament. El model considera que dos productes són similars si van ser comprats junts o per clients similars. Per exemple, algú rep una recomanació per a una *unitat d'emmagatzematge USB* perquè prèviament ha comprat un *adaptador USB-C a USB* i el model creu que la *unitat d'emmagatzematge USB* és similar a l'*adaptador USB-C a USB* basant-se en patrons de compra històrics.
 
         Cada recomanació de producte està influenciada per un o més d'aquests factors. El percentatge de recomanacions en què intervé cada factor d'influència es visualitza en un gràfic. En l'exemple següent, el 100% de les recomanacions van estar influenciades per transaccions passades, el 60% per similitud del client i el 22% per similitud del producte. Passeu el cursor per sobre de les barres del gràfic per veure el percentatge exacte amb què han intervingut els factors d'influència.
 
         > [!div class="mx-imgBorder"]
         > ![Factors clau de recomanació.](media/product-recommendation-keyrecommendationfactors.png "Factors clau de recomanació apresos pel model per generar recomanacions de producte")
-       
-     
+
    1. **Estadístiques de dades**: proporciona una visió general del nombre de transaccions, clients i productes que ha considerat el model. Es basa en les dades d'entrada que s'han utilitzat per aprendre patrons i generar recomanacions de productes.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ De vegades, només certs productes són beneficiosos o adequats per al tipus de 
 ## <a name="manage-predictions"></a>Administrar prediccions
 
 Es pot optimitzar, solucionar els problemes, actualitzar o suprimir predictions. Reviseu un informe d'ús de dades d'entrada per obtenir informació sobre com es pot realitzar una predicció més fiable més ràpidament. Per obtenir més informació, vegeu [Administrar prediccions](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

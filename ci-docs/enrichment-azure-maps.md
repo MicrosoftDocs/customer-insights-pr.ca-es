@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642200"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755342"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquiment dels perfils de client amb l'Azure Maps (versió preliminar)
 
@@ -51,7 +51,7 @@ Per configurar l'enriquiment de dades de l'Azure Maps, cal complir els requisits
 
 1. Seleccioneu **Següent** per completar l'assignació de camp.
 
-1. Avalueu si voleu modificar la **Configuració avançada**. Es proporcionen per donar la màxima flexibilitat a l'hora de gestionar casos d'ús avançat, però en la majoria dels casos els valors per defecte seran adequats:
+1. Avalueu si voleu modificar la **Configuració avançada**. Aquests paràmetres es proporcionen per donar la màxima flexibilitat per gestionar casos d'ús avançats, però els valors predeterminats seran adequats en la majoria dels casos:
    - **Tipus d'adreces**: el comportament per defecte és que l'enriquiment retorni la coincidència de la millor adreça encara que sigui incompleta. Per obtenir només les adreces completes (per exemple, les adreces que inclouen el número de domicili), desactiveu totes les caselles de selecció excepte **Adreces de punts**. 
    - **Llengua**: per defecte, les adreces es retornen en la llengua de la regió a la qual l'adreça ha de pertànyer. Per aplicar una llengua d'adreça estandarditzada, seleccioneu la llengua al menú desplegable. Per exemple, si seleccioneu **Català**, retornarà **Copenhaguen, Dinamarca** en comptes de **København, Danmark**.
 
@@ -89,7 +89,7 @@ Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu 
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
-Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a l'Azure Maps, permeteu la transferència de dades fora del límit de conformitat per al Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades segons la vostra instrucció, però sou responsable d'assegurar que l'Azure Maps compleixi les obligacions de privadesa o seguretat que tingueu. Per obtenir més informació, aneu a la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a l'Azure Maps, permeteu la transferència de dades fora del límit de conformitat per al Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades a les instruccions, però sou responsable d'assegurar-vos que l'Azure Maps compleixi amb les obligacions de privadesa o de seguretat que pugueu tenir. Per obtenir més informació, aneu a la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

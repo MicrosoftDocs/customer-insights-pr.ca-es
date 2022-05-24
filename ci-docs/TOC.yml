@@ -66,12 +66,18 @@
   items:
     - name: Informació general sobre la unificació de dades
       href: data-unification.md
-    - name: Assignar entitats i atributs
+    - name: Seleccioneu els camps d'origen
       href: map-entities.md
-    - name: Fer coincidir entitats
+    - name: Suprimeix els registres duplicats
+      href: remove-duplicates.md
+    - name: Condicions de coincidència
       href: match-entities.md
-    - name: Combinar entitats
+    - name: Unificar els camps de client
       href: merge-entities.md
+    - name: Revisa la unificació de dades
+      href: review-unification.md
+    - name: Actualitza la configuració de la unificació
+      href: data-unification-update.md
 - name: Enriquiment de dades
   items:
     - name: Enriquir perfils de clients
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Referències d'API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Consultes de mostra d'OData
+      href: odata-examples.md
 - name: Gestió de consentiments (previsualització)
   items:
     - name: Centre d'ajuda

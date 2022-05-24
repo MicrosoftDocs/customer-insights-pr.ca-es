@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642281"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757420"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
@@ -23,7 +23,7 @@ El [Common Data Model](/common-data-model/) és una especificació declarativa i
 
 Es tracta d'un model de dades compartit que permet que les aplicacions i els integradors de dades col·laborin més fàcilment proporcionant una definició unificada de les dades. El Common Data Model inclou un ric sistema de metadades amb les entitats, les relacions, les jerarquies, els trets i altres característiques, entre d'altres. Es va originar a partir de les aplicacions del Dynamics 365 i és de codi obert a GitHub amb més de 260 entitats estàndard. Un gran sistema d'associats interns i externs aporten conceptes específics del sector al Common Data Model.
 
-En l'actualitat, diversos sistemes i plataformes implementen el Common Data Model, incloent-hi els fluxos de dades del Power BI i els serveis de dades de l'Azure. Ja és compatible amb el Microsoft Dataverse, el Dynamics 365, el Power Apps, el Power BI i els propers serveis de dades de l'Azure, cosa que acumular valor directament vers l'[Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+En l'actualitat, diversos sistemes i plataformes implementen el Common Data Model, incloent-hi els fluxos de dades del Power BI i els serveis de dades de l'Azure. Ja és compatible amb el Microsoft Dataverse, el Dynamics 365, el Power Apps, el Power BI i els propers serveis de dades de l'Azure, cosa que acumular valor directament vers l'[Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Esquemes d'entitat del Customer Insights
 

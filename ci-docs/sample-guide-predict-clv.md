@@ -1,19 +1,19 @@
 ---
 title: Guia de mostra per a les prediccions de valor de vida dels clients
 description: Utilitzeu aquesta guia d'exemple per provar el model de predicció del valor de vida dels clients.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642353"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740799"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guia de mostra per a les prediccions de valor de vida dels clients (CLV)
 
@@ -102,64 +102,7 @@ Reviseu els articles [sobre la ingestió](data-sources.md) de dades i [la import
 
 ## <a name="task-2---data-unification"></a>Tasca 2 - Unificació de les dades
 
-Després d'ingerir les dades, comencem el procés d'unificació de dades per crear un perfil de client unificat. Per obtenir més informació, vegeu [Unificació de les dades](data-unification.md).
-
-### <a name="map"></a>Assignació
-
-1. Un cop ingerides les dades, assigneu contactes de les dades de comerç electrònic i fidelització a tipus de dades comuns. Aneu a **Dades** > **Unifica** > **Assigna**.
-
-1. Seleccioneu les entitats que representen el perfil del client (**eCommerceContacts** i **loyCustomers**). A continuació, seleccioneu **Aplica**.
-
-   ![unificar les fonts de dades de comerç electrònic i de fidelització.](media/unify-ecommerce-loyalty.png)
-
-1. Seleccioneu **ContactId** com a clau principal per a **eCommerceContacts** i **LoyaltyID** com a clau principal per a **loyCustomers**.
-
-   ![Unifiqueu LoyaltyId com a clau principal.](media/unify-loyaltyid.png)
-
-1. Seleccioneu **Desa**.
-
-### <a name="match"></a>Coincidència
-
-1. Aneu a la pestanya **Coincidència** i seleccioneu **Definició d'ordre**.
-
-1. A la llista desplegable **Principal**, trieu **eCommerceContacts: eCommerce** com a font principal i incloeu tots els registres.
-
-1. A la llista desplegable **Entitat 2**, trieu **loyCustomers: LoyaltyScheme** i incloeu tots els registres.
-
-   ![Unifiqueu la coincidència de comerç electrònic i de fidelització.](media/unify-match-order.png)
-
-1. Seleccioneu **Afegeix una regla**
-
-1. Afegiu la primera condició amb el FullName.
-
-   - Per a eCommerceContacts seleccioneu **FullName** al desplegable.
-   - Per a loyCustomers seleccioneu **FullName** al desplegable.
-   - Seleccioneu el desplegable **Normalització** i trieu **Tipus (Telèfon, Nom, Adreça, ...)**.
-   - Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-1. Introduïu el nom **Nom complet, correu electrònic** per a la regla nova.
-
-   - Per afegir una segona condició per a l'adreça electrònica seleccioneu **Afegeix una condició**.
-   - Per a l'entitat eCommerceContacts, trieu **EMail** al desplegable.
-   - Per a l'entitat loyCustomers, trieu **EMail** al desplegable.
-   - Deixeu Normalitza en blanc.
-   - Definiu el **Nivell de precisió**: **Bàsic** i el **Valor**: **Alt**.
-
-   ![Unifiqueu la regla de coincidència per al nom i el correu electrònic.](media/unify-match-rule.png)
-
-1. Seleccioneu **Fet**.
-
-1. Seleccioneu **Desa** i **Executa**.
-
-### <a name="merge"></a>Combinació
-
-1. Aneu a la pestanya **Combinació**.
-
-1. Al **ContactId** de l'entitat **loyCustomers**, canvieu el nom de visualització per **ContactIdLOYALTY** per diferenciar-lo dels altres identificadors ingerits.
-
-   ![canvieu el nom de contactid de l'identificador de fidelització.](media/unify-merge-contactid.png)
-
-1. Seleccioneu **Desa** i **Executa la combinació i els processos descendents**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tasca 3: configurar la predicció del valor de vida dels clients
 

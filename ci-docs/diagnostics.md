@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642204"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755250"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Inicia la sessió amb l'Azure Dynamics 365 Customer Insights Monitor (Preview)
 
@@ -27,8 +27,8 @@ Customer Insights envia els registres d'incidències següents:
 - **Esdeveniments d'auditoria**
   - **APIEvent** : permet el seguiment de canvis realitzat a través de la interfície d'usuari Dynamics 365 Customer Insights.
 - **Esdeveniments operatius**
-  - **WorkflowEvent** : El flux de treball permet configurar orígens [de](data-sources.md) dades, [unificar](data-unification.md) i enriquir [i](enrichment-hub.md), finalment, [exportar](export-destinations.md) dades a altres sistemes. Tots aquests passos es poden fer individualment (per exemple, activar una sola exportació) o orquestrats (per exemple, l'actualització de dades de fonts de dades que desencadenen el procés d'unificació que provocarà enriquiments addicionals i, un cop fetes, exportar les dades a un altre sistema). Per obtenir més informació, vegeu l'esquema [WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** : totes les trucades de l'API a la instància dels clients a Dynamics 365 Customer Insights. Per obtenir més detalls, vegeu l'esquema [APIEvent](#api-event-schema).
+  - **WorkflowEvent**: el flux de treball us permet configurar orígens [de](data-sources.md) dades, unificar [,](data-unification.md)[enriquir](enrichment-hub.md) i, finalment [, exportar](export-destinations.md) dades a altres sistemes. Tots aquests passos es poden fer individualment (per exemple, activar una sola exportació). També es pot executar orquestrat (per exemple, l'actualització de dades de fonts de dades que desencadena el procés d'unificació, que atraurà enriquiments i un cop fet exportar les dades a un altre sistema). Per obtenir més informació, vegeu l'esquema [WorkflowEvent.](#workflow-event-schema)
+  - **APIEvent** : totes les trucades de l'API a la instància dels clients a Dynamics 365 Customer Insights. Per obtenir més informació, vegeu l'esquema [APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configura la configuració del diagnòstic
 
@@ -44,7 +44,7 @@ Per configurar el diagnòstic al Customer Insights, s'han de complir els requisi
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configura el diagnòstic amb l'Azure Monitor
 
-1. A Customer Insights, seleccioneu **SystemDiagnostics** > **per** veure les destinacions de diagnòstic configurades en aquesta instància.
+1. A Customer Insights, seleccioneu **Diagnòstic** > **del sistema** per veure les destinacions de diagnòstic configurades en aquesta instància.
 
 1. Seleccioneu **Afegeix una destinació**.
 
@@ -55,7 +55,7 @@ Per configurar el diagnòstic al Customer Insights, s'han de complir els requisi
 
 1. Trieu l'inquilí **de** la subscripció de l'Azure amb el recurs de destinació i seleccioneu **Inicia la** sessió.
 
-1. Seleccioneu el **tipus** de recurs (compte d'emmagatzematge, centre d'esdeveniments o anàlisi de registres).
+1. Seleccioneu el **tipus** de recurs (compte d'emmagatzematge, concentrador d'incidències o anàlisi de registres).
 
 1. Seleccioneu la **subscripció** per al recurs de destinació.
 
@@ -69,7 +69,7 @@ Per configurar el diagnòstic al Customer Insights, s'han de complir els requisi
 
 ### <a name="remove-a-destination"></a>Suprimir una destinació
 
-1. Aneu a **SystemDiagnostics** > **·**.
+1. Aneu a **Diagnòstic** > **del sistema**.
 
 1. Seleccioneu la destinació del diagnòstic a la llista.
 
@@ -109,7 +109,7 @@ El director del servei customer insights obté el permís del **propietari** de 
 
 ### <a name="log-analytics"></a>Anàlisi de registres
 
-El principal del servei d'estadístiques del client obté el permís del **col·laborador d'Analytics** de registre del recurs. Els registres estaran disponibles a **LogsTablesLog** > **·** > **Management** a l'àrea de treball log Analytics seleccionada. Expandiu la **solució Gestió de** registres i localitzeu les `CIEventsAudit` taules i `CIEventsOperational`.
+El principal del servei d'estadístiques del client obté el permís del **col·laborador d'Analytics** de registre del recurs. Els registres estaran disponibles a **Gestió de registres** > **de taules** > **de** registres a l'àrea de treball de Log Analytics seleccionada. Expandiu la **solució Gestió de** registres i localitzeu les `CIEventsAudit` taules i `CIEventsOperational`.
 
 - `CIEventsAudit` que conté esdeveniments d'auditoria **·**
 - `CIEventsOperational`**Que continguin esdeveniments operatius**
@@ -182,7 +182,7 @@ L'objecte `identity` JSON té la següent estructura
 
 ### <a name="workflow-event-schema"></a>Esquema d'incidències del flux de treball
 
-El flux de treball conté diversos passos. [Ingereix les fonts](data-sources.md) de dades, [unifica](data-unification.md), [enriqueix](enrichment-hub.md) i [exporta](export-destinations.md) dades. Tots aquests passos poden executar-se individualment o orquestrats amb els següents processos. 
+El flux de treball conté diversos passos. [Ingereix les fonts](data-sources.md) de dades, [unifica](data-unification.md), [enriqueix](enrichment-hub.md) i [exporta](export-destinations.md) dades. Tots aquests passos poden executar-se individualment o orquestrats amb els següents processos.
 
 #### <a name="operation-types"></a>Tipus d'operació
 
@@ -215,7 +215,7 @@ El flux de treball conté diversos passos. [Ingereix les fonts](data-sources.md)
 | `time`          | Data i hora | Necessari          | Marca horària de l'esdeveniment (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Necessari          | ResourceId de la instància que ha emès l'esdeveniment.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Necessari          | Nom de l'operació representada per aquest esdeveniment. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Vegeu [Tipus](#operation-types) d'operacions per a la referència. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Necessari          | Registra la categoria de l'esdeveniment. Sempre `Operational` per a esdeveniments del flux de treball                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Necessari          | Registra la categoria de l'esdeveniment. Sempre `Operational` per a esdeveniments del flux de treball                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Necessari          | Estat de l'esdeveniment. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | Opcional          | Durada de l'operació en mil·lisegons.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opcional          | Objecte JSON amb més propietats a la categoria particular d'esdeveniments.                                                                                        | Vegeu les propietats del flux de treball de la [subsecció](#workflow-properties-schema)                                                                                                       |

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642304"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757374"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar la llista de segments i altres dades a l'Emmagatzematge blob de l'Azure (versió preliminar)
 
@@ -44,7 +44,7 @@ Emmagatzemeu les dades del Customer Insights a l'Emmagatzematge blob de l'Azure 
 Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Si heu activat la configuració d'eliminació provisional del compte de l'Emmagatzematge de l'Azure BLOB, les exportacions fallaran. Desactiveu l'eliminació provisional per exportar dades a blobs. Per obtenir més informació, vegeu [Habilitar l'eliminació provisional del blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Si heu activat la configuració d'eliminació provisional del compte de l'Emmagatzematge de l'Azure BLOB, les exportacions fallaran. Desactiveu l'eliminació provisional per exportar dades a blobs. Per obtenir més informació, vegeu [Habilitar l'eliminació provisional del blob](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Vés a **Dades** > **Exportacions**.
 

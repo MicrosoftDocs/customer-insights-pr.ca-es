@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642358"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740707"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa les teves dades parcials amb prediccions (obsoletes)
 
@@ -37,13 +37,13 @@ Per tal que la vostra organització pugui utilitzar la característica de predic
 
 1. La vostra organització té una instància [configurada al Microsoft Dataverse](/ai-builder/build-model#prerequisites) i és a la mateixa organització que el Customer Insights.
 
-2. L'entorn de conclusions sobre el públic s'adjunta a la vostra instància del Dataverse.
+2. El vostre entorn del Customer Insights està lligat a la vostra instància del Dataverse.
 
 Per obtenir més informació, vegeu [Crear un entorn nou](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Crear una predicció a l'entitat Client
 
-1. Aneu a **DataEntities** > **·**.
+1. Aneu a **Entitats de dades** > **·**.
 
 2. Seleccioneu l'entitat **Client**.
 
@@ -91,7 +91,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 ## <a name="view-a-prediction"></a>Visualitzar una predicció
 
-1. Aneu a **IntelligencePredictionsMy** > **·** > **prediccions**.
+1. Anar a **prediccions** > **d'intel·ligència** > **Les meves prediccions**.
 
 2. Seleccioneu la predicció que voleu revisar.
 
@@ -108,7 +108,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 ## <a name="update-a-prediction"></a>Actualitzar una predicció
 
-1. Aneu a **IntelligencePredictionsMy** > **·** > **prediccions**.
+1. Anar a **prediccions** > **d'intel·ligència** > **Les meves prediccions**.
 
 2. Seleccioneu la predicció que voleu actualitzar i seleccioneu la icona **Actualitza**.
 
@@ -118,7 +118,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 Després de crear un predicció, podeu personalitzar el model al AI Builder per augmentar l'eficàcia del vostre model.  
 
-1. Aneu a **IntelligencePredictionsMy** > **·** > **prediccions**.
+1. Anar a **prediccions** > **d'intel·ligència** > **Les meves prediccions**.
 
 2. Seleccioneu la predicció que voleu editar.
 
@@ -135,7 +135,7 @@ A la següent execució de la vostra predicció s'utilitzarà el model actualitz
 
 ## <a name="remove-a-prediction"></a>Suprimir una predicció
 
-1. Aneu a **IntelligencePredictionsMy** > **·** > **prediccions**.
+1. Anar a **prediccions** > **d'intel·ligència** > **Les meves prediccions**.
 
 2. Seleccioneu la predicció que voleu suprimir.
 

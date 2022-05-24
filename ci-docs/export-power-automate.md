@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642383"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741167"
 ---
 # <a name="power-automate-connector-preview"></a>Connector del Power Automate (visualització prèvia)
 
@@ -25,14 +25,14 @@ Dispareu esdeveniments específics perquè s'activin automàticament quan canvi�
 
 ## <a name="power-automate-triggers"></a>Disparadors del Power Automate
 
-Utilitzeu disparadors per crear fluxos de núvol i automatitzar tasques repetitives, com ara notificacions o accions més avançades. 
+Utilitzeu disparadors per crear fluxos de núvol i automatitzar tasques repetitives, com ara notificacions o accions més avançades.
 
-- Disparador per quan no es pot actualitzar la font de dades. 
+- Disparador per quan no es pot actualitzar la font de dades.
 - Disparador per quan la font de dades s'actualitza correctament.
 - Disparador per quan se supera un llindar en un segment. El disparador es limita a haver superat el llindar.
 - Disparador per quan se supera un llindar en una mesura empresarial. Només són compatibles les mesures empresarials sense cap dimensió. El disparador es limita a haver superat el llindar.
 - Disparador per quan hagi finalitzat una actualització completa de (fonts de dades, segments, mesures, etc.).
-- Es dispara quan s'ha completat una actualització del procés d'unificació (assignació, coincidència i combinació).
+- Dispara quan es completa una actualització del procés d'unificació.
 
 [Configureu els disparadors al Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

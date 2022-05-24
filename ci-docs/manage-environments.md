@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642359"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741029"
 ---
 # <a name="manage-environments"></a>Gestionar entorns
 
@@ -113,7 +113,7 @@ En connectar-se a un Dataverse entorn, el missatge **d'error Aquesta organitzaci
 O 
 
 1. Obre el teu Dataverse entorn.
-1. Aneu a **Configuració** > **avançadaSolutions**.
+1. Aneu a **Solucions** > **avançades** de configuració.
 1. Desinstal·leu la **solució CustomerInsightsCustomerCard**.
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configuració de l'entorn
@@ -127,7 +127,7 @@ Veureu una llista de tots els entorns disponibles a l'organització des d'on pod
 Es copia la configuració següent:
 
 - Fonts de dades ingerides/importades
-- Configuració d'unificació de dades (assignar, coincidir, combinar)
+- Configuració de la unificació de dades
 - Segments
 - Mesures
 - Relacions
@@ -158,7 +158,7 @@ Després d'actualitzar les fonts de dades, aneu a **Dades** > **Unifica**. Aquí
 
 Quan la unificació de dades hagi finalitzat, aneu a **Mesures** i **Segments** per actualitzar-los també.
 
-Abans de reactivar les exportacions i els enriquiments, aneu a **AdminConnections** > **per** reautaticar les connexions al vostre nou entorn.
+Abans de reactivar les exportacions i els enriquiments, aneu a **Connexions** > **d'administració** per tornar a autenticar les connexions del vostre entorn nou.
 
 ## <a name="change-the-owner-of-an-environment"></a>Canviar el propietari d'un entorn
 

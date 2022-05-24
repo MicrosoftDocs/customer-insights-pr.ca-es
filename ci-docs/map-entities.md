@@ -1,110 +1,83 @@
 ---
-title: Assignar entitats i atributs per a la unificació de dades
-description: Seleccioneu les entitats, els atributs, les claus principals i els tipus semàntics per assignar les dades al perfil de client unificat.
-ms.date: 10/18/2020
+title: Seleccioneu els camps d'origen per a la unificació de dades
+description: El primer pas del procés d'unificació és seleccionar entitats, atributs, claus primàries i tipus semàntics per assignar dades al perfil de client unificat.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642233"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740983"
 ---
-# <a name="map-entities-and-attributes"></a>Assignar entitats i atributs
+# <a name="select-source-fields-for-data-unification"></a>Seleccioneu els camps d'origen per a la unificació de dades
 
-**El mapa** és la primera fase del procés d'unificació de dades. L'assignació consta de tres fases:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Selecció d'entitats*: identifiqueu les entitats combinables que condueixen a un conjunt de dades amb informació més completa sobre els clients.
-- *Selecció d'atributs*: per a cada entitat, identifiqueu les columnes que voleu combinar i conciliar en les fases de *concordança* i *combinació*. Aquestes columnes s'anomenen *Atributs*.
-- *Selecció de clau principal i tipus semàntic*: per a cada entitat, identifiqueu un atribut que vulgueu definir com a clau principal per a l'entitat i per a cada atribut, identifiqueu un tipus semàntic que descrigui millor l'atribut.
+El primer pas de la unificació és seleccionar les entitats i els camps dels conjunts de dades que voleu unificar. Seleccioneu entitats que continguin detalls relacionats amb el client, com ara el nom, l'adreça, el número de telèfon i el correu electrònic. Podeu seleccionar una o més entitats.
 
-Per obtenir més informació sobre el flux general d'unificació de dades, vegeu [Unificar](data-unification.md).
+## <a name="select-entities-and-fields"></a>Seleccioneu les entitats i els camps
 
-## <a name="select-the-first-entities"></a>Seleccionar les primeres entitats
+1. Aneu a Unificació de **dades** > **·**.
 
-1. Aneu a **Dades** > **Unifica** > **Assigna**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Captura de pantalla de la pàgina de destinació Unify per a l'experiència de la primera execució amb Comença a ressaltat.":::
 
-2. Per iniciar la fase d'assignació, seleccioneu **Selecciona entitats**.
+1. Seleccioneu **Introducció**.
 
-3. Seleccioneu les entitats i els atributs que voleu utilitzar a les fases de *coincidència* i *combinació*. Podeu seleccionar els atributs necessaris individualment d'una entitat o incloure tots els atributs d'una entitat seleccionant la casella de selecció **Inclou tots els camps** del nivell d'entitat. Es recomana seleccionar com a mínim dues entitats per beneficiar-se del procés d'unificació de dades.
+1. A la **pàgina Camps d'origen**, seleccioneu **Selecciona entitats i camps**. Es **visualitza la subfinestra Selecciona les entitats i els camps**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Exemple d'addició d'entitats.](media/data-manager-configure-map-add-entities-example.png "Exemple d'addició d'entitats")
+1. Seleccioneu com a mínim una entitat.
 
-   En aquest exemple, estem afegint les entitats **eCommerceContacts** i **loyCustomers**. En triar aquestes entitats, podeu derivar informació sobre els client de quina empresa en línia són membres del programa de fidelització.
-   
-   Podeu fer cerques per paraules clau a tots els atributs i les entitats per seleccionar els atributs necessaris que voleu assignar.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Exemple de camps de cerca.](media/data-manager-configure-map-search-fields-example.png "Exemple de camps de cerca")
+1. Per a cada entitat seleccionada, identifiqueu els camps que voleu utilitzar perquè coincideixin amb els registres de clients i els camps que voleu incloure al perfil unificat. Aquests camps s'anomenen *atributs*. Podeu seleccionar els atributs necessaris individualment des d'una entitat o incloure tots els atributs d'una entitat marcant la casella de selecció al nivell d'entitat. Podeu fer cerques per paraules clau a tots els atributs i les entitats per seleccionar els atributs necessaris que voleu assignar.
 
-4. Seleccioneu **Aplica** per confirmar les seleccions.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Captura de pantalla de les entitats i atributs seleccionats.":::
+
+   En aquest exemple, afegim les **entitats Contactes** i **CustomerLoyalty**. En triar aquestes entitats, podeu derivar informació sobre els client de quina empresa en línia són membres del programa de fidelització.
+
+1. Seleccioneu **Aplica** per confirmar les seleccions. Es visualitzen les entitats i atributs seleccionats.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Seleccioneu la clau principal i el tipus semàntic per als atributs
 
-Després de seleccionar les entitats, la pàgina **Assignació** enumera les entitats seleccionades per a la revisió. Definiu la clau principal per a una entitat i identifiqueu el tipus semàntic per a un atribut a l'entitat.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Captura de pantalla d'entitats seleccionades amb clau principal no seleccionada." lightbox="media/m3_select_primary.png":::
 
-- **Clau principal**: seleccioneu un atribut com a clau principal per a cadascuna de les entitats. Per tal que un atribut sigui una clau principal vàlida, no hauria d'incloure valors duplicats, valors que faltin o valors nuls. Els atributs del tipus de dades de cadena, enter i GUID s'admeten com a claus principals i es mostraran en un camp perquè els seleccioneu.
+Per a cada entitat, realitzeu els passos següents.
 
-- **Tipus semàntic d'atribut**: categories dels atributs, com ara l'adreça electrònica o el nom. Per utilitzar models d'IA per a la predicció intel·ligent de la semàntica, estalviar temps i millorar la precisió, establiu **Assignació intel·ligent** a **Activada**. L'assignació intel·ligent destaca la recomanació semàntica basada en IA en el camp **Tipus**. Si la establiu a **Desactivada**, veureu les nostres recomanacions normals d'assignació. Podeu seleccionar qualsevol tipus semàntic de la llista d'opcions disponibles i substituir la selecció suggerida.
+1. Trieu la **clau principal**. La clau principal és un atribut únic a l'entitat. Per tal que un atribut sigui una clau principal vàlida, no hauria d'incloure valors duplicats, valors que faltin o valors nuls. Els atributs de tipus de dades string, integer i GUID són compatibles com a claus principals.
 
-> [!div class="mx-imgBorder"]
-> ![Tipus d'atribut i predicció semàntica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipus d'atribut i predicció semàntica")
+1. Per utilitzar models d'intel·ligència IA per a predicció intel·ligents de semàntica, estalvieu temps i milloreu la precisió, assegureu-vos que **el mapatge** intel·ligent estigui encesos. L'assignació intel·ligent destaca la recomanació semàntica basada en IA en el camp **Tipus**. Podeu substituir la selecció suggerida escollint qualsevol tipus semàntic de la llista d'opcions disponibles.
 
-L'addició d'un tipus semàntic d'entitat personalitzat també és possible. Seleccioneu el camp de tipus per a un atribut i escriviu el nom del tipus semàntic de l'atribut personalitzat. D'aquesta manera, també podeu canviar els tipus d'atribut que s'han identificat pel sistema.
+1. Per a cada atribut, trieu un tipus **semàntic** que descrigui millor aquest atribut, com ara el nom, la ciutat o l'adreça electrònica.
 
-Tots els atributs per als quals s'identifica automàticament un tipus semàntic es classifiquen a la secció **Revisió dels camps assignats**. Reviseu aquests atributs i els seus tipus semàntics perquè s'utilitzaran per combinar les entitats al pas de combinació d'unificació de dades.
+   > [!NOTE]
+   > Un camp s'ha d'assignar al tipus *semàntic Person.FullName* per emplenar el nom del client a la targeta de client. Altrament, les targetes del client apareixeran sense nom.
 
-Els atributs que no estan assignats automàticament a un tipus semàntic s'agrupen a la secció **Definiu les dades als camps no assignats**. Seleccioneu el camp tipus semàntic per als atributs no assignats o introduïu el nom del tipus d'atribut personalitzat.
+   1. Per canviar un tipus d'atribut identificat pel sistema, seleccioneu un altre tipus. Si el tipus no existeix, creeu un tipus semàntic personalitzat seleccionant el **camp Tipus** per a l'atribut i introduint el nom del tipus semàntic personalitzat.
 
-> [!div class="mx-imgBorder"]
-> ![Clau principal i tipus d'atribut.](media/data-manager-configure-map-add-attributes.png "Clau principal i tipus d'atribut")
+   1. Per afegir un atribut que contingui un URL a imatges o logotips de perfil disponibles públicament, seleccioneu l'entitat i el camp que conté l'adreça URL. **Al camp Tipus**, introduïu el següent:
+      - Per a una persona: Person.ProfileImage
+      - Per a una organització: Organization.LogoImage
 
-> [!NOTE]
-> Un camp hauria d'assignar-se a l'usuari de tipus semàntic Person.FullName per emplenar el nom del client a la targeta del client. Altrament, les targetes del client apareixeran sense nom. 
+   1. Per obtenir un atribut de nom de compte, introduïu "Organization.Name" al **camp Tipus**.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Afegir i suprimir atributs i entitats
+1. Reviseu els atributs on s'identifica automàticament un tipus semàntic. Aquests atributs es mostren a **Revisa els camps** assignats. Només es poden combinar atributs amb el mateix tipus al pas Unificat de **camps** de client. Els tipus semàntics s'utilitzen per suggerir automàticament estadístiques. Assegureu-vos que els tipus que heu triat siguin coherents en totes les entitats seleccionades.
 
-1. A **Unifica** > **Assigna**, seleccioneu **Edita els camps**.
+1. Per als atributs que no s'assignen automàticament a un tipus semàntic, seleccioneu un camp de tipus semàntic, introduïu el nom personalitzat del tipus d'atribut o deixeu-los sense assignar. Aquests atributs es mostren a **Defineix les dades dels camps** no assignats.
 
-2. A la subfinestra **Edita els camps**, afegiu o suprimiu els atributs i les entitats. Utilitzeu la cerca o desplaçament per cercar i seleccionar els atributs i les entitats d'interès. No podeu suprimir un atribut ni una entitat si ja s'han assignat.
+1. Després de completar els passos de cada entitat, seleccioneu **Desa els camps** d'origen.
 
-   > [!div class="mx-imgBorder"]
-   > ![Afegir o suprimir atributs.](media/configure-data-map-edit.png "Afegir o suprimir atributs")
+1. Seleccioneu **Següent**.
 
-3. Seleccioneu **Aplica**.
-
-## <a name="add-images-to-profiles"></a>Afegir imatges als perfils
-
-Si una entitat conté URL d'imatges de perfil o logotips disponibles públicament, podeu afegir-los al perfil del client unificat.
-
-Seleccioneu l'entitat i cerqueu el camp que conté l'adreça URL a la imatge de perfil. Al camp d'entrada **Tipus** introduïu manualment el valor següent: 
-- Per a una persona: Person.ProfileImage
-- Per a una organització: Organization.LogoImage
-
-Continueu amb els passos d'unificació i assegureu-vos que l'atribut que conté l'adreça URL de la imatge també s'afegeixi al pas [Combinació](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Definir els atributs per a organitzacions
-
-Per a les organitzacions (versió preliminar), cal que el tipus d'atribut s'assigni a "Organization.Name"
-> [!div class="mx-imgBorder"]
-> ![Clau principal i tipus d'atribut d'empresa a empresa.](media/configure-data-map-edit-b2b.png "Clau principal i tipus d'atribut d'empresa a empresa")
-
-## <a name="next-step"></a>Pas següent
-
-Com a part del procés d'unificació de dades, aneu a la pàgina **Coincidència**. Visiteu [**Coincidència**](match-entities.md) per obtenir més informació sobre aquesta fase.
-
-> [!TIP]
-> Consulteu el vídeo següent: [Introducció: crear un perfil de client unificat](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Pas següent: Suprimeix els duplicats](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

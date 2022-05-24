@@ -1,7 +1,7 @@
 ---
 title: Pàgina d'inici a Customer Insights
 description: Comenceu a explorar l'aplicació a la pàgina inicial.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642377"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743401"
 ---
 # <a name="explore-customer-insights"></a>Explora les estadístiques del client
 
-Podeu fer-ho [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) a la següent URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Podeu accedir a [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) la següent URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-A la pàgina **Inici** es mostra una descripció general dels segments, les mesures i les dades d'enriquiment (si es configuren) després de completar les fases d'[assignació](map-entities.md), [coincidència](match-entities.md) i [combinació](merge-entities.md).
+La **pàgina d'inici** mostra les guies a través del procés de configuració de les funcions clau i proporciona una visió general dels segments, mesures i dades d'enriquiment.
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de pantalla de la pantalla d'Inici que mostra informació de mostra.":::
 
-Controls clau a Customer Insights:
+## <a name="left-side-pane"></a>Subfinestra lateral esquerra
 
-- Subfinestra esquerra: canvieu entre el públic objectiu principal si teniu un entorn B2C i B2B
+Utilitzeu la subfinestra esquerra per navegar entre diferents àrees del Customer Insights. 
 
-- Subfinestra esquerra: navegueu entre diferents àrees i trieu el públic objectiu principal
+Si treballes amb comptes d'empresa i amb consumidors concrets, pots seleccionar el públic principal per definir el focus en conseqüència. 
 
-- Capçalera: canvia l'entorn en què treballes i administra els entorns com a administrador
+## <a name="application-header"></a>Capçalera de l'aplicació
 
-- Capçalera: especifiqueu la configuració personal de les estadístiques del client i obteniu opcions d'ajuda
+El **selectiu d'entorn** mostra l'entorn en què treballeu i us permet crear o administrar entorns com a administrador.
 
-Ara podeu veure les seccions següents a la pàgina inicial:
+La icona de la cara somrient és el **control Feedback**. Seleccioneu-lo per explicar-nos la vostra experiència amb customer insights. Estem escoltant activament els vostres comentaris i us agraïm per endavant per fer-nos saber què us agrada i com podem millorar.
 
-- Als **segments recents** es mostren grups de clients basats en atributs demogràfics, de comportament o transaccionals que heu definit. La [creació de segments](segments.md) us ajuda a agrupar la base de clients i a adreçar-vos millor a les vostres activitats empresarials.
+El **control Configuració**, representat per una icona d'engranatge, us permet recopilar detalls de la sessió per al Customer Insights i configurar la configuració global del vostre Microsoft 365 perfil. 
 
-- **Les mesures** empresarials recents mostren peces amb [indicadors clau de rendiment (KPI)](measures.md) que heu definit. Per exemple, la probabilitat mitjana d'un client de cancel·lar o la despesa en línia mitjana per client.
+**Les opcions d'ajuda**, visualitzades amb una icona de signe d'interrogació, proporcionen enllaços d'ajuda contextuals i altres recursos útils.
 
-- Als **enriquiments recents** es recullen els resultats de les execucions d'enriquiment que s'han completat recentment. Els [enriquiments](enrichment-hub.md) afegeixen informació sobre la base de clients. Per exemple, podeu entendre els interessos i les marques amb les quals tenen afinitat.
+La teva foto de perfil obre el **gestor** de comptes del teu Microsoft 365 perfil. Seleccioneu **El meu compte** per gestionar la configuració personal.
+
+## <a name="getting-started-with-customer-insights-section"></a>Com començar a la secció Customer Insights
+
+Aquesta secció conté targetes que us ajuden a caminar pel procés de configuració de l'entorn del Customer Insights. 
+
+1. La **targeta Afegeix dades** us ajuda amb la importació de dades. Customer Insights admet diverses [opcions per aportar dades sobre els vostres clients](data-sources.md). Seleccioneu **Afegeix orígens** de dades per començar.
+1. Un cop finalitzada la importació inicial de dades, podeu utilitzar la **targeta de dades** Unify per harmonitzar les dades i [crear perfils](data-unification.md) de clients unificats a partir de fonts dispars. 
+1. Amb els perfils de clients unificats, és hora de revisar les **opcions d'Anàlisi de dades** i obtenir estadístiques addicionals. Intenteu crear [mesures](measures.md) de negoci per fer un seguiment dels KPI, [definir segments per arribar a públics específics](segments.md) o [configurar prediccions](predictions-overview.md) amb l'ajuda de la IA.
+1. Ara que les vostres dades de clients s'importen, unifiquen i s'estructuren perfectament, utilitzeu les nostres [diverses](export-destinations.md) destinacions d'exportació per prendre mesures sobre les dades. Seleccioneu **Afegeix connexions** per connectar els vostres serveis preferits. Per exemple, exporteu les dades al Dynamics 365 Marketing per crear campanyes de màrqueting sortint o crear recorreguts del client. 
+
+## <a name="your-customer-insights-section"></a>La secció d'estadístiques dels clients
+
+- **Els segments** mostren grups de clients en funció dels atributs demogràfics, de comportament o transaccionals que hàgiu definit. La [creació de segments](segments.md) us ajuda a agrupar la base de clients i a adreçar-vos millor a les vostres activitats empresarials.
+
+- **Les mesures** empresarials mostren les fitxes amb [indicadors clau de rendiment (KPI)](measures.md) que heu definit. Per exemple, la probabilitat mitjana d'un client de cancel·lar o la despesa en línia mitjana per client.
+
+- **Enriquiments llista els resultats** de les carreres d'enriquiment que s'han completat recentment. Els [enriquiments](enrichment-hub.md) afegeixen informació sobre la base de clients. Per exemple, podeu entendre els interessos i les marques amb les quals tenen afinitat.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

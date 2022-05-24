@@ -1,38 +1,46 @@
 ---
 title: Crear una visualització unificada dels clients
-description: Seguiu el procés d'unificació de dades amb les dades per crear un únic conjunt de dades mestres de perfils de client.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+description: Feu el procés d'unificació de dades amb les vostres dades per crear un únic conjunt de dades de perfils de clients unificats.
+ms.date: 05/10/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
+author: v-wendysmith
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: eb5bbc538f93bc7097581db233d684870ade84a2
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642205"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755722"
 ---
 # <a name="data-unification-overview"></a>Informació general sobre la unificació de dades
 
-Un cop [configurades les fonts de dades](data-sources.md), podeu unificar les dades. La unificació de dades inclou tres passos: **Assignació**, **Coincidència** i **Combinació**.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-El procés d'unificació de dades us permet unificar fonts de dades dispars en un únic conjunt de dades mestre que proporciona una visualització unificada dels vostres clients. Les fases d'unificació són obligatòries i es realitzen en l'ordre següent:
+Un cop [configurades les fonts de dades](data-sources.md), podeu unificar les dades. La unificació de dades us permet unificar fonts de dades una vegada dispars en un únic conjunt de dades mestre que proporciona una visualització unificada d'aquestes dades. Per als consumidors individuals (B-to-C) on les dades se centren en individus, la unificació proporciona una visió unificada dels vostres clients. En el cas dels comptes d'empresa (B a B) en què les dades se centren en els comptes, la unificació proporciona una visualització unificada dels comptes.
 
-1. [Assigna](map-entities.md)
-2. [Match](match-entities.md)
-3. [Combina](merge-entities.md)
+Les dades es poden unificar en una sola entitat o en diverses entitats. La unificació es realitza en el següent ordre:
 
-Després de completar la unificació de dades, podeu, opcionalment,
+1. [Camps](map-entities.md) d'origen (anteriorment anomenat Mapa): al pas de camps d'origen, seleccioneu entitats i camps que voleu incloure al procés d'unificació. Assigna camps a un tipus semàntic comú que descrigui el propòsit del camp.
 
-- [configurar relacions entre entitats](relationships.md) per crear segments sofisticats
-- [enriquir les dades](enrichment-hub.md) per tal d'obtenir un ampli ventall d'informació sobre els vostres clients
-- [definir activitats](activities.md) d'alguns dels atributs ingerits
+1. [Registres duplicats](remove-duplicates.md) (anteriorment part de Match): al pas de registres duplicats, opcionalment definiu regles per suprimir registres de client duplicats de cada entitat.
 
+1. [Condicions](match-entities.md) de coincidència (anteriorment anomenades Coincidència): al pas de condicions coincidents, definiu regles que coincideixin amb els registres de clients entre entitats. Quan es troba un client en dues o més entitats, es crea un únic registre consolidat amb totes les columnes i dades de cada entitat.
+
+1. [Camps](merge-entities.md) de client unificats (anteriorment anomenats Merge): al pas de camps de client unificats, determineu quins camps d'origen s'han d'incloure, excloure o combinar en un perfil de client unificat.  
+
+1. [Revisa](review-unification.md) i crea el perfil unificat.
+
+Després de completar la unificació de dades, opcionalment podeu:
+
+- [Configureu relacions entre entitats](relationships.md) per crear segments sofisticats.
+- [Enriquiu les vostres dades](enrichment-hub.md) per obtenir una gamma més àmplia d'estadístiques sobre els vostres clients.
+- [Definir activitats](activities.md) a partir d'alguns dels atributs ingerits.
+- [Construir mesures](measures.md) per comprendre millor el comportament dels clients i el rendiment del negoci.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

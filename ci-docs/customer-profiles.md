@@ -1,7 +1,7 @@
 ---
 title: Veure perfils de client
 description: Obtingueu una visualització combinada de les dades unificades del client.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642212"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755769"
 ---
 # <a name="customer-profiles"></a>Perfils de client
 
@@ -29,7 +29,7 @@ Els clients poden ser persones o organitzacions. Cada perfil de client està rep
 
 Seleccioneu una peça per veure les dades del client seleccionat en una pàgina dedicada anomenada [Pàgina de detalls del client](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Pàgina Clients que mostra les peces de resultats](media/customers-page-result-tiles-B2C.png "Pàgina Clients que mostra les peces de resultats")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Seleccioneu una peça per veure les dades del client seleccionat en una pàgina 
 
 ## <a name="search-for-customers"></a>Cercar clients
 
-Cerqueu clients introduint un nom o algun altre atribut al quadre de cerca. La cerca només funciona dins de l'entitat _Client_ creada durant el procés d'unificació de dades.
+Cerqueu clients introduint un nom o algun altre atribut al quadre de cerca. La cerca només funciona dins de l'entitat *Client* creada durant el procés d'unificació de dades.
 
 Com a administrador, podeu configurar els atributs que es poden cercar amb la pàgina **Índex de cerca i filtre**. Per obtenir més informació, aneu a [Administrar l'índex de cerca i filtre](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtra els clients
 
-Podeu filtrar els clients pels camps de l'entitat _Client_. De forma similar a la cerca, l'administrador primer haurà de definir els camps com a filtrables mitjançant la pàgina **Índex de cerca i filtre**.
+Podeu filtrar els clients pels camps de l'entitat *Client*. De forma similar a la cerca, l'administrador primer haurà de definir els camps com a filtrables mitjançant la pàgina **Índex de cerca i filtre**.
 
 1. Seleccioneu **Mostra els filtres** a la pàgina **Clients**.
 
@@ -55,24 +55,25 @@ Podeu filtrar els clients pels camps de l'entitat _Client_. De forma similar a l
 
 Seleccioneu qualsevol de les peces del client per obrir la **pàgina Detalls del client**. Aquesta visualització conté informació unificada del client seleccionat. Els detalls del client inclouen el contingut següent:
 
-**Peça del perfil del client**: aquesta peça mostra els diferents valors de l'entitat _Client_ unificada. Si un camp no té cap valor per al perfil de client seleccionat, no es mostrarà. La peça està estructurada en seccions:  
-  - A la primera secció es mostra un conjunt predefinit de camps seguit de tots els camps que formen part de l'índex de cerca i filtre. Tots els camps relacionats amb adreces es combinen en una única línia si el perfil conté aquests camps. 
-  - **Contactes d'aquest client**: als entorns dels comptes empresarials, veureu tots els contactes relacionats d'aquest client com la segona secció. Cada contacte es mostra amb els seus camps. Els camps buits estan amagats.
-  - **Camps addicionals**: mostra la resta de camps del client seleccionat, tret dels identificadors. 
-  - **ID**: mostra tots els ID sota el nom de l'entitat corresponent. Els camps s'identifiquen com a ID per la seva semàntica, la qual cosa els classifica per categories com a tals.
+**Peça del perfil del client**: aquesta peça mostra els diferents valors de l'entitat *Client* unificada. Si un camp no té cap valor per al perfil de client seleccionat, no es mostrarà. La peça està estructurada en seccions:
+
+- A la primera secció es mostra un conjunt predefinit de camps seguit de tots els camps que formen part de l'índex de cerca i filtre. Tots els camps relacionats amb adreces es combinen en una única línia si el perfil conté aquests camps.
+- **Contactes d'aquest client**: als entorns dels comptes empresarials, veureu tots els contactes relacionats d'aquest client com la segona secció. Cada contacte es mostra amb els seus camps. Els camps buits estan amagats.
+- **Camps addicionals**: mostra la resta de camps del client seleccionat, tret dels identificadors.
+- **ID**: mostra tots els ID sota el nom de l'entitat corresponent. Els camps s'identifiquen com a ID per la seva semàntica, la qual cosa els classifica per categories com a tals.
 
 **Cronologia d'activitat**: mostra dades si heu configurat activitats. La visualització de cronologia conté activitats ordenades cronològicament del client seleccionat, començant per l'activitat més recent. Per obtenir més informació, aneu a [Activitats del client](activities.md).
 
-**Conclusions**:  
-  - **Mesures**: mostra si heu configurat una o més mesures d'atributs del client. Inclouen KPI calculats sobre els vostres clients per a cada client individual. Per obtenir més informació, aneu a [Definir i administrar mesures](measures.md).
+**Conclusions**:
 
-  - **Interessos potencials, marques potencials**: mostra si heu configurat un enriquiment d'afinitat de marca o interès. Representa els interessos i les afinitats potencials de les marques en funció d'altres clients el perfil dels quals sigui similar al perfil de client seleccionat. Per obtenir més informació, aneu a [Enriquir els perfils de clients amb afinitats de marca i d'interès](enrichment-microsoft.md).
+- **Mesures**: mostra si heu configurat una o més mesures d'atributs del client. Inclouen KPI calculats sobre els vostres clients per a cada client individual. Per obtenir més informació, aneu a [Definir i administrar mesures](measures.md).
+
+- **Interessos potencials, marques potencials**: mostra si heu configurat un enriquiment d'afinitat de marca o interès. Representa els interessos i les afinitats potencials de les marques en funció d'altres clients el perfil dels quals sigui similar al perfil de client seleccionat. Per obtenir més informació, aneu a [Enriquir els perfils de clients amb afinitats de marca i d'interès](enrichment-microsoft.md).
 
 Per tornar a la pàgina de cerca de clients, seleccioneu **Torna als clients**.
 
 ## <a name="next-steps"></a>Passos següents
 
 [Afegiu més fonts de dades](data-sources.md), [enriquiu els perfils unificats](enrichment-hub.md) o [creeu segments](segments.md) per treballar amb perfils de client unificats en altres aplicacions.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

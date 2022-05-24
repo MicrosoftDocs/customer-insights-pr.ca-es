@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642216"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755624"
 ---
 # <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
-
-
 
 Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Amb el complement de targeta de client instal·lat a l'aplicació del Dynamics 365 admesa, podeu triar si voleu que es visualitzin els camps, les conclusions i la cronologia d'activitat del perfil del client. El complement recuperarà les dades del Customer Insights sense que afectin les dades de l'aplicació del Dynamics 365 connectada.
 
@@ -31,7 +29,7 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 ## <a name="prerequisites"></a>Requisits previs
 
 - El complement només funciona amb les aplicacions controlades per models del Dynamics 365, com ara Vendes o Servei d'atenció al client, versió 9.0 i posteriors.
-- Perquè les dades del Dynamics 365 s'assignin als perfils de clients del Customer Insights, us recomanem que s'ingereixin [des de l'aplicació Dynamics 365 mitjançant el Microsoft Dataverse connector](connect-power-query.md). Si utilitzeu un mètode diferent per ingerir contactes (o comptes del Dynamics 365), heu d'assegurar-vos que el `contactid` camp (o`accountid`) estigui definit com a [clau principal per a aquesta font de dades al pas d'assignació del procés d'unificació de dades](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Perquè les dades del Dynamics 365 s'assignin als perfils de clients del Customer Insights, us recomanem que s'ingereixin [des de l'aplicació Dynamics 365 mitjançant el Microsoft Dataverse connector](connect-power-query.md). Si utilitzeu un mètode diferent per ingerir contactes (o comptes del Dynamics 365), heu d'assegurar-vos que el `contactid` camp (o`accountid`) estigui definit com a [clau principal per a aquesta font de dades al pas d'assignació del procés d'unificació de dades](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tots els usuaris del Dynamics 365 del complement de la targeta de client s'han [d'afegir com a usuaris](permissions.md) del Customer Insights per veure les dades.
 - [Les capacitats](search-filter-index.md) de cerca i de filtratge configurades a Customer Insights són necessàries perquè funcioni la cerca de dades.
 - Cada control de complement es basa en dades específiques del Customer Insights. Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ Fins i tot amb camps d'identificador configurats correctament, els controls no p
 
 **Resolució:**
 
-1. Assegureu-vos que heu configurat el complement de targeta d'acord amb les instruccions: [Configureu el complement de la targeta de client](#configure-the-customer-card-add-in) 
+1. Assegureu-vos que heu configurat el complement de targeta d'acord amb les instruccions: [Configureu el complement de la targeta de client](#configure-the-customer-card-add-in)
 
-1. Reviseu la configuració d'ingestió de dades. Editeu el font de dades per al sistema del Dynamics 365 que conté el GUID de l'identificador de contacte. Si el GUID de l'identificador de contacte es mostra amb caràcters en majúscula a l'editor Power Query, proveu el següent: 
+1. Reviseu la configuració d'ingestió de dades. Editeu el font de dades per al sistema del Dynamics 365 que conté el GUID de l'identificador de contacte. Si el GUID de l'identificador de contacte es mostra amb caràcters en majúscula a l'editor Power Query, proveu els passos següents:
     1. Editeu el font de dades per obrir el font de dades a l'editor Power Query.
     1. Seleccioneu la columna de l'identificador de contacte.
     1. Seleccioneu **Transforma** a la barra de capçalera per veure les accions disponibles.
     1. Seleccioneu **en minúscula**. Valida si els GUID de la taula ara són minúscules.
     1. Deseu la font de dades.
-    1. Executeu processos d'ingestió, unificació i baixada de dades per propagar els canvis al GUID. 
+    1. Executeu processos d'ingestió, unificació i baixada de dades per propagar els canvis al GUID.
 
-Després de completar l'actualització completa, els controls de complement de la targeta de client han de mostrar les dades esperades. 
+Després que el sistema hagi completat l'actualització completa, els controls de complement de la targeta de client haurien de mostrar les dades esperades.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
