@@ -1,7 +1,7 @@
 ---
 title: Segments a Customer Insights
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 03/30/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 9791e971387eb7db91ed7c4e4fe76552656013ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642340"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800730"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -58,7 +58,7 @@ Les accions següents estan disponibles quan seleccioneu un segment:
 - **Visualitzar** els detalls del segment, incloent-hi la tendència de recompte de membres per obtenir la visualització prèvia dels membres del segment.
 - **Baixar** la llista de membres com a fitxer .CSV.
 - **Editar** el segment per canviar-ne les propietats.
-- **Crear un duplicat** d'un segment. Podeu editar-ne les propietats immediatament o simplement desar el duplicat.
+- **Crear un duplicat** d'un segment. Podeu triar editar-ne les propietats immediatament o desar el duplicat.
 - **Actualitzar** el segment per incloure-hi les dades més recents.
 - **Activar** o **desactivar** el segment. Per als segments inactius, la definició del segment existeix però encara no conté cap client. Un segment actiu cerca clients que coincideixin amb la definició del segment. Si es configura una [actualització planificada](system.md#schedule-tab), els segments inactius tenen l'**estat** **Omès**, indicant que ni tan sols s'ha intentat una actualització. Quan s'activi un segment inactiu, s'actualitzarà i s'inclourà en les actualitzacions programades.
   Alternativament, podeu utilitzar la funcionalitat **Planifica més tard** al desplegable **Activa o desactiva** per especificar una data i hora futura per a l'activació i la desactivació d'un segment concret.
@@ -75,7 +75,8 @@ Les accions següents estan disponibles quan seleccioneu un segment:
 ## <a name="refresh-segments"></a>Actualitzar els segments
 
 Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**. Quan es configura una actualització periòdica, s'apliquen les regles següents:
-- Tots els segments amb el tipus **Dinàmic** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Quan s'ha completat l'actualització, l'estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca horària de l'última actualització correcta. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
+
+- Tots els segments amb el tipus **Dinàmic** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Un cop completada l'actualització, l'estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca horària de l'última actualització correcta. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
 - Els segments amb el tipus **Estàtic** *no* s'actualitzaran automàticament. L'últim **refrescat** mostra una marca horària de l'última vegada que els segments estàtics s'han executat o s'actualitzen manualment.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -86,17 +87,37 @@ Podeu exportar un segment des de la pàgina de segments o des de la [pàgina d'e
 
 1. Aneu a la pàgina **Segments**.
 
-1. Seleccioneu **Mostra'n més [...]** al segment que voleu exportar.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) per al segment que voleu exportar.
 
 1. Seleccioneu **Administra les exportacions** a la llista desplegable d'accions.
 
 1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per si contenen el segment actual o no.
 
-   1. Per afegir el segment seleccionat a una exportació, **editeu** l'exportació respectiva per seleccionar el segment corresponent i deseu. En entorns de clients individuals, en lloc d'això podeu seleccionar l'exportació a la llista i seleccionar **Afegeix un segment** per obtenir el mateix resultat.
+   1. Per afegir el segment seleccionat a una exportació, **editeu** l'exportació respectiva per seleccionar el segment corresponent i deseu. En entorns per a clients individuals, podeu seleccionar l'exportació a la llista i seleccionar **Afegeix un segment** per aconseguir el mateix resultat.
 
    1. Per crear una exportació nova amb el segment seleccionat, seleccioneu **Afegeix l'exportació**. Per obtenir més informació sobre la creació d'exportacions, vegeu [Configurar una exportació nova](export-destinations.md#set-up-a-new-export).
 
 1. Seleccioneu **Enrere** per tornar a la pàgina principal per als segments.
+
+## <a name="track-usage-of-a-segment"></a>Seguiment de l'ús d'un segment
+
+Si utilitzeu segments a les aplicacions, que es basen en la mateixa Microsoft Dataverse organització connectada amb el Customer Insights, podeu fer un seguiment de l'ús d'un segment. Per als [segments del Customer Insights utilitzats en els recorreguts del client del Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), el sistema us informa sobre l'ús d'aquest segment.
+
+Quan editeu un segment que s'utilitza a l'entorn del Customer Insights o en un recorregut del client al Màrqueting, un bàner del creador [de](segment-builder.md) segments us informa sobre les dependències. Podeu inspeccionar els detalls de la dependència directament des del bàner o seleccionant **Ús** al creador de segments.
+
+La **subfinestra d'ús** segmenta mostra els detalls sobre l'ús d'aquest segment a Dataverse les aplicacions basades. Per als segments que s'utilitzen en els recorreguts del client, trobareu un enllaç per inspeccionar el recorregut al Màrqueting on s'utilitza aquest segment. Si teniu permisos per accedir a l'aplicació Màrqueting, podeu accedir-hi a més detalls.
+
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Subfinestra lateral amb detalls de l'ús del segment al creador de segments.":::
+
+El sistema us informa sobre l'ús d'un segment del seguiment quan intenteu suprimir-lo. Si el segment que esteu a punt de suprimir s'utilitza en un recorregut del client del Marketing, aquest recorregut s'aturarà per a tots els usuaris del segment. Si el recorregut forma part d'una campanya de màrqueting, la supressió afectarà la pròpia campanya. No obstant això, encara podeu suprimir el segment malgrat els advertiments.
+
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Quadre de diàleg per confirmar la supressió del segment quan s'utilitza un segment en una Dataverse aplicació.":::
+
+### <a name="supported-apps"></a>Aplicacions admeses
+
+Actualment es fa un seguiment de l'ús a les aplicacions basades en les aplicacions següents Dataverse:
+
+- [Recorreguts del client al Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Visualitzar l'historial de processament i els membres del segment
 
@@ -117,6 +138,5 @@ La part inferior conté una llista dels membres del segment.
 > Els camps que apareixen en aquesta llista es basen en els atributs de les entitats del vostre segment.
 >
 >La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, heu d'[exportar el segment](export-destinations.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

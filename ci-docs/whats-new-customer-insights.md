@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700925"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833618"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp proporciona resolució d'identitat i consolidació de dades de clients.
 Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organitzar segments i mesures amb etiquetes i filtres
+
 Si la vostra organització manté molts segments o mesures, trobar el correcte de vegades pot sentir-se desafiant. Aquesta nova característica us permet organitzar llistes mitjançant etiquetes i columnes. Ajuda a trobar dades de forma ràpida i senzilla i personalitzar les visualitzacions.
 
 Per obtenir més informació, vegeu [Treballar amb etiquetes i columnes](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Per obtenir més informació, vegeu [Treballar amb etiquetes i columnes](work-wi
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Activar l'ús compartit de dades amb Dataverse el vostre propi compte d'emmagatzematge
 
 Si el vostre entorn utilitza Azure Data Lake Storage per emmagatzemar dades del Customer Insights, l'ús compartit de dades amb Microsoft Dataverse necessita una configuració addicional.
-Anteriorment, només podeu habilitar l'ús compartit de dades quan Dataverse les vostres dades s'han emmagatzemat al nostre llac de dades administrades. 
+Anteriorment, només podeu habilitar l'ús compartit de dades quan Dataverse les vostres dades s'han emmagatzemat al nostre llac de dades administrades.
 
-Per obtenir més informació, vegeu [Habilitar l'ús compartit de dades des Dataverse de la vostra pròpia Azure Data Lake Storage (Visualització prèvia).](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)"
+Per obtenir més informació, vegeu [Habilitar l'ús compartit de dades des Dataverse de la vostra pròpia Azure Data Lake Storage (Visualització prèvia).](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)"
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Noves destinacions d'exportació: Iterable i Braze
 
@@ -81,7 +82,6 @@ El canvi d'API en els serveis connectats provoca que les actualitzacions dels co
 
 - Google Ads: la nova versió del connector d'exportació de Google Ads simplifica l'experiència d'autenticació i ara us permet crear públics nous de Google Ads automàticament. 
 - Marketo: La nova versió del connector d'exportació Marketo proporciona suport per a l'identificador de Marketo, cosa que us permet evitar duplicitats de dades, actualitzar registres existents i crear registres nous a Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Actualitzacions de febrer del 2022
 

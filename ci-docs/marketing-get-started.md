@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653779"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833296"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Treballar amb perfils de clients unificats al Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Si connecteu les dades del Customer Insights amb el Màrqueting, podeu fer el:
 - Base contingut dinàmic (com ara tokens personalitzats) en correus electrònics, SMS i notificacions automàtiques sobre mesures com l'estat de fidelització, la data de renovació de la subscripció, compte principal o qualsevol altra mesura que hàgiu capturat al perfil unificat de Customer Insights.
 - Carregueu les dades del Màrqueting al Customer Insights i combineu-les amb dades dels clients d'altres fonts.
 - Apliqueu eines de neteja, enriquiment i coincidència difusa del Customer Insights.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Utilitzar perfils de clients enriquits en màrqueting en temps real
 
@@ -41,4 +40,4 @@ Més informació: [utilitzeu segments del Dynamics 365 Customer Insights Dynamic
 
 No us limiteu a l'emmagatzematge en el núvol si voleu utilitzar les dades del Customer Insights amb el Màrqueting. Si ja teniu la vostra pròpia Azure Data Lake Storage configuració, podeu connectar-vos amb el Customer Insights i, a continuació, compartir les dades amb l'aplicació Màrqueting tal com ho faríeu amb una configuració basada en el núvol.
 
-Més informació: [activa l'ús compartit de dades amb Dataverse el teu Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Més informació: [activa l'ús compartit de dades amb Dataverse el teu Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

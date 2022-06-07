@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642389"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800547"
 ---
 # <a name="work-with-tags-and-columns"></a>Treballar amb etiquetes i columnes
 
@@ -37,7 +37,7 @@ Podeu veure, afegir i suprimir etiquetes d'un element. Afegeix etiquetes a mesur
 
 1. Seleccioneu l'element les etiquetes del qual voleu gestionar.
 
-1. Seleccioneu **Mostra'n més (...)** i seleccioneu **Etiqueta**.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) i seleccioneu **Etiqueta**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Segment seleccionat amb la llista desplegable d'opcions i opcions disponibles."lightbox="media/segments_list_tag.png":::
 

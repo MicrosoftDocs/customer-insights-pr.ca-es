@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653465"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763567"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Porteu el vostre propi magatzem de claus de l'Azure (versió preliminar)
 
@@ -31,17 +31,17 @@ Per configurar el dipòsit de claus al Customer Insights, s'han de complir els r
 
 - Heu de tenir una subscripció activa de l'Azure.
 
-- Teniu una funció d'administrador [a](permissions.md#admin) Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights](permissions.md#assign-roles-and-permissions) del client.
+- Teniu una funció d'administrador [a](permissions.md#admin) Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights del client](permissions.md#assign-roles-and-permissions).
 
 - Teniu les funcions [Col·laborador](/azure/role-based-access-control/built-in-roles#contributor) i [Administrador d'accés d'usuari](/azure/role-based-access-control/built-in-roles#user-access-administrator) al magatzem de claus o al grup de recursos al qual pertany el magatzem de claus. Per obtenir més informació, aneu a [Afegir o eliminar assignacions de funcions de l'Azure utilitzant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal). Si no teniu la funció Administrador d'accés d'usuari al magatzem de claus, heu de configurar els permisos de control d'accés basats en funcions per a l'entitat de servei de l'Azure per al Dynamics 365 Customer Insights per separat. Seguiu els passos per [utilitzar l'entitat de servei de l'Azure](connect-service-principal.md) per al magatzem de claus que s'ha d'enllaçar.
 
 - El magatzem de claus ha de tenir el tallafoc del Key Vault **inhabilitat**.
 
-- El dipòsit de claus es troba a la mateixa [ubicació](https://azure.microsoft.com/global-infrastructure/geographies/#overview) de l'Azure que l'entorn Customer Insights. La regió de l'entorn a Customer Insights es mostra a **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- El dipòsit de claus es troba a la mateixa [ubicació](https://azure.microsoft.com/global-infrastructure/geographies/#overview) de l'Azure que l'entorn Customer Insights. La regió de l'entorn de Customer Insights es mostra a Regió **Quant** > **a regió** > **del sistema** > **d'administració**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Enllaçar un magatzem de claus amb l'entorn
 
-1. Aneu a AdminSecurity i, a **continuació, seleccioneu la** > **pestanya Dipòsit de claus**.**·**
+1. Aneu a **Seguretat** > **de l'administrador** i, a continuació, seleccioneu la **pestanya Dipòsit de claus**.
 1. A la peça **Key Vault**, seleccioneu **Configuració**.
 1. Trieu una **Subscripció**.
 1. Trieu un magatzem de claus de la llista desplegable **Key Vault**. Si es mostren massa magatzems de claus, seleccioneu un grup de recursos per limitar els resultats de la cerca.
@@ -89,9 +89,9 @@ Els permisos següents es concedeixen al Customer Insights en un dipòsit de cla
 
 | Type        | Permisos          |
 | ----------- | -------------------- |
-| Tecla         | [Obtén les claus](/rest/api/keyvault/get-keys), [Obtén la clau](/rest/api/keyvault/get-key)                                 |
-| Secret      | [Obtén els secrets](/rest/api/keyvault/get-secrets), [Obtén el secret](/rest/api/keyvault/get-secret)                     |
-| Certificat | [Obtén els certificats](/rest/api/keyvault/get-certificates), [Obtén el certificat](/rest/api/keyvault/get-certificate) |
+| Tecla         | [Obtén les claus](/rest/api/keyvault/keys/get-keys/get-keys), [Obtén la clau](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Secret      | [Obtén els secrets](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Obtén el secret](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Certificat | [Obtén els certificats](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Obtén el certificat](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Els valors anteriors són el mínim per llistar i llegir durant l'execució.
 

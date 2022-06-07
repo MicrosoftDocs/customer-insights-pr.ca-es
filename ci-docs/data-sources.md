@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739196"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800454"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
@@ -76,7 +76,7 @@ Per actualitzar una font de dades segons demanda, seguiu aquests passos:
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu actualitzar i seleccioneu **Actualitza** a la llista desplegable.
+2. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu actualitzar i seleccioneu **Actualitza** de la llista desplegable.
 
 3. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades s'actualitza tan l'esquema d'entitat com les dades de totes les entitats especificades a la font de dades.
 
@@ -86,7 +86,7 @@ Per actualitzar una font de dades segons demanda, seguiu aquests passos:
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu suprimir i seleccioneu **Suprimeix** al menú desplegable.
+2. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu eliminar i seleccioneu **Suprimeix** al menú desplegable.
 
 3. Confirmeu la supressió.
 

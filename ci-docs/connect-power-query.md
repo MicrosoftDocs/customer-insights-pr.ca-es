@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642280"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800132"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connecta't a un Power Query font de dades
 
@@ -76,7 +76,7 @@ Els connectors amb una marca de selecció a la **columna Del Customer Insights (
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu els punts suspensius verticals al costat de la font de dades voleu canviar i seleccioneu **Edita** al menú desplegable.
+2. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu canviar i seleccioneu **Edita** al menú desplegable.
 
    > [!div class="mx-imgBorder"]
    > ![Opció Edita.](media/edit-option-data-sources.png "Opció Edita")

@@ -1,19 +1,19 @@
 ---
 title: Font de dades enriquiment
 description: Enriquir les fonts de dades abans de passar pel procés d'unificació de dades.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755674"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800269"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (vista prèvia)
 
@@ -27,7 +27,7 @@ Heu de tenir permisos de col·laborador o administrador per crear o editar enriq
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-1. Selecciona l'el·lipsi vertical que hi ha al costat de la font de dades vols enriquir i selecciona **Enrique**.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu enriquir i seleccioneu **Enrique**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pàgina d'enriquiment de fonts de dades.":::
 
@@ -41,11 +41,12 @@ Actualment hi ha disponibles els següents enriquiments per a fonts de dades. Re
 
 - [Adreces millorades](enrichment-enhanced-addresses.md)
 - [Dades d'empresa millorades](enrichment-enhanced-company-data.md)
+- [Dades d'identitat de LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestionar els enriquiments font de dades existents
 
 Aneu a la pestanya **Els meus enriquiments** per veure tots els enriquiments configurats.
 
-Seleccioneu l'enriquiment per veure les opcions disponibles. També podeu seleccionar els punts suspensius (...) en un element de llista per veure les opcions. Si heu configurat diversos enriquiments, podeu utilitzar el quadre de cerca per trobar-lo ràpidament.
+Seleccioneu l'enriquiment per veure les opcions disponibles. També podeu seleccionar l'el·lipsi vertical (&vellip;) en un element de llista per veure les opcions. Si heu configurat diversos enriquiments, podeu utilitzar el quadre de cerca per trobar-lo ràpidament.
 
 Podeu veure, editar, executar o suprimir un font de dades enriquiment. Per obtenir més informació, vegeu [Gestionar els enriquiments existents](enrichment-hub.md).

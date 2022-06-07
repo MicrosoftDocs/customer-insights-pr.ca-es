@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641796"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833756"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntes més freqüents sobre la versió de prova del Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Podeu ampliar la versió de prova directament a l'aplicació. Podeu ampliar la v
 
 En general, us recomanem que comenceu de nou amb les vostres pròpies dades quan actualitzeu a la versió de pagament del Customer Insights. 
 
-Opcionalment, si només utilitzeu el Customer Insights, podeu copiar les dades d'un entorn de prova si compreu informació del client. Heu de ser l'administrador de la prova del Customer Insights i l'administrador global de l'inquilí Microsoft 365 o l'administrador del Dynamics 365 de la vostra organització per migrar la configuració d'un entorn de prova a un entorn de pagament. 
+Opcionalment, si només utilitzeu el Customer Insights, podeu copiar les dades d'un entorn de prova si compreu informació del client. Heu de ser l'administrador de la prova del Customer Insights i l'administrador global de l'inquilí Microsoft 365 o l'administrador del Dynamics 365 de la vostra organització per migrar la configuració d'un entorn de prova a un entorn de pagament.
 
-Després d'iniciar la sessió a la instància de pagament del Customer Insights per primera vegada, se us demana que creeu un entorn nou. En aquest procés, podeu triar de copiar la configuració d'un entorn existent i migrar la majoria dels paràmetres. Si teniu els permisos esmentats anteriorment, l'entorn de prova es mostrarà en aquesta llista. Per obtenir més informació, vegeu [Copiar la configuració de l'entorn](manage-environments.md#copy-the-environment-configuration).
+Després d'iniciar la sessió a la instància de pagament del Customer Insights per primera vegada, se us demana que creeu un entorn nou. En aquest procés, podeu triar de copiar la configuració d'un entorn existent i migrar la majoria dels paràmetres. Si teniu els permisos esmentats anteriorment, l'entorn de prova es mostrarà en aquesta llista. Per obtenir més informació, vegeu [Copiar la configuració de l'entorn](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Quins són els límits i les quotes de la versió de prova?
 
@@ -81,9 +81,10 @@ Quan us registreu a la versió de prova, veureu la pantalla principal de l'aplic
 
 La majoria de les característiques de les capacitats del Customer Insights estan disponibles a la versió de prova.
 
-No hi ha disponibles **les característiques següents**: 
+No hi ha disponibles **les característiques següents**:
+
 - No podeu crear entorns nous que utilitzin el vostre propi compte de l'Azure Data Lake Storage.
-- No podeu suprimir l'entorn de prova. 
+- No podeu suprimir l'entorn de prova.
 
 ### <a name="how-long-does-the-trial-last"></a>Quant de temps dura la versió de prova?
 

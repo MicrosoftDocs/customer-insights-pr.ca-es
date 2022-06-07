@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743401"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768338"
 ---
 # <a name="explore-customer-insights"></a>Explora les estadístiques del client
 
 Podeu accedir a [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) la següent URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-La **pàgina d'inici** mostra les guies a través del procés de configuració de les funcions clau i proporciona una visió general dels segments, mesures i dades d'enriquiment.
+La **pàgina d'inici** us guia a través del procés de configuració de les funcions clau i proporciona una visió general dels segments, mesures i dades d'enriquiment.
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de pantalla de la pantalla d'Inici que mostra informació de mostra.":::
 
 ## <a name="left-side-pane"></a>Subfinestra lateral esquerra
 
-Utilitzeu la subfinestra esquerra per navegar entre diferents àrees del Customer Insights. 
+Utilitzeu la subfinestra esquerra per navegar entre diferents àrees del Customer Insights.
 
-Si treballes amb comptes d'empresa i amb consumidors concrets, pots seleccionar el públic principal per definir el focus en conseqüència. 
+Si treballes amb comptes d'empresa i amb consumidors concrets, pots seleccionar el públic principal per definir el focus en conseqüència.
 
 ## <a name="application-header"></a>Capçalera de l'aplicació
 
@@ -38,7 +38,7 @@ El **selectiu d'entorn** mostra l'entorn en què treballeu i us permet crear o a
 
 La icona de la cara somrient és el **control Feedback**. Seleccioneu-lo per explicar-nos la vostra experiència amb customer insights. Estem escoltant activament els vostres comentaris i us agraïm per endavant per fer-nos saber què us agrada i com podem millorar.
 
-El **control Configuració**, representat per una icona d'engranatge, us permet recopilar detalls de la sessió per al Customer Insights i configurar la configuració global del vostre Microsoft 365 perfil. 
+El **control Configuració**, representat per una icona d'engranatge, us permet recopilar detalls de la sessió per al Customer Insights i configurar la configuració global del vostre Microsoft 365 perfil.
 
 **Les opcions d'ajuda**, visualitzades amb una icona de signe d'interrogació, proporcionen enllaços d'ajuda contextuals i altres recursos útils.
 
@@ -46,7 +46,7 @@ La teva foto de perfil obre el **gestor** de comptes del teu Microsoft 365 perfi
 
 ## <a name="getting-started-with-customer-insights-section"></a>Com començar a la secció Customer Insights
 
-Aquesta secció conté targetes que us ajuden a caminar pel procés de configuració de l'entorn del Customer Insights. 
+Aquesta secció conté targetes que us ajuden a caminar pel procés de configuració de l'entorn del Customer Insights.
 
 1. La **targeta Afegeix dades** us ajuda amb la importació de dades. Customer Insights admet diverses [opcions per aportar dades sobre els vostres clients](data-sources.md). Seleccioneu **Afegeix orígens** de dades per començar.
 1. Un cop finalitzada la importació inicial de dades, podeu utilitzar la **targeta de dades** Unify per harmonitzar les dades i [crear perfils](data-unification.md) de clients unificats a partir de fonts dispars. 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642402"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800314"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utilitzeu el constructor de mesures per crear mesures des de zero
 
@@ -88,7 +88,7 @@ Podeu crear mesures al nivell de clients individuals (atribut de client, mesura 
 
 1. Per afegir més càlculs per a la mesura, seleccioneu **Càlcul nou**. Només podeu utilitzar les entitats al mateix camí d'entitat per als càlculs nous. Més càlculs es mostraran com a columnes noves a l'entitat de sortida de mesura.
 
-1. Seleccioneu **...** en el càlcul per **duplicar**, **canviar el nom** o **suprimir** un càlcul d'una mesura.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) del càlcul per **duplicar**, **canviar el nom** o **Eliminar** un càlcul d'un compàs.
 
 1. A l'àrea **Visualització prèvia**, veureu l'esquema de dades de l'entitat de sortida de mesura, incloent-hi els filtres i dimensions. La visualització prèvia reacciona dinàmicament als canvis a la configuració.
 
@@ -158,7 +158,7 @@ Podeu crear mesures al nivell de comptes individuals (mesura del client) o al ni
    1. Seleccioneu el **Camí de la relació** i trieu el camí d'entitat que s'ha d'utilitzar per identificar la mesura. Si només hi ha un camí a l'entitat *Client*, aquest control no es mostrarà.
    1. Seleccioneu **Fet** per aplicar la vostra selecció.
 
-1. Seleccioneu **...** en el càlcul per **duplicar**, **canviar el nom** o **suprimir** un càlcul d'una mesura.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) del càlcul per **duplicar**, **canviar el nom** o **Eliminar** un càlcul d'un compàs.
 
 1. A l'àrea **Visualització prèvia**, veureu l'esquema de dades de l'entitat de sortida de mesura, incloent-hi els filtres i dimensions. La visualització prèvia reacciona dinàmicament als canvis a la configuració.
 

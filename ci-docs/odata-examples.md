@@ -1,19 +1,19 @@
 ---
 title: Exemples d'OData per a les Dynamics 365 Customer Insights API
 description: Exemples d'ús comú de per a l'Open Data Protocol (OData) per consultar les API del Customer Insights per revisar les dades.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740062"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808449"
 ---
 # <a name="odata-query-examples"></a>Exemples de consulta OData
 
@@ -33,16 +33,15 @@ Heu de modificar les mostres de consulta per fer-les funcionar en els entorns de
 
 La taula següent conté un conjunt de consultes d'exemple per a l'entitat *Client*.
 
-
 |Tipus de consulta |Exemple  | Nota  |
 |---------|---------|---------|
 |Identificador d'un sol client     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Clau alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Persisteixen les tecles alternatives a l'entitat de client unificada       |
+|Clau alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Persisteixen les tecles alternatives a l'entitat de client unificada       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |D'aquí a    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Clau alternativa + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Cercar  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Retorna els 10 primers resultats d'una cadena de cerca      |
-|Pertinença al segment  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Retorna un nombre predefinit de files de l'entitat de segmentació.      |
+|Pertinença al segment  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Retorna un nombre predefinit de files de l'entitat de segmentació.      |
 
 ## <a name="unified-activity"></a>Activitat unificada
 
@@ -53,7 +52,7 @@ La taula següent conté un conjunt de consultes d'exemple per a l'entitat *Unif
 |Activitat del CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Llista les activitats d'un perfil de client específic |
 |Període de temps de l'activitat    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Activitats d'un perfil de client en un període de temps       |
 |Tipus d’activitat    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Activitat pel nom de visualització     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Activitat pel nom de visualització     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Ordenació d'activitats    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Ordena les activitats ascendents o descendents       |
 |L'activitat s'ha ampliat des de la pertinença al segment  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ La taula següent conté un conjunt de consultes d'exemple per a altres entitats
 |Marques enriquides del CID    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |Interessos enriquits del CID    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |In-Clause + Expandeix     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Consultes OData no admeses
+
+Les consultes següents no són compatibles amb el Customer Insights:
+
+- `$filter` sobre les entitats d'origen ingerides. Només podeu executar consultes $filter a les entitats del sistema que crea el Customer Insights.
+- `$expand` d'una `$search` consulta. Exemple: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` des de `$select` si només se selecciona un subconjunt d'atributs. Exemple: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` afinitats de marca o interessos enriquits per un client determinat. Exemple: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Consulta predicció les entitats de sortida del model a través de clau alternativa. Exemple: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

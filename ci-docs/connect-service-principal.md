@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei
 description: Utilitzeu una entitat de seguretat de servei de l'Azure per connectar-vos al vostre llac de dades.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739150"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833366"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
 
-En aquest article es discuteix com connectar-se Dynamics 365 Customer Insights amb un Azure Data Lake Storage compte mitjançant un principal de servei de l'Azure en lloc de claus de compte d'emmagatzematge. 
+En aquest article es discuteix com connectar-se Dynamics 365 Customer Insights amb un Azure Data Lake Storage compte mitjançant un principal de servei de l'Azure en lloc de claus de compte d'emmagatzematge.
 
 Les eines automatitzades que utilitzen serveis de l'Azure sempre hauran de tenir permisos restringits. En comptes d'iniciar la sessió a les aplicacions com a usuari amb tots els privilegis, l'Azure ofereix entitats de servei. Podeu utilitzar els principals de servei per afegir o editar de manera [segura una carpeta del Model de dades comú com a font de dades](connect-common-data-model.md) o [crear o actualitzar un entorn](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - El compte d'emmagatzematge del llac de dades que utilitzarà el principal del servei ha de ser Gen2 i tenir [habilitat l'espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace). Els comptes d'emmagatzematge de l'Azure Data Lake Gen1 no són compatibles.
-> - Necessiteu permisos d'administració per a la vostra subscripció de l'Azure per crear un principal de servei.
+> - Necessiteu permisos d'administració perquè el vostre inquilí de l'Azure creï un director de servei.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entitat de seguretat de servei de l'Azure per al Customer Insights
 
@@ -38,29 +39,15 @@ Abans de crear un nou principi de servei per al Customer Insights, comproveu si 
 
 2. A **Serveis de l'Azure**, seleccioneu **Azure Active Directory**.
 
-3. A **Administra**, seleccioneu **Aplicacions empresarials**.
+3. A **Administra**, seleccioneu **l'aplicació de** Microsoft.
 
 4. Afegiu un filtre per a **l'identificador d'aplicació per començar**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` o cercar el nom `Dynamics 365 AI for Customer Insights`.
 
-5. Si trobeu un registre coincident, significa que l'entitat de seguretat de servei ja existeix. 
-   
+5. Si trobeu un registre coincident, significa que l'entitat de seguretat de servei ja existeix.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captura de pantalla que mostra un entitat de seguretat de servei existent.":::
-   
-6. Si no es retorna cap resultat, creeu una nova entitat de servei.
 
-### <a name="create-a-new-service-principal"></a>Crear una nova entitat de servei
-
-1. Instal·leu la versió més recent del PowerShell de l'Azure Active Directory per al Graph. Per obtenir més informació, aneu a [Instal·lació del PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. A l'ordinador, seleccioneu la tecla del Windows al teclat, cerqueu el **Windows PowerShell** i seleccioneu **Executa com a administrador**.
-   
-   1. A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
-
-2. Creeu l'entitat de seguretat de servei per al Customer Insights amb el mòdul del PowerShell de l'Azure AD.
-
-   1. A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Substituïu *[el vostre identificador de directori]* per l'identificador de directori real de la vostra subscripció a l'Azure on voleu crear el principal de servei. El paràmetre del nom de l'entorn, `AzureEnvironmentName`, és opcional.
-  
-   1. Introduïu `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Aquesta ordre crea la principal de servei del Customer Insights a la subscripció seleccionada de l'Azure. 
+6. Si no es retornen resultats, podeu [crear un nou director de](#create-a-new-service-principal) servei. En la majoria dels casos, ja existeix i només heu de concedir permisos perquè el director del servei accedeixi al compte d'emmagatzematge.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedir permisos a l'entitat de servei per accedir al compte d'emmagatzematge
 
@@ -77,9 +64,9 @@ Aneu al portal de l'Azure per concedir permisos al principal de servei del compt
 1. A la subfinestra **Afegeix una assignació de funcions**, definiu les propietats següents:
    - Funció: **Col·laborador de dades de Blob d'emmagatzematge**
    - Assignació d'accés a: **Usuari, grup o entitat de servei**
-   - Seleccioneu membres: **Dynamics 365 AI for Customer Insights** (el principal de [servei](#create-a-new-service-principal) que heu creat anteriorment en aquest procediment)
+   - Seleccioneu membres: **Dynamics 365 AI for Customer Insights** (el principal de [servei](#create-a-new-service-principal) que heu buscat anteriorment en aquest procediment)
 
-1.  Seleccioneu **Revisa + assigna**.
+1. Seleccioneu **Revisa + assigna**.
 
 La propagació dels canvis pot trigar fins a 15 minuts.
 
@@ -91,7 +78,7 @@ Podeu adjuntar un compte d'emmagatzematge del llac de dades a l'Insights del cli
 
 1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com), inicieu la sessió a la vostra subscripció i obriu el compte d'emmagatzematge.
 
-1. A la subfinestra esquerra, aneu a **Configuració** > **Propietats**.
+1. A la subfinestra esquerra, aneu a **Punts** > **finals de configuració**.
 
 1. Copieu el valor de l'identificador de recurs del compte d'emmagatzematge.
 
@@ -115,5 +102,18 @@ Podeu adjuntar un compte d'emmagatzematge del llac de dades a l'Insights del cli
 
 1. Continueu amb els passos restants de Customer Insights per adjuntar el compte d'emmagatzematge.
 
+### <a name="create-a-new-service-principal"></a>Crear una nova entitat de servei
+
+1. Instal·leu la versió més recent del PowerShell de l'Azure Active Directory per al Graph. Per obtenir més informació, aneu a [Instal·lació del PowerShell de l'Azure Active Directory per al Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. A l'ordinador, premeu la tecla Windows del teclat i cerqueu **el Windows PowerShell** i seleccioneu **Executa com a administrador**.
+
+   1. A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
+
+2. Creeu l'entitat de seguretat de servei per al Customer Insights amb el mòdul del PowerShell de l'Azure AD.
+
+   1. A la finestra del PowerShell introduïu `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Substituïu *[el vostre identificador de directori]* per l'identificador de directori real de la vostra subscripció a l'Azure on voleu crear el principal de servei. El paràmetre del nom de l'entorn, `AzureEnvironmentName`, és opcional.
+  
+   1. Introduïu `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Aquesta ordre crea la principal de servei del Customer Insights a la subscripció seleccionada de l'Azure.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

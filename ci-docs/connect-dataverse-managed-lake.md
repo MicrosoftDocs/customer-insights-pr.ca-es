@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642220"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800152"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
 
@@ -28,7 +28,7 @@ En aquest article s'ofereix informació sobre com Dataverse els usuaris poden co
 ## <a name="important-considerations"></a>Consideracions importants
 
 1. Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades en serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Més informació al Microsoft Trust Center](https://www.microsoft.com/trust-center).
-2. Només Dataverse són visibles les entitats amb [seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis habilitat. Aquestes entitats es poden exportar al Dataverse llac de dades administrades i utilitzar-les al Customer Insights. Les taules fora de caixa Dataverse tenen el seguiment de canvis habilitat per defecte. Heu d'activar el seguiment de canvis per a taules personalitzades. Per comprovar si hi ha una Dataverse taula habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules de dades** > **·**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions** > **de ConfiguracióAdvanced** i reviseu la configuració De seguiment dels **canvis**.
+2. Només Dataverse són visibles les entitats amb [seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis habilitat. Aquestes entitats es poden exportar al Dataverse llac de dades administrades i utilitzar-les al Customer Insights. Les taules fora de caixa Dataverse tenen el seguiment de canvis habilitat per defecte. Heu d'activar el seguiment de canvis per a taules personalitzades. Per comprovar si hi ha una Dataverse taula habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules de dades** > **·**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions** > **avançades de** Configuració i reviseu la configuració De seguiment dels **canvis**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Connectar-se a un llac administrat del Dataverse
 
@@ -62,7 +62,7 @@ Per connectar-vos a un altre llac de dades del Dataverse, [creeu una font de dad
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-2. Al costat de la font de dades que voleu actualitzar, seleccioneu els punts suspensius.
+2. Al costat de la font de dades que voleu actualitzar, seleccioneu l'el·lipsi vertical (&vellip;).
 
 3. Seleccioneu l'opció **Edita** de la llista.
 

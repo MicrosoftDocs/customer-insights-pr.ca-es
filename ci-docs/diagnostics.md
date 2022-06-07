@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755250"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807569"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Inicia la sessió amb l'Azure Dynamics 365 Customer Insights Monitor (Preview)
 
@@ -38,7 +38,7 @@ Per configurar el diagnòstic al Customer Insights, s'han de complir els requisi
 
 - Teniu una subscripció activa [de l'Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Teniu [permisos d'administrador](permissions.md#admin) a l'Insights del client.
-- Teniu la **funció d'administrador de** col·laboradors **i** d'accés a l'usuari al recurs de destinació de l'Azure. El recurs pot ser un compte d'emmagatzematge de l'Azure, un centre d'esdeveniments de l'Azure o una àrea de treball de l'Azure Log Analytics. Per obtenir més informació, vegeu [Afegeix o suprimeix assignacions de funcions de l'Azure mitjançant el portal](/azure/role-based-access-control/role-assignments-portal) de l'Azure.
+- Teniu la **funció d'administrador de** col·laboradors **i** d'accés a l'usuari al recurs de destinació de l'Azure. El recurs pot ser un Azure Data Lake Storage compte, un centre d'esdeveniments de l'Azure o una àrea de treball de l'Azure Log Analytics. Per obtenir més informació, vegeu [Afegeix o suprimeix assignacions de funcions de l'Azure mitjançant el portal](/azure/role-based-access-control/role-assignments-portal) de l'Azure. Aquest permís és necessari mentre es configura la configuració de diagnòstic al Customer Insights, es pot canviar després d'una configuració correcta.
 - [S'han complert els](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) requisits de destinació per a l'Azure Storage, l'Azure Event Hub o l'Azure Log Analytics.
 - Teniu com a mínim la **funció Lector** al grup de recursos al qual pertany el recurs.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642240"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800408"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
@@ -92,7 +92,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="edit-a-workflow"></a>Editar un flux de treball
 
-1. A la pàgina **Models personalitzats**, seleccioneu els punts suspensius verticals de la columna **Accions** al costat d'un flux de treball que heu creat anteriorment i seleccioneu **Edita**.
+1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment i seleccioneu **Edita**.
 
 1. Podeu actualitzar el nom reconeixible del flux de treball al camp **Nom de visualització**, però no podreu canviar el servei web o el pipeline configurats. Seleccioneu **Següent**.
 
@@ -108,7 +108,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="run-a-workflow"></a>Executar un flux de treball
 
-1. A la pàgina **Models personalitzats**, seleccioneu els punts suspensius verticals de la columna **Accions** al costat d'un flux de treball que heu creat anteriorment.
+1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment.
 
 1. Seleccioneu **Executa**.
 
@@ -116,7 +116,7 @@ El flux de treball també s'executa automàticament amb cada actualització plan
 
 ## <a name="delete-a-workflow"></a>Suprimir un flux de treball
 
-1. A la pàgina **Models personalitzats**, seleccioneu els punts suspensius verticals de la columna **Accions** al costat d'un flux de treball que heu creat anteriorment.
+1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment.
 
 1. Seleccioneu **Suprimeix** i confirmeu la supressió.
 

@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Catàleg d'aprenentatge
   items:
-    - name: Comença
+    - name: Certifica com a especialista en plataformes de dades de clients de Microsoft
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Introducció al Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Ingerir dades
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Començar amb una llicència de pagament
       href: paid-license.md
-    - name: Creació d'un entorn nou
-      href: create-environment.md
     - name: Explora les estadístiques del client
       href: home.md
     - name: Treballar amb etiquetes i columnes
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Revisar els esquemes d'entitats al Common Data Model
       href: entity-schemas.md
-    - name: Dades del Customer Insights al Dataverse
-      href: customer-insights-dataverse.md
     - name: Crear relacions i entitats connectades
       href: relationships.md
     - name: Definir assignacions semàntiques
       href: semantic-mappings.md
+- name: Entorns
+  items:
+    - name: Creació d'un entorn nou
+      href: create-environment.md
+    - name: Connectar a l’Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Utilitza el teu Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Administrar la configuració de l'entorn
+      href: manage-environments.md
+    - name: Connecta't a un compte d'emmagatzematge mitjançant el Service Principal
+      href: connect-service-principal.md
 - name: Administració
   items:
     - name: Configurar la configuració del sistema
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Assignar permisos d'usuari
       href: permissions.md
-    - name: Informació general sobre les connexions
-      href: connections.md
-    - name: Administrar diversos entorns
-      href: manage-environments.md
     - name: Porteu el vostre propi Key Vault
       href: use-azure-key-vault.md
-    - name: Connecta't a un compte d'emmagatzematge mitjançant el Service Principal
-      href: connect-service-principal.md
     - name: Exporta els registres de diagnòstic
       href: diagnostics.md
-    - name: Límits de servei
-      href: service-limits.md
-    - name: Drets i sol·licituds de DSR
-      href: dsr-rights-requests.md
+    - name: Informació general sobre les connexions
+      href: connections.md
 - name: API
   items:
     - name: Treballar amb API
@@ -324,5 +328,9 @@
       items:
         - name: Crear prediccions amb dades de consentiment
           href: consent-management/predictions-consent-data.md
+- name: Límits de servei
+  href: service-limits.md
+- name: Drets i sol·licituds de DSR
+  href: dsr-rights-requests.md
 - name: Obteniu assistència tècnica
   href: /power-platform/admin/get-help-support

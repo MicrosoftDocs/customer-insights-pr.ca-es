@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642341"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800084"
 ---
 # <a name="create-segments"></a>Crear segments
 
@@ -134,8 +134,9 @@ En crear un segment, podeu desar un esborrany. A la fase d'esborrany, un segment
 > - El creador de segments no suggerirà valors vàlids de les entitats quan es configurin els operadors per a les condicions. Podeu anar a **Dades** > **Entitats** i baixar les dades de l'entitat per veure quins valors estan disponibles.
 > - Les condicions segons les dates permeten canviar entre dates fixes i un interval de dates flotant.
 > - Si teniu diverses regles per al segment, la regla que esteu editant té una línia blava vertical al seu costat.
-> - Podeu desplaçar regles i condicions a altres llocs de la definició del segment. Seleccioneu [...] al costat d'una regla o condició i trieu com i on la voleu desplaçar.
+> - Podeu desplaçar regles i condicions a altres llocs de la definició del segment. Seleccioneu l'el·lipsi vertical (&vellip;) al costat d'una regla o condició i trieu com i on moure-la.
 > - Els controls **Desfés** i **Refés** de la barra d'ordres us permeten desfer i refer els canvis.
+> - Després de crear un segment, alguns segments us permeten fer [un seguiment de l'ús del segment](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segments ràpids
 

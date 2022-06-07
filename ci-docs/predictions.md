@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740707"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800638"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa les teves dades parcials amb prediccions (obsoletes)
 
@@ -95,7 +95,7 @@ Com a part d'aquest flux, trieu un atribut específic en el qual basar el vostre
 
 2. Seleccioneu la predicció que voleu revisar.
 
-3. Seleccioneu els punts suspensius de la columna **Accions** i trieu **Visualitza**.
+3. Seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** i trieu **Visualitza**.
 
 4. Veureu un nombre de punts de dades a la visualització de la vostra predicció.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Després de crear un predicció, podeu personalitzar el model al AI Builder per 
 
 2. Seleccioneu la predicció que voleu editar.
 
-3. Seleccioneu els punts suspensius de la columna **Accions** i trieu **Visualitza**.
+3. Seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** i trieu **Visualitza**.
 
 4. Seleccioneu **Personalitza al AI Builder**.
 
@@ -139,7 +139,7 @@ A la següent execució de la vostra predicció s'utilitzarà el model actualitz
 
 2. Seleccioneu la predicció que voleu suprimir.
 
-3. Seleccioneu els punts suspensius de la columna **Accions** i trieu **Suprimeix**.
+3. Seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** i trieu **Suprimeix**.
 
 4. Confirmar la supressió.
 
@@ -153,7 +153,7 @@ Si no podeu completar el procés d'adjunció del Dataverse a causa d'un error, p
 - No s'han concedit permisos de l'aplicació.
     1. Aneu al [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Seleccioneu **Entorns**.
-    1. Seleccioneu els punts suspensius que hi ha al costat de l'entorn on voleu afegir el permís i seleccioneu **Configuració**.
+    1. Seleccioneu l'el·lipsi vertical (&vellip;) que hi ha al costat de l'entorn al qual voleu afegir el permís **i seleccioneu** Configuració.
     1. Expandiu **Usuaris i permisos** i seleccioneu **Usuaris**.
     1. Seleccioneu **+Nou** i seleccioneu **Usuari**.
     1. Seleccioneu **Usuari de l'aplicació** si ja no està seleccionat i introduïu la següent informació:

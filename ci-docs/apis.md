@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755438"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808494"
 ---
 # <a name="work-with-customer-insights-apis"></a>Treballar amb les API del Customer Insights
 
@@ -31,11 +31,11 @@ En aquest article es descriu com accedir a les API del Customer Insights, crear 
 
 1. [Inicieu la sessió](https://home.ci.ai.dynamics.com) al Customer Insights. Si encara no teniu cap subscripció, [registreu-vos per obtenir una versió de prova del Customer Insights](https://aka.ms/tryci).
 
-1. Per habilitar les API a l'entorn del Customer Insights, aneu a **Administració** > **Permisos**. Per poder fer-ho, necessitareu permisos d'administració.
+1. Per habilitar les API a l'entorn del Customer Insights, aneu a **Seguretat d'administrador** > **·**. Per poder fer-ho, necessitareu permisos d'administració.
 
 1. Aneu a la pestanya **API** i seleccioneu el botó **Habilita**.    
  
-   En habilitar les API, es crea una clau de subscripció principal i secundària per a la instància que s'utilitza a les sol·licituds d'API. Per tornar a generar les claus, seleccioneu **Torna a generar la principal** o **Torna a generar la secundària** a **Administració** > **Permisos** > **API**.
+   En habilitar les API, es crea una clau de subscripció principal i secundària per a la instància que s'utilitza a les sol·licituds d'API. Podeu regenerar les tecles seleccionant les API Regenera la primària o Regenera la secundària **a** les API de seguretat **d'administració** **.** > **·** > **·**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Aquests passos us ajuden a començar a utilitzar les API del Customer Insights e
 1. A l'esquerra, seleccioneu **Registres de l'aplicació**.
 
 1. Seleccioneu **Nou registre**, proporcioneu un nom per a l'aplicació i trieu el tipus de compte.
- 
+
    També podeu afegir una adreça URL de redirecció. http://localhost és suficient per desenvolupar una aplicació a l'ordinador local.
 
 1. Al nou registre de l'aplicació, aneu a **Permisos de l'API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Seleccioneu **Afegeix un permís** i seleccioneu **Customer Insights** a la subfinestra lateral.
+1. Seleccioneu **Afegeix un permís** i seleccioneu **Dynamics 365 AI per a l'Insights** del client a la subfinestra lateral.
 
 1. Per a **Tipus de permís**, seleccioneu **Permisos delegats** i seleccioneu el permís **user_impersonation**.
 
@@ -109,13 +107,13 @@ A la [secció de registre d'aplicacions](#create-a-new-app-registration-in-the-a
 
 1. Per acabar, cal afegir el nom del registre de l'aplicació com a usuari al Customer Insights.  
    
-   Obriu Customer Insights, aneu a **Administració** > **Permisos** i seleccioneu **Afegeix un usuari**.
+   Obriu les estadístiques del client, aneu a **Seguretat** > **de l'administrador** i seleccioneu **Afegeix un usuari**.
 
 1. Cerqueu el nom del registre de l'aplicació, seleccioneu-lo als resultats de la cerca i seleccioneu **Desa**.
 
 ## <a name="sample-queries"></a>Consultes d'exemple
 
-Hem compilat una breu llista de consultes de mostra d'OData per treballar amb les API: [exemples de consulta OData](odata-examples.md).
+Hem compilat una breu llista de consultes de mostra d'OData per treballar amb les API: [exemples](odata-examples.md) de consulta OData.
 
 ## <a name="customer-insights-client-libraries"></a>Biblioteques de client del Customer Insights
 

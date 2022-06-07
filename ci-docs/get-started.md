@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741121"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833527"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Introducció al Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Les estadístiques del client us poden ajudar a crear una comprensió més profu
 
 ## <a name="step-1-create-an-environment"></a>Pas 1: crear un entorn
 
-Per començar, primeu heu de crear un entorn per a treballar-hi. Si l'organització ja ha adquirit una llicència, vegeu [Crear un entorn](create-environment.md). Per iniciar una prova per al Customer Insights, consulta [Configurar un entorn de prova](trial-signup.md).
+En primer lloc, crear un entorn per treballar. Si l'organització ja ha adquirit una llicència, vegeu [Crear un entorn](create-environment.md). Per iniciar una prova per al Customer Insights, consulta [Configurar un entorn de prova](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Pas 2: exploreu les estadístiques dels clients
 
-La primera vegada que inicieu la sessió al Customer Insights, podeu configurar la configuració i explorar el producte.
+La primera vegada que inicieu la sessió al Customer Insights, configureu la configuració i exploreu el producte.
 
 1. [Inicieu la sessió al Customer Insights](https://home.ci.ai.dynamics.com) mitjançant el vostre compte d'usuari de Microsoft Azure Active Directory (AAD).
 
-1. [Canvieu l'entorn](manage-environments.md#switch-environments) per veure les dades de demostració i [explorar les estadístiques del client](home.md).
+1. Canvieu l'entorn per veure les dades de demostració i [explorar les estadístiques del client](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Pas 3: ingerir, unificar i configurar relacions per a les dades
 
-Els perfils unificats són els fonaments per obtenir informació i dur a terme accions sobre les dades. Introduïu dades de diversos orígens i executeu el procés d'unificació de dades per combinar perfils unificats. Especifiqueu relacions entre les entitats ingerides utilitzant característiques d'enriquiment per afegir informació als perfils.
+Els perfils unificats són els fonaments per obtenir informació i dur a terme accions sobre les dades. Introduïu dades de diversos orígens i executeu el procés d'unificació de dades per combinar perfils unificats. Especifiqueu les relacions entre les entitats ingerides i utilitzeu funcions d'enriquiment per afegir informació als perfils.
 
-1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre [Power Query connectors](connect-power-query.md), una [carpeta](connect-common-data-model.md) del Model de dades comú o [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre [Power Query connectors](connect-power-query.md), una [carpeta](connect-common-data-model.md) del Model de dades comú o [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Executeu el procés d'unificació [de dades identificant els camps](data-unification.md) d'origen [, suprimint](map-entities.md) duplicats, [condicions](remove-duplicates.md) coincidents [i](match-entities.md) unificant camps [.](merge-entities.md)
 
@@ -47,7 +47,7 @@ Els perfils unificats són els fonaments per obtenir informació i dur a terme a
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Pas 4: millorar els perfils unificats amb prediccions, activitats i mesures
 
-Havent configurat els perfils unificats, podeu millorar les dades i augmentar encara més la informació que proporcionen.
+Amb els perfils unificats configurats, milloreu les vostres dades i augmenteu encara més la informació que proporcionen.
 
 1. Trieu entre una biblioteca que expandeix de proveïdors d'enriquiment per [enriquir les dades dels clients](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Havent configurat els perfils unificats, podeu millorar les dades i augmentar en
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Pas 5: creeu segments i activeu les dades mitjançant diverses opcions d'exportació
 
-Ara que les dades estan completes i contenen molta informació quant als vostres clients, és hora de cercar maneres d'actuar en aquestes dades.
+Ara que les vostres dades s'han completat i contenen una àmplia gamma d'informació sobre els vostres clients, cerqueu maneres d'actuar sobre aquestes dades.
 
 1. [Creeu segments](segments.md), subconjunts de la base de clients, per assegurar-vos que les accions siguin rellevants per als clients destinataris.
 

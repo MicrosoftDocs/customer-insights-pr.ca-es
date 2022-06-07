@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755297"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800360"
 ---
 # <a name="connections-preview-overview"></a>Informació general sobre les connexions (versió preliminar)
 
@@ -69,7 +69,7 @@ Quan configureu o editeu una connexió d'exportació, trieu quins usuaris poden 
 
 1. Aneu a la pestanya **Connexions**.
 
-1. Seleccioneu els punts suspensius verticals de la connexió que voleu editar.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) per a la connexió que voleu editar.
 
 1. Seleccioneu **Editar**.
 
@@ -85,7 +85,7 @@ Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiv
 
 1. Aneu a la pestanya **Connexions**.
 
-1. Seleccioneu els punts suspensius verticals de la connexió que voleu eliminar.
+1. Seleccioneu l'el·lipsi vertical (&vellip;) per a la connexió que voleu suprimir.
 
 1. Seleccioneu **Suprimeix** al menú desplegable. Apareix un quadre de diàleg de confirmació.
 
