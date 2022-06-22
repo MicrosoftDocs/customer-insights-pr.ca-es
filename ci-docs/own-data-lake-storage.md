@@ -3,17 +3,17 @@ title: Utilitza el teu propi Azure Data Lake Storage compte Gen2
 author: mukeshpo
 description: Obteniu informació sobre els requisits per utilitzar el vostre propi Azure Data Lake Storage compte per emmagatzemar dades del Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833941"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011921"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Utilitza el teu propi Azure Data Lake Storage compte Gen2
 
@@ -37,6 +37,7 @@ Quan creeu un entorn nou, assegureu-vos que el compte d'emmagatzematge del data 
 1. Trieu com voleu connectar **l'emmagatzematge**. Podeu triar entre una opció basada en recursos i una opció basada en subscripcions per a l'autenticació. Per obtenir més informació, vegeu [Connectar-se a un Azure Data Lake Storage compte mitjançant un principal de servei de l'Azure](connect-service-principal.md).
    - Per a la subscripció de **l**'Azure, trieu el **compte** Subscripció **,** Grup **de recursos i** Emmagatzematge que conté el `customerinsights` contenidor.
    - Per a **la clau** Compte, proporcioneu el **nom** del compte i la **clau** Compte per al compte Emmagatzematge del llac de dades. L'ús d'aquest mètode d'autenticació implica que se us informarà si la vostra organització gira les tecles. Heu d'actualitzar [la configuració](manage-environments.md#edit-an-existing-environment) de l'entorn amb la clau nova quan es giri.
+1. Trieu si voleu utilitzar l'Azure Private Link per connectar-vos al compte d'emmagatzematge i [crear la connexió a l'enllaç](security-overview.md#private-links-tab) privat amb un procés de dos passos.
 
 Quan es completen processos del sistema com la ingestió de dades, el sistema crea les carpetes corresponents al compte d'emmagatzematge. Els fitxers de dades i els fitxers *model.json* es creen i s'afegeixen a carpetes basades en el nom del procés.
 

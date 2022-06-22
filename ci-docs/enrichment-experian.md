@@ -1,101 +1,92 @@
 ---
 title: Enriquiment amb l'enriquiment de tercers d'Experian
 description: Informació general sobre l'enriquiment de tercers d'Experian.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642193"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954075"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 
 Experian és un líder global en informes de crèdit d'empreses i consumidors i serveis de màrqueting. Amb els serveis d'enriquiment de dades dels clients d'Experian, podeu entendre millor els vostres clients enriquint els perfils dels clients amb dades demogràfiques com ara la mida de la llar, els ingressos i més.
 
-## <a name="prerequisites"></a>Requisits previs
-
-Per configurar Experian, cal complir els requisits previs següents:
-
-- Heu de tenir una subscripció activa d'Experian. Per obtenir una subscripció, [poseu-vos en contacte directament amb Experian](https://www.experian.com/marketing-services/contact). [Obteniu més informació sobre l'enriquiment de dades d'Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- Un administrador ja ha configurat una connexió d'Experian *o* teniu permisos d'[administrador](permissions.md#admin). També necessiteu l'identificador d'usuari, l'identificador del grup i el número de model per al compte de Secure Transport (ST) habilitat per a SSH que Experian ha creat.
-
 ## <a name="supported-countriesregions"></a>Països o regions admesos
 
 Actualment admetem l'enriquiment de perfils de clients només als Estats Units.
+
+## <a name="prerequisites"></a>Requisits previs
+
+- Una subscripció activa Experian. Per obtenir una subscripció, [poseu-vos en contacte directament amb Experian](https://www.experian.com/marketing-services/contact). [Obteniu més informació sobre l'enriquiment de dades d'Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- Un Experian [administrador configura](connections.md) una [connexió](#configure-the-connection-for-experian).
+
+- Experian Identificador d'usuari, identificador de partit i número de model per al compte de transport segur (ST) habilitat per sSH que Experian s'ha creat per a vosaltres.
+
+## <a name="configure-the-connection-for-experian"></a>Configurar la connexió per a Experian
+
+Heu de ser administrador [del](permissions.md#admin) Customer Insights i tenir un identificador d'usuari, un identificador de festa i un Experian número de model.
+
+1. Seleccioneu **Afegeix una connexió** en configurar un enriquiment, aneu a **Connexions** > **d'administració** i seleccioneu **Configura** a la Experian peça.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Subfinestra de configuració de connexió a Experian":::
+
+1. Introduïu un nom per a la connexió i un identificador d'usuari, un identificador de festa i un número de model vàlids per al Experian compte de transport segur.
+
+1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+
+1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
+
+### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
+
+Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a Experian, permeteu la transferència de dades fora del límit de conformitat per al Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades segons la vostra instrucció, però sou responsable d'assegurar que Experian compleixi les obligacions de privadesa o seguretat que tingueu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
 1. Aneu a **Dades** > **Enriquiment** i seleccioneu la pestanya **Descobreix**.
 
-1. Seleccioneu **Enriqueix les meves dades** a la peça d'Experian.
+1. Seleccioneu **Enriqueix les meves dades** a la **peça Dades demogràfiques** Experian.
 
-   > [!div class="mx-imgBorder"]
-   > ![Peça de l'Experian.](media/experian-tile.png "Peça del Experian")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian a la pàgina visió general d'enriquiment.":::
 
-1. Seleccioneu una [connexió](connections.md) a la llista desplegable. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible. Si sou administrador, podeu crear una connexió seleccionant **Afegeix una connexió** i triant a la llista desplegable Experian. 
+1. Reviseu la visió general i, a continuació, seleccioneu **Següent**.
 
-1. Seleccioneu **Connecta a Experian** per confirmar la selecció de la connexió.
+1. Seleccioneu la connexió. Poseu-vos en contacte amb un administrador si no n'hi ha cap disponible.
 
-1.  Seleccioneu **Següent** i trieu el **conjunt de dades de client** del qual voleu enriquir les dades demogràfiques d'Experian. Podeu seleccionar l'entitat **Client** per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+1. Seleccioneu **Següent**.
+
+1. Seleccioneu el **conjunt de dades de client** i trieu el perfil o segment del qual voleu enriquir amb les dades demogràfiques de Experian. L'entitat *Client* enriqueix tots els vostres perfils de clients, mentre que un segment enriqueix només els perfils de clients continguts en aquest segment.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captura de pantalla quan trieu el conjunt de dades de clients.":::
 
-1. Seleccioneu **Següent** i definiu els tipus de camps dels perfils unificats que s'han d'utilitzar per cercar dades demogràfiques coincidents a Experian. Cal com a mínim un dels camps **Nom i adreça**, **Telèfon** o **Correu electrònic**. Per tenir una precisió de coincidència superior, es poden afegir fins a dos camps més. Aquesta selecció afectarà els camps d'assignació als quals teniu accés al pas següent.
+1. Definiu de quin tipus de camps dels perfils unificats s'utilitzaran per fer coincidir les dades demogràfiques de Experian. Cal com a mínim un dels camps **Nom i adreça**, **Telèfon** o **Correu electrònic**. Per obtenir una precisió més alta de la coincidència, afegiu altres camps. Seleccioneu **Següent**.
 
-    > [!TIP]
-    > Com més atributs d'identificador clau s'enviïn a Experian, més probable és que hi hagi un percentatge de coincidència superior.
+1. Assigneu els camps a les dades demogràfiques de Experian.
 
-1. Seleccioneu **Següent** per iniciar l'assignació de camp.
+1. Seleccioneu **Següent** per completar l'assignació de camp.
 
-1. Definiu quins camps dels perfils unificats que s'han d'utilitzar per cercar dades demogràfiques coincidents a Experian. Els camps obligatoris estan marcats.
-
-1. Proporcioneu un nom per a l'enriquiment i un nom per a l'entitat de sortida.
+1. Proporcioneu un **nom** per a l'enriquiment i el nom **de l'entitat** Sortida.
 
 1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
 
-## <a name="configure-the-connection-for-experian"></a>Configurar la connexió per a Experian 
-
-Heu de ser administrador per configurar les connexions. Seleccioneu **Afegeix una connexió** en configurar un enriquiment *o* aneu a **Administració** > **Connexions** i seleccioneu **Configura** a la peça d'Experian.
-
-1. Seleccioneu **Introducció**.
-
-1. Introduïu un nom per a la connexió al quadre **Nom de visualització**.
-
-1. Introduïu l'identificador d'usuari, l'identificador del grup i el número de model vàlids per al compte de Secure Transport d'Experian.
-
-1. Reviseu i proporcioneu el vostre consentiment per a la **Privadesa de les dades i conformitat** seleccionant **Accepta**.
-
-1. Seleccioneu **Verifica** per validar la configuració.
-
-1. Després de completar la verificació, seleccioneu **Desa**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Subfinestra de configuració de connexió a Experian":::
+1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 
-Per iniciar el procés d'enriquiment, seleccioneu **Executa** a la barra d'ordres. També podeu deixar que el sistema executi l'enriquiment automàticament com a part d'una [actualització planificada](system.md#schedule-tab). El temps de processament depèn de la mida de les dades dels clients i dels processos d'enriquiment configurats per al vostre compte per Experian.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Després de completar el procés d'enriquiment, podeu revisar les dades dels perfils de clients acabats d'enriquir a **Els meus enriquiments**. A més, trobareu l'hora de l'última actualització i el nombre de perfils enriquits.
-
-Per accedir a una visualització detallada de cada perfil enriquit, seleccioneu **Visualitza les dades enriquides**.
+El **nombre de clients enriquits per camp** proporciona una desglossament en la cobertura de cada camp enriquit.
 
 ## <a name="next-steps"></a>Passos següents
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a Experian, permeteu la transferència de dades fora del límit de conformitat per al Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades segons la vostra instrucció, però sou responsable d'assegurar que Experian compleixi les obligacions de privadesa o seguretat que tingueu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

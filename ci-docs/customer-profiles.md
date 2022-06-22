@@ -1,7 +1,7 @@
 ---
 title: Veure perfils de client
 description: Obtingueu una visualització combinada de les dades unificades del client.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755769"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947034"
 ---
 # <a name="customer-profiles"></a>Perfils de client
 
@@ -55,9 +55,9 @@ Podeu filtrar els clients pels camps de l'entitat *Client*. De forma similar a l
 
 Seleccioneu qualsevol de les peces del client per obrir la **pàgina Detalls del client**. Aquesta visualització conté informació unificada del client seleccionat. Els detalls del client inclouen el contingut següent:
 
-**Peça del perfil del client**: aquesta peça mostra els diferents valors de l'entitat *Client* unificada. Si un camp no té cap valor per al perfil de client seleccionat, no es mostrarà. La peça està estructurada en seccions:
+**Peça del perfil del client**: aquesta peça mostra els diferents valors de l'entitat *Client* unificada. Si un camp no té valor per al perfil de client seleccionat, no es mostrarà excepte el camp d'adreça. La peça està estructurada en seccions:
 
-- A la primera secció es mostra un conjunt predefinit de camps seguit de tots els camps que formen part de l'índex de cerca i filtre. Tots els camps relacionats amb adreces es combinen en una única línia si el perfil conté aquests camps.
+- A la primera secció es mostra un conjunt predefinit de camps seguit de tots els camps que formen part de l'índex de cerca i filtre. Tots els camps relacionats amb l'adreça es combinen en una sola línia, que es mostra fins i tot si el perfil no conté informació d'adreça.
 - **Contactes d'aquest client**: als entorns dels comptes empresarials, veureu tots els contactes relacionats d'aquest client com la segona secció. Cada contacte es mostra amb els seus camps. Els camps buits estan amagats.
 - **Camps addicionals**: mostra la resta de camps del client seleccionat, tret dels identificadors.
 - **ID**: mostra tots els ID sota el nom de l'entitat corresponent. Els camps s'identifiquen com a ID per la seva semàntica, la qual cosa els classifica per categories com a tals.

@@ -1,7 +1,7 @@
 ---
 title: Ingereix les dades de Azure Synapse Analytics
 description: Utilitzeu una base de dades com a Azure Synapse font de dades al Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642274"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011415"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Connectar un Azure Synapse font de dades (previsualització)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Connectar un Azure Synapse Analytics font de dades (previsualització)
 
 Azure Synapse Analytics És un servei d'anàlisi empresarial que accelera el temps per obtenir estadístiques a través de magatzems de dades i sistemes de big data. Azure Synapse Analytics reuneix el millor de les tecnologies SQL utilitzades en l'emmagatzematge de dades empresarials, tecnologies Spark utilitzades per a big data, Data Explorer per a l'anàlisi de registres i sèries temporals, pipelines per a la integració de dades i ETL / ELT, i una integració profunda amb altres serveis de l'Azure com Power BI, Cosmos DB i AzureML.
 
@@ -24,16 +24,14 @@ Per obtenir més informació, vegeu [Azure Synapse visió general](/azure/synaps
 
 ## <a name="prerequisites"></a>Requisits previs
 
-S'han de complir els requisits previs següents per configurar la connexió des de Dynamics 365 Customer Insights a Azure Synapse.
-
 > [!IMPORTANT]
 > Assegureu-vos de definir totes les **assignacions de funcions** tal com es descriuen.  
 
-## <a name="prerequisites-in-customer-insights"></a>Requisits previs al Customer Insights
+**A Customer Insights**:
 
 * Teniu una funció d'administrador **a** Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights](permissions.md#assign-roles-and-permissions) del client.
 
-A l’Azure: 
+**In Azure**:
 
 - Una subscripció activa de l'Azure.
 
@@ -47,7 +45,7 @@ A l’Azure:
 
 - A l'àrea Azure Synapse de treball, el principal de *servei del Customer Insights* necessita **assignada la funció d'administrador del** Sinapsi. Per obtenir més informació, vegeu [Com configurar el control d'accés per a l'àrea de treball del Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Connecta't a bases de dades del llac de dades a Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Connecta't a la base de dades del data lake a Azure Synapse Analytics
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
@@ -55,14 +53,16 @@ A l’Azure:
 
 1. Trieu el **Azure Synapse Analytics mètode (Previsualització).**
 
-1. Proporcioneu un **Nom** per a la font de dades i seleccioneu **Següent** per crear la font de dades. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Quadre de diàleg per connectar-se a les dades de Synapse Analytics":::
+  
+1. Introduïu un **nom** per a la font de dades i una descripció **opcional**.
 
 1. Trieu una [connexió](connections.md) disponible o creeu-ne Azure Synapse Analytics una de nova.
 
-1. Trieu una **base de dades** del llac de l'àrea de treball connectada a la connexió seleccionada Azure Synapse Analytics i seleccioneu **Següent**.
+1. Trieu una **base de dades** de l'àrea de treball connectada a la connexió seleccionada Azure Synapse Analytics i seleccioneu **Següent**.
 
-1. Seleccioneu les entitats que voleu ingerir des de la base de dades connectada. 
+1. Seleccioneu les entitats que voleu ingerir de la base de dades connectada i seleccioneu **Endavant**.
 
-1. Opcionalment, trieu les entitats de dades per permetre l'elaboració de perfils de dades. 
+1. Opcionalment, trieu les entitats de dades per permetre l'elaboració de perfils de dades.
 
-1. Seleccioneu **Desa** per aplicar la selecció i iniciar la ingestió de les dades de la font de dades recentment creada enllaçada a les taules de la base de dades de Lake al Azure Synapse Analytics.
+1. Seleccioneu **Desa** per aplicar la selecció i iniciar la ingestió de les dades de la font de dades recentment creada enllaçada a les taules de la base de dades de Lake al Azure Synapse Analytics. S'obre **la pàgina Orígens** de dades que mostra la nova font de dades a **l'estat** d'actualització.

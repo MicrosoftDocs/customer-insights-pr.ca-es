@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642252"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947218"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportar la llista de segments i altres dades a l'Azure Data Lake Storage Gen2 (versió preliminar)
 
@@ -21,11 +21,9 @@ Emmagatzemeu les dades del Customer Insights en un compte del Data Lake Storage 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-1. Per a l'Azure Data Lake Storage Gen2 podeu triar entre [rendiment estàndard i nivell de rendiment Premium](/azure/storage/blobs/create-data-lake-storage-account) quan esteu creant un compte d'emmagatzematge per al vostre emmagatzematge de dades. Si trieu el nivell de rendiment prèmium, seleccioneu els blobs en bloc prèmium com a tipus de compte. 
+1. Per a l'Azure Data Lake Storage Gen2 podeu triar entre [rendiment estàndard i nivell de rendiment Premium](/azure/storage/blobs/create-data-lake-storage-account) quan esteu creant un compte d'emmagatzematge per al vostre emmagatzematge de dades. Si trieu el nivell de rendiment prèmium, seleccioneu els blobs en bloc prèmium com a tipus de compte.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar la connexió a l'Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar la connexió a l'Azure Data Lake Storage Gen2
 
 1. Aneu a **Administració** > **Connexions**.
 
@@ -39,7 +37,7 @@ Emmagatzemeu les dades del Customer Insights en un compte del Data Lake Storage 
     - Per aprendre a crear un compte d'emmagatzematge per utilitzar-lo amb l'Azure Data Lake Storage Gen2, vegeu [Crear un compte d'emmagatzematge](/azure/storage/blobs/create-data-lake-storage-account). 
     - Per obtenir més informació sobre el nom del compte i la clau del compte d'emmagatzematge de l'Azure Data Lake Gen2, vegeu [Administrar la configuració del compte d'emmagatzematge al portal de l'Azure](/azure/storage/common/storage-account-manage).
 
-1. Seleccioneu **Desa** per completar la connexió. 
+1. Seleccioneu **Desa** per completar la connexió.
 
 ## <a name="configure-an-export"></a>Configurar una exportació
 
@@ -57,8 +55,12 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab).
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand).
 
-Les dades exportades s'emmagatzemen al contenidor d'emmagatzematge de l'Azure Data Lake Gen 2 que heu configurat. 
+Les dades exportades s'emmagatzemen al contenidor d'emmagatzematge de l'Azure Data Lake Gen 2 que heu configurat.
+
+> [!TIP]
+> L'exportació d'entitats que contenen una gran quantitat de dades pot donar lloc a diversos fitxers CSV a la mateixa carpeta per a cada exportació. La divisió de les exportacions es produeix per raons de rendiment per minimitzar el temps que triga una exportació a completar-se.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

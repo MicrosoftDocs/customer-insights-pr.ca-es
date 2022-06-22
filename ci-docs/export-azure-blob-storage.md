@@ -1,19 +1,19 @@
 ---
 title: Exportar dades del Customer Insights a un Emmagatzematge blob de l'Azure
 description: Apreneu a configurar la connexió i exportar a l'Emmagatzematge blob.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757374"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947126"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar la llista de segments i altres dades a l'Emmagatzematge blob de l'Azure (versió preliminar)
 
@@ -58,16 +58,19 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab).     
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab).
 
-També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand).
 
 Les dades exportades s'emmagatzemen al contenidor de l'Emmagatzematge blob que heu configurat. Els següents camins de carpeta es creen automàticament al contenidor:
 
 - Per a les entitats i entitats d'origen generades pel sistema:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Exemple: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > L'exportació d'entitats que contenen una gran quantitat de dades pot donar lloc a diversos fitxers CSV a la mateixa carpeta per a cada exportació. La divisió de les exportacions es produeix per raons de rendiment per minimitzar el temps que triga una exportació a completar-se.
+
 - El model.json de les entitats exportades estarà al nivell %ExportDestinationName%.  
   - Exemple: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

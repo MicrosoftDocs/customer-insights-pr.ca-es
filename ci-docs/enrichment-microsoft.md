@@ -1,5 +1,5 @@
 ---
-title: Enriquir els perfils de client amb dades de Microsoft
+title: Enriquir perfils de clients amb marques i dades d'interessos de Microsoft
 description: Utilitzeu dades propietàries de Microsoft per enriquir les vostres dades de clients amb afinitats i compartir la veu.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642260"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953753"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquir perfils de clients amb afinitats i quota de veu (previsualització)
 
 Utilitzeu les dades propietàries de Microsoft per enriquir les dades dels clients amb afinitats de marca, afinitats d'interessos i quota de veu (SoV). Aquestes afinitats i SoV es basen en dades de persones amb dades demogràfiques similars als teus clients. Aquesta informació t'ajuda a entendre millor i segmentar els teus clients en funció de les seves afinitats o SoV a marques i interessos específics.
-
-Aneu a **DataEnrichment** > **per** [configurar i visualitzar enriquiments](enrichment-hub.md).
-
-Per configurar les afinitats de marca i l'enriquiment del SoV, aneu a la **pestanya Descobreix** i seleccioneu **Enriqueix les meves dades** a la **peça Marques**.
-
-Per configurar les afinitats d'interessos i l'enriquiment del SoV, aneu a la **pestanya Descobreix** i seleccioneu **Enriqueix les meves dades** a la **peça Interessos**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Peces de marques i interessos.](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Com determinem les afinitats i el SoV
 
@@ -45,7 +36,6 @@ Utilitzem les dades de cerca en línia de Microsoft per trobar afinitats i SoV p
 A cada perfil de client enriquit, proporcionem dos valors relacionats: el nivell d'afinitat i la puntuació d'afinitat. Aquests valors us ajuden a determinar la robustesa d'afinitat del segment demogràfic d'aquest perfil, d'una marca o interès, en comparació amb altres segments demogràfics.
 
 El *nivell d'afinitat* consta de quatre nivells i una *puntuació d'afinitat* es calcula a una escala de 100 punts que s'assigna als nivells d'afinitat.
-
 
 |Nivell d'afinitat |Puntuació d'afinitat  |
 |---------|---------|
@@ -64,78 +54,65 @@ Calculem sov en una escala de 100 punts. El SoV total en totes les marques o int
 
 Actualment, admeten a les següents opcions de país o regió: Austràlia, Canadà (anglès), França, Alemanya, Regne Unit o Estats Units (anglès).
 
-Per seleccionar un país o regió, obriu **Enriquiment de marques** o **Enriquiment d'interessos** i seleccioneu **Canvia** al costat de **País/Regió**. A la subfinestra **Configuració de país o regió**, trieu una opció i seleccioneu **Aplica**.
+## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
-### <a name="implications-related-to-country-selection"></a>Implicacions relacionades amb la selecció de països o regions
+1. Aneu a **Dades** > **Enriquiment** i seleccioneu la pestanya **Descobreix**.
 
-- Quan [trieu les vostres pròpies marques](#define-your-brands-or-interests), el sistema ofereix suggeriments basats en el país o regió seleccionat.
+   - Per configurar les afinitats de marca i l'enriquiment del SoV, seleccioneu **Enriqueix les meves dades** a la **peça Marques**.
 
-- A l'hora de [triar un sector](#define-your-brands-or-interests), obtindreu les marques o els interessos més rellevants en funció del país o regió seleccionat.
+   - Per configurar les afinitats d'interessos i l'enriquiment del SoV, seleccioneu **Enriqueix les meves dades** a la **peça Interessos**.
 
-- En [enriquir els perfils](#refresh-enrichment), enriquirem tots els perfils de clients per als quals obtenim dades per a les marques i els interessos seleccionats, incloent-hi els perfils que no es troben al país o regió seleccionats. Per exemple, si heu seleccionat Alemanya, enriquirem els perfils ubicats als Estats Units si tenim dades disponibles per a les marques i els interessos seleccionats als EUA.
+   > [!div class="mx-imgBorder"]
+   > ![Peces de marques i interessos.](media/BrandsInterest-tile-Hub.png "Peces de marques i interessos")
 
-## <a name="configure-enrichment"></a>Configurar l'enriquiment
+1. Reviseu la visió general i, a continuació, seleccioneu **Següent**.
 
-Una experiència guiada us ajuda a través de la configuració dels enriquiments. 
+1. Per canviar el país o la regió, selecciona **Canvia** al costat d'Un **país o una regió**. A la **subfinestra** Configuració país o regió, trieu un [país o regió](#supported-countriesregions) compatible i seleccioneu **Aplica**.
 
-### <a name="define-your-brands-or-interests"></a>Definir les marques o els interessos
+   > [!NOTE]
+   > Quan trieu les vostres pròpies marques, el sistema ofereix suggeriments basats en el país o regió seleccionat. A l'hora de triar un sector, obtindreu les marques o els interessos més rellevants en funció del país o regió seleccionat.
 
-Trieu fins a cinc marques o interessos utilitzant una opció o totes dues:
+1. Trieu fins a cinc marques o interessos utilitzant una opció o totes dues:
 
-- **Sector**: seleccioneu el sector a la llista desplegable i trieu entre les marques o els interessos principals del sector.
-- **Trieu la vostra pròpia**: introduïu una marca o un interès rellevant per a la vostra organització i trieu entre els suggeriments de coincidència. Si no enumerem una marca o un interès que cerqueu, envieu-nos els vostres comentaris mitjançant l'enllaç **Suggereix**.
+   - **Sector**: seleccioneu el sector a la llista desplegable i trieu entre les marques o els interessos principals del sector.
+   - **Trieu la vostra pròpia**: introduïu una marca o un interès rellevant per a la vostra organització i trieu entre els suggeriments de coincidència. Si no enumerem una marca o un interès que cerqueu, envieu-nos els vostres comentaris mitjançant l'enllaç **Suggereix**.
 
-### <a name="review-enrichment-preferences"></a>Revisar les preferències de l'enriquiment
+1. Seleccioneu **Endavant** i reviseu les preferències d'enriquiment per defecte i actualitzeu-les segons calgui.
 
-Reviseu les vostres preferències d'enriquiment per defecte i actualitzeu-les segons calgui.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de pantalla de la finestra de preferències d'enriquiment.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de pantalla de la finestra de preferències d'enriquiment.":::
+1. Seleccioneu **Següent**.
 
-### <a name="select-entity-to-enrich"></a>Seleccionar l'entitat que voleu enriquir
+1. Seleccioneu el **conjunt de dades del client** i trieu el perfil o el segment que voleu enriquir amb les dades de Microsoft. L'entitat *Client* enriqueix tots els vostres perfils de clients, mentre que un segment enriqueix només els perfils de clients continguts en aquest segment.
 
-Seleccioneu **Entitat** enriquida i trieu el conjunt de dades que voleu enriquir amb les dades de Microsoft. Podeu seleccionar l'entitat Client per enriquir tots els perfils de client o seleccionar una entitat de segment per enriquir només els perfils de client del segment.
+1. Seleccioneu **Següent**.
 
-### <a name="map-your-fields"></a>Assignació dels camps
+1. Assigneu els camps de l'entitat de client unificada a les dades de Microsoft.
 
-Assigneu els camps de l'entitat de client unificada per definir el segment demogràfic que voleu que el sistema utilitzi per enriquir les dades de client. Assigneu els atributs País/Regió i, com a mínim, Data de naixement o Gènere. A més, heu d'assignar almenys un entre Ciutat (i Província o estat) o Codi postal. Seleccioneu **Edita** per definir l'assignació dels camps i seleccioneu **Aplica** quan acabeu. Seleccioneu **Desa** per completar l'assignació de camps.
+   > [!NOTE]
+   > Es requereixen com a mínim atributs de data de naixement o de gènere. Es requereix un país o regió i, com a mínim, ciutat (i estat/província) o codi postal. Recomanem que la data de naixement es converteixi al tipus DateTime durant la ingestió de dades. Com a alternativa, pot ser una cadena en format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" or "aaaa-MM-ddTHH:mm:ss".
 
-S'admeten els valors i els formats que es mostren a continuació; els valors no distingeixen entre majúscules i minúscules:
+1. Seleccioneu **Següent** per completar l'assignació de camp.
 
-- **Data de naixement**: us recomanem que la data de naixement es converteixi al tipus Data/Hora durant la ingestió de dades. Com a alternativa, pot ser una cadena en format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" or "aaaa-MM-ddTHH:mm:ss".
-- **Gènere**: masculí, femení, desconegut.
-- **Codi postal**: codis postals de cinc dígits per als Estats Units, codi postal estàndard a tot el món.
-- **Ciutat**: nom de la ciutat en anglès.
-- **Província o estat**: abreviatura de dues lletres per als Estats Units i Canadà. Abreviatura de dues o tres lletres per a Austràlia. No s'aplica per a França, Alemanya o el Regne Unit.
-- **País o regió**:
+1. Proporcioneu un nom per a l'enriquiment. El **nom** de l'entitat Sortida se selecciona automàticament.
 
-  - US: Estats Units d'Amèrica, Estats Units, EUA
-  - CA: Canadà, CA
-  - GB: Regne Unit, UK, Gran Bretanya, GB, Regne Unit de la Gran Bretanya i Irlanda del Nord, Regne Unit de la Gran Bretanya
-  - AU: Austràlia, AU, Commonwealth d'Austràlia
-  - FR: França, FR, República Francesa
-  - DE: Alemanya, Alemany, Deutschland, Allemagne, DE, República Federal d'Alemanya, República d'Alemanya
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pàgina de revisió i nom.":::
 
-## <a name="review-and-name-the-enrichment"></a>Revisar i donar nom a l'enriquiment
+1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
 
-Finalment, podeu revisar la informació i proporcionar un nom per a l'enriquiment.
+1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pàgina de revisió i nom.":::
-
-## <a name="refresh-enrichment"></a>Actualitzar l'enriquiment
-
-Executeu l'enriquiment un cop hàgiu configurat les marques, els interessos i l'assignació de camps de les dades demogràfiques. Per iniciar el procés, seleccioneu **Executa** a la pàgina de configuració de l'interès o la marca. A més, podeu deixar que el sistema executi l'enriquiment automàticament com a part d'una actualització planificada.
-
-En funció de la mida de les dades dels clients, l'execució d'enriquiment pot trigar uns quants minuts a completar-se.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   En enriquir els perfils, enriquirem tots els perfils de clients per als quals obtenim dades per a les marques i els interessos seleccionats, incloent-hi els perfils que no es troben al país o regió seleccionats. Per exemple, si heu seleccionat Alemanya, enriquirem els perfils ubicats als Estats Units si tenim dades disponibles per a les marques i els interessos seleccionats als EUA.
 
 ## <a name="enrichment-results"></a>Resultats de l'enriquiment
 
-Després de l'execució del procés d'enriquiment, aneu a **Els meus enriquiments** per revisar el nombre total de clients enriquits i un desglossament de les marques o els interessos dels perfils de clients enriquits.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Visualització prèvia dels resultats després d'executar el procés d'enriquiment.":::
 
-Trobareu un gràfic amb el nombre de perfils de clients enriquits al llarg del temps i les visualitzacions prèvies de les entitats enriquides. Reviseu les dades enriquides seleccionant Mostra'n més **als gràfics Nivell** d'afinitat **o**"Compartir de veu **".** Les dades enriquides per a marques van a les **entitats BrandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft**. Les dades per interessos es troba a les **entitats InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft**. També trobareu aquestes entitats enumerades al grup **Enriquiment** a **Dades** > **Entitats**.
+Els resultats inclouen **el nivell d'afinitat** o **la quota dels gràfics de veu**.
+
+Les entitats creades a partir dels enriquiments s'enumeren al grup d'enriquiment **a** **Entitats de** > **dades**. Les dades enriquides per a marques van a les **entitats BrandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft**. Les dades per interessos es troba a les **entitats InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veure dades d'enriquiment a la targeta del client
 

@@ -1,19 +1,19 @@
 ---
 title: Exportar dades del Customer Insights a Snapchat
 description: Apreneu a configurar la connexió i exportar a Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642364"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947264"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segments a Snapchat (versió preliminar)
 
@@ -21,7 +21,8 @@ Exporteu segments de perfils de client unificats a Snapchat i utilitzeu-los per 
 
 ## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
 
--   Teniu un [compte d'empresa de Snapchat](https://business.snapchat.com/), un [compte d'anuncis de Snapchat](https://ads.snapchat.com/) i les credencials d'administrador corresponents.
+-   Teniu un [compte d'empresa de Snapchat](https://business.snapchat.com/), un [compte d'anuncis de Snapchat](https://ads.snapchat.com/) i les credencials d'administrador corresponents. Com a mínim, heu de ser membre d'un compte d'organització i d'un gestor de dades d'un compte d'anunci concret. 
+-   Teniu almenys un públic al gestor de públic de Snapchat del tipus SAM (Snap Audience Match). 
 -   Heu [configurat segments](segments.md) a Customer Insights.
 -   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
@@ -60,7 +61,7 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Snapchat. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
 
-1. Introduïu l'[**Identificador de públic de Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Introduïu l'identificador [**de segment/públic de Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences). L'identificador del públic es pot trobar a l'URL després de seleccionar el públic al Gestor de públics de Snapchat. 
 
 1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Snapchat.
 

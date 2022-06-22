@@ -1,19 +1,19 @@
 ---
 title: Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD | MicrosoftDocs
 description: Responeu a les sol·licituds de drets de subjecte de dades per al Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808534"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947356"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Sol·licituds de drets de subjecte de dades (DSR) a l'RGPD
 
@@ -77,11 +77,5 @@ Un administrador d'inquilins pot seguir aquests passos per exportar dades:
 1. Envieu un missatge de correu electrònic a D365CI@microsoft.com especificant l'adreça de correu electrònic de l'usuari a la sol·licitud. L'equip del Customer Insights enviarà un missatge de correu electrònic a l'adreça electrònica de l'administrador de l'inquilí registrada demanant la confirmació per exportar les dades.
 2. Reconeixeu la confirmació per exportar les dades de l'usuari sol·licitat.
 3. Rebeu les dades exportades a través de l'adreça electrònica de l'administrador d'inquilins.
-
-## <a name="consent-management-preview"></a>Gestió de consentiments (previsualització)
-
-La capacitat de gestió del consentiment no recopila dades de l'usuari directament. Només importa i processa dades de consentiment que els usuaris proporcionen en altres aplicacions.
-
-Per eliminar les dades de consentiment sobre usuaris específics, suprimiu-les a les fonts de dades ingerides a la capacitat de gestió del consentiment. Després d'actualitzar el font de dades, les dades suprimides també se suprimiran al Centre de consentiment. Les aplicacions que utilitzen l'entitat de consentiment també suprimiran les dades que s'han suprimit a l'origen després d'una [actualització](system.md#refresh-processes). Recomanem actualitzar les fonts de dades ràpidament després de respondre a una sol·licitud de l'interessat per eliminar les dades de l'usuari de tots els altres processos i aplicacions.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

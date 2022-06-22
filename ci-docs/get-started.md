@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833527"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011967"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Introducció al Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ La primera vegada que inicieu la sessió al Customer Insights, configureu la con
 
 Els perfils unificats són els fonaments per obtenir informació i dur a terme accions sobre les dades. Introduïu dades de diversos orígens i executeu el procés d'unificació de dades per combinar perfils unificats. Especifiqueu les relacions entre les entitats ingerides i utilitzeu funcions d'enriquiment per afegir informació als perfils.
 
-1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre [Power Query connectors](connect-power-query.md), una [carpeta](connect-common-data-model.md) del Model de dades comú o [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Ingeriu dades creant fonts de dades a partir de diverses opcions. Trieu entre [Azure Data Lake Storage, inclòs el Model](connect-common-data-model.md) de dades comú, [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) o [Power Query connectors](connect-power-query.md).
 
 1. Executeu el procés d'unificació [de dades identificant els camps](data-unification.md) d'origen [, suprimint](map-entities.md) duplicats, [condicions](remove-duplicates.md) coincidents [i](match-entities.md) unificant camps [.](merge-entities.md)
 

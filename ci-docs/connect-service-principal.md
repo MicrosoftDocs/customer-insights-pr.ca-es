@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833366"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011829"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connectar-se a un compte de l'Azure Data Lake Storage mitjançant una entitat de seguretat de servei de l'Azure
 
@@ -51,7 +51,13 @@ Abans de crear un nou principi de servei per al Customer Insights, comproveu si 
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedir permisos a l'entitat de servei per accedir al compte d'emmagatzematge
 
-Aneu al portal de l'Azure per concedir permisos al principal de servei del compte d'emmagatzematge que voleu utilitzar al Customer Insights.
+Aneu al portal de l'Azure per concedir permisos al principal de servei del compte d'emmagatzematge que voleu utilitzar al Customer Insights. S'ha d'assignar una de les funcions següents al compte d'emmagatzematge o al contenidor:
+
+|Credencial|Requisits|
+|----------|------------|
+|Usuari connectat actualment|**Funció**: Lector de dades blob d'emmagatzematge, col·laborador de blob d'emmagatzematge o propietari de blob d'emmagatzematge.<br>**Nivell**: els permisos es poden concedir al compte d'emmagatzematge o al contenidor.</br>|
+|Principal del servei d'informació del client -<br>Utilitzar Azure Data Lake Storage com a font de dades</br>|Opció 1<ul><li>**Funció**: Lector de dades blob d'emmagatzematge, col·laborador de dades blob d'emmagatzematge o propietari de dades blob d'emmagatzematge.</li><li>**Nivell**: els permisos s'han de concedir al compte d'emmagatzematge.</li></ul>Opció 2 *(sense compartir l'accés del Principal del servei al compte d'emmagatzematge)*<ul><li>**Funció 1**: Lector de dades blob d'emmagatzematge, col·laborador de dades blob d'emmagatzematge o propietari de dades blob d'emmagatzematge.</li><li>**Nivell**: Els permisos s'han de concedir al contenidor.</li><li>**Funció 2**: Delegat de dades del blob d'emmagatzematge.</li><li>**Nivell**: els permisos s'han de concedir al compte d'emmagatzematge.</li></ul>|
+|Principal del servei d'informació del client - <br>S'utilitza Azure Data Lake Storage com a sortida o destinació</br>|Opció 1<ul><li>**Funció**: Col·laborador de dades del blob d'emmagatzematge o propietari del blob d'emmagatzematge.</li><li>**Nivell**: els permisos s'han de concedir al compte d'emmagatzematge.</li></ul>Opció 2 *(sense compartir l'accés del Principal del servei al compte d'emmagatzematge)*<ul><li>**Funció**: Col·laborador de dades del blob d'emmagatzematge o propietari del blob d'emmagatzematge.</li><li>**Nivell**: Els permisos s'han de concedir al contenidor.</li><li>**Funció 2**: Delegat del blob d'emmagatzematge.</li><li>**Nivell**: els permisos s'han de concedir al compte d'emmagatzematge.</li></ul>|
 
 1. Aneu al [portal d'administració de l'Azure](https://portal.azure.com) i inicieu-hi la sessió a la vostra organització.
 
@@ -62,7 +68,7 @@ Aneu al portal de l'Azure per concedir permisos al principal de servei del compt
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de pantalla que mostra el portal de l'Azure mentre afegiu una assignació de funcions.":::
 
 1. A la subfinestra **Afegeix una assignació de funcions**, definiu les propietats següents:
-   - Funció: **Col·laborador de dades de Blob d'emmagatzematge**
+   - Funció: Lector de dades blob d'emmagatzematge, col·laborador de blob d'emmagatzematge o propietari de blob d'emmagatzematge basat en les credencials enumerades anteriorment.
    - Assignació d'accés a: **Usuari, grup o entitat de servei**
    - Seleccioneu membres: **Dynamics 365 AI for Customer Insights** (el principal de [servei](#create-a-new-service-principal) que heu buscat anteriorment en aquest procediment)
 

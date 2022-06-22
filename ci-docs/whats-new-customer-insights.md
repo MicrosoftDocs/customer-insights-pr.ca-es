@@ -1,19 +1,19 @@
 ---
-title: Característiques noves i previstes
+title: Característiques noves i actualitzades
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833618"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843335"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Actualitzacions de maig de 2022
+
+Les actualitzacions de maig de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="updated-data-unification-experience"></a>Experiència d'unificació de dades actualitzada
+
+ La unificació de dades us permet unificar fonts de dades una vegada dispars en un únic conjunt de dades mestre que proporciona una visualització unificada d'aquestes dades. Les dades es poden unificar en una sola entitat o en diverses entitats. En primer lloc, seleccioneu [entitats i camps](map-entities.md) d'origen, [suprimiu registres](remove-duplicates.md) duplicats, especifiqueu regles per a [les condicions coincidents](match-entities.md) i definiu quins [camps s'han d'incloure als perfils de client unificats](merge-entities.md).
+
+Per obtenir més informació, vegeu Visió [general de la unificació de dades](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Pàgina inicial actualitzada a Customer Insights
+
+**Home** us guia a través del procés de configuració de les funcions clau i proporciona una visió general dels segments, mesures i dades d'enriquiment. Hem refrescat l'experiència per proporcionar informació més rellevant d'un cop d'ull.
+
+Per obtenir més informació, vegeu [Explorar estadístiques](home.md) del client.
+
+### <a name="track-usage-of-a-segment"></a>Seguiment de l'ús d'un segment
+
+Ara [podeu fer un seguiment de l'ús d'un segment](segments.md#track-usage-of-a-segment) a les aplicacions, que es basen en l'organització Dataverse connectada amb el Customer Insights. Per als [segments del Customer Insights utilitzats en els recorreguts del client del Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), el sistema us informa sobre l'ús d'aquest segment.
+
+### <a name="export-to-criteo"></a>Exporta a Criteo
+
+Criteo és una plataforma en línia que ajuda els usuaris a gestionar la publicitat digital. Ara podeu exportar segments de perfils de clients unificats per generar campanyes, proporcionar màrqueting per correu electrònic i utilitzar grups específics de clients amb Criteo.
+
+Per obtenir més informació, vegeu [Exportar segments a Criteo (previsualització)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Estructura de documentació refinada per a la creació d'entorns
+
+Hem revisat els documents d'ajuda relacionats amb la creació i gestió d'entorns al Customer Insights. Els articles ara s'agrupen sota el node Environments de l'índex de continguts. Els articles reestructurats proporcionen més orientació per a les diferents maneres de configurar entorns i tenir una estructura més clara. Si teniu comentaris per compartir, feu-nos-ho saber a través dels controls cap al final dels articles d'ajuda.
+
+Per obtenir més informació, vegeu [Com: Crear un entorn](create-environment.md) nou.
 
 ## <a name="april-2022-updates"></a>Actualitzacions d'abril de 2022
 
@@ -33,7 +64,7 @@ Les actualitzacions a l'abril de 2022 inclouen noves funcions, actualitzacions d
 
 Dun &Bradstreet proporciona dades comercials, anàlisis i estadístiques per a empreses. Permet enriquir les dades als clients amb perfils de clients unificats per a les empreses. Els enriquiments inclouen atributs com el número DUNS, la mida de l'empresa, la ubicació, la indústria i molt més.
 
-Per obtenir més informació, vegeu [Enriquiment de perfils d'empresa amb Dun &Bradstreet (Vista prèvia)](enrichment-dnb.md).
+Per obtenir més informació, vegeu [Enriquiment de perfils d'empresa amb Dun &Bradstreet (Preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defineix el tipus de mesura en crear un compàs nou
 
@@ -55,7 +86,7 @@ Les actualitzacions de març de 2022 inclouen noves funcions, actualitzacions de
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar identificadors personals a les vostres dades de client al gràfic d'identitat d'AbiliTec i rebre identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels clients.
 
-Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
+Per obtenir més informació, vegeu [Enriquer perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organitzar segments i mesures amb etiquetes i filtres
 
@@ -105,7 +136,7 @@ Per obtenir més informació, vegeu [Connectar una Azure Synapse font de dades (
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar identificadors personals a les vostres dades de client al gràfic d'identitat d'AbiliTec i rebre identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels clients.
 
-Per obtenir més informació, vegeu [Enriqueix els perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
+Per obtenir més informació, vegeu [Enriquer perfils de clients amb dades d'identitat de LiveRamp (Previsualització)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (Vista prèvia)
 
@@ -123,7 +154,7 @@ Per obtenir més informació, consulta [Canviar el propietari d'un entorn](manag
 
 La preparació de dades ara mostra la raó de la corrupció de tots els camps amb dades malmeses. La informació es proporciona a nivell de registre individual per facilitar la identificació. 
 
-Per obtenir més informació, vegeu [Orígens de dades malmesos](entities.md#corrupted-data-sources).
+Per obtenir més informació, vegeu [Orígens](entities.md#corrupted-data-sources) de dades malmesos.
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Final de la visualització prèvia per a les funcions d'informes a la capacitat d'informació d'interacció
 

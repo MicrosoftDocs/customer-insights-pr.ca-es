@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833756"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011875"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntes més freqüents sobre la versió de prova del Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Després d'iniciar la sessió a la instància de pagament del Customer Insights 
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Quins són els límits i les quotes de la versió de prova?
 
-- No podeu utilitzar el vostre propi compte d'emmagatzematge de l'Azure Data Lake per emmagatzemar dades de sortida durant una versió de prova del Customer Insights. No obstant això, podeu ingerir dades d'un compte del Data Lake Storage.
+- No podeu utilitzar el vostre propi Azure Data Lake Storage compte per emmagatzemar dades de sortida durant una versió de prova del Customer Insights. Tanmateix, podeu ingerir dades d'un compte d'emmagatzematge de data lake.
 - Podeu emmagatzemar fins a 3 GB de dades a l'entorn del Dataverse que es proveeix automàticament quan inicieu una versió de prova del Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Preguntes específiques del Customer Insights
@@ -83,7 +83,7 @@ La majoria de les característiques de les capacitats del Customer Insights esta
 
 No hi ha disponibles **les característiques següents**:
 
-- No podeu crear entorns nous que utilitzin el vostre propi compte de l'Azure Data Lake Storage.
+- No podeu crear entorns nous que utilitzin el vostre propi Azure Data Lake Storage compte.
 - No podeu suprimir l'entorn de prova.
 
 ### <a name="how-long-does-the-trial-last"></a>Quant de temps dura la versió de prova?

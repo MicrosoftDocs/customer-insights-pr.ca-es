@@ -1,19 +1,19 @@
 ---
 title: Exporta les dades de Customer Insights als amfitrions SFTP (conté vídeo)
 description: Apreneu a configurar la connexió i exportar a una ubicació SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642248"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947172"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segments i altres dades a SFTP (versió preliminar)
 
@@ -28,8 +28,8 @@ Utilitzeu les dades de client en aplicacions de tercers exportant-les a una ubic
 ## <a name="known-limitations"></a>Limitacions conegudes
 
 - Les destinacions SFTP darrere dels tallafocs actualment no són compatibles. 
-- El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor. 
-- L'exportació d'entitats amb fins a 100 milions de perfils de clients pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada de dos nuclis de CPU i 1 Gb de memòria. 
+- El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor.
+- L'exportació d'entitats amb fins a 100 milions de perfils de clients pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada de dos nuclis de CPU i 1 Gb de memòria.
 
 ## <a name="set-up-connection-to-sftp"></a>Configuració de la connexió a SFTP
 
@@ -64,13 +64,17 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 1. Seleccioneu les entitats, per exemple, els segments que voleu exportar.
 
    > [!NOTE]
-   > Cada entitat seleccionada es divideix en fins a cinc fitxers de sortida en exportar-se. 
+   > Cada entitat seleccionada es divideix en fins a cinc fitxers de sortida en exportar-se.
 
 1. Seleccioneu **Desa**.
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
+L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab).
+També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> L'exportació d'entitats que contenen una gran quantitat de dades pot donar lloc a diversos fitxers CSV a la mateixa carpeta per a cada exportació. La divisió de les exportacions es produeix per raons de rendiment per minimitzar el temps que triga una exportació a completar-se.
 
 ## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 

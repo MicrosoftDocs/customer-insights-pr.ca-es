@@ -1,7 +1,7 @@
 ---
 title: Actualitza la configuració de la unificació
 description: Actualitzeu regles duplicades, regles de concordança o camps unificats a la configuració d'unificació.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755578"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844028"
 ---
 # <a name="update-the-unification-settings"></a>Actualitza la configuració de la unificació
 
@@ -43,8 +43,9 @@ Per revisar o canviar qualsevol configuració d'unificació un cop s'hagi creat 
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de pantalla de la pàgina Unifica les dades amb les opcions d'Unificar ressaltats.":::
 
-   - Per actualitzar el perfil de client unificat (amb dependències o sense), vegeu [Executa actualitzacions al perfil](#run-updates-to-the-unified-customer-profile) de client.
-   - Per avaluar la qualitat de les condicions de coincidència sense actualitzar el perfil unificat, vegeu [Executa les condicions](#run-matching-conditions) de coincidència. L'opció **Executa les condicions coincidents** no es mostra per a una sola entitat.
+   - [Executeu les condicions](#run-matching-conditions) de coincidència per avaluar ràpidament la qualitat de les condicions de coincidència (regles de deduplicació i coincidència) sense actualitzar el perfil unificat. L'opció **Executa les condicions coincidents** no es mostra per a una sola entitat.
+   - [Unifiqueu els perfils](#run-updates-to-the-unified-customer-profile) de clients per executar condicions coincidents i actualitzar l'entitat de perfil de client unificada sense afectar dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació](system.md#schedule-tab) d'actualització.
+   - [Unifiqueu els perfils de clients i les dependències](#run-updates-to-the-unified-customer-profile) per executar condicions coincidents i actualitzar l'entitat de perfil de client unificat i totes les dependències (com ara enriquiments, segments o mesures). Tots els processos es tornen a executar automàticament.
 
 ## <a name="edit-source-fields"></a>Edita els camps d'origen
 
@@ -88,7 +89,7 @@ No podeu suprimir un atribut o una entitat si ja s'han unificat.
 
    1. Seleccioneu **Fet**.
 
-1. Seleccioneu **Endavant** per fer canvis a les condicions coincidents o seleccioneu **Desa i tanca** i torna a [Actualitza la configuració de la unificació](#update-the-unification-settings).
+1. Seleccioneu **Endavant** per fer canvis a les condicions coincidents o seleccioneu **Desa i tanca** i torna a [Actualitza la configuració de](#update-the-unification-settings) la unificació.
 
 ## <a name="manage-match-rules"></a>Administra les regles de coincidència
 
@@ -135,11 +136,13 @@ Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència. No po
 
 ## <a name="run-matching-conditions"></a>Executa les condicions de coincidència
 
+Les condicions coincidents només executen la deduplicació i les regles de concordança i actualitza les *entitats Deduplication_** i *ConflationMatchPair*.
+
 1. A la **pàgina Unificació de** > **dades**, seleccioneu **Executa només** les condicions coincidents.
 
-   Les **peces Registres** duplicats i **condicions** coincidents mostren **les peces a** la cua o **l'actualització**.
+   Les **peces Registres** duplicats i **Condicions** coincidents mostren **l'estat de cua** o **actualització**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Quan finalitzi el procés de coincidència, seleccioneu **Edita** a la **peça Condicions coincidents**.
 
@@ -153,10 +156,12 @@ Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència. No po
 
 1. A la **pàgina Unificació de** > **dades**, seleccioneu:
 
-   - **Unificar perfils de** clients: actualitza l'entitat de perfil de client unificada sense afectar dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació](system.md#schedule-tab) d'actualització.
+   - **Unificar perfils** de clients: executa condicions coincidents i actualitza l'entitat de perfil de client unificada sense afectar dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació](system.md#schedule-tab) d'actualització.
 
-   - **Unificar perfils de clients i dependències**: actualitza el perfil unificat i totes les dependències. Tots els processos es tornen a executar automàticament. Després que s'hagin completat tots els processos downstream, el perfil del client reflecteix les dades actualitzades.
+   - **Unificar perfils de clients i dependències**: executa condicions coincidents i actualitza el perfil unificat i totes les dependències. Tots els processos es tornen a executar automàticament. Després que s'hagin completat tots els processos downstream, el perfil del client reflecteix les dades actualitzades.
 
-   Els **registres** duplicats, **les condicions coincidents i** les **peces de camps** de client unificats mostren **les peces a** la cua o **l'actualització**.
+   Els **registres** duplicats, **les condicions coincidents i** les **peces de camps** de client unificats mostren **l'estat de** cua o **actualització**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Els resultats d'una visualització d'execució correcta a la **pàgina Unify** que mostra el nombre de perfils de clients unificats.
