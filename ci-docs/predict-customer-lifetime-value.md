@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642414"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055202"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predicció del valor del cicle de vida del client (CLV)
 
-Predieu el valor potencial (ingressos) que els clients actius individuals aportaran al vostre negoci en un període de temps futur definit. Aquesta característica us pot ajudar a aconseguir diversos objectius: 
+Predieu el valor potencial (ingressos) que els clients actius individuals aportaran al vostre negoci en un període de temps futur definit. Aquesta característica us pot ajudar a aconseguir diversos objectius:
 - Identificar clients d'alt valor i processar aquesta informació
 - Crear segments de clients estratègics basats en el seu valor potencial per executar campanyes personalitzades amb objectius de vendes, màrqueting i assistència
 - Guiar el desenvolupament de productes centrant-vos en característiques que augmentin el valor del client
@@ -74,7 +74,7 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear una predicció del valor de vida del client
 
-1. Aneu a **Intel·ligènciaPredictions** > **·**.
+1. Anem a les prediccions d'intel **·ligència** > **·**.
 
 1. Seleccioneu la peça **Valor de vida del client** i seleccioneu **Utilitza el model**. 
 

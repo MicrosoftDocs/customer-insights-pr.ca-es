@@ -1,5 +1,5 @@
 ---
-title: Connector del LiveRamp
+title: Exportar segments a LiveRamp (versió preliminar)
 description: Apreneu a configurar la connexió i exportar a LiveRamp.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 973f69c94c625fe4ec543ca5fb57289c4102ea97
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642426"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050751"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segments a LiveRamp&reg; (versió preliminar)
 

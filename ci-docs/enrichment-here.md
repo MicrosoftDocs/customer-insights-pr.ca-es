@@ -1,5 +1,5 @@
 ---
-title: Enriquiment amb l'enriquiment de tercers de HERE Technologies
+title: Enriquir perfils de clients amb HERE Technologies (previsualització)
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953661"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052039"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquiment de perfils de client amb HERE Technologies (versió preliminar)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Enriquir perfils de clients amb HERE Technologies (previsualització)
 
 HERE Technologies és una empresa de plataformes d'ubicació que proporciona dades i serveis centrats en la ubicació. Els serveis d'enriquiment de dades d'HERE Technologies milloren la precisió de la informació d'ubicació sobre els vostres clients. Proporciona normalització d'adreces, extracció de latitud i longitud, i molt més.
 
@@ -72,7 +72,7 @@ L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquime
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

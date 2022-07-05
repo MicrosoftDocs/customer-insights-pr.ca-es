@@ -1,5 +1,5 @@
 ---
-title: Enriquiment amb l'enriquiment de tercers d'Experian
+title: Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 description: Informació general sobre l'enriquiment de tercers d'Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954075"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053009"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -79,7 +79,7 @@ Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a Experian, 
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

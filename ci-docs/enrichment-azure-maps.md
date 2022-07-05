@@ -1,5 +1,5 @@
 ---
-title: Enriquir els perfils de client amb les dades d'ubicació de l'Azure Maps
+title: Enriquir els perfils de clients amb dades d'ubicació de l'Azure Maps (previsualització)
 description: Informació general sobre l'enriquiment principal de l'Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953616"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052595"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquiment dels perfils de client amb l'Azure Maps (versió preliminar)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Enriquir els perfils de clients amb dades d'ubicació de l'Azure Maps (previsualització)
 
 L'Azure Maps proporciona dades i serveis centrats en la ubicació per oferir experiències basades en dades geoespacials amb intel·ligència d'ubicació integrada. Els serveis d'enriquiment de dades de l'Azure Maps milloren la precisió de la informació d'ubicació dels vostres clients. Proporciona capacitats com ara la normalització d'adreces i l'extracció de latitud i longitud al Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquime
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

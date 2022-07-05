@@ -1,5 +1,5 @@
 ---
-title: Bot per al Microsoft Teams
+title: Bot del Teams per al Dynamics 365 Customer Insights (versió preliminar)
 description: Cerqueu els perfils de client unificats al Microsoft Teams amb l'ajuda d'un bot.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642430"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082591"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot del Teams per al Dynamics 365 Customer Insights (versió preliminar)
 
@@ -37,7 +37,7 @@ Per configurar i configurar el bot, cal complir els requisits previs següents:
 
 ## <a name="configure-the-bot"></a>Configurar el bot
 
-1. Aneu a **Destinacions d'AdministracióExport** > **·**.
+1. Aneu a **Destinacions d'exportació d'administració** > **·**.
 1. A la peça del Microsoft Teams, seleccioneu **Configura**.
 1. Se us redirigirà a l'àrea **Aplicacions** del Teams. També podeu obrir el Teams i seleccionar **Aplicacions** a la cantonada inferior esquerra o [obtenir-ho des d'AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) directament.
 1. Cerqueu **Customer Insights** i seleccioneu l'aplicació.

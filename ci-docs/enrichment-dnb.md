@@ -1,5 +1,5 @@
 ---
-title: Enriquiment de perfils d'empresa amb Dun &Bradstreet
+title: Enriquir perfils d'empresa amb Dun &Bradstreet (preview)
 description: Informació general sobre l'enriquiment de tercers dun &bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953879"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082549"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Enriquiment de perfils d'empresa amb Dun &Bradstreet (Preview)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enriquir perfils d'empresa amb Dun &Bradstreet (preview)
 
 Dun &Bradstreet proporciona dades comercials, anàlisis i estadístiques per a empreses. Permet enriquir les dades als clients amb perfils de clients unificats per a les empreses. Els enriquiments inclouen atributs com el número DUNS, la mida de l'empresa, la ubicació, la indústria i molt més.
 
@@ -102,7 +102,7 @@ Actualment admetem les següents opcions de país o regió: Canadà (anglès) o 
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Enriquir perfils de clients amb marques i dades d'interessos de Microsoft
+title: Enriquir perfils de clients amb marques i dades d'interessos de Microsoft (previsualització)
 description: Utilitzeu dades propietàries de Microsoft per enriquir les vostres dades de clients amb afinitats i compartir la veu.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953753"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082696"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquir perfils de clients amb afinitats i quota de veu (previsualització)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Enriquir perfils de clients amb marques i dades d'interessos de Microsoft (previsualització)
 
 Utilitzeu les dades propietàries de Microsoft per enriquir les dades dels clients amb afinitats de marca, afinitats d'interessos i quota de veu (SoV). Aquestes afinitats i SoV es basen en dades de persones amb dades demogràfiques similars als teus clients. Aquesta informació t'ajuda a entendre millor i segmentar els teus clients en funció de les seves afinitats o SoV a marques i interessos específics.
 
@@ -104,7 +104,7 @@ Actualment, admeten a les següents opcions de país o regió: Austràlia, Canad
 
    En enriquir els perfils, enriquirem tots els perfils de clients per als quals obtenim dades per a les marques i els interessos seleccionats, incloent-hi els perfils que no es troben al país o regió seleccionats. Per exemple, si heu seleccionat Alemanya, enriquirem els perfils ubicats als Estats Units si tenim dades disponibles per a les marques i els interessos seleccionats als EUA.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

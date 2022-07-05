@@ -1,5 +1,5 @@
 ---
-title: Exportar dades del Customer Insights a AdRoll
+title: Exportar segments a AdRoll (versió preliminar)
 description: Apreneu a configurar la connexió i exportar a AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642236"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082822"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segments a AdRoll (versió preliminar)
 
@@ -21,9 +21,9 @@ Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a 
 
 ## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
 
--   Teniu un [compte d'AdRoll](https://www.adroll.com/) i les credencials d'administrador corresponents.
--   Heu [configurat segments](segments.md) a Customer Insights.
--   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
+- Teniu un [compte d'AdRoll](https://www.adroll.com/) i les credencials d'administrador corresponents.
+- Heu [configurat segments](segments.md) a Customer Insights.
+- Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 

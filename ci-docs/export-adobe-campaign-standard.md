@@ -1,5 +1,5 @@
 ---
-title: Exportació de dades del Customer Insights a l'Adobe Campaign Standard
+title: Exportar segments de Customer Insights a l'estàndard Adobe de campanya (visualització prèvia)
 description: Obteniu informació sobre com utilitzeu els segments del Customer Insights a l'estàndard Adobe de campanya.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642310"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082339"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Ús dels segments del Customer Insights a l'Adobe Campaign Standard (versió preliminar)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Exportar segments de Customer Insights a l'estàndard Adobe de campanya (visualització prèvia)
 
-Com a usuari Dynamics 365 Customer Insights, és possible que hàgiu creat segments per fer que les vostres campanyes de màrqueting siguin més eficients orientant-vos a públics rellevants. Per utilitzar un segment del Customer Insights i d'aplicacions Adobe Experience Platform com Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
+Com a usuari de Dynamics 365 Customer Insights, és possible que hàgiu creat segments per fer que les vostres campanyes de màrqueting siguin més eficients orientant-vos a públics rellevants. Per utilitzar un segment del Customer Insights i d'aplicacions Adobe Experience Platform com Adobe Campaign Standard, heu de seguir alguns passos que s'indiquen en aquest article.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de procés dels passos que es descriuen en aquest article.":::
 
 ## <a name="prerequisites"></a>Requisits previs
 
--   Llicència del Dynamics 365 Customer Insights
--   Llicència de l'Adobe Campaign Standard
--   Compte de l'Emmagatzematge blob de l'Azure
+- Llicència del Dynamics 365 Customer Insights
+- Llicència de l'Adobe Campaign Standard
+- Compte de l'Emmagatzematge blob de l'Azure
 
 ## <a name="campaign-overview"></a>Informació general de Campaign
 
@@ -51,7 +51,7 @@ El correu electrònic d'oferta que voleu enviar inclourà el nom, el cognom i la
 
 Amb el nostre públic objectiu identificat, podem configurar l'exportació a un compte d'emmagatzematge blob de l'Azure.
 
-1. A Customer Insights, aneu a **AdminConnections** > **·**.
+1. A l'informació del client, aneu a **Connexions d'administració** > **·**.
 
 1. Seleccioneu **Afegeix una connexió** i trieu **Adobe Campaign** per configurar la connexió o seleccioneu **Configuració** a la peça **Adobe Campaign**.
 

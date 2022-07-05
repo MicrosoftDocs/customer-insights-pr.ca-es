@@ -1,5 +1,5 @@
 ---
-title: Enriquiment de la millora de l'adreça (conté vídeo)
+title: Enriquir perfils de clients amb adreces millorades (conté vídeo)
 description: Enriquiu i normalitzeu la informació de les adreces dels perfils dels clients amb els models de Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953799"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082066"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquiment de perfils de clients amb adreces millorades
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Enriquir perfils de clients amb adreces millorades
 
 Les adreces de les dades poden ser desestructurades, incompletes o incorrectes. Utilitzeu els models de Microsoft per normalitzar i enriquir les adreces en el [format del model de dades comú](/common-data-model/schema/core/applicationcommon/address) per obtenir una millor precisió i informació.
 
@@ -101,7 +101,7 @@ Actualment admetem adreces enriquides en aquests països o regions:
 
 1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

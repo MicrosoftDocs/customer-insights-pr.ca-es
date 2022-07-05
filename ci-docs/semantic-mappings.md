@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642335"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083137"
 ---
 # <a name="semantic-mappings-preview"></a>Assignacions semàntiques (versió preliminar)
 
@@ -26,7 +26,7 @@ Les assignacions semàntiques us permeten assignar les dades que no són d'activ
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definir una assignació d'entitats semàntica de ContactProfile
 
-1. Aneu a **Assignacions de DataSemantic** > **(previsualització)**.
+1. Aneu a **Assignacions semàntiques de dades** > **(visualització prèvia)**.
 
 1. Seleccioneu **Afegeix assignació semàntica** per iniciar l'experiència guiada.
 
@@ -102,7 +102,7 @@ Després de crear una *assignació d'entitats semàntiques ContactProfile*, pode
 
 1. [Definiu una assignació d'entitats *semàntiques ContactProfile* .](#define-a-contactprofile-semantic-entity-mapping) I executar l'assignació semàntica.
 
-1. Aneu a **DataActivities** > **·**.
+1. Aneu a Activitats de **dades** > **·**.
 
 1. Seleccioneu **Afegeix activitat** per crear una activitat nova.
 
@@ -110,8 +110,8 @@ Després de crear una *assignació d'entitats semàntiques ContactProfile*, pode
 
 1. **Al pas Relacions**, creeu una relació indirecta entre les dades d'origen de l'activitat als comptes, utilitzant les dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins](relationships.md#relationship-paths) de relació directa i indirecta.
    - Relació d'exemple per a una activitat anomenada *Compres*:
-      - **Compres Dades de la data de l'activitat** > **d**'origen a l'atribut **ContactID**
-      - **Dades** > **de data** de contacte a l'atribut **AccountID**
+      - **Compra dades de contacte de l'activitat d'origen** > **a** l'atribut **ContactID**
+      - **Dades** > **del compte de dades** de contacte de l'atribut **AccountID**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuració de la relació d'exemple.":::
 

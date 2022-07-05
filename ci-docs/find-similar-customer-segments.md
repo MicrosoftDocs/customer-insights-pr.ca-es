@@ -1,5 +1,5 @@
 ---
-title: Cercar clients similars amb IA (conté vídeo)
+title: Cercar clients similars amb IA (previsualització) (conté vídeo)
 description: Cerqueu segments de client semblants amb la intel·ligència artificial.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642287"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054789"
 ---
-# <a name="similar-customers-preview"></a>Clients semblants (versió preliminar)
+# <a name="find-similar-customers-with-ai-preview"></a>Cercar clients similars amb IA (previsualització)
 
 Aquesta característica us permet trobar clients semblants a la base de clients mitjançant la intel·ligència artificial. Heu de tenir com a mínim un segment creat per utilitzar aquesta característica. Expandir els criteris d'un segment existent ajuda a cercar clients que siguin semblants a aquest segment.
 

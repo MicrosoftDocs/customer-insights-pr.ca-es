@@ -1,5 +1,5 @@
 ---
-title: Exportar dades del Customer Insights a un Emmagatzematge blob de l'Azure
+title: Exporta les dades a un emmagatzematge blob de l'Azure (preview)
 description: Apreneu a configurar la connexió i exportar a l'Emmagatzematge blob.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947126"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055478"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar la llista de segments i altres dades a l'Emmagatzematge blob de l'Azure (versió preliminar)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Exporta les dades a un emmagatzematge blob de l'Azure (preview)
 
 Emmagatzemeu les dades del Customer Insights a l'Emmagatzematge blob de l'Azure o utilitzeu-lo per transferir les vostres dades a altres aplicacions.
 

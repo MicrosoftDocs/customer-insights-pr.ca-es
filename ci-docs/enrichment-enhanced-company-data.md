@@ -1,5 +1,5 @@
 ---
-title: Millora de dades de l'empresa
+title: Enriquir perfils d'empresa amb dades d'empresa millorades
 description: Enriquir i normalitzar les dades de l'empresa amb els models de Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953937"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054236"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquiment de perfils d'empresa amb dades d'empresa millorades
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Enriquir perfils d'empresa amb dades d'empresa millorades
 
 Utilitzeu els models de Microsoft i les dades recopilades de l'empresa per corregir, complementar i estandarditzar els perfils de l'empresa. Utilitzarem el [format](/common-data-model/schema/core/applicationcommon/account) common data model per obtenir una millor precisió i estadístiques.
 
@@ -84,7 +84,7 @@ El model no:
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

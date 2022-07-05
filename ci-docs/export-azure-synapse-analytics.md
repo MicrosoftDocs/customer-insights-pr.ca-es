@@ -1,19 +1,19 @@
 ---
-title: Exportar dades del Customer Insights a l'Azure Synapse Analytics
+title: Exporta les dades a Azure Synapse Analytics (visualització prèvia)
 description: Més informació sobre com configurar la connexió a Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741491"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082864"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporta les dades a Azure Synapse Analytics (visualització prèvia)
 
@@ -48,7 +48,7 @@ A l’Azure:
 
 ### <a name="configure-a-connection"></a>Configurar una connexió
 
-Per crear una connexió, el principal del servei i el compte d'usuari del Customer Insights necessiten **permisos de lector** al grup *de* recursos on es troba l'àrea de treball de Synapse Analytics. A més, el principal del servei i l'usuari de l'àrea de treball de Synapse Analytics necessiten **permisos d'administrador de** sinapsi. 
+Per crear una connexió, el principal del servei i el compte d'usuari del Customer Insights necessiten **permisos de lector** al grup *de* recursos on es troba l'àrea de treball de Synapse Analytics. A més, el principal de servei i l'usuari de l'àrea de treball de Synapse Analytics necessiten **permisos d'administrador** de sinapsi. 
 
 1. Aneu a **Administració** > **Connexions**.
 
@@ -72,13 +72,13 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. **Al camp Connexió per a l'exportació**, trieu una connexió de la **Azure Synapse Analytics** secció. Si no veieu aquest nom de secció, no hi ha cap [connexió](connections.md) d'aquest tipus disponible per a vós.
 
-1. Proporcioneu un **Nom de visualització** recognoscible per a l'exportació i un **Nom de la base de dades**.
+1. Proporcioneu un **Nom de visualització** recognoscible per a l'exportació i un **Nom de la base de dades**. L'exportació crearà una base de dades [Azure Synapse de llac nova](/azure/synapse-analytics/database-designer/concepts-lake-database) a l'àrea de treball definida a la connexió.
 
 1. Seleccioneu a Azure Synapse Analytics quines entitats voleu exportar.
    > [!NOTE]
    > Les fonts de dades basades en una [carpeta del model de dades comú](connect-common-data-model.md) no són compatibles.
 
-2. Seleccioneu **Desa**.
+1. Seleccioneu **Desa**.
 
 Si deseu una exportació, no s'executarà l'exportació immediatament.
 

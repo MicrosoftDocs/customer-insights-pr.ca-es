@@ -1,5 +1,5 @@
 ---
-title: Unificar els camps de client o de compte
+title: Unificar els camps de client per a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740845"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082948"
 ---
-# <a name="unify-customer-fields"></a>Unificar els camps de client
+# <a name="unify-customer-fields-for-data-unification"></a>Unificar els camps de client per a la unificació de dades
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 

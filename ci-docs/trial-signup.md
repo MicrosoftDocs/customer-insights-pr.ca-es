@@ -1,5 +1,5 @@
 ---
-title: Registre per a una prova gratuïta - Dynamics 365 Customer Insights
+title: Registrar-se per obtenir una prova gratuïta del Dynamics 365 Customer Insights
 description: Més informació sobre com registrar-vos ràpidament i iniciar una versió de prova gratuïta del Customer Insights. Exploreu l'aplicació i cerqueu més recursos d'aprenentatge.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641704"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082486"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registrar-se per obtenir una prova gratuïta del Dynamics 365 Customer Insights
 

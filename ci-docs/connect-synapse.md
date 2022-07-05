@@ -1,5 +1,5 @@
 ---
-title: Ingereix les dades de Azure Synapse Analytics
+title: Connectar un Azure Synapse font de dades (previsualització)
 description: Utilitzeu una base de dades com a Azure Synapse font de dades al Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011415"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052687"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Connectar un Azure Synapse Analytics font de dades (previsualització)
 
@@ -29,7 +29,7 @@ Per obtenir més informació, vegeu [Azure Synapse visió general](/azure/synaps
 
 **A Customer Insights**:
 
-* Teniu una funció d'administrador **a** Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights](permissions.md#assign-roles-and-permissions) del client.
+* Teniu una funció d'administrador **a** Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights del client](permissions.md#assign-roles-and-permissions).
 
 **In Azure**:
 
@@ -59,7 +59,7 @@ Per obtenir més informació, vegeu [Azure Synapse visió general](/azure/synaps
 
 1. Trieu una [connexió](connections.md) disponible o creeu-ne Azure Synapse Analytics una de nova.
 
-1. Trieu una **base de dades** de l'àrea de treball connectada a la connexió seleccionada Azure Synapse Analytics i seleccioneu **Següent**.
+1. Trieu una **base de dades** de l'àrea de treball connectada a la connexió seleccionada Azure Synapse Analytics i seleccioneu **Següent**. Actualment, només admetem la base de dades tipus *lake database*.
 
 1. Seleccioneu les entitats que voleu ingerir de la base de dades connectada i seleccioneu **Endavant**.
 

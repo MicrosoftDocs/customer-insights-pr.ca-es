@@ -1,5 +1,5 @@
 ---
-title: Exportar dades del Customer Insights a ActiveCampaign
+title: Exporta segments a ActiveCampaign
 description: Més informació sobre com configurar la connexió i l'exportació a ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642298"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054696"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exportar segments a ActiveCampaign (versió preliminar)
 
@@ -21,9 +21,9 @@ Exporteu segments de perfils de client unificats a ActiveCampaign i utilitzeu-lo
 
 ## <a name="prerequisites"></a>Requisits previs
 
--   Teniu un [compte d'ActiveCampaign](https://www.activecampaign.com/) i les credencials d'administrador corresponents.
--   Heu [configurat segments](segments.md) a Customer Insights.
--   Els perfils de client unificats als segments exportats contenen un camp amb una adreça electrònica.
+- Teniu un [compte d'ActiveCampaign](https://www.activecampaign.com/) i les credencials d'administrador corresponents.
+- Heu [configurat segments](segments.md) a Customer Insights.
+- Els perfils de client unificats als segments exportats contenen un camp amb una adreça electrònica.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 

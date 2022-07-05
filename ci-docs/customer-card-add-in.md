@@ -1,5 +1,5 @@
 ---
-title: Complement de targeta de client per a aplicacions del Dynamics 365 (conté vídeo)
+title: Complement de targeta de client per a aplicacions del Dynamics 365 (visualització prèvia) (conté vídeo)
 description: Mostra les dades del perfil del client de Customer Insights a les aplicacions del Dynamics 365 amb aquest complement.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755624"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082129"
 ---
-# <a name="customer-card-add-in-preview"></a>Complement de targeta del client (versió preliminar)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complement de targeta de client per a aplicacions del Dynamics 365 (visualització prèvia)
 
 Obtingueu una visió integral dels clients directament a les aplicacions del Dynamics 365. Amb el complement de targeta de client instal·lat a l'aplicació del Dynamics 365 admesa, podeu triar si voleu que es visualitzin els camps, les conclusions i la cronologia d'activitat del perfil del client. El complement recuperarà les dades del Customer Insights sense que afectin les dades de l'aplicació del Dynamics 365 connectada.
 

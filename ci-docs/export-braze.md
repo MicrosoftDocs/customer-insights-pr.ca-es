@@ -1,34 +1,35 @@
 ---
-title: Exporta les dades de Customer Insights a Braze
+title: Exporta segments a Braze (previsualització)
 description: Obteniu informació sobre com configurar la connexió i exportar-la a Braze.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642229"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082675"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Exporta les llistes de segments a Braze (visualització prèvia)
+# <a name="export-segments-to-braze-preview"></a>Exporta segments a Braze (previsualització)
 
 Exporteu segments de perfils de clients unificats a Braze i utilitzeu-los per a activitats de màrqueting.
 
 ## <a name="prerequisites"></a>Requisits previs
 
--   Teniu un [compte](https://www.braze.com/) Braze i les credencials d'administrador corresponents.
--   Heu [configurat segments](segments.md) a Customer Insights.
--   Els perfils de clients unificats dels segments exportats contenen un camp que representa una adreça electrònica i un identificador de client de Braze. 
+- Un [compte](https://www.braze.com/) de Braze i les credencials d'administrador corresponents.
+- Segments existents [a Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Segments configurats](segments.md) a Customer Insights.
+- Els perfils de clients unificats dels segments exportats contenen un camp que representa una adreça electrònica i un identificador de client de Braze.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
 - L'exportació a Braze es limita a segments.
-- Exportar fins a 1 milió de perfils de clients a Braze pot trigar fins a 40 minuts a completar-se. 
+- Exportar fins a 1 milió de perfils de clients a Braze pot trigar fins a 40 minuts a completar-se.
 - El nombre de perfils de clients que podeu exportar a Braze depèn i es limita al vostre contracte amb Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configura la connexió a Braze
@@ -41,7 +42,7 @@ Exporteu segments de perfils de clients unificats a Braze i utilitzeu-los per a 
 
 1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporcioneu la [clau](https://www.braze.com/docs/api/basics/) de l'API Braze per continuar iniciant la sessió. 
+1. Proporcioneu la [clau](https://www.braze.com/docs/api/basics/) de l'API Braze per continuar iniciant la sessió.
 
 1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
 
@@ -59,9 +60,13 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
 
-1. **Al camp Connexió per a l'exportació**, trieu una connexió de la secció Braze. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.  
+1. **Al camp Connexió per a l'exportació**, trieu una connexió de la secció Braze. Si no veieu aquesta secció, no hi ha connexions d'aquest tipus disponibles.  
 
-3. A la **secció Coincidència de** dades, al **camp Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client, al camp "Identificador de client", seleccioneu el camp que representa l'identificador de braze del client. És necessari exportar segments a Braze. Els segments de Braze es crearan amb el mateix nom del segment que a Dynamics 365 Customer Insights. Podeu triar camps opcionals addicionals per fer coincidir dades. 
+1. Afegiu un **nom de visualització** per a l'exportació.
+
+1. Afegiu l'identificador de l'API del segment Braze al qual voleu exportar al camp Identificador de **l'API del** segment de braze. Podeu trobar l'identificador als detalls del segment a la plataforma Braze.
+
+1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. **Al camp Customer ID**, seleccioneu el camp que representa l'identificador de braze del client. És necessari exportar segments a Braze. Podeu triar més camps opcionalment.
 
 1. Seleccioneu **Desa**.
 

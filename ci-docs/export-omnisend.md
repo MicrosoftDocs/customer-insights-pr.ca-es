@@ -1,5 +1,5 @@
 ---
-title: Exportar dades del Customer Insights a Omnisend
+title: Exportar segments a Omnisend (versió preliminar)
 description: Apreneu a configurar la connexió i exportar a Omnisend.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 70bd94ea5e4060094c3d215e3fc263a98df51229
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 15918b2e2550869115d30ea4d84b4549c3c7d1ca
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642370"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052269"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportar segments a Omnisend (versió preliminar)
 

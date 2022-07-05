@@ -1,5 +1,5 @@
 ---
-title: Enriquir els perfils dels clients amb dades de Microsoft Office 365
+title: Enriquir els perfils dels clients amb dades de Microsoft Office 365 (previsualització)
 description: Utilitzeu dades propietàries per enriquir els vostres perfils de Microsoft Office clients amb dades d'interacció.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954121"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055662"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquir els perfils dels clients amb dades d'interacció (previsualització)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Enriquir els perfils dels clients amb dades de Microsoft Office 365 (previsualització)
 
 Utilitzeu dades de per enriquir els perfils del compte de client amb estadístiques sobre les interaccions a través d'aplicacions Microsoft Office 365 Office 365. Les dades d'interacció consisteixen en l'activitat de correu electrònic i reunió, que s'agrega al nivell de compte. Per exemple, el nombre de correus electrònics d'un compte d'empresa o el nombre de reunions amb el compte. No hi ha dades sobre usuaris individuals disponibles.
 
@@ -75,7 +75,7 @@ Seleccioneu **Executa** per iniciar el procés d'enriquiment.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Aquesta és l'entitat de l'Office *·*. El *Office_UserEntity* conté els identificadors de l'Active Directory per a les adreces de correu electrònic que s'han triat durant la configuració d'enriquiment.
 

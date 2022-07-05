@@ -1,5 +1,5 @@
 ---
-title: Configuració del sistema a Customer Insights
+title: Configuració del sistema
 description: Més informació sobre la configuració del sistema al Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653604"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050659"
 ---
 # <a name="system-configuration"></a>Configuració del sistema
 
-Per accedir a les configuracions del sistema, aneu a **AdminSystem** > **per** visualitzar una llista de tasques i processos del sistema.
+Per accedir a les configuracions del sistema, aneu al **sistema** > **d'administració** per visualitzar una llista de tasques i processos del sistema.
 
 La pàgina **Sistema** inclou les pestanyes següents:
 - [Estat d'execució](#status-tab)
@@ -95,7 +95,7 @@ Utilitzeu la pestanya **Planificació** per planificar les actualitzacions autom
 > Les fonts de dades gestionades per vosaltres actualitzeu-les a les seves pròpies planificacions. Per planificar l'actualització dels orígens de dades gestionats per vosaltres, configureu la configuració d'actualització d'aquesta font de dades específica des de la **pàgina Orígens** de dades.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Configuració d'actualització del flux de dades.":::
 
-1. Aneu a **AdminSystem** > **i** seleccioneu la **pestanya Planificació**.
+1. Aneu al **sistema** > **d'administració** i seleccioneu la **pestanya Planificació**.
 
 2. L'estat per defecte de l'actualització planificada és **Desactivada**. Per habilitar les actualitzacions planificades, canvieu el commutador a la part superior de la pantalla a **Activat**.
 

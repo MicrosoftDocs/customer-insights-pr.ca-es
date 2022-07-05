@@ -1,17 +1,17 @@
 ---
-title: Dynamics 365 Customer Insights visió general del producte
+title: Informació general del producte Dynamics 365 Customer Insights
 author: m-hartmann
 description: Obteniu una visió general Dynamics 365 Customer Insights de i les seves principals característiques.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947080"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051119"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Informació general del producte Dynamics 365 Customer Insights
 
@@ -32,7 +32,7 @@ Customer Insights té llicència per inquilí i inclou tant capacitats d'empresa
 
 ## <a name="try-customer-insights-and-get-started"></a>Proveu el Customer Insights i comenceu
 
-Inicieu avui una [prova](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) gratuïta de Customer Insights per provar l'aplicació amb les vostres pròpies dades de clients. [Esbrineu com podeu accedir ràpidament i explorar moltes de les funcions](trial-signup.md) clau de l'aplicació. 
+Inicieu avui una [prova](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) gratuïta de Customer Insights per provar l'aplicació amb les vostres pròpies dades de clients. [Esbrineu com podeu accedir ràpidament i explorar moltes de les funcions clau de l'aplicació](trial-signup.md). 
 
 Navegueu pels [recursos](https://dynamics.microsoft.com/ai/customer-insights/resources/) d'aprenentatge destacats, inclosos els informes d'analistes, els seminaris web a la carta i les històries dels clients.
 

@@ -1,5 +1,5 @@
 ---
-title: Esquemes d'entitats del Customer Insights al Common Data Model
+title: Esquemes d'entitats al Common Data Model
 description: Treballeu amb entitats al Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757420"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054742"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
-
-
 
 El [Common Data Model](/common-data-model/) és una especificació declarativa i una definició d'entitats estàndard que representen conceptes i activitats utilitzats habitualment entre aplicacions de negoci i de productivitat. Aquest model també s'amplia a les dades observacionals i d'anàlisi. El Common Data Model proporciona entitats empresarials definides, modulars i extensibles, com ara compte, unitat de negoci, cas, contacte, client potencial, oportunitat i producte, així com interaccions amb proveïdors, treballadors i clients, com ara activitats i acords de nivell de servei. Qualsevol persona pot crear i ampliar les definicions del Common Data Model per captar idees addicionals específiques de l'empresa.
 

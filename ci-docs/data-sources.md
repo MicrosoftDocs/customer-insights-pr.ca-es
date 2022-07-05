@@ -1,7 +1,7 @@
 ---
-title: Utilitzar fonts de dades per ingerir dades
-description: Més informació sobre com importar dades de diverses fonts.
-ms.date: 05/31/2022
+title: Informació general de les fonts de dades
+description: Obteniu informació sobre com podeu importar o ingerir dades de diverses fonts.
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011737"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051441"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 

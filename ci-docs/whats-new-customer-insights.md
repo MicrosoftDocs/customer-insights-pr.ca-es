@@ -1,5 +1,5 @@
 ---
-title: Característiques noves i actualitzades
+title: Novetats del Dynamics 365 Customer Insights
 description: Informació sobre les noves característiques, millores i correccions d'errors.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843335"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054006"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -122,7 +122,7 @@ Les actualitzacions de febrer de 2022 inclouen noves funcions, actualitzacions d
 
 Els models de predicció de fora de la caixa, inclosos el **churn** de subscripció, **el churn** transaccional i **el valor de vida del client (CLV)** generalment estan disponibles com a part de Customer Insights. 
 
-Per obtenir més informació, vegeu [Visió general](predictions-overview.md) de les prediccions.
+Per obtenir més informació, vegeu [Visió general de les prediccions](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Font de dades nou: integració amb Azure Synapse Analytics (visualització prèvia)
 

@@ -1,5 +1,5 @@
 ---
-title: Anàlisi de sentiments per a la retroalimentació dels clients
+title: Analitzar el sentiment per als comentaris dels clients (previsualització)
 description: Obteniu informació sobre com podeu utilitzar un model d'anàlisi de sentiments sobre la retroalimentació dels clients a Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642334"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055524"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analitzar el sentiment en els comentaris dels clients (Previsualització)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analitzar el sentiment en els comentaris dels clients (previsualització)
 
 Els clients esperen productes, serveis i experiències d'alta qualitat en aquests dies. Especialment els clients que comparteixen els seus comentaris. És molt difícil per a les organitzacions analitzar un volum creixent de dades sense reduir la precisió i un major cost laboral. Dynamics 365 Customer Insights Ofereix un model d'anàlisi de sentiments per a la retroalimentació dels clients que permet a les organitzacions analitzar les seves dades amb més precisió i a un cost menor.
 

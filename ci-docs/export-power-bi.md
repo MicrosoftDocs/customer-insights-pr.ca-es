@@ -1,5 +1,5 @@
 ---
-title: Connector del Power BI
+title: Connector del Power BI (visualització prèvia)
 description: Apreneu com utilitzar el connector del Dynamics 365 Customer Insights al Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642365"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051257"
 ---
-# <a name="connector-for-power-bi-preview"></a>Connector del Power BI (versió preliminar)
+# <a name="power-bi-connector-preview"></a>Connector del Power BI (visualització prèvia)
 
-Creeu visualitzacions per a les dades amb el Power BI Desktop. Genereu informació addicional i creeu informes amb les dades del client unificades.
+Creeu visualitzacions per a les vostres dades amb l'escriptori Microsoft Power BI. Genereu informació addicional i creeu informes amb les dades del client unificades.
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -60,7 +60,7 @@ Els entorns que tinguin més d'una [relació](relationships.md) definida entre d
 
 Podeu identificar i suprimir les relacions duplicades.
 
-1. Aneu a **DataRelationships** > **sobre** l'entorn que esteu perdent a Power BI.
+1. Aneu a **Relacions de** > **dades** de l'entorn on us esteu perdent Power BI.
 2. Identificar les relacions duplicades:
    - Comproveu si hi ha més d'una relació definida entre les mateixes dues entitats.
    - Comproveu si s'ha creat una relació entre dues entitats que estan incloses al procés d'unificació. Hi ha una relació implícita que es defineix entre totes les entitats incloses al procés d'unificació.

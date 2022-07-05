@@ -1,5 +1,5 @@
 ---
-title: Enriquiment amb la importació personalitzada d'SFTP
+title: Enriquir perfils de clients amb importació personalitzada SFTP (vista prèvia)
 description: Informació general sobre l'enriquiment amb la importació personalitzada d'SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953707"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082318"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquir els perfils de client amb dades personalitzades (versió preliminar)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquir perfils de clients amb importació personalitzada SFTP (vista prèvia)
 
 La importació personalitzada del protocol de transferència segura de fitxers (SFTP) us permet importar dades que no han de passar pel procés d'unificació de dades. Es tracta d'un mètode flexible, segur i fàcil d'incorporar les vostres dades. La importació personalitzada d'SFTP es pot utilitzar combinada amb [l'exportació d'SFTP](export-sftp.md), que us permet exportar les dades del perfil del client necessàries per a l'enriquiment. Les dades es poden processar i enriquir, i la importació personalitzada SFTP es pot utilitzar per tornar les dades enriquides a Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquime
 
 1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
 
-## <a name="enrichment-results"></a>Resultats de l'enriquiment
+## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

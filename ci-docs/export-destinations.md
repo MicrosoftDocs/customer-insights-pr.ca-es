@@ -1,5 +1,5 @@
 ---
-title: Exportar dades del Customer Insights
+title: Informació general sobre exportacions (versió preliminar)
 description: Administrar les exportacions per compartir dades.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9c3b35f1514adcc697672f09cabf593f936e4a82
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d983e84e713003610eb27dc9b3f911b62b01d522
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642293"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082906"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
