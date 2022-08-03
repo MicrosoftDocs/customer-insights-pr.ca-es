@@ -1,6 +1,6 @@
 ---
 title: Ingestió de dades en temps real (versió preliminar)
-description: Informació general sobre les capacitats en temps real a Customer Insights.
+description: Informació general sobre les capacitats en temps real al Customer Insights.
 ms.date: 10/27/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083179"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195646"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestió de dades en temps real (versió preliminar)
 
@@ -28,7 +28,7 @@ Aquesta funcionalitat en temps real proporciona dades immediatament per al consu
 
 Les actualitzacions en temps real tenen un temps de venciment després del qual ja no poden substituir el valor de la font de dades:
 
-- Les actualitzacions de perfil es conservaran durant 4 hores
+- Les actualitzacions del perfil es conservaran durant quatre hores
 - Les activitats es conservaran durant 30 dies
 
 Aquests valors són paràmetres de trucada de l'API que podeu canviar. Pretenen assegurar--se que les dades d'origen segueixen sent el vostre origen en la veritat. Si voleu que les actualitzacions en temps real s'incloguin durant més temps, heu d'afegir-les a una font de dades perquè es puguin extreure durant la propera actualització planificada.

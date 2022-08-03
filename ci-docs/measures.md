@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083116"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170808"
 ---
 # <a name="measures-overview"></a>Visió general de les mesures
 
-Les mesures us ajuden a comprendre millor els comportaments dels clients i el rendiment empresarial. Miren els valors rellevants dels [perfils unificats](data-unification.md). Per exemple, una empresa vol veure la *despesa total per client* per comprendre l'historial de compra d'un client individual o mesurar les *vendes totals de l'empresa* per comprendre els ingressos del nivell agregat de tot el negoci.  
+Les mesures us ajuden a comprendre millor els comportaments dels clients i el rendiment empresarial. Miren els valors rellevants dels [perfils unificats](data-unification.md). Per exemple, una empresa vol veure la *despesa total per client* per comprendre l'historial de compra d'un client individual o mesurar les *vendes totals de l'empresa* per comprendre els ingressos del nivell agregat de tot el negoci.
 
-Les mesures es creen [utilitzant el constructor](measure-builder.md) de mesures, una plataforma de consulta de dades amb diversos operadors i opcions d'assignació simples. Permet filtrar les dades, agrupar els resultats, detectar [rutes de relació d'entitats](relationships.md) i obtenir una visualització prèvia de la sortida. Podeu [utilitzar plantilles](measure-templates.md) predefinides per configurar de manera eficient mesures d'ús comú.
+Creeu mesures per planificar les activitats empresarials consultant les dades dels clients i extraient informació. Per exemple, creeu una mesura de la despesa total per client *i* de *la rendibilitat total per client* per ajudar a identificar un grup de clients amb una despesa elevada però una rendibilitat elevada. A continuació, [creeu un segment](segments.md) basat en aquestes mesures per impulsar les properes millors accions.
 
-Utilitzeu el creador de mesures per planificar activitats empresarials consultant dades de clients i extreure informació. Per exemple, la creació d'una mesura de *despesa total per client* i *retorn total per client* ajuda a identificar un grup de clients amb una despesa alta però amb un retorn alt. Podeu [crear un segment](segments.md) basat en aquestes mesures per impulsar les accions més recomanades següents.
+## <a name="create-a-measure"></a>Crear una mesura
 
-## <a name="manage-your-measures"></a>Administrar les mesures
+Trieu com voleu crear una mesura en funció del vostre públic objectiu.
 
-Podeu consultar la llista de mesures a la pàgina **Mesures**.
+# <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 
-Trobareu informació sobre el tipus de mesura, l'autor, la data de creació, l'estat i l'estat. Quan seleccioneu una mesura de la llista, podeu obtenir una visualització prèvia de la sortida i baixar un fitxer CSV.
+- Des de zero amb el creador de mesures: [Construeix el teu propi](measure-builder.md).
+- A partir de mesures d'ús comú: [Utilitzeu plantilles](measure-templates.md) predefinides.
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
+
+Des de zero amb el creador de mesures: [Construeix el teu propi](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Gestionar les mesures existents
+
+Aneu a la **pàgina Mesures** per veure les mesures que heu creat, el seu estat, el tipus de mesura i l'última vegada que es van actualitzar les dades. Podeu ordenar la llista de mesures per qualsevol columna o utilitzar el quadre de cerca per trobar la mesura que voleu gestionar.
+
+Seleccioneu al costat d'una mesura per veure les accions disponibles. Seleccioneu el nom de la mesura per previsualitzar la sortida i baixar un fitxer CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Accions per administrar mesures individuals."lightbox="media/measures-actions.png":::
 
-Les accions següents estan disponibles quan seleccioneu un compàs:
-
-- **Editeu** la configuració de la mesura.
-- **Duplicar** un compàs. Podeu editar-ne les propietats immediatament o simplement desar el duplicat.
-- **Actualitzeu** la mesura segons les dades més recents. Per actualitzar totes les mesures al mateix temps, seleccioneu tots els compassos i **actualitzeu**.
+- **Editeu** la mesura per canviar-ne les propietats.
+- **Actualitzeu** la mesura per incloure les dades més recents.
 - **Canvieu el nom** de la mesura.
-- **Activeu** o **desactiveu-la**. Les mesures inactives no s'actualitzaran durant una [actualització planificada](system.md#schedule-tab).
-- **Etiqueta** per [administrar etiquetes](work-with-tags-columns.md#manage-tags) per al segment.
+- **Activar** o **Desactivar** la mesura. Les mesures inactives no s'actualitzaran durant una [actualització](system.md#schedule-tab) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar.
+- **Etiqueta** per gestionar les [etiquetes](work-with-tags-columns.md#manage-tags) de la mesura.
 - **Suprimiu** la mesura.
+- **Columnes** per [personalitzar les columnes](work-with-tags-columns.md#customize-columns) que es mostren.
+- **Filtrar** per [filtrar a les etiquetes](work-with-tags-columns.md#filter-on-tags).
+- **Cerqueu nom** per cercar per nom de mesura.
+
+## <a name="refresh-measures"></a>Mesures d'actualització
+
+Les mesures es poden actualitzar amb una programació automàtica o actualitzar-se manualment sota demanda. Per actualitzar manualment una o més mesures, selecciona-les i selecciona **Actualitza**. Per [programar una actualització](system.md#schedule-tab) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Pas següent
-
-Podeu utilitzar les mesures existents per crear un [segment de client](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

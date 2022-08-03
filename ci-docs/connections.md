@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082087"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195162"
 ---
 # <a name="connections-preview-overview"></a>Informació general sobre les connexions (versió preliminar)
 
@@ -27,6 +27,12 @@ Aneu a **Administració** > **Connexions** per crear i visualitzar connexions.
 La pestanya **Connexions** mostra totes les connexions actives. La llista mostra una fila per a cada connexió.
 
 Podeu obtenir una descripció general ràpida, una descripció i saber què podeu fer amb cada opció d'extensibilitat a la pestanya **Descobriu**.
+
+## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
+
+Quan habiliteu Dynamics 365 Customer Insights per transmetre dades a tercers o altres productes de Microsoft, permeteu la transferència de dades fora del límit de compliment, Dynamics 365 Customer Insights incloses les dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons les vostres instruccions, però sou responsable d'assegurar-vos que el tercer compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+L'administrador Dynamics 365 Customer Insights pot suprimir la connexió en qualsevol moment per interrompre l'ús de la funcionalitat.
 
 ## <a name="exports"></a>Exportacions
 
@@ -42,13 +48,11 @@ Per afegir connexions, heu de tenir [permisos d'administrador](permissions.md). 
 
 1. Aneu a **Administració** > **Connexions (versió preliminar)**.
 
-1. Aneu a la pestanya **Connexions**.
-
 1. Seleccioneu **Afegeix una connexió** per crear una connexió nova. Trieu al menú desplegable el tipus de connexió que voleu crear.
 
 1. A la subfinestra **Configuració de la connexió**, proporcioneu els detalls necessaris.
    1. El **Nom de visualització** i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
-   1. Els camps exactes depenen del servei al que us connecteu. Podeu obtenir informació sobre els detalls d'un tipus de connexió específic a l'article sobre el servei de destinació.
+   1. Els camps exactes depenen del servei al qual us connecteu. Podeu obtenir informació sobre els detalls d'un tipus de connexió específic a l'article sobre el servei de destinació.
    1. Si [utilitzeu el vostre propi magatzem de claus](use-azure-key-vault.md) per emmagatzemar secrets, activeu **Utilitza Key Vault** i trieu el secret de la llista.
 
 1. Per crear la connexió, seleccioneu **Desa**.
@@ -59,7 +63,7 @@ També podeu seleccionar **Configura** en una peça de la pestanya **Descobreix*
 
 Quan configureu o editeu una connexió d'exportació, trieu quins usuaris poden utilitzar aquesta connexió específica per definir les [exportacions](export-destinations.md). Per defecte, hi ha disponible una connexió per als usuaris que tenen una funció d'administrador. Podeu canviar aquesta opció a **Trieu qui pot utilitzar aquesta connexió** i permetre als usuaris que tenen la funció de col·laborador utilitzar aquesta connexió.
 
-- Els col·laboradors no podran visualitzar ni editar la connexió. Només veuran el nom de visualització i el seu tipus en crear una exportació.
+- Els col·laboradors no podran visualitzar ni editar la connexió. Només veuran el nom de visualització i el seu tipus quan creïn una exportació.
 - Mitjançant l'ús compartit d'una connexió, permeteu que els col·laboradors utilitzin una connexió. Els col·laboradors veuran les connexions compartides quan configurin exportacions. Poden administrar totes les exportacions que utilitzin aquesta connexió específica.
 - Podeu canviar aquesta configuració mantenint les exportacions que ja han estat definides pels col·laboradors.
 
@@ -69,7 +73,7 @@ Quan configureu o editeu una connexió d'exportació, trieu quins usuaris poden 
 
 1. Aneu a la pestanya **Connexions**.
 
-1. Seleccioneu l'el·lipsi vertical (&vellip;) per a la connexió que voleu editar.
+1. Seleccioneu els punts suspensius verticals (&vellip;) per a la connexió que voleu editar.
 
 1. Seleccioneu **Editar**.
 
@@ -77,7 +81,7 @@ Quan configureu o editeu una connexió d'exportació, trieu quins usuaris poden 
 
 ## <a name="remove-a-connection"></a>Suprimir una connexió
 
-Si la connexió que esteu suprimint s'utilitza mitjançant enriquiments o exportacions, primer heu de separar-los o suprimir-los. El quadre de diàleg de supressió us guiarà als enriquiments o exportacions rellevants.
+Si la connexió que suprimiu s'utilitza per enriquiments o exportacions, primer heu de desprendre'ls o eliminar-los. El quadre de diàleg de supressió us guiarà als enriquiments o exportacions rellevants.
 
 Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiveu afegint-hi una altra connexió a la pàgina [Enriquiments](enrichment-hub.md) o [Exportacions](export-destinations.md).
 
@@ -85,7 +89,7 @@ Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiv
 
 1. Aneu a la pestanya **Connexions**.
 
-1. Seleccioneu l'el·lipsi vertical (&vellip;) per a la connexió que voleu suprimir.
+1. Seleccioneu els punts suspensius verticals (&vellip;) de la connexió que voleu eliminar.
 
 1. Seleccioneu **Suprimeix** al menú desplegable. Apareix un quadre de diàleg de confirmació.
 
@@ -98,4 +102,6 @@ Els enriquiments i les exportacions desvinculats esdevenen inactius. Els reactiv
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar les connexions amb els secrets administrats pel vostre propi Key Vault
 
-Algunes connexions necessiten secrets com ara les claus de l'API o les contrasenyes. Algunes connexions admeten secrets emmagatzemats al vostre propi Key Vault. Obteniu més informació sobre les connexions admeses i sobre com configurar-les al [vostre propi Key Vault per a les estadístiques del client](use-azure-key-vault.md).
+Algunes connexions necessiten secrets com ara les claus de l'API o les contrasenyes. Algunes connexions admeten secrets emmagatzemats al vostre propi Key Vault. Obteniu més informació sobre les connexions admeses i sobre com podeu configurar-les al [vostre propi Key Vault for Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

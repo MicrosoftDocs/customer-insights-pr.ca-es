@@ -1,7 +1,7 @@
 ---
 title: Informació general de les fonts de dades
 description: Obteniu informació sobre com podeu importar o ingerir dades de diverses fonts.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,75 +12,69 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051441"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207079"
 ---
 # <a name="data-sources-overview"></a>Informació general de les fonts de dades
 
 Dynamics 365 Customer Insights proporciona connexions per portar dades d'un ampli conjunt de fonts. La connexió a una font de dades sovint es coneix com el procés d'*ingesta de dades*. Després d'ingerir les dades, podeu [unificar](data-unification.md), generar estadístiques i activar les dades per crear experiències personalitzades.
 
-## <a name="add-data-sources"></a>Afegir fonts de dades
+## <a name="add-or-edit-data-sources"></a>Afegir o editar fonts de dades
 
-Podeu adjuntar o importar orígens de dades al Customer Insights. Els enllaços següents proporcionen instruccions per afegir fonts de dades.
+Podeu adjuntar o importar fonts de dades al Customer Insights. Els enllaços següents proporcionen instruccions per afegir i editar fonts de dades.
 
-**Adjunta un font de dades**
+**Adjuntar una font de dades**
 
 Si teniu dades preparades en un dels serveis de dades de l'Azure de Microsoft, el Customer Insights es pot connectar fàcilment al font de dades sense haver de tornar a ingerir les dades. Seleccioneu una de les opcions següents:
-- [Azure Data Lake Storage(fitxers CSV o parquet en una carpeta del Model de Dades Comú)](connect-common-data-model.md)
+- [Azure Data Lake Storage(fitxers csv o parquet en una carpeta del Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(Bases de dades del llac)](connect-synapse.md)
 - [Microsoft Dataverse llac de dades](connect-dataverse-managed-lake.md)
 
-**Importa i transforma**
+**Importar i transformar**
 
-Si utilitzeu fonts de dades locals, dades de Microsoft o de tercers, importeu i transformeu les dades mitjançant Power Query connectors.
+Si utilitzeu fonts de dades locals, Microsoft o dades de tercers, importeu i transformeu les dades mitjançant Power Query connectors.
 - [Power Query Connectors](connect-power-query.md)
 
-## <a name="review-data-sources"></a>Revisa els orígens de dades
+## <a name="review-data-sources"></a>Revisar les fonts de dades
 
-Si el vostre entorn s'ha configurat per utilitzar l'emmagatzematge del Customer Insights i utilitzeu orígens de dades locals, utilitzeu Power Platform els fluxos de dades. Amb Power Platform els fluxos de dades, podeu veure orígens de dades compartits i orígens de dades gestionats per altres persones. La **pàgina Orígens** de dades llista els orígens de dades en tres seccions:
-- **Compartit**: orígens de dades que poden ser gestionats per tots els administradors del Customer Insights. Power Platform els fluxos de dades, el vostre propi compte d'emmagatzematge i l'adjunt a un Dataverse llac de dades gestionat són exemples de fonts de dades compartides.
-- **Gestionat per mi**: Power Platform fluxs de dades creats i gestionats només per tu. Altres administradors del Customer Insights només poden veure aquests fluxos de dades, però no editar-los, actualitzar-los o suprimir-los.
-- **Gestionat per altres**: Power Platform fluxos de dades creats per altres administradors. Només els podeu veure. Enumera el propietari del flux de dades per contactar per obtenir qualsevol ajuda.
+Si el vostre entorn s'ha configurat per utilitzar l'emmagatzematge del Customer Insights i utilitzeu fonts de dades locals, utilitzeu Power Platform fluxos de dades. Amb Power Platform els fluxos de dades, podeu veure les fonts de dades compartides i les fonts de dades gestionades per altres persones. La **pàgina Fonts de** dades enumera les fonts de dades en tres seccions:
+- **Compartits**: fonts de dades que poden gestionar tots els administradors del Customer Insights. Power Platform els fluxos de dades, el vostre propi compte d'emmagatzematge i la connexió a un Dataverse llac de dades gestionat són exemples de fonts de dades compartides.
+- **Gestionat per mi**: Power Platform fluxos de dades creats i gestionats només per vosaltres. Altres administradors del Customer Insights només poden veure aquests fluxos de dades, però no editar-los, actualitzar-los ni suprimir-los.
+- **Gestionat per altres:** Power Platform fluxos de dades creats per altres administradors. Només els podeu veure. Enumera el propietari del flux de dades amb el qual contactar per obtenir qualsevol ajuda.
 > [!NOTE]
-> Altres usuaris poden visualitzar i utilitzar totes les entitats. Tot i que les fonts de dades són propietat de l'usuari que les ha creat, totes les entitats resultants de la ingestió de dades poden ser utilitzades per tots els usuaris del Customer Insights.
+> Totes les entitats poden ser visualitzades i utilitzades per altres usuaris. Tot i que les fonts de dades són propietat de l'usuari que les ha creat, tots els usuaris del Customer Insights poden utilitzar les entitats resultants de la ingestió de dades.
 
-Si l'entorn no utilitza Power Platform fluxos de dades, la **pàgina Orígens** de dades només conté una llista de tots els orígens de dades. No es mostra cap secció.
+Si el vostre entorn no utilitza Power Platform fluxos de dades, la **pàgina Fonts de** dades només conté una llista de totes les fonts de dades. No es mostren seccions.
 
-Aneu a **Orígens** > **de dades de dades** per visualitzar el nom de cada font de dades ingerit, el seu estat i l'última vegada que es van actualitzar les dades per a aquesta font. Podeu ordenar la llista de fonts de dades per cada columna.
+## <a name="manage-existing-data-sources"></a>Gestionar les fonts de dades existents
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Font de dades afegida":::
+Aneu a **Fonts de** > **dades** per veure el nom de cada font de dades ingerit, el seu estat i l'última vegada que es van actualitzar les dades per a aquesta font. Podeu ordenar la llista de fonts de dades per qualsevol columna o utilitzar el quadre de cerca per trobar la font de dades voleu gestionar.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Seleccioneu un font de dades per veure les accions disponibles.
 
-La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades d'ingerides es poden revisar des de la pàgina **Entitats**. Per obtenir més informació, vegeu [Entitats](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Font de dades afegida":::
+
+- [**Editeu**](#add-or-edit-data-sources) la font de dades per canviar-ne les propietats.
+- [**Actualitzeu**](#refresh-data-sources) la font de dades per incloure les dades més recents.
+- [**Enriquir**](data-sources-enrichment.md) el font de dades abans de la unificació.
+- **Suprimiu** el font de dades. Una font de dades només es pot suprimir si les dades no s'utilitzen en cap processament, com ara la unificació, les estadístiques, les activacions o les exportacions.
 
 ## <a name="refresh-data-sources"></a>Actualitzar les fonts de dades
 
-Les fonts de dades es poden actualitzar seguint una planificació automàtica o bé manualment segons demanda. [Les fonts](connect-power-query.md#add-data-from-on-premises-data-sources) de dades locals s'actualitzen a les seves pròpies planificacions que es configuraran durant la ingestió de dades. Per a les fonts de dades adjuntes, la ingestió de dades consumeix les últimes dades disponibles d'aquest font de dades.
+Les fonts de dades es poden actualitzar seguint una planificació automàtica o bé manualment segons demanda. [Les fonts](connect-power-query.md#add-data-from-on-premises-data-sources) de dades locals s'actualitzen segons les seves pròpies planificacions que es configuren durant la ingestió de dades. Per a les fonts de dades adjuntes, la ingestió de dades consumeix les últimes dades disponibles des d'aquest font de dades.
 
-Aneu a **Planificació** > **del sistema** > [**d'administració**](system.md#schedule-tab) per configurar les actualitzaciós planificades pel sistema dels orígens de dades ingerits.
+Aneu a **Planificació del sistema d'administració** > **·** > [**·**](system.md#schedule-tab) per configurar actualitzacions programades pel sistema de les fonts de dades ingerides.
 
-Per actualitzar una font de dades segons demanda, seguiu aquests passos:
-
-1. Aneu a **Dades** > **Fonts de dades**.
-
-1. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu actualitzar i seleccioneu **Actualitza** de la llista desplegable. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades s'actualitza tan l'esquema d'entitat com les dades de totes les entitats especificades a la font de dades.
-
-1. Seleccioneu **Para d'actualitzar** si voleu cancel·lar una actualització existent; la font de dades tornarà a l'últim estat d'actualització.
-
-## <a name="delete-a-data-source"></a>Suprimir una font de dades
-
-Un font de dades només es pot suprimir si les dades no s'utilitzen en cap processament, com ara la unificació, les estadístiques, les activacions o les exportacions.
+Per actualitzar un font de dades sota demanda:
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-2. Seleccioneu l'el·lipsi vertical (&vellip;) al costat de la font de dades voleu eliminar i seleccioneu **Suprimeix** al menú desplegable.
+1. Seleccioneu la font de dades voleu actualitzar i seleccioneu **Actualitza**. S'inicia l'actualització manual de la font de dades en qüestió. En actualitzar una font de dades s'actualitza tan l'esquema d'entitat com les dades de totes les entitats especificades a la font de dades.
 
-3. Confirmeu la supressió.
-
+1. Seleccioneu l'estat per obrir la subfinestra Detalls **del** progrés i veure el progrés. Per cancel·lar la feina, seleccioneu **Cancel·la la feina** a la part inferior de la subfinestra.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Exportar segments a Campaign Monitor (versió preliminar)
 description: Apreneu a configurar la connexió i exportar a Campaign Monitor.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082885"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196290"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Exportar segments a Campaign Monitor (versió preliminar)
 
@@ -21,28 +21,30 @@ Exporteu segments de perfils de client unificats a Campaign Monitor i utilitzeu-
 
 ## <a name="prerequisites"></a>Requisits previs
 
--   Teniu un [compte de Campaign Monitor](https://www.campaignmonitor.com/) i les credencials d'administrador corresponents.
--   Heu [configurat segments](segments.md) a Customer Insights.
--   Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
+- Un [compte](https://www.campaignmonitor.com/) de Campaign Monitor i les credencials d'administrador corresponents.
+- Un identificador [de llista de monitor de campanya](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Una [clau d'API](https://www.campaignmonitor.com/api/getting-started/) generada des de Configuració **del** compte al Campaign Monitor per obtenir l'identificador de llista de l'API.
+- [Segments configurats](segments.md) al Customer Insights.
+- Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Podeu exportar fins a 1 milió de perfils de client per exportar-los a Campaign Monitor.
-- L'exportació a Campaign Monitor es limita als segments.
-- L'exportació de fins a 1 milió de perfils de client a Campaign Monitor pot trigar fins a 20 minuts a completar-se. 
-- El nombre de perfils de client que podeu exportar a Campaign Monitor depèn del vostre contracte amb Campaign Monitor i pot estar limitat.
+- Fins a 1 milió de perfils de clients per exportació a Campaign Monitor, que poden trigar fins a 20 minuts a completar-se. El nombre de perfils de clients que podeu exportar a Campaign Monitor depèn del contracte que tingueu amb Campaign Monitor.
+- Només segments.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Configurar la connexió a Campaign Monitor
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** i trieu **Campaign Monitor** per configurar la connexió.
+1. Seleccioneu **Afegeix connexió** i trieu **Campaign Monitor**.
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
-1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Trieu qui pot utilitzar aquesta connexió. Per defecte, només són administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Seleccioneu **Accepto** per confirmar la **privadesa de les dades i el compliment**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Connecta't** per inicialitzar la connexió a Campaign Monitor.
 
@@ -54,28 +56,24 @@ Exporteu segments de perfils de client unificats a Campaign Monitor i utilitzeu-
 
 ## <a name="configure-an-export"></a>Configurar una exportació
 
-Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
+1. Per crear una exportació nova, seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Campaign Monitor. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció Campaign Monitor. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible.
 
-1. Introduïu l'[**ID de llista de Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
-   [Genereu la clau de l'API](https://www.campaignmonitor.com/api/getting-started/) des de **Configuració del compte** a Campaign Monitor per visualitzar primer l'ID de la llista de l'API.  
+1. Introduïu un nom per a l'exportació.
+
+1. Introduïu l'identificador **de** la llista de monitors de campanya.
 
 1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client. Cal que exporteu segments a Campaign Monitor.
 
+1. Seleccioneu els segments que voleu exportar.
+
 1. Seleccioneu **Desa**.
 
-Si deseu una exportació, no s'executarà l'exportació immediatament.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan permeteu al Dynamics 365 Customer Insights transmetre dades a Campaign Monitor, permeteu la transferència de dades fora del límit del Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades quan ho indiqueu, però sou responsable d'assegurar-vos que Campaign Monitor compleixi les obligacions de privadesa o de seguretat que pugueu teniu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

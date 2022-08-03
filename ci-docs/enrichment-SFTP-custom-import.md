@@ -1,5 +1,5 @@
 ---
-title: Enriquir perfils de clients amb importació personalitzada SFTP (vista prèvia)
+title: Enriquir perfils de clients amb importació personalitzada SFTP (visualització prèvia)
 description: Informació general sobre l'enriquiment amb la importació personalitzada d'SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,26 +8,26 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082318"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195784"
 ---
-# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquir perfils de clients amb importació personalitzada SFTP (vista prèvia)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquir perfils de clients amb importació personalitzada SFTP (visualització prèvia)
 
 La importació personalitzada del protocol de transferència segura de fitxers (SFTP) us permet importar dades que no han de passar pel procés d'unificació de dades. Es tracta d'un mètode flexible, segur i fàcil d'incorporar les vostres dades. La importació personalitzada d'SFTP es pot utilitzar combinada amb [l'exportació d'SFTP](export-sftp.md), que us permet exportar les dades del perfil del client necessàries per a l'enriquiment. Les dades es poden processar i enriquir, i la importació personalitzada SFTP es pot utilitzar per tornar les dades enriquides a Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Es coneix el nom del fitxer i la ubicació (camí) del fitxer que s'importarà a l'amfitrió SFTP.
+- Es coneix el nom del fitxer i la ubicació (ruta) del fitxer que s'importarà a l'amfitrió SFTP.
 
-- Hi *ha disponible un fitxer model.json* que especifica l'esquema del model de dades comú per a les dades que s'importaran. Aquest fitxer s'ha de trobar al mateix directori que el fitxer que s'importarà.
+- Hi *ha disponible un fitxer model.json* que especifica l'esquema del Common Data Model per a les dades que s'han d'importar. Aquest fitxer s'ha de trobar al mateix directori que el fitxer que s'importarà.
 
-- S'ha configurat una connexió [SFTP](connections.md) [...](#configure-the-connection-for-sftp-custom-import).
+- Es [configura una connexió](connections.md) SFTP [...](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="file-schema-example"></a>Exemple d'esquema de fitxers
+## <a name="file-schema-example"></a>Exemple d'esquema de fitxer
 
 El directori que conté el fitxer que s'importarà al servidor SFTP també ha d'incloure un fitxer *model.json*. En aquest fitxer es defineix l'esquema que s'utilitzarà per importar les dades. L'esquema ha d'utilitzar el [Common Data Model](/common-data-model/) per especificar l'assignació de camps. Tot seguit es mostra un exemple senzill de fitxer model.json:
 
@@ -75,11 +75,11 @@ El directori que conté el fitxer que s'importarà al servidor SFTP també ha d'
 
 ## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurar la connexió per a la importació personalitzada de l'SFTP
 
-Heu de ser administrador [del Customer Insights i tenir les credencials d'usuari](permissions.md#admin), l'URL i el número de port de la ubicació SFTP des d'on voleu importar dades.
+Heu de ser [administrador](permissions.md#admin) al Customer Insights i tenir les credencials d'usuari, l'URL i el número de port de la ubicació SFTP des d'on voleu importar dades.
 
-1. Seleccioneu **Afegeix una connexió** en configurar un enriquiment o aneu a **Connexions** > **d'administració** i seleccioneu **Configura** a la peça Importa personalitzada.
+1. Seleccioneu **Afegeix connexió** en configurar un enriquiment o aneu a **Connexions** > **d'administració** i seleccioneu **Configura** a la peça Importació personalitzada.
 
-   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Pàgina de configuració de la connexió d'importació personalitzada.":::
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Pàgina de configuració de connexió d'importació personalitzada.":::
 
 1. Introduïu un nom per a la connexió.
 
@@ -91,7 +91,7 @@ Heu de ser administrador [del Customer Insights i tenir les credencials d'usuari
 
 ### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
 
-Quan habiliteu Dynamics 365 Customer Insights transmetre dades mitjançant importació personalitzada, permeteu la transferència de dades fora del límit Dynamics 365 Customer Insights de compliment de, incloses dades potencialment sensibles, com ara dades personals. Microsoft transferirà aquestes dades a les vostres instruccions, però sou responsable d'assegurar-vos que les dades compleixin les obligacions de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quan permeteu Dynamics 365 Customer Insights transmetre dades mitjançant la importació personalitzada, permeteu la transferència de dades fora del límit de compliment, Dynamics 365 Customer Insights incloses les dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons les vostres instruccions, però sou responsable de garantir que la informació compleixi qualsevol obligació de privadesa o de seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-import"></a>Configurar la importació
@@ -104,21 +104,21 @@ L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquime
 
 1. Reviseu la visió general i, a continuació, seleccioneu **Següent**.
 
-1. Seleccioneu la connexió. Poseu-vos en contacte amb un administrador si no n'hi ha cap disponible.
+1. Seleccioneu la connexió. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible.
 
-1. Seleccioneu el **conjunt de dades del client** i trieu el perfil o el segment que voleu enriquir. L'entitat *Client* enriqueix tots els vostres perfils de clients, mentre que un segment enriqueix només els perfils de clients continguts en aquest segment.
-
-1. Seleccioneu **Següent**.
-
-1. Introduïu el **camí** i **el nom del fitxer** de dades que voleu importar.
+1. Seleccioneu el **conjunt** de dades de clients i trieu el perfil o segment que voleu enriquir. L'entitat *Client* enriqueix tots els teus perfils de client, mentre que un segment enriqueix només els perfils de clients continguts en aquest segment.
 
 1. Seleccioneu **Següent**.
 
-1. Proporcioneu un **nom** per a l'enriquiment i el nom **de l'entitat** Sortida.
+1. Introduïu el **camí** i **el nom** del fitxer del fitxer de dades que voleu importar.
+
+1. Seleccioneu **Següent**.
+
+1. Proporcioneu un **nom** per a l'enriquiment i el nom de l'entitat **de sortida**.
 
 1. Seleccioneu **Desa l'enriquiment** després de revisar les opcions.
 
-1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o a prop per tornar a la **pàgina Enriquiments**.
+1. Seleccioneu **Executa** per iniciar el procés d'enriquiment o tancar per tornar a la **pàgina Enriquiments**.
 
 ## <a name="view-enrichment-results"></a>Veure resultats d'enriquiment
 

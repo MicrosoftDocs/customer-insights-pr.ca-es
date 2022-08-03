@@ -14,129 +14,119 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050935"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170669"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
 Els segments us permeten agrupar els clients segons atributs demogràfics, de transaccions o de comportament. Podeu utilitzar segments per orientar les campanyes promocionals, les activitats de vendes i les accions d'atenció al client per assolir els vostres objectius empresarials.
 
-Els perfils de client que coincideixen amb els filtres d'una definició de segment es coneixen com a *membres* d'un segment. S'apliquen [límits de servei](/dynamics365/customer-insights/service-limits).
+Els perfils de clients que coincideixen amb els filtres d'una definició de segment s'anomenen *membres* d'un segment. S'apliquen [límits de servei](/dynamics365/customer-insights/service-limits).
 
-## <a name="create-a-new-segment"></a>Crear un segment nou
+## <a name="create-a-segment"></a>Creació d’un segment
 
-Hi ha diverses maneres de crear un segment nou: 
+Trieu com crear un segment en funció del vostre públic objectiu.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
 
-- Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment) 
-- Segments senzills amb un operador: [segment ràpid](segment-builder.md#quick-segments) 
-- Forma amb tecnologia d'IA per trobar clients semblants: [clients semblants](find-similar-customer-segments.md) 
-- Suggeriments amb tecnologia d'IA basats en mesures o atributs: [segments suggerits per millorar mesures](suggested-segments.md) 
-- Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md) 
+- Segments complexos amb creador de segments: creeu-ne [un de propi](segment-builder.md)
+- Segments senzills amb un operador: [segment ràpid](segment-quick.md)
+- Manera basada en intel·ligència artificial per trobar clients similars: [clients similars](find-similar-customer-segments.md)
+- Suggeriments basats en mesures o atributs basats en IA: [segments suggerits basats en mesures](suggested-segments.md)
+- Suggeriments basats en activitats: [segments suggerits segons l'activitat del client](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
-- Segment complex amb el creador de segments: [Creeu el vostre propi segment](segment-builder.md#create-a-new-segment)
+- Segments senzills o complexos amb creador de segments: creeu-ne [un de propi](segment-builder.md)
 
 ---
 
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
-Aneu a la **pàgina Segments** per visualitzar tots els segments desats i gestionar-los.
+Aneu a la **pàgina Segments** per veure els segments que heu creat, el seu estat i estat, el nombre de membres i l'última vegada que es van actualitzar les dades. Podeu ordenar la llista de segments per qualsevol columna o utilitzar el quadre de cerca per trobar el segment que voleu gestionar.
 
-Cada segment està representat per una fila que inclou informació addicional sobre el segment.
+Seleccioneu un segment per veure les accions disponibles.
 
 :::image type="content" source="media/segments-selected-segment.png" alt-text="Segment seleccionat amb la llista desplegable d'opcions i opcions disponibles." lightbox="media/segments-selected-segment.png":::
 
-Les accions següents estan disponibles quan seleccioneu un segment:
-
-- **Visualitzar** els detalls del segment, incloent-hi la tendència de recompte de membres per obtenir la visualització prèvia dels membres del segment.
+- [**Visualitzeu**](#view-segment-details) els detalls del segment, inclosa la tendència del recompte de membres i una previsualització dels membres del segment.
 - **Baixar** la llista de membres com a fitxer .CSV.
 - **Editar** el segment per canviar-ne les propietats.
-- **Crear un duplicat** d'un segment. Podeu triar editar-ne les propietats immediatament o desar el duplicat.
-- **Actualitzar** el segment per incloure-hi les dades més recents.
-- **Activar** o **desactivar** el segment. Per als segments inactius, la definició del segment existeix però encara no conté cap client. Un segment actiu cerca clients que coincideixin amb la definició del segment. Si es configura una [actualització planificada](system.md#schedule-tab), els segments inactius tenen l'**estat** **Omès**, indicant que ni tan sols s'ha intentat una actualització. Quan s'activi un segment inactiu, s'actualitzarà i s'inclourà en les actualitzacions programades.
-  Alternativament, podeu utilitzar la funcionalitat **Planifica més tard** al desplegable **Activa o desactiva** per especificar una data i hora futura per a l'activació i la desactivació d'un segment concret.
-- **[Trobar clients](find-similar-customer-segments.md)** similars del segment.
+- **Crear un duplicat** d'un segment. Podeu editar-ne les propietats immediatament o desar-ne el duplicat.
+- [**Actualitzeu**](#refresh-segments) el segment per incloure les dades més recents.
+- **Activar** o **desactivar** el segment. Els segments inactius no s'actualitzaran durant una [actualització](system.md#schedule-tab) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar. Els segments actius s'actualitzen en funció del seu tipus: estàtic o dinàmic.
+- **Feu estàtic** o **Feu dinàmic** el tipus de segment. Els segments estàtics s'han d'actualitzar manualment. Els segments dinàmics s'actualitzen automàticament durant l'actualització del sistema.
+- [**Cerqueu clients**](find-similar-customer-segments.md) similars del segment.
 - **Canviar el nom** del segment.
-- **Etiqueta** per [administrar etiquetes](work-with-tags-columns.md#manage-tags) per al segment.
-- **Baixar** la llista de membres com a fitxer .CSV.
-- **Administreu exportacions** per veure el segment relacionat amb les exportacions i administrar-les. [Més informació sobre les exportacions](export-destinations.md)
+- **Etiqueta** per gestionar les [etiquetes](work-with-tags-columns.md#manage-tags) del segment.
+- [**Gestioneu les exportacions**](#export-segments) per veure els segments relacionats amb l'exportació i gestionar-los. [Més informació sobre les exportacions](export-destinations.md)
 - **Suprimir** el segment.
 - **Columnes** per [personalitzar les columnes](work-with-tags-columns.md#customize-columns) que es mostren.
-- **Filtra-ho** per filtrar a [les etiquetes](work-with-tags-columns.md#filter-on-tags).
-- **Nom** de cerca per cercar pel nom del segment.
+- **Filtrar** per [filtrar a les etiquetes](work-with-tags-columns.md#filter-on-tags).
+- **Nom** de cerca per cercar per nom de segment.
 
-## <a name="refresh-segments"></a>Actualitzar els segments
+## <a name="view-segment-details"></a>Veure detalls del segment
 
-Per actualitzar tots els segments a la vegada, seleccioneu **Actualitza-ho tot** a la pàgina **Segments**; o bé, podeu actualitzar un o diversos segments quan els seleccioneu i trieu **Actualitza** a les opcions. O bé, podeu configurar una actualització periòdica a la planificació a **Administració** > **Sistema** > **Planificació**. Quan es configura una actualització periòdica, s'apliquen les regles següents:
+A la **pàgina Segments**, seleccioneu un segment per veure l'historial de processament i segmentar els membres.
 
-- Tots els segments amb el tipus **Dinàmic** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Un cop completada l'actualització, l'estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca horària de l'última actualització correcta. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
-- Els segments amb el tipus **Estàtic** *no* s'actualitzaran automàticament. L'últim **refrescat** mostra una marca horària de l'última vegada que els segments estàtics s'han executat o s'actualitzen manualment.
+A la part superior de la pàgina s'inclou una gràfica de tendències que visualitza els canvis al recompte de membres. Passeu el cursor per sobre dels punts de dades per veure el recompte de membres en una data concreta. Canvieu el període de temps de la visualització.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="export-segments"></a>Exportar segments
-
-Podeu exportar un segment des de la pàgina de segments o des de la [pàgina d'exportació](export-destinations.md). 
-
-1. Aneu a la pàgina **Segments**.
-
-1. Seleccioneu l'el·lipsi vertical (&vellip;) per al segment que voleu exportar.
-
-1. Seleccioneu **Administra les exportacions** a la llista desplegable d'accions.
-
-1. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Podeu veure totes les exportacions configurades agrupades per si contenen el segment actual o no.
-
-   1. Per afegir el segment seleccionat a una exportació, **editeu** l'exportació respectiva per seleccionar el segment corresponent i deseu. En entorns per a clients individuals, podeu seleccionar l'exportació a la llista i seleccionar **Afegeix un segment** per aconseguir el mateix resultat.
-
-   1. Per crear una exportació nova amb el segment seleccionat, seleccioneu **Afegeix l'exportació**. Per obtenir més informació sobre la creació d'exportacions, vegeu [Configurar una exportació nova](export-destinations.md#set-up-a-new-export).
-
-1. Seleccioneu **Enrere** per tornar a la pàgina principal per als segments.
-
-## <a name="track-usage-of-a-segment"></a>Seguiment de l'ús d'un segment
-
-Si utilitzeu segments a les aplicacions, que es basen en la mateixa Microsoft Dataverse organització connectada amb el Customer Insights, podeu fer un seguiment de l'ús d'un segment. Per als [segments del Customer Insights utilitzats en els recorreguts del client del Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), el sistema us informa sobre l'ús d'aquest segment.
-
-Quan editeu un segment que s'utilitza a l'entorn del Customer Insights o en un recorregut del client al Màrqueting, un bàner del creador [de](segment-builder.md) segments us informa sobre les dependències. Podeu inspeccionar els detalls de la dependència directament des del bàner o seleccionant **Ús** al creador de segments.
-
-La **subfinestra d'ús** segmenta mostra els detalls sobre l'ús d'aquest segment a Dataverse les aplicacions basades. Per als segments que s'utilitzen en els recorreguts del client, trobareu un enllaç per inspeccionar el recorregut al Màrqueting on s'utilitza aquest segment. Si teniu permisos per accedir a l'aplicació Màrqueting, podeu accedir-hi a més detalls.
-
-:::image type="content" source="media/segment-usage-pane.png" alt-text="Subfinestra lateral amb detalls de l'ús del segment al creador de segments.":::
-
-El sistema us informa sobre l'ús d'un segment del seguiment quan intenteu suprimir-lo. Si el segment que esteu a punt de suprimir s'utilitza en un recorregut del client del Marketing, aquest recorregut s'aturarà per a tots els usuaris del segment. Si el recorregut forma part d'una campanya de màrqueting, la supressió afectarà la pròpia campanya. No obstant això, encara podeu suprimir el segment malgrat els advertiments.
-
-:::image type="content" source="media/segment-usage-delete.png" alt-text="Quadre de diàleg per confirmar la supressió del segment quan s'utilitza un segment en una Dataverse aplicació.":::
-
-### <a name="supported-apps"></a>Aplicacions admeses
-
-Actualment es fa un seguiment de l'ús a les aplicacions basades en les aplicacions següents Dataverse:
-
-- [Recorreguts del client al Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
-
-## <a name="view-processing-history-and-segment-members"></a>Visualitzar l'historial de processament i els membres del segment
-
-Podeu veure les dades consolidades d'un segment revisant-ne els detalls.
-
-A la pàgina **Segments**, seleccioneu el segment que voleu revisar.
-
-A la part superior de la pàgina s'inclou una gràfica de tendències que visualitza els canvis al recompte de membres. Passeu el cursor per sobre dels punts de dades per veure el recompte de membres en una data concreta.
-
-Podeu actualitzar el període de temps de la visualització.
-
-> [!div class="mx-imgBorder"]
-> ![Interval de temps del segment.](media/segment-time-range.png "Interval de temps del segment")
+:::image type="content" source="media/segment-time-range.png" alt-text="Interval de temps del segment.":::
 
 La part inferior conté una llista dels membres del segment.
 
 > [!NOTE]
 > Els camps que apareixen en aquesta llista es basen en els atributs de les entitats del vostre segment.
 >
->La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, heu d'[exportar el segment](export-destinations.md).
+>La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, [exporta el segment](export-destinations.md).
+
+## <a name="refresh-segments"></a>Actualitzar els segments
+
+Els segments es poden actualitzar amb una planificació automàtica o actualitzar-los manualment sota demanda. Per actualitzar manualment un o més segments, selecciona'ls i selecciona **Actualitza**.
+
+Per [programar una actualització](system.md#schedule-tab) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**. S'apliquen les regles següents:
+
+- Tots els segments amb el tipus **Dinàmica** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Un cop finalitzada l'actualització, l'Estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca de temps de l'última actualització reeixida. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
+- Els segments amb el tipus **Estàtic** *no* s'actualitzaran automàticament. L'última **actualització** mostra una marca de temps de l'última vegada que el segment estàtic es va executar o refrescar manualment.
+
+[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="export-segments"></a>Exportar segments
+
+Exporta segments a altres aplicacions per utilitzar-les encara més. Exporta un segment des de la pàgina de segments o la [pàgina](export-destinations.md) Exporta.
+
+1. Aneu a la **pàgina Segments** i seleccioneu el segment que voleu exportar.
+
+1. Seleccioneu **Gestiona les exportacions**. S'obre la pàgina **Exportacions (versió preliminar) per al segment**. Visualitzeu totes les exportacions configurades agrupades per si contenen el segment actual o no.
+
+   1. Per afegir el segment seleccionat a una exportació, **editeu** l'exportació respectiva per seleccionar el segment corresponent i deseu. En entorns per a clients individuals, seleccioneu l'exportació a la llista i seleccioneu **Afegeix un segment** per obtenir el mateix resultat.
+
+   1. Per crear una exportació nova amb el segment seleccionat, seleccioneu **Afegeix l'exportació**. Per obtenir més informació sobre la creació d'exportacions, vegeu [Configurar una exportació nova](export-destinations.md#set-up-a-new-export).
+
+1. Seleccioneu **Enrere** per tornar a la pàgina principal per als segments.
+
+## <a name="track-usage-of-a-segment"></a>Fer un seguiment de l'ús d'un segment
+
+Si utilitzeu segments en aplicacions basades en la mateixa Microsoft Dataverse organització connectada amb el Customer Insights, podeu fer un seguiment de l'ús d'un segment. Per [als segments del Customer Insights utilitzats en els recorreguts del client del Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), el sistema us informa sobre l'ús d'aquest segment.
+
+Quan editeu un segment que s'utilitza a l'entorn del Customer Insights o en una recorregut del client al Màrqueting, un bàner del creador de [segments](segment-builder.md) us informa sobre les dependències. Inspeccioneu els detalls de dependències directament des del bàner o seleccionant **Ús** al creador de segments.
+
+La **subfinestra Ús** del segment mostra els detalls sobre l'ús d'aquest segment en aplicacions basades en Dataverse dades. Per als segments utilitzats en els recorreguts del client, trobareu un enllaç per inspeccionar el recorregut al Màrqueting on s'utilitza aquest segment. Si teniu permisos per accedir a l'aplicació Marketing, consulteu-ne més detalls.
+
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Subfinestra lateral amb detalls de l'ús del segment al creador de segments.":::
+
+El sistema us informa sobre l'ús d'un segment de seguiment quan intenteu suprimir-lo. Si el segment que esteu a punt de suprimir s'utilitza en una recorregut del client al Màrqueting, aquest recorregut s'aturarà per a tots els usuaris del segment. Si el viatge forma part d'una campanya de màrqueting, la supressió afectarà la mateixa campanya. Tot i això, encara podeu suprimir el segment malgrat els advertiments.
+
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Quadre de diàleg per confirmar la supressió de segments quan s'utilitza un segment en una Dataverse aplicació.":::
+
+### <a name="supported-apps"></a>Aplicacions admeses
+
+Actualment es fa un seguiment de l'ús a les aplicacions basades en següents Dataverse:
+
+- [Recorreguts del client al Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

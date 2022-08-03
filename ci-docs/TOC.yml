@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Catàleg d'aprenentatge
   items:
-    - name: Certifica com a especialista en plataformes de dades de clients de Microsoft
+    - name: Certificar-se com a especialista de Microsoft Customer Data Platform
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Introducció al Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -14,11 +14,11 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Crear un perfil de client unificat
       href: /learn/modules/unified-customer-profile/
-    - name: Treballar amb informació del client
+    - name: Treballar amb el Customer Insights
       href: /learn/modules/working-with-customer-insights/
-    - name: Enriquir les dades i fer prediccions
+    - name: Enriquir dades i fer prediccions
       href: /learn/modules/enrich-data/
-    - name: Administra les connexions externes
+    - name: Gestionar les connexions externes
       href: /learn/modules/configure-third-party-connections/
     - name: Administrar el Customer Insights
       href: /learn/modules/administer-customer-data-platform/
@@ -36,13 +36,13 @@
       href: get-started.md
     - name: Començar amb una llicència de pagament
       href: paid-license.md
-    - name: Explora les estadístiques del client
+    - name: Exploreu les estadístiques del client
       href: home.md
     - name: Treballar amb etiquetes i columnes
       href: work-with-tags-columns.md
     - name: Treballar amb comptes d'empresa
       href: work-with-business-accounts.md
-    - name: Integració amb el Dynamics 365 Marketing
+    - name: Integrar-se amb el Dynamics 365 Marketing
       href: marketing-get-started.md
 - name: Fonts de dades
   items:
@@ -54,9 +54,9 @@
       href: connect-synapse.md
     - name: Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
       href: connect-dataverse-managed-lake.md
-    - name: Afegeix orígens de dades a través de Power Query connectors
+    - name: Afegir fonts de dades mitjançant Power Query connectors
       href: connect-power-query.md
-    - name: Enriquiment per a fonts de dades
+    - name: Enriquiment per a les fonts de dades
       href: data-sources-enrichment.md
     - name: Actualització incremental per a fonts de dades
       href: incremental-refresh-data-sources.md
@@ -66,17 +66,17 @@
   items:
     - name: Informació general sobre la unificació de dades
       href: data-unification.md
-    - name: Seleccioneu els camps d'origen
+    - name: Seleccionar camps d'origen
       href: map-entities.md
-    - name: Suprimeix els registres duplicats
+    - name: Suprimir registres duplicats
       href: remove-duplicates.md
-    - name: Condicions de coincidència
+    - name: Condicions del partit
       href: match-entities.md
-    - name: Unificar els camps de client
+    - name: Unificar els camps de clients
       href: merge-entities.md
-    - name: Revisa la unificació de dades
+    - name: Revisar la unificació de dades
       href: review-unification.md
-    - name: Actualitza la configuració de la unificació
+    - name: Actualitzar la configuració d'unificació
       href: data-unification-update.md
 - name: Enriquiment de dades
   items:
@@ -86,11 +86,11 @@
       href: enrichment-office.md
     - name: Marques i interessos
       href: enrichment-microsoft.md
-    - name: Dades de l'empresa de Dun &Bradstreet
+    - name: Dades de l'empresa de Dun & Bradstreet
       href: enrichment-dnb.md
     - name: Dades d'empresa de Leadspace
       href: enrichment-leadspace.md
-    - name: Demografia amb Experian
+    - name: Dades demogràfiques amb Experian
       href: enrichment-experian.md
     - name: Adreces millorades
       href: enrichment-enhanced-addresses.md
@@ -98,28 +98,32 @@
       href: enrichment-enhanced-company-data.md
     - name: Identitat amb LiveRamp
       href: enrichment-liveramp.md
-    - name: Ubicació des de l'Azure Maps
+    - name: Ubicació de Azure Maps
       href: enrichment-azure-maps.md
     - name: Ubicació de HERE Technologies
       href: enrichment-here.md
     - name: Importació personalitzada SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Perfils unificats
+- name: Perfils i activitats dels clients
   items:
-    - name: Revisar perfils de client unificats
+    - name: Veure perfils de client
       href: customer-profiles.md
-    - name: Filtrar perfils de client unificats
+    - name: Gestionar l'índex de cerca i filtre
       href: search-filter-index.md
     - name: Definir les activitats dels clients
       href: activities.md
-    - name: Utilitzar la gestió del consentiment
+    - name: Gestió del consentiment d'ús
       href: consent-management.md
+    - name: Utilitzar dades web per a la personalització
+      href: unknown-to-known.md
 - name: Segments
   items:
     - name: Descripció general dels segments
       href: segments.md
-    - name: Crear segments
+    - name: Crear amb el creador de segments
       href: segment-builder.md
+    - name: Crea amb segments ràpids
+      href: segment-quick.md
     - name: Segments suggerits basats en mesures
       href: suggested-segments.md
     - name: Segments suggerits basats en l'activitat
@@ -132,9 +136,9 @@
   items:
     - name: Visió general de les mesures
       href: measures.md
-    - name: Crea un compàs nou
+    - name: Crea amb el creador de mesures
       href: measure-builder.md
-    - name: Utilitza una plantilla de compàs
+    - name: Crear amb plantilles
       href: measure-templates.md
 - name: Prediccions
   items:
@@ -150,7 +154,7 @@
           href: predict-subscription-churn.md
         - name: Predir la cancel·lació de transaccions
           href: predict-transactional-churn.md
-        - name: Analitzar el sentiment en la retroalimentació dels clients
+        - name: Analitzar el sentiment en els comentaris dels clients
           href: sentiment-analysis.md
         - name: Utilitzar models personalitzats de l'aprenentatge automàtic de l'Azure
           href: custom-models.md
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Campanya activa
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -212,7 +216,7 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
-        - name: Inmobi
+        - name: InMobi
           href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: "Microsoft\_Advertising"
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks
@@ -270,23 +276,23 @@
       href: create-environment.md
     - name: Connectar a l’Microsoft Dataverse
       href: customer-insights-dataverse.md
-    - name: Utilitza el teu Azure Data Lake Storage
+    - name: Utilitzeu el vostre propi Azure Data Lake Storage
       href: own-data-lake-storage.md
     - name: Administrar la configuració de l'entorn
       href: manage-environments.md
-    - name: Connecta't a un compte d'emmagatzematge mitjançant el Service Principal
+    - name: Connectar-se a un compte d'emmagatzematge mitjançant el director del servei
       href: connect-service-principal.md
 - name: Administració
   items:
     - name: Configurar la configuració del sistema
       href: system.md
-    - name: Configura la configuració de seguretat
+    - name: Configurar els paràmetres de seguretat
       href: security-overview.md
     - name: Assignar permisos d'usuari
       href: permissions.md
     - name: Porteu el vostre propi Key Vault
       href: use-azure-key-vault.md
-    - name: Exporta els registres de diagnòstic
+    - name: Exportar registres de diagnòstic
       href: diagnostics.md
     - name: Informació general sobre les connexions
       href: connections.md
@@ -296,7 +302,7 @@
       href: apis.md
     - name: Referències d'API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Consultes de mostra d'OData
+    - name: Consultes d'exemple d'OData
       href: odata-examples.md
 - name: Límits de servei
   href: service-limits.md

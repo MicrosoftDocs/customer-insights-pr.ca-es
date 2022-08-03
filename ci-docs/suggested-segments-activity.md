@@ -1,5 +1,5 @@
 ---
-title: Segments suggerits en funció de l'activitat (previsualització)
+title: Segments suggerits en funció de l'activitat (visualització prèvia)
 description: Deixeu que l'aprenentatge automàtic trobi segments nous i interessants basats en l'activitat del client.
 ms.date: 05/11/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054328"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170577"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Segments suggerits basats en les dades d'activitat (versió preliminar)
+# <a name="suggested-segments-based-on-activity-preview"></a>Segments suggerits en funció de l'activitat (visualització prèvia)
 
 Descobriu segments rellevants dels clients segons les dades d'activitat del client que s'incorporen al Customer Insights. Alguns exemples de dades d'activitat són transaccions, duració de les trucades de suport, compres o devolucions. Per suggerir segments, les dades d'activitats s'analitzen per aconseguir una recuperació, una freqüència i un valor monetari (o una duració). O bé, es poden generar [segments suggerits per millorar una mesura o comprendre millor què influeix en un atribut](suggested-segments.md).
 
@@ -35,33 +35,31 @@ Amb les [dades d'activitat](activities.md) disponibles al Customer Insights, pod
 - clients que interactuen sovint amb el vostre negoci  
 
 Si teniu una empresa minorista, podríeu esbrinar quins clients generen més ingressos i recompensar-los amb un descompte. O bé podeu identificar clients ocasionals i oferir-los que s'uneixin a un programa de recompenses per tal que visitin el vostre negoci amb més freqüència.
-Si sou del sector de l'atenció sanitària, oferiu atenció sanitària públic i el vostre objectiu és minimitzar les despeses dels pacients individuals. Una manera de fer-ho podria ser reduir les visites periòdiques oferint la millor atenció possible amb el mínim de visites. En aquest cas, el vostre objectiu és mantenir la freqüència de visita baixa i reduir al mínim el cost periòdic dels pacients. O bé, podeu identificar pacients que tenen cites freqüents i uns costos periòdics alts, i analitzar aquests casos per millorar la satisfacció de cada persona. 
+Si proporciones assistència sanitària pública i el teu objectiu és minimitzar les despeses per a pacients individuals, podries intentar reduir les visites recurrents proporcionant la millor atenció possible en el menor nombre de visites possible. En aquest cas, el vostre objectiu és mantenir la freqüència de visita baixa i reduir al mínim el cost periòdic dels pacients. O bé, podeu identificar pacients que tenen cites freqüents i uns costos periòdics alts, i analitzar aquests casos per millorar la satisfacció de cada persona.
 
 ## <a name="required-data"></a>Dades obligatòries
 
-Els suggeriments es generen a partir de les dades d'entrada seleccionades. 
+Els suggeriments es generen a partir de les dades d'entrada seleccionades.
 
-- Perfils de client: tots els clients o membres d'un segment específic. 
+- Perfils de client: tots els clients o membres d'un segment específic.
 
 - Període de temps: darrer mes, darrer any o període de temps personalitzat.
 
 - Tipus d'activitat: compres, transaccions al detall, transaccions en línia, casos de suport al client, subscripcions, entre altres.  
 
-- Entitat al Customer Insights que conté les dades d'activitat: l'entitat UnifiedActivity o l'entitat per a una activitat específica. 
+- Entitat al Customer Insights que conté les dades d'activitat: l'entitat UnifiedActivity o l'entitat per a una activitat específica.
 
 - Les mètriques que s'inclouen són: recent, freqüència o control monetari, segons les vostres necessitats empresarials.
 
 ## <a name="generate-suggested-segments"></a>Generar segments suggerits
 
-1. Aneu a **Segments**.
+1. Aneu a **Segments** i seleccioneu la **pestanya Suggeriments (previsualització).**
 
-1. Seleccioneu la pestanya **Suggeriments (versió preliminar)**.
-
-1. Seleccioneu **Cerca suggeriments nous** i trieu **Veure o anticipar el comportament del client**. Seleccioneu **Comença** per executar l'experiència guiada.
+1. Seleccioneu **Cerca suggeriments nous** i trieu **Veure o anticipar el comportament del client**. Seleccioneu **Inicia**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Primer pas de l'auxiliar de configuració d'un segment suggerit segons l'activitat.":::
 
-1. Proporcioneu les dades d'entrada necessàries i seleccioneu **Següent** per continuar.
+1. Proporcioneu les dades d'entrada necessàries i seleccioneu **Següent**.
 
    - Trieu els clients: incloeu tots els clients o un segment concret.
    - Trieu l'activitat: seleccioneu el tipus d'activitat i les entitats que descriuen l'activitat.
@@ -69,32 +67,17 @@ Els suggeriments es generen a partir de les dades d'entrada seleccionades.
 
 1. Reviseu les entrades i seleccioneu **Executa** per executar el model i generar suggeriments.
 
-1. Segons el nombre de perfils de client i de les activitats seleccionades, pot trigar uns minuts a completar-se. 
+Segons el nombre de perfils de client i de les activitats seleccionades, pot trigar uns minuts a completar-se.
 
-Després de generar els suggeriments, podeu filtrar-los per la condició o el valor que més us interessi. 
+Després de generar els suggeriments, podeu filtrar-los per la condició o el valor que més us interessi.
 
-## <a name="view-details-of-a-suggested-segment"></a>Veure els detalls del segment suggerit
+## <a name="manage-suggested-segments"></a>Gestionar els segments suggerits
 
-Un cop generats els suggeriments, els trobareu enumerats a la secció **Segments** > **Suggeriments (versió preliminar)** a la secció **Suggeriments basats en l'activitat**.
+Aneu a **Segments** i seleccioneu la **pestanya Suggeriments (previsualització).** A la **secció Suggeriments basats** en activitat, seleccioneu un segment suggerit per veure les accions disponibles.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Subfinestra lateral expandida que mostra dades detallades d'un segment suggerit.":::
-
-Seleccioneu **Vegeu el suggeriment** en un segment suggerit per visualitzar-ne els detalls. La subfinestra lateral proporciona detalls com l'extensió de cada propietat en comparació amb el grup de destinació. També destaca el nombre de membres potencials del segment i el percentatge corresponent del total de clients. Si voleu conservar el suggeriment com a segment, seleccioneu **Crea un segment**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Desar un suggeriment com a segment
-
-1. Aneu a **Segments** > **Suggeriments (versió preliminar)**.
-
-1. Seleccioneu el segment que voleu desar. 
-
-1. A la subfinestra lateral, seleccioneu **Crea un segment**. 
-
-1. Després de desar el segment, es mostrarà a la llista de segments a la pestanya **Tots els segments**. Ara es pot [actualitzar o suprimir com qualsevol altre segment](segments.md). No podeu editar els detalls del segment. No obstant això, podeu canviar els criteris d'entrada dels suggeriments i generar suggeriments diferents.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Actualitzar o editar un conjunt de suggeriments
-
-1. Aneu a **Segments** > **Suggeriments (versió preliminar)** i cerqueu el segment a la secció **Suggeriments basats en l'activitat**.
-
-1. Seleccioneu **Actualitza els suggeriments** per actualitzar els suggeriments mantenint els atributs configurats. O seleccioneu **Edita els suggeriments** per modificar els atributs configurats. El sistema tornarà a executar el procés, generarà suggeriments de segments basats en les dades més recents i substituirà els suggeriments actuals.
+- **Vegeu suggeriments** per veure els detalls d'aquest segment, com ara l'extensió de cada dimensió en comparació amb el grup objectiu. També destaca el nombre de membres potencials del segment i el percentatge corresponent del total de clients.
+- **Creeu un segment** per desar el suggerit com a segment. Es mostra a la **pestanya Tots els segments** i es [pot actualitzar o suprimir](segments.md). No podeu editar els detalls del segment. No obstant això, podeu canviar els criteris d'entrada dels suggeriments i generar suggeriments diferents.
+- **Editeu suggeriments** per modificar els atributs configurats que substituiran els suggeriments actuals.
+- **Actualitzeu els suggeriments** per actualitzar els suggeriments mantenint els atributs configurats.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

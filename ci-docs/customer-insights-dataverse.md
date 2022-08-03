@@ -1,7 +1,7 @@
 ---
 title: Treballar amb dades del Customer Insights al Microsoft Dataverse
-description: Obteniu informació sobre com podeu connectar el Customer Insights i Microsoft Dataverse entendre les entitats de sortida a les que s'exporten a Dataverse.
-ms.date: 05/30/2022
+description: Obteniu informació sobre com connectar el Customer Insights i Microsoft Dataverse entendre les entitats de sortida a les quals s'exporta Dataverse.
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,82 +11,94 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011508"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153392"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb dades del Customer Insights al Microsoft Dataverse
 
-Customer Insights proporciona l'opció de fer que les entitats de sortida estiguin disponibles com a [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Aquesta integració permet compartir dades fàcil i el desenvolupament personalitzat a través d'un enfocament de codi baix / sense codi. Les [entitats](#output-entities) de sortida estan disponibles com a taules en un Dataverse entorn. Podeu utilitzar les dades per a qualsevol altra aplicació basada en Dataverse taules. Aquestes taules permeten escenaris com ara fluxos de treball automatitzats o Power Automate la creació d'aplicacions amb Power Apps.
+El Customer Insights proporciona l'opció de fer que les entitats de sortida estiguin disponibles com a [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Aquesta integració permet compartir dades fàcilment i desenvolupar-les a mida mitjançant un enfocament de codi baix / sense codi. Les [entitats](#output-entities) de sortida estan disponibles com a taules en un Dataverse entorn. Podeu utilitzar les dades per a qualsevol altra aplicació basada Dataverse en taules. Aquestes taules permeten escenaris com ara fluxos de treball automatitzats a través Power Automate o creació d'aplicacions amb Power Apps.
 
-La connexió amb el vostre Dataverse entorn també us [permet ingerir dades de local orígens de dades mitjançant Power Platform fluxos de dades i passarel·les](connect-power-query.md#add-data-from-on-premises-data-sources).
+La connexió al vostre Dataverse entorn també us permet ingerir [dades de fonts de dades local mitjançant Power Platform fluxos de dades i passarel·les](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Les estadístiques del client i Dataverse els entorns s'han d'allotjar a la mateixa regió.
-- Heu de tenir una funció d'administrador global a l'entorn Dataverse. Comproveu si aquest [Dataverse entorn està associat](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinats grups de seguretat i assegureu-vos que esteu afegit a aquests grups de seguretat.
-- Cap altre entorn del Customer Insights ja està associat amb l'entorn Dataverse en què us voleu connectar. Obteniu informació sobre com [podeu suprimir una connexió existent amb un Dataverse entorn](#remove-an-existing-connection-to-a-dataverse-environment).
-- Un Microsoft Dataverse entorn només es pot connectar a un únic compte d'emmagatzematge. Només s'aplica si configureu l'entorn per [utilitzar el vostre Azure Data Lake Storage](own-data-lake-storage.md).
+- El Customer Insights i Dataverse els entorns han d'estar allotjats a la mateixa regió.
+- Heu de tenir una funció d'administrador global a l'entorn Dataverse. Verifiqueu si aquest [Dataverse entorn està associat](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinats grups de seguretat i assegureu-vos que hàgiu afegit a aquests grups de seguretat.
+- Cap altre entorn del Customer Insights ja està associat amb l'entorn Dataverse que voleu connectar. Obteniu informació sobre com [podeu suprimir una connexió existent a un Dataverse entorn](#remove-an-existing-connection-to-a-dataverse-environment).
+- Un Microsoft Dataverse entorn només es pot connectar a un únic compte d'emmagatzematge. Només s'aplica si configureu l'entorn per [utilitzar el vostre Azure Data Lake Storage](own-data-lake-storage.md) fitxer.
 
-## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Connectar un Dataverse entorn a Customer Insights
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse dret a la capacitat d'emmagatzematge
 
-El **Microsoft Dataverse** pas us permet connectar el Customer Insights amb el vostre Dataverse entorn mentre [creeu un entorn](create-environment.md) d'estadístiques del client.
+Una subscripció del Customer Insights us dóna dret a una capacitat addicional per a la capacitat [Dataverse d'emmagatzematge existent](/power-platform/admin/capacity-storage) de la vostra organització. La capacitat afegida depèn del nombre de perfils que utilitzi la subscripció.
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="l'ús compartit de dades amb Microsoft Dataverse l'habilitació automàtica per a entorns nous de xarxa.":::
+**Exemple:**
 
-Els administradors poden configurar el Customer Insights per connectar un entorn existent Dataverse. En proporcionar l'URL a l'entorn Dataverse, s'adjunta al seu nou entorn d'estadístiques del client.
+Suposant que obteniu 15 GB d'emmagatzematge de bases de dades i 20 GB d'emmagatzematge de fitxers per cada 100,000 perfils de clients. Si la teva subscripció inclou perfils de clients de 300.000, la teva capacitat total d'emmagatzematge seria de 45 GB (3 x 15 GB) d'emmagatzematge de bases de dades i 60 GB d'emmagatzematge de fitxers (3 x 20 GB). De la mateixa manera, si teniu una subscripció B2B amb comptes de 30K, la vostra capacitat total d'emmagatzematge seria de 45 GB (3 x 15 GB) d'emmagatzematge de bases de dades i emmagatzematge de fitxers de 60 GB (3 x 20 GB).
 
-Si no voleu utilitzar un entorn existent Dataverse, el sistema crea un entorn nou per a les dades del Customer Insights a l'inquilí. [Power Platform els administradors poden controlar qui pot crear entorns](/power-platform/admin/control-environment-creation). Quan esteu configurant un entorn nou del Customer Insights i l'administrador ha inhabilitat la creació d'entorns Dataverse per a tothom, excepte per als administradors, és possible que no pugueu crear un entorn nou.
+La capacitat de registre no és incremental ni fixa per a la vostra organització.
 
-**Activa l'ús compartit de** dades amb Dataverse el que activeu la casella de selecció Compartició de dades.
+Per obtenir més informació sobre els drets detallats de capacitat, vegeu [Guia](https://go.microsoft.com/fwlink/?LinkId=866544) de llicències del Dynamics 365.
 
-Si utilitzeu el vostre propi compte d'emmagatzematge del llac de dades, també necessiteu l'identificador **Permisos**. Per obtenir més informació sobre com obtenir l'identificador de permisos, reviseu la secció següent.
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Connectar un Dataverse entorn al Customer Insights
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Habilita l'ús compartit de dades amb Dataverse el vostre (Azure Data Lake Storage visualització prèvia)
+El **Microsoft Dataverse** pas us permet connectar el Customer Insights amb el vostre Dataverse entorn mentre [creeu un entorn](create-environment.md) del Customer Insights.
 
-Habilitar l'ús compartit de dades quan Microsoft Dataverse el vostre entorn [utilitza el vostre propi Azure Data Lake Storage compte](own-data-lake-storage.md) necessita una configuració addicional. L'usuari que configura l'entorn del Customer Insights ha de tenir com a mínim **permisos del lector** de dades blob d'emmagatzematge al *contenidor CustomerInsights* del Azure Data Lake Storage compte.
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartició de dades amb Microsoft Dataverse habilitat automàticament per a entorns nets nous.":::
 
-1. Creeu dos grups de seguretat a la vostra subscripció a l'Azure: un **grup de seguretat Lector** i un **grup de seguretat col·laborador** i definiu el Microsoft Dataverse servei com a propietari per a ambdós grups de seguretat.
-2. Gestioneu la llista de control d'accés (ACL) al contenidor CustomerInsights del compte d'emmagatzematge a través d'aquests grups de seguretat. Afegiu el Microsoft Dataverse servei i qualsevol Dataverse aplicació empresarial basada en el Dynamics 365 Marketing al **grup de seguretat Lector** amb **permisos de només** lectura. Afegiu *només* l'aplicació Customers Insights al **grup de seguretat Col·laborador** per concedir permisos de **lectura i escriptura** per escriure perfils i estadístiques.
+Els administradors poden configurar el Customer Insights per connectar un entorn existent Dataverse. En proporcionar l'URL a l'entorn Dataverse, es connecta al seu nou entorn del Customer Insights. Després d'establir la connexió entre el Customer Insights i Dataverse, no canvieu el nom de l'organització per a l'entorn Dataverse. El nom de l'organització s'utilitza a l'adreça Dataverse URL i un nom canviat trenca la connexió amb el Customer Insights.
+
+Si no voleu utilitzar un entorn existent Dataverse, el sistema crea un entorn nou per a les dades del Customer Insights a l'inquilí. [Power Platform els administradors poden controlar qui pot crear entorns](/power-platform/admin/control-environment-creation). Quan configureu un entorn nou del Customer Insights i l'administrador ha desactivat la creació d'entorns Dataverse per a tothom excepte per als administradors, és possible que no pugueu crear un entorn nou.
+
+**Activeu la casella de** selecció per compartir Dataverse dades.
+
+Si utilitzeu el vostre propi compte del Data Lake Storage, també necessiteu l'identificador **de permisos**. Per obtenir més informació sobre com obtenir l'identificador de permisos, consulteu la secció següent.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Habiliteu l'ús compartit de dades amb Dataverse els vostres propis Azure Data Lake Storage (Visualització prèvia)
+
+Habilitar l'ús compartit de dades quan Microsoft Dataverse l'entorn [utilitza el vostre propi Azure Data Lake Storage compte](own-data-lake-storage.md) necessita una configuració addicional. L'usuari que configuri l'entorn del Customer Insights ha de tenir com a mínim **permisos de lector** de dades Blob d'emmagatzematge al *contenidor CustomerInsights* del Azure Data Lake Storage compte.
+
+1. Creeu dos grups de seguretat a la subscripció de l'Azure: un **grup de seguretat del lector** i un **grup de seguretat del Col·laborador** i definiu el Microsoft Dataverse servei com a propietari dels dos grups de seguretat.
+2. Gestioneu la Llista de control d'accés (ACL) al contenidor CustomerInsights del vostre compte d'emmagatzematge mitjançant aquests grups de seguretat. Afegiu el Microsoft Dataverse servei i qualsevol Dataverse aplicació empresarial basada, com ara el Dynamics 365 Marketing, al **grup de seguretat del lector** amb **permisos de només** lectura. Afegiu *només* l'aplicació Coneixements del client al grup de **seguretat de Contributor** per concedir permisos de **lectura i d'escriptura** per escriure perfils i estadístiques.
 
 ### <a name="limitations"></a>Limitacions
 
-Hi ha dues limitacions a l'hora d'utilitzar Dataverse amb el vostre propi Azure Data Lake Storage compte:
+Hi ha dues limitacions a l'hora d'utilitzar-lo Dataverse amb el vostre propi Azure Data Lake Storage compte:
 
-- Hi ha una assignació un a un entre una Dataverse organització i un Azure Data Lake Storage compte. Una vegada que una Dataverse organització està connectada a un compte d'emmagatzematge, no es pot connectar a un altre compte d'emmagatzematge. Aquesta limitació impedeix que un Dataverse no empleni diversos comptes d'emmagatzematge.
-- L'ús compartit de dades no funcionarà si es necessita una configuració de l'Azure Private Link per accedir al compte Azure Data Lake Storage perquè està darrere d'un tallafoc. Dataverse actualment no admet la connexió als extrems privats a través de Private Link.
+- Hi ha una assignació individual entre una Dataverse organització i un Azure Data Lake Storage compte. Una vegada que una Dataverse organització està connectada a un compte d'emmagatzematge, no es pot connectar a un altre compte d'emmagatzematge. Aquesta limitació impedeix que no Dataverse s'emplenin diversos comptes d'emmagatzematge.
+- L'ús compartit de dades no funcionarà si es necessita una configuració de l'Azure Private Link per accedir al vostre Azure Data Lake Storage compte perquè es troba darrere d'un tallafoc. Dataverse actualment no admet la connexió a punts finals privats a través de Private Link.
 
-### <a name="set-up-powershell"></a>Configura el PowerShell
+### <a name="set-up-powershell"></a>Configuració del PowerShell
 
 Per executar els scripts del PowerShell, primer heu de configurar el PowerShell en conseqüència.
 
 1. Instal·leu la versió més recent del [Azure Active Directory PowerShell per al Graph](/powershell/azure/active-directory/install-adv2).
    1. A l'ordinador, seleccioneu la tecla del Windows al teclat, cerqueu el **Windows PowerShell** i seleccioneu **Executa com a administrador**.
    1. A la finestra del PowerShell que s'obre, introduïu `Install-Module AzureAD`.
-2. Importa tres mòduls.
-    1. A la finestra powerShell, introduïu `Install-Module -Name Az.Accounts` i seguiu els passos.
+2. Importar tres mòduls.
+    1. A la finestra del PowerShell, introduïu `Install-Module -Name Az.Accounts` i seguiu els passos.
     1. Repetiu per `Install-Module -Name Az.Resources` i `Install-Module -Name Az.Storage`.
 
 ### <a name="configuration-steps"></a>Passos de configuració
 
-1. Descarregueu els dos scripts de PowerShell que necessiteu executar des del repositori [github del](https://github.com/trin-msft/byol) nostre enginyer.
+1. Baixeu els dos scripts de PowerShell que necessiteu per executar-los des del repositori [GitHub del](https://github.com/trin-msft/byol) nostre enginyer.
     1. `CreateSecurityGroups.ps1`
        - Necessiteu *permisos d'administrador d'inquilins* per executar aquest script del PowerShell.
-       - Aquest script del PowerShell crea dos grups de seguretat a la vostra subscripció a l'Azure. Un per al grup Lector i un altre per al grup Col·laborador i es farà Microsoft Dataverse servei com a propietari per a aquests dos grups de seguretat.
-       - Executeu aquest script del PowerShell al Windows PowerShell proporcionant l'identificador de subscripció de l'Azure que conté el .Azure Data Lake Storage Obriu l'script del PowerShell en un editor per revisar la informació addicional i la lògica implementada.
-       - Deseu els dos valors d'identificador del grup de seguretat generats per aquest script perquè els utilitzarem a l'script `ByolSetup.ps1`.
+       - Aquest script del PowerShell crea dos grups de seguretat a la subscripció de l'Azure. Un per al grup lector i un altre per al grup Col·laboradors i farà Microsoft Dataverse servei com a propietari d'aquests dos grups de seguretat.
+       - Executeu aquest script del PowerShell al Windows PowerShell proporcionant l'identificador de subscripció de l'Azure que conté el vostre Azure Data Lake Storage fitxer. Obriu l'script del PowerShell en un editor per revisar la informació addicional i la lògica implementada.
+       - Deseu els dos valors d'identificador de grup de seguretat generats per aquest script perquè els utilitzarem a l'script `ByolSetup.ps1`.
 
         > [!NOTE]
-        > La creació de grups de seguretat es pot inhabilitar a l'inquilí. En aquest cas, es necessitaria una configuració manual i l'administrador hauria Azure AD d'habilitar la [creació](/azure/active-directory/enterprise-users/groups-self-service-management) de grups de seguretat.
+        > La creació de grups de seguretat es pot desactivar a l'inquilí. En aquest cas, es necessitaria una configuració manual i el vostre Azure AD administrador hauria d'habilitar la [creació de grups de seguretat](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
-        - Necessiteu *permisos del propietari* de dades del blob d'emmagatzematge al nivell de compte/contenidor d'emmagatzematge per executar aquest script o aquest script en crearà un per a vosaltres. L'assignació de rols es pot suprimir manualment després d'executar correctament l'script.
-        - Aquest script del PowerShell afegeix el control d'accés basat en la tole (RBAC) necessari per al Microsoft Dataverse servei i per a qualsevol Dataverse aplicació empresarial basada en el servei. També actualitza la Llista de control d'accés (ACL) al contenidor CustomerInsights per als grups de seguretat creats amb l'script `CreateSecurityGroups.ps1`. El grup Col·laborador tindrà *permís rwx* i el grup Lectors només tindrà *permís r-x*.
-        - Executeu aquest script del PowerShell al Windows PowerShell proporcionant l'identificador de subscripció de l'Azure que conté el vostre Azure Data Lake Storage, nom del compte d'emmagatzematge, nom del grup de recursos i els valors d'identificador del grup de seguretat lector i col·laborador. Obriu l'script del PowerShell en un editor per revisar la informació addicional i la lògica implementada.
-        - Copia la cadena de sortida després d'executar correctament l'script. La cadena de sortida té aquest aspecte: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        - Necessiteu *permisos storage Blob Data Owner* a nivell de compte d'emmagatzematge/contenidor per executar aquest script o aquest script en crearà un per a vosaltres. L'assignació de funcions es pot eliminar manualment després d'executar correctament l'script.
+        - Aquest script del PowerShell afegeix el control d'accés basat en funcions necessari per al Microsoft Dataverse servei i qualsevol Dataverse aplicació empresarial basada en funcions. També actualitza la Llista de control d'accés (ACL) al contenidor CustomerInsights per als grups de seguretat creats amb l'script `CreateSecurityGroups.ps1`. El grup de col·laboradors tindrà *permís rwx* i el grup de lectors només tindrà *permís r-x*.
+        - Executeu aquest script del PowerShell al Windows PowerShell proporcionant l'identificador de subscripció de l'Azure que conté el Azure Data Lake Storage vostre nom de compte d'emmagatzematge, el nom del grup de recursos i els valors de l'identificador de grup de seguretat del lector i del col·laborador. Obriu l'script del PowerShell en un editor per revisar la informació addicional i la lògica implementada.
+        - Copieu la cadena de sortida després d'executar correctament l'script. La cadena de sortida té aquest aspecte: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
 2. Introduïu la cadena de sortida copiada des de dalt al **camp Identificador** de permisos del pas de configuració de l'entorn per a Microsoft Dataverse.
 
@@ -94,24 +106,24 @@ Per executar els scripts del PowerShell, primer heu de configurar el PowerShell 
 
 ### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Suprimir una connexió existent a un Dataverse entorn
 
-En connectar-se a un Dataverse entorn, el missatge **d'error Aquesta organització del CDS ja està connectada a una altra instància** del Customer Insights significa que l'entorn ja s'utilitza Dataverse en un entorn del Customer Insights. Podeu suprimir la connexió existent com a administrador global a l'entorn Dataverse. Pot trigar un parell d'hores a omplir els canvis.
+Quan us connecteu a un Dataverse entorn, el missatge **d'error Aquesta organització de CDS ja està connectada a una altra instància** del Customer Insights significa que l'entorn Dataverse ja s'utilitza en un entorn del Customer Insights. Podeu suprimir la connexió existent com a administrador global a l'entorn Dataverse. Els canvis poden trigar un parell d'hores a omplir-se.
 
 1. Aneu al [Power Apps](https://make.powerapps.com).
-1. Seleccioneu l'entorn del selectador d'entorns.
-1. Anar a **solucions**
-1. Desinstal·leu o suprimiu la solució anomenada **Dynamics 365 Customer Insights complement de targeta de client (visualització prèvia).**
+1. Seleccioneu l'entorn del selector d'entorns.
+1. Anar a **Solucions**
+1. Desinstal·leu o suprimiu la solució anomenada **Dynamics 365 Customer Insights Complement de targeta de client (visualització prèvia).**
 
 O
 
-1. Obre el teu Dataverse entorn.
-1. Aneu a **Solucions** > **avançades** de configuració.
+1. Obriu el vostre Dataverse entorn.
+1. Aneu a **Solucions** > **de configuració** avançada.
 1. Desinstal·leu la **solució CustomerInsightsCustomerCard**.
 
-Si la supressió de la connexió falla a causa de dependències, també heu de suprimir les dependències. Per obtenir més informació, vegeu [Eliminar dependències](/power-platform/alm/removing-dependencies).
+Si l'eliminació de la connexió falla a causa de dependències, també heu d'eliminar les dependències. Per obtenir més informació, vegeu [Supressió de dependències](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Entitats de sortida
 
-Algunes entitats de sortida del Customer Insights estan disponibles com a taules al Dataverse. Les seccions següents descriuen l'esquema esperat d'aquestes taules.
+Algunes entitats de sortida del Customer Insights estan disponibles com a taules a Dataverse. Les seccions següents descriuen l'esquema esperat d'aquestes taules.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -132,7 +144,7 @@ La taula AlternativeKey conté les claus de les entitats que han participat en e
 |Column  |Type  |Descripció  |
 |---------|---------|---------|
 |DataSourceName    |String         | Nom de la font de dades. Per exemple: `datasource5`        |
-|EntityName        | String        | Nom de l'entitat a Customer Insights. Per exemple: `contact1`        |
+|EntityName        | String        | Nom de l'entitat al Customer Insights. Per exemple: `contact1`        |
 |AlternateValue    |String         |Identificador alternatiu assignat a l'identificador de client. Exemple: `cntid_1078`         |
 |KeyRing           | Text de diverses línies        | Valor JSON  </br> Exemple: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
 |CustomerId         | String        | Identificador del perfil de client unificat.         |
@@ -198,14 +210,14 @@ Aquesta taula conté la sortida de les prediccions de models.
 
 ### <a name="segment-membership"></a>Pertinença al segment
 
-Aquesta taula conté informació de pertinença al segment dels perfils de clients.
+Aquesta taula conté informació de pertinença per segments dels perfils de clients.
 
 | Column        | Type | Descripció                        |
 |--------------------|--------------|-----------------------------|
 | CustomerId        | String       | Identificador del perfil del client        |
 | SegmentProvider      | String       | Aplicació que publica els segments.      |
-| SegmentMembershipType | String       | Tipus de client d'aquest registre de pertinença al segment. Admet diversos tipus, com ara client, contacte o compte. Per defecte: client  |
-| Segments       | Cadena JSON  | Llista de segments únics dels que el perfil de client és membre      |
+| SegmentMembershipType | String       | Tipus de client d'aquest registre de pertinença a aquest segment. Admet diversos tipus, com ara Client, Contacte o Compte. Per defecte: client  |
+| Segments       | Cadena JSON  | Llista de segments únics dels quals el perfil de client és membre      |
 | msdynci_identifier  | String   | Identificador únic del registre de pertinença al segment. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID determinista generat a partir de`msdynci_identifier`          |
 

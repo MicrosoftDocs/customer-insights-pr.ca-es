@@ -1,51 +1,52 @@
 ---
-title: Exportar segments a l'Administrador Facebook d'anuncis (previsualització) (conté vídeo)
+title: Exportar segments a Facebook Ads Manager (previsualització) (conté vídeo)
 description: Apreneu a configurar la connexió i exportar a Facebook Ads Manager.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082969"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195002"
 ---
-# <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segments a l'Administrador d'anuncis Facebook (previsualització)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segments a Facebook Ads Manager (visualització prèvia)
 
 Exporteu els segments de perfils unificats de client al Facebook Ads Manager per crear campanyes a Facebook i a Instagram.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Requisits previs per a la connexió
+## <a name="prerequisites"></a>Requisits previs
 
-- Heu de tenir un [**compte de Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclogui un [**compte empresarial de Facebook**](https://business.facebook.com/)
-- Heu de ser un administrador al [**compte de Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Un [Facebook compte d'anuncis](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclogui un [Facebook compte d'empresa](https://business.facebook.com/).
+- Privilegis d'administrador al compte d'Anuncis [Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
-- Fins a 10 milions de perfils de client per exportació a Facebook Ads Manager.
-- L'exportació a Facebook Ads Manager es limita als segments.
-- Creeu o actualitzeu públics personalitzats a Facebook només del tipus *llista de clients*.
-- L'exportació de segments amb un total de 10 milions de perfils de client pot trigar fins a 90 minuts a completar-se.
+- Fins a 10 milions de perfils de clients per exportació a Facebook Ads Manager poden trigar fins a 90 minuts.
+- Només segments.
+- Facebook *tipus de llista* de clients només en [públics personalitzats](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+  > [!NOTE]
+  > En alguns casos, és possible que vegeu públics personalitzats de diferents tipus a la llista desplegable. Si seleccioneu un altre tipus que no sigui la llista *de* clients, l'exportació falla.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configuració de la connexió a Facebook Ads Manager
 
-Per poder crear una exportació, abans un administrador ha de configurar la connexió amb el servei i permetre que els usuaris utilitzin la connexió.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix una connexió** i trieu **Facebook Ads Manager** per configurar la connexió.
+1. Seleccioneu **Afegeix connexió** i trieu **Facebook Gestor d'anuncis**.
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
-1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Permeteu que els col·laboradors utilitzin la connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autentiqueu-vos a Facebook Ads Manager: 
+1. Autentiqueu-vos a Facebook Ads Manager:
 
    1. Seleccioneu **Continua amb Facebook** per iniciar la sessió al compte de Facebook Ads.
 
@@ -53,27 +54,25 @@ Per poder crear una exportació, abans un administrador ha de configurar la conn
 
    1. Seleccioneu el **compte publicitari de Facebook** que voleu fer servir.
 
-   1. Seleccioneu un **Públic personalitzat existent** de la llista desplegable o creeu un **Públic personalitzat nou**. Per obtenir més informació, vegeu [**Públics al Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Només podeu crear o actualitzar públics personalitzats a Facebook del tipus *llista de clients* amb aquesta exportació. En alguns casos, a la llista desplegable veureu públics personalitzats de diferents tipus. Seleccionar un tipus diferent de *llista de clients* tindrà com a resultat una exportació fallada. 
+   1. Seleccioneu un **Públic personalitzat existent** de la llista desplegable o creeu un **Públic personalitzat nou**.
 
-1. Reviseu la **Privadesa de les dades i el compliment** i, a continuació, seleccioneu **Accepto**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Desa** per completar la connexió.
 
 ## <a name="configure-an-export"></a>Configurar una exportació
 
-Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**. 
+1. Seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció **Facebook Ads Manager**. Si no veieu aquest nom de secció, no hi ha disponible cap connexió d'aquest tipus.
+1. **Al camp Connexió per a l'exportació**, trieu una connexió de la secció Administrador d'anuncis Facebook. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible.
 
-1. Al camp **Trieu el vostre identificador de clau**, seleccioneu **Correu electrònic**, **Nom i adreça** o **Telèfon** per enviar al Facebook Ads Manager. 
+1. Introduïu un nom per a l'exportació.
 
-1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**.
+1. Al camp Connecta dades **, seleccioneu** Correu electrònic **,** Nom i adreça **o** Telèfon **per enviar-los al Gestor d'anuncis**.Facebook
 
 1. Assigneu els atributs corresponents de l'entitat del client unificat per a l'identificador de clau seleccionat.
    > [!TIP]
@@ -85,16 +84,6 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
 
 1. Seleccioneu **Desa**.
 
-Si deseu una exportació, no s'executarà l'exportació immediatament.
-
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). 
-
-També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a l'Administrador d'anuncis del Facebook, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Facebook Ads compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

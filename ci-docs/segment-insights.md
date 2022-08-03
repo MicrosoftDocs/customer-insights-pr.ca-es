@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051579"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170991"
 ---
 # <a name="segment-insights-preview"></a>Informació dels segments (versió preliminar)
 
@@ -43,26 +43,25 @@ També podeu analitzar com canvia la superposició per atributs específics.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Visualitzar i optimitzar una anàlisi de superposició
 
-Després de completar l'anàlisi, trobareu detalls sobre aquesta informació a **Segments** > **Informació (versió preliminar)**.
+1. Després de completar l'anàlisi, trobareu detalls sobre aquesta informació a **Segments** > **Informació (versió preliminar)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalls de la informació de superposició de segments.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Detalls de la informació de superposició de segments.":::
 
-Seleccioneu una informació per veure els resultats de l'anàlisi:
+1. Seleccioneu una informació per veure els resultats de l'anàlisi:
 
-- Nombre de membres que solapen els segments seleccionats per a l'anàlisi.
-- Nombre de membres que s'inclouen en un dels segments però no a la resta de segments.
-- Si heu seleccionat camps en configurar l'anàlisi de superposició, els trobareu a les pestanyes corresponents. Podeu utilitzar el desplegable de filtre per seleccionar qualsevol nivell d'interès d'atribut i la taula de la part inferior mostrarà les dades corresponents.
+   - Nombre de membres que solapen els segments seleccionats per a l'anàlisi.
+   - Nombre de membres que s'inclouen en un dels segments però no a la resta de segments.
+   - Si heu seleccionat camps en configurar l'anàlisi de superposició, els trobareu a les pestanyes corresponents. Podeu utilitzar el desplegable de filtre per seleccionar qualsevol nivell d'interès d'atribut i la taula de la part inferior mostrarà les dades corresponents.
 
 ## <a name="segment-differentiators"></a>Diferenciadors del segment
 
-Els diferenciadors del segment us ajudaran a descobrir els elements diferencials d'un segment de la resta de clients o d'un altre segment. Només heu de seleccionar un segment i el sistema identificarà els atributs i les mesures de perfil que distingeixen el segment seleccionat.
+Els diferenciadors del segment us ajudaran a descobrir els elements diferencials d'un segment de la resta de clients o d'un altre segment. Seleccioneu un segment i el sistema identifica els atributs del perfil i les mesures que distingeixen el segment seleccionat.
 
 ### <a name="run-a-differentiator-analysis"></a>Executar una anàlisi diferenciadora
 
 1. Aneu a **Segments** i seleccioneu la pestanya **Informació (versió preliminar)**.
 
-1. Seleccioneu **Nou** i trieu l'opció **Superposició** a la subfinestra **Trieu un tipus d'informació**.
+1. Seleccioneu **Crea** i trieu l'opció **Diferenciadors** a la subfinestra Trieu el **tipus d'estadístiques**.
 
 1. Trieu el segment que voleu analitzar com a **Segment principal** i seleccioneu **Següent**.
 
@@ -70,29 +69,29 @@ Els diferenciadors del segment us ajudaran a descobrir els elements diferencials
 
 1. Opcionalment, trieu un o diversos camps d'interès per centrar l'anàlisi sobre els atributs específics i seleccioneu **Següent**.
 
-1. Proporcioneu un nom per a l'anàlisi de superposició, un nom de visualització opcional i una descripció.
+1. Proporcioneu un nom per a l'anàlisi del diferenciador, un nom de visualització opcional i una descripció.
 
-1. Seleccioneu **Desa** per iniciar l'anàlisi. L'anàlisi de superposició està preparada quan l'estat canvia d'Actualitzant a Correcte.
+1. Seleccioneu **Desa** per iniciar l'anàlisi. L'anàlisi del diferenciador està a punt quan l'estat canvia de Refrescant a Reeixit.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Visualitzar i optimitzar una anàlisi de diferenciadors
 
-Després de completar l'anàlisi, trobareu detalls sobre aquesta informació a **Segments** > **Informació (versió preliminar)**.
+1. Després de completar l'anàlisi, aneu a **Segments** > **Insights (visualització prèvia)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalls de la informació de diferenciador de segments.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Detalls de la informació de diferenciador de segments.":::
 
-Seleccioneu una informació per veure els resultats de l'anàlisi. Una anàlisi de diferenciador inclou dues pestanyes. La pestanya **Atributs** enumera els atributs del perfil considerats com a diferenciadors. La pestanya **Mesures** enumera els diferenciadors. Cada pestanya inclou els detalls següents:
+1. Seleccioneu una informació per veure els resultats de l'anàlisi. Una anàlisi de diferenciador inclou dues pestanyes. La pestanya **Atributs** enumera els atributs del perfil considerats com a diferenciadors. La pestanya **Mesures** enumera els diferenciadors. Cada pestanya inclou els detalls següents:
 
-- Llista classificada de diferenciadors, ordenats per la puntuació de la diferència.
-- La **Puntuació de la diferència** per a cada diferenciador. La puntuació de diferència representa el grau de diferència d'un atribut entre dos segments. Com més gran sigui la puntuació, més difereixen els atributs entre els dos segments. Seleccioneu una puntuació per obrir la subfinestra **Puntuació de diferència** amb les distribucions de valors per a l'atribut.
+   - Llista classificada de diferenciadors, ordenats per la puntuació de la diferència.
+   - La **Puntuació de la diferència** per a cada diferenciador. La puntuació de diferència representa el grau de diferència d'un atribut entre dos segments. Com més gran sigui la puntuació, més difereixen els atributs entre els dos segments. Seleccioneu una puntuació per obrir la subfinestra **Puntuació de diferència** amb les distribucions de valors per a l'atribut.
 
 ## <a name="manage-segment-insights"></a>Administrar la informació detallada de segments
 
-Podeu utilitzar les opcions següents sobre la informació a la barra d'ordres:
+Aneu a **Estadístiques de segments** > **(visualització prèvia)** per veure les estadístiques de segment i gestionar-les. Seleccioneu una informació de segment per veure les accions disponibles.
 
-- **Enrere** per tornar a la llista d'informació
-- **Actualitza** per tornar a executar l'anàlisi
-- **Suprimeix** per suprimir aquesta informació
-
+- **Consulteu** l'anàlisi d'informació
+- **Editeu** la informació per canviar-ne les propietats
+- **Actualitzeu** la informació per tornar a executar l'anàlisi
+- **Canvieu** el nom de la visió
+- **Suprimir** les estadístiques
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

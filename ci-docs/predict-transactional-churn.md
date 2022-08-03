@@ -1,5 +1,5 @@
 ---
-title: Predicció de rotació de transaccions (conté vídeo)
+title: Predicció de la transacció (conté vídeo)
 description: Predigueu si un client està en risc de deixar d'adquirir els vostres productes o serveis.
 ms.date: 01/13/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642443"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171083"
 ---
 # <a name="transaction-churn-prediction"></a>Predicció de cancel·lació de transaccions
 
@@ -24,7 +24,7 @@ La predicció de rotació de transaccions ajuda a predir si un client deixarà d
 Per als entorns basats en comptes empresarials, podem preveure la cancel·lació de transaccions d'un compte i també una combinació de compte i un altre nivell d'informació, com ara la categoria de producte. Afegir una dimensió pot ajudar-vos a esbrinar la probabilitat que té el compte "Contoso" de deixar de comprar la categoria de producte "material d'oficina". A més, per als comptes empresarials, també podem utilitzar la IA per generar una llista de les raons potencials per les quals és probable que en un compte hi hagi cancel·lacions en una categoria d'informació de nivell secundari.
 
 > [!TIP]
-> Proveu el tutorial d'un predicció de rotació de transaccions mitjançant dades d'exemple: guia [d'exemple predicció de la transacció](sample-guide-predict-transactional-churn.md).
+> Proveu el tutorial per obtenir una predicció de transaccions mitjançant dades d'exemple: [churn de transaccions predicció guia d'exemple](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -100,7 +100,7 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Al Customer Insights, aneu a **Intel·ligència** > **Prediccions**.
 
-1. Seleccioneu la **peça del model de churn** client i seleccioneu **Utilitza aquest model**.
+1. Seleccioneu la **peça Model de churn** del client i seleccioneu **Utilitza aquest model**.
 
 1. A la subfinestra **Model de rotació de clients**, trieu **Transacció** i seleccioneu **Comença**.
 
@@ -116,11 +116,11 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 ### <a name="define-customer-churn"></a>Definició de l'abandonament de clients
 
-1. Estableix la **finestra predicció**. Per exemple, podeu predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo amb les vostres estratègies de retenció de màrqueting. La predicció de risc de rotació durant un període de temps més llarg o curt pot fer que resulti més difícil abordar els factors del vostre perfil de risc de rotació, però això dependrà dels vostres requisits empresarials específics.
+1. Definiu la **finestra de predicció**. Per exemple, podeu predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo amb les vostres estratègies de retenció de màrqueting. La predicció de risc de rotació durant un període de temps més llarg o curt pot fer que resulti més difícil abordar els factors del vostre perfil de risc de rotació, però això dependrà dels vostres requisits empresarials específics.
    >[!TIP]
-   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar la predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
+   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
-1. Introduïu el nombre de dies per definir el churn al camp de **definició** churn. Per exemple, si un client no ha fet cap compra durant els darrers 30 dies, es podria considerar com a rotació per al vostre negoci. 
+1. Introduïu el nombre de dies per definir-lo al camp de **definició** de Churn. Per exemple, si un client no ha fet cap compra durant els darrers 30 dies, es podria considerar com a rotació per al vostre negoci. 
 
 1. Per continuar, feu clic a **Següent**.
 
@@ -128,7 +128,7 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Seleccioneu **Afegeix dades** i trieu el tipus d'activitat a la subfinestra lateral que conté la informació de l'historial de transacció o de compra.
 
-1. A **Selecciona activitats**, trieu les activitats específiques del tipus d'activitat seleccionat en què voleu que se centri el càlcul.
+1. A **Selecciona les activitats**, trieu les activitats específiques del tipus d'activitat seleccionat en què voleu centrar-vos en el càlcul.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Subfinestra lateral que mostra la tria d'activitats específiques sota el tipus semàntic.":::
 
@@ -136,7 +136,7 @@ Per als entorns basats en comptes empresarials, podem preveure la cancel·lació
 
 1. Assigneu els atributs semàntics als camps necessaris per executar el model. Si els següents camps no estan emplenats, configureu la relació des de l'entitat de l'historial de compres a l'entitat *Client*. Seleccioneu **Desa**.
 
-1. Al pas Afegeix les **dades** necessàries, seleccioneu **A continuació** per continuar si no voleu afegir més activitats.
+1. Al pas Afegeix dades **obligatòries**, seleccioneu **Següent** per continuar si no voleu afegir més activitats.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidors individuals (d'empresa a consumidor)](#tab/b2c)
@@ -240,7 +240,7 @@ Afegiu una llista de clients empresarials i de comptes que voleu utilitzar com a
    - **Nom de la predicció:** nom de la predicció que es proporcionarà en crear-la.
    - **Tipus de predicció:** tipus de model utilitzat per a la predicció
    - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.
-     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-new-segment) amb el llindar preferit.
+     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-segment) amb el llindar preferit.
      No tots els clients són necessàriament clients actius. Alguns d'ells poden no haver tingut cap activitat durant molt de temps i es consideren ja cancel·lat, basant-se en la definició de cancel·lació. Predir el risc de rotació dels clients que ja han marxat no és útil perquè no són el públic d'interès.
    - **Camp predit**: aquest camp només s'emplena per a alguns tipus de prediccions i no es fa servir a la predicció de rotació.
    - **Estat:** estat de l'execució de la predicció.

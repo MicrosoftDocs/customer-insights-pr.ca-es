@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054742"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183481"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemes d'entitats al Common Data Model
 
@@ -39,9 +39,8 @@ Per obtenir més informació, vegeu la documentació sobre els [Esquemes d'entit
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Visualitzar entitats mitjançant el navegador d'entitats del Common Data Model
 
-Podeu visualitzar entitats al [navegador d'entitats del Common Data Model](https://microsoft.github.io/CDM/). Seleccioneu una entitat de la secció Aplicació de l'Insights per obtenir la llista d'entitats del Customer Insights i les seves definicions.
-> [!div class="mx-imgBorder"]
-> ![Navegador d'entitats del CDM que mostra l'entitat CustomerActivity.](media/CDM-entity-navigator.png "Navegador d'entitats del CDM que mostra l'entitat CustomerActivity")
+Visualitzeu les entitats del [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Seleccioneu una entitat de la secció Aplicació de l'Insights per obtenir la llista d'entitats del Customer Insights i les seves definicions.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="Navegador d'entitats del CDM que mostra l'entitat CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

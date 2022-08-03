@@ -1,7 +1,7 @@
 ---
 title: Predicció del valor del cicle de vida del client (CLV)
 description: Predieu el potencial d'ingressos per als clients actius en el futur.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055202"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186428"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predicció del valor del cicle de vida del client (CLV)
 
 Predieu el valor potencial (ingressos) que els clients actius individuals aportaran al vostre negoci en un període de temps futur definit. Aquesta característica us pot ajudar a aconseguir diversos objectius:
+
 - Identificar clients d'alt valor i processar aquesta informació
 - Crear segments de clients estratègics basats en el seu valor potencial per executar campanyes personalitzades amb objectius de vendes, màrqueting i assistència
 - Guiar el desenvolupament de productes centrant-vos en característiques que augmentin el valor del client
 - Optimitzar l'estratègia de vendes o màrqueting i assignar el pressupost de manera més precisa per arribar als clients
-- Reconèixer i recompensar els clients d'alt valor a través de programes de fidelitat o recompenses 
+- Reconèixer i recompensar els clients d'alt valor a través de programes de fidelitat o recompenses
 
 ## <a name="prerequisites"></a>Requisits previs
 
@@ -35,7 +36,7 @@ Abans de començar, reflexioneu sobre què significa el CLV per al vostre negoci
 
 Com que la configuració i l'execució d'un model de CLV no triga gaire, penseu en la possibilitat de crear diversos models amb diferents preferències d'entrada i comparar els resultats dels models per veure quin escenari de model s'ajusta millor a les vostres necessitats empresarials.
 
-###  <a name="data-requirements"></a>Requisits de dades
+### <a name="data-requirements"></a>Requisits de dades
 
 Les dades següents són necessàries i, si es marquen com a opcionals, recomanades per augmentar el rendiment del model. Com més dades pugui processar el model, més precisa serà la predicció. Per tant, us animem a ingerir més dades d'activitats de client, si estan disponibles.
 
@@ -52,11 +53,12 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
     - Activitats web: historial de visites de llocs web, historial de correus electrònics
     - Activitats de fidelitat: acumulació de punts de recompensa de fidelitat i historial de bescanvis
     - Registre del servei d'atenció al client, trucades de servei, queixes o historial de devolucions
+    - Informació del perfil del client
 - Dades sobre les activitats del client (opcional):
     - Identificadors d'activitat per distingir les activitats del mateix tipus
     - Identificadors de clients per assignar activitats als clients
     - Informació d'activitat que conté el nom i la data de l'activitat
-    - L'esquema de dades semàntic per a les activitats és el següent: 
+    - L'esquema de dades semàntic per a les activitats és el següent:
         - **Clau principal**: un identificador únic per a una activitat
         - **Data i hora**: la data i l'hora de l'esdeveniment identificats per la clau principal
         - **Esdeveniment (nom de l'activitat)**: nom de l'esdeveniment que voleu utilitzar
@@ -66,7 +68,7 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
     - Dades històriques suficients: almenys un any de dades transaccionals. Preferentment de dos a tres anys de dades transaccionals per predir el CLV durant un any.
     - Múltiples compres per client: l'ideal és almenys entre dues i tres transaccions per identificador de client, preferentment en múltiples dates.
     - Nombre de clients: almenys 100 clients únics, preferentment més de 10.000 clients únics. El model fallarà amb menys de 100 clients i dades històriques insuficients
-    - Integritat de les dades: falten menys del 20% de valors als camps obligatoris de les dades d'entrada   
+    - Integritat de les dades: falten menys del 20% de valors als camps obligatoris de les dades d'entrada
 
 > [!NOTE]
 > - El model requereix l'historial de transaccions dels clients. Actualment només es pot configurar una entitat de l'historial de transaccions. Si hi ha diverses entitats de compra/transacció, podeu unir-les abans de la Power Query ingestió de dades.
@@ -74,11 +76,11 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear una predicció del valor de vida del client
 
-1. Anem a les prediccions d'intel **·ligència** > **·**.
+1. Aneu a Prediccions d'intel **·ligència** > **·**.
 
 1. Seleccioneu la peça **Valor de vida del client** i seleccioneu **Utilitza el model**. 
 
-1. A la **subfinestra de valors** de vida del client, seleccioneu **Comença**.
+1. A la subfinestra Valor **del cicle de vida del** client, seleccioneu **Comença**.
 
 1. **Anomeneu aquest model** i el **nom de l'entitat de sortida** per distingir-los d'altres models o entitats.
 
@@ -122,11 +124,11 @@ Les dades següents són necessàries i, si es marquen com a opcionals, recomana
 
 1. Seleccioneu **Següent**.
 
-### <a name="add-optional-data"></a>Afegeix dades opcionals
+### <a name="add-optional-activity-data"></a>Afegir dades d'activitat opcionals
 
-Les dades que reflecteixen les interaccions clau dels clients (com ara el web, el servei d'atenció al client i els registres d'esdeveniments) afegeixen context als registres de transacció. Trobar més patrons a les dades de l'activitat de client pot millorar la precisió de les previsions. 
+Les dades que reflecteixen les interaccions clau dels clients (com ara el web, el servei d'atenció al client i els registres d'esdeveniments) afegeixen context als registres de transacció. Trobar més patrons a les dades de l'activitat de client pot millorar la precisió de les previsions.
 
-1. Al pas **Dades addicionals (opcional)**, seleccioneu **Afegeix dades**. Trieu l'entitat d'activitat del client que proporciona la informació de l'activitat del client tal com es descriu als [requisits previs](#prerequisites).
+1. **Al pas Dades addicionals (opcional),** seleccioneu **Afegeix dades a** Estadístiques **del model d'impuls amb dades** d'activitat addicionals. Trieu l'entitat d'activitat del client que proporciona la informació de l'activitat del client tal com es descriu als [requisits previs](#prerequisites).
 
 1. Assigneu els camps semàntics als atributs de l'entitat de l'activitat del client i seleccioneu **Següent**.
 
@@ -135,21 +137,40 @@ Les dades que reflecteixen les interaccions clau dels clients (com ara el web, e
 1. Seleccioneu un tipus d'activitat que coincideixi amb el tipus d'activitat de client que afegiu. Trieu entre els tipus d'activitats existents o afegiu un tipus d'activitat nou.
 
 1. Configureu la relació des de l'entitat d'activitat de client a l'entitat *Client*.
-    
+
     1. Seleccioneu el camp que identifica el client a la taula de l'activitat del client. Pot estar directament relacionat amb l'ID de client principal de l'entitat *Client*.
     1. Seleccioneu l'entitat *Client* que coincideixi amb l'entitat *Client* principal.
     1. Introduïu un nom que descrigui la relació.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Imatge del pas del flux de configuració per afegir dades addicionals i configurar l'activitat amb exemples emplenats.":::
 
-1. Seleccioneu **Desa**.    
+1. Seleccioneu **Desa**.
     Afegiu més dades si hi ha altres activitats de client que voleu incloure.
+
+1. Afegiu dades de client opcionals o seleccioneu **Següent**.
+
+### <a name="add-optional-customer-data"></a>Afegir dades de client opcionals
+
+Seleccioneu entre 18 atributs de perfil de client d'ús comú per incloure'ls com a entrada al model. Aquests atributs poden conduir a resultats de models més personalitzats, rellevants i accionables per als casos d'ús de la vostra empresa.
+
+Per exemple: Contoso Coffee vol predir el valor de la vida del client per dirigir-se a clients d'alt valor amb una oferta personalitzada relacionada amb el llançament de la seva nova màquina espresso. Contoso utilitza el model CLV i afegeix els 18 atributs del perfil de client per veure quins factors influeixen en els seus clients de més valor. Troben que la ubicació del client és el factor més influent per a aquests clients.
+Amb aquesta informació, organitzen un esdeveniment local per al llançament de la màquina espresso i s'associen amb proveïdors locals per obtenir ofertes personalitzades i una experiència especial a l'esdeveniment. Sense aquesta informació, Contoso només podria haver enviat correus electrònics de màrqueting genèrics i haver perdut l'oportunitat de personalitzar per a aquest segment local dels seus clients d'alt valor.
+
+1. **Al pas Dades addicionals (opcional),** seleccioneu **Afegeix dades** a **Estadístiques del model d'impuls encara més amb dades** de clients addicionals.
+
+1. Per a **Entitat**, trieu **Client: CustomerInsights** per seleccionar la taula de perfil de client unificada que s'assigna a les dades dels atributs del client. Per veure **l'identificador de** client, trieu **System.Customer.CustomerId**.
+
+1. Assigneu més camps si les dades estan disponibles als vostres perfils de client unificats.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Exemple de camps mapejats per a dades de perfil de client.":::
+
+1. Seleccioneu **Desa** després d'assignar els atributs que el model hauria d'utilitzar per ajudar a predir el valor del cicle de vida del client.
 
 1. Seleccioneu **Següent**.
 
 ### <a name="set-update-schedule"></a>Configurar la planificació d'actualització
 
-1. Al pas **Planificació de l'actualització de dades**, trieu la freqüència per tornar a entrenar el model segons les dades més recents. Aquesta configuració és important per actualitzar la precisió de les prediccions a mesura que s'ingereixen dades noves a Customer Insights. La majoria d'empreses poden tornar a entrenar un cop al mes i obtenir una bona precisió de les prediccions.
+1. Al pas **Planificació de l'actualització de dades**, trieu la freqüència per tornar a entrenar el model segons les dades més recents. Aquesta configuració és important per actualitzar la precisió de les prediccions a mesura que s'ingereixen dades noves al Customer Insights. La majoria d'empreses poden tornar a entrenar un cop al mes i obtenir una bona precisió de les prediccions.
 
 1. Seleccioneu **Següent**.
 

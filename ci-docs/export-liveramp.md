@@ -1,61 +1,75 @@
 ---
 title: Exportar segments a LiveRamp (versió preliminar)
 description: Apreneu a configurar la connexió i exportar a LiveRamp.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 55eacea3af83f46583a3a43797d625479f56586b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050751"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196704"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segments a LiveRamp&reg; (versió preliminar)
 
 Activeu les vostres dades a LiveRamp per connectar-vos amb més de 500 plataformes entre digital, social i televisió. Treballeu amb les dades de LiveRamp per orientar, suprimir i personalitzar les campanyes publicitàries.
 
-## <a name="prerequisites-for-a-connection"></a>Requisits previs per a una connexió
+## <a name="prerequisites"></a>Requisits previs
 
-- Es necessita una subscripció a LiveRamp per utilitzar aquest connector.
-- Per obtenir una subscripció, [poseu-vos en contacte amb LiveRamp](https://liveramp.com/contact/) directament. [Més informació sobre la incorporació a LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
+- Una subscripció liveRamp per utilitzar aquest connector. Per obtenir una subscripció, [poseu-vos en contacte amb LiveRamp](https://liveramp.com/contact/) directament. [Més informació sobre la incorporació a LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
+
+## <a name="known-limitations"></a>Limitacions conegudes
+
+- L'exportació de LiveRamp utilitza una exportació SFTP. Actualment, les destinacions SFTP darrere dels tallafocs no són compatibles.
+- Si utilitzeu una clau SSH per a l'autenticació, assegureu-vos [de crear la clau](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) privada com a format PEM o SSH.COM. Si utilitzeu Putty, convertir la vostra clau privada exportant és com Open SSH. S'admeten els següents formats de clau privada:
+  - RSA en format PEM i ssh.com OpenSSL
+  - DSA en format PEM i ssh.com OpenSSL
+  - ECDSA 256/384/521 en format PEM OpenSSL
+  - ED25519 i RSA en format clau OpenSSH
+- El temps d'execució d'una exportació depèn del rendiment del sistema. Us recomanem dos nuclis de CPU i 1 Gb de memòria com a configuració mínima del vostre servidor.
+- L'exportació d'entitats amb fins a 100 milions de perfils de clients pot tardar 90 minuts quan s'utilitza la configuració mínima recomanada de dos nuclis de CPU i 1 Gb de memòria.
+- El nombre real de perfils (o dades) que podeu exportar al LiveRamp depèn de la vostra subscripció amb liveRamp.
 
 ## <a name="set-up-connection-to-liveramp"></a>Configuració de la connexió a LiveRamp
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Aneu a **Administració** > **Connexions**.
 
-1. Seleccioneu **Afegeix connexió** i trieu **LiveRamp** per configurar la connexió.
+1. Seleccioneu **Afegeix connexió** i trieu **LiveRamp**.
 
 1. Doneu a la connexió un nom reconeixible al camp **Nom de visualització**. El nom i el tipus de connexió descriuen aquesta connexió. Us recomanem que trieu un nom que expliqui la finalitat i l'objectiu de la connexió.
 
-1. Trieu qui pot utilitzar aquesta connexió. Si no feu cap acció, el valor per defecte serà Administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Trieu qui pot utilitzar aquesta connexió. Per defecte, només són administradors. Per obtenir més informació, vegeu [Permetre que els col·laboradors utilitzin una connexió per a les exportacions](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporcioneu un **nom d'usuari** i una **contrasenya** per al vostre compte de FTP segur (SFTP) de LiveRamp.
-Aquestes credencials poden ser diferents de les vostres credencials d'incorporació de LiveRamp.
+1. Trieu si voleu autenticar-vos mitjançant SSH o nom d'usuari/contrasenya per a la vostra connexió i proporcioneu els detalls necessaris.
 
 1. Seleccioneu **Verifica** per provar la connexió amb LiveRamp.
 
-1. Després de la verificació correcta, proporcioneu el vostre consentiment per a la **Privadesa i el compliment de les dades** seleccionant la casella de selecció **Ho accepto**.
+1. Després de la verificació correcta, reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Desa** per completar la connexió.
 
 ## <a name="configure-an-export"></a>Configurar una exportació
 
-Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest tipus. Per obtenir més informació, vegeu [Permisos necessaris per configurar una exportació](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vés a **Dades** > **Exportacions**.
 
-1. Per crear una exportació nova, seleccioneu **Afegeix una destinació**.
+1. Seleccioneu **Afegeix una exportació**.
 
-1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció LiveRamp. Si no veieu aquest nom de secció, no hi ha cap connexió d'aquest tipus disponible.
+1. Al camp **Connexió per a l'exportació**, trieu una connexió de la secció LiveRamp. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible.
 
-1. Al camp **Trieu el vostre identificador de clau**, seleccioneu el **Correu electrònic**, **Nom i adreça** o **Telèfon** per enviar a LiveRamp per a la resolució de la identitat.
-   > [!div class="mx-imgBorder"]
-   > ![Connector de LiveRamp amb l'assignació d'atributs.](media/export-liveramp-segments.png "Connector de LiveRamp amb l'assignació d'atributs")
+1. Introduïu un nom per a l'exportació.
+
+1. Al camp Connecta dades **, seleccioneu** Correu electrònic **,** Nom i adreça **o** Telèfon **per enviar-lo al LiveRamp per a la resolució de la** identitat.
+
+   :::image type="content" source="media/export-liveramp-segments.png" alt-text="Connector de LiveRamp amb l'assignació d'atributs.":::
 
 1. Assigneu els atributs corresponents de l'entitat *Client* per a l'identificador de clau seleccionat.
 
@@ -64,18 +78,10 @@ Podeu configurar aquesta exportació si teniu accés a una connexió d'aquest ti
    > [!TIP]
    > Si envieu més atributs d'identificador clau a LiveRamp, és possible que obtingueu una taxa de concordança més alta.
 
-1. Seleccioneu els segments que voleu exportar a LiveRamp.
+1. Seleccioneu els segments que voleu exportar.
 
 1. Seleccioneu **Desa**.
 
-Si deseu una exportació, no s'executarà l'exportació immediatament.
-
-L'exportació s'executa amb cada [actualització planificada](system.md#schedule-tab). També podeu [exportar dades segons demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu Dynamics 365 Customer Insights perquè transmeti dades a LiveRamp, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que LiveRamp compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquesta destinació d'exportació en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Activitats del client
 description: Definir activitats de client i visualitzar-les en una cronologia dels perfils del client.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755486"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188127"
 ---
 # <a name="customer-activities"></a>Activitats del client
 
-Combineu les activitats dels clients des de [diverses fonts de dades](data-sources.md) al Dynamics 365 Customer Insights. Creeu una cronologia que enumeri les activitats cronològicament. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la solució de [complement de targeta](customer-card-add-in.md) de client.
+Les activitats del client són accions o esdeveniments realitzats pels clients. Per exemple, transaccions, durada de les trucades d'assistència, ressenyes de llocs web, compres o devolucions. Aquestes activitats es troben en una o més fonts de dades. Amb el Coneixement de clients, consolideu les activitats dels clients a partir d'aquestes [fonts](data-sources.md) de dades i associeu-les als perfils de clients. Aquestes activitats apareixen cronològicament en una cronologia al perfil del client. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la [solució de complement](customer-card-add-in.md) de targeta de client.
 
 ## <a name="define-an-activity"></a>Definir una activitat
 
-Les fonts de dades poden incloure entitats amb dades transaccionals i d'activitats procedents de diverses fonts de dades. Identifiqueu aquestes entitats i seleccioneu les activitats que voleu visualitzar a la cronologia del client. Trieu l'entitat que inclogui l'activitat o les activitats de destinació.
+Una entitat ha de tenir almenys un atribut del tipus **Date** per incloure'l en una cronologia del client. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
 
-Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclosa en una cronologia de client i no es poden afegir entitats sense camps **Data**. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
+1. Aneu a **Activitats** > **de dades**.
 
-1. Aneu a Activitats de **dades** > **·**.
+1. Seleccioneu **Afegeix activitat** per iniciar l'experiència guiada.
 
-1. Seleccioneu **Afegeix una activitat** per iniciar l'experiència guiada per al procés de configuració de l'activitat.
+1. Al pas Dades de l'activitat **·**, introduïu la informació següent:
 
-1. Al pas **Dades de l'activitat**, definiu els valors per als camps següents:
-
-   - **Nom de l'activitat**: seleccioneu un nom per a l'activitat.
-   - **Entitat**: seleccioneu una entitat que inclogui dades transaccionals o d'activitat.
-   - **Clau principal**: seleccioneu el camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
+   - **Nom** de l'activitat: Nom de la vostra activitat.
+   - **Entitat** de l'activitat: Entitat que inclou dades transaccionals o d'activitat.
+   - **Clau primària**: camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configureu les dades de l'activitat amb el nom, l'entitat i la clau principal.":::
 
-1. Seleccioneu **Següent** per anar al pas següent.
+1. Seleccioneu **Següent**.
 
-1. En el pas **Relació**, configureu els detalls per connectar les dades de l'activitat al seu registre de client corresponent. Aquest pas visualitza la connexió entre entitats.  
+1. **Al pas Relació**, seleccioneu **Afegeix una relació** per connectar les dades de l'activitat al registre de client corresponent. Aquest pas visualitza la connexió entre entitats.  
 
-   - **Primer**: camp extern de la vostra entitat d'activitat que s'utilitzarà per establir una relació amb una altra entitat.
-   - **Segon**: entitat de client d'origen corresponent amb la qual estarà relacionada l'entitat d'activitat. Només podeu relacionar amb entitats de client d'origen utilitzades en el procés d'unificació de dades.
-   - **Tercer**: si ja hi ha una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació tindrà lloc en mode només de lectura. Si no hi ha cap relació, es crearà una relació nova amb el nom que proporcioneu en aquest quadre.
+   - **Clau externa d'entitat**: Camp de l'entitat de la vostra activitat que s'utilitzarà per establir una relació amb una altra entitat.
+   - **A nom de l'entitat**: Entitat client d'origen corresponent amb la qual estarà en relació l'entitat de la seva activitat. Només podeu relacionar amb entitats de client d'origen utilitzades en el procés d'unificació de dades.
+   - **Nom** de la relació: Nom que identifica la relació entre entitats. Si ja existeix una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació és només de lectura.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiu la relació de l'entitat.":::
 
    > [!TIP]
    > En entorns d'empresa a empresa, podeu seleccionar entre les entitats de compte i altres entitats. Si seleccioneu una entitat de compte, el camí de la relació es defineix automàticament. Per a la resta d'entitats, heu de definir el camí de la relació per damunt d'una o diverses entitats intermèdies fins que arribeu a una entitat de compte.
 
-1. Seleccioneu **Següent** per anar al pas següent. 
+1. Seleccioneu **Aplica** per crear la relació.
 
-1. Al pas **Unificació d'activitats**, trieu la incidència d'activitat i l'hora d'inici de l'activitat. 
+1. Seleccioneu **Següent**.
+
+1. Al pas **Unificació d'activitats**, trieu la incidència d'activitat i l'hora d'inici de l'activitat.
    - **Camps obligatoris**
       - **Activitat d'esdeveniment**: camp que és l'esdeveniment per a aquesta activitat.
       - **Marca horària**: camp que representa l'hora d'inici de la vostra activitat.
@@ -69,68 +69,56 @@ Una entitat ha de tenir com a mínim un atribut del tipus **Data** per ser inclo
    - **Camps opcionals**
       - **Detall addicional**: camp amb informació rellevant per a aquesta activitat.
       - **Icona** : icona que representa millor aquest tipus d'activitat.
-      - **Adreça web**: camp que conté una adreça URL amb informació sobre aquesta activitat. Per exemple, el sistema transaccional que és l'origen d'aquesta activitat. Aquesta ADREÇA URL pot ser qualsevol camp de la font de dades, o es pot construir com un camp nou utilitzant una Power Query transformació. Les dades d'adreça URL s'emmagatzemaran a l'entitat *Activitat unificada*, que es pot consumir als registres avall mitjançant [API](apis.md).
+      - **Adreça web**: camp que conté una adreça URL amb informació sobre aquesta activitat. Per exemple, el sistema transaccional que és l'origen d'aquesta activitat. Aquest URL pot ser qualsevol camp del font de dades o es pot construir com un camp nou mitjançant una Power Query transformació. Les dades d'adreça URL s'emmagatzemaran a l'entitat *Activitat unificada*, que es pot consumir als registres avall mitjançant [API](apis.md).
 
    - **Mostra a la cronologia**
       - Trieu si voleu que es mostri aquesta activitat a la visualització de la cronologia dels vostres perfils de client. Seleccioneu **Sí** per mostrar l'activitat a la cronologia o **No** per amagar-la'n.
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifiqueu les dades de l'activitat de client en una entitat Activitat unificada.":::
 
-1. Seleccioneu **Següent** per desplaçar-vos al pas següent. Podeu seleccionar **Acabament i revisió** per desar l'activitat ara amb el tipus d'activitat definit com a **Altres**. 
+1. Seleccioneu **Següent** per triar el tipus d'activitat o seleccioneu **Finalitza i revisa** per desar l'activitat amb el tipus d'activitat definit com a **Altres**.
 
-1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, *els tipus d'activitat Feedback*, *Loyalty*, *SalesOrderDer*, *SalesOrderLine* i *Subscription* admeten semàntica després d'acceptar assignar els camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
+1. Al pas **Tipus d'activitat**, trieu el tipus d'activitat i, si voleu, seleccioneu si voleu assignar de manera semàntica alguns dels tipus d'activitats per utilitzar-lo en altres àrees del Customer Insights. Actualment, *els tipus d'activitat Feedback*, *Loyalty*, *SalesOrder* *, SalesOrderLine* i *Subscription* admeten semàntica després d'acceptar mapejar els camps. Si un tipus d'activitat no és rellevant per a la nova activitat, podeu triar *Altres* o *Crear-ne una de nova* per a un tipus d'activitat personalitzat.
 
-1. Seleccioneu **Següent** per desplaçar-vos al pas següent. 
+1. Seleccioneu **Següent**.
 
 1. Al pas **Revisió**, verifiqueu les seleccions. Torneu a qualsevol dels passos anteriors i actualitzeu la informació si cal.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Reviseu els camps especificats d'una activitat.":::
-   
-1. Seleccioneu **Desa l'activitat** per aplicar els canvis i seleccioneu **Fet** per tornar a **Dades** > **Activitats**. Aquí podeu veure quines activitats hi ha definides per mostrar-les a la cronologia. 
+1. Seleccioneu **Desa l'activitat** per aplicar els canvis i seleccioneu **Fet** per tornar a **Dades** > **Activitats**. Es mostra l'activitat creada.
 
-1. A la pàgina **Activitats**, seleccioneu **Executa** per processar l'activitat. 
+1. Després de crear totes les vostres activitats, seleccioneu **Executa** per processar-les.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Administrar activitats existents
 
-A **Dades** > **Activitats**, podeu visualitzar totes les activitats desades i administrar-les. Cada activitat està representada per una fila que també inclou detalls sobre l'origen, l'entitat i el tipus d'activitat.
+Aneu a **Activitats** > **de dades** per veure les activitats desades, la seva entitat d'origen, el tipus d'activitat i si s'inclouen a la cronologia del client. Podeu ordenar la llista d'activitats per qualsevol columna o utilitzar el quadre de cerca per trobar l'activitat que voleu gestionar.
 
-Les accions següents estan disponibles en seleccionar una activitat. 
+Seleccioneu una activitat per veure les accions disponibles.
 
-- **Editar**: s'obre la configuració de l'activitat al pas de revisió. Podeu canviar qualsevol o tota la configuració actual des d'aquest pas. Després de canviar la configuració, seleccioneu **Desa l'activitat** i, a continuació, seleccioneu **Executa** per processar els canvis.
-
-- **Canvia el nom**: obre un diàleg on podeu introduir un nom diferent per a l'activitat seleccionada. Seleccioneu **Desa** per aplicar els canvis.
-
-- **Suprimeix**: s'obre un diàleg per confirmar la supressió de l'activitat seleccionada. També podeu suprimir més d'una activitat alhora seleccionant les activitats i, a continuació, seleccionant la icona de supressió. Seleccioneu **Suprimeix** per confirmar la supressió.
+- **Editeu** l'activitat per canviar-ne la configuració. La configuració s'obre al pas de revisió. Després de canviar la configuració, seleccioneu **Desa l'activitat** i, a continuació, seleccioneu **Executa** per processar els canvis.
+- **Canvieu** el nom de l'activitat. Seleccioneu **Desa** per aplicar els canvis.
+- **Suprimiu** l'activitat. Per suprimir més d'una activitat alhora, seleccioneu les activitats i, a continuació, **Suprimeix**. Confirmar la supressió.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Visualitzar cronologies d'activitats als perfils de client
 
-Després de configurar activitats de client, seleccioneu **Mostra a la cronologia d'activitats** a la configuració de l'activitat per cercar totes les activitats del client al seu perfil de client.
+1. Si heu seleccionat **Mostra a la cronologia de** l'activitat a la configuració de l'activitat, aneu a **Clients** i seleccioneu un perfil de client per veure les activitats del client a la **secció Cronologia** d'activitats.
 
-Per obrir la cronologia d'un client, aneu a **Clients** i trieu el perfil de client que voleu visualitzar.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualitzar les activitats configurades als perfils de client.":::
 
-Si un client ha participat en una activitat configurada, la trobareu a la secció Cronologia de l'activitat **·**.
+1. Per filtrar les activitats a la cronologia de l'activitat:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualitzar les activitats configurades als perfils de client.":::
+   - Seleccioneu una o més de les icones d'activitat per definir millor els resultats per incloure només els tipus seleccionats.
 
-Hi ha diverses maneres de filtrar les activitats a la cronologia d'activitats:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrar activitats per tipus utilitzant les icones.":::
 
-- Podeu seleccionar una o moltes de les icones d'activitat per refinar els resultats per incloure només els tipus seleccionats.
+   - Seleccioneu **Filtre** per obrir un tauler de filtre per configurar els filtres de cronologia. Filtreu per *ActivityType* i/o *Date*. Seleccioneu **Aplica**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrar activitats per tipus utilitzant les icones.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilitzeu la subfinestra de filtre per configurar les condicions de filtre.":::
 
-- Podeu seleccionar **Filtra** per obrir una subfinestra de filtre per configurar els filtres de cronologia.
-
-   1. Podeu filtrar per *ActivityType* i *Data*
-   1. Seleccioneu **Aplica** per utilitzar els filtres a la cronologia d'activitats.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilitzeu la subfinestra de filtre per configurar les condicions de filtre.":::
-
-Per suprimir filtres, seleccioneu la **x** al costat de cada filtre aplicat a la cronologia o seleccioneu **Esborra els filtres**.
-
+1. Per eliminar filtres, selecciona **Esborra els filtres** o selecciona **Filtra** i esborra la casella de selecció del filtre.
 
 > [!NOTE]
-> Els filtres d'activitat se suprimeixen quan sortiu d'un perfil de client. Els heu d'aplicar cada vegada que obriu en un perfil de client.
+> Els filtres d'activitat se suprimeixen quan sortiu d'un perfil de client. Els heu d'aplicar cada vegada que obriu un perfil de client.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: Predicció de churn de subscripció (conté vídeo)
+title: Subscripció predicció (conté vídeo)
 description: Es prediu si un client està en risc de deixar d'utilitzar els productes o els serveis de la subscripció de l'empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642411"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171037"
 ---
 # <a name="subscription-churn-prediction"></a>Predicció de rotació de la subscripció
 
@@ -61,8 +61,8 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 
 ## <a name="create-a-subscription-churn-prediction"></a>Crear una predicció de rotació de subscripcions
 
-1. Aneu a **Intel·ligènciaPredictions** > **·**.
-1. Seleccioneu la peça del **model de rotació** de subscripció i seleccioneu **Utilitza aquest model**.
+1. Aneu a Prediccions d'intel **·ligència** > **·**.
+1. Seleccioneu la **peça Model de subscripció** i seleccioneu **Utilitza aquest model**.
    > [!div class="mx-imgBorder"]
    > ![Icona Model de rotació de subscripcions amb el botó Utilitza aquest model.](media/subscription-churn-usethismodel.PNG "Icona Model de rotació de subscripcions amb el botó Utilitza aquest model")
 
@@ -76,7 +76,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 1. Introduïu el nombre de **Dies des que ha finalitzat la subscripció** que l'empresa considera que un client pot estar en un estat de rotació. Aquest període sol estar vinculat a activitats empresarials, com ara ofertes o altres iniciatives de màrqueting, que intenten evitar perdre el client.
 1. Introduïu el nombre de **Dies en el futur que es consultaran per predir la rotació** per definir una finestra per predir la rotació. Per exemple, per predir el risc de rotació per als vostres clients en els pròxims 90 dies per alinear-lo als vostres esforços de retenció de màrqueting. Predir el risc de cancel·lació durant períodes de temps més llargs o més curts pot dificultar donar resposta als factors del vostre perfil de risc de cancel·lació, en funció de les necessitats específiques de la vostra empresa. Per continuar, feu clic a **Següent**
    >[!TIP]
-   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar la predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
+   > Podeu seleccionar **Desa l'esborrany** en qualsevol moment per desar el predicció com a esborrany. Trobareu l'esborrany de la predicció a la pestanya **Les meves prediccions** per continuar.
 
 ### <a name="add-required-data"></a>Addició de les dades necessàries
 
@@ -107,7 +107,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
 
 ### <a name="set-schedule-and-review-configuration"></a>Definir la planificació i revisar la configuració
 
-1. Definiu una freqüència per tornar a entrenar el model. Aquesta configuració és important per actualitzar la precisió de les prediccions a mesura que s'ingereixen dades noves a Customer Insights. La majoria d'empreses poden tornar a entrenar un cop al mes i obtenir una bona precisió de les prediccions.
+1. Definiu una freqüència per tornar a entrenar el model. Aquesta configuració és important per actualitzar la precisió de les prediccions a mesura que s'ingereixen dades noves al Customer Insights. La majoria d'empreses poden tornar a entrenar un cop al mes i obtenir una bona precisió de les prediccions.
 1. Seleccioneu **Següent**.
 1. Reviseu la configuració. Podeu tornar enrere en qualsevol part de la configuració de predicció. Per fer-ho, seleccioneu **Edita** sota el valor que es mostra. O bé, podeu seleccionar un pas de configuració a l'indicador de progrés.
 1. Si tots els valors s'han configurat correctament, seleccioneu **Desa i executa** per iniciar el procés de predicció. A la pestanya **Les meves prediccions**, podeu veure l'estat de les vostres prediccions. El procés pot tardar unes quantes hores a completar-se en funció de la quantitat de dades que s'han utilitzat a la predicció.
@@ -121,7 +121,7 @@ La predicció de rotació de subscripcions ajuda a predir si un client està en 
    - **Nom de la predicció:** el nom de la predicció proporcionat en crear-la.
    - **Tipus de predicció:** el tipus de model utilitzat per a la predicció
    - **Entitat de sortida:** nom de l'entitat per emmagatzemar els resultats de la predicció. Podeu trobar una entitat amb aquest nom a **Dades** > **Entitats**.    
-     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-new-segment) amb el llindar preferit.
+     A l'entitat de sortida, *ChurnScore* és la probabilitat predita de cancel·lació i *IsChurn* és una etiqueta binària basada en *ChurnScore* amb un llindar de 0,5. És possible que el llindar per defecte no funcioni per al vostre escenari. [Creeu un segment nou](segments.md#create-a-segment) amb el llindar preferit.
    - **Camp predit:** aquest camp només s'emplena per a alguns tipus de prediccions i no es fa servir a la predicció de rotació de subscripcions.
    - **Estat:** l'estat actual de l'execució de la predicció.
         - **A la cua:** la predicció actualment està a l'espera de l'execució d'altres processos.

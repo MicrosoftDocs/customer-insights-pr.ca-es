@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
 description: Importeu dades d'un llac de dades administrat del Microsoft Dataverse.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082150"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206941"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
 
-Microsoft Dataverse els usuaris poden connectar-se ràpidament a entitats analítiques en un Microsoft Dataverse llac gestionat.
+Microsoft Dataverse els usuaris es poden connectar ràpidament a entitats analítiques en un Microsoft Dataverse llac gestionat. Només una font de dades d'un entorn podrà utilitzar simultàniament el mateix llac administrat del Dataverse.
 
 > [!NOTE]
-> Heu de ser administrador de l'organització Dataverse per continuar i visualitzar la llista d'entitats disponibles al llac gestionat.
+> Heu de ser administrador de l'organització Dataverse per continuar i veure la llista d'entitats disponibles al llac gestionat.
 
-## <a name="important-considerations"></a>Consideracions importants
+## <a name="prerequisites"></a>Requisits previs
 
-1. Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades en serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Més informació al Microsoft Trust Center](https://www.microsoft.com/trust-center).
-2. Només Dataverse són visibles les entitats amb [seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis habilitat. Aquestes entitats es poden exportar al Dataverse llac de dades administrades i utilitzar-les al Customer Insights. Les taules fora de caixa Dataverse tenen el seguiment de canvis habilitat per defecte. Heu d'activar el seguiment de canvis per a taules personalitzades. Per comprovar si hi ha una Dataverse taula habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules de dades** > **·**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions** > **avançades de** Configuració i reviseu la configuració De seguiment dels **canvis**.
+- Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades als serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Obteniu més informació al Centre](https://www.microsoft.com/trust-center) de confiança de Microsoft.
+
+- Només Dataverse són visibles les entitats amb [el seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis activat. Aquestes entitats es poden exportar al llac de Dataverse dades gestionat i utilitzar-les al Customer Insights. Les taules estàndard tenen el seguiment de Dataverse canvis activat de manera predeterminada. Heu d'activar el seguiment de canvis per a les taules personalitzades. Per comprovar si una Dataverse taula està habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules** > **de dades**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions avançades** > **de configuració** i reviseu la configuració Seguiment dels **canvis**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Connectar-se a un llac administrat del Dataverse
 
@@ -38,7 +39,7 @@ Microsoft Dataverse els usuaris poden connectar-se ràpidament a entitats analí
 
 1. Seleccioneu **Microsoft Dataverse**.
 
-1. Introduïu un **nom** per a la font de dades i una descripció **opcional**.
+1. Introduïu un **nom** per al font de dades i una descripció opcional.**·**
 
 1. Proporcioneu l'**Adreça del servidor** de l'organització del Dataverse i seleccioneu **Inicia la sessió**.
 
@@ -51,7 +52,9 @@ Microsoft Dataverse els usuaris poden connectar-se ràpidament a entitats analí
 
 1. Deseu la selecció per començar a sincronitzar les taules seleccionades des del Dataverse. Trobareu la connexió afegida recentment a la pàgina **Fonts de dades**. Es posarà a la cua per actualitzar-se i mostrarà el recompte d'entitats com a 0 fins que se sincronitzin totes les taules seleccionades.
 
-Només una font de dades d'un entorn podrà utilitzar simultàniament el mateix llac administrat del Dataverse.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades ingerides es poden revisar des de la [**pàgina Entitats**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Editar una font de dades d'un llac gestionat del Dataverse
 
@@ -60,6 +63,12 @@ Per connectar-vos a un altre llac de dades del Dataverse, [creeu una font de dad
 
 1. Aneu a **Dades** > **Fonts de dades**.
 
-1. Al costat de la font de dades que voleu actualitzar, seleccioneu **Edita**.
+1. Al costat de la font de dades voleu actualitzar, seleccioneu **Edita**.
 
-1. Seleccioneu les entitats addicionals a la llista disponible d'entitats i seleccioneu **Desa**.
+1. Seleccioneu entitats addicionals de la llista d'entitats disponibles.
+
+1. Feu clic **a Desa** per aplicar els canvis i tornar a la **pàgina Fonts** de dades.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
