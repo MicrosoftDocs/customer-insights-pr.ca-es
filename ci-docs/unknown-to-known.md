@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173812"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224283"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalitzar les experiències amb dades d'usuaris coneguts i desconeguts
 
-Gestionar les dades dels clients no és un repte nou, però cada vegada és més difícil a mesura que els usuaris naveguen pels diferents canals digitals que ofereixen les marques. Un usuari conegut (autenticat) en un canal es torna desconegut (no autenticat) en un altre si no ha iniciat la sessió. El problema sovint és que els usuaris no autenticats (desconeguts) no tenen un identificador comú. Es podria utilitzar per associar atributs de perfils significatius i generar perfils de clients unificats. El Customer Insights ajuda a resoldre aquest problema ingerint dades dels mètodes de seguiment als vostres sistemes d'origen. Els perfils consolidats desconeguts i coneguts proporcionen a les organitzacions una visió completa dels perfils actualitzats i de les seves transaccions històriques, comportaments i demografia. Fins i tot va un pas més enllà proporcionant una resolució d'identitat que us permet unificar l'activitat dels clients en diversos canals, inclòs el vostre lloc web, la compra a la botiga, els programes de fidelització, etc.
+Gestionar les dades dels clients no és un repte nou, però cada vegada és més difícil a mesura que els usuaris naveguen pels diferents canals digitals que ofereixen les marques. Un usuari conegut (autenticat) en un canal es torna desconegut (no autenticat) en un altre si no ha iniciat la sessió. El problema sovint és que els usuaris no autenticats (desconeguts) no tenen un identificador comú. Es podria utilitzar per associar atributs de perfils significatius i generar perfils de clients unificats. El Customer Insights ajuda a resoldre aquest problema ingerint dades dels mètodes de seguiment als vostres sistemes d'origen. Consolidar perfils desconeguts i coneguts proporciona a les organitzacions una visió completa dels perfils actualitzats i de les seves transaccions històriques, comportaments i demografia. Fins i tot va un pas més enllà proporcionant una resolució d'identitat que us permet unificar l'activitat dels clients en diversos canals, inclòs el vostre lloc web, la compra a la botiga, els programes de fidelització, etc.
 
 ## <a name="sample-scenario"></a>Escenari d'exemple
 

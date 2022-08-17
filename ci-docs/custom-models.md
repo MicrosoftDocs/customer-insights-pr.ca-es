@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800408"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245791"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
 > [!NOTE]
-> El suport per a Aprenentatge automàtic Studio (clàssic) finalitzarà el 31 d'agost de 2024. Us recomanem que feu la transició a l'Azure [Aprenentatge automàtic](/azure/machine-learning/overview-what-is-azure-machine-learning) en aquesta data.
+> El suport per a Aprenentatge automàtic Studio (clàssic) finalitzarà el 31 d'agost de 2024. Us recomanem que feu la transició a l'Azure [Aprenentatge automàtic](/azure/machine-learning/overview-what-is-azure-machine-learning) abans d'aquesta data.
 >
-> A partir de l'1 de desembre de 2021, no podreu crear nous recursos de Aprenentatge automàtic Studio (clàssic). Fins al 31 d'agost de 2024, podeu continuar utilitzant els recursos existents de Aprenentatge automàtic Studio (clàssic). Per obtenir més informació, vegeu [Migrar a l'Azure Aprenentatge automàtic](/azure/machine-learning/migrate-overview).
+> A partir de l'1 de desembre de 2021, no podreu crear recursos nous Aprenentatge automàtic Studio (clàssics). Fins al 31 d'agost de 2024, pots continuar utilitzant els recursos existents Aprenentatge automàtic Studio (clàssics). Per obtenir més informació, vegeu [Migració a l'Azure Aprenentatge automàtic](/azure/machine-learning/migrate-overview).
 
 
 **Intel·ligència** > **Models personalitzats** us permet administrar fluxos de treball basats en models de l'aprenentatge automàtic de l'Azure. Els fluxos de treball us ajuden a triar les dades a partir de les quals voleu generar conclusions i assignar els resultats a les dades unificades del client. Per obtenir més informació sobre la creació de models de ML personalitzats, vegeu [Utilitzar models basats en l'aprenentatge automàtic de l'Azure](azure-machine-learning-experiments.md).
@@ -34,7 +34,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Aquesta característica admet serveis web publicats a través [de canonades per lots de l'Azure Aprenentatge automàtic](/azure/machine-learning/concept-ml-pipelines).
+- Aquesta característica admet els serveis web publicats a través de [l'Azure Aprenentatge automàtic per lots](/azure/machine-learning/concept-ml-pipelines).
 
 - Per poder utilitzar aquesta característica, heu de tenir un compte d'emmagatzematge Gen2 de l'Azure Data Lake associat amb la vostra instància de l'Azure Studio. Per obtenir més informació, vegeu [Crear un compte d'emmagatzematge de l'Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -60,7 +60,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 1. Seleccioneu els **Espais de treball** associats amb el servei web. 
 
-1. Trieu el pipeline de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del model**. A continuació, seleccioneu **Següent**.    
+1. Trieu la canalització de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del model**. A continuació, seleccioneu **Següent**.    
    Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Per a cada **Entrada de servei web**, seleccioneu l'**Entitat** coincident del Customer Insights i seleccioneu **Següent**.
@@ -84,7 +84,7 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
    > ![Subfinestra Relacioneu els resultats amb les dades del client.](media/intelligence-screen4-relatetocustomer.png "Subfinestra Relacioneu els resultats amb les dades del client")
 
 1. Veureu la pantalla **Flux de treball desat** amb els detalls sobre el flux de treball.    
-   Si heu configurat un flux de treball per a un pipeline de l'Azure Aprenentatge automàtic, el Customer Insights s'adjunta a l'àrea de treball que conté el pipeline. Customer Insights obtindrà una **funció de col·laborador** a l'àrea de treball de l'Azure.
+   Si heu configurat un flux de treball per a una canalització de l'Azure Aprenentatge automàtic, el Customer Insights s'adjunta a l'espai de treball que conté la canalització. El Customer Insights obtindrà una funció **de col·laborador** a l'espai de treball de l'Azure.
 
 1. Seleccioneu **Fet**.
 
@@ -92,11 +92,11 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="edit-a-workflow"></a>Editar un flux de treball
 
-1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment i seleccioneu **Edita**.
+1. A la **pàgina Models** personalitzats, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** al costat d'un flux de treball que hàgiu creat prèviament i seleccioneu **Edita**.
 
 1. Podeu actualitzar el nom reconeixible del flux de treball al camp **Nom de visualització**, però no podreu canviar el servei web o el pipeline configurats. Seleccioneu **Següent**.
 
-1. Per a cada **entrada del** servei web, podeu actualitzar l'entitat **coincident** des del Customer Insights. A continuació, seleccioneu **Següent**.
+1. Per a cada **entrada de servei web**, podeu actualitzar l'entitat **coincident** des del Customer Insights. A continuació, seleccioneu **Següent**.
 
 1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
       1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del pipeline.
@@ -108,15 +108,15 @@ Les prediccions ofereixen capacitats per crear experiències dels clients més p
 
 ## <a name="run-a-workflow"></a>Executar un flux de treball
 
-1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment.
+1. A la **pàgina Models personalitzats**, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que hàgiu creat prèviament.
 
 1. Seleccioneu **Executa**.
 
-El flux de treball també s'executa automàticament amb cada actualització planificada. Més informació sobre la [configuració d'actualitzacions planificades](system.md#schedule-tab).
+El flux de treball també s'executa automàticament amb cada actualització planificada. Més informació sobre la [configuració d'actualitzacions planificades](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Suprimir un flux de treball
 
-1. A la **pàgina Models** personalitzats, seleccioneu l'el·lipsi vertical (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que heu creat anteriorment.
+1. A la **pàgina Models personalitzats**, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que hàgiu creat prèviament.
 
 1. Seleccioneu **Suprimeix** i confirmeu la supressió.
 

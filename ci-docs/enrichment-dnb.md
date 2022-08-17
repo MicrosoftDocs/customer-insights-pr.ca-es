@@ -1,7 +1,7 @@
 ---
 title: Enriquir els perfils d'empresa amb Dun & Bradstreet (preview)
 description: Informació general sobre l'enriquiment de tercers de Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196014"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237892"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enriquir els perfils d'empresa amb Dun & Bradstreet (preview)
 
@@ -55,16 +55,11 @@ Heu de ser [administrador](permissions.md#admin) al Customer Insights i tenir le
 
 1. Proporcioneu credencials vàlides de Dun & Bradstreet i detalls del *projecte Dun & Bradstreet Regió, Ruta de la carpeta Desplegable i Nom* de la carpeta Drop. Obteniu [aquesta informació](#set-up-your-dun--bradstreet-project) del projecte Dun & Bradstreet.
 
-1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Pàgina de configuració de la connexió Dun & Bradstreet.":::
-
-### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu Dynamics 365 Customer Insights transmetre dades a Dun & Bradstreet, permeteu la transferència de dades fora del límit de compliment, Dynamics 365 Customer Insights incloses les dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons les vostres instruccions, però sou responsable d'assegurar-vos que Dun & Bradstreet compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="supported-countries-or-regions"></a>Països o regions admesos
 

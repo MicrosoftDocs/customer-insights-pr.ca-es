@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142807"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245545"
 ---
 # <a name="how-to-create-a-new-environment"></a>Com: Crear un entorn nou
 
@@ -48,7 +48,7 @@ Al pas **Informació bàsica**, trieu si voleu crear un entorn des de zero o [co
 
 Proporcioneu els següents detalls:
 
-- **Nom**: el nom de l'entorn en qüestió. Aquest camp ja s'emplena si heu copiat des d'un entorn existent, però es pot canviar.
+- **Nom**: el nom de l'entorn en qüestió. Aquest camp ja s'emplena si heu copiat des d'un entorn existent, però es pot canviar. Si teniu més d'un entorn de treball, doneu a cadascun un nom fàcilment identificable.
 - **Trieu la vostra empresa**: trieu el públic principal del nou entorn. Podeu treballar amb consumidors individuals (d'empresa a consumidor) o amb [comptes empresarials](work-with-business-accounts.md) (d'empresa a empresa). Si la vostra organització fa negocis principalment amb particulars, com ara un minorista o una cafeteria, trieu consumidors individuals. En cas que el vostre públic principal siguin altres empreses, com ara un fabricant d'automòbils o una empresa de paper, trieu comptes empresarials.
 - **Tipus**: seleccioneu si voleu crear un entorn de producció o d'espai aïllat. Els entorns d'espai aïllat no permeten l'actualització planificada de dades i estan destinats a la implementació prèvia i les proves. Els entorns aïllats utilitzen el mateix públic principal que l'entorn de producció seleccionat actualment.
 - **Regió**: la regió en la qual s'implementa i s'allotja el servei. Per [utilitzar el vostre propi Azure Data Lake Storage compte](own-data-lake-storage.md) o [connectar-vos a una organització Microsoft Dataverse existent](customer-insights-dataverse.md), l'entorn del Customer Insights ha d'estar a la mateixa regió.

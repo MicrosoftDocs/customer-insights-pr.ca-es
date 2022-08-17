@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139558"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245582"
 ---
 # <a name="update-the-unification-settings"></a>Actualitzar la configuració d'unificació
 
@@ -42,7 +42,7 @@ Per revisar o canviar qualsevol configuració d'unificació un cop s'hagi creat 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de pantalla de la pàgina Unify de dades amb les opcions unificades ressaltades.":::
 
    - [Executeu condicions](#run-matching-conditions) de coincidència per avaluar ràpidament la qualitat de les vostres condicions de coincidència (deduplicació i regles de concordança) sense actualitzar el perfil unificat. L'opció **Executa les condicions de coincidència només** no es mostra per a una sola entitat.
-   - [Unifiqueu els perfils de](#run-updates-to-the-unified-customer-profile) client per executar condicions de coincidència i actualitzeu l'entitat del perfil de client unificat sense afectar les dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació d'actualització](system.md#schedule-tab).
+   - [Unifiqueu els perfils de](#run-updates-to-the-unified-customer-profile) client per executar condicions de coincidència i actualitzeu l'entitat del perfil de client unificat sense afectar les dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació d'actualització](schedule-refresh.md).
    - [Unifiqueu els perfils i les dependències](#run-updates-to-the-unified-customer-profile) dels clients per executar les condicions de coincidència i actualitzeu l'entitat unificada del perfil de client i totes les dependències (com ara enriquiments, segments o mesures). Tots els processos es tornen a executar automàticament.
 
 ## <a name="edit-source-fields"></a>Editar els camps d'origen
@@ -69,7 +69,7 @@ No podeu suprimir un atribut o una entitat si ja s'han unificat.
 
    El nombre de registres duplicats trobats es mostra a **Duplicats**. La **columna Registres deduplicats** mostra quines entitats tenien registres duplicats i el percentatge de registres duplicats.
 
-1. Si heu afegit una entitat enriquida, seleccioneu **Utilitza entitats** enriquides. Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades](data-sources-enrichment.md).
+1. Si heu afegit una entitat enriquida, seleccioneu **Utilitza entitats** enriquides. Per obtenir més informació, vegeu [Enriquiment per a les fonts de](data-sources-enrichment.md) dades.
 
 1. Per gestionar les regles de deduplicació, trieu qualsevol de les opcions següents:
    - **Crear una regla** nova: seleccioneu **Afegeix una regla** a sota de l'entitat adequada. Per obtenir més informació, vegeu [Definir regles](remove-duplicates.md#define-deduplication-rules) de deduplicació.
@@ -87,7 +87,7 @@ No podeu suprimir un atribut o una entitat si ja s'han unificat.
 
    1. Seleccioneu **Fet**.
 
-1. Seleccioneu **Següent** per fer canvis a les condicions coincidents o bé Desa **i tanca** i torna a [Actualitzar la configuració d'unificació](#update-the-unification-settings).
+1. Seleccioneu **Següent** per fer canvis a les condicions coincidents o bé Desa **i tanca** i torna a [Actualitzar la configuració](#update-the-unification-settings) d'unificació.
 
 ## <a name="manage-match-rules"></a>Administra les regles de coincidència
 
@@ -110,7 +110,7 @@ Podeu reconfigurar i ajustar la majoria dels paràmetres de coincidència. No po
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Representació gràfica de registres inigualables i coincidents incloent una llista de les dades.":::
 
-1. Si heu afegit una entitat enriquida, seleccioneu **Utilitza entitats** enriquides. Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades](data-sources-enrichment.md).
+1. Si heu afegit una entitat enriquida, seleccioneu **Utilitza entitats** enriquides. Per obtenir més informació, vegeu [Enriquiment per a les fonts de](data-sources-enrichment.md) dades.
 
 1. Per gestionar les regles, trieu qualsevol de les opcions següents:
    - **Crear una regla** nova: seleccioneu **Afegeix una regla** a sota de l'entitat adequada. Per obtenir més informació, vegeu [Definir regles per a parelles de coincidències](match-entities.md#define-rules-for-match-pairs).
@@ -154,7 +154,7 @@ Executar les condicions de coincidència només executa la deduplicació i les r
 
 1. A la **pàgina Unificar** > **dades**, seleccioneu:
 
-   - **Unificar perfils de** client: executa les condicions de coincidència i actualitza l'entitat del perfil de client unificat sense afectar les dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació d'actualització](system.md#schedule-tab).
+   - **Unificar perfils de** client: executa les condicions de coincidència i actualitza l'entitat del perfil de client unificat sense afectar les dependències (com ara enriquiments, segments o mesures). Els processos dependents no s'executen, sinó que s'actualitzaran tal com [es defineix a la planificació d'actualització](schedule-refresh.md).
 
    - **Unificar perfils i dependències** de clients: Executa les condicions de coincidència i actualitza el perfil unificat i totes les dependències. Tots els processos es tornen a executar automàticament. Un cop finalitzats tots els processos aigües avall, el perfil del client reflecteix les dades actualitzades.
 

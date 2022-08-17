@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206987"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245774"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Connexió a dades al Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Ingereix dades per Dynamics 365 Customer Insights utilitzar el teu Azure Data La
 
 1. Trieu una de les opcions següents per connectar **l'emmagatzematge mitjançant**. Per obtenir més informació, vegeu [Connectar el Customer Insights a un Azure Data Lake Storage compte de Gen2 amb un director de servei de l'Azure](connect-service-principal.md).
 
-   - **Recurs de l'Azure**: introduïu l'identificador **de** recurs. Opcionalment, si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Azure Private Link, seleccioneu **Habilita l'enllaç** privat. Per obtenir més informació, vegeu [Enllaços](security-overview.md#private-links-tab) privats.
-   - **Subscripció de** l'Azure: seleccioneu la **subscripció** i, a continuació, el **grup** de recursos i **el compte** d'emmagatzematge. Opcionalment, si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Azure Private Link, seleccioneu **Habilita l'enllaç** privat. Per obtenir més informació, vegeu [Enllaços](security-overview.md#private-links-tab) privats.
+   - **Recurs de l'Azure**: introduïu l'identificador **de** recurs. Opcionalment, si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Azure Private Link, seleccioneu **Habilita l'enllaç** privat. Per obtenir més informació, vegeu [Enllaços](security-overview.md#set-up-an-azure-private-link) privats.
+   - **Subscripció de** l'Azure: seleccioneu la **subscripció** i, a continuació, el **grup** de recursos i **el compte** d'emmagatzematge. Opcionalment, si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Azure Private Link, seleccioneu **Habilita l'enllaç** privat. Per obtenir més informació, vegeu [Enllaços](security-overview.md#set-up-an-azure-private-link) privats.
   
    > [!NOTE]
    > Necessiteu un dels rols següents al contenidor o al compte d'emmagatzematge per crear el font de dades:
@@ -176,7 +176,7 @@ Podeu actualitzar el compte Connecta't a l'emmagatzematge *mitjançant l'opció*
         > - Propietari de dades de Blob de l'emmagatzematge
         > - Col·laborador de dades de Blob d'emmagatzematge
 
-   - **Habiliteu l'enllaç** privat si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Enllaç privat de l'Azure. Per obtenir més informació, vegeu [Enllaços](security-overview.md#private-links-tab) privats.
+   - **Habiliteu l'enllaç** privat si voleu ingerir dades d'un compte d'emmagatzematge mitjançant un Enllaç privat de l'Azure. Per obtenir més informació, vegeu [Enllaços](security-overview.md#set-up-an-azure-private-link) privats.
 
 1. Seleccioneu **Següent**.
 1. Canvieu alguna de les opcions següents:
@@ -186,7 +186,7 @@ Podeu actualitzar el compte Connecta't a l'emmagatzematge *mitjançant l'opció*
       > [!IMPORTANT]
       > Si hi ha dependències en el fitxer model.json o manifest.json i el conjunt d'entitats, veureu un missatge d'error i no podreu seleccionar un fitxer model.json o manifest.json diferent. Suprimiu aquestes dependències abans de canviar el fitxer model.json o manifest.json o creeu una font de dades nou amb el fitxer model.json o manifest.json que voleu utilitzar per evitar la supressió de les dependències.
    - Per canviar la ubicació del fitxer de dades o la clau principal, seleccioneu **Edita**.
-   - Per canviar les dades d'ingestió incremental, vegeu [Configurar una actualització incremental per a les fonts](incremental-refresh-data-sources.md) de dades de l'Azure Data Lake.
+   - Per canviar les dades d'ingestió incremental, vegeu [Configurar una actualització incremental per a les fonts de dades de l'Azure Data Lake](incremental-refresh-data-sources.md).
    - Canvieu només el nom de l'entitat perquè coincideixi amb el nom de l'entitat al fitxer .json.
 
      > [!NOTE]

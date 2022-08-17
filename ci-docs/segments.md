@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170669"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246281"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
@@ -58,7 +58,7 @@ Seleccioneu un segment per veure les accions disponibles.
 - **Editar** el segment per canviar-ne les propietats.
 - **Crear un duplicat** d'un segment. Podeu editar-ne les propietats immediatament o desar-ne el duplicat.
 - [**Actualitzeu**](#refresh-segments) el segment per incloure les dades més recents.
-- **Activar** o **desactivar** el segment. Els segments inactius no s'actualitzaran durant una [actualització](system.md#schedule-tab) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar. Els segments actius s'actualitzen en funció del seu tipus: estàtic o dinàmic.
+- **Activar** o **desactivar** el segment. Els segments inactius no s'actualitzaran durant una [actualització](schedule-refresh.md) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar. Els segments actius s'actualitzen en funció del seu tipus: estàtic o dinàmic.
 - **Feu estàtic** o **Feu dinàmic** el tipus de segment. Els segments estàtics s'han d'actualitzar manualment. Els segments dinàmics s'actualitzen automàticament durant l'actualització del sistema.
 - [**Cerqueu clients**](find-similar-customer-segments.md) similars del segment.
 - **Canviar el nom** del segment.
@@ -88,7 +88,7 @@ La part inferior conté una llista dels membres del segment.
 
 Els segments es poden actualitzar amb una planificació automàtica o actualitzar-los manualment sota demanda. Per actualitzar manualment un o més segments, selecciona'ls i selecciona **Actualitza**.
 
-Per [programar una actualització](system.md#schedule-tab) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**. S'apliquen les regles següents:
+Per [programar una actualització](schedule-refresh.md) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**. S'apliquen les regles següents:
 
 - Tots els segments amb el tipus **Dinàmica** o **Expansió s'actualitzaran** automàticament a la cadència establerta. Un cop finalitzada l'actualització, l'Estat **indica** si hi ha hagut algun problema en actualitzar el segment. L'última **actualització** mostra una marca de temps de l'última actualització reeixida. Si es produeix un error, seleccioneu l'error per veure els detalls sobre el que ha passat.
 - Els segments amb el tipus **Estàtic** *no* s'actualitzaran automàticament. L'última **actualització** mostra una marca de temps de l'última vegada que el segment estàtic es va executar o refrescar manualment.

@@ -1,19 +1,19 @@
 ---
 title: Novetats del Dynamics 365 Customer Insights
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114234"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245999"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Actualitzacions de juliol del 2022
+
+Les actualitzacions del juliol de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="export-to-moengage"></a>Exportació a MoEngage
+
+Exporta segments de perfils de clients unificats a MoEngage i utilitza'ls per a email màrqueting a MoEngage.
+
+Per obtenir més informació, vegeu [Exportació de segments a MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Suport SSH per a exportacions basades en SFTP
+
+Trieu si voleu autenticar-vos mitjançant SSH o nom d'usuari/contrasenya per a connexions amb destinacions d'exportació SFTP.
+
+Per obtenir més informació, vegeu [Exportació de dades a amfitrions SFTP](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalitzar experiències amb dades d'usuaris coneguts i desconeguts
+
+Gestionar les dades dels clients no és un repte nou, però cada vegada és més difícil a mesura que els usuaris naveguen pels diferents canals digitals que ofereixen les marques. Un usuari conegut (autenticat) en un canal es torna desconegut (no autenticat) en un altre si no ha iniciat la sessió. El problema sovint és que els usuaris no autenticats (desconeguts) no tenen un identificador comú. Es podria utilitzar per associar atributs de perfils significatius i generar perfils de clients unificats. El Customer Insights ajuda a resoldre aquest problema ingerint dades dels mètodes de seguiment als vostres sistemes d'origen.
+
+Per obtenir més informació, vegeu [Personalitzar les experiències amb dades sobre usuaris coneguts i desconeguts](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Actualitzacions de juny del 2022
 
@@ -44,13 +66,13 @@ Per obtenir més informació, vegeu [Exporta a InMobi (visualització prèvia)](
 
 Customer Lockbox proporciona una interfície per revisar i aprovar (o rebutjar) les sol·licituds d'accés a dades. Aquestes sol·licituds es produeixen quan es necessita l'accés a les dades dels clients per resoldre un cas de suport tècnic.
 
-Per obtenir més informació, vegeu [Accés segur a les dades dels clients amb Customer Lockbox (Visualització prèvia)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+Per obtenir més informació, vegeu [Accés segur a les dades dels clients amb Customer Lockbox (Visualització prèvia).](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview)
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Connecteu-vos a les vostres dades mitjançant l'Azure Private Link
 
 Azure Private Link permetem que el Customer Insights es connecti al vostre Azure Data Lake Storage compte a través d'un punt final privat de la vostra xarxa virtual. Per a les dades d'un compte d'emmagatzematge, que no estan exposades a Internet pública, Private Link permet la connexió a aquesta xarxa restringida.
 
-Per obtenir més informació, vegeu [Utilitzar l'enllaç privat al Customer Insights](security-overview.md#private-links-tab).
+Per obtenir més informació, vegeu [Utilitzar l'enllaç privat al Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Actualitzacions de maig de 2022
 
@@ -114,7 +136,7 @@ Les actualitzacions del març de 2022 inclouen noves funcions, actualitzacions d
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar els identificadors personals de les dades dels vostres clients al gràfic d'identitat d'AbiliTec i rebre els identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels vostres clients.
 
-Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)](enrichment-liveramp.md)
+Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat del LiveRamp (visualització prèvia)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organitzar segments i mesures amb etiquetes i filtres
 
@@ -164,7 +186,7 @@ Per obtenir més informació, vegeu [Connectar un Azure Synapse font de dades (V
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar els identificadors personals de les dades dels vostres clients al gràfic d'identitat d'AbiliTec i rebre els identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels vostres clients.
 
-Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)](enrichment-liveramp.md)
+Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat del LiveRamp (visualització prèvia)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (Preview)
 
@@ -208,7 +230,7 @@ Les actualitzacions del gener de 2022 inclouen noves funcions, actualitzacions d
 
 El Customer Insights proporciona una nova característica basada en IA per sintetitzar el sentiment dels clients i identificar aspectes empresarials específics com a oportunitats de millores específiques. En analitzar els comentaris escrits dels vostres clients, podeu obtenir informació precisa a baix cost. Anàlisi de sentiments impulsada per models de processament del llenguatge natural (PNL) que generen dues estadístiques derivades per a cada identificador de client. Una puntuació de sentiment (de –5 a 5) i una llista d'aspectes empresarials aplicables. 
 
-Per obtenir més informació, vegeu [Analitzar el sentiment als comentaris dels clients (Visualització prèvia).](sentiment-analysis.md)
+Per obtenir més informació, vegeu [Analitzar el sentiment als comentaris dels clients (visualització prèvia)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

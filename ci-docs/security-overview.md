@@ -1,76 +1,75 @@
 ---
-title: Configuració de seguretat a Customer Insights
-description: Més informació sobre la configuració de seguretat al Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+title: Configurar els paràmetres de seguretat
+description: Obteniu més informació sobre la configuració de seguretat a Dynamics 365 Customer Insights.
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947403"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246050"
 ---
-# <a name="security-settings-in-customer-insights"></a>Configuració de seguretat a Customer Insights
+# <a name="configure-security-settings"></a>Configurar els paràmetres de seguretat
 
-La **pàgina Seguretat** llista les opcions per configurar els permisos i les funcions de l'usuari que ajuden a fer-les Dynamics 365 Customer Insights més segures. Només els administradors poden accedir a aquesta pàgina.
+Administra les claus API, accedeix a les dades del client i configura un Azure Private Link.
 
-Aneu a **Seguretat** > **de l'administrador** per configurar la configuració.
+## <a name="manage-api-keys"></a>Administrar les claus API
 
-La **pàgina Seguretat** inclou les pestanyes següents:
+Visualitzeu i administreu les claus per utilitzar les API [del](apis.md) Customer Insights amb les dades del vostre entorn.
 
-- [Usuaris](#users-tab)
-- [API](#apis-tab)
-- [Enllaços privats](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Accedir de manera segura a les dades dels clients amb el Customer Lockbox (Visualització prèvia)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Aneu a **Seguretat del sistema** > **i seleccioneu la** pestanya **API**.
 
-## <a name="users-tab"></a>Pestanya Usuaris
+1. Si l'accés de l'API a l'entorn no s'ha configurat, seleccioneu **Habilita**. O bé, per bloquejar l'accés de l'API a l'entorn, seleccioneu **Inhabilita** i confirma.
 
-L'accés a l'Insights del client està restringit als usuaris de la vostra organització que un administrador ha afegit a l'aplicació. La **pestanya Usuaris** us permet gestionar l'accés de l'usuari i els seus permisos. Per obtenir més informació, vegeu [Permisos](permissions.md) d'usuari.
+1. Gestioneu les claus API primàries i secundàries:
 
-## <a name="apis-tab"></a>Pestanya APIs
+   1. Per mostrar la clau API principal o secundària, seleccioneu mostra el **símbol**.
 
-Visualitza i gestiona les claus per utilitzar les API [del](apis.md) Customer Insights amb les dades del teu entorn.
+   1. Per copiar la clau API principal o secundària, seleccioneu el **símbol Copia**.
 
-Podeu crear claus primàries i secundàries noves seleccionant **Regenera la primària** o **Regenera la secundària**. 
+   1. Per crear claus API primàries o secundàries noves, seleccioneu **Regenera les primàries** o **Regenera secundàries**.
 
-Per bloquejar l'accés de l'API a l'entorn, seleccioneu **Inhabilita**. Si les API estan inhabilitades, pots seleccionar **Habilita** per tornar a concedir accés.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Accediu de manera segura a les dades dels clients amb Customer Lockbox (Visualització prèvia)
 
-## <a name="private-links-tab"></a>Pestanya Enllaços privats
+El Customer Insights utilitza la Power Platform capacitat Customer Lockbox. Customer Lockbox proporciona una interfície per revisar i aprovar (o rebutjar) les sol·licituds d'accés a dades. Aquestes sol·licituds es produeixen quan es necessita l'accés a les dades dels clients per resoldre un cas de suport tècnic. Per utilitzar aquesta característica, el Customer Insights ha de tenir una connexió existent amb un Microsoft Dataverse entorn de l'inquilí.
 
-[L'Azure Private Link](/azure/private-link/private-link-overview) permet que les Estadístiques del client es connectin al vostre Azure Data Lake Storage compte a un punt final privat de la xarxa virtual. Per a les dades d'un compte d'emmagatzematge, que no estan exposades a Internet pública, Private Link permet la connexió a aquesta xarxa restringida.
+Per obtenir més informació sobre Customer Lockbox, vegeu el [resum](/power-platform/admin/about-lockbox#summary) de Power Platform Customer Lockbox. L'article també descriu el [flux de treball](/power-platform/admin/about-lockbox#workflow) i la configuració [necessària](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) per habilitar Customer Lockbox.
+
+> [!IMPORTANT]
+> Els administradors globals Power Platform o Power Platform administradors poden aprovar les sol·licituds de Customer Lockbox emeses per al Customer Insights.
+
+## <a name="set-up-an-azure-private-link"></a>Configuració d'un enllaç privat de l'Azure
+
+[Azure Private Link](/azure/private-link/private-link-overview) permetem que el Customer Insights es connecti al vostre Azure Data Lake Storage compte a través d'un punt final privat de la vostra xarxa virtual. Per a les dades d'un compte d'emmagatzematge, que no estan exposades a Internet pública, Private Link permet la connexió a aquesta xarxa restringida.
 
 > [!IMPORTANT]
 > Requisit mínim de funció per configurar una connexió d'enllaç privat:
 >
 > - Estadístiques del client: administrador
-> - Funció integrada de l'Azure: [Contributor del compte d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Rol integrat de l'Azure: [Col·laborador del compte d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
 > - Permisos per a la funció personalitzada de l'Azure: [Microsoft.Storage/storageAccounts/read i Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
 
-Configurar l'enllaç privat a Customer Insights és un procés de dos passos. En primer lloc, inicieu la creació d'un enllaç privat des d'enllaços privats de **seguretat** > **d'administrador** > **a** Les estadístiques del client. La **subfinestra Afegeix enllaços** privats llista els comptes d'emmagatzematge de l'inquilí que teniu permisos per veure. Seleccioneu el compte d'emmagatzematge i proporcioneu el consentiment per crear l'enllaç privat.
+1. A Customer Insights, aneu a **Seguretat d'administració** > **i** seleccioneu la **pestanya Enllaços privats**.
 
-A continuació, heu d'aprovar l'enllaç privat al costat del compte d'emmagatzematge del llac de dades. Obriu l'enllaç presentat en pantalla per aprovar el nou enllaç privat.
+1. Seleccioneu **Afegeix un enllaç** privat.
 
-## <a name="key-vault-tab"></a>Pestanya Dipòsit de claus
+   La **subfinestra Afegeix un enllaç** privat mostra els comptes d'emmagatzematge de l'inquilí que tens permisos per veure.
 
-La **pestanya Key Vault** us permet enllaçar i administrar el vostre propi [dipòsit](/azure/key-vault/general/basic-concepts) de claus de l'Azure a l'entorn.
-El magatzem de claus dedicat es pot utilitzar per escenificar i utilitzar els secrets en el límit de compliment de l'organització. El Customer Insights pot utilitzar els secrets de l'Azure Key Vault per [configurar connexions](connections.md) a sistemes de tercers.
+1. Seleccioneu la subscripció, el grup de recursos i el compte d'emmagatzematge.
 
-Per obtenir més informació, vegeu [Portar el vostre propi magatzem de claus de l'Azure](use-azure-key-vault.md).
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Accedir de manera segura a les dades dels clients amb el Customer Lockbox (Visualització prèvia)
+1. Seleccioneu **Desa**.
 
-Customer Insights utilitza la capacitat de Bloqueig del Power Platform client. El Customer Lockbox proporciona una interfície per revisar i aprovar (o rebutjar) sol·licituds d'accés a dades. Aquestes sol·licituds es produeixen quan es necessita accés a les dades dels clients per resoldre un cas de suport tècnic. Per utilitzar aquesta característica, el Customer Insights ha de tenir una connexió existent amb un entorn de Microsoft Dataverse l'inquilí.
+1. Aneu al vostre compte del Data Lake Storage i obriu l'enllaç que es presenta a la pantalla.
 
-Per obtenir més informació sobre el quadre de bloqueig del client, vegeu el [resum](/power-platform/admin/about-lockbox#summary) de La caixa de bloqueig del Power Platform client. L'article també descriu el [flux de treball](/power-platform/admin/about-lockbox#workflow) i la configuració [necessària](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) per habilitar el quadre de bloqueig del client.
+1. Aprova l'enllaç privat.
 
-> [!IMPORTANT]
-> Els administradors globals Power Platform o Power Platform els administradors poden aprovar les sol·licituds de Bloqueig del Client emeses per a l'Insights del Client.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170808"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245361"
 ---
 # <a name="measures-overview"></a>Visió general de les mesures
 
@@ -53,7 +53,7 @@ Seleccioneu al costat d'una mesura per veure les accions disponibles. Seleccione
 - **Editeu** la mesura per canviar-ne les propietats.
 - **Actualitzeu** la mesura per incloure les dades més recents.
 - **Canvieu el nom** de la mesura.
-- **Activar** o **Desactivar** la mesura. Les mesures inactives no s'actualitzaran durant una [actualització](system.md#schedule-tab) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar.
+- **Activar** o **Desactivar** la mesura. Les mesures inactives no s'actualitzaran durant una [actualització](schedule-refresh.md) programada i tindran l'estat **com** a **Omès**, cosa que indica que ni tan sols s'ha intentat actualitzar.
 - **Etiqueta** per gestionar les [etiquetes](work-with-tags-columns.md#manage-tags) de la mesura.
 - **Suprimiu** la mesura.
 - **Columnes** per [personalitzar les columnes](work-with-tags-columns.md#customize-columns) que es mostren.
@@ -62,7 +62,7 @@ Seleccioneu al costat d'una mesura per veure les accions disponibles. Seleccione
 
 ## <a name="refresh-measures"></a>Mesures d'actualització
 
-Les mesures es poden actualitzar amb una programació automàtica o actualitzar-se manualment sota demanda. Per actualitzar manualment una o més mesures, selecciona-les i selecciona **Actualitza**. Per [programar una actualització](system.md#schedule-tab) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**.
+Les mesures es poden actualitzar amb una programació automàtica o actualitzar-se manualment sota demanda. Per actualitzar manualment una o més mesures, selecciona-les i selecciona **Actualitza**. Per [programar una actualització](schedule-refresh.md) automàtica, aneu a **Planificació del sistema d'administració** > **·** > **·**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196382"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259832"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dades a Azure Synapse Analytics (visualització prèvia)
 
@@ -24,7 +24,7 @@ L'Azure Synapse és un servei d'analítica que accelera el temps per obtenir inf
 > [!NOTE]
 > Assegureu-vos de definir totes les **assignacions de funcions** tal com es descriuen.
 
-- Al Customer Insights, el vostre Azure Active Directory compte d'usuari (AD) ha de tenir una funció d'administrador [...](permissions.md#assign-roles-and-permissions).
+- Al Customer Insights, el vostre Azure Active Directory compte d'usuari (AD) ha de tenir una funció d'administrador [...](permissions.md#add-users).
 
 A l’Azure:
 
@@ -39,6 +39,8 @@ A l’Azure:
 - La *[Azure Synapse identitat](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* administrada de l'espai de treball té **permisos Storage Blob Data Contributor** al Azure Data Lake Storage compte Gen2 on es troben les dades i s'enllaça a l'espai Azure Synapse de treball. Obteniu més informació sobre [com podeu utilitzar el portal de l'Azure per assignar una funció de l'Azure per accedir a les dades BLOB i de la cua](/azure/storage/common/storage-auth-aad-rbac-portal) i [els permisos del col·laborador de dades BLOB d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - A l'espai Azure Synapse de treball, el *director de servei del Customer Insights* té **assignada** la funció d'administrador [de](/azure/synapse-analytics/security/how-to-set-up-access-control) Synapse.
+
+- Si l'entorn del Customer Insights emmagatzema dades pel vostre [compte Azure Data Lake Storage](own-data-lake-storage.md), l'usuari que configura la connexió necessita Azure Synapse Analytics almenys la funció de lector **integrat** al compte del Data Lake Storage. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Configurar la connexió a Azure Synapse
 

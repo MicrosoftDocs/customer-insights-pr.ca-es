@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administració
   items:
-    - name: Configurar la configuració del sistema
-      href: system.md
-    - name: Configurar els paràmetres de seguretat
-      href: security-overview.md
     - name: Assignar permisos d'usuari
       href: permissions.md
     - name: Porteu el vostre propi Key Vault
       href: use-azure-key-vault.md
+    - name: Configurar els paràmetres de seguretat
+      href: security-overview.md
     - name: Exportar registres de diagnòstic
       href: diagnostics.md
-    - name: Informació general sobre les connexions
+    - name: Administrar les connexions
       href: connections.md
+    - name: Planificar l'actualització del sistema
+      href: schedule-refresh.md
+    - name: Veure la configuració del sistema
+      href: system.md
 - name: API
   items:
     - name: Treballar amb API

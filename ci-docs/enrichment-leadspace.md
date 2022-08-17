@@ -1,19 +1,19 @@
 ---
 title: Enriquir els perfils d'empresa amb Leadspace (preview)
 description: Informació general sobre l'enriquiment de tercers de Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196198"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237938"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Enriquir els perfils d'empresa amb Leadspace (preview)
 
@@ -35,14 +35,9 @@ Heu de ser [administrador al Customer Insights i tenir la "clau perpètua" (anom
 
 1. Introduïu un nom per a la connexió i un testimoni de Leadspace vàlid.
 
-1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
-
-### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a Leadspace, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que Leadspace compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 

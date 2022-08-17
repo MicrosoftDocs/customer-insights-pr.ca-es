@@ -2,7 +2,7 @@
 title: Suprimir duplicats abans d'unificar dades
 description: El segon pas del procés d'unificació és seleccionar quin registre cal conservar quan es trobin duplicats.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139417"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213615"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Suprimir duplicats abans d'unificar dades
 
-Aquest pas en la unificació opcionalment us permet configurar regles per gestionar registres duplicats dins d'una entitat. *La deduplicació* identifica registres duplicats i els fusiona en un sol registre. Els registres d'origen s'enllacen al registre combinat amb ID alternatius. Si no es configuren les regles, s'apliquen regles definides pel sistema.
+Aquest pas opcional d'unificació us permet configurar regles per eliminar registres duplicats **dins** d'una entitat. La deduplicació identifica diversos registres per a un client i selecciona el millor registre a conservar (basat en les preferències bàsiques de combinació) o fusiona els registres en un de sol (basat en les preferències avançades de combinació). Els registres d'origen s'enllacen al registre combinat amb ID alternatius. Si no es configuren les regles, s'apliquen regles definides pel sistema.
+
+## <a name="default-deduplication"></a>Deduplicació per defecte
+
+Les regles definides pel sistema s'apliquen si no s'afegeixen regles de deduplicació.
+
+- La clau primària es dedueix.
+  Per a qualsevol registre amb la mateixa clau primària, el **registre Més emplenat** (el que té menys valors nuls) és el guanyador.
+- A l'entitat s'apliquen totes les regles de coincidència entre entitats.
+  Per exemple: al pas de coincidència, si l'entitat A coincideix amb l'entitat B a FullName *i* DateofBirth *, l'entitat A també es dedueix amb* FullName *i* DateofBirth *·*. Com que *FullName* i *DateofBirth* són claus vàlides per identificar un client a l'entitat A, aquestes claus també són vàlides per identificar clients duplicats a l'entitat A.
 
 ## <a name="include-enriched-entities-preview"></a>Incloure entitats enriquides (vista prèvia)
 
-Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades](data-sources-enrichment.md).
+Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de](data-sources-enrichment.md) dades.
 
 1. A la **pàgina Duplica els registres**, seleccioneu **Utilitza entitats** enriquides a la part superior de la pàgina.
 

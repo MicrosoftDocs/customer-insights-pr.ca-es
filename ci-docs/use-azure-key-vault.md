@@ -1,7 +1,7 @@
 ---
 title: Porteu el vostre propi magatzem de claus de l'Azure (versió preliminar)
-description: Obteniu informació sobre com configureu el Customer Insights perquè utilitzeu el vostre propi dipòsit de claus de l'Azure per administrar secrets.
-ms.date: 10/06/2021
+description: Obteniu més informació sobre com configurar el Customer Insights per utilitzar el vostre propi magatzem de claus de l'Azure per gestionar secrets.
+ms.date: 08/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,58 +11,63 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 229fb5698a02d1d73c30442f61c7b1b5fce918bf
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082633"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246143"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Porteu el vostre propi magatzem de claus de l'Azure (versió preliminar)
 
-Enllaçar un dipòsit de claus [dedicat](/azure/key-vault/general/basic-concepts) de l'Azure a un entorn del Customer Insights ajuda les organitzacions a complir els requisits de compliment.
-El magatzem de claus dedicat es pot utilitzar per escenificar i utilitzar els secrets en el límit de compliment de l'organització. El Customer Insights pot utilitzar els secrets de l'Azure Key Vault per [configurar connexions](connections.md) a sistemes de tercers.
+Enllaçar un magatzem de claus dedicat [de](/azure/key-vault/general/basic-concepts) l'Azure a un entorn del Customer Insights ajuda les organitzacions a complir els requisits de compliment.
 
-## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Enllaça el dipòsit de claus a l'entorn del Customer Insights
+## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Enllaçar la clau a l'entorn del Customer Insights
+
+Configureu la volta de claus dedicada a escenificar i utilitzar secrets en el límit de compliment d'una organització.
 
 ### <a name="prerequisites"></a>Requisits previs
 
-Per configurar el dipòsit de claus al Customer Insights, s'han de complir els requisits previs següents:
+- Una subscripció activa de l'Azure.
 
-- Heu de tenir una subscripció activa de l'Azure.
+- Una [funció d'administrador](permissions.md#admin)[assignada](permissions.md#add-users) al Customer Insights.
 
-- Teniu una funció d'administrador [a](permissions.md#admin) Customer Insights. Obteniu més informació sobre els [permisos d'usuari a l'Insights del client](permissions.md#assign-roles-and-permissions).
+- [Funcions d'administrador](/azure/role-based-access-control/built-in-roles#contributor) de col·laborador [i](/azure/role-based-access-control/built-in-roles#user-access-administrator) d'accés d'usuari a la volta de claus o al grup de recursos al qual pertany la clau. Per obtenir més informació, aneu a [Afegir o eliminar assignacions de funcions de l'Azure utilitzant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal). Si no teniu la funció d'administrador d'accés d'usuari al dipòsit de claus, configureu els permisos de control d'accés basats en funcions per al principal del servei de l'Azure per Dynamics 365 Customer Insights separat. Seguiu els passos per [utilitzar l'entitat de servei de l'Azure](connect-service-principal.md) per al magatzem de claus que s'ha d'enllaçar.
 
-- Teniu les funcions [Col·laborador](/azure/role-based-access-control/built-in-roles#contributor) i [Administrador d'accés d'usuari](/azure/role-based-access-control/built-in-roles#user-access-administrator) al magatzem de claus o al grup de recursos al qual pertany el magatzem de claus. Per obtenir més informació, aneu a [Afegir o eliminar assignacions de funcions de l'Azure utilitzant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal). Si no teniu la funció Administrador d'accés d'usuari al magatzem de claus, heu de configurar els permisos de control d'accés basats en funcions per a l'entitat de servei de l'Azure per al Dynamics 365 Customer Insights per separat. Seguiu els passos per [utilitzar l'entitat de servei de l'Azure](connect-service-principal.md) per al magatzem de claus que s'ha d'enllaçar.
+- Key vault ha de tenir desactivat el **tallafoc** de Key Vault.
 
-- El magatzem de claus ha de tenir el tallafoc del Key Vault **inhabilitat**.
+- Key vault es troba a la mateixa [ubicació](https://azure.microsoft.com/global-infrastructure/geographies/#overview) de l'Azure que l'entorn del Customer Insights. Al Customer Insights, aneu a **Sistema** > **d'administració** i a la **pestanya Quant** a per veure la regió de l'entorn.
 
-- El dipòsit de claus es troba a la mateixa [ubicació](https://azure.microsoft.com/global-infrastructure/geographies/#overview) de l'Azure que l'entorn Customer Insights. La regió de l'entorn de Customer Insights es mostra a Regió **Quant** > **a regió** > **del sistema** > **d'administració**.
+### <a name="recommendations"></a>Recomanacions
+
+- [Utilitzeu una clau independent o dedicada](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults) que només contingui els secrets necessaris per al Customer Insights.
+
+- Seguiu les [pràctiques recomanades per utilitzar el Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) per controlar l'accés, la còpia de seguretat, l'auditoria i les opcions de recuperació.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Enllaçar un magatzem de claus amb l'entorn
 
-1. Aneu a **Seguretat** > **de l'administrador** i, a continuació, seleccioneu la **pestanya Dipòsit de claus**.
+1. Aneu a Seguretat d'administració i, a **continuació, seleccioneu la** > **pestanya Key Vault**.**·**
 1. A la peça **Key Vault**, seleccioneu **Configuració**.
 1. Trieu una **Subscripció**.
-1. Trieu un magatzem de claus de la llista desplegable **Key Vault**. Si es mostren massa magatzems de claus, seleccioneu un grup de recursos per limitar els resultats de la cerca.
-1. Accepteu la declaració de **Privadesa de les dades i compliment**.
+1. Trieu un magatzem de claus de la llista desplegable **Key Vault**. Si hi ha massa voltes de claus disponibles, seleccioneu un grup de recursos per limitar els resultats de la cerca.
+1. Reviseu la [Privadesa de les dades i el compliment](connections.md#data-privacy-and-compliance) i, a continuació, seleccioneu **Accepto**.
 1. Seleccioneu **Desa**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Passos per configurar un dipòsit de claus enllaçat a Customer Insights.":::
-
-La peça **Key Vault** mostra ara el nom del magatzem de claus enllaçat, el grup de recursos i la subscripció. Està a punt per utilitzar-se en la configuració de connexió.
-Per obtenir més informació sobre quins permisos del dipòsit de claus es concedeixen al Customer Insights, aneu a [Permisos concedits al dipòsit de claus](#permissions-granted-on-the-key-vault), més endavant en aquest article.
+La **peça Key Vault** mostra el nom de la volta de clau enllaçada, la subscripció i el grup de recursos. Està a punt per utilitzar-se en la configuració de connexió.
+Per obtenir més informació sobre quins permisos de la clau es concedeixen al Customer Insights, aneu a [Permisos concedits a la clau](#permissions-granted-on-the-key-vault).
 
 ## <a name="use-the-key-vault-in-the-connection-setup"></a>Utilitzar el magatzem de claus de la configuració de connexió
 
-Quan [configureu connexions](connections.md) a sistemes de tercers, els secrets del Key Vault enllaçat es poden utilitzar per configurar les connexions.
+Quan [configureu connexions a](connections.md) sistemes de tercers [compatibles](#supported-connection-types), utilitzeu els secrets del Key Vault enllaçat per configurar les connexions.
 
 1. Aneu a **Administració** > **Connexions**.
 1. Seleccioneu **Afegeix una connexió**.
 1. Per als tipus de connexió compatibles, hi ha disponible una commutació **Utilitza el Key Vault** si heu enllaçat un magatzem de claus.
-1. En lloc d'introduir el secret manualment, podeu triar el nom del secret que assenyala al valor del secret del magatzem de claus.
+1. En lloc d'introduir el secret manualment, trieu el nom secret que assenyala el valor secret de la volta de la clau.
 
-:::image type="content" source="media/use-key-vault-secret.png" alt-text="Subfinestra de connexió amb una connexió SFTP que utilitza un secret del Key Vault.":::
+   :::image type="content" source="media/use-key-vault-secret.png" alt-text="Subfinestra de connexió amb una connexió SFTP que utilitza un secret del Key Vault.":::
+
+1. Seleccioneu **Desa** per crear la connexió.
 
 ## <a name="supported-connection-types"></a>Tipus de connexió admesos
 
@@ -81,9 +86,9 @@ S'admeten les connexions d'[exportació](export-destinations.md) següents:
 * [Sendinblue](export-sendinblue.md)
 * [SFTP](export-sftp.md)
 
-## <a name="permissions-granted-on-the-key-vault"></a>Permisos concedits al dipòsit de claus
+## <a name="permissions-granted-on-the-key-vault"></a>Permisos concedits a la volta de claus
 
-Els permisos següents es concedeixen al Customer Insights en un dipòsit de claus enllaçat si [la política](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) d'accés key vault o [el control](/azure/key-vault/general/rbac-guide?tabs=azure-cli) d'accés basat en funcions de l'Azure estan habilitades.
+Els permisos següents es concedeixen al Customer Insights en un magatzem de claus enllaçades si s'habilita [una norma](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) d'accés a Key Vault o [un control](/azure/key-vault/general/rbac-guide?tabs=azure-cli) d'accés basat en funcions de l'Azure.
 
 ### <a name="key-vault-access-policy"></a>Norma d'accés del Key Vault
 
@@ -97,36 +102,30 @@ Els valors anteriors són el mínim per llistar i llegir durant l'execució.
 
 ### <a name="azure-role-based-access-control"></a>Control d'accés basat en funcions de l'Azure
 
-Les funcions d'usuari Key Vault Reader i Key Vault Secrets s'afegiran per a les estadístiques del client. Per obtenir detalls sobre aquestes funcions, aneu a [Funcions incorporades de l'Azure per a les operacions de pla de dades del Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
-
-## <a name="recommendations"></a>Recomanacions
-
-- Utilitzeu un dipòsit de claus separat o dedicat que contingui només els secrets necessaris per al Customer Insights. Llegiu més informació sobre la raó per la qual [es recomana utilitzar magatzems de claus diferents](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
-
-- Seguiu les [pràctiques recomanades per utilitzar el Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) per controlar l'accés, la còpia de seguretat, l'auditoria i les opcions de recuperació.
+Les [funcions d'usuari de Key Vault Reader i Key Vault Secrets s'afegiran](/azure/key-vault/general/rbac-guide?tabs=azure-cli) per a customer insights.
 
 ## <a name="frequently-asked-questions"></a>Preguntes freqüents
 
-### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Pot Customer Insights escriure secrets o sobreescriure secrets a la volta de claus?
+### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>El Customer Insights pot escriure secrets o sobreescriure secrets a la volta de claus?
 
-No. Només els permisos de lectura i llista descrits a la [secció de permisos concedits](#permissions-granted-on-the-key-vault) anteriorment en aquest article es concedeixen al Customer Insights. El sistema no pot afegir, suprimir o sobreescriure secrets al magatzem de claus. Aquesta és la raó per la qual no podeu introduir credencials quan una connexió utilitza Key Vault.
+No. Només es concedeixen al Customer Insights els permisos de lectura i de llista descrits als [permisos concedits](#permissions-granted-on-the-key-vault). El sistema no pot afegir, suprimir o sobreescriure secrets al magatzem de claus. Aquesta és la raó per la qual no podeu introduir credencials quan una connexió utilitza Key Vault.
 
 ### <a name="can-i-change-a-connection-from-using-key-vault-secrets-to-default-authentication"></a>Puc canviar una connexió perquè en lloc d'utilitzar els secrets del Key Vault utilitzi l'autenticació per defecte?
 
 No. No podeu tornar a una connexió per defecte després de configurar-la mitjançant un secret d'un magatzem de claus enllaçat. Creeu una connexió independent i suprimiu l'antiga si no la necessiteu.
 
-### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Com puc revocar l'accés a un dipòsit de claus per al Customer Insights?
+### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Com puc revocar l'accés a un magatzem de claus per al Customer Insights?
 
-Segons si la [norma d'accés del Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) o el [control d'accés basat en funcions de l'Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) està habilitat, heu de suprimir els permisos de l'entitat de servei `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` amb el nom `Dynamics 365 AI for Customer Insights`. Totes les connexions que utilitzin el magatzem de claus deixaran de funcionar.
+Si la norma [d'accés a Key Vault o](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) el [control](/azure/key-vault/general/rbac-guide?tabs=azure-cli) d'accés basat en funcions de l'Azure està habilitat, elimineu els permisos del principal del `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` servei amb el nom `Dynamics 365 AI for Customer Insights`. Totes les connexions que utilitzin el magatzem de claus deixaran de funcionar.
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Un secret utilitzat en una connexió s'ha eliminat del magatzem de claus. Què puc fer?
 
-Una notificació apareix a Customer Insights quan ja no es pot accedir a un secret configurat des del dipòsit de claus. Habiliteu la funció de [supressió temporal](/azure/key-vault/general/soft-delete-overview) al magatzem de claus per restaurar els secrets si accidentalment se suprimeixen.
+Una notificació apareix al Customer Insights quan ja no es pot accedir a un secret configurat des de la volta de claus. Habiliteu la funció de [supressió temporal](/azure/key-vault/general/soft-delete-overview) al magatzem de claus per restaurar els secrets si accidentalment se suprimeixen.
 
 ### <a name="a-connection-doesnt-work-but-my-secret-is-in-the-key-vault-what-might-be-the-cause"></a>Una connexió no funciona, però el meu secret és al magatzem de claus. Quina podria ser la causa?
 
-Apareix una notificació a Customer Insights quan no pot accedir al dipòsit de claus. La causa podria ser:
+Una notificació apareix al Customer Insights quan no pot accedir a la clau. La causa podria ser:
 
-- S'han suprimit els permisos del principal del servei del Customer Insights. S'han de restaurar manualment.
+- S'han suprimit els permisos del director del servei del Customer Insights. S'han de restaurar manualment.
 
-- El tallafoc del magatzem de claus està habilitat. Cal inhabilitar el tallafoc per tornar a fer que el dipòsit de claus sigui accessible per al Customer Insights.
+- El tallafoc del magatzem de claus està habilitat. El tallafoc s'ha de desactivar perquè la volta de claus torni a ser accessible per al Customer Insights.

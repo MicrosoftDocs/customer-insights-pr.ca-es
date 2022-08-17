@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082843"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245453"
 ---
 # <a name="manage-predictions"></a>Administrar prediccions
 
@@ -50,15 +50,15 @@ Les columnes següents de l'informe contenen informació útil per millorar les 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Exemple d'un informe d'ús de dades d'entrada que mostra una taula amb errors, advertiments i recomanacions.":::
 
 - **Nom:** nom descriptiu de l'error, advertiment o recomanació.
-- **Pas:** Fase del model, tren o puntuació, la informació es refereix.
-- **Estat:** Gravetat de la informació (error, avís, recomanació).
-- **Nom de la columna:** columna d'una entitat que s'ha de modificar per millorar el rendiment del model.
-- **Nom de l'entitat:** nom de l'entitat que s'ha de modificar per millorar el rendiment del model.
+- **Pas:** Fase model, tren o puntuació, la informació es refereix.
+- **Estat:** Gravetat de la informació (error, advertència, recomanació).
+- **Nom de la columna:** columna d'una entitat que cal modificar per millorar el rendiment del model.
+- **Nom de l'entitat:** nom de l'entitat que cal modificar per millorar el rendiment del model.
 - **Detalls:** detalls sobre l'error, l'advertiment o la recomanació.
 
 ## <a name="refresh-a-prediction"></a>Actualitzar una predicció
 
-Les prediccions s'actualitzaran automàticament amb la mateixa [planificació d'actualització de les dades](system.md#schedule-tab) definida a la configuració. Podeu actualitzar-les manualment també.
+Les prediccions s'actualitzaran automàticament amb la mateixa [planificació d'actualització de les dades](schedule-refresh.md) definida a la configuració. Podeu actualitzar-les manualment també.
 
 1. Aneu a **Intel·ligència** > **Prediccions** i seleccioneu la pestanya **Les meves prediccions**.
 

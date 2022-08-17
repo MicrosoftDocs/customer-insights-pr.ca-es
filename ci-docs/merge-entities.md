@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139645"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213570"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unificar els camps de clients per a la unificació de dades
 
@@ -58,6 +58,9 @@ En aquest pas del procés d'unificació, trieu i excloeu els atributs per combin
 
 1. Especifiqueu com combinar els camps d'una de les tres opcions:
     - **Importància**: s'identifica el valor guanyador en funció de la classificació d'importància especificada per als camps participants. És l'opció de combinació per defecte. Seleccioneu **Desplaça amunt/avall** per definir la classificació d'importància.
+
+      > [!NOTE]
+      > El Customer Insights utilitza el primer valor no nul. Per exemple, donades les entitats A, B i C classificades en aquest ordre, si A.Name i B.Name són nul·les, s'utilitza el valor de C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="L'opció d'importància al quadre de diàleg de camps combinats.":::
 

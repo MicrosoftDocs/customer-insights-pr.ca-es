@@ -1,19 +1,19 @@
 ---
 title: Enriquir els perfils de clients amb HERE Technologies (vista prèvia)
 description: Informació general sobre l'enriquiment de tercers de HERE Technologies.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196244"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237846"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Enriquir els perfils de clients amb HERE Technologies (vista prèvia)
 
@@ -33,16 +33,11 @@ Heu de ser [administrador](permissions.md#admin) al Customer Insights i tenir un
 
 1. Introduïu un nom per a la connexió i una clau d'API here technologies vàlida.
 
-1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="Pàgina de configuració de la connexió de HERE Technologies.":::
-
-### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu el Dynamics 365 Customer Insights perquè transmeti dades a HERE Technologies, permeteu la transferència de dades fora dels límits de compliment del Dynamics 365 Customer Insights, incloent-hi dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons el que indiqueu; tanmateix, teniu la responsabilitat d'assegurar-vos que HERE Technologies compleixi qualsevol obligació de privadesa o seguretat que pugueu tenir. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 

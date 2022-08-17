@@ -1,19 +1,19 @@
 ---
 title: Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)
 description: Enriquir perfils de clients amb dades de LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196336"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237800"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)
 
@@ -41,13 +41,9 @@ Heu de ser [administrador](permissions.md#admin) al Customer Insights i tenir un
 
 1. Introduïu un nom per a la connexió i un identificador de client de LiveRamp vàlid i un secret.
 
-1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
-
-### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan habiliteu Dynamics 365 Customer Insights transmetre dades a LiveRamp, permeteu la transferència de dades fora del límit de compliment, Dynamics 365 Customer Insights incloses les dades potencialment sensibles, com ara les dades personals. Microsoft transferirà aquestes dades segons les vostres instruccions, però sou responsable de garantir que el LiveRamp compleixi les obligacions de privadesa o seguretat que pugueu tenir. Per obtenir més informació, consulteu la [Declaració](https://go.microsoft.com/fwlink/?linkid=396732) de privadesa de Microsoft. L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 

@@ -1,19 +1,19 @@
 ---
 title: Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 description: Informació general sobre l'enriquiment de tercers d'Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195924"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237984"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquir els perfils de client amb dades demogràfiques d'Experian (versió preliminar)
 
@@ -41,13 +41,9 @@ Heu de ser [administrador](permissions.md#admin) al Customer Insights i tenir un
 
 1. Introduïu un nom per a la connexió i un ID d'Usuari vàlid, un identificador de partit i un número de model per al vostre Experian compte de transport segur.
 
-1. Reviseu i proporcioneu el vostre consentiment per a la [Privadesa de les dades i conformitat](#data-privacy-and-compliance) seleccionant **Accepta**.
+1. Reviseu la privadesa i el compliment de [les](connections.md#data-privacy-and-compliance) dades i seleccioneu **Accepto**.
 
 1. Seleccioneu **Verifica** per validar la configuració i, a continuació, seleccioneu **Desa**.
-
-### <a name="data-privacy-and-compliance"></a>Compliment i privadesa de les dades
-
-Quan permeteu que el Dynamics 365 Customer Insights transmeti dades a Experian, permeteu la transferència de dades fora del límit de conformitat per al Dynamics 365 Customer Insights, incloent-hi dades potencialment confidencials, com ara dades personals. Microsoft transferirà aquestes dades segons la vostra instrucció, però sou responsable d'assegurar que Experian compleixi les obligacions de privadesa o seguretat que tingueu. Per obtenir més informació, vegeu la [Declaració de privadesa de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). L'administrador del Dynamics 365 Customer Insights pot suprimir aquest enriquiment en qualsevol moment per deixar de continuar utilitzant aquesta funcionalitat.
 
 ## <a name="configure-the-enrichment"></a>Configurar l'enriquiment
 
