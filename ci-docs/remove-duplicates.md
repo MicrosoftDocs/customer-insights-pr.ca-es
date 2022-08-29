@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213615"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304461"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Suprimir duplicats abans d'unificar dades
 
@@ -47,7 +47,7 @@ Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resu
 
 1. A la **pàgina Duplica els registres**, seleccioneu una entitat i seleccioneu **Afegeix una regla** per definir les regles de deduplicació.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de pantalla de les pàgines de registres duplicats amb Mostra més ressaltada":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de pantalla de la pàgina Duplica els registres amb l'entitat ressaltada i Afegeix una regla mostrada"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. A la **subfinestra Afegeix una regla**, introduïu la informació següent:
       - **Seleccioneu el camp**: trieu un dels camps disponibles de l'entitat que voleu comprovar si hi ha duplicats. Trieu els camps que probablement siguin únics per a cada client. Per exemple, una adreça electrònica o la combinació de nom, ciutat i número de telèfon.
@@ -80,9 +80,9 @@ Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resu
       - **Més emplenat**: identifica el registre amb els atributs més emplenats com el registre guanyador. És l'opció de combinació per defecte.
       - **Més recent**: identifica el registre més recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
       - **Menys recent**: identifica el registre menys recent com el registre guanyador. Requereix una data o un camp numèric per definir la qualitat de recent.
-      
+
       En cas d'empat, el registre guanyador és el que té el VALOR MAX (PK) o la clau primària més gran.
-      
+
    1. Opcionalment, per definir les preferències de combinació dels atributs individuals d'una entitat, seleccioneu **Avançat** a la part inferior de la subfinestra. Per exemple, podeu optar per mantenir el correu electrònic més recent I l'adreça més completa de diferents registres. Expandiu l'entitat per veure'n tots els atributs i definiu quina opció voleu utilitzar per a atributs individuals. Si trieu una opció basada en recència, també heu d'especificar un camp data/hora que defineixi la recència.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Tauler de preferències de combinació avançada que mostra el correu electrònic recent i l'adreça completa":::
@@ -96,18 +96,5 @@ Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resu
 
 > [!div class="nextstepaction"]
 > [Pas següent per a diverses entitats: Condicions de coincidència](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Sortida de la desduplicació com a entitat
-
-El procés de deduplicació crea una nova entitat deduplicada per a cadascuna de les entitats d'origen. Aquestes entitats es poden trobar amb **ConflationMatchPairs:CustomerInsights** a la secció **Sistema** de la pàgina **Entitats**, amb el nom **Deduplication_DataSource_Entity**.
-
-Una entitat de sortida de desduplicació conté la informació següent:
-
-- ID / Claus
-  - Camps clau primària i identificador alternatiu. El camp Identificador alternatiu consisteix en tots els identificadors alternatius identificats per a un registre.
-  - El camp Deduplication_GroupId mostra el grup o clúster identificat dins d'una entitat que agrupa tots els registres semblants en funció dels camps de desduplicació especificats. S'utilitza per al processament del sistema. Si no hi ha regles de desduplicació manuals especificades i s'apliquen regles de desduplicació definides pel sistema, potser no trobareu aquest camp a l'entitat de sortida de desduplicació.
-  - Deduplication_WinnerId: aquest camp conté l'ID guanyador dels grups o clústers identificats. Si Deduplication_WinnerId és el mateix que el valor de la clau principal d'un registre, significa que el registre és el registre guanyador.
-- Camps que s'utilitzen per definir les regles de desduplicació.
-- Els camps Regla i Puntuació per denotar quines de les regles de desduplicació s'apliquen i la puntuació retornada per l'algorisme de coincidència.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

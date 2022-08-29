@@ -1,9 +1,9 @@
 ---
 title: Assignacions semàntiques (versió preliminar)
 description: Informació general de les assignacions semàntiques i de com utilitzar-les.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183619"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303864"
 ---
 # <a name="semantic-mappings-preview"></a>Assignacions semàntiques (versió preliminar)
 
-Les assignacions semàntiques us permeten assignar les dades que no són d'activitat a esquemes predefinits. Aquests esquemes ajuden el Customer Insights a entendre millor els atributs de dades. L'assignació semàntica i les dades proporcionades permeten noves estadístiques i característiques al Customer Insights. Per assignar les dades de l'activitat a esquemes, reviseu la documentació d'[activitats](activities.md).
+> [!NOTE]
+> La **pàgina d'assignacions** semàntiques només està disponible per a entorns empresarials (B-to-B) on ja s'han creat perfils de contacte mitjançant aquesta pàgina. Podeu continuar creant i gestionant els perfils de contacte individuals mitjançant la pàgina d'assignacions **semàntiques**. O bé, [unifiqueu les dades de](data-unification-contacts.md) contacte per suprimir duplicats, identificar coincidències entre entitats i crear un perfil de contacte unificat. A continuació, podeu utilitzar el perfil de contacte unificat per crear activitats de nivell de contacte.
 
-**Les assignacions semàntiques estan habilitades actualment per a entorns basats en comptes empresarials**. *ContactProfile* és l'únic tipus d'assignació semàntica disponible actualment al Customer Insights.
+Les assignacions semàntiques us permeten assignar les dades que no són d'activitat a esquemes predefinits. Aquests esquemes ajuden el Customer Insights a entendre millor els atributs de dades. L'assignació semàntica i les dades proporcionades permeten noves estadístiques i característiques al Customer Insights. Per assignar les dades de l'activitat a esquemes, reviseu la documentació d'[activitats](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definir una assignació d'entitats semàntica de ContactProfile
 
@@ -87,41 +88,5 @@ Seleccioneu l'assignació semàntica per veure les accions disponibles.
 - **Actualitzeu** l'assignació semàntica per incloure les dades més recents. Actualitzar qualsevol assignació semàntica determinada actualitzarà totes les assignacions semàntiques del mateix tipus.
 - **Canvieu** el nom de l'assignació semàntica. Seleccioneu **Desa**.
 - **Suprimir** l'assignació semàntica. Per eliminar més d'un mapatge semàntic alhora, seleccioneu els mapes semàntics i la icona d'esborrar. Seleccioneu **Suprimeix** per confirmar la supressió.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilitzeu una assignació d'entitats semàntiques ContactProfile per crear activitats a nivell de contacte
-
-Després de crear un mapatge d'entitats *semàntiques ContactProfile*, podeu capturar activitats de contactes. Us permet veure a la cronologia d'activitats d'un compte quin contacte era responsable de cada activitat. La majoria de passos segueixen la configuració típica de l'assignació d'activitats.
-
-   > [!NOTE]
-   > Perquè les activitats del nivell de contacte funcionin, heu de tenir **atributs AccountID** i **ContactID** per a cada registre a les dades de l'activitat.
-
-1. [Definiu un mapatge *d'entitats* semàntiques ContactProfile](#define-a-contactprofile-semantic-entity-mapping) i executeu l'assignació semàntica.
-
-1. Aneu a **Activitats** > **de dades**.
-
-1. Seleccioneu **Afegeix activitat** per crear una activitat nova.
-
-1. Anomeneu l'activitat, seleccioneu l'entitat d'activitat d'origen i seleccioneu la clau principal de l'entitat de l'activitat.
-
-1. **Al pas Relacions**, creeu una relació indirecta entre les dades de la font de l'activitat i els comptes, utilitzant les vostres dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins](relationships.md#relationship-paths) de relació directa i indirecta.
-   - Exemple de relació per a una activitat anomenada *Compres*:
-      - **Compres Font Dades d'activitat Dades** > **de contacte a** l'atribut **ContactID**
-      - **Dades de contacte** > **Dades del compte a** l'atribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemple de configuració de relacions.":::
-
-1. Després de configurar les relacions, seleccioneu **Següent** i completeu la configuració de l'assignació d'activitats. Per obtenir passos detallats sobre la creació d'activitats, vegeu [definir una activitat](activities.md).
-
-1. Executeu els vostres mapes d'activitats.
-
-1. Després que s'executi una assignació d'activitat al nivell de contacte, seleccioneu **Clients**. Les activitats del nivell de contacte es mostren a la cronologia del client.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultat final després de configurar les activitats de contacte":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtratge de la cronologia de l'activitat a nivell de contacte
-
-La cronologia d'activitats dels vostres clients inclou els seus identificadors o noms, en funció de la *configuració de ContactProfile*, per a les activitats en què han actuat. Filtreu les activitats per contactes a la cronologia per veure els contactes específics que us interessin. Per visualitzar totes les activitats que no estan assignades a un contacte específic, seleccioneu **Activitats no assignades a un Contacte**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opcions de filtratge disponibles per a les activitats de nivell de contacte.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

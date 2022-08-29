@@ -1,7 +1,7 @@
 ---
 title: Creeu segments complexos amb el creador de segments
 description: Utilitzeu el creador de segments per crear segments de clients complexos agrupant-los en funció de diversos atributs.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170623"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304737"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Creeu segments complexos amb el creador de segments
 
-Definiu filtres complexos per a l'entitat de client unificada i les entitats relacionades. Cada segment, després del processament, crea un conjunt de registres de client que podeu exportar i on podeu prendre mesures.
+Definiu filtres complexos al voltant del client unificat o contacte unificat i les seves entitats relacionades. Cada segment, després del processament, crea un conjunt de registres de contactes o de clients que podeu exportar i dur a terme accions.
 
 > [!TIP]
-> Els segments basats en **clients individuals** inclouen automàticament la informació de contacte disponible per als membres del segment. En entorns de **comptes empresarials**, els segments es basen en comptes (empreses o filials). Per incloure informació de contacte en un segment, utilitzeu la funcionalitat **Atributs del projecte** al creador de segments. Assegureu-vos que les fonts de dades del contacte [s'assignen de manera semàntica a l'entitat ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Els segments basats en **clients individuals** inclouen automàticament la informació de contacte disponible per als membres del segment. Als **comptes** d'empresa, si heu [unificat](data-unification.md) tant els comptes com els contactes, trieu si el segment es basa en comptes o contactes empresarials. Per exportar a una destinació que espera informació de contacte, utilitzeu un segment de contactes. Per exportar a una destinació que espera informació del compte, utilitzeu un segment de comptes.
 
 ## <a name="segment-builder"></a>Creador de segments
 
@@ -57,6 +57,11 @@ L'exemple anterior il·lustra la capacitat de segmentació. Hem definit un segme
 
 1. Seleccioneu **Crea** > **Crea'n un de propi**. A la pàgina del creador de segments, definiu o redacteu regles. Una regla consta d'una o més condicions que defineixen un conjunt de clients.
 
+   > [!NOTE]
+   > Per a entorns basats en comptes d'empresa, seleccioneu **Segment nou** > **de comptes** o **Segment de contactes (visualització prèvia)** en funció del tipus de segment que vulgueu crear. Si s'ha definit una [jerarquia](relationships.md#set-up-account-hierarchies) de comptes i voleu crear regles per filtrar les dades en funció de la relació entre els fills i els pares, seleccioneu **Utilitza la jerarquia? (vista prèvia),** seleccioneu la jerarquia i, a continuació **, aplica**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Subfinestra de selecció de segments de la jerarquia de comptes.":::
+
 1. Seleccioneu **Edita els detalls** al costat del segment Sense títol. Proporcioneu un nom per al segment i actualitzeu el **Nom de l'entitat de sortida** suggerit per al segment. Opcionalment, afegiu una descripció i [etiquetes](work-with-tags-columns.md#manage-tags) al segment.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Edita els detalls del quadre de diàleg.":::
@@ -65,11 +70,11 @@ L'exemple anterior il·lustra la capacitat de segmentació. Hem definit un segme
    - Reviseu la llista d'entitats i atributs disponibles a la subfinestra **Afegeix a la regla** i seleccioneu la icona **+** que hi ha al costat de l'atribut que voleu afegir. Trieu si voleu afegir l'atribut a una regla existent o utilitzar-lo per crear una regla nova.
    - Escriviu el nom de l'atribut a la secció de la regla per veure els suggeriments coincidents.
 
-1. Trieu els operadors per especificar els valors coincidents de la condició. L'atribut pot tenir un d'aquests quatre tipus de dades com a valor: numèric, cadena, data o booleà. Segons el tipus de dades de l'atribut, hi ha disponibles diferents operadors per especificar la condició. Per als segments amb comptes empresarials, hi ha dos operadors especials disponibles per incloure jerarquies potencials entre els comptes ingerits. Utilitzeu els operadors *secundari de* i *principal de* per incloure comptes relacionats.
+1. Trieu els operadors per especificar els valors coincidents de la condició. L'atribut pot tenir un d'aquests quatre tipus de dades com a valor: numèric, cadena, data o booleà. Segons el tipus de dades de l'atribut, hi ha disponibles diferents operadors per especificar la condició.
 
 1. Seleccioneu **Afegeix una condició** per afegir més condicions a una regla. Per crear una regla a sota de la regla actual, seleccioneu **Afegeix una subregla**.
 
-1. Si una norma utilitza altres entitats que no siguin l'entitat Client *, seleccioneu* Defineix el **camí de** relació per assignar l'entitat seleccionada a l'entitat de client unificada. Si només hi ha un camí de relació possible, el sistema el selecciona automàticament. Diferents [camins de](relationships.md#relationship-paths) relació poden donar resultats diferents. Cada regla pot tenir el seu propi camí de relació.
+1. Si una norma utilitza altres entitats que no siguin l'entitat Client (o *l'entitat* ContactProfile *per a la B a la B), seleccioneu* Defineix el camí de **relació per assignar l'entitat seleccionada a l'entitat client unificada.** Si només hi ha un camí de relació possible, el sistema el selecciona automàticament. Diferents [camins de](relationships.md#relationship-paths) relació poden donar resultats diferents. Cada regla pot tenir el seu propi camí de relació.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Possible camí de relació en crear una regla basada en una entitat assignada a l'entitat de client unificada.":::
 
@@ -92,24 +97,22 @@ L'exemple anterior il·lustra la capacitat de segmentació. Hem definit un segme
       - **Intersecció** solapa els dos grups. Al grup unificat, només hi queden dades *comunes* a ambdós grups.
       - **Excepte** combina els dos grups. Només es conserven les dades del grup A que *no són comunes* a les dades del grup B.
 
-1. Per defecte, l'entitat de sortida contindrà automàticament tots els atributs dels perfils de client que coincideixin amb els filtres definits. Si un segment es basa en altres entitats que no siguin l'entitat *client*, seleccioneu **Atributs** de projecte per afegir més atributs d'aquestes entitats a l'entitat de sortida.
-
-   > [!IMPORTANT]
-   > Per als segments basats en comptes d'empresa, s'han d'incloure al segment les dades d'un o més contactes de cada compte de l'entitat *ContactProfile* per permetre que aquest segment s'activi o s'exporti a destinacions que requereixin informació de contacte. Per obtenir més informació sobre l'entitat *ContactProfile*, vegeu [Assignacions semàntiques](semantic-mappings.md).
-   > Una sortida de mostra d'un segment basat en comptes empresarials amb atributs previstos de contactes podria tenir aquest aspecte:
-   >
-   > |ID  |Nom del compte  |Ingressos  |Nom del contacte  | Funció de contacte|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100 000 | [Abbie Moss, Ruth Soto]  | [Director general, cap del proveïment]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'atributs previstos seleccionats a la subfinestra lateral per afegir-se a l'entitat de sortida.":::
-  
+1. Per defecte, l'entitat de sortida contindrà automàticament tots els atributs dels perfils de client que coincideixin amb els filtres definits. En B a B quan s'utilitza l'entitat *ContactProfile*, l'identificador de compte s'inclou automàticament. Si un segment es basa en altres entitats que no siguin l'entitat *Client* o per incloure més atributs del *ContactProfile*, seleccioneu **Atributs** de projecte per afegir més atributs d'aquestes entitats a l'entitat de sortida.
+ 
    Per exemple: un segment es basa en una entitat que conté dades de compra, que està relacionada amb l'entitat *Client*. El segment cerca tots els clients d'Espanya que han adquirit productes a l'any actual. Podeu afegir atributs com ara el preu dels productes o la data de compra a tots els registres de clients coincidents a l'entitat de sortida. Aquesta informació pot ser útil per analitzar correlacions de temporada en el total de la despesa.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'atributs previstos seleccionats a la subfinestra lateral per afegir-se a l'entitat de sortida.":::
+ 
+   Una sortida de mostra d'un segment basat en comptes empresarials amb atributs previstos de contactes podria tenir aquest aspecte:
+
+   |ID  |Nom del compte  |Ingressos  |Nom del contacte  | Funció de contacte|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100 000 | [Abbie Moss, Ruth Soto]  | [Director general, cap del proveïment]
+
    > [!NOTE]
-   > - Els **atributs de projecte** només funcionen per a les entitats que tenen una relació d'un a diversos amb l'entitat de client. Per exemple, un client pot tenir diverses subscripcions.
-   > - Si l'atribut que voleu projectar és a més d'un salt de l'entitat *Client*, segons ho defineix la relació, aquest atribut s'ha d'utilitzar a cada regla de la consulta de segment que esteu creant.
-   > - Si l'atribut que voleu projectar és a només un salt de l'entitat *Client*, aquest atribut no cal que estigui present a cada regla de la consulta de segment que esteu creant.
+   > - **Els atributs** del projecte només funcionen per a entitats que tenen una relació d'un a molts amb l'entitat *Client* o *ContactProfile*. Per exemple, un client pot tenir diverses subscripcions.
+   > - Si l'atribut que voleu projectar és a més d'un pas de l'entitat *Client* o *ContactProfile*, tal com es defineix per la relació, aquest atribut s'ha d'utilitzar en totes les regles de la consulta del segment que esteu construint.
+   > - Si l'atribut que voleu projectar és a només un sol pas de l'entitat *Client* o *ContactProfile*, aquest atribut no ha d'estar present a totes les regles de la consulta del segment que esteu construint.
    > - Els **atributs projectats** es factoritzen quan s'utilitzen operadors de conjunts.
 
 1. Seleccioneu **Executa** per crear el segment. Seleccioneu **Desa** si voleu mantenir la configuració actual i executar el segment més tard. Es **mostra la pàgina Segments**.

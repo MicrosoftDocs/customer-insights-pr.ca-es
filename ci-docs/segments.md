@@ -1,7 +1,7 @@
 ---
 title: Descripció general dels segments
 description: Informació general sobre els segments i com crear-ne i administrar-los.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246281"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304783"
 ---
 # <a name="segments-overview"></a>Descripció general dels segments
 
 Els segments us permeten agrupar els clients segons atributs demogràfics, de transaccions o de comportament. Podeu utilitzar segments per orientar les campanyes promocionals, les activitats de vendes i les accions d'atenció al client per assolir els vostres objectius empresarials.
 
-Els perfils de clients que coincideixen amb els filtres d'una definició de segment s'anomenen *membres* d'un segment. S'apliquen [límits de servei](/dynamics365/customer-insights/service-limits).
+Els perfils de clients o contactes que coincideixen amb els filtres d'una definició de segment es denominen *membres* d'un segment. S'apliquen [límits de servei](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Creació d’un segment
 
@@ -41,13 +41,19 @@ Trieu com crear un segment en funció del vostre públic objectiu.
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d'empresa (d'empresa a empresa)](#tab/b2b)
 
-- Segments senzills o complexos amb creador de segments: creeu-ne [un de propi](segment-builder.md)
+Segment de comptes o segment de contactes (vista prèvia) amb creador de segments: Creeu [el vostre propi](segment-builder.md)
+
+> [!NOTE]
+> La majoria de destinacions d'exportació requereixen informació de contacte amb finalitats de Màrqueting. Per tant, creeu segments de contactes per utilitzar per a aquestes exportacions.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Administrar segments existents
 
-Aneu a la **pàgina Segments** per veure els segments que heu creat, el seu estat i estat, el nombre de membres i l'última vegada que es van actualitzar les dades. Podeu ordenar la llista de segments per qualsevol columna o utilitzar el quadre de cerca per trobar el segment que voleu gestionar.
+Aneu a la **pàgina Segments** per veure els segments que heu creat, el seu estat i estat, i l'última vegada que es van actualitzar les dades. Podeu ordenar la llista de segments per qualsevol columna o utilitzar el quadre de cerca per trobar el segment que voleu gestionar.
+
+> [!TIP]
+> En entorns B a B, la **columna Tipus de** públic identifica si un segment es basa en comptes o contactes.
 
 Seleccioneu un segment per veure les accions disponibles.
 
@@ -82,7 +88,7 @@ La part inferior conté una llista dels membres del segment.
 > [!NOTE]
 > Els camps que apareixen en aquesta llista es basen en els atributs de les entitats del vostre segment.
 >
->La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, [exporta el segment](export-destinations.md).
+> La llista és una visualització prèvia dels membres del segment coincidents i mostra els primers 100 registres del segment per tal que pugueu avaluar-lo ràpidament i revisar-ne les definicions si cal. Per veure tots els registres coincidents, seleccioneu **Mostra més** informació que obre la [**pàgina Entitats**](entities.md) o [exporta el segment](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Actualitzar els segments
 

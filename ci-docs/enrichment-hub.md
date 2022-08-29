@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245867"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304507"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visió general de l'enriquiment de dades (vista prèvia)
 
@@ -95,7 +95,7 @@ Un cop executats, els enriquiments es poden actualitzar automàticament o actual
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Veure el progrés del procés d'enriquiment
 
-Podeu trobar detalls sobre el processament d'un enriquiment, incloent-hi l'estat i els possibles problemes mentre s'actualitza o després de l'actualització. Compreneu quins processos s'impliquen per actualitzar un enriquiment i el temps que ha trigat a executar els processos. L'estat d'enriquiment està admès per a Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
+Podeu trobar detalls sobre el processament d'un enriquiment, inclòs el seu estat i possibles problemes mentre s'actualitza o després de completar una actualització. Compreneu quins processos s'impliquen per actualitzar un enriquiment i el temps que ha trigat a executar els processos. L'estat d'enriquiment està admès per a Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
 
 1. Aneu a **Dades** > **Enriquiment**.
 1. A la **pestanya Els meus enriquiments**, seleccioneu l'estat de l'enriquiment per obrir un panell lateral.

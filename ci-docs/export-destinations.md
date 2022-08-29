@@ -1,7 +1,7 @@
 ---
 title: Informació general sobre exportacions (versió preliminar)
 description: Administrar les exportacions per compartir dades.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245315"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304047"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245315"
 
 Hi ha dos tipus principals d'exportacions:  
 
-- **Exportacions de data-out: exporteu** qualsevol tipus d'entitat disponible al Customer Insights. Les entitats que seleccioneu per a l'exportació s'exporten amb tots els camps de dades, les metadades, els esquemes i els detalls de les assignacions.
-- **Segmentar les exportacions: entitats del segment d'exportació des** del Customer Insights. Els segments representen una llista de perfils de client. En configurar l'exportació, seleccioneu els camps de dades inclosos, en funció del sistema de destinació al qual exporteu dades.
+- **Les exportacions** de sortida de dades us permeten exportar qualsevol tipus d'entitat disponible al Customer Insights. Les entitats que seleccioneu per a l'exportació s'exporten amb tots els camps de dades, les metadades, els esquemes i els detalls de les assignacions.
+- **Segmentar les exportacions** us permet exportar entitats del segment des del Customer Insights. Per als consumidors individuals (B-to-C), els segments representen una llista de perfils de clients. Per a les empreses (de b a b), [els segments poden representar una llista de comptes o contactes](segment-builder.md#create-a-new-segment-with-segment-builder). En configurar l'exportació, seleccioneu els camps de dades inclosos, en funció del sistema de destinació al qual exporteu dades.
 
 ### <a name="export-segments"></a>Exportar segments
 
@@ -38,14 +38,15 @@ La majoria de les opcions d'exportació admeten els dos tipus d'entorns. L'expor
 **Segmentar les exportacions en entorns per a consumidors individuals (d'empresa a consumidor)**  
 - Els segments en el context dels entorns per a clients individuals estan integrats a l'entitat *perfil de client unificat*. Tots els segments que compleixen els requisits dels sistemes de destinació (per exemple, una adreça electrònica) es poden exportar.
 
-**Segmentar entorns d'exportació per a comptes empresarials (d'empresa a empresa)**  
-- Els segments en el context dels entorns de comptes empresarials estan integrats a l'entitat *compte*. Per exportar els segments de compte, és necessari que el sistema de destinació admeti segments de compte purs. Aquest és el cas del [LinkedIn](export-linkedin-ads.md) quan trieu l'opció **empresa** en definir l'exportació.
-- La resta de sistemes de destinació requereixen camps de l'entitat contacte. Per garantir que els segments de compte poden recuperar dades de contactes relacionats, la definició del segment ha de projectar els atributs de l'entitat contacte. Més informació sobre com [configurar segments i atributs de projecte](segment-builder.md).
+**Segmentar les exportacions en entorns per a comptes empresarials (B-to-B)**  
+- Els segments en el context dels entorns per als comptes empresarials es creen a l'entitat del *compte* o a l'entitat de *contacte*. Per exportar els segments de compte, és necessari que el sistema de destinació admeti segments de compte purs. Aquest és el cas del [LinkedIn](export-linkedin-ads.md) quan trieu l'opció **empresa** en definir l'exportació.
+- La resta de sistemes de destinació requereixen camps de l'entitat contacte.
+- Amb dos tipus de segments (contactes i comptes), el Customer Insights identifica automàticament quin tipus de segments són aptes per a l'exportació en funció del sistema de destinació. Per exemple, per a un sistema de destinació centrat en el contacte, com ara Mailchimp, Customer Insights només us permet triar segments de contacte per exportar.
 
 **Límits de les exportacions de segments**  
 - Els sistemes de destinació de tercers poden limitar el nombre de perfils de client que podeu exportar. 
-- Per als clients individuals, en seleccionar un segment per a l'exportació veureu el nombre real de membres del segment. Rebreu un advertiment si un segment és massa gran. 
-- Per als comptes empresarials, veureu el nombre de comptes en un segment; tanmateix, el nombre de contactes que es poden projectar no es mostra. En alguns casos, podria fer que el segment exportat contingui realment més perfils de clients que els que accepta el sistema de destinació. Si se superen els límits del sistema de destinació, s'omet l'exportació.
+- Per als clients individuals, en seleccionar un segment per a l'exportació veureu el nombre real de membres del segment. Rebreu un avís si un segment és massa gran. 
+- En el cas dels comptes d'empresa, veureu el nombre de comptes o de contactes en funció del segment. Rebreu un avís si el segment és massa gran. Superar els límits dels resultats dels sistemes de destinació farà que s'ometi l'exportació.
 
 ## <a name="set-up-a-new-export"></a>Configurar una exportació nova
 
@@ -110,6 +111,20 @@ Per exportar dades sense esperar una actualització planificada, aneu a **Dades*
 
 - Per executar totes les exportacions, seleccioneu **Executa-ho tot** a la barra d'ordres. Només s'executen les exportacions que tenen una planificació activa. Per executar una exportació que no estigui activa, executeu una única exportació.
 - Per executar una única exportació, seleccioneu-la a la llista i seleccioneu **Executa** a la barra d'ordres.
+
+## <a name="troubleshooting"></a>Solució de problemes
+
+### <a name="segment-not-eligible-for-export"></a>Segment no apte per a l'exportació
+
+**Problema** En un entorn de comptes d'empresa, les vostres exportacions fallen amb el missatge d'error: "El segment següent no és apte per a aquesta destinació d'exportació: '{nom del segment}'. Si us plau, trieu només segments del tipus ContactProfile i torneu-ho a provar".
+
+**Els entorns de Resolució** del Customer Insights per a comptes empresarials s'han actualitzat per admetre els segments de contacte, a més dels segments de compte. A causa d'aquest canvi, les exportacions que necessiten dades de contacte només funcionen amb segments basats en contactes.
+
+1. [Creeu un segment basat en contactes](segment-builder.md) que coincideixi amb el segment utilitzat anteriorment.
+
+1. Un cop executat aquest segment de contacte, editeu l'exportació corresponent i seleccioneu el segment nou.
+
+1. Seleccioneu **Desa** per desar la configuració o **Desa i executa** per provar aquesta exportació immediatament.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

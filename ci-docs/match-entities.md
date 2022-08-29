@@ -2,7 +2,7 @@
 title: Condicions de coincidència per a la unificació de dades
 description: Feu coincidir entitats per crear perfils de client unificats.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139685"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304645"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condicions de coincidència per a la unificació de dades
 
@@ -28,9 +28,11 @@ Aquest pas en la unificació defineix l'ordre dels partits i les regles per a la
 > [!NOTE]
 > Un cop hàgiu creat les condicions de concordança i seleccioneu **Següent**, no podreu suprimir cap entitat o atribut seleccionats. Si cal, seleccioneu **Enrere** per revisar les entitats i els atributs seleccionats abans de continuar.
 
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
+
 ## <a name="include-enriched-entities-preview"></a>Incloure entitats enriquides (vista prèvia)
 
-Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades](data-sources-enrichment.md). Si heu seleccionat entitats enriquides a la **pàgina Duplica els registres**, no cal que les torneu a seleccionar.
+Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de](data-sources-enrichment.md) dades. Si heu seleccionat entitats enriquides a la **pàgina Duplica els registres**, no cal que les torneu a seleccionar.
 
 1. A la **pàgina Condicions de coincidència**, seleccioneu **Utilitza entitats** enriquides a la part superior de la pàgina.
 
@@ -43,14 +45,14 @@ Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resu
 Cada coincidència unifica dues o més entitats en una única entitat consolidada. Al mateix temps, conserva els registres de client únics. L'ordre de coincidència indica l'ordre en què el sistema intenta igualar els registres.
 
 > [!IMPORTANT]
-> La primera entitat de la llista s'anomena entitat principal. L'entitat principal serveix de base per al conjunt de dades de perfils unificats. A aquesta entitat s'afegiran entitats addicionals seleccionades.
+> La primera entitat s'anomena entitat principal, que serveix de base per als vostres perfils unificats. A aquesta entitat s'afegiran entitats addicionals seleccionades.
 >
 > Consideracions importants:
 >
 > - Trieu l'entitat amb les dades de perfil més completes i fiables sobre els vostres clients com a entitat principal.
 > - Trieu l'entitat que té diversos atributs en comú amb altres entitats (per exemple, el nom, el número de telèfon o l'adreça electrònica) com a entitat principal.
 
-1. A la **pàgina Condicions** de coincidència, utilitzeu les fletxes moveu amunt i avall per moure les entitats en l'ordre que vulgueu o arrossegueu-les i deixeu-les anar. Per exemple, seleccioneu **Contactes:eCommerce** com a entitat principal i **CustomerLoyalty:Loyalty** com a segona entitat.
+1. A la **pàgina Condicions** de coincidència, utilitzeu les fletxes moveu amunt i avall per moure les entitats en l'ordre que vulgueu o arrossegueu-les i deixeu-les anar. Per exemple, seleccioneu **eCommerceDuanes** com a entitat principal i **loyCustomers** com a segona entitat.
 
 1. Per tenir tots els registres de l'entitat com a client únic independentment de si es troba una coincidència, seleccioneu **Inclou tots els registres**. Tots els registres d'aquesta entitat que no coincideixin amb els registres de cap altra entitat s'inclouen al perfil unificat. Els registres que no tenen partit s'anomenen singletons.
   
@@ -70,7 +72,7 @@ L'advertiment que hi ha al costat d'un nom d'entitat significa que no es definei
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Captura de pantalla d'Afegeix una subfinestra de regles.":::
 
-   - **Seleccioneu Entitat/Camp (primera fila):** trieu una entitat relacionada i un atribut per especificar una propietat de registre que probablement sigui única per a un client. Per exemple, un número de telèfon o una adreça electrònica. Eviteu la coincidència per atributs de tipus d'activitat. Per exemple, és probable que un ID de compra no trobi cap coincidència en altres tipus de registres.
+   - **Seleccioneu Entitat/Camp (primera fila):** trieu una entitat i un atribut que probablement siguin únics per a un client. Per exemple, un número de telèfon o una adreça electrònica. Eviteu la coincidència per atributs de tipus d'activitat. Per exemple, és probable que un ID de compra no trobi cap coincidència en altres tipus de registres.
 
    - **Seleccioneu Entitat/Camp (segona fila):** trieu un atribut relacionat amb l'atribut de l'entitat especificada a la primera fila.
 
@@ -116,7 +118,7 @@ Les regles de coincidència representen conjunts de condicions. Per fer coincidi
 
 ### <a name="add-exceptions-to-a-rule"></a>Afegir excepcions a una regla
 
-En la majoria dels casos, l'entitat que coincideix condueix a perfils de clients únics amb dades consolidades. Per abordar dinàmicament casos rars de falsos positius i falsos negatius, podeu definir excepcions per a una regla de coincidència. Les excepcions s'apliquen després de processar les regles de coincidència i eviten la coincidència de tots els registres, que compleixen els criteris d'excepció.
+En la majoria dels casos, l'entitat que coincideix condueix a perfils de clients únics amb dades consolidades. Per abordar casos rars de falsos positius i falsos negatius, definiu excepcions per a una regla de coincidència. Les excepcions s'apliquen després de processar les regles de coincidència i eviten la coincidència de tots els registres, que compleixen els criteris d'excepció.
 
 Per exemple, si la regla del partit combina cognom, la ciutat i la data de naixement, el sistema identificaria els bessons amb el mateix cognom que viuen al mateix poble que el mateix perfil. Podeu especificar una excepció que no coincideixi amb els perfils si les nom de les entitats que combineu no són les mateixes.
 
@@ -134,7 +136,7 @@ Podeu especificar condicions que substitueixin la lògica de concordança per de
 |---------|---------|---------|
 |Coincidència     | Defineix valors que sempre coincideixen.         |  Sempre coincideix amb *Mike* i *MikeR*.       |
 |No coincidència     | Defineix valors que mai coincideixen.        | Mai coincideixen amb *John* i *Jonathan*.        |
-|Omissió personalitzada     | Defineix valors que el sistema sempre ha d'ignorar en la fase de partit. |  Ignora els valors *11111* i *Desconegut* durant el partit.        |
+|Omissió            | Defineix valors que el sistema sempre ha d'ignorar en la fase de partit. |  Ignora els valors *11111* i *Desconegut* durant el partit.        |
 |Assignació d'àlies    | Definició de valors que el sistema ha de considerar com el mateix valor.         | Considereu que *Joe* és igual a *Joseph*.        |
 
 1. Seleccioneu **Personalitzar**.

@@ -1,9 +1,9 @@
 ---
-title: Activitats del client
-description: Definir activitats de client i visualitzar-les en una cronologia dels perfils del client.
-ms.date: 07/22/2022
+title: Activitats de contacte amb clients o empreses
+description: Definiu les activitats de contacte amb clients o empreses i visualitzeu-les en una cronologia als perfils de clients.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,31 +16,31 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188127"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304093"
 ---
-# <a name="customer-activities"></a>Activitats del client
+# <a name="customer-or-business-contact-activities"></a>Activitats de contacte amb clients o empreses
 
-Les activitats del client són accions o esdeveniments realitzats pels clients. Per exemple, transaccions, durada de les trucades d'assistència, ressenyes de llocs web, compres o devolucions. Aquestes activitats es troben en una o més fonts de dades. Amb el Coneixement de clients, consolideu les activitats dels clients a partir d'aquestes [fonts](data-sources.md) de dades i associeu-les als perfils de clients. Aquestes activitats apareixen cronològicament en una cronologia al perfil del client. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la [solució de complement](customer-card-add-in.md) de targeta de client.
+Les activitats del client són accions o esdeveniments realitzats per clients o contactes comercials. Per exemple, transaccions, durada de les trucades d'assistència, ressenyes de llocs web, compres o devolucions. Aquestes activitats es troben en una o més fonts de dades. Amb el Coneixement de clients, consolideu les activitats dels clients a partir d'aquestes [fonts](data-sources.md) de dades i associeu-les als perfils de clients. Aquestes activitats apareixen cronològicament en una cronologia al perfil del client. Incloeu la cronologia a les aplicacions del Dynamics 365 amb la [solució de complement](customer-card-add-in.md) de targeta de client.
 
-## <a name="define-an-activity"></a>Definir una activitat
+## <a name="define-a-customer-activity"></a>Definir una activitat de client
 
 Una entitat ha de tenir almenys un atribut del tipus **Date** per incloure'l en una cronologia del client. El control **Afegeix una activitat** està inhabilitat si no es troba cap entitat.
 
-1. Aneu a **Activitats** > **de dades**.
+1. Aneu a **Activitats de dades** > **·**.
 
 1. Seleccioneu **Afegeix activitat** per iniciar l'experiència guiada.
 
 1. Al pas Dades de l'activitat **·**, introduïu la informació següent:
 
-   - **Nom** de l'activitat: Nom de la vostra activitat.
-   - **Entitat** de l'activitat: Entitat que inclou dades transaccionals o d'activitat.
-   - **Clau primària**: camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
+   - **Nom de l'activitat**: seleccioneu un nom per a l'activitat.
+   - **Entitat** d'activitat: seleccioneu una entitat que inclogui dades transaccionals o d'activitat.
+   - **Clau principal**: seleccioneu el camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configureu les dades de l'activitat amb el nom, l'entitat i la clau principal.":::
 
@@ -48,9 +48,9 @@ Una entitat ha de tenir almenys un atribut del tipus **Date** per incloure'l en 
 
 1. **Al pas Relació**, seleccioneu **Afegeix una relació** per connectar les dades de l'activitat al registre de client corresponent. Aquest pas visualitza la connexió entre entitats.  
 
-   - **Clau externa d'entitat**: Camp de l'entitat de la vostra activitat que s'utilitzarà per establir una relació amb una altra entitat.
+   - **Clau** externa: Camp exterior en la seva entitat d'activitat que s'utilitzarà per establir una relació amb una altra entitat.
    - **A nom de l'entitat**: Entitat client d'origen corresponent amb la qual estarà en relació l'entitat de la seva activitat. Només podeu relacionar amb entitats de client d'origen utilitzades en el procés d'unificació de dades.
-   - **Nom** de la relació: Nom que identifica la relació entre entitats. Si ja existeix una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació és només de lectura.
+   - **Nom** de la relació: si ja existeix una relació entre aquesta entitat d'activitat i l'entitat de client d'origen seleccionada, el nom de la relació estarà en mode de només lectura. Si no hi ha cap relació, es crearà una relació nova amb el nom que proporcioneu en aquest quadre.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiu la relació de l'entitat.":::
 
@@ -90,7 +90,7 @@ Una entitat ha de tenir almenys un atribut del tipus **Date** per incloure'l en 
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Administrar activitats existents
+## <a name="manage-existing-customer-activities"></a>Gestionar les activitats existents dels clients
 
 Aneu a **Activitats** > **de dades** per veure les activitats desades, la seva entitat d'origen, el tipus d'activitat i si s'inclouen a la cronologia del client. Podeu ordenar la llista d'activitats per qualsevol columna o utilitzar el quadre de cerca per trobar l'activitat que voleu gestionar.
 
@@ -116,9 +116,43 @@ Seleccioneu una activitat per veure les accions disponibles.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilitzeu la subfinestra de filtre per configurar les condicions de filtre.":::
 
-1. Per eliminar filtres, selecciona **Esborra els filtres** o selecciona **Filtra** i esborra la casella de selecció del filtre.
-
 > [!NOTE]
 > Els filtres d'activitat se suprimeixen quan sortiu d'un perfil de client. Els heu d'aplicar cada vegada que obriu un perfil de client.
+
+## <a name="define-a-contact-activity"></a>Definir una activitat de contacte
+
+Per als comptes d'empresa (B a B), utilitzeu una *entitat ContactProfile* per capturar activitats de contactes. Podeu veure a la cronologia d'activitats d'un compte quin contacte era el responsable de cada activitat. La majoria de passos segueixen la configuració de l'assignació d'activitat del client.
+
+   > [!NOTE]
+   > Per definir una activitat a nivell de contacte, s'ha de crear una *entitat ContactProfile*, ja sigui com a perfil [de contacte unificat](data-unification-contacts.md) o mitjançant [mapatge](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) semàntic.
+   >
+   > Heu de tenir **atributs AccountID** i **ContactID** per a cada registre a les dades de l'activitat.
+  
+1. Aneu a **Activitats de dades** > **·**.
+
+1. Seleccioneu **Afegeix activitat**.
+
+1. Anomeneu l'activitat, seleccioneu l'entitat d'activitat d'origen i seleccioneu la clau principal de l'entitat de l'activitat.
+
+1. **Al pas Relacions**, creeu una relació indirecta entre les dades de la font de l'activitat i els comptes, utilitzant les vostres dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins de relació directa i indirecta](relationships.md#relationship-paths).
+   - Exemple de relació per a una activitat anomenada *Compres*:
+      - **Compres Font Dades d'activitat Dades** > **de contacte a** l'atribut **ContactID**
+      - **Dades de contacte** > **Dades del compte a** l'atribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemple de configuració de relacions.":::
+
+1. Després de configurar les relacions, seleccioneu **Següent** i completeu la configuració de l'assignació d'activitats. Per obtenir passos detallats sobre la creació d'activitats, vegeu [definir una activitat](#define-a-customer-activity) de client.
+
+1. Executeu els vostres mapes d'activitats.
+
+1. Les vostres activitats al nivell de contacte ara seran visibles a la cronologia del client.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultat final després de configurar les activitats de contacte":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtratge de la cronologia de l'activitat a nivell de contacte
+
+Després de configurar un mapatge d'activitats de nivell de contacte i executar-lo, s'actualitzarà la cronologia d'activitats dels vostres clients. Inclou els seus identificadors o noms, en funció de la configuració *de ContactProfile*, per a les activitats en què van actuar. Podeu filtrar les activitats per contactes a la cronologia per veure els contactes específics que us interessen. A més, podeu veure totes les activitats que no estan assignades a un contacte específic seleccionant **Activitats no assignades a un Contacte**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opcions de filtratge disponibles per a les activitats de nivell de contacte.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: Unificar els camps de clients per a la unificació de dades
 description: Combineu entitats per crear perfils de client unificats.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213570"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304001"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Unificar els camps de clients per a la unificació de dades
+# <a name="unify-customer-fields"></a>Unificar els camps de clients
 
-En aquest pas del procés d'unificació, trieu i excloeu els atributs per combinar-los a l'entitat del perfil unificat. Per exemple, si tres entitats tenien dades de correu electrònic, és possible que vulgueu conservar els tres camps de correu electrònic separats o combinar-los en un sol camp de correu electrònic per al perfil unificat. Alguns atributs es combinen automàticament amb el sistema. Podeu crear identificadors de client estables i únics i agrupar perfils relacionats en un clúster.
+En aquest pas del procés d'unificació, trieu i excloeu els atributs per combinar-los a l'entitat del perfil unificat. Per exemple, si tres entitats tenien dades de correu electrònic, és possible que vulgueu conservar els tres camps de correu electrònic separats o combinar-los en un sol camp de correu electrònic per al perfil unificat. Alguns atributs es combinen automàticament amb el sistema. Podeu crear identificadors de client estables i únics. Per a clients individuals, podeu agrupar perfils relacionats en un clúster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Combineu la pàgina al procés d'unificació de dades que mostra la taula amb camps combinats que defineixen el perfil de client unificat.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Unifiqueu la pàgina de camps de client en el procés d'unificació de dades que mostra la taula amb els camps fusionats que defineixen el perfil de client unificat.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Revisar i actualitzar els camps de clients
 
@@ -45,9 +45,9 @@ En aquest pas del procés d'unificació, trieu i excloeu els atributs per combin
       - [Exclou](#exclude-fields)
       - [Pujar o baixar](#change-the-order-of-fields)
 
-1. Opcionalment, [genereu la configuració de l'ID de client](#configure-customer-id-generation).
+1. Opcionalment, [genereu la configuració](#configure-customer-id-generation) de l'ID de client.
 
-1. Opcionalment, [agrupar perfils en llars o clústers](#group-profiles-into-households-or-clusters).
+1. Opcionalment per a B a C, [agrupar perfils en llars o clústers](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Pas següent: revisar la unificació](review-unification.md)
@@ -161,7 +161,7 @@ Configurar un identificador de client estable us permet evitar aquest comportame
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Agrupar els perfils en domicilis o clústers
 
-Podeu definir regles per agrupar perfils relacionats en un clúster. Actualment hi ha dos tipus de clústers disponibles: clústers de domicili i personalitzats. El sistema selecciona automàticament un domicili amb regles predefinides si l'entitat *Client* conté els camps semàntics *Person.LastName* i *Location.Address*. També podeu crear un clúster amb les vostres pròpies regles i condicions, de manera semblant a les [regles de coincidència](match-entities.md#define-rules-for-match-pairs).
+Per a clients individuals, podeu definir regles per agrupar perfils relacionats en un clúster. Actualment hi ha dos tipus de clústers disponibles: clústers de domicili i personalitzats. El sistema selecciona automàticament un domicili amb regles predefinides si l'entitat *Client* conté els camps semàntics *Person.LastName* i *Location.Address*. També podeu crear un clúster amb les vostres pròpies regles i condicions, de manera semblant a les [regles de coincidència](match-entities.md#define-rules-for-match-pairs).
 
 1. Seleccioneu **Clúster de creació** > **avançada**.
 

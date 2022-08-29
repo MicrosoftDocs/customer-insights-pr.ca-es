@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188081"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303771"
 ---
 # <a name="view-customer-profiles"></a>Veure perfils de client
 
@@ -78,7 +78,7 @@ Els detalls del client inclouen:
 **La peça Perfil de** client mostra els diferents valors de l'entitat Client *unificada*. Si un camp no té cap valor per al perfil de client seleccionat, no es mostrarà excepte en el camp d'adreça. La peça està estructurada en seccions:
 
 - A la primera secció es mostra un conjunt predefinit de camps seguit de tots els camps que formen part de l'índex de cerca i filtre. Tots els camps relacionats amb l'adreça es combinen en una sola línia, cosa que es mostra fins i tot si el perfil no conté informació d'adreça.
-- **Els contactes d'aquest client** es mostren en entorns per a comptes empresarials. Cada contacte es mostra amb els seus camps. Els camps buits estan amagats.
+- **Els contactes d'aquest client** es mostren en entorns per a comptes empresarials (B-to-B). Cada contacte es mostra amb els seus camps. Els camps buits estan amagats.
 - **Els camps** addicionals mostren la resta de camps del client seleccionat, excepte els identificadors.
 - **Els identificadors mostren** tots els identificadors amb el nom d'entitat corresponent. Els camps s'identifiquen com a identificadors per la seva semàntica.
 
