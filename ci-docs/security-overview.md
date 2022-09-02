@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246050"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387237"
 ---
 # <a name="configure-security-settings"></a>Configurar els paràmetres de seguretat
 
@@ -23,7 +23,7 @@ Administra les claus API, accedeix a les dades del client i configura un Azure P
 
 Visualitzeu i administreu les claus per utilitzar les API [del](apis.md) Customer Insights amb les dades del vostre entorn.
 
-1. Aneu a **Seguretat del sistema** > **i seleccioneu la** pestanya **API**.
+1. Aneu a **Seguretat d'administració** > **i** seleccioneu la **pestanya API**.
 
 1. Si l'accés de l'API a l'entorn no s'ha configurat, seleccioneu **Habilita**. O bé, per bloquejar l'accés de l'API a l'entorn, seleccioneu **Inhabilita** i confirma.
 
@@ -31,7 +31,7 @@ Visualitzeu i administreu les claus per utilitzar les API [del](apis.md) Custome
 
    1. Per mostrar la clau API principal o secundària, seleccioneu mostra el **símbol**.
 
-   1. Per copiar la clau API principal o secundària, seleccioneu el **símbol Copia**.
+   1. Per copiar la clau API principal o secundària, seleccioneu el **símbol Copia** .
 
    1. Per crear claus API primàries o secundàries noves, seleccioneu **Regenera les primàries** o **Regenera secundàries**.
 
@@ -46,7 +46,7 @@ Per obtenir més informació sobre Customer Lockbox, vegeu el [resum](/power-pla
 
 ## <a name="set-up-an-azure-private-link"></a>Configuració d'un enllaç privat de l'Azure
 
-[Azure Private Link](/azure/private-link/private-link-overview) permetem que el Customer Insights es connecti al vostre Azure Data Lake Storage compte a través d'un punt final privat de la vostra xarxa virtual. Per a les dades d'un compte d'emmagatzematge, que no estan exposades a Internet pública, Private Link permet la connexió a aquesta xarxa restringida.
+[L'Azure Private Link](/azure/private-link/private-link-overview) permet que el Customer Insights es connecti al vostre Azure Data Lake Storage compte a través d'un punt final privat de la vostra xarxa virtual. Per a les dades d'un compte d'emmagatzematge, que no estan exposades a Internet pública, Private Link permet la connexió a aquesta xarxa restringida.
 
 > [!IMPORTANT]
 > Requisit mínim de funció per configurar una connexió d'enllaç privat:

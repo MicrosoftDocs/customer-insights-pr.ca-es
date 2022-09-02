@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245913"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352789"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Exportar registres de diagnòstic (visualització prèvia)
 
@@ -36,8 +36,8 @@ El Customer Insights envia els registres d'esdeveniments següents:
 
 - Una subscripció activa [de l'Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Permisos d'administrador](permissions.md#admin) al Customer Insights.
+- Un recurs vàlid a l'Azure que segueix els requisits [de destinació per a l'Emmagatzematge de l'Azure, el](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Centre d'esdeveniments de l'Azure o l'Azure log Analytics.
 - [Funció d'administrador](/azure/role-based-access-control/role-assignments-portal) de col·laborador i accés d'usuari al recurs de destinació de l'Azure. El recurs pot ser un compte, un Azure Data Lake Storage centre d'esdeveniments de l'Azure o una àrea de treball de l'Azure log Analytics. Aquest permís és necessari mentre es configura la configuració de diagnòstic al Customer Insights, però es pot canviar després d'una configuració correcta.
-- [Es compleixen els requisits](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) de destinació per a l'emmagatzematge de l'Azure, el centre d'esdeveniments de l'Azure o l'Azure log Analytics.
 - Almenys la funció **lector** en el grup de recursos al qual pertany el recurs.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configuració dels diagnòstics amb l'Azure Monitor
@@ -94,7 +94,7 @@ A la **finestra Consultes**, amplieu la **solució Auditoria** i localitzeu les 
    > [!TIP]
    > L'eliminació de la destinació atura el reenviament de registre, però no suprimeix el recurs de la subscripció de l'Azure. Per suprimir el recurs a l'Azure, seleccioneu l'enllaç a la **columna Accions** per obrir el portal de l'Azure per al recurs seleccionat i suprimiu-lo allà. A continuació, suprimiu la destinació del diagnòstic.
 
-1. A la **columna Accions**, seleccioneu la **icona Suprimeix**.
+1. A la **columna Accions**, seleccioneu la **icona Suprimeix** .
 
 1. Confirmeu la supressió per eliminar la destinació i aturar el reenviament del registre.
 
@@ -121,13 +121,13 @@ Els esdeveniments de l'API i els esdeveniments de flux de treball tenen una estr
 | `time`            | Data i hora | Necessari          | Marca de temps de l'esdeveniment (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
 | `resourceId`      | String    | Necessari          | Recurs d'alçada de la instància que va emetre l'acte         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Necessari          | Nom de l'operació representada per aquest esdeveniment.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Necessari          | Categoria de registre de l'esdeveniment. Ja sigui `Operational` o `Audit` bé. Totes les sol·licituds POST / PUT / PATCH / DELETE HTTP s'etiqueten amb `Audit`, tota la resta amb`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `category`        | String    | Necessari          | Categoria de registre de l'esdeveniment. Ja sigui `Operational` o `Audit` bé . Totes les sol·licituds POST / PUT / PATCH / DELETE HTTP s'etiqueten amb `Audit`, tota la resta amb `Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resultType`      | String    | Necessari          | Estat de l'esdeveniment. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Opcional          | Estat del resultat de l'esdeveniment. Si l'operació correspon a una trucada DE L'API REST, és el codi d'estat HTTP.        | `200`             |
 | `durationMs`      | Long      | Opcional          | Durada de l'operació en mil·lisegons.     | `133`     |
 | `callerIpAddress` | String    | Opcional          | Adreça IP de la persona que truca, si l'operació correspon a una trucada API que prové d'una adreça IP disponible públicament.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcional          | Objecte JSON que descriu la identitat de l'usuari o aplicació que va fer l'operació.       | Vegeu [la secció Identitat](#identity-schema).     |  
-| `properties`      | String    | Opcional          | Objecte JSON amb més propietats a la categoria particular d'esdeveniments.      | Vegeu [la secció Propietats](#api-properties-schema).    |
+| `identity`        | String    | Opcional          | Objecte JSON que descriu la identitat de l'usuari o aplicació que va fer l'operació.       | Vegeu [la secció Identitat](#identity-schema)  .     |  
+| `properties`      | String    | Opcional          | Objecte JSON amb més propietats a la categoria particular d'esdeveniments.      | Vegeu [la secció Propietats](#api-properties-schema) .    |
 | `level`           | String    | Necessari          | Nivell de severitat de l'esdeveniment.    | `Informational`, `Warning`, `Error`, o `Critical`.           |
 | `uri`             | String    | Opcional          | URI de sol·licitud absoluta.    |               |
 
@@ -165,14 +165,14 @@ L'objecte `identity` JSON té la següent estructura
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `properties.eventType`       | Sempre `ApiEvent`, marcant l'esdeveniment de registre com a esdeveniment API.                                                                 |
 | `properties.userAgent`       | L'agent del navegador que envia la sol·licitud o `unknown`.                                                                        |
-| `properties.method`          | Mètode HTTP:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
+| `properties.method`          | Mètode HTTP: `GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Trajectòria relativa de la sol·licitud.                                                                                          |
 | `properties.origin`          | URI que indica d'on prové un fetch o `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` per al codi d'estat HTTP < 400 <br> `ClientError` per al codi d'estat HTTP < 500 <br> `Error` per a l'estat HTTP > = 500 |
 | `properties.tenantId`        | Identificador de l’organització                                                                                                        |
 | `properties.tenantName`      | Nom de l'organització.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjecteId de la persona que truca.                                                                         |
-| `properties.instanceId`      | Estadístiques del client`instanceId`                                                                                         |
+| `properties.instanceId`      | Estadístiques del client `instanceId`                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Esquema d'esdeveniments de flux de treball
 

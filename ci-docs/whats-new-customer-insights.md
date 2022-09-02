@@ -1,19 +1,19 @@
 ---
 title: Novetats del Dynamics 365 Customer Insights
 description: Informació sobre les noves característiques, millores i correccions d'errors.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245999"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387270"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Actualitzacions d'agost de 2022
+
+Les actualitzacions de l'agost de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Unificació de contactes en entorns B-to-B
+
+Els entorns B-to-B del Customer Insights ara admeten una experiència millorada d'unificació de dades.
+
+Ara podeu unificar contactes a més de comptes per obtenir una visualització completa dels contactes de la vostra empresa. Els contactes unificats s'associen a comptes unificats i ara apareixen a les targetes de client. 
+
+Per obtenir més informació, vegeu [Crear un perfil de contacte unificat](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Creació i exportació de segments basats en contactes unificats
+
+Gràcies a la nova unificació de contactes, podeu crear segments de contactes mitjançant criteris de contactes, comptes o tots dos. Aquests segments es poden exportar per activar-los en altres serveis.
+
+Per obtenir més informació, vegeu [Informació general de les exportacions](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Actualitzacions de juliol del 2022
 
@@ -44,7 +62,7 @@ Per obtenir més informació, vegeu [Exportació de dades a amfitrions SFTP](exp
 
 Gestionar les dades dels clients no és un repte nou, però cada vegada és més difícil a mesura que els usuaris naveguen pels diferents canals digitals que ofereixen les marques. Un usuari conegut (autenticat) en un canal es torna desconegut (no autenticat) en un altre si no ha iniciat la sessió. El problema sovint és que els usuaris no autenticats (desconeguts) no tenen un identificador comú. Es podria utilitzar per associar atributs de perfils significatius i generar perfils de clients unificats. El Customer Insights ajuda a resoldre aquest problema ingerint dades dels mètodes de seguiment als vostres sistemes d'origen.
 
-Per obtenir més informació, vegeu [Personalitzar les experiències amb dades sobre usuaris coneguts i desconeguts](unknown-to-known.md).
+Per obtenir més informació, vegeu [Personalitzar les experiències amb dades sobre usuaris](unknown-to-known.md) coneguts i desconeguts.
 
 ## <a name="june-2022-updates"></a>Actualitzacions de juny del 2022
 

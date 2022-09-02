@@ -1,27 +1,27 @@
 ---
 title: Exemples de consulta d'OData per a les API del Customer Insights
 description: S'utilitzen habitualment exemples de protocol de dades obertes (OData) per consultar les API del Customer Insights per revisar les dades.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121550"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387190"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemples de consulta d'OData per a les API del Customer Insights
 
 L'Open Data Protocol (OData) és un protocol d'accés a dades basat en protocols bàsics com HTTP. Utilitza metodologies comunament acceptades com REST per a la web. Hi ha diversos tipus de biblioteques i eines que es poden utilitzar per consumir serveis OData.
 
-En aquest article s'enumeren algunes consultes d'exemple sol·licitades amb freqüència per ajudar-vos a crear les vostres pròpies implementacions basades en les API del [Customer Insights](apis.md).
+Per ajudar-vos a crear les vostres pròpies implementacions basades en les API [del](apis.md) Customer Insights, reviseu algunes consultes d'exemple sol·licitades amb freqüència.
 
-Heu de modificar les mostres de consulta perquè funcionin en els entorns de destinació: 
+Modifiqueu les mostres de consulta perquè funcionin en els entorns de destinació:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` on {instanceId} és el GUID de l'entorn del Customer Insights que voleu consultar. L'operació [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) us permet trobar el {InstanceId} que teniu accés.
 - {CID} GUID d'un registre de client unificat. Exemple:`ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Heu de modificar les mostres de consulta perquè funcionin en els entorns de des
 
 ## <a name="customer"></a>Client
 
-La taula següent conté un conjunt de consultes d'exemple per a l'entitat *Client*.
+Consultes d'exemple per a l'entitat *Client* .
 
 |Tipus de consulta |Exemple  | Nota  |
 |---------|---------|---------|
 |Identificador de client únic     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Clau alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Les claus alternatives es mantenen a l'entitat client unificada       |
+|clau alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Les claus alternatives es mantenen a l'entitat client unificada       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |D'aquí a    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Clau alternativa + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|clau alternativa + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Cercar  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Retorna els 10 primers resultats d'una cadena de cerca      |
 |Pertinença al segment  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Retorna un nombre predefinit de files de l'entitat de segmentació.      |
 |Segmentar la pertinença a un client | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Retorna el perfil del client si és membre del segment indicat     |
 
 ## <a name="unified-activity"></a>Activitat unificada
 
-La taula següent conté un conjunt de consultes d'exemple per a l'entitat *UnifiedActivity*.
+Consultes d'exemple per a l'entitat *UnifiedActivity* .
 
 |Tipus de consulta |Exemple  | Nota  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ La taula següent conté un conjunt de consultes d'exemple per a l'entitat *Unif
 
 ## <a name="other-examples"></a>Altres exemples
 
-La taula següent conté un conjunt de consultes d'exemple per a altres entitats.
+Consultes d'exemple per a altres entitats.
 
 |Tipus de consulta |Exemple  | Nota  |
 |---------|---------|---------|
