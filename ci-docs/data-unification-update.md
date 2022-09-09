@@ -1,7 +1,7 @@
 ---
 title: Actualitzar la configuració d'unificació de clients, comptes o contactes
 description: Actualitzeu regles duplicades, regles de concordança o camps unificats a la configuració d'unificació de clients o comptes.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304323"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392459"
 ---
 # <a name="update-unification-settings"></a>Actualitzar la configuració d'unificació
 
@@ -38,7 +38,7 @@ Per revisar o canviar qualsevol configuració d'unificació un cop s'hagi creat 
    > La **peça Condicions** de coincidència només es mostra si s'han seleccionat diverses entitats.
 
 1. Tria què vols actualitzar:
-   - [Camps](#edit-source-fields) d'origen per afegir entitats o atributs o canviar tipus d'atributs.
+   - [Camps](#edit-source-fields) d'origen per afegir atributs o entitats o canviar tipus d'atributs. Per suprimir un atribut, vegeu [Supressió d'un camp](#remove-a-unified-field) unificat. Per suprimir una entitat, vegeu [Supressió d'una entitat](#remove-a-unified-entity) unificada.
    - [Duplicar registres](#manage-deduplication-rules) per gestionar regles de deduplicació o combinar preferències.
    - [Condicions coincidents](#manage-match-rules) per actualitzar les regles de coincidència en dues o més entitats.
    - [Camps de client](#manage-unified-fields) unificats per combinar o excloure camps. També podeu agrupar perfils relacionats en clústers.
@@ -53,8 +53,6 @@ Per revisar o canviar qualsevol configuració d'unificació un cop s'hagi creat 
 
 ## <a name="edit-source-fields"></a>Editar els camps d'origen
 
-No podeu suprimir un atribut o una entitat si ja s'han unificat.
-
 1. Seleccioneu **Edita** a la **peça Camps** d'origen.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Captura de pantalla de la pàgina Camps d'origen que mostra el nombre de claus principals, camps mapejats i sense mapa":::
@@ -66,6 +64,80 @@ No podeu suprimir un atribut o una entitat si ja s'han unificat.
 1. Opcionalment, podeu canviar la clau principal d'una entitat, els tipus d'atributs i activar o desactivar l'assignació **intel**·ligent. Per obtenir més informació, vegeu [Selecció de camps d'origen](map-entities.md).
 
 1. Seleccioneu **Següent** per fer canvis a les regles de deduplicació, o bé Desa **i tanca** i torna a [Actualitzar la configuració](#update-unification-settings) d'unificació.
+
+### <a name="remove-a-unified-field"></a>Suprimir un camp unificat
+
+Per eliminar un camp que s'ha unificat, el camp s'ha d'eliminar de qualsevol dependència, com ara segments, mesures, enriquiments o relacions.
+
+1. Un cop eliminades totes les dependències del camp, aneu a **Unificar** > **dades**.
+
+1. Seleccioneu **Edita** a la **peça Camps** de client unificats.
+
+1. Seleccioneu totes les ocurrències del camp i, a continuació, seleccioneu **Exclou**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Captura de pantalla de la pàgina Camps unificats que mostra els camps seleccionats i el botó Exclou":::
+
+1. Seleccioneu **Fet** per confirmar i, a continuació, Seleccioneu **Desa i tanca**.
+
+   > [!TIP]
+   > Si veieu el missatge "No s'ha pogut desar unificar. El recurs especificat no es pot modificar ni suprimir a causa de dependències aigües avall", llavors el camp encara s'utilitza en una dependència aigües avall.
+
+1. Si el camp s'utilitza en una regla per a registres duplicats o condicions de coincidència, seguiu els passos següents. En cas contrari, aneu al següent pas.
+   1. Seleccioneu **Edita** a la **peça Duplica els registres**.
+   1. Elimineu el camp de totes les regles en què s'utilitza, si n'hi ha, i, a continuació, seleccioneu **Següent**.
+   1. A la **pàgina Condicions** de coincidència, traieu el camp de totes les regles en què s'utilitza, si n'hi ha, i, a continuació, seleccioneu **Desa i tanca**.
+   1. Seleccioneu **Unificar** > **unificar perfils i dependències de** clients. Espereu que es completi la unificació abans d'anar al següent pas.
+
+1. Seleccioneu **Edita** a la **peça Camps** d'origen.
+
+1. Seleccioneu **Selecciona entitats i camps** i desmarqueu la casella de selecció situada al costat de cada ocurrència del camp.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Captura de pantalla del quadre de diàleg Selecciona entitats i camps que mostra les caselles de selecció esborrades":::
+
+1. Seleccioneu **Aplica**.
+
+1. Seleccioneu **Desa i tanca**.
+
+1. Seleccioneu **Unificar** > **els perfils i les dependències** dels clients per actualitzar el perfil unificat.
+
+### <a name="remove-a-unified-entity"></a>Suprimir una entitat unificada
+
+Per eliminar una entitat que s'ha unificat, l'entitat s'ha d'eliminar de qualsevol dependència, com ara segments, mesures, enriquiments o relacions.
+
+1. Un cop eliminades totes les dependències de l'entitat, aneu a **Unificar** > **dades**.
+
+1. Seleccioneu **Edita** a la **peça Camps** de client unificats.
+
+1. Seleccioneu tots els camps de l'entitat i, a continuació, seleccioneu **Exclou**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Captura de pantalla dels camps unificats amb tots els camps d'una entitat seleccionada i el botó Exclou":::
+
+1. Seleccioneu **Fet** per confirmar i, a continuació, Seleccioneu **Desa i tanca**.
+
+   > [!TIP]
+   > Si veieu el missatge "No s'ha pogut desar unificar. El recurs especificat no es pot modificar ni suprimir a causa de dependències aigües avall", llavors l'entitat encara s'utilitza en una dependència aigües avall.
+
+1. Seleccioneu **Edita** a la **peça Duplica els registres**.
+
+1. Elimineu totes les regles de l'entitat, si n'hi ha, i seleccioneu **Següent**.
+
+1. A la **pàgina Condicions** de coincidència, seleccioneu l'entitat i, a continuació, seleccioneu **Suprimeix**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Captura de pantalla de les condicions de coincidència amb l'entitat seleccionada i el botó Suprimeix":::
+
+1. Seleccioneu **Desa i tanca**.
+
+1. Seleccioneu **Edita** a la **peça Camps** d'origen.
+
+1. Seleccioneu **Selecciona entitats i camps** i desmarqueu la casella de selecció situada al costat de l'entitat.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Captura de pantalla del quadre de diàleg Seleccioneu entitats i camps amb la casella de selecció d'entitat esborrada":::
+
+1. Seleccioneu **Aplica**.
+
+1. Seleccioneu **Desa i tanca**.
+
+1. Seleccioneu **Unificar** > **els perfils i les dependències** dels clients per actualitzar el perfil unificat.
 
 ## <a name="manage-deduplication-rules"></a>Gestionar les regles de deduplicació
 

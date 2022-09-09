@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387270"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409345"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Gràcies a la nova unificació de contactes, podeu crear segments de contactes m
 
 Per obtenir més informació, vegeu [Informació general de les exportacions](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Regions de desplegament alineades amb Microsoft Dataverse
+
+Quan creeu un entorn del Customer Insights nou, podeu seleccionar la regió on voleu que s'implementi i s'allotgi el servei. Hem actualitzat la selecció de la regió per alinear-nos amb Microsoft Dataverse i el Power Platform.
+
+Ara podeu seleccionar fàcilment la mateixa regió que el vostre entorn existent Microsoft Dataverse o el vostre compte d'emmagatzematge de l'Azure Data Lake (si trieu aquesta opció), subjecte a la disponibilitat del Customer Insights en aquesta regió.
+
+Per obtenir més informació, vegeu [Crear un entorn](create-environment.md) nou i [Disponibilitat del producte per geografia](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Actualitzacions de juliol del 2022
 
 Les actualitzacions del juliol de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
@@ -56,7 +64,7 @@ Per obtenir més informació, vegeu [Exportació de segments a MoEngage](export-
 
 Trieu si voleu autenticar-vos mitjançant SSH o nom d'usuari/contrasenya per a connexions amb destinacions d'exportació SFTP.
 
-Per obtenir més informació, vegeu [Exportació de dades a amfitrions SFTP](export-sftp.md).
+Per obtenir més informació, vegeu [Exportació de dades a amfitrions](export-sftp.md) SFTP.
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalitzar experiències amb dades d'usuaris coneguts i desconeguts
 
@@ -116,13 +124,13 @@ Ara [podeu fer un seguiment de l'ús d'un segment](segments.md#track-usage-of-a-
 
 Criteo és una plataforma en línia que ajuda els usuaris a gestionar la publicitat digital. Ara pots exportar segments de perfils de clients unificats per generar campanyes, proporcionar email màrqueting i utilitzar grups específics de clients amb Criteo.
 
-Per obtenir més informació, vegeu [Exportació de segments a Criteo (visualització prèvia).](export-criteo.md)
+Per obtenir més informació, vegeu [Exporta segments a Criteo (visualització prèvia)](export-criteo.md).
 
 ### <a name="refined-documentation-structure-for-environment-creation"></a>Estructura de documentació refinada per a la creació d'entorns
 
 Hem revisat els documents d'ajuda relacionats amb la creació i la gestió d'entorns al Customer Insights. Els articles ara s'agrupen sota el node Entorns a la taula de continguts. Els articles reestructurats proporcionen més orientacions per a les diferents maneres de configurar entorns i tenen una estructura més clara. Si teniu comentaris per compartir, feu-nos-ho saber mitjançant els controls cap al final dels articles d'ajuda.
 
-Per obtenir més informació, vegeu [Com: Crear un entorn](create-environment.md) nou.
+Per obtenir més informació, vegeu [Com: Crear un entorn nou](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Actualitzacions d'abril de 2022
 
@@ -132,7 +140,7 @@ Les actualitzacions de l'abril de 2022 inclouen noves funcions, actualitzacions 
 
 Dun & Bradstreet proporciona dades comercials, anàlisis i estadístiques per a les empreses. Permet enriquir les dades als clients amb perfils de clients unificats per a les empreses. Els enriquiments inclouen atributs com el número DUNS, la mida de l'empresa, la ubicació, la indústria i molt més.
 
-Per obtenir més informació, vegeu [Enriquiment dels perfils de l'empresa amb Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Per obtenir més informació, vegeu [Enriquiment dels perfils de l'empresa amb Dun & Bradstreet (Vista prèvia)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definir el tipus de mesura en crear una nova mesura
 
@@ -154,7 +162,7 @@ Les actualitzacions del març de 2022 inclouen noves funcions, actualitzacions d
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar els identificadors personals de les dades dels vostres clients al gràfic d'identitat d'AbiliTec i rebre els identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels vostres clients.
 
-Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat del LiveRamp (visualització prèvia)](enrichment-liveramp.md).
+Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)](enrichment-liveramp.md)
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organitzar segments i mesures amb etiquetes i filtres
 
@@ -198,19 +206,19 @@ Azure Synapse Analytics és un servei d'anàlisi empresarial que accelera el tem
 
 Les organitzacions que ja les utilitzen Azure Synapse Analytics poden ingerir aquestes dades al Customer Insights. 
 
-Per obtenir més informació, vegeu [Connectar un Azure Synapse font de dades (Visualització prèvia).](connect-synapse.md)
+Per obtenir més informació, vegeu [Connectar un Azure Synapse font de dades (Visualització prèvia)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Enriquiment LiveRamp (Preview)
 
 LiveRamp proporciona resolució d'identitat i consolidació de dades de clients. Podeu assignar els identificadors personals de les dades dels vostres clients al gràfic d'identitat d'AbiliTec i rebre els identificadors d'AbiliTec. A continuació, podeu utilitzar aquests identificadors per a una millor unificació de les dades dels vostres clients.
 
-Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat del LiveRamp (visualització prèvia)](enrichment-liveramp.md).
+Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'identitat de LiveRamp (visualització prèvia)](enrichment-liveramp.md)
 
 ### <a name="enrichment-for-data-sources-preview"></a>Enriquiment per a fonts de dades (Preview)
 
 Utilitzeu dades de fonts com Microsoft i altres socis per enriquir les dades dels vostres clients abans de la unificació de dades. Font de dades enriquiments ajuden a produir una major integritat i qualitat de les dades que poden ajudar a obtenir millors resultats un cop unifiqueu les dades.
 
-Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades (Visualització prèvia).](data-sources-enrichment.md)
+Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades (Visualització prèvia)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Canvia el propietari de l'entorn
 
@@ -248,7 +256,7 @@ Les actualitzacions del gener de 2022 inclouen noves funcions, actualitzacions d
 
 El Customer Insights proporciona una nova característica basada en IA per sintetitzar el sentiment dels clients i identificar aspectes empresarials específics com a oportunitats de millores específiques. En analitzar els comentaris escrits dels vostres clients, podeu obtenir informació precisa a baix cost. Anàlisi de sentiments impulsada per models de processament del llenguatge natural (PNL) que generen dues estadístiques derivades per a cada identificador de client. Una puntuació de sentiment (de –5 a 5) i una llista d'aspectes empresarials aplicables. 
 
-Per obtenir més informació, vegeu [Analitzar el sentiment als comentaris dels clients (visualització prèvia)](sentiment-analysis.md).
+Per obtenir més informació, vegeu [Analitzar el sentiment als comentaris dels clients (Visualització prèvia).](sentiment-analysis.md)
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

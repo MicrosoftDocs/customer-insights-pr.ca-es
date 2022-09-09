@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387144"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411728"
 ---
 # <a name="service-limits-in-customer-insights"></a>Límits de servei al Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387144"
 
 | Àrees  | Límits  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segments, mesures i prediccions | 300  | El nombre total de [segments](segments.md), [mesures](measures.md) i [prediccions](predictions.md) combinades no pot superar els 300.  |
+| Segments, mesures i prediccions | 300  | El nombre total de [segments](segments.md), [mesures](measures.md) i [prediccions](predictions-overview.md) combinades no pot superar els 300.  |
 | Relacions | 20 nivells de profunditat en les relacions en camins d'entitat. | En crear [segments](segments.md) o [mesures](measures.md) mitjançant la interfície del constructor, els camins d'entitat poden tenir fins a 20 salts de relació entre l'entitat inicial i l'entitat de destinació.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Programació justa de llocs de treball

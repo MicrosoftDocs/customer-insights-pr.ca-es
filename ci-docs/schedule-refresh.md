@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246424"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395944"
 ---
 # <a name="schedule-system-refresh"></a>Planificar l'actualització del sistema
 
@@ -36,7 +36,7 @@ Programeu actualitzacions automàtiques de totes les [fonts de dades ingerides](
 
 1. Trieu entre les actualitzacions **Setmanals** (per defecte) i **Diàries**. Si intenteu planificar actualitzacions setmanals, seleccioneu un o diversos dies en què voleu executar l'actualització.
 
-1. Definiu el **Fus horari** i, a continuació, utilitzeu el menú desplegable **Hora** per definir l'hora d'actualització. Si voleu planificar diverses actualitzacions en un sol dia, seleccioneu **Afegeix una altra hora**.
+1. Definiu el **Fus horari** i, a continuació, utilitzeu el menú desplegable **Hora** per definir l'hora d'actualització. Si voleu planificar diverses actualitzacions en un sol dia, seleccioneu **Afegeix una altra hora**. Podeu afegir fins a quatre actualitzacions.
 
 1. Seleccioneu **Desa** per aplicar els canvis.
 

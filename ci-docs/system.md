@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246235"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395989"
 ---
 # <a name="view-system-configuration"></a>Veure la configuració del sistema
 
@@ -38,12 +38,6 @@ Consulteu els detalls sobre l'ús de l'API en temps real i vegeu quins esdevenim
    - **Trucades de l'API**: un gràfic que mostra el nombre agregat de trucades a l'API en el període de temps seleccionat.
    - **Transferència de dades**: un gràfic que mostra la quantitat de dades que s'han transferit a través de l'API en el període de temps seleccionat.
    - **Operacions**: una taula amb files per a cada operació de l'API disponible i detalls sobre l'ús de les operacions. Seleccioneu un nom d'operació per anar a [la referència](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) de l'API.
-
-   Les operacions que utilitzen [la ingestió](real-time-data-ingestion.md) de dades en temps real contenen un símbol binocular per veure l'ús de l'API en temps real.
-
-   1. Seleccioneu els prismàtics per obrir la subfinestra d'ús de l'API **en** temps real que conté els detalls d'ús de l'operació.
-   1. **Seleccioneu un període de** temps per visualitzar-lo.
-   1. Utilitzeu grup **per quadre per** triar com presentar millor les vostres interaccions en temps real. Agrupeu les dades per mètode API, nom qualificat d'entitat **(entitat ingerida),** Creat per **(origen de l'esdeveniment),** Resultat **(èxit o fracàs) o** Codis **d'error.** **·** Les dades estan disponibles com a gràfic d'historial i com a taula.
 
 ## <a name="view-system-information"></a>Veure la informació del sistema
 

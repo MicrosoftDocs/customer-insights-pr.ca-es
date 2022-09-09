@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245774"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396034"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Connexió a dades al Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Ingereix dades per Dynamics 365 Customer Insights utilitzar el teu Azure Data La
   - Lector de dades de Blob de l'emmagatzematge
   - Propietari de dades de Blob de l'emmagatzematge
   - Col·laborador de dades de Blob d'emmagatzematge
+
+- L'usuari que configura la connexió font de dades necessita menys permisos de col·laborador de dades Blob d'emmagatzematge al compte d'emmagatzematge.
 
 - Les dades del Data Lake Storage han de seguir l'estàndard common data model per a l'emmagatzematge de les vostres dades i tenir el model de dades comú manifest per representar l'esquema dels fitxers de dades (*.csv o *.parquet). El manifest ha de proporcionar els detalls de les entitats, com ara les columnes d'entitat i els tipus de dades, i la ubicació del fitxer de dades i el tipus de fitxer. Per obtenir més informació, vegeu [el manifest Del model de dades comú](/common-data-model/sdk/manifest). Si el manifest no està present, els usuaris administradors amb accés Storage Blob Data Owner o Storage Blob Data Contributor poden definir l'esquema en ingerir les dades.
 
@@ -62,7 +64,7 @@ Ingereix dades per Dynamics 365 Customer Insights utilitzar el teu Azure Data La
    > [!NOTE]
    > Necessiteu un dels rols següents al contenidor o al compte d'emmagatzematge per crear el font de dades:
    >
-   >  - Storage Blob Data Reader és suficient per llegir des d'un compte d'emmagatzematge i ingerir les dades al Customer Insights. 
+   >  - Storage Blob Data Reader és suficient per llegir des d'un compte d'emmagatzematge i ingerir les dades al Customer Insights.
    >  - L'emmagatzematge Blob Data Contributor o Owner és necessari si voleu editar els fitxers de manifest directament al Customer Insights.  
   
 1. Trieu el nom del **contenidor** que conté les dades i l'esquema (fitxer model.json o manifest.json) per importar dades i seleccioneu **Següent**.
