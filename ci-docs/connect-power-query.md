@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207033"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463253"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a un Power Query font de dades
 
@@ -63,7 +63,9 @@ L'addició de fonts de dades basades Power Query en connectors generalment segue
 La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades ingerides es poden revisar des de la [**pàgina Entitats**](entities.md).
 
 > [!CAUTION]
-> Un font de dades basat en crear Power Query un [flux de dades a Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). No canvieu el nom d'un flux de dades al centre d'administració Power Platform que s'utilitza al Customer Insights. El canvi de nom d'un flux de dades causa problemes amb les referències entre el font de dades del Customer Insights i el flux de Dataverse dades.
+>
+> - Un font de dades basat en crear Power Query un [flux de dades a Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). No canvieu el nom d'un flux de dades al centre d'administració Power Platform que s'utilitza al Customer Insights. El canvi de nom d'un flux de dades causa problemes amb les referències entre el font de dades del Customer Insights i el flux de Dataverse dades.
+> - Les avaluacions simultànies per a Power Query les fonts de dades del Customer Insights tenen els mateixos [límits d'actualització que els fluxos de dades en PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Si una actualització de dades falla perquè ha arribat al límit d'avaluació, us recomanem que ajusteu la planificació d'actualització de cada flux de dades per assegurar-vos que les fonts de dades no es processin alhora.
 
 ### <a name="available-power-query-data-sources"></a>Fonts de dades disponibles Power Query
 
@@ -75,14 +77,14 @@ Els connectors amb una marca de verificació a la columna Estadístiques de **cl
 
 La ingestió de dades de fonts de dades local s'admet en funció Microsoft Power Platform dels fluxos de dades (PPDF). Podeu habilitar els fluxos de dades al Customer Insights [proporcionant l'adreça URL Microsoft Dataverse de l'entorn](create-environment.md) en configurar l'entorn.
 
-Les fonts de dades que es creen després d'associar un Dataverse entorn amb el Customer Insights utilitzen [Power Platform fluxos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) de dades per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Podeu suprimir i tornar a crear fonts de dades que existien abans que s'associés Dataverse un [entorn mitjançant passarel·les](/data-integration/gateway/service-gateway-app) de dades local.
+Les fonts de dades que es creen després d'associar un Dataverse entorn amb el Customer Insights utilitzen [Power Platform fluxos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) de dades per defecte. Els fluxos de dades admeten la connectivitat local mitjançant l'ús de la passarel·la de dades. Podeu suprimir i tornar a crear fonts de dades que existien abans que s'associés Dataverse un [entorn mitjançant passarel·les de dades local](/data-integration/gateway/service-gateway-app).
 
-Les passarel·les de dades d'un entorn existent o Power BI existent Power Apps seran visibles i les podeu reutilitzar al Customer Insights. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
+Les passarel·les de dades d'un entorn existent o Power BI existent Power Apps seran visibles i les podeu reutilitzar al Customer Insights si la passarel·la de dades i l'entorn del Customer Insights es troben a la mateixa regió de l'Azure. La pàgina de fonts de dades mostra enllaços per anar a l'entorn del Microsoft Power Platform on podeu visualitzar i configurar passarel·les de dades locals.
 
 > [!IMPORTANT]
 > Assegureu-vos que les passarel·les estiguin actualitzades a la versió més recent. Podeu instal·lar una actualització i reconfigurar una passarel·la des d'un indicador que es mostra directament a la pantalla de la passarel·la o [descarregar la versió més recent](https://powerapps.microsoft.com/downloads/). Si no utilitzeu la versió més recent de la passarel·la, l'actualització del flux de dades falla amb missatges d'error com **ara La paraula clau no és compatible: propietats de configuració. Nom del paràmetre: paraula clau**.
 >
-> Els errors amb local passarel·les de dades del Customer Insights sovint són causats per problemes de configuració. Per obtenir més informació sobre la resolució de problemes de passarel·les de dades, vegeu [Resolució de problemes de la passarel·la de dades local](/data-integration/gateway/service-gateway-tshoot).
+> Els errors amb local passarel·les de dades del Customer Insights sovint són causats per problemes de configuració. Per obtenir més informació sobre la resolució de problemes de passarel·les de dades, vegeu [Resolució de problemes de la passarel·la de](/data-integration/gateway/service-gateway-tshoot) dades local.
 
 ## <a name="edit-power-query-data-sources"></a>Editar Power Query les fonts de dades
 

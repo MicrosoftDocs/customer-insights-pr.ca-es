@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194910"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473630"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complement de targeta de client per a les aplicacions del Dynamics 365 (visualització prèvia)
 
@@ -32,7 +32,8 @@ Obtingueu una visió integral dels clients directament a les aplicacions del Dyn
 - Perquè les dades del Dynamics 365 s'assignin als perfils de client del Customer Insights, us recomanem que s'ingereixin [des de l'aplicació del Dynamics 365 mitjançant el Microsoft Dataverse connector](connect-power-query.md). Si utilitzeu un mètode diferent per ingerir contactes (o comptes) del Dynamics 365, assegureu-vos que el `contactid` camp (o `accountid`) s'hagi [definit com a clau principal d'aquesta font de dades durant el procés d'unificació de dades](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tots els usuaris del Dynamics 365 del complement de targeta de client s'han [d'afegir com a usuaris](permissions.md) al Coneixements del client per veure les dades.
 - [Cerca configurada i característiques de filtratge](search-filter-index.md) al Customer Insights.
-- Cada control de complements es basa en dades específiques del Customer Insights. Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
+- Algunes dades i controls només estan disponibles en entorns de tipus específics. La configuració del complement us informarà si un control no està disponible a causa del tipus d'entorn seleccionat. Aquest error es mostrarà dins del control en representar-lo. Més informació sobre [casos d'ús d'entorns](work-with-business-accounts.md).
+- Cada control de complements es basa en dades específiques del Customer Insights.
   - **El control de la** mesura requereix [mesures](measures.md) d'atributs de client configurades.
   - **El control** d'intel·ligència requereix dades generades mitjançant [prediccions o models](predictions-overview.md) personalitzats.
   - **El control** de dades del client mostra tots els camps del perfil disponibles al perfil de client unificat.

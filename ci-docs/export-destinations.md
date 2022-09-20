@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304047"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460178"
 ---
 # <a name="exports-preview-overview"></a>Informació general sobre exportacions (versió preliminar)
 
@@ -81,6 +81,11 @@ Seleccioneu una exportació per veure les accions disponibles.
 ## <a name="schedule-and-run-exports"></a>Planificar i executar exportacions
 
 Cada exportació que configureu té una planificació d'actualització. Durant una actualització, el sistema cerca dades noves o actualitzades per incloure-les en una exportació. Per defecte, les exportacions s'executen com a part de cada [actualització del sistema planificada](schedule-refresh.md). Podeu personalitzar la planificació d'actualització o desactivar-la per executar les exportacions manualment.
+
+> [!TIP]
+> Minimitzeu el temps de processament de les exportacions de segments amb les pràctiques recomanades següents:
+> - Distribuir entitats de segment entre les exportacions de mutiple.
+> - Eviteu programar totes les exportacions alhora. Deixar 30 minuts o una hora entre l'hora programada de cada exportació.
 
 Les planificacions d'exportació depenen de l'estat del vostre entorn. Si hi ha actualitzacions en curs en [dependències](system.md#refresh-processes) quan s'hagi d'iniciar una exportació planificada, el sistema finalitzarà primer les actualitzacions i executarà l'exportació. La **columna Actualitza es** mostra quan es va actualitzar per última vegada una exportació.
 
