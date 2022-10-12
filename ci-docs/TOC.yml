@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Utilitzar models personalitzats de l'aprenentatge automàtic de l'Azure
           href: custom-models.md
+        - name: Crear segments basats en prediccions
+          href: prediction-based-segment.md
     - name: Guies d'exemple
       items:
         - name: Guia d'exemple per a la predicció de CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experiments amb l'Azure Machine Learning
           href: azure-machine-learning-experiments.md
-    - name: Administrar prediccions
-      href: manage-predictions.md
-    - name: Crear segments basats en prediccions
-      href: prediction-based-segment.md
 - name: Opcions d'exportació
   items:
     - name: Exportacions

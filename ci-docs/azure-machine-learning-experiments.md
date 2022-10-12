@@ -1,19 +1,19 @@
 ---
 title: Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 description: Utilitzeu els models basats en l'aprenentatge automàtic de l'Azure al Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082276"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609735"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilitzar models basats en l'aprenentatge automàtic de l'Azure
 
@@ -34,27 +34,26 @@ Les dades unificades del Dynamics 365 Customer Insights constitueixen un origen 
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Treballar amb el dissenyador de l'aprenentatge automàtic de l'Azure
 
-El dissenyador de Aprenentatge automàtic De l'Azure proporciona un llenç visual on podeu arrossegar i deixar anar conjunts de dades i mòduls. És possible integrar un pipeline per lots creat des del dissenyador en el Customer Insights si es configuren de manera corresponent. 
-   
+El dissenyador de Aprenentatge automàtic de l'Azure proporciona un llenç visual on podeu arrossegar i deixar anar conjunts de dades i mòduls. És possible integrar un pipeline per lots creat des del dissenyador en el Customer Insights si es configuren de manera corresponent. 
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Treballar amb l'SDK de l'aprenentatge automàtic de l'Azure
 
 Els científics de dades i els desenvolupadors d'IA utilitzen el [SDK de l'aprenentatge automàtic de l'Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) per crear fluxos de treball d'aprenentatge automàtic. Actualment, els models formats amb l'SDK no es poden integrar directament amb el Customer Insights. Per a la integració amb el Customer Insights, caldrà un pipeline d'inferència de lots que consumeixi aquest model.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Requisits del pipeline per lots per a la integració amb Customer Insights
 
-### <a name="dataset-configuration"></a>Configuració dels conjunts de dades
+### <a name="dataset-configuration"></a>Configuració del conjunt de dades
 
-Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipeline d'inferència per lots, heu de crear conjunts de dades. Aquests conjunts de dades s'han de registrar a l'àrea de treball. Actualment, només s'admeten [conjunts de dades tabulars](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en format .csv. Els conjunts de dades que corresponen a dades d'entitats s'han de configurar com a un paràmetre del pipeline.
-   
-* Paràmetres de conjunts de dades del dissenyador
-   
-     Al dissenyador, obriu **Selecciona les columnes del conjunt de dades** i seleccioneu **Defineix com a paràmetre del pipeline** per indicar un nom per al paràmetre.
+Creeu conjunts de dades per utilitzar les dades d'entitat del Customer Insights per a la canalització d'inferència per lots. Registreu aquests conjunts de dades a l'espai de treball. Actualment, només s'admeten [conjunts de dades tabulars](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en format .csv. Parametritzeu els conjunts de dades que corresponen a dades d'entitat com a paràmetre de canalització.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametrització de conjunts de dades del dissenyador.](media/intelligence-designer-dataset-parameters.png "Parametrització de conjunts de dades del dissenyador")
-   
-* Paràmetre del conjunt de dades a l'SDK (Python)
-   
+- Paràmetres de conjunts de dades del dissenyador
+
+  Al dissenyador, obriu **Selecciona les columnes del conjunt de dades** i seleccioneu **Defineix com a paràmetre del pipeline** per indicar un nom per al paràmetre.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametrització de conjunts de dades del dissenyador.":::
+
+- Paràmetre del conjunt de dades a l'SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
 
 ### <a name="batch-inference-pipeline"></a>Pipeline d'inferència per lots
   
-* Al dissenyador, podeu utilitzar un pipeline d'entrenament per crear o actualitzar un pipeline d'inferència. Actualment, només s'admeten pipelines d'inferència per lots.
+- Al dissenyador, utilitzeu una canonada d'entrenament per crear o actualitzar una canonada d'inferència. Actualment, només s'admeten pipelines d'inferència per lots.
 
-* Amb l'SDK, podeu publicar el pipeline en un extrem. Actualment, el Customer Insights s'integra amb el pipeline per defecte d'un extrem de pipeline per lots a l'àrea de treball de l'aprenentatge automàtic.
-   
+- Amb l'SDK, publiqueu la canalització en un punt final. Actualment, el Customer Insights s'integra amb el pipeline per defecte d'un extrem de pipeline per lots a l'àrea de treball de l'aprenentatge automàtic.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Per poder utilitzar dades d'entitats del Customer Insights per al vostre pipelin
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importar les dades del pipeline al Customer Insights
 
-* El dissenyador proporciona el [mòdul de dades ](/azure/machine-learning/algorithm-module-reference/export-data)d'exportació que permet exportar la sortida d'un pipeline a l'Azure Storage. Actualment, el mòdul ha d'utilitzar el tipus de magatzem de dades **Emmagatzematge blob de l’Azure** i parametritzar el **Magatzem de dades** i el **Camí** relatiu. El Customer Insights substitueix aquests dos paràmetres durant l'execució del pipeline per un magatzem de dades i un camí accessible per al producte.
-   > [!div class="mx-imgBorder"]
-   > ![Exportar la configuració de mòduls de dades.](media/intelligence-designer-importdata.png "Exportar la configuració de mòduls de dades")
-   
-* Quan escriviu la sortida d'inferència mitjançant codi, podreu pujar la sortida a un camí dins d'un *magatzem de dades registrat* a l'àrea de treball. Si el camí i el magatzem de dades es parametritzen al pipeline, el Customer Insights podrà llegir i importar la sortida d'inferència. Actualment s'admet una única sortida tabular en format csv. El camí ha d'incloure el directori i el nom del fitxer.
+- El dissenyador proporciona el [mòdul de dades ](/azure/machine-learning/algorithm-module-reference/export-data)d'exportació que permet exportar la sortida d'un pipeline a l'Azure Storage. Actualment, el mòdul ha d'utilitzar el tipus de magatzem de dades **Emmagatzematge blob de l’Azure** i parametritzar el **Magatzem de dades** i el **Camí** relatiu. El Customer Insights substitueix aquests dos paràmetres durant l'execució del pipeline per un magatzem de dades i un camí accessible per al producte.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Exportar la configuració de mòduls de dades.":::
+
+- Quan escriviu la sortida d'inferència mitjançant codi, pengeu la sortida a un camí dins d'un *magatzem de* dades registrat a l'espai de treball. Si el camí i el magatzem de dades es parametritzen al pipeline, el Customer Insights podrà llegir i importar la sortida d'inferència. Actualment s'admet una única sortida tabular en format csv. El camí ha d'incloure el directori i el nom del fitxer.
 
    ```python
    # In Pipeline setup script

@@ -1,7 +1,7 @@
 ---
 title: Entitats al Customer Insights
 description: Visualitzeu dades de la pàgina Entitats.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183529"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610086"
 ---
 # <a name="entities-in-customer-insights"></a>Entitats al Customer Insights
 
@@ -61,27 +61,5 @@ Aneu a **Entitats** > **de dades** per veure una llista d'entitats. Es mostra la
   - **Creat**: Data i hora de creació de l'entitat.
   - **Editat per**: Nom de la persona que ha modificat l'entitat.
   - **Editat**: Data i hora de la modificació de l'entitat.
-
-## <a name="entity-specific-information"></a>Informació específica de l'entitat
-
-La secció següent proporciona informació sobre algunes entitats creades pel sistema.
-
-### <a name="corrupted-data-sources"></a>Fonts de dades malmeses
-
-Els camps d'una font de dades ingerida poden contenir dades malmeses. Els registres amb camps malmesos s'exposen a les entitats creades pel sistema. Conèixer els registres malmesos us ajuda a identificar quines dades cal revisar i actualitzar al sistema d'origen. Després de la propera actualització de la font de dades, els registres corregits s'ingereixen al Customer Insights i es transmeten a processos descendents. 
-
-Per exemple, una columna "aniversari" té el tipus de dades definit com a "data". Un registre de client té el seu aniversari introduït com al "01/01/19777". El sistema marcarà aquest registre com a malmès. Ara algú pot canviar l'aniversari a "1977" al sistema d'origen. Després d'una actualització automatitzada de les fonts de dades, el camp ara té un format vàlid i el registre se suprimirà de l'entitat malmesa.
-
-Aneu a **Dades** > **Entitats** i cerqueu les entitats malmeses a la secció **Sistema**. Esquema de nomenclatura de les entitats malmeses: "DataSourceName_EntityName_corrupt". Seleccioneu una entitat malmesa per identificar els camps danyats i el motiu al nivell de registre individual.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Raó de corrupció.":::
-
-El Customer Insights encara processa registres malmesos. No obstant això, poden causar problemes quan es treballa amb les dades unificades.
-
-Les comprovacions següents s'executen a les dades ingerides per identificar registres malmesos:
-
-- El valor d'un camp no coincideix amb el tipus de dades de la seva columna.
-- Els camps contenen caràcters que fan que les columnes no coincideixin amb l'esquema esperat. Per exemple: cometes amb format incorrecte, cometes sense escapar o caràcters de línia nova.
-- Si hi ha columnes datetime/datetimeoffset, el seu format s'ha d'especificar al model si no segueix el format ISO estàndard.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

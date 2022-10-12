@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a una carpeta del Common Data Model amb un compte de l'Azure Data Lake
 description: Treballeu amb dades del Common Data Model mitjançant l'Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396034"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609930"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Connexió a dades al Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Ingereix dades per Dynamics 365 Customer Insights utilitzar el teu Azure Data La
 
 - El Azure Data Lake Storage que voleu connectar i ingerir dades ha d'estar a la mateixa regió de l'Azure que l'entorn Dynamics 365 Customer Insights. No s'admet la connexió a una carpeta del Common Data Model procedent d'un llac de dades d'una regió diferent de l'Azure. Per conèixer la regió de l'Azure de l'entorn, aneu a Sistema **d'administració** > **Quant** > **a** Estadístiques del client.
 
-- Les dades emmagatzemades en els serveis en línia es poden emmagatzemar en una ubicació diferent d'on es processen o emmagatzemen les dades.Dynamics 365 Customer InsightsEn importar o connectar-vos a les dades emmagatzemades als serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Obteniu més informació al Centre](https://www.microsoft.com/trust-center) de confiança de Microsoft.
+- Les dades emmagatzemades en els serveis en línia es poden emmagatzemar en una ubicació diferent d'on es processen o emmagatzemen les dades.Dynamics 365 Customer InsightsEn importar o connectar-vos a les dades emmagatzemades als serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Obteniu més informació al Centre de confiança de Microsoft](https://www.microsoft.com/trust-center).
 
 - El director del servei del Customer Insights ha d'estar en una de les funcions següents per accedir al compte d'emmagatzematge. Per obtenir més informació, vegeu [Concessió de permisos al director del servei per accedir al compte](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) d'emmagatzematge.
   - Lector de dades de Blob de l'emmagatzematge
@@ -43,6 +43,10 @@ Ingereix dades per Dynamics 365 Customer Insights utilitzar el teu Azure Data La
 - L'usuari que configura la connexió font de dades necessita menys permisos de col·laborador de dades Blob d'emmagatzematge al compte d'emmagatzematge.
 
 - Les dades del Data Lake Storage han de seguir l'estàndard common data model per a l'emmagatzematge de les vostres dades i tenir el model de dades comú manifest per representar l'esquema dels fitxers de dades (*.csv o *.parquet). El manifest ha de proporcionar els detalls de les entitats, com ara les columnes d'entitat i els tipus de dades, i la ubicació del fitxer de dades i el tipus de fitxer. Per obtenir més informació, vegeu [el manifest Del model de dades comú](/common-data-model/sdk/manifest). Si el manifest no està present, els usuaris administradors amb accés Storage Blob Data Owner o Storage Blob Data Contributor poden definir l'esquema en ingerir les dades.
+
+## <a name="recommendations"></a>Recomanacions
+
+Per obtenir un rendiment òptim, el Customer Insights recomana que la mida d'una partició sigui d'1 GB o menys i que el nombre de fitxers de partició d'una carpeta no superi els 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Connectar a l’Azure Data Lake Storage
 
@@ -188,7 +192,7 @@ Podeu actualitzar el compte Connecta't a l'emmagatzematge *mitjançant l'opció*
       > [!IMPORTANT]
       > Si hi ha dependències en el fitxer model.json o manifest.json i el conjunt d'entitats, veureu un missatge d'error i no podreu seleccionar un fitxer model.json o manifest.json diferent. Suprimiu aquestes dependències abans de canviar el fitxer model.json o manifest.json o creeu una font de dades nou amb el fitxer model.json o manifest.json que voleu utilitzar per evitar la supressió de les dependències.
    - Per canviar la ubicació del fitxer de dades o la clau principal, seleccioneu **Edita**.
-   - Per canviar les dades d'ingestió incremental, vegeu [Configurar una actualització incremental per a les fonts de dades de l'Azure Data Lake](incremental-refresh-data-sources.md).
+   - Per canviar les dades d'ingestió incremental, vegeu [Configurar una actualització incremental per a les fonts](incremental-refresh-data-sources.md) de dades de l'Azure Data Lake.
    - Canvieu només el nom de l'entitat perquè coincideixi amb el nom de l'entitat al fitxer .json.
 
      > [!NOTE]
@@ -199,5 +203,101 @@ Podeu actualitzar el compte Connecta't a l'emmagatzematge *mitjançant l'opció*
 1. Feu clic **a Desa** per aplicar els canvis i tornar a la **pàgina Fonts** de dades.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motius habituals d'errors d'ingestió o dades corruptes
+
+Durant la ingestió de dades, alguns dels motius més habituals pels quals un registre es pot considerar corrupte són:
+
+- Els tipus de dades i els valors de camp no coincideixen entre el fitxer d'origen i l'esquema
+- El nombre de columnes del fitxer d'origen no coincideix amb l'esquema
+- Els camps contenen caràcters que fan que les columnes s'esbiaixin en comparació amb l'esquema esperat. Per exemple: cometes amb format incorrecte, cometes sense marcar, caràcters de línia nova o caràcters amb pestanyes.
+- Falten fitxers de partició
+- Si hi ha columnes datetime/datetimeoffset, el seu format s'ha d'especificar a l'esquema si no segueix el format estàndard.
+
+### <a name="schema-or-data-type-mismatch"></a>Desajustament d'esquemes o tipus de dades
+
+Si les dades no s'ajusten a l'esquema, el procés d'ingestió es completa amb errors. Corregiu les dades d'origen o l'esquema i torneu a ingerir les dades.
+
+### <a name="partition-files-are-missing"></a>Falten fitxers de partició
+
+- Si la ingestió s'ha realitzat correctament sense cap registre corrupte, però no podeu veure cap dada, editeu el fitxer model.json o manifest.json per assegurar-vos que les particions estiguin especificades. A continuació, [refresqueu el font de dades](data-sources.md#refresh-data-sources).
+
+- Si la ingestió de dades es produeix al mateix temps que les fonts de dades s'actualitzen durant una actualització automàtica de la planificació, és possible que els fitxers de partició estiguin buits o que no estiguin disponibles per al Processament del Client Insights. Per alinear-vos amb la planificació d'actualització ascendent, canvieu la planificació [d'actualització](schedule-refresh.md) del sistema o la planificació d'actualització del font de dades. Alineeu el temps perquè les actualitzacions no es produeixin totes alhora i proporcioneu les dades més recents que es processaran al Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Camps de data en un format incorrecte
+
+Els camps de data de l'entitat no estan en formats ISO 8601 ni en-US. El format de data predeterminat al Customer Insights és el format en-US. Tots els camps de data d'una entitat han d'estar en el mateix format. El Customer Insights admet altres formats sempre que les anotacions o trets es facin al nivell d'origen o d'entitat del model o manifest.json. Per exemple:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  En un manifest.json, el format datetime es pot especificar al nivell d'entitat o al nivell d'atribut. Al nivell d'entitat, utilitzeu "exhibitsTraits" a l'entitat del *.manifest.cdm.json per definir el format datetime. Al nivell d'atribut, utilitzeu "appliedTraits" a l'atribut de entityname.cdm.json.
+
+**Manifest.json a nivell d'entitat**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json al nivell d'atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
 description: Importeu dades d'un llac de dades administrat del Microsoft Dataverse.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206941"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609779"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connectar-se a dades d'un llac de dades administrat del Microsoft Dataverse
 
@@ -27,7 +27,7 @@ Microsoft Dataverse els usuaris es poden connectar ràpidament a entitats analí
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades als serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Obteniu més informació al Centre](https://www.microsoft.com/trust-center) de confiança de Microsoft.
+- Les dades emmagatzemades en un servei en línia, com ara el Azure Data Lake Storage, es poden emmagatzemar en una ubicació diferent d'on es processen o s'emmagatzemen les dades al Dynamics 365 Customer Insights.En importar o connectar-vos a les dades emmagatzemades als serveis en línia, accepteu que les dades es puguin transferir i emmagatzemar amb Dynamics 365 Customer Insights. [Obteniu més informació al Centre de confiança de Microsoft](https://www.microsoft.com/trust-center).
 
 - Només Dataverse són visibles les entitats amb [el seguiment de](/power-platform/admin/enable-change-tracking-control-data-synchronization) canvis activat. Aquestes entitats es poden exportar al llac de Dataverse dades gestionat i utilitzar-les al Customer Insights. Les taules estàndard tenen el seguiment de Dataverse canvis activat de manera predeterminada. Heu d'activar el seguiment de canvis per a les taules personalitzades. Per comprovar si una Dataverse taula està habilitada per al seguiment de canvis, aneu a [Power Apps](https://make.powerapps.com) > **Taules** > **de dades**. Troba la taula del teu interès i selecciona-la. Aneu a **Opcions avançades** > **de configuració** i reviseu la configuració Seguiment dels **canvis**.
 
@@ -70,5 +70,93 @@ Per connectar-vos a un altre llac de dades del Dataverse, [creeu una font de dad
 1. Feu clic **a Desa** per aplicar els canvis i tornar a la **pàgina Fonts** de dades.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Motius habituals d'errors d'ingestió o dades danyades
+
+Les comprovacions següents s'executen a les dades ingerides per identificar registres malmesos:
+
+- El valor d'un camp no coincideix amb el tipus de dades de la seva columna.
+- Els camps contenen caràcters que fan que les columnes no coincideixin amb l'esquema esperat. Per exemple: cometes amb format incorrecte, cometes sense escapar o caràcters de línia nova.
+- Si hi ha columnes datetime/datetimeoffset, el seu format s'ha d'especificar al model si no segueix el format ISO estàndard.
+
+### <a name="schema-or-data-type-mismatch"></a>Desajustament d'esquemes o tipus de dades
+
+Si les dades no s'ajusten a l'esquema, els registres es classifiquen en corruptes. Corregiu les dades d'origen o l'esquema i torneu a ingerir les dades.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Camps de data en un format incorrecte
+
+Els camps de data de l'entitat no estan en formats ISO ni en-US. El format de data predeterminat al Customer Insights és el format en-US. Tots els camps de data d'una entitat han d'estar en el mateix format. El Customer Insights admet altres formats sempre que les anotacions o trets es facin al nivell d'origen o d'entitat del model o manifest.json. Per exemple:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  En un manifest.json, el format datetime es pot especificar al nivell d'entitat o al nivell d'atribut. Al nivell d'entitat, utilitzeu "exhibitsTraits" a l'entitat del *.manifest.cdm.json per definir el format datatime. Al nivell d'atribut, utilitzeu "appliedTraits" a l'atribut de entityname.cdm.json.
+
+**Manifest.json a nivell d'entitat**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json al nivell d'atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

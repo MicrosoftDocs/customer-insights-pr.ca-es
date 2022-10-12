@@ -1,7 +1,7 @@
 ---
 title: Connectar-se a un Power Query font de dades (conté vídeo)
 description: Ingereix dades a través d'un Power Query connector (conté vídeo).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463253"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609864"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connectar-se a un Power Query font de dades
 
@@ -43,16 +43,17 @@ L'addició de fonts de dades basades Power Query en connectors generalment segue
 
 1. Seleccioneu **Transforma les dades**.
 
-1. El **Power Query diàleg - Edita consultes** us permet revisar i refinar les dades. Les entitats que els sistemes han identificat a la font de dades seleccionada apareixen a la subfinestra esquerra.
+1. Reviseu i definiu millor les dades a la **Power Query pàgina - Edita les consultes**. Les entitats que els sistemes han identificat a la font de dades seleccionada apareixen a la subfinestra esquerra.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Quadre de diàleg Edita les consultes":::
 
-1. També podeu transformar les dades. Seleccioneu una entitat per editar o transformar. Utilitzeu les opcions de la Power Query finestra per aplicar transformacions. Cada transformació es mostra a Passos **aplicats**. Power Query proporciona nombroses [opcions de transformació](/power-query/power-query-what-is-power-query#transformations) predefinides.
+1. Transforma les teves dades. Seleccioneu una entitat per editar o transformar. Utilitzeu les opcions de la Power Query finestra per aplicar transformacions. Cada transformació es mostra a Passos **aplicats**. Power Query proporciona nombroses [opcions de transformació](/power-query/power-query-what-is-power-query#transformations) predefinides.
 
-   Us recomanem que utilitzeu les transformacions següents:
-
-   - Si esteu ingerint dades d'un fitxer CSV, la primera fila sovint conté capçaleres. Aneu a **Transforma** i seleccioneu **Utilitza la primera fila com a capçaleres**.
-   - Assegureu-vos que el tipus de dades s'ha establert correctament. Per exemple, per als camps de data, seleccioneu un tipus de data.
+   > [!IMPORTANT]
+   > Us recomanem que utilitzeu les transformacions següents:
+   >
+   > - Si esteu ingerint dades d'un fitxer CSV, la primera fila sovint conté capçaleres. Aneu a **Transforma** i seleccioneu **Utilitza la primera fila com a capçaleres**.
+   > - Assegureu-vos que el tipus de dades s'estableixi adequadament i coincideixi amb les dades. Per exemple, per als camps de data, seleccioneu un tipus de data.
 
 1. Per afegir entitats addicionals al font de dades al quadre de diàleg Edita **consultes**, aneu a **Inici** i seleccioneu **Obtén dades**. Repetiu els passos 5-10 fins que hàgiu afegit totes les entitats d'aquest font de dades. Si teniu una base de dades que inclou diversos conjunts de dades, cada conjunt de dades és la seva pròpia entitat.
 
@@ -102,5 +103,51 @@ Les passarel·les de dades d'un entorn existent o Power BI existent Power Apps s
 1. Seleccioneu **Desa** per aplicar els canvis i tornar a la **pàgina Fonts** de dades.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motius habituals d'errors d'ingestió o dades corruptes
+
+### <a name="data-type-does-not-match-data"></a>El tipus de dades no coincideix amb les dades
+
+El desajustament de tipus de dades més comú es produeix quan un camp de data no està definit al format de data correcte.
+
+Les dades es poden fixar a l'origen i tornar-les a ingerir. O bé corregiu la transformació al Customer Insights. Per solucionar la transformació:
+
+1. Aneu a **Dades** > **Fonts de dades**.
+
+1. Al costat del font de dades amb les dades malmeses, selecciona **Edita**.
+
+1. Seleccioneu **Següent**.
+
+1. Seleccioneu cadascuna de les consultes i cerqueu transformacions aplicades dins de "Passos aplicats" que siguin incorrectes o columnes de data que no s'hagin transformat amb un format de data.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Edició que mostra un format de data incorrecte":::
+
+1. Canvieu el tipus de dades perquè coincideixi correctament amb les dades.
+
+1. Seleccioneu **Desa**. Aquesta font de dades es refresca.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Solució de problemes de PPDF Power Query basats en font de dades actualització
+
+Si les dades estan estancades o rebeu errors després d'una actualització font de dades, seguiu els passos següents:
+
+1. Aneu a [Power Platform](https://make.powerapps.com).
+
+1. Seleccioneu l'entorn **per** a la instància del Customer Insights.
+
+1. Aneu a **Dataflows**.
+
+1. Per al flux de dades que correspon al font de dades al Customer Insights, seleccioneu els punts suspensius verticals (&vellip;) i, a continuació, seleccioneu **Mostra l'historial** d'actualitzacions.
+
+1. Si l'estat **del** flux de dades és **Èxit**, la propietat del Power Query font de dades basat podria haver canviat:
+
+   1. Reviseu la planificació d'actualitzacions de l'historial d'actualitzacions.
+   1. Definiu la planificació del nou propietari i deseu la configuració.
+
+1. Si l'estat **del** flux de dades és **un error**:
+
+   1. Baixeu el fitxer de l'historial d'actualitzacions.
+   1. Reviseu el fitxer descarregat pel motiu de l'error.
+   1. Si l'error no es pot resoldre, seleccioneu **?** Per obrir un tiquet de suport. Incloeu el fitxer de l'historial d'actualitzacions descarregat.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

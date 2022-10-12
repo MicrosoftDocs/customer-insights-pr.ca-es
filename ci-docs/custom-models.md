@@ -1,7 +1,7 @@
 ---
 title: Models d'aprenentatge automàtic personalitzats | Microsoft Docs
 description: Treballeu amb models personalitzats de l'Aprenentatge automàtic de l'Azure al Dynamics 365 Customer Insights.
-ms.date: 12/01/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 89553b511d249fd586e36a1c4944a977513b0643
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245791"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609727"
 ---
 # <a name="custom-machine-learning-models"></a>Models d'aprenentatge automàtic personalitzats
 
@@ -25,106 +25,100 @@ ms.locfileid: "9245791"
 >
 > A partir de l'1 de desembre de 2021, no podreu crear recursos nous Aprenentatge automàtic Studio (clàssics). Fins al 31 d'agost de 2024, pots continuar utilitzant els recursos existents Aprenentatge automàtic Studio (clàssics). Per obtenir més informació, vegeu [Migració a l'Azure Aprenentatge automàtic](/azure/machine-learning/migrate-overview).
 
-
-**Intel·ligència** > **Models personalitzats** us permet administrar fluxos de treball basats en models de l'aprenentatge automàtic de l'Azure. Els fluxos de treball us ajuden a triar les dades a partir de les quals voleu generar conclusions i assignar els resultats a les dades unificades del client. Per obtenir més informació sobre la creació de models de ML personalitzats, vegeu [Utilitzar models basats en l'aprenentatge automàtic de l'Azure](azure-machine-learning-experiments.md).
-
-## <a name="responsible-ai"></a>IA responsable
-
-Les prediccions ofereixen capacitats per crear experiències dels clients més positives, i millorar les capacitats empresarials i les fonts d'ingressos. Us recomanem que feu un balanç del valor de la vostra predicció davant el seu impacte i les desviacions que es podrien introduir d'una manera ètica. Informeu-vos sobre com Microsoft està [responent a la qüestió d'una IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Informeu-vos també sobre [les tècniques i els processos per a un aprenentatge automàtic responsable](/azure/machine-learning/concept-responsible-ml) específics de l'aprenentatge automàtic de l'Azure.
+Els models personalitzats us permeten gestionar els fluxos de treball basats en models de l'Azure Aprenentatge automàtic. Els fluxos de treball us ajuden a triar les dades a partir de les quals voleu generar conclusions i assignar els resultats a les dades unificades del client. Per obtenir més informació sobre la creació de models de ML personalitzats, vegeu [Utilitzar models basats en l'aprenentatge automàtic de l'Azure](azure-machine-learning-experiments.md).
 
 ## <a name="prerequisites"></a>Requisits previs
 
-- Aquesta característica admet els serveis web publicats a través de [l'Azure Aprenentatge automàtic per lots](/azure/machine-learning/concept-ml-pipelines).
+- Serveis web publicats a través de [l'Azure Aprenentatge automàtic per lots](/azure/machine-learning/concept-ml-pipelines).
+- La canonada s'ha de publicar sota un punt final de [canonada](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+- Un [compte](/azure/storage/blobs/data-lake-storage-quickstart-create-account) d'emmagatzematge de l'Azure Data Lake Gen2 associat a la instància de l'Azure Studio.
+- Per a l'Azure Aprenentatge automàtic espais de treball amb canalitzacions, permisos d'administrador d'accés de propietari o d'usuari a l'espai de treball de l'Azure Aprenentatge automàtic.
 
-- Per poder utilitzar aquesta característica, heu de tenir un compte d'emmagatzematge Gen2 de l'Azure Data Lake associat amb la vostra instància de l'Azure Studio. Per obtenir més informació, vegeu [Crear un compte d'emmagatzematge de l'Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
-
-- Per als espais de treball d'aprenentatge automàtic de l'Azure amb pipelines, necessiteu permisos de Propietari o d'Administrador d'accés d'usuari a l'espai de treball d'aprenentatge automàtic de l'Azure.
-
-   > [!NOTE]
-   > Les dades es transfereixen entre les vostres instàncies del Customer Insights i els pipelines o serveis web de l'Azure seleccionats al flux de treball. Quan transferiu dades a un servei de l'Azure, assegureu-vos que el servei estigui configurat per processar les dades de la manera i la ubicació necessàries per complir tots els requisits legals o normatius per a les dades en aquesta organització.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+  > [!NOTE]
+  > Les dades es transfereixen entre les vostres instàncies del Customer Insights i els pipelines o serveis web de l'Azure seleccionats al flux de treball. Quan transferiu dades a un servei de l'Azure, assegureu-vos que el servei estigui configurat per processar les dades de la manera i la ubicació necessàries per complir tots els requisits legals o normatius per a les dades en aquesta organització.
 
 ## <a name="add-a-new-workflow"></a>Afegir un flux de treball nou
 
 1. Aneu a **Intel·ligència** > **Models personalitzats** i seleccioneu **Flux de treball nou**.
 
-1. Doneu al model personalitzat un nom que pugueu reconèixer al camp **Nom**.
+1. Proporcioneu un nom **reconeixible**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Captura de pantalla de la subfinestra Flux de treball nou.](media/new-workflowv2.png "Captura de pantalla de la subfinestra Flux de treball nou")
+   :::image type="content" source="media/new-workflowv2.png" alt-text="Captura de pantalla de la subfinestra Flux de treball nou.":::
 
 1. Seleccioneu l'organització que conté el servei web a **Inquilí que conté el servei web**.
 
 1. Si la subscripció a l'Azure Machine Learning és en un inquilí diferent del Customer Insights, seleccioneu **Inicia la sessió** amb les credencials de l'organització seleccionada.
 
-1. Seleccioneu els **Espais de treball** associats amb el servei web. 
+1. Seleccioneu els **Espais de treball** associats amb el servei web.
 
-1. Trieu la canalització de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del model**. A continuació, seleccioneu **Següent**.    
-   Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). El pipeline s'ha de publicar en un [extrem de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Trieu la canalització de l'Azure Aprenentatge automàtic al **servei web que conté el menú desplegable del model**. A continuació, seleccioneu **Següent**.
+   Més informació sobre [la publicació d'un pipeline a l'aprenentatge automàtic de l'Azure mitjançant el dissenyador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o l'[SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk).
 
-1. Per a cada **Entrada de servei web**, seleccioneu l'**Entitat** coincident del Customer Insights i seleccioneu **Següent**.
+1. Per a cada **Entrada de servei web**, seleccioneu l'**Entitat** coincident del Customer Insights. A continuació, seleccioneu **Següent**.
    > [!NOTE]
    > El flux de treball del model personalitzat aplicarà heurística per assignar els camps d'entrada del servei web als atributs de l'entitat segons el nom i el tipus de dades del camp. Veureu un error si un camp del servei web no es pot assignar a una entitat.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurar un flux de treball.](media/intelligence-screen2-updated.png "Configurar un flux de treball")
+   :::image type="content" source="media/intelligence-screen2-updated.png" alt-text="Configurar un flux de treball.":::
 
-1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
-      1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del pipeline.
-      1. Seleccioneu, al menú desplegable, el **Nom del paràmetre de magatzem de dades de sortida** del pipeline per lots.
-      1. Seleccioneu, al menú desplegable, el **Nom del paràmetre de camí de sortida** del pipeline per lots.
+1. Per als **paràmetres** de sortida del model, definiu les propietats següents:
+   - **Nom** de l'entitat per als resultats de sortida de la canonada
+   - **Sortida magatzem de dades nom** del paràmetre de la canonada per lots
+   - **Nom del paràmetre** Camí de sortida de la canonada per lots
 
-      > [!div class="mx-imgBorder"]
-      > ![Subfinestra Paràmetre de sortida del model.](media/intelligence-screen3-outputparameters.png "Subfinestra Paràmetre de sortida del model")
+   :::image type="content" source="media/intelligence-screen3-outputparameters.png" alt-text="Subfinestra Paràmetre de sortida del model.":::
 
-1. Seleccioneu l'atribut coincident de la llista desplegable **Identificador de client als resultats** que identifica els clients i seleccioneu **Desa**.
+1. Seleccioneu l'atribut coincident del **Customer ID als resultats** que identifiquen els clients i seleccioneu **Desa**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Subfinestra Relacioneu els resultats amb les dades del client.](media/intelligence-screen4-relatetocustomer.png "Subfinestra Relacioneu els resultats amb les dades del client")
+   :::image type="content" source="media/intelligence-screen4-relatetocustomer.png" alt-text="Subfinestra Relacioneu els resultats amb les dades del client.":::
 
-1. Veureu la pantalla **Flux de treball desat** amb els detalls sobre el flux de treball.    
-   Si heu configurat un flux de treball per a una canalització de l'Azure Aprenentatge automàtic, el Customer Insights s'adjunta a l'espai de treball que conté la canalització. El Customer Insights obtindrà una funció **de col·laborador** a l'espai de treball de l'Azure.
+   La **pantalla Flux de treball desat** mostra detalls sobre el flux de treball. Si heu configurat un flux de treball per a una canalització de l'Azure Aprenentatge automàtic, el Customer Insights s'adjunta a l'espai de treball que conté la canalització. El Customer Insights obtindrà una funció **de col·laborador** a l'espai de treball de l'Azure.
 
-1. Seleccioneu **Fet**.
+1. Seleccioneu **Fet**. Es **mostra la pàgina Models** personalitzats.
 
-1. Ara podeu executar el flux de treball des de la pàgina **Models personalitzats**.
+1. Seleccioneu els punts suspensius verticals (&vellip;) per al flux de treball i seleccioneu **Executa**. El vostre flux de treball també s'executa automàticament amb cada [actualització](schedule-refresh.md) programada.
 
-## <a name="edit-a-workflow"></a>Editar un flux de treball
+## <a name="manage-an-existing-workflow"></a>Gestionar un flux de treball existent
 
-1. A la **pàgina Models** personalitzats, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** al costat d'un flux de treball que hàgiu creat prèviament i seleccioneu **Edita**.
+Aneu a **Models** > **personalitzats d'Intel·ligència** per veure els fluxos de treball que heu creat.
 
-1. Podeu actualitzar el nom reconeixible del flux de treball al camp **Nom de visualització**, però no podreu canviar el servei web o el pipeline configurats. Seleccioneu **Següent**.
+Seleccioneu un flux de treball per veure les accions disponibles.
 
-1. Per a cada **entrada de servei web**, podeu actualitzar l'entitat **coincident** des del Customer Insights. A continuació, seleccioneu **Següent**.
+- **Editar** un flux de treball
+- **Executar** un flux de treball
+- [**Suprimir**](#delete-a-workflow) un flux de treball
 
-1. Al pas de **Paràmetres de sortida del model**, definiu les propietats següents:
-      1. Introduïu el **Nom de l'entitat** de sortida a la qual voleu que vagin a parar els resultats de sortida del pipeline.
-      1. Seleccioneu el **Nom del paràmetre de magatzem de dades de sortida** per al pipeline de prova.
-      1. Seleccioneu el **Nom del paràmetre de camí de sortida** per al pipeline de prova.
+### <a name="edit-a-workflow"></a>Editar un flux de treball
 
-1. Seleccioneu l'atribut coincident de la llista desplegable **Identificador de client als resultats** que identifica els clients i seleccioneu **Desa**.
-   Trieu un atribut de la sortida d'inferència que tingui valors similars a la columna ID de client de l'Entitat del client. Si no teniu una columna d'aquest tipus al vostre conjunt de dades, trieu un atribut que identifiqui de manera exclusiva la fila.
+1. Aneu a **Models** > **personalitzats d'intel·ligència**.
 
-## <a name="run-a-workflow"></a>Executar un flux de treball
+1. Al costat del flux de treball que vulgueu actualitzar, seleccioneu els punts suspensius verticals (&vellip;) i seleccioneu **Edita**.
 
-1. A la **pàgina Models personalitzats**, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que hàgiu creat prèviament.
+1. Canvieu **el nom** de visualització, si cal, i seleccioneu **Següent**.
 
-1. Seleccioneu **Executa**.
+1. Per a cada **entrada de servei web**, actualitzeu l'entitat **coincident** des del Customer Insights, si cal. A continuació, seleccioneu **Següent**.
 
-El flux de treball també s'executa automàticament amb cada actualització planificada. Més informació sobre la [configuració d'actualitzacions planificades](schedule-refresh.md).
+1. Per als **paràmetres** de sortida del model, canvieu una de les opcions següents:
+   - **Nom** de l'entitat per als resultats de sortida de la canonada
+   - **Sortida magatzem de dades nom** del paràmetre de la canonada per lots
+   - **Nom del paràmetre** Camí de sortida de la canonada per lots
 
-## <a name="delete-a-workflow"></a>Suprimir un flux de treball
+1. Canvieu l'atribut coincident de Customer **ID als resultats** per identificar els clients. Trieu un atribut de la sortida d'inferència que tingui valors similars a la columna ID de client de l'Entitat del client. Si no teniu aquesta columna al conjunt de dades, trieu un atribut que identifiqui de manera única la fila.
 
-1. A la **pàgina Models personalitzats**, seleccioneu els punts suspensius verticals (&vellip;) a la **columna Accions** que hi ha al costat d'un flux de treball que hàgiu creat prèviament.
+1. Seleccioneu **Desa**
 
-1. Seleccioneu **Suprimeix** i confirmeu la supressió.
+### <a name="delete-a-workflow"></a>Suprimir un flux de treball
 
-El flux de treball se suprimirà. L'[entitat](entities.md) que es va crear quan es va crear el flux de treball persisteix i es pot visualitzar des de la pàgina **Entitats**.
+1. Aneu a **Models** > **personalitzats d'intel·ligència**.
 
-## <a name="results"></a>Resultats
+1. Al costat del flux de treball que vulgueu suprimir, seleccioneu els punts suspensius verticals (&vellip;) i seleccioneu **Suprimeix**.
 
-Els resultats d'un flux de treball s'emmagatzemen a l'entitat configurada durant la fase Paràmetre de sortida del model. Podeu accedir a aquestes dades des de la [pàgina d'entitats](entities.md) o amb [accés a l'API](apis.md).
+1. Confirmeu la supressió.
+
+El flux de treball se suprimirà. L'entitat [que](entities.md) es va crear quan vau crear el flux de treball continua i es pot visualitzar des de la **pàgina Entitats** > **de dades**.
+
+## <a name="view-the-results"></a>Veure els resultats
+
+Els resultats d'un flux de treball s'emmagatzemen al nom de l'entitat definit per als **paràmetres** de sortida del model. Accediu a aquestes dades des de la pàgina Entitats de dades [**o amb** > **accés a l'API**.](entities.md)[...](apis.md)
 
 ### <a name="api-access"></a>Accés a l'API
 
@@ -132,18 +126,27 @@ Per a la consulta específica d'OData per obtenir dades d'una entitat del model 
 
 `https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
 
-1. Substituïu `<your instance id>` per l'identificador de l'entorn del Customer Insights, que trobeu a la barra d'adreces del navegador quan accediu al Customer Insights.
+1. Substituïu-lo per `<your instance id>` l'identificador de l'entorn Customer Insights, que es mostra a la barra d'adreces del navegador quan accediu al Customer Insights.
 
-1. Substituïu `<custom model output entity>` pel nom de l'entitat que heu proporcionat durant el pas Paràmetres de sortida del model de la configuració del model personalitzat.
+1. Substituïu-lo pel `<custom model output entity>` nom d'entitat que heu proporcionat per als **paràmetres de sortida del model**.
 
-1. Substituïu `<guid value>` per l'identificador de client del client al registre del qual voleu accedir. Normalment podeu trobar aquest identificador a la [pàgina de perfils de client](customer-profiles.md) del camp CustomerID.
+1. Substituïu-lo `<guid value>` per l'identificador de client del client al qual voleu accedir. Aquest identificador es mostra a la pàgina [perfils de](customer-profiles.md) client del camp CustomerID.
 
 ## <a name="frequently-asked-questions"></a>Preguntes més freqüents
 
-- Per què no puc veure el meu pipeline quan configuro un flux de treball de model personalitzat?    
+- Per què no puc veure el meu pipeline quan configuro un flux de treball de model personalitzat?
   Aquest problema el provoca sovint un problema de configuració al pipeline. Assegureu-vos que el [paràmetre d'entrada està configurat](azure-machine-learning-experiments.md#dataset-configuration) i que els [paràmetres de camí i magatzem de dades de sortida](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) també estan configurats.
 
-- Què significa l'error "No s'ha pogut desar el flux de treball d'intel·ligència"?    
+- Què significa l'error "No s'ha pogut desar el flux de treball d'intel·ligència"? 
   Els usuaris normalment veuen aquest missatge d'error si no tenen privilegis de Propietari o Administrador d'accés d'usuari a l'espai de treball. L'usuari necessita un nivell superior de permisos per permetre al Customer Insights processar el flux de treball com un servei en comptes d'utilitzar les credencials d'usuari per a les execucions posteriors del flux de treball.
+
+- S'admet un punt final privat / enllaç privat per al meu flux de treball de model personalitzat?
+  Actualment, el Customer Insights no admet el punt final privat per als models personalitzats, però hi ha disponible una solució manual. Poseu-vos en contacte amb el servei d'assistència per obtenir més informació.
+
+## <a name="responsible-ai"></a>IA responsable
+
+Les prediccions ofereixen capacitats per crear experiències dels clients més positives, i millorar les capacitats empresarials i les fonts d'ingressos. Us recomanem que feu un balanç del valor de la vostra predicció davant el seu impacte i les desviacions que es podrien introduir d'una manera ètica. Informeu-vos sobre com Microsoft està [responent a la qüestió d'una IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Informeu-vos també sobre [les tècniques i els processos per a un aprenentatge automàtic responsable](/azure/machine-learning/concept-responsible-ml) específics de l'aprenentatge automàtic de l'Azure.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
