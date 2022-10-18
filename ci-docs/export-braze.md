@@ -1,19 +1,19 @@
 ---
 title: Exportar segments a Braze (previsualització)
 description: Obteniu més informació sobre com configurar la connexió i exportar a Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195095"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655292"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segments a Braze (previsualització)
 
@@ -23,6 +23,7 @@ Exporta segments de perfils de clients unificats a Braze i utilitza'ls per a act
 
 - Un [compte](https://www.braze.com/) de Braze i les credencials d'administrador corresponents.
 - Una [clau d'API de Braze](https://www.braze.com/docs/api/basics/)
+- El teu [punt final DE FRENS REST](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Segments configurats](segments.md) al Customer Insights.
 - Els perfils de client unificats dels segments exportats contenen un camp que representa una adreça electrònica i un identificador de client de Braze.
 
@@ -30,6 +31,7 @@ Exporta segments de perfils de clients unificats a Braze i utilitza'ls per a act
 
 - Fins a 1 milió de perfils de clients a Braze, que poden trigar fins a 40 minuts a completar-se. El nombre de perfils de clients que podeu exportar a Braze depèn del vostre contracte amb Braze.
 - Només segments.
+- L'Azure Private Link no és compatible amb l'exportació braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configurar la connexió amb Braze
 
@@ -62,6 +64,8 @@ Exporta segments de perfils de clients unificats a Braze i utilitza'ls per a act
 1. Seleccioneu **Afegeix una exportació**.
 
 1. **Al camp Connexió per a l'exportació**, trieu una connexió de la secció Braze. Poseu-vos en contacte amb un administrador si no hi ha cap connexió disponible.
+
+1. Introduïu el punt final REST al camp Nom de l'amfitrió **en** el format següent:`rest.iad-03.braze.com`.
 
 1. Introduïu un nom per a l'exportació.
 

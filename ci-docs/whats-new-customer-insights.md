@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609580"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638339"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novetats del Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Implementarem les actualitzacions per regió. Per tant, algunes regions poden ve
 
 > [!TIP]
 > Per enviar i votar peticions de característiques i suggeriments de productes, aneu al [Portal d'idees de l'aplicació del Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Actualitzacions de setembre de 2022
+
+Les actualitzacions del setembre de 2022 inclouen noves funcions, actualitzacions de rendiment i correccions d'errors.
+
+### <a name="export-data-to-hubspot"></a>Exporta dades a HubSpot
+
+Exporta segments de perfils de clients unificats a HubSpot i utilitza'ls per al màrqueting per correu electrònic.
+
+Per obtenir més informació, vegeu [Exportació de segments a HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Suprimir un camp o entitat unificat de la unificació de dades
+
+Podeu suprimir camps i entitats del procés d'unificació de dades.
+
+Per obtenir més informació, vegeu la secció [Supressió d'un camp unificat](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Gestionar perfils de clients desconeguts
+
+La personalització memorable depèn de la riquesa i la integritat de les dades dels vostres clients i el Customer Insights us ajuda a assolir aquests objectius. Podeu gestionar els perfils de clients dels usuaris per als quals no teniu cap altra informació que no sigui un identificador.
+
+Per obtenir més informació, vegeu [Administrar perfils desconeguts amb el Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Actualitzacions d'agost de 2022
 
@@ -40,7 +62,7 @@ Per obtenir més informació, vegeu [Crear un perfil de contacte unificat](data-
 
 Gràcies a la nova unificació de contactes, podeu crear segments de contactes mitjançant criteris de contactes, comptes o tots dos. Aquests segments es poden exportar per activar-los en altres serveis.
 
-Per obtenir més informació, vegeu [Informació general de les exportacions](export-destinations.md).
+Per obtenir més informació, vegeu [Informació general de](export-destinations.md) les exportacions.
 
 ### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Regions de desplegament alineades amb Microsoft Dataverse
 
@@ -114,7 +136,7 @@ Per obtenir més informació, vegeu [Informació general](data-unification.md) s
 
 **Home** us guia a través del procés de configuració de les funcions clau i proporciona una visió general dels segments, mesures i dades d'enriquiment. Hem refrescat l'experiència per proporcionar informació més rellevant d'un cop d'ull.
 
-Per obtenir més informació, vegeu [Explora les estadístiques](home.md) del client.
+Per obtenir més informació, vegeu [Explora les estadístiques del client](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Fer un seguiment de l'ús d'un segment
 
@@ -130,7 +152,7 @@ Per obtenir més informació, vegeu [Exporta segments a Criteo (visualització p
 
 Hem revisat els documents d'ajuda relacionats amb la creació i la gestió d'entorns al Customer Insights. Els articles ara s'agrupen sota el node Entorns a la taula de continguts. Els articles reestructurats proporcionen més orientacions per a les diferents maneres de configurar entorns i tenen una estructura més clara. Si teniu comentaris per compartir, feu-nos-ho saber mitjançant els controls cap al final dels articles d'ajuda.
 
-Per obtenir més informació, vegeu [Com: Crear un entorn nou](create-environment.md).
+Per obtenir més informació, vegeu [Com: Crear un entorn](create-environment.md) nou.
 
 ## <a name="april-2022-updates"></a>Actualitzacions d'abril de 2022
 
@@ -140,7 +162,7 @@ Les actualitzacions de l'abril de 2022 inclouen noves funcions, actualitzacions 
 
 Dun & Bradstreet proporciona dades comercials, anàlisis i estadístiques per a les empreses. Permet enriquir les dades als clients amb perfils de clients unificats per a les empreses. Els enriquiments inclouen atributs com el número DUNS, la mida de l'empresa, la ubicació, la indústria i molt més.
 
-Per obtenir més informació, vegeu [Enriquiment dels perfils de l'empresa amb Dun & Bradstreet (Vista prèvia)](enrichment-dnb.md).
+Per obtenir més informació, vegeu [Enriquiment dels perfils de l'empresa amb Dun & Bradstreet (Preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definir el tipus de mesura en crear una nova mesura
 
@@ -198,7 +220,7 @@ Les actualitzacions del febrer de 2022 inclouen noves funcions, actualitzacions 
 
 Els models de predicció pròpiament dits, com ara **el percentatge** de subscripció, **la quantitat transaccional** i **el valor de la vida útil del client (CLV),** estan generalment disponibles com a part del Customer Insights. 
 
-Per obtenir més informació, vegeu [Informació general](predictions-overview.md) de les prediccions.
+Per obtenir més informació, vegeu [Informació general de les prediccions](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nou font de dades: Integració amb Azure Synapse Analytics (Preview)
 
@@ -218,7 +240,7 @@ Per obtenir més informació, vegeu [Enriquir perfils de clients amb dades d'ide
 
 Utilitzeu dades de fonts com Microsoft i altres socis per enriquir les dades dels vostres clients abans de la unificació de dades. Font de dades enriquiments ajuden a produir una major integritat i qualitat de les dades que poden ajudar a obtenir millors resultats un cop unifiqueu les dades.
 
-Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades (Visualització prèvia)](data-sources-enrichment.md).
+Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades (Visualització prèvia).](data-sources-enrichment.md)
 
 ### <a name="change-owner-of-environment"></a>Canvia el propietari de l'entorn
 
