@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424297"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671239"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Treballar amb dades del Customer Insights al Microsoft Dataverse
 
@@ -64,6 +64,9 @@ El **Microsoft Dataverse** pas us permet connectar el Customer Insights amb el v
 
 Al [vostre compte Azure Data Lake Storage](own-data-lake-storage.md), verifiqueu que l'usuari que configura l'entorn del Customer Insights tingui com a mínim **permisos de lector** de dades Blob d'emmagatzematge al `customerinsights` contenidor del compte d'emmagatzematge.
 
+> [!NOTE]
+> La compartició de dades només s'aplica si utilitzeu el vostre propi Azure Data Lake Storage compte. Aquesta configuració no està disponible si l'entorn del Customer Insights utilitza l'emmagatzematge per defecte Dataverse.
+
 ### <a name="limitations"></a>Limitacions
 
 - Només s'assigna un a un entre una Dataverse organització i un Azure Data Lake Storage compte. Una vegada que una Dataverse organització està connectada a un compte d'emmagatzematge, no es pot connectar a un altre compte d'emmagatzematge. Aquesta limitació impedeix Dataverse omplir diversos comptes d'emmagatzematge.
@@ -102,7 +105,7 @@ Configureu el PowerShell per executar scripts del PowerShell.
 1. Deseu els dos valors d'ID del grup de seguretat generats per aquest script per utilitzar-los a l'script `ByolSetup.ps1`.
 
    > [!NOTE]
-   > La creació de grups de seguretat es pot desactivar a l'inquilí. En aquest cas, es necessitaria una configuració manual i el vostre Azure AD administrador hauria d'habilitar la [creació](/azure/active-directory/enterprise-users/groups-self-service-management) de grups de seguretat.
+   > La creació de grups de seguretat es pot desactivar a l'inquilí. En aquest cas, es necessitaria una configuració manual i el vostre Azure AD administrador hauria d'habilitar la [creació de grups de seguretat](/azure/active-directory/enterprise-users/groups-self-service-management).
 
 1. Executeu-lo `ByolSetup.ps1` al Windows PowerShell proporcionant l'identificador de subscripció de l'Azure que conté el Azure Data Lake Storage vostre nom de compte d'emmagatzematge, el nom del grup de recursos i els valors de l'identificador de grup de seguretat del Lector i del Col·laborador. Obriu l'script del PowerShell en un editor per revisar la informació addicional i la lògica implementada.
 
