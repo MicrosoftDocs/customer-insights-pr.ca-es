@@ -2,7 +2,7 @@
 title: Condicions de coincidència per a la unificació de dades
 description: Feu coincidir entitats per crear perfils de client unificats.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304645"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721509"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condicions de coincidència per a la unificació de dades
 
@@ -32,7 +32,7 @@ Aquest pas en la unificació defineix l'ordre dels partits i les regles per a la
 
 ## <a name="include-enriched-entities-preview"></a>Incloure entitats enriquides (vista prèvia)
 
-Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de](data-sources-enrichment.md) dades. Si heu seleccionat entitats enriquides a la **pàgina Duplica els registres**, no cal que les torneu a seleccionar.
+Si heu enriquit entitats del nivell font de dades per ajudar a millorar els resultats de la unificació, seleccioneu-les. Per obtenir més informació, vegeu [Enriquiment per a les fonts de dades](data-sources-enrichment.md). Si heu seleccionat entitats enriquides a la **pàgina Duplica els registres**, no cal que les torneu a seleccionar.
 
 1. A la **pàgina Condicions de coincidència**, seleccioneu **Utilitza entitats** enriquides a la part superior de la pàgina.
 
@@ -130,12 +130,12 @@ Per exemple, si la regla del partit combina cognom, la ciutat i la data de naixe
 
 ### <a name="specify-custom-match-conditions"></a>Especificar condicions de coincidència personalitzades
 
-Podeu especificar condicions que substitueixin la lògica de concordança per defecte. Hi ha quatre opcions disponibles:
+Especifiqueu les condicions que substitueixen la lògica de concordança per defecte. Hi ha quatre opcions disponibles:
 
 |Opció  |Descripció |Exemple  |
 |---------|---------|---------|
-|Coincidència     | Defineix valors que sempre coincideixen.         |  Sempre coincideix amb *Mike* i *MikeR*.       |
-|No coincidència     | Defineix valors que mai coincideixen.        | Mai coincideixen amb *John* i *Jonathan*.        |
+|Coincidència     | Defineix valors per a les claus primàries que sempre coincideixen.         |  Feu coincidir sempre la fila amb la clau *principal 12345* a la fila amb la clau *principal 54321*.       |
+|No coincidència     | Defineix valors per a les claus primàries que mai coincideixen.        | No coincideixis mai la fila amb la clau *primària 12345* a la fila amb la clau *primària 54321*.        |
 |Omissió            | Defineix valors que el sistema sempre ha d'ignorar en la fase de partit. |  Ignora els valors *11111* i *Desconegut* durant el partit.        |
 |Assignació d'àlies    | Definició de valors que el sistema ha de considerar com el mateix valor.         | Considereu que *Joe* és igual a *Joseph*.        |
 
@@ -143,17 +143,18 @@ Podeu especificar condicions que substitueixin la lògica de concordança per de
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Botó personalitzat":::
 
-1. Trieu el **Tipus** personalitzat i seleccioneu **Baixa la plantilla**. Necessiteu una plantilla independent per a cada opció de partit.
+1. Trieu el **Tipus** personalitzat i seleccioneu **Baixa la plantilla**. Canvieu el nom de la plantilla sense utilitzar espais. Utilitzeu una plantilla independent per a cada opció de coincidència.
 
-1. Obriu el fitxer de plantilla descarregat i empleneu els detalls. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Per exemple, si voleu que la clau principal *12345* de l'entitat *Vendes* coincideixi sempre amb la clau principal *34567* de l'entitat *Contacte*, empleneu la plantilla:
-    - Entity1: Vendes
-    - Entity1Key: 12345
-    - Entity2: Contacte
-    - Entity2Key: 34567
+1. Obriu el fitxer de plantilla descarregat i empleneu els detalls. La plantilla conté camps per especificar l'entitat i els valors de clau principal de l'entitat que s'utilitzaran a la coincidència personalitzada. Els noms de les entitats distingeixen entre majúscules i minúscules. Per exemple, si voleu que la clau principal *12345* de l'entitat *Vendes* coincideixi sempre amb la clau principal *34567* de l'entitat *Contacte*, empleneu la plantilla:
+   - Entity1: Vendes
+   - Entity1Key: 12345
+   - Entity2: Contacte
+   - Entity2Key: 34567
 
    El mateix fitxer de plantilla pot especificar els registres de coincidència personalitzats des de diverses entitats.
 
-   Si voleu especificar la coincidència personalitzada per a la desduplicació en una entitat, proporcioneu la mateixa entitat com a Entitat1 i Entitat2 i definiu els diferents valors de clau principal.
+   > [!NOTE]
+   > Si voleu especificar la coincidència personalitzada per a la desduplicació en una entitat, proporcioneu la mateixa entitat com a Entitat1 i Entitat2 i definiu els diferents valors de clau principal. Heu de definir com a mínim una regla de deduplicació a l'entitat per utilitzar la concordança personalitzada.
 
 1. Després d'afegir totes les substitucions, deseu el fitxer de plantilla.
 
@@ -169,6 +170,8 @@ Podeu especificar condicions que substitueixin la lògica de concordança per de
    - A **l'assignació** Bypass **o** Alias, seleccioneu **Edita** en una regla de coincidència existent o creeu-ne una de nova. Al menú desplegable Normalitzacions, trieu l'opció **Bypass** personalitzat o **Assignació d'àlies** i seleccioneu **Fet**.
 
 1. Seleccioneu **Fet** a la **subfinestra Personalitzat** per aplicar la configuració de concordança personalitzada.
+
+   Cada fitxer de plantilla ingerit és el seu propi font de dades. Si es descobreixen registres que necessiten un tractament especial de coincidència, actualitzeu el font de dades adequat. L'actualització s'utilitzarà durant el proper procés d'unificació. Per exemple, identifiqueu bessons amb gairebé el mateix nom que viuen a la mateixa adreça que s'havia fusionat com una sola persona. Actualitzeu la font de dades per identificar els bessons com a registres únics i separats.
 
 > [!div class="nextstepaction"]
 > [Pas següent: unificar camps](merge-entities.md)
