@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195738"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724666"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segments a AdRoll (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu segments de perfils de client unificats a AdRoll i utilitzeu-los per a 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 250.000 perfils de clients per exportació a AdRoll, que poden trigar fins a 10 minuts a completar-se. El nombre de perfils de clients que podeu exportar a AdRoll depèn del vostre contracte amb AdRoll.
 - Només segments. Un segment ha de contenir almenys 100 perfils de clients.
 

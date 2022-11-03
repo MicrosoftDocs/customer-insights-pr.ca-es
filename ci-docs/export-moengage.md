@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199185"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725250"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Exportar segments a MoEngage (previsualització)
 
@@ -27,6 +27,7 @@ Exporta segments de perfils de clients unificats a MoEngage i utilitza'ls per a 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 100.000 perfils de clients per exportació a MoEngage, que poden trigar fins a 15 minuts. El nombre de perfils de clients que pots exportar a MoEngage depèn del teu contracte amb MoEngage.
 - Només segments.
 

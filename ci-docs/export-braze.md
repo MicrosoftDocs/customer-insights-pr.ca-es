@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655292"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725204"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segments a Braze (previsualització)
 
@@ -29,6 +29,7 @@ Exporta segments de perfils de clients unificats a Braze i utilitza'ls per a act
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients a Braze, que poden trigar fins a 40 minuts a completar-se. El nombre de perfils de clients que podeu exportar a Braze depèn del vostre contracte amb Braze.
 - Només segments.
 - L'Azure Private Link no és compatible amb l'exportació braze.

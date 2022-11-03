@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196152"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725158"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportar segments a Omnisend (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu segments de perfils de client unificats a Omnisend i utilitzeu-los per 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients per exportació a Omnisend, que poden trigar fins a quatre hores a completar-se. El nombre de perfils de client que podeu exportar a Omnisend depèn del vostre contracte amb Omnisend.
 - Només segments.
 

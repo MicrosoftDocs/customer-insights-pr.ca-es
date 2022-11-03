@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196566"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725066"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segments a Google Ads (versió preliminar)
 
@@ -30,6 +30,7 @@ Exporteu segments de perfils de client unificats a una llista de públics de Goo
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Exporteu fins a 1 milió de perfils de client per exportació a Google Ads, cosa que pot trigar fins a 30 minuts a completar-se a causa de les limitacions del proveïdor.
 - Només segments.
 - La coincidència a Google Ads pot trigar fins a 48 hores.

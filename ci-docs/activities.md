@@ -1,12 +1,12 @@
 ---
 title: Activitats de contacte amb clients o empreses
 description: Definiu les activitats de contacte amb clients o empreses i visualitzeu-les en una cronologia als perfils de clients.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304093"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723769"
 ---
 # <a name="customer-or-business-contact-activities"></a>Activitats de contacte amb clients o empreses
 
@@ -41,6 +41,9 @@ Una entitat ha de tenir almenys un atribut del tipus **Date** per incloure'l en 
    - **Nom de l'activitat**: seleccioneu un nom per a l'activitat.
    - **Entitat** d'activitat: seleccioneu una entitat que inclogui dades transaccionals o d'activitat.
    - **Clau principal**: seleccioneu el camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
+
+     > [!NOTE]
+     > La clau principal de cada fila ha de mantenir-se coherent en font de dades actualitzacions. Si la clau principal d'una fila s'actualitza en una font de dades actualització, crea duplicats a l'entitat Activitat de sortida. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configureu les dades de l'activitat amb el nom, l'entitat i la clau principal.":::
 
@@ -132,7 +135,15 @@ Per als comptes d'empresa (B a B), utilitzeu una *entitat ContactProfile* per ca
 
 1. Seleccioneu **Afegeix activitat**.
 
-1. Anomeneu l'activitat, seleccioneu l'entitat d'activitat d'origen i seleccioneu la clau principal de l'entitat de l'activitat.
+1. Al pas Dades de l'activitat **·**, introduïu la informació següent:
+
+   - **Nom de l'activitat**: seleccioneu un nom per a l'activitat.
+   - **Entitat** d'activitat: seleccioneu una entitat que inclogui dades transaccionals o d'activitat.
+   - **Clau principal**: seleccioneu el camp que identifica de manera única un registre. No hauria de contenir cap valor duplicat, valors buits o valors que faltin.
+
+     > [!NOTE]
+     > La clau principal de cada fila ha de mantenir-se coherent en font de dades actualitzacions. Si la clau principal d'una fila s'actualitza en una font de dades actualització, crea duplicats a l'entitat Activitat de sortida. 
+
 
 1. **Al pas Relacions**, creeu una relació indirecta entre les dades de la font de l'activitat i els comptes, utilitzant les vostres dades de contacte com a entitat intermediària. Per obtenir més informació, vegeu [camins de relació directa i indirecta](relationships.md#relationship-paths).
    - Exemple de relació per a una activitat anomenada *Compres*:

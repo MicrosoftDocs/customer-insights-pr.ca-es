@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196060"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724974"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exportar segments a DotDigital (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu els segments de perfils de client unificats a llibretes d'adreces de Do
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients per exportació a DotDigital, que poden trigar fins a tres hores a completar-se a causa de les limitacions del proveïdor. El nombre de perfils de clients que podeu exportar a DotDigital depèn del vostre contracte amb DotDigital.
 - Només segments.
 

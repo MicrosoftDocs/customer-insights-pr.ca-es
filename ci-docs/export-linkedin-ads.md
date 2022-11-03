@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304691"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725296"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segments a LinkedIn Ads (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu segments de perfils de client unificats a LinkedIn Ads per crear públi
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 100.000 perfils de clients per exportació a LinkedIn Ads, que poden trigar fins a 10 minuts a completar-se.
 - Només segments. Un segment ha de contenir almenys 300 perfils únics.
 

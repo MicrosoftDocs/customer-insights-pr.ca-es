@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196980"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724836"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Exportar segments a SendGrid (versió preliminar)
 
@@ -29,6 +29,7 @@ Exporteu segments de perfils de client unificats a les llistes de contactes de S
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 100,000 perfils de clients en total a SendGrid, que pot trigar fins a unes hores a completar-se. El nombre de perfils de client que podeu exportar a SendGrid depèn del vostre contracte amb SendGrid.
 - Només segments.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195324"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724777"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportar segments a Criteo (preview)
 
@@ -27,6 +27,7 @@ Exporta segments de perfils de clients unificats per generar campanyes, proporci
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients per exportació a Criteo, que poden trigar fins a 30 minuts a completar-se. El nombre de perfils de clients que pots exportar a Criteo depèn del teu contracte amb Criteo.
 - Només segments.
 
@@ -65,8 +66,6 @@ Exporta segments de perfils de clients unificats per generar campanyes, proporci
 1. Introduïu un nom per a l'exportació.
 
 1. A la secció **Coincidència de dades**, al camp **Correu electrònic**, seleccioneu el camp que representa l'adreça electrònica d'un client.
-
-1. Opcionalment, exporteu l'identificador **i** **el nom de l'anunciant**.
 
 1. Seleccioneu els segments que voleu exportar.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195600"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725113"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Exportar segments a RollWorks (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu segments de perfils de client unificats a RollWorks i utilitzeu-los per
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 250.000 perfils de clients per exportació a RollWorks, que poden trigar fins a 10 minuts a completar-se. El nombre de perfils de clients que pots exportar a RollWorks depèn del teu contracte amb RollWorks.
 - Només segments.
 

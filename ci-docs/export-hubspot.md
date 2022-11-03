@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588924"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725342"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Exporta segments a HubSpot (vista prèvia)
 
@@ -27,6 +27,7 @@ Exporta segments de perfils de clients unificats a HubSpot i utilitza'ls per al 
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 100.000 perfils de clients per exportació a HubSpot, que pot trigar fins a 15 minuts a completar-se. El nombre de perfils de clients als quals podeu exportar HubSpot depèn i limita el vostre contracte amb HubSpot.
 - Només segments.
 

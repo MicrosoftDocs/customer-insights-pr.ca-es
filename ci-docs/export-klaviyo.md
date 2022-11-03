@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196750"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724565"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Exporta segments a Klaviyo (previsualització)
 
@@ -29,6 +29,7 @@ Exporteu segments de perfils de client unificats a Klaviyo i utilitzeu-los per a
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients per exportació a Klaviyo, que poden trigar fins a 20 minuts a completar-se. El nombre de perfils de clients que podeu exportar a Klaviyo depèn del vostre contracte amb Klaviyo.
 - Només segments.
 

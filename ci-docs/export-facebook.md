@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195002"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724568"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segments a Facebook Ads Manager (visualització prèvia)
 
@@ -25,11 +25,13 @@ Exporteu els segments de perfils unificats de client al Facebook Ads Manager per
 
 - Un [Facebook compte d'anuncis](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclogui un [Facebook compte d'empresa](https://business.facebook.com/).
 - Privilegis d'administrador al compte d'Anuncis [Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Els Termes de públic personalitzats han de ser acceptats per l'usuari que configuri la connexió al Customer Insights.
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
 - Fins a 10 milions de perfils de clients per exportació a Facebook Ads Manager poden trigar fins a 90 minuts.
 - Només segments.
+- Facebook La integració d'anuncis no admet els usuaris amb més de 25 comptes d'anuncis.
 - Facebook *tipus de llista* de clients només en [públics personalitzats](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
   > [!NOTE]
   > En alguns casos, és possible que vegeu públics personalitzats de diferents tipus a la llista desplegable. Si seleccioneu un altre tipus que no sigui la llista *de* clients, l'exportació falla.

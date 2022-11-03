@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196474"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724489"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segments a Constant Contact (versió preliminar)
 
@@ -28,6 +28,7 @@ Exporteu segments de perfils de client unificats a Constant Contact i utilitzeu-
 
 ## <a name="known-limitations"></a>Limitacions conegudes
 
+- No s'admet l'enllaç privat en combinació amb Bring your own storage (BYOS).
 - Fins a 1 milió de perfils de clients per exportació a Constant Contact, que poden trigar fins a una hora a completar-se. El nombre de perfils de clients que podeu exportar a Constant Contact depèn del vostre contracte amb Constant Contact.
 - Només segments.
 
