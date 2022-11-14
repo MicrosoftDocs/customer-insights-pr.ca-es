@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259786"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738144"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Connectar un Azure Synapse Analytics font de dades (vista prèvia)
 
@@ -37,7 +37,7 @@ Per obtenir més informació, vegeu [Azure Synapse informació general](/azure/s
 
 - Una subscripció activa de l'Azure.
 
-- Si utilitzeu un compte gen2 nou Azure Data Lake Storage, el director de servei del *Customer Insights* que és "Dynamics 365 AI for Customer Insights" necessita **permisos de col·laborador** de dades blob d'emmagatzematge. Obteniu més informació sobre com [podeu connectar-vos a un Azure Data Lake Storage director de servei per al Customer Insights](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
+- Si utilitzeu un compte gen2 nou Azure Data Lake Storage , el director de servei del *Customer Insights* que és "Dynamics 365 AI for Customer Insights" necessita **permisos de col·laborador** de dades blob d'emmagatzematge. Obteniu més informació sobre com [podeu connectar-vos a un Azure Data Lake Storage director de servei per al Customer Insights](connect-service-principal.md). El Data Lake Storage Gen2 **ha de tenir** habilitat l'[espai de noms jeràrquic](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Al grup de recursos on es troba l'espai Azure Synapse de treball, el principal *del* servei que és "Dynamics 365 AI for Customer Insights" i l'usuari *per al Customer Insights* s'han d'assignar com a mínim **permisos de lector**. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -45,7 +45,7 @@ Per obtenir més informació, vegeu [Azure Synapse informació general](/azure/s
 
 - L'*[entitat gestionada per l'àrea de treball de l'Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* necessita permisos del **Col·laborador de dades BLOB d'emmagatzematge** al compte de l'Azure Data Lake Storage Gen2 on es troben les dades i s'enllacen a l'àrea de treball de l'Azure Synapse. Obteniu més informació sobre [com podeu utilitzar el portal de l'Azure per assignar una funció de l'Azure per accedir a les dades BLOB i de la cua](/azure/storage/common/storage-auth-aad-rbac-portal) i [els permisos del col·laborador de dades BLOB d'emmagatzematge](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- A l'espai Azure Synapse de treball, el principal de *servei per al Customer Insights* que és "Dynamics 365 AI for Customer Insights" necessita la **funció d'administrador** de Synapse assignada. Per obtenir més informació, vegeu [Com configurar el control d'accés per a l'àrea de treball del Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- A l'espai Azure Synapse de treball, el principal de *servei per al Customer Insights* que és "Dynamics 365 AI for Customer Insights" necessita la **funció d'administrador** de Synapse assignada. L'usuari **necessita** almenys una funció **de col·laborador** de Synapse assignada per a l'espai de treball. Per obtenir més informació, vegeu [Com configurar el control d'accés per a l'àrea de treball del Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 - Si l'entorn del Customer Insights emmagatzema dades pel vostre [compte Azure Data Lake Storage](own-data-lake-storage.md), l'usuari que configura la connexió necessita Azure Synapse Analytics almenys la funció de lector **integrat** al compte del Data Lake Storage. Per obtenir més informació, vegeu [Assignar funcions de l'Azure mitjançant el portal de l'Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -69,10 +69,10 @@ Per obtenir més informació, vegeu [Azure Synapse informació general](/azure/s
 
 1. Opcionalment, trieu les entitats de dades en què voleu permetre l'elaboració de perfils de dades.
 
-1. Seleccioneu **Desa** per aplicar la vostra selecció i iniciar la ingestió de les dades del vostre font de dades recentment creat enllaçat a les taules de la base de dades Lake a Azure Synapse Analytics. S'obre **la pàgina Fonts** de dades que mostra la nova font de dades en **estat de Refresc**.
+1. Seleccioneu **Desa** per aplicar la vostra selecció i iniciar la ingestió de les dades de les vostres font de dades recentment creades enllaçades a les taules de la base de dades Lake a Azure Synapse Analytics. S'obre **la pàgina Fonts** de dades que mostra la nova font de dades en **estat de Refresc**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades ingerides es poden revisar des de la [**pàgina Entitats**](entities.md).
+La càrrega de les dades pot tardar temps. Després d'una actualització correcta, les dades ingerides es poden revisar des de la [**pàgina Entitats**](entities.md) .
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
