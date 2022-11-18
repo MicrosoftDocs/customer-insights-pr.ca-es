@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: MT
 ms.contentlocale: ca-ES
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556384"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776809"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Gestionar perfils desconeguts amb el Customer Insights
 
-Els usuaris d'Internet sovint no estan identificats i anònims en línia. Si no han iniciat la sessió perquè utilitzen diferents dispositius o canals, fins i tot és cert per als clients més fidels. Amb les galetes de tercers que probablement desapareixeran aviat, gestionar les preferències de l'usuari en funció de dades pròpies és crucial per aconseguir experiències personalitzades diferenciades. Per a moltes marques, els usuaris coneguts o autenticats són la minoria tot i les creixents expectatives dels clients al voltant de la personalització. És ideal que les empreses sàpiguen qui són els seus clients, basant-se en dades fiables, detallades i unificades.
+Els usuaris d'Internet sovint no estan identificats o anònims en línia. Fins i tot els clients més fidels poden semblar "desconeguts" si no han iniciat la sessió en diferents dispositius. Per a moltes marques, els usuaris coneguts o autenticats són la minoria tot i les creixents expectatives dels clients al voltant de la personalització. Amb el futur de les cookies de tercers en qüestió, gestionar les preferències de l'usuari a partir de dades pròpies és crucial per aconseguir experiències personalitzades.
 
-La personalització memorable depèn de la riquesa i la integritat de les dades dels vostres clients i el Customer Insights us ajuda a assolir aquests objectius. No heu de limitar ni aturar l'ús de les dades recollides a l'inici de la recorregut del client. El Customer Insights us permet aportar les vostres pròpies dades per crear un perfil de client per a usuaris desconeguts. A continuació, podeu utilitzar aquest perfil per a més accions, tot i que falti informació de contacte. Importeu dades pròpies de fonts com ara sistemes web, mòbils o CRM al Customer Insights per enriquir els perfils de clients contínuament. A mesura que unifiqueu més interaccions, [convertiu el *client desconegut* en un *client conegut*](unknown-to-known.md).
+La personalització memorable depèn del grau de coneixement del vostre client i les estadístiques de clients us ajuden a fer-ho fent un seguiment de tots els vostres clients.  No heu de limitar ni aturar l'ús de les dades recollides a l'inici de la recorregut del client. El Customer Insights us permet aportar les vostres pròpies dades per crear un perfil de client per a usuaris desconeguts. A continuació, podeu utilitzar aquest perfil per a més accions, tot i que falti informació de contacte. Importeu dades pròpies de fonts com ara sistemes web, mòbils o CRM al Customer Insights per enriquir els perfils de clients contínuament. A mesura que unifiqueu més interaccions, [convertiu el *client desconegut* en un *client conegut*](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Escenari mostral
 
-El comerç electrònic és el canal de més ràpid creixement en l'última dècada. Suposem que un usuari utilitza el seu dispositiu mòbil per navegar pel vostre lloc de comerç electrònic. El lloc web assigna al visitant "mobile_guest123" com a identificador únic i comenceu a recopilar activitats de comportament basades en la seva activitat en línia. Per exemple, quines pàgines van visitar, quant de temps van passar en aquestes pàgines o en quins enllaços van fer clic. No sabeu el seu nom ni la seva adreça electrònica, però aquestes dades poden ajudar a proporcionar a les marques estadístiques significatives sobre aquest usuari concret. Al seu torn, podeu posar aquestes estadístiques a funcionar la propera vegada que l'usuari visiti el lloc. Consulteu el Customer Insights per a "mobile_guest123" per recuperar la llista de segments de l'usuari, com ara "clients orgànics", "clients de pre-comanda per a mòbils", "clients d'alt valor", etc., o recupereu el perfil per crear experiències web personalitzades. També podeu exportar les dades a qualsevol sistema d'activació per fer el mateix.
+Suposem que un usuari utilitza el seu dispositiu mòbil per navegar pel vostre lloc de comerç electrònic. El lloc web assigna al visitant "mobile_guest123" com a identificador únic i comenceu a recopilar activitats de comportament basades en la seva activitat en línia. Per exemple, quines pàgines van visitar, quant de temps van passar en aquestes pàgines o en quins enllaços van fer clic. No sabeu el seu nom ni la seva adreça electrònica, però aquestes dades poden ajudar a proporcionar a les marques estadístiques significatives sobre aquest usuari concret. Al seu torn, podeu posar aquestes estadístiques a funcionar la propera vegada que l'usuari visiti el lloc. Consulteu el Customer Insights per a "mobile_guest123" per recuperar la llista de segments de l'usuari, com ara "clients orgànics", "clients de pre-comanda per a mòbils", "clients d'alt valor", etc., o recupereu el perfil per crear experiències web personalitzades. També podeu exportar les dades a qualsevol sistema d'activació per fer el mateix.
 
 ## <a name="prerequisites"></a>Requisits previs
 
 - Ingerir dades pròpies al Customer Insights
 - Cada entitat té un identificador únic que es defineix com a clau principal
 - Cada entitat amb una clau principal per a la personalització està unificada
-- El sistema de gestió de continguts del vostre lloc web és capaç d'utilitzar API (per a la personalització web basada en la comunicació directa amb el Customer Insights)
+- El sistema de gestió de continguts del vostre lloc web pot utilitzar API (per a la personalització web basada en la comunicació directa amb el Customer Insights)
 
 La taula següent mostra un exemple simplificat de com es podrien capturar esdeveniments web d'alt valor.
 
